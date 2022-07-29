@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+manager_model_hr_employee_type,user_model_hr_employee_type,model_hr_employee_type,sat_companies_hr.hr_employee_type_manager_group,1,1,1,1
+manager_model_hr_employee_categories,user_model_hr_employee_categories,model_hr_employee_categories,sat_companies_hr.hr_employee_categories_manager_group,1,1,1,1

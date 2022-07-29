@@ -1,0 +1,459 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sat_companies_hr
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-14 09:12+0000\n"
+"PO-Revision-Date: 2022-02-14 09:12+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_categories__message_needaction
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_type__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_categories__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee__alarm_code
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_public__alarm_code
+msgid "Alarm code"
+msgstr "Código alarma"
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_categories__message_attachment_count
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_type__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee__account_id
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee__c_accountant
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_public__account_id
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_public__c_accountant
+msgid "C.Accountant"
+msgstr "C.cuenta"
+
+#. module: sat_companies_hr
+#: model:ir.actions.act_window,name:sat_companies_hr.action_view_hr_employee_categories
+#: model:ir.ui.menu,name:sat_companies_hr.menu_hr_employee_categories
+msgid "Categories"
+msgstr "Categorias"
+
+#. module: sat_companies_hr
+#: model_terms:ir.ui.view,arch_db:sat_companies_hr.view_hr_employee_categories_form
+msgid "Category name"
+msgstr "Nombre de la categoria"
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee__delegation_code
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_public__code
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_public__delegation_code
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_type__code
+msgid "Code"
+msgstr "Código"
+
+#. module: sat_companies_hr
+#: model_terms:ir.actions.act_window,help:sat_companies_hr.action_view_hr_employee_categories
+#: model_terms:ir.actions.act_window,help:sat_companies_hr.action_view_hr_employee_type
+msgid "Create new record"
+msgstr "Crear nuevo registro"
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_categories__create_uid
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_type__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_categories__create_date
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_type__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee__delegation_id
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_public__delegation_id
+msgid "Delegation"
+msgstr "Delegación"
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee__delegation_name
+msgid "Delegation name"
+msgstr "Nombre delegación"
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_categories__display_name
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_public__display_name
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_type__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: sat_companies_hr
+#: model:ir.model,name:sat_companies_hr.model_hr_employee
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: sat_companies_hr
+#: model:ir.model,name:sat_companies_hr.model_hr_employee_categories
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee__category_id
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_public__category_id
+msgid "Employee category"
+msgstr "Categoria del empleado"
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee__code
+#: model_terms:ir.ui.view,arch_db:sat_companies_hr.inherit_view_hr_employee_sat_companies
+msgid "Employee code"
+msgstr "Código de empleado"
+
+#. module: sat_companies_hr
+#: model:ir.actions.act_window,name:sat_companies_hr.action_view_hr_employee_type
+#: model:ir.model,name:sat_companies_hr.model_hr_employee_type
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee__employee_type
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_public__employee_type
+#: model:ir.ui.menu,name:sat_companies_hr.menu_hr_employee_type
+#: model_terms:ir.ui.view,arch_db:sat_companies_hr.view_hr_employee_type_form
+msgid "Employee type"
+msgstr "Tipo de empleado"
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_categories__message_follower_ids
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_type__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_categories__message_channel_ids
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_type__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Seguidores"
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_categories__message_partner_ids
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_type__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores"
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee__id
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_categories__id
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_public__id
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_type__id
+msgid "ID"
+msgstr "Id"
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee__imei
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_public__imei
+msgid "IMEI"
+msgstr ""
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,help:sat_companies_hr.field_hr_employee_categories__message_needaction
+#: model:ir.model.fields,help:sat_companies_hr.field_hr_employee_categories__message_unread
+#: model:ir.model.fields,help:sat_companies_hr.field_hr_employee_type__message_needaction
+#: model:ir.model.fields,help:sat_companies_hr.field_hr_employee_type__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,help:sat_companies_hr.field_hr_employee_categories__message_has_error
+#: model:ir.model.fields,help:sat_companies_hr.field_hr_employee_categories__message_has_sms_error
+#: model:ir.model.fields,help:sat_companies_hr.field_hr_employee_type__message_has_error
+#: model:ir.model.fields,help:sat_companies_hr.field_hr_employee_type__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_categories__message_is_follower
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_type__message_is_follower
+msgid "Is Follower"
+msgstr "Seguidor"
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee__is_maintainer
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_public__is_maintainer
+msgid "Is maintainer"
+msgstr "Mantenedora"
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee__jacket_size
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_public__jacket_size
+msgid "Jacket size"
+msgstr "Talla de chaqueta"
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee__jersey_size
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_public__jersey_size
+msgid "Jersey size"
+msgstr "Talla Jersey"
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_categories____last_update
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_public____last_update
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_type____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_categories__write_uid
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_type__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_categories__write_date
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_type__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_categories__message_main_attachment_id
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_type__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: sat_companies_hr
+#: model:res.groups,name:sat_companies_hr.hr_employee_categories_manager_group
+msgid "Manager employee categories"
+msgstr "Administrador categorias del empleado"
+
+#. module: sat_companies_hr
+#: model:res.groups,comment:sat_companies_hr.hr_employee_categories_manager_group
+msgid "Manager employee categories Permission Group"
+msgstr "Administrador grupo de permisos categorias del empleado"
+
+#. module: sat_companies_hr
+#: model:res.groups,name:sat_companies_hr.hr_employee_type_manager_group
+msgid "Manager employee type"
+msgstr "Administrador tipos de empleados"
+
+#. module: sat_companies_hr
+#: model:res.groups,comment:sat_companies_hr.hr_employee_type_manager_group
+msgid "Manager employee type Permission Group"
+msgstr "Administrador grupos de permisos"
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_categories__message_has_error
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_type__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_categories__message_ids
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_type__message_ids
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_categories__name
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_type__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee__employee_notes
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_public__employee_notes
+#: model_terms:ir.ui.view,arch_db:sat_companies_hr.inherit_view_hr_employee_sat_companies
+msgid "Notes"
+msgstr "Notas adicionales"
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_categories__message_needaction_counter
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_type__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_categories__message_has_error_counter
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_type__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,help:sat_companies_hr.field_hr_employee_categories__message_needaction_counter
+#: model:ir.model.fields,help:sat_companies_hr.field_hr_employee_type__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,help:sat_companies_hr.field_hr_employee_categories__message_has_error_counter
+#: model:ir.model.fields,help:sat_companies_hr.field_hr_employee_type__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,help:sat_companies_hr.field_hr_employee_categories__message_unread_counter
+#: model:ir.model.fields,help:sat_companies_hr.field_hr_employee_type__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee__online_service
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_public__online_service
+msgid "Online services"
+msgstr "Servicios online"
+
+#. module: sat_companies_hr
+#: model_terms:ir.ui.view,arch_db:sat_companies_hr.inherit_view_hr_employee_sat_companies
+msgid "Operator file"
+msgstr "Ficha del operario"
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee__pda
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_public__pda
+msgid "PDA"
+msgstr ""
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee__pants_size
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_public__pants_size
+msgid "Pants size"
+msgstr "Talla pantalón"
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee__parka_size
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_public__parka_size
+msgid "Parka size"
+msgstr "Tall Parka"
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee__password
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_public__password
+msgid "Password"
+msgstr "Contraseña"
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee__polo_size
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_public__polo_size
+msgid "Polo size"
+msgstr "Talla polo"
+
+#. module: sat_companies_hr
+#: model:ir.model,name:sat_companies_hr.model_hr_employee_public
+msgid "Public Employee"
+msgstr "Empleado Público"
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee__raincoat_size
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_public__raincoat_size
+msgid "Raincoat size"
+msgstr "Talla impermeable"
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_categories__message_has_sms_error
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_type__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: sat_companies_hr
+#: model_terms:ir.ui.view,arch_db:sat_companies_hr.hr_employee_type_search
+msgid "Search hr employee type"
+msgstr ""
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee__shirt_size
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_public__shirt_size
+msgid "Shirt size"
+msgstr "Talla de camisa"
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee__shoe_size
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_public__shoe_size
+msgid "Shoe size"
+msgstr "Talla zapatos"
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee__supervisor
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_public__supervisor
+msgid "Supervisor"
+msgstr ""
+
+#. module: sat_companies_hr
+#: model:ir.model.constraint,message:sat_companies_hr.constraint_hr_employee_code_uniq
+msgid "This code already exists!"
+msgstr "El código del empleado ya existe!"
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee__type_driving_license
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_public__type_driving_license
+msgid "Type driving license"
+msgstr "Tipo licencia de conducir"
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_categories__message_unread
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_type__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_categories__message_unread_counter
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_type__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee__warehouse
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee__warehouse_id
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_public__warehouse
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_public__warehouse_id
+msgid "Warehouse"
+msgstr "Almacén"
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_categories__website_message_ids
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_type__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,help:sat_companies_hr.field_hr_employee_categories__website_message_ids
+#: model:ir.model.fields,help:sat_companies_hr.field_hr_employee_type__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: sat_companies_hr
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee__workwear
+#: model:ir.model.fields,field_description:sat_companies_hr.field_hr_employee_public__workwear
+msgid "Workwear"
+msgstr "Ropa de trabajo"
+
+#. module: sat_companies_hr
+#: model_terms:ir.ui.view,arch_db:sat_companies_hr.view_hr_employee_categories_tree
+msgid "employee_categories_tree"
+msgstr ""
+
+#. module: sat_companies_hr
+#: model_terms:ir.ui.view,arch_db:sat_companies_hr.view_hr_employee_type_tree
+msgid "employee_type_tree"
+msgstr ""
+
+#. module: sat_companies_hr
+#: model_terms:ir.ui.view,arch_db:sat_companies_hr.view_hr_employee_categories_form
+msgid "hr_employee_categories_form"
+msgstr ""
+
+#. module: sat_companies_hr
+#: model_terms:ir.ui.view,arch_db:sat_companies_hr.view_hr_employee_type_form
+msgid "hr_employee_type_form"
+msgstr ""
+
+#. module: sat_companies_hr
+#: model_terms:ir.ui.view,arch_db:sat_companies_hr.hr_employee_type_search
+msgid "name"
+msgstr "Nombre"

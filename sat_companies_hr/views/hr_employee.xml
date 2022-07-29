@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="inherit_view_hr_employee_sat_companies" model="ir.ui.view">
+            <field name="name">hr.employee.form.inherit</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml"> 
+                <xpath expr="//form[1]/sheet[1]/notebook[1]" position="inside">
+                    <page name="operator_file_page" string="Operator file" groups="hr.group_hr_manager">
+                      <group name="principal">
+                        <group name="left">
+                            <field name="code" string="Employee code"/>
+                            <field name="delegation_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                        </group>
+                        <group name="right">
+                            <field name="delegation_name"/>
+                        </group>
+                        <group>
+                            
+                        </group>
+                        <group>
+                            
+                        </group>
+                        <group>
+                            <field name="alarm_code"/>
+                        </group>
+                        <group>
+                            
+                        </group>
+                        <group>
+                            <field name="employee_type" options="{'no_create': True, 'no_create_edit':True}"/>
+                            <field name="category_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                        </group>
+                        <group>
+                            
+                        </group>
+                        <group>
+                            <field name="type_driving_license"/>
+                        </group>
+                        <group>
+                            
+                        </group>
+                        <group>
+                            <field name="shirt_size"/>
+                            <field name="shoe_size"/>
+                            <field name="jersey_size"/>
+                            <field name="parka_size"/>
+                        </group>
+                        <group>
+                            <field name="jacket_size"/>
+                            <field name="pants_size"/>
+                            <field name="polo_size"/>
+                            <field name="raincoat_size"/>
+                        </group>
+                        <group>
+                            <field name="pda"/>
+                            <field name="online_service"/>
+                            <field name="warehouse_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                            <field name="supervisor"/>
+                        </group>
+                        <group>
+                            <field name="password"/>
+                            <field name="imei"/>
+                        </group>
+                      </group>
+                    </page>
+                    <page string="Notes" groups="hr.group_hr_manager">
+                        <group>
+                            <field name="employee_notes"/>
+                        </group>
+                    </page>
+                </xpath>
+
+                <xpath expr="//field[@name='job_title']" position="attributes">
+                    <attribute name="attrs">{}</attribute>
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='coach_id']" position="attributes">
+                    <attribute name="attrs">{}</attribute>
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='category_ids']" position="attributes">
+                    <attribute name="attrs">{}</attribute>
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                
+            </field>
+        </record>
+    </data>
+</odoo>     
