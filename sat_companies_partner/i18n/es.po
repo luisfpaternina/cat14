@@ -1,0 +1,958 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sat_companies_partner
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-28 18:33+0000\n"
+"PO-Revision-Date: 2022-06-28 18:33+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sat_companies_partner
+#: model:ir.model.constraint,message:sat_companies_partner.constraint_res_partner_bank_unique_number
+msgid "Account Number must be unique"
+msgstr ""
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_communities__message_needaction
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_delegation__message_needaction
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_population__message_needaction
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_type__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_population__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_product_product__active_name
+#: model:ir.model.fields,field_description:sat_companies_partner.field_product_template__active_name
+msgid "Active name"
+msgstr "Estado"
+
+#. module: sat_companies_partner
+#: model_terms:ir.ui.view,arch_db:sat_companies_partner.inherit_view_res_partner_sat_companies
+msgid "Add observations..."
+msgstr "Agregar observaciones"
+
+#. module: sat_companies_partner
+#: model_terms:ir.ui.view,arch_db:sat_companies_partner.inherit_tree_res_partner_sat_companies
+msgid "Address"
+msgstr "Dirección"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_product_product__partner_admin_id
+#: model:ir.model.fields,field_description:sat_companies_partner.field_product_template__partner_admin_id
+msgid "Admin"
+msgstr "Administrador"
+
+#. module: sat_companies_partner
+#: model_terms:ir.ui.view,arch_db:sat_companies_partner.inherit_view_res_partner_sat_companies
+msgid "Administrator teacher"
+msgstr "Maestro de administradores"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_communities__message_attachment_count
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_delegation__message_attachment_count
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_population__message_attachment_count
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_type__message_attachment_count
+msgid "Attachment Count"
+msgstr "Contador de adjuntos"
+
+#. module: sat_companies_partner
+#: model:ir.model,name:sat_companies_partner.model_res_partner_bank
+msgid "Bank Accounts"
+msgstr "Cuentas bancarias"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_product_product__partner_id
+#: model:ir.model.fields,field_description:sat_companies_partner.field_product_template__partner_id
+msgid "Client"
+msgstr "Cliente"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__client_code
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__client_code
+msgid "Client code"
+msgstr "Código contacto"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__code
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_population__code
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_type__code
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__code
+#: model_terms:ir.ui.view,arch_db:sat_companies_partner.inherit_view_res_partner_sat_companies
+msgid "Code"
+msgstr "Código"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__user_partner_contact_id
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__user_partner_contact_id
+msgid "Comercial mantenimiento"
+msgstr ""
+
+#. module: sat_companies_partner
+#: model_terms:ir.ui.view,arch_db:sat_companies_partner.inherit_view_res_partner_sat_companies
+msgid "Comercial recruitment"
+msgstr "Comercial captación"
+
+#. module: sat_companies_partner
+#: model_terms:ir.ui.view,arch_db:sat_companies_partner.inherit_view_res_partner_sat_companies
+msgid "Commercial maintenance"
+msgstr "Comercial mantenimiento"
+
+#. module: sat_companies_partner
+#: model:ir.actions.act_window,name:sat_companies_partner.action_view_communities
+#: model:ir.model,name:sat_companies_partner.model_res_partner_communities
+#: model:ir.ui.menu,name:sat_companies_partner.menu_communities
+msgid "Communities"
+msgstr "Comunidades"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__partner_community_id
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_communities__partner_community_id
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__partner_community_id
+msgid "Community"
+msgstr "Comunidad"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__community_president
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__community_president
+msgid "Community president"
+msgstr "Presidente comunidad"
+
+#. module: sat_companies_partner
+#: model_terms:ir.ui.view,arch_db:sat_companies_partner.inherit_view_res_partner_sat_companies
+msgid "Comunidad"
+msgstr ""
+
+#. module: sat_companies_partner
+#: model_terms:ir.ui.view,arch_db:sat_companies_partner.inherit_view_res_partner_sat_companies
+msgid "Comunidades relacionadas"
+msgstr ""
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__comunities_ids
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__comunities_ids
+#: model_terms:ir.ui.view,arch_db:sat_companies_partner.inherit_view_res_partner_sat_companies
+msgid "Comunities"
+msgstr "Comunidades"
+
+#. module: sat_companies_partner
+#: model:ir.model,name:sat_companies_partner.model_res_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_communities__partner_id
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__contact_person
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__contact_person
+msgid "Contact person"
+msgstr "Persona de contacto"
+
+#. module: sat_companies_partner
+#: model_terms:ir.ui.view,arch_db:sat_companies_partner.custom_view_res_partner_search
+msgid "Contact type"
+msgstr "Tipo de contacto"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_delegation__country_id
+#: model_terms:ir.ui.view,arch_db:sat_companies_partner.view_res_partner_delegation_search
+msgid "Country"
+msgstr "País"
+
+#. module: sat_companies_partner
+#: model_terms:ir.actions.act_window,help:sat_companies_partner.action_view_communities
+#: model_terms:ir.actions.act_window,help:sat_companies_partner.action_view_res_partner_delegation
+#: model_terms:ir.actions.act_window,help:sat_companies_partner.action_view_res_partner_type
+msgid "Create new record"
+msgstr "Crear nuevo registro"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_communities__create_uid
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_delegation__create_uid
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_population__create_uid
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_type__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_communities__create_date
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_delegation__create_date
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_population__create_date
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_type__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__delegation_id
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__delegation_id
+#: model_terms:ir.ui.view,arch_db:sat_companies_partner.custom_view_res_partner_search
+msgid "Delegation"
+msgstr "Delegación"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__delegation_name
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__delegation_name
+msgid "Delegation name"
+msgstr "Nombre delegación"
+
+#. module: sat_companies_partner
+#: model:ir.actions.act_window,name:sat_companies_partner.action_view_res_partner_delegation
+#: model:ir.ui.menu,name:sat_companies_partner.menu_res_partner_delegation
+msgid "Delegations"
+msgstr "Delegaciones"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_account_move__display_name
+#: model:ir.model.fields,field_description:sat_companies_partner.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:sat_companies_partner.field_crm_lead__display_name
+#: model:ir.model.fields,field_description:sat_companies_partner.field_product_template__display_name
+#: model:ir.model.fields,field_description:sat_companies_partner.field_purchase_order__display_name
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__display_name
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_bank__display_name
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_communities__display_name
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_delegation__display_name
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_population__display_name
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_type__display_name
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__email_address
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__email_address
+msgid "Email"
+msgstr "Correo"
+
+#. module: sat_companies_partner
+#: model_terms:ir.ui.view,arch_db:sat_companies_partner.custom_view_res_partner_search
+msgid "Es comunidad"
+msgstr ""
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__fax
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__fax
+msgid "Fax"
+msgstr "FAX"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__fiscal_name
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__fiscal_name
+msgid "Fiscal name"
+msgstr "Nombre fiscal"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__fiscal_name2
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__fiscal_name2
+msgid "Fiscal name 2"
+msgstr "Nombre fiscal 2"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_communities__message_follower_ids
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_delegation__message_follower_ids
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_population__message_follower_ids
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_type__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_communities__message_channel_ids
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_delegation__message_channel_ids
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_population__message_channel_ids
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_type__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Seguidores de canales"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_communities__message_partner_ids
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_delegation__message_partner_ids
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_population__message_partner_ids
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_type__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores de contactos"
+
+#. module: sat_companies_partner
+#: model_terms:ir.ui.view,arch_db:sat_companies_partner.inherit_view_res_partner_sat_companies
+msgid "Gadgest Management"
+msgstr "Administrador de aparatos"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__gadget_client_ids
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__gadget_communitie_ids
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__gadget_ids
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__gadget_maintener_ids
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__gadget_oca_ids
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__gadget_client_ids
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__gadget_communitie_ids
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__gadget_ids
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__gadget_maintener_ids
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__gadget_oca_ids
+msgid "Gadgets"
+msgstr "Aparatos"
+
+#. module: sat_companies_partner
+#: model_terms:ir.ui.view,arch_db:sat_companies_partner.inherit_view_res_partner_sat_companies
+msgid "Gagdets"
+msgstr "Aparatos"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__percentaje_mto
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__percentaje_mto
+msgid "Ges.Mto"
+msgstr ""
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__percentaje_rep
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__percentaje_rep
+msgid "Ges.Rep"
+msgstr ""
+
+#. module: sat_companies_partner
+#: model_terms:ir.ui.view,arch_db:sat_companies_partner.view_res_partner_delegation_search
+msgid "Group By"
+msgstr "Agrupado por"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_account_bank_statement_line__has_account
+#: model:ir.model.fields,field_description:sat_companies_partner.field_account_move__has_account
+#: model:ir.model.fields,field_description:sat_companies_partner.field_account_payment__has_account
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__has_account
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__has_account
+msgid "Has a account"
+msgstr ""
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__high_date
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__high_date
+msgid "High date"
+msgstr "Fecha alta"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_account_move__id
+#: model:ir.model.fields,field_description:sat_companies_partner.field_account_move_line__id
+#: model:ir.model.fields,field_description:sat_companies_partner.field_crm_lead__id
+#: model:ir.model.fields,field_description:sat_companies_partner.field_product_template__id
+#: model:ir.model.fields,field_description:sat_companies_partner.field_purchase_order__id
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__id
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_bank__id
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_communities__id
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_delegation__id
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_population__id
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_type__id
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__id
+msgid "ID"
+msgstr "Id"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,help:sat_companies_partner.field_res_partner_communities__message_needaction
+#: model:ir.model.fields,help:sat_companies_partner.field_res_partner_communities__message_unread
+#: model:ir.model.fields,help:sat_companies_partner.field_res_partner_delegation__message_needaction
+#: model:ir.model.fields,help:sat_companies_partner.field_res_partner_delegation__message_unread
+#: model:ir.model.fields,help:sat_companies_partner.field_res_partner_population__message_needaction
+#: model:ir.model.fields,help:sat_companies_partner.field_res_partner_population__message_unread
+#: model:ir.model.fields,help:sat_companies_partner.field_res_partner_type__message_needaction
+#: model:ir.model.fields,help:sat_companies_partner.field_res_partner_type__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,help:sat_companies_partner.field_res_partner_communities__message_has_error
+#: model:ir.model.fields,help:sat_companies_partner.field_res_partner_communities__message_has_sms_error
+#: model:ir.model.fields,help:sat_companies_partner.field_res_partner_delegation__message_has_error
+#: model:ir.model.fields,help:sat_companies_partner.field_res_partner_delegation__message_has_sms_error
+#: model:ir.model.fields,help:sat_companies_partner.field_res_partner_population__message_has_error
+#: model:ir.model.fields,help:sat_companies_partner.field_res_partner_population__message_has_sms_error
+#: model:ir.model.fields,help:sat_companies_partner.field_res_partner_type__message_has_error
+#: model:ir.model.fields,help:sat_companies_partner.field_res_partner_type__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: sat_companies_partner
+#: code:addons/sat_companies_partner/models/.ipynb_checkpoints/res_partner-checkpoint.py:0
+#: code:addons/sat_companies_partner/models/res_partner.py:0
+#, python-format
+msgid "Invalid email format!"
+msgstr ""
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__is_admin
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__is_admin
+msgid "Is Admin"
+msgstr "Es administrador"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_communities__message_is_follower
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_delegation__message_is_follower
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_population__message_is_follower
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_type__message_is_follower
+msgid "Is Follower"
+msgstr "Es seguidor"
+
+#. module: sat_companies_partner
+#: model_terms:ir.ui.view,arch_db:sat_companies_partner.custom_view_res_partner_search
+msgid "Is O.C.A"
+msgstr "Es O.C.A"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__is_acommunity
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__is_acommunity
+msgid "Is a community"
+msgstr "Es una comunidad"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_account_bank_statement_line__is_potential_client
+#: model:ir.model.fields,field_description:sat_companies_partner.field_account_move__is_potential_client
+#: model:ir.model.fields,field_description:sat_companies_partner.field_account_move_line__is_potential_client
+#: model:ir.model.fields,field_description:sat_companies_partner.field_account_payment__is_potential_client
+#: model:ir.model.fields,field_description:sat_companies_partner.field_purchase_order__is_potential_client
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__is_potential_client
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__is_potential_client
+msgid "Is a potential client"
+msgstr "Contacto potencial"
+
+#. module: sat_companies_partner
+#: model_terms:ir.ui.view,arch_db:sat_companies_partner.custom_view_res_partner_search
+msgid "Is admin"
+msgstr "Es administrador"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_product_product__is_admin
+#: model:ir.model.fields,field_description:sat_companies_partner.field_product_template__is_admin
+msgid "Is admin related"
+msgstr "Relación administrador"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__is_billing_administrator
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__is_billing_administrator
+msgid "Is billing administrator"
+msgstr "Enviar factura al administrador"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__is_community
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_communities__is_community
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_type__is_community
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__is_community
+msgid "Is community"
+msgstr "Es comunidad"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__is_low
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__is_low
+msgid "Is low"
+msgstr ""
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__is_maintainer
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__is_maintainer
+#: model_terms:ir.ui.view,arch_db:sat_companies_partner.custom_view_res_partner_search
+msgid "Is maintainer"
+msgstr "Mantenedora"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__is_maker
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_type__is_maker
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__is_maker
+#: model_terms:ir.ui.view,arch_db:sat_companies_partner.custom_view_res_partner_search
+msgid "Is maker"
+msgstr "Es fabricante"
+
+#. module: sat_companies_partner
+#: model:ir.model,name:sat_companies_partner.model_account_move
+msgid "Journal Entry"
+msgstr "Asiento contable"
+
+#. module: sat_companies_partner
+#: model:ir.model,name:sat_companies_partner.model_account_move_line
+msgid "Journal Item"
+msgstr "Apunte contable"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_account_move____last_update
+#: model:ir.model.fields,field_description:sat_companies_partner.field_account_move_line____last_update
+#: model:ir.model.fields,field_description:sat_companies_partner.field_crm_lead____last_update
+#: model:ir.model.fields,field_description:sat_companies_partner.field_product_template____last_update
+#: model:ir.model.fields,field_description:sat_companies_partner.field_purchase_order____last_update
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner____last_update
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_bank____last_update
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_communities____last_update
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_delegation____last_update
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_population____last_update
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_type____last_update
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_communities__write_uid
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_delegation__write_uid
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_population__write_uid
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_type__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_communities__write_date
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_delegation__write_date
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_population__write_date
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_type__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: sat_companies_partner
+#: model:ir.model,name:sat_companies_partner.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Iniciativa/Oportunidad"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__low_date
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__low_date
+msgid "Low date"
+msgstr "Fecha baja"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_communities__message_main_attachment_id
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_delegation__message_main_attachment_id
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_population__message_main_attachment_id
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_type__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Adjunto"
+
+#. module: sat_companies_partner
+#: model_terms:ir.ui.view,arch_db:sat_companies_partner.inherit_view_res_partner_sat_companies
+msgid "Maintainer"
+msgstr "Mantenedora"
+
+#. module: sat_companies_partner
+#: model:res.groups,name:sat_companies_partner.administrator_teacher_manager_group
+msgid "Manager administrator teacher"
+msgstr "Administrador maestro de administradores"
+
+#. module: sat_companies_partner
+#: model:res.groups,comment:sat_companies_partner.administrator_teacher_manager_group
+msgid "Manager administrator teacher Permission Group"
+msgstr "Administrador del grupo de permisos maestro de administradores"
+
+#. module: sat_companies_partner
+#: model:res.groups,name:sat_companies_partner.res_partner_billing_administrator_group
+msgid "Manager billing administrator"
+msgstr "Enviar factura al administrador"
+
+#. module: sat_companies_partner
+#: model:res.groups,comment:sat_companies_partner.res_partner_billing_administrator_group
+msgid "Manager billing administrator Permission Group"
+msgstr "Permiso enviar factura al administrador"
+
+#. module: sat_companies_partner
+#: model:res.groups,name:sat_companies_partner.res_partner_communities_group
+msgid "Manager communities"
+msgstr "Administrador de comunidades"
+
+#. module: sat_companies_partner
+#: model:res.groups,comment:sat_companies_partner.res_partner_communities_group
+msgid "Manager communities Permission Group"
+msgstr "Grupo de permisos de comunidades"
+
+#. module: sat_companies_partner
+#: model:res.groups,name:sat_companies_partner.res_partner_delegation_manager_group
+msgid "Manager delegation"
+msgstr "Administrador de delegación"
+
+#. module: sat_companies_partner
+#: model:res.groups,comment:sat_companies_partner.res_partner_delegation_manager_group
+msgid "Manager delegation Permission Group"
+msgstr "Administrador del grupo de permisos de delegaciones"
+
+#. module: sat_companies_partner
+#: model:res.groups,name:sat_companies_partner.res_partner_population_manager_group
+msgid "Manager partner population"
+msgstr "Administrador de poblaciones"
+
+#. module: sat_companies_partner
+#: model:res.groups,comment:sat_companies_partner.res_partner_population_manager_group
+msgid "Manager partner population Permission Group"
+msgstr "Administrador del grupo de permisos de poblaciones"
+
+#. module: sat_companies_partner
+#: model:res.groups,name:sat_companies_partner.res_partner_type_manager_group
+msgid "Manager partner type"
+msgstr "Administrador tipo de contacto"
+
+#. module: sat_companies_partner
+#: model:res.groups,comment:sat_companies_partner.res_partner_type_manager_group
+msgid "Manager partner type Permission Group"
+msgstr "Administrador del grupo de permisos tipo de contacto"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_communities__message_has_error
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_delegation__message_has_error
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_population__message_has_error
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_type__message_has_error
+msgid "Message Delivery error"
+msgstr "Error en la entrega"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_communities__message_ids
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_delegation__message_ids
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_population__message_ids
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_type__message_ids
+msgid "Messages"
+msgstr "Mjs"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_communities__name
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_delegation__name
+#: model_terms:ir.ui.view,arch_db:sat_companies_partner.inherit_view_res_partner_sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies_partner.view_res_partner_communities_form
+#: model_terms:ir.ui.view,arch_db:sat_companies_partner.view_res_partner_type_form
+msgid "Name"
+msgstr "Nombre"
+
+#. module: sat_companies_partner
+#: model_terms:ir.ui.view,arch_db:sat_companies_partner.view_res_partner_delegation_form
+msgid "Name of delegation"
+msgstr "Nombre de la delegación"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_communities__message_needaction_counter
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_delegation__message_needaction_counter
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_population__message_needaction_counter
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_type__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_communities__message_has_error_counter
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_delegation__message_has_error_counter
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_population__message_has_error_counter
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_type__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,help:sat_companies_partner.field_res_partner_communities__message_needaction_counter
+#: model:ir.model.fields,help:sat_companies_partner.field_res_partner_delegation__message_needaction_counter
+#: model:ir.model.fields,help:sat_companies_partner.field_res_partner_population__message_needaction_counter
+#: model:ir.model.fields,help:sat_companies_partner.field_res_partner_type__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,help:sat_companies_partner.field_res_partner_communities__message_has_error_counter
+#: model:ir.model.fields,help:sat_companies_partner.field_res_partner_delegation__message_has_error_counter
+#: model:ir.model.fields,help:sat_companies_partner.field_res_partner_population__message_has_error_counter
+#: model:ir.model.fields,help:sat_companies_partner.field_res_partner_type__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,help:sat_companies_partner.field_res_partner_communities__message_unread_counter
+#: model:ir.model.fields,help:sat_companies_partner.field_res_partner_delegation__message_unread_counter
+#: model:ir.model.fields,help:sat_companies_partner.field_res_partner_population__message_unread_counter
+#: model:ir.model.fields,help:sat_companies_partner.field_res_partner_type__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__is_oca
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__is_oca
+msgid "O.C.A"
+msgstr ""
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__observations
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__observations
+msgid "Observaciones"
+msgstr ""
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__observations_oca
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__observations_oca
+msgid "Observations"
+msgstr "Notas adicionales"
+
+#. module: sat_companies_partner
+#: model:ir.actions.act_window,name:sat_companies_partner.action_view_res_partner_type
+#: model:ir.model,name:sat_companies_partner.model_res_partner_type
+#: model:ir.model.fields,field_description:sat_companies_partner.field_crm_lead__partner_type_id
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__partner_type_id
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__partner_type_id
+#: model:ir.ui.menu,name:sat_companies_partner.menu_res_partner_type
+#: model_terms:ir.ui.view,arch_db:sat_companies_partner.custom_view_res_partner_search
+msgid "Partner type"
+msgstr "Tipo de contacto"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_population__name
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_type__name
+msgid "Partner's type"
+msgstr ""
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__password_user
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__password_user
+msgid "Password"
+msgstr "Contraseña"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__phone1
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__phone1
+msgid "Phone 1"
+msgstr "Teléfono 1"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__phone2
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__phone2
+msgid "Phone 2"
+msgstr "Teléfono 2"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__phone3
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__phone3
+msgid "Phone 3"
+msgstr "Teléfono 3"
+
+#. module: sat_companies_partner
+#: model:ir.model,name:sat_companies_partner.model_res_partner_population
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__population_id
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__population_id
+msgid "Population"
+msgstr "Población"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_delegation__code
+msgid "Postal Code"
+msgstr "Código del tercero"
+
+#. module: sat_companies_partner
+#: model_terms:ir.ui.view,arch_db:sat_companies_partner.custom_view_res_partner_search
+msgid "Potencial client"
+msgstr "Es Contacto potencial"
+
+#. module: sat_companies_partner
+#: model:ir.model,name:sat_companies_partner.model_product_template
+msgid "Product Template"
+msgstr "Plantilla de producto"
+
+#. module: sat_companies_partner
+#: model:ir.model,name:sat_companies_partner.model_purchase_order
+msgid "Purchase Order"
+msgstr "Pedido de compra"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__resource_calendar_id
+#: model_terms:ir.ui.view,arch_db:sat_companies_partner.inherit_view_res_partner_sat_companies
+msgid "Resource calendar"
+msgstr "Horario"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_communities__message_has_sms_error
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_delegation__message_has_sms_error
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_population__message_has_sms_error
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_type__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: sat_companies_partner
+#: model_terms:ir.ui.view,arch_db:sat_companies_partner.view_res_partner_delegation_search
+msgid "Search delegation"
+msgstr "Buscar delegación"
+
+#. module: sat_companies_partner
+#: model_terms:ir.ui.view,arch_db:sat_companies_partner.view_res_partner_type_search
+msgid "Search partner type"
+msgstr "Buscar tipo de contacto"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__country_state_id
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__country_state_id
+msgid "State"
+msgstr "Provincia"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__payment_term_maintenance_id
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__payment_term_maintenance_id
+msgid "Terms maintenance sale"
+msgstr "Plazos de pago mantenimiento"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__payment_term_tel_id
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__payment_term_tel_id
+msgid "Terms telephone sale"
+msgstr "Plazos de pago línea"
+
+#. module: sat_companies_partner
+#: model:ir.model.constraint,message:sat_companies_partner.constraint_res_partner_client_code_uniq
+msgid "The client code is unique!"
+msgstr "El código del cliente debe ser unico"
+
+#. module: sat_companies_partner
+#: code:addons/sat_companies_partner/models/.ipynb_checkpoints/res_partner-checkpoint.py:0
+#: code:addons/sat_companies_partner/models/res_partner.py:0
+#, python-format
+msgid "The mobile number cannot contain letters"
+msgstr ""
+
+#. module: sat_companies_partner
+#: code:addons/sat_companies_partner/models/.ipynb_checkpoints/res_partner-checkpoint.py:0
+#: code:addons/sat_companies_partner/models/res_partner.py:0
+#, python-format
+msgid "The percentage cannot be greater than 100"
+msgstr ""
+
+#. module: sat_companies_partner
+#: code:addons/sat_companies_partner/models/.ipynb_checkpoints/res_partner-checkpoint.py:0
+#: code:addons/sat_companies_partner/models/res_partner.py:0
+#, python-format
+msgid "The phone number cannot contain letters"
+msgstr ""
+
+#. module: sat_companies_partner
+#: model_terms:ir.ui.view,arch_db:sat_companies_partner.inherit_view_res_partner_sat_companies
+msgid "This contact is low"
+msgstr "Este contacto esta de baja"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_communities__message_unread
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_delegation__message_unread
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_population__message_unread
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_type__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_communities__message_unread_counter
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_delegation__message_unread_counter
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_population__message_unread_counter
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_type__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__user_partner_id
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__user_partner_id
+msgid "User"
+msgstr "Usuario"
+
+#. module: sat_companies_partner
+#: model:ir.model,name:sat_companies_partner.model_res_users
+msgid "Users"
+msgstr "Usuarios"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_account_bank_statement_line__is_validate
+#: model:ir.model.fields,field_description:sat_companies_partner.field_account_move__is_validate
+#: model:ir.model.fields,field_description:sat_companies_partner.field_account_payment__is_validate
+msgid "Validate"
+msgstr "Validar"
+
+#. module: sat_companies_partner
+#: code:addons/sat_companies_partner/models/account_move_line.py:0
+#, python-format
+msgid "Validate potencial client"
+msgstr "Verificar si el contacto es potencial!"
+
+#. module: sat_companies_partner
+#: code:addons/sat_companies_partner/models/account_move.py:0
+#: code:addons/sat_companies_partner/models/account_move.py:0
+#, python-format
+msgid "Validate potencial client has account!"
+msgstr "El contacto debe tener al menos una cuenta bancaría registrada!"
+
+#. module: sat_companies_partner
+#: code:addons/sat_companies_partner/models/account_move.py:0
+#, python-format
+msgid "Validate potencial client!"
+msgstr "Validar si el contacto es potencial!"
+
+#. module: sat_companies_partner
+#: code:addons/sat_companies_partner/models/purchase_order.py:0
+#, python-format
+msgid "Validate potential client in partner"
+msgstr ""
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner__potencial_contact
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_users__potencial_contact
+msgid "Validator potencial contact"
+msgstr "Validador de contactos potenciales"
+
+#. module: sat_companies_partner
+#: model_terms:ir.ui.view,arch_db:sat_companies_partner.inherit_view_res_partner_sat_companies
+msgid "Web consulting"
+msgstr "Consultor web"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_communities__website_message_ids
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_delegation__website_message_ids
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_population__website_message_ids
+#: model:ir.model.fields,field_description:sat_companies_partner.field_res_partner_type__website_message_ids
+msgid "Website Messages"
+msgstr "Mensajes del sitio web"
+
+#. module: sat_companies_partner
+#: model:ir.model.fields,help:sat_companies_partner.field_res_partner_communities__website_message_ids
+#: model:ir.model.fields,help:sat_companies_partner.field_res_partner_delegation__website_message_ids
+#: model:ir.model.fields,help:sat_companies_partner.field_res_partner_population__website_message_ids
+#: model:ir.model.fields,help:sat_companies_partner.field_res_partner_type__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: sat_companies_partner
+#: code:addons/sat_companies_partner/models/res_partner.py:0
+#, python-format
+msgid "You must register a Bank account"
+msgstr "La cuenta bancaría es obligatoria para contactos no potenciales"
+
+#. module: sat_companies_partner
+#: code:addons/sat_companies_partner/models/res_partner.py:0
+#, python-format
+msgid "You must register a city"
+msgstr "La ciudad es obligatoria para contactos no potenciales"
+
+#. module: sat_companies_partner
+#: code:addons/sat_companies_partner/models/res_partner.py:0
+#, python-format
+msgid "You must register an identification number"
+msgstr ""
+"El número de identificación es obligatorio para contactos no potenciales"
+
+#. module: sat_companies_partner
+#: model:ir.model,name:sat_companies_partner.model_res_partner_delegation
+msgid "Zones"
+msgstr "Zonas"
+
+#. module: sat_companies_partner
+#: model_terms:ir.ui.view,arch_db:sat_companies_partner.view_res_partner_delegation_form
+msgid "delegation_form"
+msgstr ""
+
+#. module: sat_companies_partner
+#: model_terms:ir.ui.view,arch_db:sat_companies_partner.view_res_partner_delegation_tree
+msgid "delegation_tree"
+msgstr ""
+
+#. module: sat_companies_partner
+#: model_terms:ir.ui.view,arch_db:sat_companies_partner.view_res_partner_delegation_search
+#: model_terms:ir.ui.view,arch_db:sat_companies_partner.view_res_partner_type_search
+msgid "name"
+msgstr "Nombre"
+
+#. module: sat_companies_partner
+#: model_terms:ir.ui.view,arch_db:sat_companies_partner.view_res_partner_type_form
+msgid "res_partner_type_form"
+msgstr ""
+
+#. module: sat_companies_partner
+#: model_terms:ir.ui.view,arch_db:sat_companies_partner.view_res_partner_type_tree
+msgid "res_partner_type_tree"
+msgstr ""

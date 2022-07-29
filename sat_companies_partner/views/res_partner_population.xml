@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>     
+<odoo>
+    <data>
+
+        <record id="view_res_partner_population_tree" model="ir.ui.view">
+            <field name="name">res.partner.population.tree</field>
+            <field name="model">res.partner.population</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="population_tree">
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_res_partner_population_form" model="ir.ui.view">
+            <field name="name">res.partner.population.form</field>
+            <field name="model">res.partner.population</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form string="population_form">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <field name="name" required="1" placeholder="Name"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="code" required="1"/>
+                            </group>
+                            <group>
+                                <field name="active" widget="boolean_toggle"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_res_partner_population_search" model="ir.ui.view">                      
+          <field name="name">res.partner.population.search</field>                                
+          <field name="model">res.partner.population</field>                                
+          <field name="arch" type="xml">                                    
+            <search string="Search population">
+                <field name="name"/>                                                   
+                <filter string="name" domain="[('name', '!=', '')]" name="has_name"></filter>
+                                                  
+            </search>                                
+          </field>                            
+        </record>
+    
+        <record model="ir.actions.act_window" id="action_view_res_partner_population">
+            <field name="name">Population</field>
+            <field name="res_model">res.partner.population</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create new record
+                </p>
+            </field>
+        </record>
+
+        <menuitem 
+            id="menu_res_partner_population" 
+            name="Population" 
+            parent="contacts.res_partner_menu_config"
+            action="action_view_res_partner_population"
+            />
+
+    </data>
+</odoo> 

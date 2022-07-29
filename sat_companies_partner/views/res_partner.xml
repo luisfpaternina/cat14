@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="inherit_view_res_partner_sat_companies" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="priority" eval="1"/>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[(@name='type')]" position="before">
+                <field name="client_code" attrs="{'invisible':[('client_code','=','New')]}" readonly="1"/>
+                <field name="partner_type_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                <field name="is_admin" attrs="{'invisible':['|',('is_maintainer','=',True),('is_oca','=',True)]}"/>
+                <field name="is_maintainer" attrs="{'invisible':['|',('company_type','!=','company'),('is_admin','=',True)]}"/>
+                <field name="is_oca" attrs="{'invisible':['|',('company_type','!=','company'),('is_admin','=',True)]}"/>
+                <field name="partner_type_id" options="{'no_create': True, 'no_create_edit':True}" invisible="1"/>
+                <field name="is_potential_client" invisible="True"/>
+                <field name="is_community" invisible="True"/>
+                <field name="is_maker" invisible="True"/>
+                <field name="is_billing_administrator" groups="sat_companies_partner.res_partner_billing_administrator_group"/>
+            </xpath>
+
+            <xpath expr="//field[(@name='street')]" position="attributes">
+                <attribute name="attrs">{'required':[('is_admin', '=', False),('is_oca', '=', False),('is_maintainer', '=', False),('is_potential_client', '=', False)]}</attribute>
+            </xpath>
+            
+            <xpath expr="//field[(@name='vat')]" position="attributes">
+                <attribute name="attrs">{'required':[('is_admin', '=', False),('is_oca', '=', False),('is_maintainer', '=', False),('is_potential_client', '=', False)]}</attribute>
+            </xpath>
+
+            <xpath expr="//field[(@name='city')]" position="attributes">
+                <attribute name="attrs">{'required':[('is_admin', '=', False),('is_oca', '=', False),('is_maintainer', '=', False),('is_potential_client', '=', False)]}</attribute>
+            </xpath>
+
+            <xpath expr="//field[(@name='state_id')]" position="attributes">
+                <attribute name="attrs">{'required':[('is_admin', '=', False),('is_oca', '=', False),('is_maintainer', '=', False),('is_potential_client', '=', False)]}</attribute>
+            </xpath>
+
+            <xpath expr="//field[(@name='zip')]" position="attributes">
+                <attribute name="attrs">{'required':[('is_admin', '=', False),('is_oca', '=', False),('is_maintainer', '=', False),('is_potential_client', '=', False)]}</attribute>
+            </xpath>
+
+            <xpath expr="//field[(@name='country_id')]" position="attributes">
+                <attribute name="attrs">{'required':[('is_admin', '=', False),('is_oca', '=', False),('is_maintainer', '=', False),('is_potential_client', '=', False)]}</attribute>
+            </xpath>
+
+            <xpath expr="//field[(@name='category_id')]" position="after">
+                <field name="delegation_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                <field name="delegation_name"/>
+                <field name="high_date"/>
+                <field name="low_date"/>
+                <field name="is_low" invisible="1"/>
+                <field name="community_president" attrs="{'invisible': [('is_community', '!=', True)]}"/>
+            </xpath>
+
+            <xpath expr="//sheet" position="before">
+                <div class="alert alert-danger" role="alert" style="margin-bottom:10px;"
+                        attrs="{'invisible': [('is_low', '!=', True)]}">
+                    This contact is low
+                </div>
+            </xpath>
+
+            <xpath expr="//field[(@name='email')]" position="after">
+                <field name="fax"/>
+                <field name="has_account" invisible="1"/>
+            </xpath>
+
+            <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='sales_purchases']/group[@name='container_row_2']/group[@name='sale']/field[@name='user_id']" position="after">
+                <field name="user_partner_contact_id" options="{'no_create': True, 'no_create_edit':True}" string="Commercial maintenance"/>
+                <field name="payment_term_maintenance_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                <field name="payment_term_tel_id" options="{'no_create': True, 'no_create_edit':True}"/>
+            </xpath>
+
+            <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='sales_purchases']/group[@name='container_row_2']/group[@name='sale']/field[@name='user_id']" position="attributes">
+                <attribute name="string">Comercial recruitment</attribute>
+            </xpath>
+
+            <xpath expr="//form[1]/sheet[1]/notebook[1]" position="inside">
+                <page string="Administrator teacher" name="administrator_page" attrs="{'invisible': [('is_admin', '!=', True)]}" groups="sat_companies_partner.administrator_teacher_manager_group">
+                  <group name="administrator_principal_group">
+                    <group name="adm_left">
+                        <field name="is_admin" invisible="1"/>
+                    </group>
+                    <group name="adm_right">
+                        
+                    </group>
+                    <group>
+                        
+                    </group>
+                    <group>
+                        
+                    </group>
+                    <group>
+                        <field name="percentaje_mto"/>
+                        <field name="percentaje_rep"/>
+                    </group>
+                    <group>
+                        <field name="percentaje_ges_mto" widget="progressbar"/>
+                        <field name="percentaje_ges_rep" widget="progressbar"/>
+                    </group>
+                    <group string="Web consulting">
+                        <field name="user_partner_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                        <field name="password_user"/>
+                    </group>
+                    <group string="Resource calendar">
+                        <field name="resource_calendar_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                    </group>
+                    <field name="observations" placeholder="Add observations..."/>
+                  </group>
+                </page>
+                <page string="Maintainer" name="maintainer_page" attrs="{'invisible': [('is_maintainer', '!=', True)]}" groups="sat_companies_partner.administrator_teacher_manager_group">
+                    <group name="maintainer_group">
+                        <group name="adm_left">
+                            <field name="is_admin" invisible="1"/>
+                        </group>
+                        <group name="adm_right">
+                            
+                        </group>
+                        <group>
+                            
+                        </group>
+                        <group>
+                            
+                        </group>
+                        <group>
+                           
+                        </group>
+                        <group>
+                            
+                        </group>
+                        <group>
+                            <field name="percentaje_mto"/>
+                            <field name="percentaje_rep"/>
+                        </group>
+                        <group>
+                            <field name="percentaje_ges_mto" widget="progressbar"/>
+                            <field name="percentaje_ges_rep" widget="progressbar"/>
+                        </group>
+                        <group string="Web consulting">
+                            <field name="user_partner_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                            <field name="password_user"/>
+                        </group>
+                        <group string="Resource calendar">
+                            <field name="resource_calendar_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                        </group>
+                        <field name="observations" placeholder="Add observations..."/>
+                    </group>
+                </page>
+                <page string="Gagdets" name="gadgest" attrs="{'invisible': [('is_admin', '!=', True)]}">
+                    <group>
+                            <field name="gadget_ids">
+                                <tree string="Gadgest Management">
+                                    <field name="default_code" string="Code"/>
+                                    <field name="name"/>
+                                    <field name="active_name"/>
+                                    <field name="is_admin" invisible="1"/>
+                                    <field name="partner_admin_id"/>
+                                    <field name="partner_id" string="Comunidad"/>
+                                </tree>
+                            </field>
+                    </group>
+                </page>
+                <page string="Gagdets" name="gadgest" attrs="{'invisible':['|','|',('is_maintainer','!=',False),('is_admin','!=',False),('is_oca','!=',False)]}">
+                    <group>
+                            <field name="gadget_client_ids">
+                                <tree>
+                                    <field name="default_code" string="Code"/>
+                                    <field name="name"/>
+                                    <field name="active_name"/>
+                                    <field name="is_admin" invisible="1"/>
+                                    <field name="partner_admin_id"/>
+                                    <field name="partner_id" string="Comunidad"/>
+                                </tree>
+                            </field>
+                    </group>
+                </page>
+                <page string="Gagdets" name="gadgest" attrs="{'invisible': [('is_oca', '!=', True)]}">
+                    <group>
+                            <field name="gadget_oca_ids">
+                                <tree>
+                                    <field name="default_code" string="Code"/>
+                                    <field name="name"/>
+                                    <field name="active_name"/>
+                                    <field name="is_admin" invisible="1"/>
+                                    <field name="partner_admin_id"/>
+                                    <field name="partner_id" string="Comunidad"/>
+                                </tree>
+                            </field>
+                        <field name="is_oca" invisible="1"/>
+                    </group>
+                </page>
+                <page string="Gagdets" name="gadgest" attrs="{'invisible': [('is_maintainer', '!=', True)]}">
+                    <group>
+                            <field name="gadget_maintener_ids">
+                                <tree>
+                                    <field name="default_code" string="Code"/>
+                                    <field name="name"/>
+                                    <field name="active_name"/>
+                                    <field name="is_admin" invisible="1"/>
+                                    <field name="partner_admin_id"/>
+                                    <field name="partner_id" string="Comunidad"/>
+                                </tree>
+                            </field>
+                        <field name="is_oca" invisible="1"/>
+                    </group>
+                </page>
+            </xpath>
+
+            <xpath expr="//notebook" position="inside">
+                <page name="comunity_partner" string="Comunities" invisible="1">
+                    <group>
+                        <field name="gadget_communitie_ids" string="Comunidades relacionadas">
+                            <tree editable="botttom">
+                                <field name="partner_id" string="Name"/>
+                            </tree>
+                        </field>
+                    </group>
+                    <!--
+                    <field name="comunities_ids">
+                        <tree editable="botttom">
+                            <field name="partner_community_id" options="{'no_create': True, 'no_create_edit':True}" required="1" domain = "[('is_community','=',True)]"/>
+                        </tree>
+                    </field>
+                    -->
+                </page>
+                <page name="comunity_partner" string="Comunities" invisible="1">
+                    <group>
+                        <field name="gadget_communitie_ids" string="Comunidades relacionadas">
+                            <tree editable="botttom">
+                                <field name="partner_id" string="Name"/>
+                            </tree>
+                        </field>
+                    </group>
+                    <!--
+                    <field name="comunities_ids">
+                        <tree editable="botttom">
+                            <field name="partner_community_id" options="{'no_create': True, 'no_create_edit':True}" required="1" domain = "[('is_community','=',True)]"/>
+                        </tree>
+                    </field>
+                    -->
+                </page>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="custom_view_res_partner_search">
+            <field name="name">custom.res.partner.search</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_res_partner_filter"/>
+            <field name="arch" type="xml">
+                <field name="user_id" position="after">
+                    <separator/>
+                    <field name="partner_type_id"/>
+                    <field name="delegation_id"/>
+                    <field name="population_id"/>
+                    <field name="user_partner_contact_id"/>
+                    <field name="is_admin"/>
+                    <field name="partner_type_id"/>
+                </field>
+               
+                <xpath expr="//search/group" position="inside">
+                    <filter string="Delegation" name="delegation_id" context="{'group_by':'delegation_id'}"/>
+                    <filter string="Contact type" name="partner_type_id" context="{'group_by':'partner_type_id'}"/>
+                </xpath>
+
+                <xpath expr="//search/filter[@name='type_company']" position="after">
+                    <filter string="Delegation" name="delegation_id" domain="[('delegation_id', '!=', False)]"/>
+                    <filter string="Potencial client" name="is_potential_client" domain="[('is_potential_client', '!=', False)]"/>
+                    <filter string="Is admin" name="is_admin" domain="[('is_admin', '!=', False)]"/>
+                    <filter string="Is O.C.A" name="is_oca" domain="[('is_oca', '!=', False)]"/>
+                    <filter string="Is maintainer" name="is_maintainer" domain="[('is_maintainer', '!=', False)]"/>
+                    <filter string="Es comunidad" name="is_community" domain="[('is_community', '!=', False)]"/>
+                    <filter string="Is maker" name="is_maker" domain="[('is_maker', '!=', False)]"/>
+                    <filter string="Partner type" name="partner_type_id" domain="[('partner_type_id', '!=', False)]"/>
+                </xpath>
+
+            </field>
+    </record>
+
+    <record id="inherit_tree_res_partner_sat_companies" model="ir.ui.view">
+        <field name="name">res.partner.tree.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="priority" eval="1"/>
+        <field name="inherit_id" ref="base.view_partner_tree"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='user_id']" position="after">
+                <field name="is_admin"/>
+                <field name="street" string="Address"/>
+            </xpath>
+            
+        </field>
+    </record>
+ 
+</odoo>     

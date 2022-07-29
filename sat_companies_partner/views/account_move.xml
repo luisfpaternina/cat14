@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="inherit_account_move_sat_companies_partner" model="ir.ui.view">
+        <field name="name">inherit.form.account.move</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//form[1]/sheet[1]/notebook[1]/page[2]/field[@name='line_ids']/tree[1]/field[@name='account_id']" position="after">
+                <field name="is_potential_client" invisible="1"/>
+            </xpath>
+
+            <xpath expr="//field[(@name='partner_id')]" position="after">
+                <field name="has_account"/>
+            </xpath>
+
+        </field>
+    </record>
+</odoo> 
