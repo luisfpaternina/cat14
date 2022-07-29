@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>     
+<odoo>
+    <data>
+        <record id="view_commissions_tree" model="ir.ui.view">
+            <field name="name">commissions.tree</field>
+            <field name="model">commissions</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="commissions">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_commissions_form" model="ir.ui.view">
+            <field name="name">commissions.form</field>
+            <field name="model">commissions</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form string="commissions">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <table>
+                                    <tr>
+                                        <td style="padding-right:10px;">
+                                            <field name="name" required="1" placeholder="Name"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="create_date"/>
+                            </group>
+                            <group>
+                                <field name="create_uid"/>
+                            </group>
+                            <group>
+                                
+                            </group>
+                            <group>
+                                
+                            </group>
+                        </group>
+                        <br></br><br></br><br></br>
+                        <notebook colspan="4">
+                            <page string="Information">
+                                <group>
+                                    <group>
+                                        <field name="user_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    
+        <record model="ir.actions.act_window" id="action_view_commissions">
+            <field name="name">Commissions</field>
+            <field name="res_model">commissions</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create new record
+                </p>
+            </field>
+        </record>
+
+
+        <menuitem 
+            id="menu_commissions"
+            name="commissions"
+            groups="sat_commission_management.commissions_manager_group"
+            web_icon="sat_commission_management,static/description/logo.png"
+            action="action_view_commissions" 
+            sequence="36"/>
+                   
+    </data>
+</odoo> 

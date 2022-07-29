@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+manager_model_commissions,user_model_commissions,model_commissions,sat_commission_management.commissions_manager_group,1,1,1,1
+manager_model_commissions_concepts,user_model_commissions_concepts,model_commissions_concepts,sat_commission_management.commissions_manager_group,1,1,1,1

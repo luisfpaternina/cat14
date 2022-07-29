@@ -1,0 +1,286 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sat_commission_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-24 18:26+0000\n"
+"PO-Revision-Date: 2022-02-24 18:26+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sat_commission_management
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions__message_needaction
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions_concepts__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: sat_commission_management
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions_concepts__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: sat_commission_management
+#: model_terms:ir.ui.view,arch_db:sat_commission_management.view_commissions_concepts_form
+msgid "Add description...!"
+msgstr "Agregar descripción...!"
+
+#. module: sat_commission_management
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions__amount
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions_concepts__amount
+msgid "Amount"
+msgstr "Importe"
+
+#. module: sat_commission_management
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions__message_attachment_count
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions_concepts__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: sat_commission_management
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions__user_id
+msgid "Comercial"
+msgstr ""
+
+#. module: sat_commission_management
+#: model:ir.actions.act_window,name:sat_commission_management.action_view_commissions
+#: model:ir.model,name:sat_commission_management.model_commissions
+msgid "Commissions"
+msgstr "Comisiones"
+
+#. module: sat_commission_management
+#: model:ir.actions.act_window,name:sat_commission_management.action_view_commissions_concepts
+#: model:ir.model,name:sat_commission_management.model_commissions_concepts
+msgid "Commissions concepts"
+msgstr "Conceptos"
+
+#. module: sat_commission_management
+#: model:ir.model,name:sat_commission_management.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: sat_commission_management
+#: model_terms:ir.actions.act_window,help:sat_commission_management.action_view_commissions
+#: model_terms:ir.actions.act_window,help:sat_commission_management.action_view_commissions_concepts
+msgid "Create new record"
+msgstr "Crear nuevo registro"
+
+#. module: sat_commission_management
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions__create_uid
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions_concepts__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: sat_commission_management
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions__create_date
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions_concepts__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: sat_commission_management
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions__description
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions_concepts__description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: sat_commission_management
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions__display_name
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions_concepts__display_name
+#: model:ir.model.fields,field_description:sat_commission_management.field_res_company__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: sat_commission_management
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions__message_follower_ids
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions_concepts__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: sat_commission_management
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions__message_channel_ids
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions_concepts__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: sat_commission_management
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions__message_partner_ids
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions_concepts__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: sat_commission_management
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions__id
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions_concepts__id
+#: model:ir.model.fields,field_description:sat_commission_management.field_res_company__id
+msgid "ID"
+msgstr ""
+
+#. module: sat_commission_management
+#: model:ir.model.fields,help:sat_commission_management.field_commissions__message_needaction
+#: model:ir.model.fields,help:sat_commission_management.field_commissions__message_unread
+#: model:ir.model.fields,help:sat_commission_management.field_commissions_concepts__message_needaction
+#: model:ir.model.fields,help:sat_commission_management.field_commissions_concepts__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: sat_commission_management
+#: model:ir.model.fields,help:sat_commission_management.field_commissions__message_has_error
+#: model:ir.model.fields,help:sat_commission_management.field_commissions__message_has_sms_error
+#: model:ir.model.fields,help:sat_commission_management.field_commissions_concepts__message_has_error
+#: model:ir.model.fields,help:sat_commission_management.field_commissions_concepts__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: sat_commission_management
+#: model_terms:ir.ui.view,arch_db:sat_commission_management.view_commissions_form
+msgid "Information"
+msgstr "Información"
+
+#. module: sat_commission_management
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions__message_is_follower
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions_concepts__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: sat_commission_management
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions____last_update
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions_concepts____last_update
+#: model:ir.model.fields,field_description:sat_commission_management.field_res_company____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: sat_commission_management
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions__write_uid
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions_concepts__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: sat_commission_management
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions__write_date
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions_concepts__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: sat_commission_management
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions__message_main_attachment_id
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions_concepts__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: sat_commission_management
+#: model:res.groups,name:sat_commission_management.commissions_manager_group
+msgid "Manager commissions"
+msgstr "Administrador de comisiones"
+
+#. module: sat_commission_management
+#: model:res.groups,comment:sat_commission_management.commissions_manager_group
+msgid "Manager commissions Permission Group"
+msgstr "Administrador de permiso comisiones"
+
+#. module: sat_commission_management
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions__message_has_error
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions_concepts__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: sat_commission_management
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions__message_ids
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions_concepts__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: sat_commission_management
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions__name
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions_concepts__name
+#: model_terms:ir.ui.view,arch_db:sat_commission_management.view_commissions_concepts_form
+#: model_terms:ir.ui.view,arch_db:sat_commission_management.view_commissions_form
+msgid "Name"
+msgstr "Nombre"
+
+#. module: sat_commission_management
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions__message_needaction_counter
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions_concepts__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: sat_commission_management
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions__message_has_error_counter
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions_concepts__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: sat_commission_management
+#: model:ir.model.fields,help:sat_commission_management.field_commissions__message_needaction_counter
+#: model:ir.model.fields,help:sat_commission_management.field_commissions_concepts__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: sat_commission_management
+#: model:ir.model.fields,help:sat_commission_management.field_commissions__message_has_error_counter
+#: model:ir.model.fields,help:sat_commission_management.field_commissions_concepts__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: sat_commission_management
+#: model:ir.model.fields,help:sat_commission_management.field_commissions__message_unread_counter
+#: model:ir.model.fields,help:sat_commission_management.field_commissions_concepts__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: sat_commission_management
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions_concepts__is_client_number
+msgid "Required number clients"
+msgstr "Captación de clientes"
+
+#. module: sat_commission_management
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions__message_has_sms_error
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions_concepts__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: sat_commission_management
+#: model:ir.model.fields,field_description:sat_commission_management.field_res_company__terms
+msgid "Terms"
+msgstr "Términos"
+
+#. module: sat_commission_management
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions__message_unread
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions_concepts__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: sat_commission_management
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions__message_unread_counter
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions_concepts__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: sat_commission_management
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions__website_message_ids
+#: model:ir.model.fields,field_description:sat_commission_management.field_commissions_concepts__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: sat_commission_management
+#: model:ir.model.fields,help:sat_commission_management.field_commissions__website_message_ids
+#: model:ir.model.fields,help:sat_commission_management.field_commissions_concepts__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: sat_commission_management
+#: model:ir.ui.menu,name:sat_commission_management.menu_commissions
+#: model_terms:ir.ui.view,arch_db:sat_commission_management.view_commissions_form
+#: model_terms:ir.ui.view,arch_db:sat_commission_management.view_commissions_tree
+msgid "commissions"
+msgstr "Comisiones"
+
+#. module: sat_commission_management
+#: model:ir.ui.menu,name:sat_commission_management.menu_commissions_concepts
+msgid "commissions concepts"
+msgstr "Conceptos"
