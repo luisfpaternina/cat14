@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+        <template id="report_template_invoice">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">                    
+                    <div class="header">
+                        <table style="width:100%">
+                          <tr>
+                            <th>
+                                <p align="justify">
+                                    <img t-att-src="'data:image/png;base64,%s' % to_text(o.qr_code)" width="115" height="90"/>
+                                </p>
+                            </th>
+                            <th>
+                                <p align="left" style="font-size: 13px;">
+                                    <span t-field="o.company_id"></span><br></br>
+                                    <span t-field="o.company_id.street"></span><br></br>
+                                    <span t-field="o.company_id.phone"></span><br></br>
+                                    <span t-field="o.company_id.email"></span>
+                                </p>
+                            </th>
+                            <th>
+                                <p align="justify">
+                                    <img t-att-src="'data:image/png;base64,%s' % to_text(o.company_id.logo)" width="115" height="90"/>
+                                </p>
+                            </th>
+                          </tr>
+                        </table>
+                        <br></br><br></br>
+                    </div>
+                    <div class="article o_report_layout_standard">
+                       <div class="page">
+                          <style>
+                                div#cuadro1{
+                                width:400px;
+                                height:130px;
+                                background-color:white;
+                                float:left;
+                                border: 1px solid black;
+                                padding: 10px;
+                                }
+                                div#cuadro2{
+                                width:400px;
+                                height:130px;
+                                background-color:white;
+                                float:right;
+                                border: 1px solid black;
+                                padding: 10px;
+                                }
+                                div#datos_fiscales{
+                                width:400px;
+                                height:30px;
+                                background-color:white;
+                                float:left;
+                                border: 0px solid black;
+                                padding: 10px;
+                                }
+                                div#datos_envio{
+                                width:400px;
+                                height:30px;
+                                background-color:white;
+                                float:right;
+                                border: 0px solid black;
+                                padding: 10px;
+                                }
+                                div#espacio{
+                                width:700px;
+                                height:20px;
+                                background-color:white;
+                                float:right;
+                                border: 0px solid black;
+                                }
+                                table, th, td {
+                                border:1px solid black;
+                                padding: 5px;
+                                }
+                                #t01 td {
+                                border: 0px solid black;
+                                }
+                          </style>
+                          <br></br>
+                          <div id="cuadro1">
+                              <strong><span> </span><span t-field="o.partner_id"></span></strong><br></br>
+                              <span t-field="o.partner_id.vat"></span>
+                          </div>
+                          <div id="cuadro2">
+                              <strong>Ascensor:</strong><span> </span><span t-field="o.product_id"></span><br></br>
+                              <strong>R.A.E:</strong><span> </span><span t-field="o.product_id.rae"></span>
+                          </div>
+                          <div id="espacio"></div>
+                          <table style="width:100%">
+                              <tr>
+                                <th>Fecha</th>
+                                <th>N°Factura</th>
+                                <th>Cliente</th>
+                                <th>Referencia</th>
+                              </tr>
+                              <tr>
+                                <td>
+                                    <span t-field="o.invoice_date"></span>
+                                </td>
+                                <td>
+                                    <span t-field="o.name"></span>
+                                </td>
+                                <td>
+                                    <span t-field="o.partner_id"></span>
+                                </td>
+                                <td>
+                                    <span></span>
+                                </td>
+                              </tr>
+                         </table>
+                         <br></br>
+                         <table width="100%">
+                             <thead>
+                                 <tr>
+                                    <th>CONCEPTO</th>
+                                    <th>PRE.UNI.</th>
+                                    <th>CANTIDAD</th>
+                                    <th>DTO.</th>
+                                    <th>IMPORTE</th>
+                                 </tr>
+                             </thead>
+                             <tbody>
+                                <t t-foreach="o.invoice_line_ids" t-as="line">
+                                     <tr>
+                                        <td>
+                                            <span t-field="line.product_id"></span>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.price_unit"></span>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.quantity"  t-options="{'widget': 'integer'}"></span>
+                                        </td>
+                                        <td>
+                                           <span></span>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.price_subtotal"></span>
+                                        </td>
+                                     </tr>
+                                </t>
+                             </tbody>
+                         </table>
+                         <br></br>
+                         <table width="100%">
+                             <thead>
+                                 <tr>
+                                    <th>Base imponible</th>
+                                    <th>Base exenta</th>
+                                    <th>Recargo</th>
+                                    <th>I.V.A</th>
+                                    <th>Total factura</th>
+                                 </tr>
+                             </thead>
+                             <tbody>
+                                <t t-foreach="o.amount_by_group" t-as="amount_by_group">
+                                <tr>
+                                    <td>
+                                        <span t-field="o.amount_untaxed"></span>
+                                    </td>
+                                    <td>
+                                        <span></span>
+                                    </td>
+                                    <td>
+                                        <span></span>
+                                    </td>
+                                    <td>
+                                        <span class="text-nowrap" t-esc="amount_by_group[3]"/>
+                                    </td>
+                                    <td style="background-color:#D8D8D8">
+                                        <strong><span t-field="o.amount_total"></span></strong>
+                                    </td>
+                                </tr>
+                                 <tr>
+                                    <td colspan="5">
+                                        <p style="font-size: 9px;">
+                                            VTO/S:
+                                        </p>
+                                        <p style="font-size: 9px;">
+                                            F.PAGO:
+                                        </p>
+                                        <p style="font-size: 9px;">
+                                            C.C.C.:
+                                        </p>
+                                    </td>
+                                </tr>
+                                </t>
+                             </tbody>
+                         </table>
+                         <br></br>
+                         <p align="justify" style="font-size: 10px;">
+                             <span t-field="o.narration"></span>
+                         </p>
+                       </div>
+                    </div>
+                    <div class="footer">
+                        <p align="left" style="font-size: 7px;">
+                            <span t-field="o.company_id.terms"></span>
+                        </p>
+                    </div>
+                </t>
+            </t>
+        </template>
+
+        <report
+                id="id_report_template_invoice"
+                string="Factura personalizada"
+                model="account.move"
+                report_type="qweb-pdf"
+                name="sat_companies.report_template_invoice"
+        />
+
+    </data>
+</odoo>

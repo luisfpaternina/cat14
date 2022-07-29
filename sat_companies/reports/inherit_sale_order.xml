@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <odoo>
+   <data> 
+      <template id="sat_companies_invoice_report"  inherit_id="sale.report_saleorder_document">
+         <div id="informations" position="inside">
+            <div class="col-auto col-3 mw-100 mb-2">
+               <strong>Aparato:</strong>
+               <p class="m-0" t-field="doc.product_id"/>
+               <strong>R.A.E:</strong>
+               <p class="m-0" t-field="doc.product_id.rae"/>
+            </div>
+            <br></br>
+         </div>
+      </template>
+   </data>
+</odoo>

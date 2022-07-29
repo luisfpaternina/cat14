@@ -1,0 +1,809 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sat_companies
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-27 17:04+0000\n"
+"PO-Revision-Date: 2022-05-27 17:04+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sat_companies
+#: model:mail.template,body_html:sat_companies.template_account_receipt_32
+msgid ""
+"<?xml version=\"1.0\"?>\n"
+"<div>\n"
+"                    <style>\n"
+"                        #t01 td {\n"
+"                        border: 1px solid black;\n"
+"                        padding: 5px;\n"
+"                        }\n"
+"                        #t02 td {\n"
+"                        border: 0px solid black;\n"
+"                        }\n"
+"                        div#cuadro_concepto{\n"
+"                        width:1050px;\n"
+"                        height:130px;\n"
+"                        background-color:white;\n"
+"                        float:left;\n"
+"                        border: 1px solid black;\n"
+"                        padding: 10px;\n"
+"                        }\n"
+"                        div#espacio{\n"
+"                        width:1000px;\n"
+"                        height:5px;\n"
+"                        background-color:white;\n"
+"                        border: 0px solid black;\n"
+"                        padding: 10px;\n"
+"                        }\n"
+"                        div#cuadro1{\n"
+"                        width:600px;\n"
+"                        height:130px;\n"
+"                        background-color:white;\n"
+"                        float:left;\n"
+"                        border: 1px solid black;\n"
+"                        padding: 10px;\n"
+"                        }\n"
+"                        div#cuadro2{\n"
+"                        width:300px;\n"
+"                        height:130px;\n"
+"                        background-color:white;\n"
+"                        float:right;\n"
+"                        border: 0px solid black;\n"
+"                        padding: 10px;\n"
+"                        }\n"
+"                    </style>\n"
+"                    <br/><br/>\n"
+"                    <table width=\"100%\" id=\"t01\">\n"
+"                        <tr>\n"
+"                            <td>\n"
+"                                <span>RECIBO NÚMERO</span><br/>\n"
+"                                <span>${object.move_id.name}</span>\n"
+"                            </td>\n"
+"                            <td>\n"
+"                                <span>LOCALIDAD DE EXPEDICIÓN</span><br/>\n"
+"                                <span>${object.company_id.name}</span>\n"
+"                            </td>\n"
+"                            <td>\n"
+"                                <span>IMPORTE</span><br/>\n"
+"                                <span>${object.credit}</span>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                        <tr>\n"
+"                            <td colspan=\"2\">\n"
+"                                <span align=\"left\">FECHA DE EXPEDICIÓN:</span><span> </span><span>${object.date}</span>\n"
+"                            </td>\n"
+"                            <td>\n"
+"                                <span align=\"right\">FECHA DE VENCIMIENTO:</span><span> </span><span>${object.date_maturity}</span>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                    </table>\n"
+"                    <br/>\n"
+"                    <table width=\"100%\" id=\"t01\">\n"
+"                        <tr style=\"height:100px\">\n"
+"                            <td>\n"
+"                                <span>CONCEPTO:</span><br/><br/>\n"
+"                                <span>IMPORTE:</span>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                    </table>\n"
+"                    <br/>\n"
+"                    <table width=\"100%\" id=\"t01\">\n"
+"                        <tr>\n"
+"                            <td>\n"
+"                                <span>PAGADO EN (CAJA O BANCO)</span><br/>\n"
+"                            </td>\n"
+"                            <td>\n"
+"                                <span>OFICINA</span><br/>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                    </table>\n"
+"                    <div id=\"espacio\"/>\n"
+"                    <div id=\"cuadro1\">\n"
+"                        <span>NOMBRE Y DOMICILIO DEL LIBRADO</span><br/>\n"
+"                        <span>${object.partner_id.name}</span><br/>\n"
+"                        <span>${object.partner_id.street}</span>\n"
+"                    </div>\n"
+"                    <div id=\"cuadro2\">\n"
+"                        <strong>${object.company_id.name}</strong>\n"
+"                    </div>\n"
+"                </div>\n"
+"            "
+msgstr ""
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.report_template_invoice
+msgid ""
+"<br/>\n"
+"                              <strong>R.A.E:</strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.sat_companies_invoice_report
+msgid "<strong>Aparato:</strong>"
+msgstr ""
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.report_template_invoice
+msgid "<strong>Ascensor:</strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.sat_companies_invoice_report
+msgid "<strong>R.A.E:</strong>"
+msgstr ""
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
+msgid "Account configuration"
+msgstr "Configuración de cuentas"
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_account_move_unpaid__message_needaction
+msgid "Action Needed"
+msgstr "Acción"
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
+msgid "Activate potencial client"
+msgstr "Activar contactos potenciales"
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_account_move_unpaid__message_attachment_count
+msgid "Attachment Count"
+msgstr "Adjuntos"
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_res_config_settings__module_bim
+#: model:ir.model.fields,field_description:sat_companies.field_res_config_settings__module_bim_project
+#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
+msgid "BIM"
+msgstr ""
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
+msgid "BIM project"
+msgstr "Obras/BIM"
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.report_template_invoice
+msgid "Base exenta"
+msgstr ""
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.report_template_invoice
+msgid "Base imponible"
+msgstr ""
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.report_template_invoice
+msgid "C.C.C.:"
+msgstr ""
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.report_template_invoice
+msgid "CANTIDAD"
+msgstr ""
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.report_template_invoice
+msgid "CONCEPTO"
+msgstr ""
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_res_config_settings__charge
+msgid "Charge"
+msgstr "Cambio"
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.report_template_invoice
+msgid "Cliente"
+msgstr ""
+
+#. module: sat_companies
+#: model:ir.model,name:sat_companies.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: sat_companies
+#: code:addons/sat_companies/models/account_move_line.py:0
+#, python-format
+msgid "Compose Email"
+msgstr ""
+
+#. module: sat_companies
+#: model:ir.model,name:sat_companies.model_res_config_settings
+msgid "Config Settings"
+msgstr "Opciones de configuración"
+
+#. module: sat_companies
+#: model:ir.model,name:sat_companies.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_account_move_unpaid__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_account_move_unpaid__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.report_template_invoice
+msgid "DTO."
+msgstr ""
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_account_move_unpaid__date
+msgid "Date"
+msgstr "Fecha"
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_account_move__display_name
+#: model:ir.model.fields,field_description:sat_companies.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:sat_companies.field_account_move_unpaid__display_name
+#: model:ir.model.fields,field_description:sat_companies.field_res_company__display_name
+#: model:ir.model.fields,field_description:sat_companies.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:sat_companies.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_res_config_settings__module_documents
+msgid "Documents"
+msgstr "Documentos"
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
+msgid "Enable Transfer request"
+msgstr "Habilitar solicitud de transferencias"
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
+msgid "Enable forecast made"
+msgstr "Habilitar previsión en ventas"
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
+msgid "Enable purchases"
+msgstr "Compras"
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
+msgid "Enable quality alerts in SAT"
+msgstr "Habilitar alertas de calidad"
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
+msgid "Enable sale revision history"
+msgstr "Habilitar historial de revisiones de ventas"
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_res_company__show_technical
+#: model:ir.model.fields,field_description:sat_companies.field_res_config_settings__show_technical
+msgid "Enable technical"
+msgstr "Habilitar técnico"
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
+msgid "Enable technical of gadget in budget"
+msgstr "Mostrar datos del técnico en el presupuesto"
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.report_template_invoice
+msgid "F.PAGO:"
+msgstr ""
+
+#. module: sat_companies
+#: model:ir.actions.report,name:sat_companies.id_report_template_invoice
+msgid "Factura personalizada"
+msgstr ""
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.report_template_invoice
+msgid "Fecha"
+msgstr ""
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_account_move_unpaid__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_account_move_unpaid__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_account_move_unpaid__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
+msgid "Forecast made"
+msgstr "Previsión"
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
+msgid "Gadgets"
+msgstr "Aparatos"
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_res_company__has_rae
+#: model:ir.model.fields,field_description:sat_companies.field_res_config_settings__has_rae
+msgid "Has RAE"
+msgstr "Habilitar RAE"
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.report_template_invoice
+msgid "I.V.A"
+msgstr ""
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_account_move__id
+#: model:ir.model.fields,field_description:sat_companies.field_account_move_line__id
+#: model:ir.model.fields,field_description:sat_companies.field_account_move_unpaid__id
+#: model:ir.model.fields,field_description:sat_companies.field_res_company__id
+#: model:ir.model.fields,field_description:sat_companies.field_res_config_settings__id
+#: model:ir.model.fields,field_description:sat_companies.field_res_partner__id
+msgid "ID"
+msgstr ""
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.report_template_invoice
+msgid "IMPORTE"
+msgstr ""
+
+#. module: sat_companies
+#: model:ir.model.fields,help:sat_companies.field_account_move_unpaid__message_needaction
+#: model:ir.model.fields,help:sat_companies.field_account_move_unpaid__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: sat_companies
+#: model:ir.model.fields,help:sat_companies.field_account_move_unpaid__message_has_error
+#: model:ir.model.fields,help:sat_companies.field_account_move_unpaid__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: sat_companies
+#: model:ir.model.fields.selection,name:sat_companies.selection__account_move__payment_state__in_payment
+msgid "In Payment"
+msgstr "En proceso de pago"
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
+msgid "Integrate BIM with SAT"
+msgstr ""
+
+#. module: sat_companies
+#: model:ir.model.fields.selection,name:sat_companies.selection__account_move__payment_state__invoicing_legacy
+msgid "Invoicing App Legacy"
+msgstr "Factura Sistema Anterior"
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_res_partner__is_admin
+#: model:ir.model.fields,field_description:sat_companies.field_res_users__is_admin
+msgid "Is Admin"
+msgstr "Es administrador"
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_account_move_unpaid__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_res_partner__is_acommunity
+#: model:ir.model.fields,field_description:sat_companies.field_res_users__is_acommunity
+msgid "Is a community"
+msgstr "Es una comunidad"
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_account_bank_statement_line__is_potential_client
+#: model:ir.model.fields,field_description:sat_companies.field_account_move__is_potential_client
+#: model:ir.model.fields,field_description:sat_companies.field_account_payment__is_potential_client
+#: model:ir.model.fields,field_description:sat_companies.field_res_partner__is_potential_client
+#: model:ir.model.fields,field_description:sat_companies.field_res_users__is_potential_client
+msgid "Is a potential client"
+msgstr "Contacto potencial"
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_res_partner__is_billing_administrator
+#: model:ir.model.fields,field_description:sat_companies.field_res_users__is_billing_administrator
+msgid "Is billing administrator"
+msgstr "Enviar factura al administrador"
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_res_company__is_forecast_made
+#: model:ir.model.fields,field_description:sat_companies.field_res_config_settings__is_forecast_made
+msgid "Is forecast made"
+msgstr "Previsión"
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_res_partner__is_maintainer
+#: model:ir.model.fields,field_description:sat_companies.field_res_users__is_maintainer
+msgid "Is maintainer"
+msgstr "Mantenedora"
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_res_company__is_potencial_client
+#: model:ir.model.fields,field_description:sat_companies.field_res_config_settings__is_potencial_client
+msgid "Is potencial client"
+msgstr "Es un contacto potencial"
+
+#. module: sat_companies
+#: model:ir.model,name:sat_companies.model_account_move
+msgid "Journal Entry"
+msgstr "Asiento contable"
+
+#. module: sat_companies
+#: model:ir.model,name:sat_companies.model_account_move_line
+msgid "Journal Item"
+msgstr "Apunte contable"
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_account_move____last_update
+#: model:ir.model.fields,field_description:sat_companies.field_account_move_line____last_update
+#: model:ir.model.fields,field_description:sat_companies.field_account_move_unpaid____last_update
+#: model:ir.model.fields,field_description:sat_companies.field_res_company____last_update
+#: model:ir.model.fields,field_description:sat_companies.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:sat_companies.field_res_partner____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_account_move_unpaid__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_account_move_unpaid__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_account_move_unpaid__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: sat_companies
+#: model:res.groups,name:sat_companies.sale_order_contract_manager_group
+msgid "Manager contract"
+msgstr "Administrador de contrato"
+
+#. module: sat_companies
+#: model:res.groups,comment:sat_companies.sale_order_contract_manager_group
+msgid "Manager contract Permission Group"
+msgstr "Grupo de permisos administrador de contratos"
+
+#. module: sat_companies
+#: model:res.groups,name:sat_companies.account_move_unpaid_manager_group
+msgid "Manager unpaid"
+msgstr "Administrador de impagadas"
+
+#. module: sat_companies
+#: model:res.groups,comment:sat_companies.account_move_unpaid_manager_group
+msgid "Manager unpaid Permission Group"
+msgstr "Grupo de permisos impagadas"
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_account_move_unpaid__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_account_move_unpaid__message_ids
+msgid "Messages"
+msgstr "Mnesajes"
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_account_move_unpaid__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: sat_companies
+#: model:ir.model.fields.selection,name:sat_companies.selection__account_move__payment_state__not_paid
+msgid "Not Paid"
+msgstr "No pagadas"
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_account_move_unpaid__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Número de acciones"
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_account_move_unpaid__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: sat_companies
+#: model:ir.model.fields,help:sat_companies.field_account_move_unpaid__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: sat_companies
+#: model:ir.model.fields,help:sat_companies.field_account_move_unpaid__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: sat_companies
+#: model:ir.model.fields,help:sat_companies.field_account_move_unpaid__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.report_template_invoice
+msgid "N°Factura"
+msgstr ""
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_res_partner__is_oca
+#: model:ir.model.fields,field_description:sat_companies.field_res_users__is_oca
+msgid "O.C.A"
+msgstr ""
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.report_template_invoice
+msgid "PRE.UNI."
+msgstr ""
+
+#. module: sat_companies
+#: model:ir.model.fields.selection,name:sat_companies.selection__account_move__payment_state__paid
+msgid "Paid"
+msgstr "Pagado"
+
+#. module: sat_companies
+#: model:ir.model.fields.selection,name:sat_companies.selection__account_move__payment_state__partial
+msgid "Partially Paid"
+msgstr "Pagado Parcialmente"
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_account_bank_statement_line__payment_state
+#: model:ir.model.fields,field_description:sat_companies.field_account_move__payment_state
+#: model:ir.model.fields,field_description:sat_companies.field_account_payment__payment_state
+msgid "Payment Status"
+msgstr "Estado de pago"
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
+msgid "Potencial client configuration"
+msgstr "Configuración contactos potenciales"
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_res_config_settings__module_sat_companies_purchase
+#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
+msgid "Purchases"
+msgstr "Compras"
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_account_bank_statement_line__invoice_qr_code
+#: model:ir.model.fields,field_description:sat_companies.field_account_bank_statement_line__qr_image
+#: model:ir.model.fields,field_description:sat_companies.field_account_move__invoice_qr_code
+#: model:ir.model.fields,field_description:sat_companies.field_account_move__qr_image
+#: model:ir.model.fields,field_description:sat_companies.field_account_payment__invoice_qr_code
+#: model:ir.model.fields,field_description:sat_companies.field_account_payment__qr_image
+msgid "QR Code"
+msgstr "Código QR"
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_account_bank_statement_line__qr_code
+#: model:ir.model.fields,field_description:sat_companies.field_account_move__qr_code
+msgid "QR Code Image"
+msgstr "Imagen código QR"
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_res_config_settings__module_sat_companies_product_qr
+msgid "QR generator gadgets"
+msgstr "Generador QR aparatos"
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_account_bank_statement_line__qr_code_name
+#: model:ir.model.fields,field_description:sat_companies.field_account_move__qr_code_name
+#: model:ir.model.fields,field_description:sat_companies.field_account_payment__qr_code_name
+msgid "Qr Code Name"
+msgstr "Nombre código QR"
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_res_config_settings__module_sat_companies_quality
+#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
+msgid "Quality"
+msgstr "Calidad"
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
+msgid "Quality alerts"
+msgstr "Alertas de calidad"
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
+msgid "RAE"
+msgstr ""
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.report_template_invoice
+msgid "Recargo"
+msgstr ""
+
+#. module: sat_companies
+#: model:mail.template,subject:sat_companies.template_account_receipt_32
+msgid "Recibo"
+msgstr ""
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.report_template_invoice
+msgid "Referencia"
+msgstr ""
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
+msgid "Required account"
+msgstr "Cuenta requerida"
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
+msgid "Required fields for potencial contacts"
+msgstr "Campos requeridos para contactos potenciales"
+
+#. module: sat_companies
+#: model:ir.model.fields.selection,name:sat_companies.selection__account_move__payment_state__reversed
+msgid "Reversed"
+msgstr "Revertido"
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
+msgid "SAT"
+msgstr ""
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_account_move_unpaid__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_res_config_settings__module_sale_revision_history
+msgid "Sale revision history"
+msgstr "Historial de revisiones de ventas"
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
+msgid "Sales"
+msgstr "Ventas"
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
+msgid "Sales revision history"
+msgstr "Historial de revisiones de ventas"
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
+msgid "Scann QR"
+msgstr "Scanear QR"
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.inherit_view_account_move_line_sat_companies
+msgid "Send by email"
+msgstr "Enviar correo"
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_account_bank_statement_line__qr_in_report
+#: model:ir.model.fields,field_description:sat_companies.field_account_move__qr_in_report
+#: model:ir.model.fields,field_description:sat_companies.field_account_payment__qr_in_report
+msgid "Show QR in Report"
+msgstr "Mostar QR en el reporte"
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
+msgid "Show technical"
+msgstr "Habilitar técnico"
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
+msgid "Stock"
+msgstr "Inventario"
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_res_company__terms
+msgid "Terms"
+msgstr "Términos"
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
+msgid "This option enable QR scanner from gadget"
+msgstr "Esta opción habilita los código QR de aparatos"
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
+msgid "This option enable required RAE"
+msgstr "Campo RAE obligatorio cuando el producto es un aparato"
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.report_template_invoice
+msgid "Total factura"
+msgstr ""
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
+msgid "Transfer request for technicians"
+msgstr "Solicitud de transferencias para técnicos"
+
+#. module: sat_companies
+#: model:ir.model,name:sat_companies.model_account_move_unpaid
+msgid "Unpaid"
+msgstr "Impagada"
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_account_bank_statement_line__move_unpaid_ids
+#: model:ir.model.fields,field_description:sat_companies.field_account_move__move_unpaid_ids
+#: model:ir.model.fields,field_description:sat_companies.field_account_payment__move_unpaid_ids
+msgid "Unpaids"
+msgstr "Impagadas"
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_account_move_unpaid__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_account_move_unpaid__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.report_template_invoice
+msgid "VTO/S:"
+msgstr ""
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_res_partner__potencial_contact
+#: model:ir.model.fields,field_description:sat_companies.field_res_users__potencial_contact
+msgid "Validator potencial contact"
+msgstr "Validador de contactos potenciales"
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_account_move_unpaid__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: sat_companies
+#: model:ir.model.fields,help:sat_companies.field_account_move_unpaid__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: sat_companies
+#: code:addons/sat_companies/models/res_partner.py:0
+#, python-format
+msgid "You must register a Bank account"
+msgstr ""
+
+#. module: sat_companies
+#: code:addons/sat_companies/models/res_partner.py:0
+#, python-format
+msgid "You must register a city"
+msgstr ""
+
+#. module: sat_companies
+#: code:addons/sat_companies/models/res_partner.py:0
+#, python-format
+msgid "You must register an identification number"
+msgstr ""
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
+msgid "charge"
+msgstr "Cambio"
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_res_config_settings__module_pc_stock_picking_ext
+msgid "pc stock picking ext"
+msgstr ""

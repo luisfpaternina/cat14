@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   <data>
+      <record id="inherit_view_account_move_line_sat_companies" model="ir.ui.view">
+        <field name="name">inherit.account.move.line</field>
+        <field name="model">account.move.line</field>
+        <field name="inherit_id" ref="account.view_move_line_form"/>
+        <field name="arch" type="xml"> 
+            <xpath expr="//form[1]/sheet[1]" position="before">
+                <header>
+                      <button name="action_send_email" string="Send by email" type="object"/>
+                </header>
+            </xpath>
+        </field>
+    </record>
+</data>
+</odoo>    

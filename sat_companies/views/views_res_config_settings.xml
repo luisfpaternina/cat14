@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="res_config_settings_view_form_sat" model="ir.ui.view">
+            <field name="name">res.config.settings.view.form.inherit</field>
+            <field name="model">res.config.settings</field>
+            <field name="priority" eval="99"/>
+            <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//div[hasclass('settings')]" position="inside">
+                    <div class="app_settings_block" data-string="My Module" string="SAT" data-key="my_module">
+                        <h2>Potencial client configuration</h2>
+                        <div class="row mt16 o_settings_container">
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_left_pane"/>
+                                <div class="o_setting_right_pane">
+                                    <label string="Activate potencial client" for="is_potencial_client"/>
+                                    <div class="text-muted">Required fields for potencial contacts</div>
+                                    <field name="is_potencial_client"/>
+                                </div>
+                            </div> 
+                        </div>
+                        <h2>Account configuration</h2>
+                        <div class="row mt16 o_settings_container">
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_left_pane"/>
+                                <div class="o_setting_right_pane">
+                                    <label string="charge" for="charge"/>
+                                    <div class="text-muted">Required account</div>
+                                    <field name="charge" widget="text"/>
+                                </div>
+                            </div> 
+                        </div>
+                        <h2>BIM</h2>
+                        <div class="row mt16 o_settings_container">
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_left_pane"/>
+                                <div class="o_setting_right_pane">
+                                    <label string="BIM project" for="module_bim"/>
+                                    <div class="text-muted">Integrate BIM with SAT</div>
+                                    <field name="module_bim"/>
+                                </div>
+                            </div> 
+                        </div>
+                        <h2>Quality</h2>
+                        <div class="row mt16 o_settings_container">
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_left_pane"/>
+                                <div class="o_setting_right_pane">
+                                    <label string="Quality alerts" for="module_sat_companies_quality"/>
+                                    <div class="text-muted">Enable quality alerts in SAT</div>
+                                    <field name="module_sat_companies_quality"/>
+                                </div>
+                            </div> 
+                        </div>
+                        <h2>Gadgets</h2>
+                        <div class="row mt16 o_settings_container">
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_left_pane"/>
+                                <div class="o_setting_right_pane">
+                                    <label string="Scann QR" for="module_sat_companies_product_qr"/>
+                                    <div class="text-muted">This option enable QR scanner from gadget</div>
+                                    <field name="module_sat_companies_product_qr"/>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_left_pane"/>
+                                <div class="o_setting_right_pane">
+                                    <label string="RAE" for="module_sat_companies_product_qr"/>
+                                    <div class="text-muted">This option enable required RAE</div>
+                                    <field name="has_rae"/>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_left_pane"/>
+                                <div class="o_setting_right_pane">
+                                    <label string="Show technical" for="show_technical"/>
+                                    <div class="text-muted">Enable technical of gadget in budget</div>
+                                    <field name="show_technical"/>
+                                </div>
+                            </div> 
+                        </div>
+                        <h2>Purchases</h2>
+                        <div class="row mt16 o_settings_container">
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_left_pane"/>
+                                <div class="o_setting_right_pane">
+                                    <label string="Purchases" for="module_sat_companies_purchase"/>
+                                    <div class="text-muted">Enable purchases</div>
+                                    <field name="module_sat_companies_purchase"/>
+                                </div>
+                            </div> 
+                        </div>
+                        <h2>Sales</h2>
+                        <div class="row mt16 o_settings_container">
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_left_pane"/>
+                                <div class="o_setting_right_pane">
+                                    <label string="Sales revision history" for="module_sale_revision_history"/>
+                                    <div class="text-muted">Enable sale revision history</div>
+                                    <field name="module_sale_revision_history"/>
+                                </div>
+                            </div> 
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_left_pane"/>
+                                <div class="o_setting_right_pane">
+                                    <label string="Forecast made" for="is_forecast_made"/>
+                                    <div class="text-muted">Enable forecast made</div>
+                                    <field name="is_forecast_made"/>
+                                </div>
+                            </div> 
+                        </div>
+                        <h2>Stock</h2>
+                        <div class="row mt16 o_settings_container">
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_left_pane"/>
+                                <div class="o_setting_right_pane">
+                                    <label string="Transfer request for technicians" for="module_pc_stock_picking_ext"/>
+                                    <div class="text-muted">Enable Transfer request</div>
+                                    <field name="module_pc_stock_picking_ext"/>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>
