@@ -1,0 +1,501 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sat_companies_zones
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-15 12:31+0000\n"
+"PO-Revision-Date: 2021-11-15 12:31+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_guard_zones__message_needaction
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes__message_needaction
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__message_needaction
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones_lines__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_guard_zones__message_attachment_count
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes__message_attachment_count
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__message_attachment_count
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones_lines__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__employee_greasing_code
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__employee_notice_code
+msgid "Cod.Ope."
+msgstr ""
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_guard_zones__code
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes__code
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__code
+msgid "Code"
+msgstr "Código"
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__responsable_code
+msgid "Code responsable"
+msgstr "Código del responsable"
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes__country_id
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__country_id
+#: model_terms:ir.ui.view,arch_db:sat_companies_zones.view_res_partner_zones_search
+msgid "Country"
+msgstr "País"
+
+#. module: sat_companies_zones
+#: model_terms:ir.actions.act_window,help:sat_companies_zones.action_view_res_partner_guard_zones
+#: model_terms:ir.actions.act_window,help:sat_companies_zones.action_view_res_partner_routes
+#: model_terms:ir.actions.act_window,help:sat_companies_zones.action_view_res_partner_zones
+msgid "Create new record"
+msgstr "Crear nuevo registro"
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_guard_zones__create_uid
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes__create_uid
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__create_uid
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones_lines__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_guard_zones__create_date
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes__create_date
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__create_date
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones_lines__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_guard_zones__delegation_id
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__delegation_id
+msgid "Delegation"
+msgstr "Delegación"
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_guard_zones__delegation_name
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__delegation_name
+msgid "Delegation name"
+msgstr "Nombre delegación"
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_guard_zones__display_name
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes__display_name
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__display_name
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones_lines__display_name
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_users__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_guard_zones__message_follower_ids
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes__message_follower_ids
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__message_follower_ids
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones_lines__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_guard_zones__message_channel_ids
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes__message_channel_ids
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__message_channel_ids
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones_lines__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Seguidores"
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_guard_zones__message_partner_ids
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes__message_partner_ids
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__message_partner_ids
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones_lines__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores"
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__product_line_ids
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones_lines__product_id
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_users__product_ids
+msgid "Gadgets"
+msgstr "Aparatos"
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__employee_greasing_id
+msgid "Greasing operator"
+msgstr "Operador de engrase"
+
+#. module: sat_companies_zones
+#: model_terms:ir.ui.view,arch_db:sat_companies_zones.view_res_partner_zones_search
+msgid "Group By"
+msgstr "Agrupado por"
+
+#. module: sat_companies_zones
+#: model:ir.model.fields.selection,name:sat_companies_zones.selection__res_partner_routes__route_type__guard
+msgid "Guard"
+msgstr "Guardia"
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_users__route_type_id
+msgid "Guard route"
+msgstr "Ruta de guardia"
+
+#. module: sat_companies_zones
+#: model:ir.actions.act_window,name:sat_companies_zones.action_view_res_partner_guard_zones
+#: model:ir.model,name:sat_companies_zones.model_res_partner_guard_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__guard_zone
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__guard_zone_id
+#: model:ir.ui.menu,name:sat_companies_zones.menu_res_partner_guard_zones
+#: model_terms:ir.ui.view,arch_db:sat_companies_zones.view_res_partner_zones_form
+msgid "Guard zone"
+msgstr "Zona de guardia"
+
+#. module: sat_companies_zones
+#: model_terms:ir.ui.view,arch_db:sat_companies_zones.view_res_partner_guard_zones_form
+#: model_terms:ir.ui.view,arch_db:sat_companies_zones.view_res_partner_zones_form
+msgid "Guard zone name"
+msgstr "Nombre zona de guardia"
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_guard_zones__id
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes__id
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__id
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones_lines__id
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_users__id
+msgid "ID"
+msgstr "Id"
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,help:sat_companies_zones.field_res_partner_guard_zones__message_needaction
+#: model:ir.model.fields,help:sat_companies_zones.field_res_partner_guard_zones__message_unread
+#: model:ir.model.fields,help:sat_companies_zones.field_res_partner_routes__message_needaction
+#: model:ir.model.fields,help:sat_companies_zones.field_res_partner_routes__message_unread
+#: model:ir.model.fields,help:sat_companies_zones.field_res_partner_zones__message_needaction
+#: model:ir.model.fields,help:sat_companies_zones.field_res_partner_zones__message_unread
+#: model:ir.model.fields,help:sat_companies_zones.field_res_partner_zones_lines__message_needaction
+#: model:ir.model.fields,help:sat_companies_zones.field_res_partner_zones_lines__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,help:sat_companies_zones.field_res_partner_guard_zones__message_has_error
+#: model:ir.model.fields,help:sat_companies_zones.field_res_partner_guard_zones__message_has_sms_error
+#: model:ir.model.fields,help:sat_companies_zones.field_res_partner_routes__message_has_error
+#: model:ir.model.fields,help:sat_companies_zones.field_res_partner_routes__message_has_sms_error
+#: model:ir.model.fields,help:sat_companies_zones.field_res_partner_zones__message_has_error
+#: model:ir.model.fields,help:sat_companies_zones.field_res_partner_zones__message_has_sms_error
+#: model:ir.model.fields,help:sat_companies_zones.field_res_partner_zones_lines__message_has_error
+#: model:ir.model.fields,help:sat_companies_zones.field_res_partner_zones_lines__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_guard_zones__message_is_follower
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes__message_is_follower
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__message_is_follower
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones_lines__message_is_follower
+msgid "Is Follower"
+msgstr "Es seguidor"
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_guard_zones____last_update
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes____last_update
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones____last_update
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones_lines____last_update
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_users____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_guard_zones__write_uid
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes__write_uid
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__write_uid
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones_lines__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_guard_zones__write_date
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes__write_date
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__write_date
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones_lines__write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_guard_zones__message_main_attachment_id
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes__message_main_attachment_id
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__message_main_attachment_id
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones_lines__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: sat_companies_zones
+#: model:res.groups,name:sat_companies_zones.res_partner_routes_manager_group
+msgid "Manager routes"
+msgstr "Gerente de rutas"
+
+#. module: sat_companies_zones
+#: model:res.groups,comment:sat_companies_zones.res_partner_routes_manager_group
+msgid "Manager routes Permission Group"
+msgstr "Administrador del grupo de permisos de rutas"
+
+#. module: sat_companies_zones
+#: model:res.groups,name:sat_companies_zones.res_partner_zones_manager_group
+msgid "Manager zones"
+msgstr "Administrador de zonas"
+
+#. module: sat_companies_zones
+#: model:res.groups,comment:sat_companies_zones.res_partner_zones_manager_group
+msgid "Manager zones Permission Group"
+msgstr "Administrador de grupo de permisos de zonas"
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_guard_zones__message_has_error
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes__message_has_error
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__message_has_error
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones_lines__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_guard_zones__message_ids
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes__message_ids
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__message_ids
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones_lines__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_guard_zones__name
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes__name
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: sat_companies_zones
+#: model_terms:ir.ui.view,arch_db:sat_companies_zones.view_res_partner_zones_form
+msgid "Name of Zone"
+msgstr "Nombre de la zona"
+
+#. module: sat_companies_zones
+#: model_terms:ir.ui.view,arch_db:sat_companies_zones.view_routes_form
+msgid "Name of route"
+msgstr "Nombre de la ruta"
+
+#. module: sat_companies_zones
+#: model:ir.model.fields.selection,name:sat_companies_zones.selection__res_partner_routes__route_type__normal
+msgid "Normal"
+msgstr ""
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_users__route_id
+msgid "Normal route"
+msgstr "Ruta normal"
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_guard_zones__message_needaction_counter
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes__message_needaction_counter
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__message_needaction_counter
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones_lines__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Número de acciones"
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_guard_zones__message_has_error_counter
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes__message_has_error_counter
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__message_has_error_counter
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones_lines__message_has_error_counter
+msgid "Number of errors"
+msgstr "Número de errores"
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,help:sat_companies_zones.field_res_partner_guard_zones__message_needaction_counter
+#: model:ir.model.fields,help:sat_companies_zones.field_res_partner_routes__message_needaction_counter
+#: model:ir.model.fields,help:sat_companies_zones.field_res_partner_zones__message_needaction_counter
+#: model:ir.model.fields,help:sat_companies_zones.field_res_partner_zones_lines__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,help:sat_companies_zones.field_res_partner_guard_zones__message_has_error_counter
+#: model:ir.model.fields,help:sat_companies_zones.field_res_partner_routes__message_has_error_counter
+#: model:ir.model.fields,help:sat_companies_zones.field_res_partner_zones__message_has_error_counter
+#: model:ir.model.fields,help:sat_companies_zones.field_res_partner_zones_lines__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,help:sat_companies_zones.field_res_partner_guard_zones__message_unread_counter
+#: model:ir.model.fields,help:sat_companies_zones.field_res_partner_routes__message_unread_counter
+#: model:ir.model.fields,help:sat_companies_zones.field_res_partner_zones__message_unread_counter
+#: model:ir.model.fields,help:sat_companies_zones.field_res_partner_zones_lines__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes__user_operator_greasing_id
+msgid "Operator greasing"
+msgstr "Operador de engrase"
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes__user_operator_id
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__employee_id
+msgid "Operator notice"
+msgstr "Operador de aviso"
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes__employee_id
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__responsable_id
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__user_id
+#: model_terms:ir.ui.view,arch_db:sat_companies_zones.view_res_partner_zones_form
+msgid "Responsable"
+msgstr ""
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes__route_type
+msgid "Route type"
+msgstr "Tipo de ruta"
+
+#. module: sat_companies_zones
+#: model:ir.actions.act_window,name:sat_companies_zones.action_view_res_partner_routes
+#: model:ir.model,name:sat_companies_zones.model_res_partner_routes
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_users__routes_ids
+#: model:ir.ui.menu,name:sat_companies_zones.menu_res_partner_routes
+msgid "Routes"
+msgstr "Rutas"
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_guard_zones__message_has_sms_error
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes__message_has_sms_error
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__message_has_sms_error
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones_lines__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: sat_companies_zones
+#: model_terms:ir.ui.view,arch_db:sat_companies_zones.view_res_partner_routes_search
+msgid "Search partner route"
+msgstr ""
+
+#. module: sat_companies_zones
+#: model_terms:ir.ui.view,arch_db:sat_companies_zones.view_res_partner_zones_search
+msgid "Search partner zone"
+msgstr ""
+
+#. module: sat_companies_zones
+#: model:ir.model.constraint,message:sat_companies_zones.constraint_res_partner_guard_zones_code_uniq
+#: model:ir.model.constraint,message:sat_companies_zones.constraint_res_partner_routes_code_uniq
+#: model:ir.model.constraint,message:sat_companies_zones.constraint_res_partner_zones_code_uniq
+msgid "This code already exists!"
+msgstr "Este código ya existe!"
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_guard_zones__message_unread
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes__message_unread
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__message_unread
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones_lines__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_guard_zones__message_unread_counter
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes__message_unread_counter
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__message_unread_counter
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones_lines__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: sat_companies_zones
+#: model:ir.model,name:sat_companies_zones.model_res_users
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes__users_ids
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__users_ids
+msgid "Users"
+msgstr "Usuarios"
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_guard_zones__website_message_ids
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes__website_message_ids
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__website_message_ids
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones_lines__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,help:sat_companies_zones.field_res_partner_guard_zones__website_message_ids
+#: model:ir.model.fields,help:sat_companies_zones.field_res_partner_routes__website_message_ids
+#: model:ir.model.fields,help:sat_companies_zones.field_res_partner_zones__website_message_ids
+#: model:ir.model.fields,help:sat_companies_zones.field_res_partner_zones_lines__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes__zone_id
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones_lines__zone_id
+msgid "Zone"
+msgstr "Zona"
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes__zone_name
+msgid "Zone name"
+msgstr "Nombre zona"
+
+#. module: sat_companies_zones
+#: model:ir.actions.act_window,name:sat_companies_zones.action_view_res_partner_zones
+#: model:ir.model,name:sat_companies_zones.model_res_partner_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_users__zones_ids
+#: model:ir.ui.menu,name:sat_companies_zones.menu_res_partner_zones
+msgid "Zones"
+msgstr "Zonas"
+
+#. module: sat_companies_zones
+#: model:ir.model,name:sat_companies_zones.model_res_partner_zones_lines
+msgid "Zones lines"
+msgstr ""
+
+#. module: sat_companies_zones
+#: model_terms:ir.ui.view,arch_db:sat_companies_zones.inherit_voew_res_users_res_companies
+msgid "Zones/Routes"
+msgstr "Zonas/rutas"
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__guard_zone_name
+msgid "guard zone name"
+msgstr "Nombre zona de guardia"
+
+#. module: sat_companies_zones
+#: model_terms:ir.ui.view,arch_db:sat_companies_zones.view_res_partner_routes_search
+#: model_terms:ir.ui.view,arch_db:sat_companies_zones.view_res_partner_zones_search
+msgid "name"
+msgstr "Nombre"
+
+#. module: sat_companies_zones
+#: model_terms:ir.ui.view,arch_db:sat_companies_zones.view_res_partner_zones_form
+msgid "res_partner_zones_form"
+msgstr ""
+
+#. module: sat_companies_zones
+#: model_terms:ir.ui.view,arch_db:sat_companies_zones.view_res_partner_zones_tree
+msgid "res_partner_zones_tree"
+msgstr ""
+
+#. module: sat_companies_zones
+#: model_terms:ir.ui.view,arch_db:sat_companies_zones.view_routes_form
+msgid "routes_form"
+msgstr ""
+
+#. module: sat_companies_zones
+#: model_terms:ir.ui.view,arch_db:sat_companies_zones.view_res_partner_routes_tree
+msgid "routes_tree"
+msgstr ""

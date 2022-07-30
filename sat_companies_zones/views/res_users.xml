@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="inherit_voew_res_users_res_companies" model="ir.ui.view">
+        <field name="name">res.users.form.inherit</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form"/>
+        <field name="arch" type="xml"> 
+            <xpath expr="//form[1]/sheet[1]/notebook[1]" position="inside">
+                <page string="Zones/Routes" name="zones_routes_page" invisible="1">
+                    <group name="studio_group_kWcch">
+                        <group name="gp_left">
+                            <field name="route_id" options="{'no_create': True, 'no_create_edit':True}" domain="[('route_type', '=', 'normal')]"/>
+                            <field name="route_type_id" options="{'no_create': True, 'no_create_edit':True}" domain="[('route_type', '=', 'guard')]"/>
+                        </group>
+                        <group name="gp_right">
+                            <field name="product_ids" options="{'no_create': True, 'no_create_edit':True}" widget="many2many_tags" invisible="1"/>
+                        </group>
+                    </group>
+                    <group name="zone_routes_related">
+                        <group>
+                            <field name="zones_ids" options="{'no_create': True, 'no_create_edit':True}" widget="many2many_tags"/>
+                        </group>
+                        <group>
+                            <field name="routes_ids" options="{'no_create': True, 'no_create_edit':True}" widget="many2many_tags"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>     
