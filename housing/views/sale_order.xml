@@ -18,7 +18,7 @@
             <field name="res_model">sale.order</field>
             <field name="view_mode">tree</field>
             <field name="view_id" ref="housing.view_sale_order_venta_actual_tree"/>
-            <field name="domain">[]</field>
+            <field name="domain">[('create_date','>=',((context_today())).strftime('%Y-%m-%d 00:00:00')), ('create_date', '&lt;=',((context_today())).strftime('%Y-%m-%d 23:59:59'))]</field>
             <field name="context"></field>
         </record>
 
