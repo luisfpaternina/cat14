@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="inherit_view_res_partner_sat_companies" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="priority" eval="1"/>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[(@name='type')]" position="before">
+                <field name="is_student"/>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="custom_view_res_partner_search">
+            <field name="name">custom.res.partner.search</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_res_partner_filter"/>
+            <field name="arch" type="xml">
+                
+                <xpath expr="//search/filter[@name='type_company']" position="after">
+                    <filter string="Is student" name="is_student" domain="[('is_student', '!=', False)]"/>
+                </xpath>
+
+            </field>
+    </record>
+</odoo>  

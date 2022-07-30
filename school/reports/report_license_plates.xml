@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+        <template id="report_custom_license_plates">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">                    
+                    <div class="header">
+                        <style>
+                            #customers {
+                              font-family: Arial, Helvetica, sans-serif;
+                              border-collapse: collapse;
+                              width: 100%;
+                            }
+
+                            #customers td, #customers th {
+                              border: 1px solid #ddd;
+                              padding: 8px;
+                            }
+
+                            #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+                            #customers tr:hover {background-color: #ddd;}
+
+                            #customers th {
+                              padding-top: 12px;
+                              padding-bottom: 12px;
+                              text-align: left;
+                              background-color: #04AA6D;
+                              color: white;
+                            }
+                        </style>
+                        <table style="width:100%;">
+                        	 <thead>
+                        	 	<tr>
+                        	 		<th></th>
+                        	 		<th></th>
+                        	 		<th><p align="center" style="font-size:30px;">MATRICULA # <span t-field="o.name"></span></p></th>
+                        	 	</tr>
+                        	 </thead>
+                        	 <tbody>
+                        	 	<tr>
+                        	 		<td>
+                        	 			<p style="font-size:16px;">
+                        	 			   <strong>Estudiante:</strong><span> </span><span t-field="o.student_id"></span>
+                        	 			</p>
+                        	 		</td>
+                        	 		<td>
+                                        
+                                    </td>
+                        	 		<td>
+                        	 			<p style="font-size:16px;" align="right">
+                        	 			
+                        	 			</p>
+                        	 		</td>
+                        	 	</tr>
+                        	 </tbody>
+                        </table>
+                        <br></br>
+                        <table width="100%" id="customers">
+                            <tr>
+                                <th>Course's name</th>
+                            </tr>
+                            <tr>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="article o_report_layout_standard">
+                       <div class="page">
+                            <p>
+                                <span t-raw="o.notes"/>
+                            </p>
+                       </div>
+                    </div>
+                    <div class="footer">
+                        <p align="center">Si tienes alguna inquietud sobre este documento, por favor contactar<br></br>
+                        Paola Bonilla, 4088443408, pgalindo@example.com<br></br>
+                        <strong>Gracias!</strong>
+                    	</p>
+                    </div>
+                </t>
+            </t>
+        </template>
+
+        <report
+            id="id_report_custom_license_plates"
+            string="Matricula del estudiante"
+            model="license.plates"
+            report_type="qweb-pdf"
+            name="school.report_custom_license_plates"
+        />
+
+  </data>
+</odoo>

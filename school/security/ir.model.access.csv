@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+manager_model_school,user_model_school,model_school,school.school_manager_group,1,1,1,1
+manager_model_students,user_model_students,model_students,school.school_manager_group,1,1,1,1
+manager_model_students_lines,user_model_students_lines,model_students_lines,school.school_manager_group,1,1,1,1
+manager_model_teachers,user_model_teachers,model_teachers,school.school_manager_group,1,1,1,1
+manager_model_courses,user_model_courses,model_courses,school.school_manager_group,1,1,1,1
+manager_model_area,user_model_area,model_area,school.school_manager_group,1,1,1,1
+manager_model_applied_studies,user_model_applied_studies,model_applied_studies,school.school_manager_group,1,1,1,1
+manager_model_work_experience,user_model_work_experience,model_work_experience,school.school_manager_group,1,1,1,1
+manager_model_settings,user_model_settings,model_settings,school.school_manager_group,1,1,1,1
+manager_model_license_plates,user_model_license_plates,model_license_plates,school.school_manager_group,1,1,1,1
+manager_model_license_plates_lines,user_model_license_plates_lines,model_license_plates_lines,school.school_manager_group,1,1,1,1
+manager_model_hobbies,user_model_hobbies,model_hobbies,school.school_manager_group,1,1,1,1

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>     
+<odoo>
+    <data>
+        <record id="view_area_tree" model="ir.ui.view">
+            <field name="name">area.tree</field>
+            <field name="model">area</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="area">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_area_form" model="ir.ui.view">
+            <field name="name">area.form</field>
+            <field name="model">area</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form string="area">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <table>
+                                    <tr>
+                                        <td style="padding-right:10px;"><field name="name" required="1" placeholder="Areas' name" /></td>
+                                       
+                                    </tr>
+                                </table>
+                            </h1>
+                        </div>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+    
+        <record model="ir.actions.act_window" id="action_view_area">
+            <field name="name">Areas</field>
+            <field name="res_model">area</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create area
+                </p>
+            </field>
+        </record>
+
+
+        <menuitem id="school_area" name="Areas" parent="menu_school_settings"
+                  action="action_view_area"/>           
+    </data>
+</odoo>
+              
+       
+

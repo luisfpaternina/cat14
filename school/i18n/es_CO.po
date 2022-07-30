@@ -1,0 +1,1059 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* school
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-05 21:59+0000\n"
+"PO-Revision-Date: 2022-05-05 21:59+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: school
+#: model:ir.model.fields.selection,name:school.selection__school__blood_group__a+
+msgid "A+ve"
+msgstr "A+"
+
+#. module: school
+#: model:ir.model.fields.selection,name:school.selection__school__blood_group__a-
+msgid "A-ve"
+msgstr "A-"
+
+#. module: school
+#: model:ir.model.fields.selection,name:school.selection__students__blood_group__ab+
+#: model:ir.model.fields.selection,name:school.selection__teachers__blood_group__ab+
+msgid "AB+"
+msgstr ""
+
+#. module: school
+#: model:ir.model.fields.selection,name:school.selection__school__blood_group__ab+
+msgid "AB+ve"
+msgstr "AB+"
+
+#. module: school
+#: model:ir.model.fields.selection,name:school.selection__students__blood_group__ab-
+#: model:ir.model.fields.selection,name:school.selection__teachers__blood_group__ab-
+msgid "AB-"
+msgstr ""
+
+#. module: school
+#: model:ir.model.fields.selection,name:school.selection__school__blood_group__ab-
+msgid "AB-ve"
+msgstr "AB-"
+
+#. module: school
+#: model_terms:ir.ui.view,arch_db:school.view_students_form
+#: model_terms:ir.ui.view,arch_db:school.view_teachers_form
+msgid "Academic information"
+msgstr "Información academica"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_applied_studies__message_needaction
+#: model:ir.model.fields,field_description:school.field_area__message_needaction
+#: model:ir.model.fields,field_description:school.field_courses__message_needaction
+#: model:ir.model.fields,field_description:school.field_license_plates__message_needaction
+#: model:ir.model.fields,field_description:school.field_notes__message_needaction
+#: model:ir.model.fields,field_description:school.field_school__message_needaction
+#: model:ir.model.fields,field_description:school.field_settings__message_needaction
+#: model:ir.model.fields,field_description:school.field_students__message_needaction
+#: model:ir.model.fields,field_description:school.field_teachers__message_needaction
+#: model:ir.model.fields,field_description:school.field_work_experience__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_license_plates__address
+#: model:ir.model.fields,field_description:school.field_students__address
+#: model:ir.model.fields,field_description:school.field_teachers__address
+msgid "Address"
+msgstr "Dirección"
+
+#. module: school
+#: model:ir.model,name:school.model_applied_studies
+#: model:ir.model.fields,field_description:school.field_teachers__applied_studies_ids
+#: model_terms:ir.ui.view,arch_db:school.view_teachers_form
+msgid "Applied studies"
+msgstr "Estudios realizados"
+
+#. module: school
+#: model_terms:ir.ui.view,arch_db:school.view_license_plates_form
+msgid "Are you sure?"
+msgstr "Estas seguro?"
+
+#. module: school
+#: model:ir.actions.act_window,name:school.action_view_area
+#: model:ir.model,name:school.model_area
+#: model:ir.ui.menu,name:school.school_area
+msgid "Areas"
+msgstr ""
+
+#. module: school
+#: model_terms:ir.ui.view,arch_db:school.view_area_form
+msgid "Areas' name"
+msgstr "Nombre de area"
+
+#. module: school
+#: model_terms:ir.ui.view,arch_db:school.view_courses_form
+msgid "Areas..."
+msgstr ""
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_school__attachment
+#: model:ir.model.fields,field_description:school.field_students__attachment
+msgid "Attachment"
+msgstr "Adjunto"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_applied_studies__message_attachment_count
+#: model:ir.model.fields,field_description:school.field_area__message_attachment_count
+#: model:ir.model.fields,field_description:school.field_courses__message_attachment_count
+#: model:ir.model.fields,field_description:school.field_license_plates__message_attachment_count
+#: model:ir.model.fields,field_description:school.field_notes__message_attachment_count
+#: model:ir.model.fields,field_description:school.field_school__message_attachment_count
+#: model:ir.model.fields,field_description:school.field_settings__message_attachment_count
+#: model:ir.model.fields,field_description:school.field_students__message_attachment_count
+#: model:ir.model.fields,field_description:school.field_teachers__message_attachment_count
+#: model:ir.model.fields,field_description:school.field_work_experience__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: school
+#: model:ir.model.fields.selection,name:school.selection__school__blood_group__b+
+msgid "B+ve"
+msgstr "B+"
+
+#. module: school
+#: model:ir.model.fields.selection,name:school.selection__school__blood_group__b-
+msgid "B-ve"
+msgstr "B-"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_license_plates__blood_group
+#: model:ir.model.fields,field_description:school.field_school__blood_group
+#: model:ir.model.fields,field_description:school.field_students__blood_group
+#: model:ir.model.fields,field_description:school.field_teachers__blood_group
+#: model_terms:ir.ui.view,arch_db:school.view_students_search
+msgid "Blood Group"
+msgstr "Grupo sanguineo"
+
+#. module: school
+#: model_terms:ir.ui.view,arch_db:school.view_students_search
+#: model_terms:ir.ui.view,arch_db:school.view_teachers_search
+msgid "Blood group"
+msgstr "Grupo Sanguineo"
+
+#. module: school
+#: model:ir.model.fields.selection,name:school.selection__school__identification_type__cc
+#: model:ir.model.fields.selection,name:school.selection__students__identification_type__cc
+#: model:ir.model.fields.selection,name:school.selection__teachers__identification_type__cc
+msgid "CC"
+msgstr ""
+
+#. module: school
+#: model:ir.model.fields.selection,name:school.selection__school__identification_type__ce
+#: model:ir.model.fields.selection,name:school.selection__students__identification_type__ce
+msgid "CE"
+msgstr ""
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_teachers__attachment
+msgid "CV"
+msgstr "Hoja de vida"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_school__city_id
+#: model:ir.model.fields,field_description:school.field_students__city_id
+#: model:ir.model.fields,field_description:school.field_teachers__city_id
+#: model_terms:ir.ui.view,arch_db:school.view_students_search
+#: model_terms:ir.ui.view,arch_db:school.view_teachers_search
+msgid "City"
+msgstr "Ciudad de residencia"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_teachers__civil_state
+#: model_terms:ir.ui.view,arch_db:school.view_teachers_search
+msgid "Civil state"
+msgstr "Estado Civil"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_license_plates__course
+msgid "Course"
+msgstr "Asignatura"
+
+#. module: school
+#: model_terms:ir.ui.view,arch_db:school.view_courses_form
+msgid "Course's Name"
+msgstr "Nombre de asignatura"
+
+#. module: school
+#: model:ir.actions.act_window,name:school.action_view_courses
+#: model:ir.model,name:school.model_courses
+#: model:ir.ui.menu,name:school.school_courses
+msgid "Courses"
+msgstr "Asignaturas"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_license_plates__create_date
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+#. module: school
+#: model_terms:ir.actions.act_window,help:school.action_view_area
+msgid "Create area"
+msgstr "Crear area"
+
+#. module: school
+#: model_terms:ir.actions.act_window,help:school.action_view_license_plates
+msgid "Create new License Plate"
+msgstr "Crear nuevo registro"
+
+#. module: school
+#: model_terms:ir.actions.act_window,help:school.action_view_courses
+msgid "Create new course"
+msgstr "Crear nueva asignatura"
+
+#. module: school
+#: model_terms:ir.actions.act_window,help:school.action_view_school
+#: model_terms:ir.actions.act_window,help:school.action_view_teachers
+msgid "Create new record"
+msgstr "Crear nuevo registro"
+
+#. module: school
+#: model_terms:ir.actions.act_window,help:school.action_view_students
+msgid "Create new student"
+msgstr "Crear nuevo estudiante"
+
+#. module: school
+#: model_terms:ir.ui.view,arch_db:school.view_license_plates_form
+msgid "Create sale order"
+msgstr "Crear pedido"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_applied_studies__create_uid
+#: model:ir.model.fields,field_description:school.field_area__create_uid
+#: model:ir.model.fields,field_description:school.field_courses__create_uid
+#: model:ir.model.fields,field_description:school.field_license_plates__create_uid
+#: model:ir.model.fields,field_description:school.field_notes__create_uid
+#: model:ir.model.fields,field_description:school.field_school__create_uid
+#: model:ir.model.fields,field_description:school.field_settings__create_uid
+#: model:ir.model.fields,field_description:school.field_students__create_uid
+#: model:ir.model.fields,field_description:school.field_teachers__create_uid
+#: model:ir.model.fields,field_description:school.field_work_experience__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_applied_studies__create_date
+#: model:ir.model.fields,field_description:school.field_area__create_date
+#: model:ir.model.fields,field_description:school.field_courses__create_date
+#: model:ir.model.fields,field_description:school.field_notes__create_date
+#: model:ir.model.fields,field_description:school.field_school__create_date
+#: model:ir.model.fields,field_description:school.field_settings__create_date
+#: model:ir.model.fields,field_description:school.field_students__create_date
+#: model:ir.model.fields,field_description:school.field_teachers__create_date
+#: model:ir.model.fields,field_description:school.field_work_experience__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_courses__credit_number
+msgid "Credit Numbers"
+msgstr "Numero de creditos"
+
+#. module: school
+#: model:ir.model.fields.selection,name:school.selection__applied_studies__status__current
+#: model:ir.model.fields.selection,name:school.selection__work_experience__status__current
+msgid "Current"
+msgstr "Actual"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_school__dob
+#: model:ir.model.fields,field_description:school.field_students__dob
+msgid "Date of Birth"
+msgstr "Fecha de nacimiento"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_teachers__dob
+msgid "Date of birth"
+msgstr "Fecha de nacimiento"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_applied_studies__display_name
+#: model:ir.model.fields,field_description:school.field_area__display_name
+#: model:ir.model.fields,field_description:school.field_courses__display_name
+#: model:ir.model.fields,field_description:school.field_license_plates__display_name
+#: model:ir.model.fields,field_description:school.field_notes__display_name
+#: model:ir.model.fields,field_description:school.field_school__display_name
+#: model:ir.model.fields,field_description:school.field_settings__display_name
+#: model:ir.model.fields,field_description:school.field_students__display_name
+#: model:ir.model.fields,field_description:school.field_teachers__display_name
+#: model:ir.model.fields,field_description:school.field_work_experience__display_name
+msgid "Display Name"
+msgstr "Nombre"
+
+#. module: school
+#: model:ir.model.fields.selection,name:school.selection__teachers__civil_state__sep
+msgid "Divorced"
+msgstr "Divorciado"
+
+#. module: school
+#: model_terms:ir.ui.view,arch_db:school.view_license_plates_form
+msgid "Documents"
+msgstr "Documentos"
+
+#. module: school
+#: model:ir.model.fields.selection,name:school.selection__applied_studies__status__done
+#: model:ir.model.fields.selection,name:school.selection__work_experience__status__done
+msgid "Done"
+msgstr "Realizado"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_license_plates__email
+#: model:ir.model.fields,field_description:school.field_students__email
+msgid "Email"
+msgstr "Correo"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_applied_studies__end_date
+#: model:ir.model.fields,field_description:school.field_work_experience__end_date
+msgid "End Date"
+msgstr "Fecha de finalización"
+
+#. module: school
+#: model:ir.model,name:school.model_work_experience
+#: model_terms:ir.ui.view,arch_db:school.view_teachers_form
+msgid "Experience"
+msgstr "Experiencia"
+
+#. module: school
+#: model_terms:ir.ui.view,arch_db:school.view_teachers_form
+msgid "Experiencia Laboral"
+msgstr ""
+
+#. module: school
+#: model_terms:ir.ui.view,arch_db:school.view_teachers_form
+msgid "Family Information"
+msgstr "Información Familiar"
+
+#. module: school
+#: model_terms:ir.ui.view,arch_db:school.view_students_form
+msgid "Family information"
+msgstr "Información Familiar"
+
+#. module: school
+#: model:ir.model.fields.selection,name:school.selection__school__gender__f
+#: model:ir.model.fields.selection,name:school.selection__students__gender__f
+#: model:ir.model.fields.selection,name:school.selection__teachers__gender__f
+msgid "Female"
+msgstr "Femenino"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_applied_studies__message_follower_ids
+#: model:ir.model.fields,field_description:school.field_area__message_follower_ids
+#: model:ir.model.fields,field_description:school.field_courses__message_follower_ids
+#: model:ir.model.fields,field_description:school.field_license_plates__message_follower_ids
+#: model:ir.model.fields,field_description:school.field_notes__message_follower_ids
+#: model:ir.model.fields,field_description:school.field_school__message_follower_ids
+#: model:ir.model.fields,field_description:school.field_settings__message_follower_ids
+#: model:ir.model.fields,field_description:school.field_students__message_follower_ids
+#: model:ir.model.fields,field_description:school.field_teachers__message_follower_ids
+#: model:ir.model.fields,field_description:school.field_work_experience__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_applied_studies__message_channel_ids
+#: model:ir.model.fields,field_description:school.field_area__message_channel_ids
+#: model:ir.model.fields,field_description:school.field_courses__message_channel_ids
+#: model:ir.model.fields,field_description:school.field_license_plates__message_channel_ids
+#: model:ir.model.fields,field_description:school.field_notes__message_channel_ids
+#: model:ir.model.fields,field_description:school.field_school__message_channel_ids
+#: model:ir.model.fields,field_description:school.field_settings__message_channel_ids
+#: model:ir.model.fields,field_description:school.field_students__message_channel_ids
+#: model:ir.model.fields,field_description:school.field_teachers__message_channel_ids
+#: model:ir.model.fields,field_description:school.field_work_experience__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_applied_studies__message_partner_ids
+#: model:ir.model.fields,field_description:school.field_area__message_partner_ids
+#: model:ir.model.fields,field_description:school.field_courses__message_partner_ids
+#: model:ir.model.fields,field_description:school.field_license_plates__message_partner_ids
+#: model:ir.model.fields,field_description:school.field_notes__message_partner_ids
+#: model:ir.model.fields,field_description:school.field_school__message_partner_ids
+#: model:ir.model.fields,field_description:school.field_settings__message_partner_ids
+#: model:ir.model.fields,field_description:school.field_students__message_partner_ids
+#: model:ir.model.fields,field_description:school.field_teachers__message_partner_ids
+#: model:ir.model.fields,field_description:school.field_work_experience__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: school
+#: model:ir.model.fields.selection,name:school.selection__teachers__civil_state__ul
+msgid "Free union"
+msgstr "Unión libre"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_license_plates__gender
+#: model:ir.model.fields,field_description:school.field_school__gender
+#: model:ir.model.fields,field_description:school.field_students__gender
+#: model:ir.model.fields,field_description:school.field_teachers__gender
+#: model_terms:ir.ui.view,arch_db:school.view_students_search
+#: model_terms:ir.ui.view,arch_db:school.view_teachers_search
+msgid "Gender"
+msgstr "Genero"
+
+#. module: school
+#: model_terms:ir.ui.view,arch_db:school.view_students_search
+#: model_terms:ir.ui.view,arch_db:school.view_teachers_search
+msgid "Group By"
+msgstr "Agrupar por"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_applied_studies__id
+#: model:ir.model.fields,field_description:school.field_area__id
+#: model:ir.model.fields,field_description:school.field_courses__id
+#: model:ir.model.fields,field_description:school.field_license_plates__id
+#: model:ir.model.fields,field_description:school.field_notes__id
+#: model:ir.model.fields,field_description:school.field_school__id
+#: model:ir.model.fields,field_description:school.field_settings__id
+#: model:ir.model.fields,field_description:school.field_students__id
+#: model:ir.model.fields,field_description:school.field_teachers__id
+#: model:ir.model.fields,field_description:school.field_work_experience__id
+msgid "ID"
+msgstr "Identificación"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_students__identification_type
+msgid "ID Type"
+msgstr "Tipo de Identificación"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_students__identification_number
+msgid "Identification Number"
+msgstr "Numero de identificación"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_license_plates__identification_type
+#: model:ir.model.fields,field_description:school.field_school__identification_type
+#: model_terms:ir.ui.view,arch_db:school.view_students_search
+msgid "Identification Type"
+msgstr "Tipo de Identificación"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_license_plates__identification_number
+#: model:ir.model.fields,field_description:school.field_school__identification_number
+#: model:ir.model.fields,field_description:school.field_teachers__identification_number
+msgid "Identification number"
+msgstr "Numero de identificación"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_teachers__identification_type
+#: model_terms:ir.ui.view,arch_db:school.view_teachers_search
+msgid "Identification type"
+msgstr "Tipo de Identificación"
+
+#. module: school
+#: model:ir.model.fields,help:school.field_applied_studies__message_needaction
+#: model:ir.model.fields,help:school.field_applied_studies__message_unread
+#: model:ir.model.fields,help:school.field_area__message_needaction
+#: model:ir.model.fields,help:school.field_area__message_unread
+#: model:ir.model.fields,help:school.field_courses__message_needaction
+#: model:ir.model.fields,help:school.field_courses__message_unread
+#: model:ir.model.fields,help:school.field_license_plates__message_needaction
+#: model:ir.model.fields,help:school.field_license_plates__message_unread
+#: model:ir.model.fields,help:school.field_notes__message_needaction
+#: model:ir.model.fields,help:school.field_notes__message_unread
+#: model:ir.model.fields,help:school.field_school__message_needaction
+#: model:ir.model.fields,help:school.field_school__message_unread
+#: model:ir.model.fields,help:school.field_settings__message_needaction
+#: model:ir.model.fields,help:school.field_settings__message_unread
+#: model:ir.model.fields,help:school.field_students__message_needaction
+#: model:ir.model.fields,help:school.field_students__message_unread
+#: model:ir.model.fields,help:school.field_teachers__message_needaction
+#: model:ir.model.fields,help:school.field_teachers__message_unread
+#: model:ir.model.fields,help:school.field_work_experience__message_needaction
+#: model:ir.model.fields,help:school.field_work_experience__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: school
+#: model:ir.model.fields,help:school.field_applied_studies__message_has_error
+#: model:ir.model.fields,help:school.field_applied_studies__message_has_sms_error
+#: model:ir.model.fields,help:school.field_area__message_has_error
+#: model:ir.model.fields,help:school.field_area__message_has_sms_error
+#: model:ir.model.fields,help:school.field_courses__message_has_error
+#: model:ir.model.fields,help:school.field_courses__message_has_sms_error
+#: model:ir.model.fields,help:school.field_license_plates__message_has_error
+#: model:ir.model.fields,help:school.field_license_plates__message_has_sms_error
+#: model:ir.model.fields,help:school.field_notes__message_has_error
+#: model:ir.model.fields,help:school.field_notes__message_has_sms_error
+#: model:ir.model.fields,help:school.field_school__message_has_error
+#: model:ir.model.fields,help:school.field_school__message_has_sms_error
+#: model:ir.model.fields,help:school.field_settings__message_has_error
+#: model:ir.model.fields,help:school.field_settings__message_has_sms_error
+#: model:ir.model.fields,help:school.field_students__message_has_error
+#: model:ir.model.fields,help:school.field_students__message_has_sms_error
+#: model:ir.model.fields,help:school.field_teachers__message_has_error
+#: model:ir.model.fields,help:school.field_teachers__message_has_sms_error
+#: model:ir.model.fields,help:school.field_work_experience__message_has_error
+#: model:ir.model.fields,help:school.field_work_experience__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: school
+#: model_terms:ir.ui.view,arch_db:school.view_school_form
+msgid "Information"
+msgstr "Informacvión"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_applied_studies__institution
+#: model:ir.model.fields,field_description:school.field_work_experience__institution
+msgid "Institution"
+msgstr "Institución"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_applied_studies__message_is_follower
+#: model:ir.model.fields,field_description:school.field_area__message_is_follower
+#: model:ir.model.fields,field_description:school.field_courses__message_is_follower
+#: model:ir.model.fields,field_description:school.field_license_plates__message_is_follower
+#: model:ir.model.fields,field_description:school.field_notes__message_is_follower
+#: model:ir.model.fields,field_description:school.field_school__message_is_follower
+#: model:ir.model.fields,field_description:school.field_settings__message_is_follower
+#: model:ir.model.fields,field_description:school.field_students__message_is_follower
+#: model:ir.model.fields,field_description:school.field_teachers__message_is_follower
+#: model:ir.model.fields,field_description:school.field_work_experience__message_is_follower
+msgid "Is Follower"
+msgstr "Es un seguidor"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_applied_studies____last_update
+#: model:ir.model.fields,field_description:school.field_area____last_update
+#: model:ir.model.fields,field_description:school.field_courses____last_update
+#: model:ir.model.fields,field_description:school.field_license_plates____last_update
+#: model:ir.model.fields,field_description:school.field_notes____last_update
+#: model:ir.model.fields,field_description:school.field_school____last_update
+#: model:ir.model.fields,field_description:school.field_settings____last_update
+#: model:ir.model.fields,field_description:school.field_students____last_update
+#: model:ir.model.fields,field_description:school.field_teachers____last_update
+#: model:ir.model.fields,field_description:school.field_work_experience____last_update
+msgid "Last Modified on"
+msgstr "Ultima modificación"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_applied_studies__write_uid
+#: model:ir.model.fields,field_description:school.field_area__write_uid
+#: model:ir.model.fields,field_description:school.field_courses__write_uid
+#: model:ir.model.fields,field_description:school.field_license_plates__write_uid
+#: model:ir.model.fields,field_description:school.field_notes__write_uid
+#: model:ir.model.fields,field_description:school.field_school__write_uid
+#: model:ir.model.fields,field_description:school.field_settings__write_uid
+#: model:ir.model.fields,field_description:school.field_students__write_uid
+#: model:ir.model.fields,field_description:school.field_teachers__write_uid
+#: model:ir.model.fields,field_description:school.field_work_experience__write_uid
+msgid "Last Updated by"
+msgstr "Ultima actualización"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_applied_studies__write_date
+#: model:ir.model.fields,field_description:school.field_area__write_date
+#: model:ir.model.fields,field_description:school.field_courses__write_date
+#: model:ir.model.fields,field_description:school.field_license_plates__write_date
+#: model:ir.model.fields,field_description:school.field_notes__write_date
+#: model:ir.model.fields,field_description:school.field_school__write_date
+#: model:ir.model.fields,field_description:school.field_settings__write_date
+#: model:ir.model.fields,field_description:school.field_students__write_date
+#: model:ir.model.fields,field_description:school.field_teachers__write_date
+#: model:ir.model.fields,field_description:school.field_work_experience__write_date
+msgid "Last Updated on"
+msgstr "Ultima actualizacion en"
+
+#. module: school
+#: model:ir.actions.act_window,name:school.action_view_license_plates
+#: model:ir.ui.menu,name:school.school_license_plates
+msgid "License Plates"
+msgstr "Matrículas"
+
+#. module: school
+#: model:ir.model,name:school.model_license_plates
+msgid "License plates"
+msgstr "Matriculas"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_applied_studies__message_main_attachment_id
+#: model:ir.model.fields,field_description:school.field_area__message_main_attachment_id
+#: model:ir.model.fields,field_description:school.field_courses__message_main_attachment_id
+#: model:ir.model.fields,field_description:school.field_license_plates__message_main_attachment_id
+#: model:ir.model.fields,field_description:school.field_notes__message_main_attachment_id
+#: model:ir.model.fields,field_description:school.field_school__message_main_attachment_id
+#: model:ir.model.fields,field_description:school.field_settings__message_main_attachment_id
+#: model:ir.model.fields,field_description:school.field_students__message_main_attachment_id
+#: model:ir.model.fields,field_description:school.field_teachers__message_main_attachment_id
+#: model:ir.model.fields,field_description:school.field_work_experience__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: school
+#: model:ir.model.fields.selection,name:school.selection__school__gender__m
+#: model:ir.model.fields.selection,name:school.selection__students__gender__m
+#: model:ir.model.fields.selection,name:school.selection__teachers__gender__m
+msgid "Male"
+msgstr "Masculino"
+
+#. module: school
+#: model:res.groups,name:school.school_manager_group
+msgid "Manager School"
+msgstr "Administrador colegio"
+
+#. module: school
+#: model:res.groups,comment:school.school_manager_group
+msgid "Manager School Permission Group"
+msgstr "Permisos de administrador en el colegio"
+
+#. module: school
+#: model:ir.model.fields.selection,name:school.selection__teachers__civil_state__married
+msgid "Married"
+msgstr "Casado"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_applied_studies__message_has_error
+#: model:ir.model.fields,field_description:school.field_area__message_has_error
+#: model:ir.model.fields,field_description:school.field_courses__message_has_error
+#: model:ir.model.fields,field_description:school.field_license_plates__message_has_error
+#: model:ir.model.fields,field_description:school.field_notes__message_has_error
+#: model:ir.model.fields,field_description:school.field_school__message_has_error
+#: model:ir.model.fields,field_description:school.field_settings__message_has_error
+#: model:ir.model.fields,field_description:school.field_students__message_has_error
+#: model:ir.model.fields,field_description:school.field_teachers__message_has_error
+#: model:ir.model.fields,field_description:school.field_work_experience__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_applied_studies__message_ids
+#: model:ir.model.fields,field_description:school.field_area__message_ids
+#: model:ir.model.fields,field_description:school.field_courses__message_ids
+#: model:ir.model.fields,field_description:school.field_license_plates__message_ids
+#: model:ir.model.fields,field_description:school.field_notes__message_ids
+#: model:ir.model.fields,field_description:school.field_school__message_ids
+#: model:ir.model.fields,field_description:school.field_settings__message_ids
+#: model:ir.model.fields,field_description:school.field_students__message_ids
+#: model:ir.model.fields,field_description:school.field_teachers__message_ids
+#: model:ir.model.fields,field_description:school.field_work_experience__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: school
+#: model:ir.model.fields.selection,name:school.selection__school__identification_type__ni
+#: model:ir.model.fields.selection,name:school.selection__students__identification_type__ni
+msgid "NI"
+msgstr ""
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_school__nationality
+#: model:ir.model.fields,field_description:school.field_students__nationality
+#: model:ir.model.fields,field_description:school.field_teachers__nationality
+#: model_terms:ir.ui.view,arch_db:school.view_students_search
+#: model_terms:ir.ui.view,arch_db:school.view_teachers_search
+msgid "Nacionality"
+msgstr "Nacionalidad"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_area__name
+#: model:ir.model.fields,field_description:school.field_notes__name
+#: model:ir.model.fields,field_description:school.field_school__name
+#: model:ir.model.fields,field_description:school.field_settings__name
+#: model:ir.model.fields,field_description:school.field_students__name
+#: model:ir.model.fields,field_description:school.field_teachers__name
+#: model_terms:ir.ui.view,arch_db:school.view_license_plates_form
+#: model_terms:ir.ui.view,arch_db:school.view_school_form
+#: model_terms:ir.ui.view,arch_db:school.view_settings_form
+msgid "Name"
+msgstr "Nombre"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_courses__name
+msgid "Name of the subject"
+msgstr "Nombre de la asignatura"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_license_plates__neighborhood
+#: model:ir.model.fields,field_description:school.field_students__neighborhood
+#: model_terms:ir.ui.view,arch_db:school.view_students_search
+msgid "Neighborhood"
+msgstr "Barrio"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_license_plates__name
+msgid "Nombre"
+msgstr ""
+
+#. module: school
+#: model:ir.model,name:school.model_notes
+msgid "Notes"
+msgstr "Notas"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_applied_studies__message_needaction_counter
+#: model:ir.model.fields,field_description:school.field_area__message_needaction_counter
+#: model:ir.model.fields,field_description:school.field_courses__message_needaction_counter
+#: model:ir.model.fields,field_description:school.field_license_plates__message_needaction_counter
+#: model:ir.model.fields,field_description:school.field_notes__message_needaction_counter
+#: model:ir.model.fields,field_description:school.field_school__message_needaction_counter
+#: model:ir.model.fields,field_description:school.field_settings__message_needaction_counter
+#: model:ir.model.fields,field_description:school.field_students__message_needaction_counter
+#: model:ir.model.fields,field_description:school.field_teachers__message_needaction_counter
+#: model:ir.model.fields,field_description:school.field_work_experience__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_applied_studies__message_has_error_counter
+#: model:ir.model.fields,field_description:school.field_area__message_has_error_counter
+#: model:ir.model.fields,field_description:school.field_courses__message_has_error_counter
+#: model:ir.model.fields,field_description:school.field_license_plates__message_has_error_counter
+#: model:ir.model.fields,field_description:school.field_notes__message_has_error_counter
+#: model:ir.model.fields,field_description:school.field_school__message_has_error_counter
+#: model:ir.model.fields,field_description:school.field_settings__message_has_error_counter
+#: model:ir.model.fields,field_description:school.field_students__message_has_error_counter
+#: model:ir.model.fields,field_description:school.field_teachers__message_has_error_counter
+#: model:ir.model.fields,field_description:school.field_work_experience__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: school
+#: model:ir.model.fields,help:school.field_applied_studies__message_needaction_counter
+#: model:ir.model.fields,help:school.field_area__message_needaction_counter
+#: model:ir.model.fields,help:school.field_courses__message_needaction_counter
+#: model:ir.model.fields,help:school.field_license_plates__message_needaction_counter
+#: model:ir.model.fields,help:school.field_notes__message_needaction_counter
+#: model:ir.model.fields,help:school.field_school__message_needaction_counter
+#: model:ir.model.fields,help:school.field_settings__message_needaction_counter
+#: model:ir.model.fields,help:school.field_students__message_needaction_counter
+#: model:ir.model.fields,help:school.field_teachers__message_needaction_counter
+#: model:ir.model.fields,help:school.field_work_experience__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: school
+#: model:ir.model.fields,help:school.field_applied_studies__message_has_error_counter
+#: model:ir.model.fields,help:school.field_area__message_has_error_counter
+#: model:ir.model.fields,help:school.field_courses__message_has_error_counter
+#: model:ir.model.fields,help:school.field_license_plates__message_has_error_counter
+#: model:ir.model.fields,help:school.field_notes__message_has_error_counter
+#: model:ir.model.fields,help:school.field_school__message_has_error_counter
+#: model:ir.model.fields,help:school.field_settings__message_has_error_counter
+#: model:ir.model.fields,help:school.field_students__message_has_error_counter
+#: model:ir.model.fields,help:school.field_teachers__message_has_error_counter
+#: model:ir.model.fields,help:school.field_work_experience__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: school
+#: model:ir.model.fields,help:school.field_applied_studies__message_unread_counter
+#: model:ir.model.fields,help:school.field_area__message_unread_counter
+#: model:ir.model.fields,help:school.field_courses__message_unread_counter
+#: model:ir.model.fields,help:school.field_license_plates__message_unread_counter
+#: model:ir.model.fields,help:school.field_notes__message_unread_counter
+#: model:ir.model.fields,help:school.field_school__message_unread_counter
+#: model:ir.model.fields,help:school.field_settings__message_unread_counter
+#: model:ir.model.fields,help:school.field_students__message_unread_counter
+#: model:ir.model.fields,help:school.field_teachers__message_unread_counter
+#: model:ir.model.fields,help:school.field_work_experience__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: school
+#: model:ir.model.fields.selection,name:school.selection__school__blood_group__o+
+msgid "O+ve"
+msgstr ""
+
+#. module: school
+#: model:ir.model.fields.selection,name:school.selection__school__blood_group__o-
+msgid "O-ve"
+msgstr ""
+
+#. module: school
+#: model:ir.model.fields.selection,name:school.selection__school__gender__o
+#: model:ir.model.fields.selection,name:school.selection__teachers__civil_state__other
+#: model:ir.model.fields.selection,name:school.selection__teachers__gender__o
+msgid "Other"
+msgstr "Otro"
+
+#. module: school
+#: model:ir.model.fields.selection,name:school.selection__students__gender__o
+msgid "Otro"
+msgstr ""
+
+#. module: school
+#: model:ir.model.fields.selection,name:school.selection__teachers__identification_type__ce
+msgid "Passport"
+msgstr "Pasaporte"
+
+#. module: school
+#: model_terms:ir.ui.view,arch_db:school.view_teachers_form
+msgid "Person in case of emergency"
+msgstr "Persona en caso de emergencia"
+
+#. module: school
+#: model_terms:ir.ui.view,arch_db:school.view_students_form
+#: model_terms:ir.ui.view,arch_db:school.view_teachers_form
+msgid "Personal information"
+msgstr "Información personal"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_license_plates__cellphone
+#: model:ir.model.fields,field_description:school.field_students__cellphone
+#: model:ir.model.fields,field_description:school.field_teachers__phone
+msgid "Phone"
+msgstr "Télefono"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_school__photo
+#: model:ir.model.fields,field_description:school.field_students__photo
+#: model:ir.model.fields,field_description:school.field_teachers__photo
+msgid "Photo"
+msgstr "Foto"
+
+#. module: school
+#: model:ir.model.fields.selection,name:school.selection__applied_studies__status__apl
+#: model:ir.model.fields.selection,name:school.selection__work_experience__status__apl
+msgid "Postponed"
+msgstr "Aplazado"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_courses__area_ids
+msgid "Related areas"
+msgstr "Areas relacioandas"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_applied_studies__message_has_sms_error
+#: model:ir.model.fields,field_description:school.field_area__message_has_sms_error
+#: model:ir.model.fields,field_description:school.field_courses__message_has_sms_error
+#: model:ir.model.fields,field_description:school.field_license_plates__message_has_sms_error
+#: model:ir.model.fields,field_description:school.field_notes__message_has_sms_error
+#: model:ir.model.fields,field_description:school.field_school__message_has_sms_error
+#: model:ir.model.fields,field_description:school.field_settings__message_has_sms_error
+#: model:ir.model.fields,field_description:school.field_students__message_has_sms_error
+#: model:ir.model.fields,field_description:school.field_teachers__message_has_sms_error
+#: model:ir.model.fields,field_description:school.field_work_experience__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: school
+#: model:ir.actions.act_window,name:school.action_view_school
+#: model:ir.model,name:school.model_school
+#: model:ir.ui.menu,name:school.menu_school
+#: model_terms:ir.ui.view,arch_db:school.view_school_tree
+msgid "School"
+msgstr "Colegio"
+
+#. module: school
+#: model_terms:ir.ui.view,arch_db:school.view_students_search
+msgid "Search students"
+msgstr "Buscar estudiantes"
+
+#. module: school
+#: model_terms:ir.ui.view,arch_db:school.view_teachers_search
+msgid "Search teachers"
+msgstr "buscar docentes"
+
+#. module: school
+#: model:ir.actions.act_window,name:school.action_view_settings
+#: model:ir.model,name:school.model_settings
+#: model:ir.ui.menu,name:school.menu_school_settings
+msgid "Settings"
+msgstr "Configuración"
+
+#. module: school
+#: model:ir.model.fields.selection,name:school.selection__teachers__civil_state__single
+msgid "Single"
+msgstr "Soltero/a"
+
+#. module: school
+#: model_terms:ir.ui.view,arch_db:school.view_teachers_form
+msgid "Spouse data"
+msgstr "Datos del conyugue"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_applied_studies__start_date
+#: model:ir.model.fields,field_description:school.field_work_experience__start_date
+msgid "Start Date"
+msgstr "Fecha de inicio"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_applied_studies__status
+#: model:ir.model.fields,field_description:school.field_work_experience__status
+msgid "State"
+msgstr "Estado"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_license_plates__student_id
+msgid "Student"
+msgstr "Estudiante"
+
+#. module: school
+#: model_terms:ir.ui.view,arch_db:school.view_students_form
+msgid "Student's Name"
+msgstr "Nombre del estudiante"
+
+#. module: school
+#: model:ir.actions.act_window,name:school.action_view_students
+#: model:ir.ui.menu,name:school.school_student
+msgid "Students"
+msgstr "Estudiantes"
+
+#. module: school
+#: model:ir.model.fields.selection,name:school.selection__teachers__identification_type__ni
+msgid "TI"
+msgstr ""
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_applied_studies__teacher_id
+#: model:ir.model.fields,field_description:school.field_work_experience__teacher_id
+msgid "Teacher"
+msgstr "Docente"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_courses__teacher_id
+msgid "Teacher in charge"
+msgstr "Docente encargado"
+
+#. module: school
+#: model_terms:ir.ui.view,arch_db:school.view_teachers_form
+msgid "Teacher's name"
+msgstr "Nombre del docente"
+
+#. module: school
+#: model:ir.actions.act_window,name:school.action_view_teachers
+#: model:ir.model,name:school.model_teachers
+#: model:ir.ui.menu,name:school.school_teachers
+msgid "Teachers"
+msgstr "Docentes"
+
+#. module: school
+#: model:ir.model.constraint,message:school.constraint_students_name_unique
+msgid "The identification number must be unique!"
+msgstr "El numero de identificación debe ser unico!"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_applied_studies__name
+#: model:ir.model.fields,field_description:school.field_work_experience__name
+#: model_terms:ir.ui.view,arch_db:school.view_teachers_form
+msgid "Tittle"
+msgstr "Titulo"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_applied_studies__message_unread
+#: model:ir.model.fields,field_description:school.field_area__message_unread
+#: model:ir.model.fields,field_description:school.field_courses__message_unread
+#: model:ir.model.fields,field_description:school.field_license_plates__message_unread
+#: model:ir.model.fields,field_description:school.field_notes__message_unread
+#: model:ir.model.fields,field_description:school.field_school__message_unread
+#: model:ir.model.fields,field_description:school.field_settings__message_unread
+#: model:ir.model.fields,field_description:school.field_students__message_unread
+#: model:ir.model.fields,field_description:school.field_teachers__message_unread
+#: model:ir.model.fields,field_description:school.field_work_experience__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_applied_studies__message_unread_counter
+#: model:ir.model.fields,field_description:school.field_area__message_unread_counter
+#: model:ir.model.fields,field_description:school.field_courses__message_unread_counter
+#: model:ir.model.fields,field_description:school.field_license_plates__message_unread_counter
+#: model:ir.model.fields,field_description:school.field_notes__message_unread_counter
+#: model:ir.model.fields,field_description:school.field_school__message_unread_counter
+#: model:ir.model.fields,field_description:school.field_settings__message_unread_counter
+#: model:ir.model.fields,field_description:school.field_students__message_unread_counter
+#: model:ir.model.fields,field_description:school.field_teachers__message_unread_counter
+#: model:ir.model.fields,field_description:school.field_work_experience__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_applied_studies__website_message_ids
+#: model:ir.model.fields,field_description:school.field_area__website_message_ids
+#: model:ir.model.fields,field_description:school.field_courses__website_message_ids
+#: model:ir.model.fields,field_description:school.field_license_plates__website_message_ids
+#: model:ir.model.fields,field_description:school.field_notes__website_message_ids
+#: model:ir.model.fields,field_description:school.field_school__website_message_ids
+#: model:ir.model.fields,field_description:school.field_settings__website_message_ids
+#: model:ir.model.fields,field_description:school.field_students__website_message_ids
+#: model:ir.model.fields,field_description:school.field_teachers__website_message_ids
+#: model:ir.model.fields,field_description:school.field_work_experience__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: school
+#: model:ir.model.fields,help:school.field_applied_studies__website_message_ids
+#: model:ir.model.fields,help:school.field_area__website_message_ids
+#: model:ir.model.fields,help:school.field_courses__website_message_ids
+#: model:ir.model.fields,help:school.field_license_plates__website_message_ids
+#: model:ir.model.fields,help:school.field_notes__website_message_ids
+#: model:ir.model.fields,help:school.field_school__website_message_ids
+#: model:ir.model.fields,help:school.field_settings__website_message_ids
+#: model:ir.model.fields,help:school.field_students__website_message_ids
+#: model:ir.model.fields,help:school.field_teachers__website_message_ids
+#: model:ir.model.fields,help:school.field_work_experience__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: school
+#: model:ir.model.fields.selection,name:school.selection__teachers__civil_state__vu
+msgid "Widower"
+msgstr "Viudo/a"
+
+#. module: school
+#: model:ir.model.fields,field_description:school.field_teachers__work_experience_ids
+msgid "Work experience"
+msgstr "Experiencia laboral"
+
+#. module: school
+#: model_terms:ir.ui.view,arch_db:school.view_area_form
+#: model_terms:ir.ui.view,arch_db:school.view_area_tree
+msgid "area"
+msgstr ""
+
+#. module: school
+#: model_terms:ir.ui.view,arch_db:school.view_courses_form
+#: model_terms:ir.ui.view,arch_db:school.view_courses_tree
+msgid "courses"
+msgstr "Asignaturas"
+
+#. module: school
+#: model_terms:ir.ui.view,arch_db:school.view_license_plates_form
+#: model_terms:ir.ui.view,arch_db:school.view_license_plates_tree
+msgid "license_plates"
+msgstr ""
+
+#. module: school
+#: model_terms:ir.ui.view,arch_db:school.view_school_form
+msgid "school"
+msgstr "Colegio"
+
+#. module: school
+#: model_terms:ir.ui.view,arch_db:school.view_settings_form
+#: model_terms:ir.ui.view,arch_db:school.view_settings_tree
+msgid "settings"
+msgstr "Configuración"
+
+#. module: school
+#: model:ir.model,name:school.model_students
+#: model_terms:ir.ui.view,arch_db:school.view_students_form
+#: model_terms:ir.ui.view,arch_db:school.view_students_tree
+msgid "students"
+msgstr "Estudiantes"
+
+#. module: school
+#: model_terms:ir.ui.view,arch_db:school.view_teachers_form
+#: model_terms:ir.ui.view,arch_db:school.view_teachers_tree
+msgid "teachers"
+msgstr "Docentes"

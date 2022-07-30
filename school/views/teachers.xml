@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>     
+<odoo>
+    <data>
+        <record id="view_teachers_tree" model="ir.ui.view">
+            <field name="name">teachers.tree</field>
+            <field name="model">teachers</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="teachers">
+                    <field name="identification_number"/>
+                    <field name="name"/>
+                    <field name="address"/>
+                    <field name="phone"/>
+                    <field name="gender"/>
+                    <field name="blood_group"/>
+                    <field name="nationality"/>
+                    <field name="city_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_teachers_form" model="ir.ui.view">
+            <field name="name">teachers.form</field>
+            <field name="model">teachers</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form string="teachers">
+                    <header>
+                        
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button class="oe_stat_button" type="object" name="get_courses" icon="fa-pencil">
+                                <field string="Courses" name="teacher_count" widget="statinfo"/>
+                            </button>
+                        </div>
+                        <field name="photo" widget="image" class="oe_left oe_avatar"/>
+                        <div class="oe_title">
+                            <h1>
+                                <table>
+                                    <tr>
+                                        <td style="padding-right:10px;"><field name="name" required="1" placeholder="Teacher's name" /></td>
+                                    </tr>
+                                </table>
+                            </h1>
+                        </div>
+                        <br></br><br></br><br></br>
+                        <notebook colspan="4">
+                            <page name="personal_information" string="Personal information">
+                                <group>
+                                	<group>
+                                		<field name="identification_type"/>
+                                        <field name="identification_number"/>
+                                        <field name="civil_state"/>
+                                        <field name="address" required="1"/>
+                                        <field name="phone"/>
+                                	</group>
+                                    <group>
+                                        <field name="gender"/>
+                                        <field name="blood_group"/>
+                                        <field name="nationality"/>
+                                        <field name="city_id"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page name="familiar_information" string="Family Information">
+                                <group>
+                                    <group string="Spouse data">
+                                        
+                                    </group>
+                                    <group string="Person in case of emergency">
+                                        
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Skills/Experience">
+                                <group string="Experiencia Laboral">
+                                    <field name="work_experience_ids" string="Experience">
+                                        <tree editable="bottom">
+                                            <field name="name" string="Tittle"/>
+                                            <field name="institution"/>
+                                            <field name="start_date"/>
+                                            <field name="end_date"/>
+                                            <field name="status"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                                <group string="Applied studies">
+                                    <field name="applied_studies_ids">
+                                        <tree editable="bottom">
+                                            <field name="name" string="Tittle"/>
+                                            <field name="institution"/>
+                                            <field name="start_date"/>
+                                            <field name="end_date"/>
+                                            <field name="status"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+         <record id="view_teachers_search" model="ir.ui.view">                                
+          <field name="name">teachers.search</field>                                
+          <field name="model">teachers</field>                                
+          <field name="arch" type="xml">                                    
+            <search string="Search teachers">
+                    <field name="gender"/>
+                    <field name="blood_group"/>
+                                                                              
+                    <filter string="Gender" domain="[('gender', '!=', '')]" name="has_gender"></filter>                               
+                    <filter string="Blood group" domain="[('blood_group', '!=', False)]" name="has_blood_group"></filter>
+
+                    <filter string="Identification type" domain="[('identification_type', '!=', False)]" name="has_identification_type"></filter>
+                                                          
+                <group expand="0" string="Group By">                                            
+                    <filter string="Gender" name="gender" context="{'group_by': 'gender'}"></filter>
+                    <filter string="Blood group" name="blood_group" context="{'group_by': 'blood_group'}"></filter>
+                    <filter string="Civil state" name="civil_state" context="{'group_by': 'civil_state'}"></filter>
+                    <filter string="Identification type" name="identification_type" context="{'group_by': 'identification_type'}"></filter>
+                    <filter string="City" name="city_id" context="{'group_by': 'city_id'}"></filter>
+                    <filter string="Nacionality" name="nationality" context="{'group_by': 'nationality'}"></filter>                                              
+                </group>                                    
+            </search>                                
+          </field>                            
+        </record>
+    
+        <record model="ir.actions.act_window" id="action_view_teachers">
+            <field name="name">Teachers</field>
+            <field name="res_model">teachers</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create new record
+                </p>
+            </field>
+        </record>
+
+
+        <menuitem 
+            id="school_teachers"
+            name="Teachers"
+            parent="menu_school"
+            action="action_view_teachers"/>          
+    </data>
+</odoo>
