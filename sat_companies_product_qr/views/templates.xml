@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="product_qr_generator_view_form_1" model="ir.ui.view">
+        <field name="name">product.qr.generator.view.form</field>
+        <field name="model">product.qr.generator</field>
+        <field name="arch" type="xml">
+            <form string="Stock vehicle form">
+                <header>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="name" required="True"/>
+                    </group>
+                    <group colspan="3">
+                        <group colspan="1" col="2">
+                            <field name="delegation" required="True"/>
+                            <field name="from_gadget" required="True"/>
+                            <field name="to_gadget" required="True"/>
+                            <field name="from_zone" required="True"/>
+                            <field name="to_zone" required="True"/>
+                        </group>
+
+                        <group colspan="1" col="1">
+                            <field name="delegation_location" nolabel="1" readonly="1"/>
+                            <field name="from_gadget_location" nolabel="1" readonly="1"/>
+                            <field name="to_gadget_location" nolabel="1" readonly="1"/>
+                            <field name="from_zone_location" nolabel="1" readonly="1"/>
+                            <field name="to_zone_location" nolabel="1" readonly="1"/>
+                        </group>
+                    </group>
+
+                    <group>
+                        <field name="check_pit" readonly="1"/>
+                        <field name="check_cabine" readonly="1"/>
+                        <field name="check_machine" readonly="1"/>
+                        <!--<field name="url_home" invisible="True"/>-->
+                    </group>
+                    <group colspan="3">
+                        <group colspan="1" col="2">
+                            <field name="qr_pit_image" widget="image" style="width: 300px; height: 300px;"/>
+                            <field name="qr_pit"/>
+                        </group>
+                        <group colspan="1" col="1">
+                            <br></br>
+                            <br></br>
+                            <span style="padding: 5px; float: left">RAE: <field name="id" nolabel="1" readonly="1"/></span>
+                            <span style="padding: 5px; float: left">
+                                <field name="to_gadget"
+                                    nolabel="1"
+                                    readonly="1"
+                                    options="{'no_open': true, 'no_quick_create': true ,'no_create_edit': true,'no_create':true}"
+                                /> Pit</span>
+                            <field style="padding: 5px; float: left" name="to_gadget_location" nolabel="1" readonly="1"/>
+                            <field style="padding: 5px; float: left" name="delegation_location" nolabel="1" readonly="1"/>
+                        </group>
+                    </group>
+                    <group colspan="3">
+                        <group colspan="1" col="2">
+                            <field name="qr_cabine_image" widget="image" style="width: 300px; height: 300px;"/>
+                            <field name="qr_cabine"/>
+                        </group>
+                        <group colspan="1" col="1">
+                            <br></br>
+                            <br></br>
+                            <span style="padding: 5px; float: left">RAE: <field name="id" nolabel="1" readonly="1"/></span>
+                            <span style="padding: 5px; float: left">
+                                <field name="to_gadget"
+                                    nolabel="1"
+                                    readonly="1"
+                                    options="{'no_open': true, 'no_quick_create': true ,'no_create_edit': true,'no_create':true}"
+                                    /> Cabine</span>
+                            <field style="padding: 5px; float: left" name="to_gadget_location" nolabel="1" readonly="1"/>
+                            <field style="padding: 5px; float: left" name="delegation_location" nolabel="1" readonly="1"/>
+                        </group>
+                    </group>
+                    <group colspan="3">
+                        <group colspan="1" col="2">
+                            <field name="qr_machine_image" widget="image" style="width: 300px; height: 300px;"/>
+                            <field name="qr_machine"/>
+                        </group>
+                        <group colspan="1" col="1">
+                            <br></br>
+                            <br></br>
+                            <span style="padding: 5px; float: left">RAE: <field name="id" nolabel="1" readonly="1"/></span>
+                            <span style="padding: 5px; float: left">
+                                <field name="to_gadget"
+                                    nolabel="1"
+                                    readonly="1"
+                                    options="{'no_open': true, 'no_quick_create': true ,'no_create_edit': true,'no_create':true}"
+                                /> Machine</span>
+                            <field style="padding: 5px; float: left" name="to_gadget_location" nolabel="1" readonly="1"/>
+                            <field style="padding: 5px; float: left" name="delegation_location" nolabel="1" readonly="1"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="product_qr_generator_view_tree" model="ir.ui.view">
+        <field name="name">product.qr.generator.view.tree</field>
+        <field name="model">product.qr.generator</field>
+        <field name="arch" type="xml">
+            <tree string="Stock vehicle tree">
+                <field name="name"/>
+                <field name="check_pit"/>
+                <field name="check_cabine"/>
+                <field name="check_machine"/>
+                <field name="state" widget="badge"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="product_qr_generator_action" model="ir.actions.act_window">
+        <field name="name">Check Device QR</field>
+        <field name="res_model">product.qr.generator</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    
+
+    <menuitem id="product_qr_generator_menu_act"
+            name="State Check Device" 
+            parent="stock.menu_stock_warehouse_mgmt" 
+            action="sat_companies_product_qr.product_qr_generator_action" 
+            sequence="50"/>
+        
+</odoo>

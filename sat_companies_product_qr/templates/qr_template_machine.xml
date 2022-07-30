@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data >
+        <template id="product_qr_machine">
+            <link rel="stylesheet"
+                href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+                integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+                crossorigin="anonymous"/>
+        <body class="table-light">
+            <br></br>
+            <br></br>
+            <div id="div_principal_id" style="text-align: -webkit-center" class="table-light">
+               <form class="col-sm-5">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>¡ Device Checked !</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <div>
+                                    <span style="padding: 5px; float: left">Machine inspection has been validated</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a class="btn btn-info"
+                                t-attf-href="#{url_home}"
+                            >
+                                <h3>Home</h3>
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </body>
+        </template>
+    </data>
+</odoo>

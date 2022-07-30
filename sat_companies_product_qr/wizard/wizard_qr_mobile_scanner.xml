@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>     
+<odoo>
+    <data>
+        <record id="wizard_qr_mobile_scanner_inherit_form" model="ir.ui.view">
+           <field name="name">wizard.qr.mobile.scanner.inherit.form</field>
+           <field name="model">wizard.qr.mobile.scanner</field>
+           <field name="inherit_id" ref="qr_mobile_scanner.wizard_qr_mobile_scanner_form"/>
+           <field name="arch" type="xml">
+                <xpath expr="//form/sheet/group[1]" position="before">
+                        <field name="check_from_product_qr" invisible="True"/>
+                        <field name="qr_pit" invisible="True"/>
+                        <field name="qr_cabine" invisible="True"/>
+                        <field name="qr_machine" invisible="True"/>
+                        <div class="alert alert-success"
+                                role="alert"
+                                style="margin-bottom:0px;font-size: 18px"
+                                attrs="{'invisible': [('qr_pit', '!=', True)]}">
+                                    Pit inspection has been validated
+                        </div>
+                        <div class="alert alert-success"
+                                role="alert"
+                                style="margin-bottom:0px;font-size: 18px"
+                                attrs="{'invisible': [('qr_cabine', '!=', True)]}">
+                                    Cabine inspection has been validated
+                        </div>
+                        <div class="alert alert-success"
+                                role="alert"
+                                style="margin-bottom:0px;font-size: 18px"
+                                attrs="{'invisible': [('qr_machine', '!=', True)]}">
+                                    Machine inspection has been validated
+                        </div>
+                </xpath>
+                <xpath expr="//form/sheet/footer/button[@name='action_url']" position="before">
+                    <button string="Validate"
+                        attrs="{'invisible': [('check_from_product_qr', '!=', True)]}"
+                        name="action_check_product"
+                        type="object"
+                        class="oe_highlight"/>
+                </xpath>
+                <xpath expr="//form/sheet/footer/button[@name='action_url']" position="attributes">
+                   <attribute name="invisible">1</attribute>
+                </xpath>
+
+           </field>
+       </record>
+    </data>
+</odoo>
