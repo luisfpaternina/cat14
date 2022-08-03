@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data >
+        <template id="product_qr">
+            <div class="container">
+                <div class="row justify-content-center align-items-center minh-100">
+                    <div class="col-lg-12">
+                        <div>
+                            <h1>
+                                <span t-esc="product_qr"/>
+                            </h1>
+                        </div>
+                        <div>
+                            <p style="font-size:24px;" 
+                                class="text-center">
+                                <i class="fas fa-info-circle"> 
+                                    Device Checked....</i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </data>
+</odoo>

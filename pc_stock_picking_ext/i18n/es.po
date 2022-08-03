@@ -1,0 +1,224 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pc_stock_picking_ext
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-23 10:42+0000\n"
+"PO-Revision-Date: 2022-05-23 10:42+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pc_stock_picking_ext
+#: model_terms:ir.ui.view,arch_db:pc_stock_picking_ext.new_view_stock_picking_form
+msgid "<span class=\"o_stat_text\">Operations</span>"
+msgstr ""
+
+#. module: pc_stock_picking_ext
+#: model_terms:ir.ui.view,arch_db:pc_stock_picking_ext.new_view_stock_picking_form
+msgid ""
+"Add an internal note that will be printed on the Picking Operations sheet"
+msgstr ""
+
+#. module: pc_stock_picking_ext
+#: model_terms:ir.ui.view,arch_db:pc_stock_picking_ext.new_view_stock_picking_form
+msgid "Additional Info"
+msgstr "Info adicional"
+
+#. module: pc_stock_picking_ext
+#: model_terms:ir.ui.view,arch_db:pc_stock_picking_ext.new_view_stock_picking_form
+msgid "Assign Serial Numbers"
+msgstr ""
+
+#. module: pc_stock_picking_ext
+#: model_terms:ir.ui.view,arch_db:pc_stock_picking_ext.new_view_stock_picking_form
+msgid "Cancel"
+msgstr "CANCELAR"
+
+#. module: pc_stock_picking_ext
+#: model_terms:ir.ui.view,arch_db:pc_stock_picking_ext.new_view_stock_picking_form
+msgid "Check Availability"
+msgstr ""
+
+#. module: pc_stock_picking_ext
+#: model_terms:ir.ui.view,arch_db:pc_stock_picking_ext.new_view_stock_picking_form
+msgid "Demand"
+msgstr "Demanda"
+
+#. module: pc_stock_picking_ext
+#: model_terms:ir.ui.view,arch_db:pc_stock_picking_ext.new_view_stock_picking_form
+msgid "Description"
+msgstr "Descripción"
+
+#. module: pc_stock_picking_ext
+#: model_terms:ir.ui.view,arch_db:pc_stock_picking_ext.new_view_stock_picking_form
+msgid "Detailed Operations"
+msgstr "Operaciones detalladas"
+
+#. module: pc_stock_picking_ext
+#: model:ir.model.fields,field_description:pc_stock_picking_ext.field_stock_picking__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: pc_stock_picking_ext
+#: model_terms:ir.ui.view,arch_db:pc_stock_picking_ext.new_view_stock_picking_form
+msgid "Done"
+msgstr "Hecho"
+
+#. module: pc_stock_picking_ext
+#: model_terms:ir.ui.view,arch_db:pc_stock_picking_ext.new_view_stock_picking_form
+msgid "Effective Date"
+msgstr "Fecha efectiva"
+
+#. module: pc_stock_picking_ext
+#: model:ir.model.fields,field_description:pc_stock_picking_ext.field_stock_picking__gadget_id
+msgid "Gadget"
+msgstr "Aparato"
+
+#. module: pc_stock_picking_ext
+#: model:ir.model.fields,field_description:pc_stock_picking_ext.field_stock_picking__id
+msgid "ID"
+msgstr ""
+
+#. module: pc_stock_picking_ext
+#: model_terms:ir.ui.view,arch_db:pc_stock_picking_ext.new_view_stock_picking_form
+msgid ""
+"If the picking is unlocked you can edit initial demand (for a draft picking)"
+" or done quantities (for a done picking)."
+msgstr ""
+
+#. module: pc_stock_picking_ext
+#: model:ir.model.fields,field_description:pc_stock_picking_ext.field_stock_picking____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: pc_stock_picking_ext
+#: model_terms:ir.ui.view,arch_db:pc_stock_picking_ext.new_view_stock_picking_form
+msgid "List view of operations"
+msgstr ""
+
+#. module: pc_stock_picking_ext
+#: model_terms:ir.ui.view,arch_db:pc_stock_picking_ext.new_view_stock_picking_form
+msgid "Lock"
+msgstr ""
+
+#. module: pc_stock_picking_ext
+#: model:res.groups,name:pc_stock_picking_ext.pc_stock_picking_ext_group
+msgid "Manager transfer request"
+msgstr "Administrator solicitud de transferencia"
+
+#. module: pc_stock_picking_ext
+#: model:res.groups,comment:pc_stock_picking_ext.pc_stock_picking_ext_group
+msgid "Manager transfer request Permission Group"
+msgstr "Grupo de permisos Administrator solicitud de transferencia"
+
+#. module: pc_stock_picking_ext
+#: model_terms:ir.ui.view,arch_db:pc_stock_picking_ext.new_view_stock_picking_form
+msgid "Mark as Todo"
+msgstr "MARCAR POR REALIZAR"
+
+#. module: pc_stock_picking_ext
+#: model_terms:ir.ui.view,arch_db:pc_stock_picking_ext.new_view_stock_picking_form
+msgid "Note"
+msgstr "Nota"
+
+#. module: pc_stock_picking_ext
+#: model_terms:ir.ui.view,arch_db:pc_stock_picking_ext.new_view_stock_picking_form
+msgid "Operations"
+msgstr "Operaciones"
+
+#. module: pc_stock_picking_ext
+#: model_terms:ir.ui.view,arch_db:pc_stock_picking_ext.new_view_stock_picking_form
+msgid "Other Information"
+msgstr "Otra información"
+
+#. module: pc_stock_picking_ext
+#: model_terms:ir.ui.view,arch_db:pc_stock_picking_ext.new_view_stock_picking_form
+msgid "Print"
+msgstr "Imprimir"
+
+#. module: pc_stock_picking_ext
+#: model_terms:ir.ui.view,arch_db:pc_stock_picking_ext.new_view_stock_picking_form
+msgid "Put in Pack"
+msgstr ""
+
+#. module: pc_stock_picking_ext
+#: model_terms:ir.ui.view,arch_db:pc_stock_picking_ext.new_view_stock_picking_form
+msgid "Reserved"
+msgstr "Reservado"
+
+#. module: pc_stock_picking_ext
+#: model_terms:ir.ui.view,arch_db:pc_stock_picking_ext.new_view_stock_picking_form
+msgid "Return"
+msgstr ""
+
+#. module: pc_stock_picking_ext
+#: model_terms:ir.ui.view,arch_db:pc_stock_picking_ext.new_view_stock_picking_form
+msgid "Scrap"
+msgstr "DESECHAR"
+
+#. module: pc_stock_picking_ext
+#: model_terms:ir.ui.view,arch_db:pc_stock_picking_ext.new_view_stock_picking_form
+msgid "Sign"
+msgstr "Firma"
+
+#. module: pc_stock_picking_ext
+#: model_terms:ir.ui.view,arch_db:pc_stock_picking_ext.new_view_stock_picking_form
+msgid "Stock Moves"
+msgstr ""
+
+#. module: pc_stock_picking_ext
+#: model:ir.model.fields,field_description:pc_stock_picking_ext.field_stock_picking__task_id
+msgid "Task"
+msgstr "OT"
+
+#. module: pc_stock_picking_ext
+#: model:ir.model,name:pc_stock_picking_ext.model_stock_picking
+msgid "Transfer"
+msgstr "Albarán"
+
+#. module: pc_stock_picking_ext
+#: model:ir.ui.menu,name:pc_stock_picking_ext.menu_new_stock_picking
+msgid "Transfer request"
+msgstr "Solicitud de transferencia"
+
+#. module: pc_stock_picking_ext
+#: model:ir.ui.menu,name:pc_stock_picking_ext.id_menu_new_stock_picking
+msgid "Transfer request/Operators"
+msgstr "Operaciones"
+
+#. module: pc_stock_picking_ext
+#: model:ir.actions.act_window,name:pc_stock_picking_ext.parent_action_window
+msgid "Transfers"
+msgstr "Transferencias"
+
+#. module: pc_stock_picking_ext
+#: model_terms:ir.ui.view,arch_db:pc_stock_picking_ext.new_view_stock_picking_form
+msgid "Unit of Measure"
+msgstr "Unidad de medida"
+
+#. module: pc_stock_picking_ext
+#: model_terms:ir.ui.view,arch_db:pc_stock_picking_ext.new_view_stock_picking_form
+msgid "Unlock"
+msgstr "DESBLOQUEAR"
+
+#. module: pc_stock_picking_ext
+#: model_terms:ir.ui.view,arch_db:pc_stock_picking_ext.new_view_stock_picking_form
+msgid "Unreserve"
+msgstr "ANULAR RESERVA"
+
+#. module: pc_stock_picking_ext
+#: model_terms:ir.ui.view,arch_db:pc_stock_picking_ext.new_view_stock_picking_form
+msgid "Validate"
+msgstr "Validar"
+
+#. module: pc_stock_picking_ext
+#: model_terms:ir.ui.view,arch_db:pc_stock_picking_ext.new_view_stock_picking_form
+msgid "e.g. PO0032"
+msgstr ""

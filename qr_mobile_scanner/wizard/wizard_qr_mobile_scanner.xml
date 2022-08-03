@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>     
+<odoo>
+    <data>
+       <record id="wizard_qr_mobile_scanner_form" model="ir.ui.view">
+           <field name="name">wizard.qr.mobile.scanner.form</field>
+           <field name="model">wizard.qr.mobile.scanner</field>
+           <field name="arch" type="xml">
+               <form string="QR Scanner Mobile">
+                   <sheet>
+                        <group>
+                           <field name="check_qr_active" invisible="True"/>
+                           <field name="qr_scanner" widget="qr_code" options="{'confirm': true, 'select':true, 'mobile_dialog':true}"/>
+                        </group>
+                        <group>
+                            
+                        </group>
+                       <footer>
+                            <button string="Cancel"
+                                class="btn-secondary"
+                                special="cancel"/>
+                            <button string="Confirm"
+                                attrs="{'invisible': [('check_qr_active', '!=', True)]}"
+                                name="action_url"
+                                type="object"
+                                class="oe_highlight"/>
+                       </footer>
+                   </sheet>
+               </form>
+           </field>
+       </record>
+
+       <record model="ir.actions.act_window" id="action_qr_mobile_scanner_form">
+            <field name="name">Qr Scanner Menu</field>
+            <field name="res_model">wizard.qr.mobile.scanner</field>
+            <field name="view_mode">form</field>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem 
+            id="action_qr_mobile_scanner_form" 
+            name="Qr Scanner Menu" 
+            action="qr_mobile_scanner.action_qr_mobile_scanner_form"
+            web_icon="qr_mobile_scanner,static/description/qr.png"
+            />
+    </data>
+</odoo>

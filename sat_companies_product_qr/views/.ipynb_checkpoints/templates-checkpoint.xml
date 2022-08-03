@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="product_qr_generator_view_form" model="ir.ui.view">
+        <field name="name">product.qr.generator.view.form</field>
+        <field name="model">product.qr.generator</field>
+        <field name="arch" type="xml">
+            <form string="Stock vehicle form">
+                <header>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="name" required="True"/>
+                    </group>
+                    <group colspan="2">
+                        <group colspan="1" col="2">
+                            <field name="delegation"/>
+                            <field name="from_gadget"/>
+                            <field name="to_gadget"/>
+                            <field name="from_zone"/>
+                            <field name="to_zone"/>
+                        </group>
+                        <!--
+                        <group colspan="1" col="2">
+                            <field name="delegation_location" readonly="1"/>
+                            <field name="from_gadget_location" readonly="1"/>
+                            <field name="to_gadget_location" readonly="1"/>
+                            <field name="from_zone_location" readonly="1"/>
+                            <field name="to_zone_location" readonly="1"/>
+                        </group>
+                        -->
+                    </group>
+
+                    <group>
+                        <field name="check_pit"/>
+                        <field name="check_cabin"/>
+                        <field name="check_machine"/>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="qr_code_pit" widget="image" style="width: 160px; height: 160px;"/>
+                        </group>
+                        <group>
+                            <field name="qr_code_pit_name"/>
+                            <field name="product_pit_qr_code"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="qr_code_cabin" widget="image" style="width: 160px; height: 160px;"/>
+                        </group>
+                        <group>
+                            <field name="qr_code_cabin_name"/>
+                            <field name="product_cabin_qr_code"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="qr_code_machine" widget="image" style="width: 160px; height: 160px;"/>
+                        </group>
+                        <group>
+                            <field name="qr_code_machine_name"/>
+                            <field name="product_machine_qr_code"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="product_qr_generator_view_tree" model="ir.ui.view">
+        <field name="name">product.qr.generator.view.tree</field>
+        <field name="model">product.qr.generator</field>
+        <field name="arch" type="xml">
+            <tree string="Stock vehicle tree">
+                <field name="name"/>
+                <field name="check_pit"/>
+                <field name="check_cabin"/>
+                <field name="check_machine"/>
+                <field name="state" widget="badge"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="product_qr_generator_action" model="ir.actions.act_window">
+        <field name="name">Check Device QR</field>
+        <field name="res_model">product.qr.generator</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    
+
+    <menuitem id="product_qr_generator_menu_act"
+            name="State Check Device" 
+            parent="stock.menu_stock_warehouse_mgmt" 
+            action="sat_companies_product_qr.product_qr_generator_action" 
+            sequence="50"/>
+        
+</odoo>

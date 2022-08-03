@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="template_send_aswer_material_notification" model="mail.template">
+            <field name="name">Confirmación de material solicitado</field>
+            <field name="model_id" ref="stock.model_stock_picking"/>
+            <field name="subject">Confirmación de material solicitado</field>
+            <field name="email_from">${(object.write_uid.email_formatted or user.email_formatted) | safe}</field>
+            <field name="email_to">${object.user_id.id}</field>
+            <field name="body_html" type="xml">
+                <div>
+                    <strong><p align="center">Confirmación de material solicitado</p></strong>
+                    <p>Buen día,</p>
+                    <p>Se ha confirmado y validado el material solicitado</p>
+                    <p>Un saludo.</p>
+                </div>
+            </field>
+            <field name="lang">${user.lang}</field>
+            <field name="auto_delete" eval="False"/>
+        </record>
+    </data>
+</odoo>

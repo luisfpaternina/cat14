@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+manager_model_stock_picking,user_model_stock_picking,model_stock_picking,pc_stock_picking_ext.pc_stock_picking_ext_group,1,1,1,1

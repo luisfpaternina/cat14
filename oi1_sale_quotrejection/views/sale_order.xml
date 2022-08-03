@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<odoo>
+    <data>    
+    
+    <record id="oi1_sale_quotrejection.view_order_form" model="ir.ui.view">
+            <field name="name">oi1_sale_quotrejection.view_order_form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <data>
+                
+                  <xpath expr="//button[@name='action_confirm']" position="before">                    
+                      <button string="Reject Sale" name="do_reject_quotation" type="object" class="oe_highlight"  states="draft,sent" />
+                  </xpath>      
+                  
+                  <field name="origin" position="after">
+                        <field name="x_lost_reason_id" />
+                  </field>      
+                  
+                </data>                
+           </field>
+    </record>
+    </data>
+</odoo>  

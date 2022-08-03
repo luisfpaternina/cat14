@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!--AUTOMATIZACIÓN DE CORREO: SOLICITUD DE MATERIAL-->
+    <record id="automatization_send_material_notification" model="base.automation">
+        <field name="name">Solicitud de material</field>
+        <field name="model_id" ref="stock.model_stock_picking"/>
+        <field name="state">email</field>
+        <field name="trigger">on_write</field>
+        <field name="active" eval="True"/>
+        <field name="template_id" ref="pc_stock_picking_ext.template_send_material_notification"/>
+        <field name="filter_pre_domain">[["state","=","assigned"]]</field>
+        <field name="filter_domain">[["state","=","assigned"]]</field>
+    </record>
+
+    <!--AUTOMATIZACIÓN DE CORREO: CONFIRMACIÓN DE MATERIAL-->
+    <record id="automatization_send_material_notification_2" model="base.automation">
+        <field name="name">Confirmación de material solicitado</field>
+        <field name="model_id" ref="stock.model_stock_picking"/>
+        <field name="state">email</field>
+        <field name="trigger">on_write</field>
+        <field name="active" eval="True"/>
+        <field name="template_id" ref="pc_stock_picking_ext.template_send_aswer_material_notification"/>
+        <field name="filter_pre_domain">[["state","=","done"]]</field>
+        <field name="filter_domain">[["state","=","done"]]</field>
+    </record>
+ 
+</odoo>
