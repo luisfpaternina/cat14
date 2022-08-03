@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>     
+<odoo>
+    <data>
+
+        <record id="view_stock_gadgets_tree" model="ir.ui.view">
+            <field name="name">sale.stock.tree</field>
+            <field name="model">stock.gadgets</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="stock_gadgets_tree">
+                    <field name="code"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_stock_gadgets_form" model="ir.ui.view">
+            <field name="name">stock.gadgets.form</field>
+            <field name="model">stock.gadgets</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form string="stock_gadgets_form">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <table>
+                                    <tr>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="code"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_view_stock_gadgets">
+            <field name="name">Gadgets</field>
+            <field name="res_model">stock.gadgets</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create new record
+                </p>
+            </field>
+        </record>
+
+        <menuitem 
+            id="menu_gadgets" 
+            name="Gadgets" 
+            parent="stock.menu_stock_config_settings"
+            action="action_view_stock_gadgets"
+            sequence="70"
+            />
+
+        <menuitem 
+            id="menu_technical_data" 
+            name="Technical data" 
+            parent="stock.menu_stock_config_settings"
+            action="action_view_stock_gadgets"
+            sequence="71"
+            />
+
+    </data>
+</odoo> 

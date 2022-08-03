@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>     
+<odoo>
+    
+    <data>
+
+        <record id="view_stock_soil_type_tree" model="ir.ui.view">
+            <field name="name">stock.soil.type.tree</field>
+            <field name="model">stock.soil.type</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_stock_soil_type_form" model="ir.ui.view">
+            <field name="name">stock.soil.type.form</field>
+            <field name="model">stock.soil.type</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <field name="name" required="1" placeholder="Name"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="active" widget="boolean_toggle"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_view_stock_soil_type">
+            <field name="name">Soil type</field>
+            <field name="res_model">stock.soil.type</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create new record
+                </p>
+            </field>
+        </record>
+
+        <menuitem 
+            id="menu_soil_type" 
+            name="Soil type" 
+            parent="sat_companies_stock.menu_technical_data"
+            action="action_view_stock_soil_type"
+            sequence="90"
+            />
+
+    </data>
+
+</odoo> 

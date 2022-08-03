@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>     
+<odoo>
+    
+    <data>
+
+        <record id="view_stock_wash_cabin_tree" model="ir.ui.view">
+            <field name="name">stock.wash.cabin.tree</field>
+            <field name="model">stock.wash.cabin</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_stock_wash_cabin_form" model="ir.ui.view">
+            <field name="name">stock.wash.cabin.form</field>
+            <field name="model">stock.wash.cabin</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <field name="name" required="1" placeholder="Name"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="active" widget="boolean_toggle"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_view_wash_cabin">
+            <field name="name">Wash cabin</field>
+            <field name="res_model">stock.wash.cabin</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create new record
+                </p>
+            </field>
+        </record>
+
+        <menuitem 
+            id="menu_stock_wash_cabin" 
+            name="Wash cabin" 
+            parent="sat_companies_stock.menu_technical_data"
+            action="action_view_wash_cabin"
+            sequence="90"
+            />
+
+    </data>
+
+</odoo> 

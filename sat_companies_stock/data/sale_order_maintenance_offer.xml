@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="template_sale_order_maintenance_offer" model="mail.template">
+            <field name="name">Oferta Mantenimiento / Montaje / Reparación</field>
+            <field name="model_id" ref="sale.model_sale_order"/>
+            <field name="subject">Oferta de mantenimiento de Ascensores</field>
+            <field name="email_from">${(object.write_uid.email_formatted or user.email_formatted) | safe}</field>
+            <field name="email_to"></field>
+            <field name="body_html" type="xml">
+                <div>
+                    <strong><p align="center">Oferta de Mantenimiento de Ascensores</p></strong>
+                    <ul>
+                        <li>Contrato de mantenimiento</li>
+                        <li>Oficina y alamcen de respuesto</li>
+                        <li>Mecanicos de zona</li>
+                        <li>Servicios de averias</li>
+                        <li>Servicio de apuesta en marcha</li>
+                        <li>Mantenimiento preventivo</li>
+                        <li>Asesoramiento jurídico</li>
+                        <li>La gestión e inspección por cambio de conversador gratis</li>
+                    </ul>
+                    <br></br>
+                    <strong><p>OFERTA DE MANTENIMIENTO</p></strong>
+                    <br></br>
+                    <strong><p>OBSERVACIONES</p></strong>
+                </div>
+            </field>
+            <field name="lang">${user.lang}</field>
+            <field name="auto_delete" eval="False"/>
+        </record>
+    </data>
+</odoo>

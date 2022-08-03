@@ -1,0 +1,3030 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sat_companies_stock
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-07-07 10:52+0000\n"
+"PO-Revision-Date: 2022-07-07 10:52+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__years__two
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__stock_gadgets__years__two
+msgid "2 years"
+msgstr "2 años"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__years__four
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__stock_gadgets__years__four
+msgid "4 years"
+msgstr "4 años"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__years__six
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__stock_gadgets__years__six
+msgid "6 years"
+msgstr "6 años"
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Acuñamiento cabina:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Acuñamiento contrapeso:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Bancada:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Cables tracción:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Carga(kgs):</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Correa operador:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Cuadro de maniobras:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Embarque:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Fabricante:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Foso reducido:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Freno motor(V):</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Freno operador:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Grupo tractor:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Huida reducida:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Llavín cabina:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Llavín rellano:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Luz temporizada cabina:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Línea netel:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Línea:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Maniobra:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Modelo GSM:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Modelo aparato:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Modelo bidireccional:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>N° paradas:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>N° personas:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Operador puerta:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Pesacargas:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Polea contrapeso (cm):</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Polea desvío (cm):</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Polea limitador (cm):</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Polea tensora (cm):</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Polea tractora (cm):</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Potencia motor(KW):</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Puertas Rellano:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Puffer cabina:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Puffer contrapeso:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Recorrido(mm):</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Sala de máquinas:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Tipo ascensor:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Tipo botonera cabina:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Tipo cerraduras rellano:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Tipo pulsador cabina:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Tipo suelo:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Tipos tubo cabina:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Velocidad nominal(m/s):</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid ""
+"<br/>\n"
+"                                <strong style=\"font-size:15px\">Nombre aparato:</strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid "<strong style=\"font-size:15px\">Código aparato:</strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid "<strong><span>R.A.E:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid "<strong><span>Tipo botonera rellano:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bench__message_needaction
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bidirectional_model__message_needaction
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_push_type__message_needaction
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_type__message_needaction
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_elevator_type__message_needaction
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__message_needaction
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_billing_period__message_needaction
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_contract_type__message_needaction
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_increase_type__message_needaction
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_state__message_needaction
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_types_assistance__message_needaction
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_use__message_needaction
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gsm_model__message_needaction
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_inspection_type__message_needaction
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_doors__message_needaction
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_key__message_needaction
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_keypad__message_needaction
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_lock__message_needaction
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__message_needaction
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__message_needaction
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__message_needaction
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__message_needaction
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__message_needaction
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__message_needaction
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_types_cabin_tubes__message_needaction
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_wash_cabin__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bench__active
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bidirectional_model__active
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_push_type__active
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_type__active
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_elevator_type__active
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_billing_period__active
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_contract_type__active
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_increase_type__active
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_state__active
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_types_assistance__active
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_use__active
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gsm_model__active
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_inspection_type__active
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_doors__active
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_key__active
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_keypad__active
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_lock__active
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__active
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__active
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__active
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__active
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__active
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__active
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_types_cabin_tubes__active
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_wash_cabin__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__active_name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__active_name
+msgid "Active name"
+msgstr "Estado"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__gadget_state__active
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__stock_gadgets__gadget_state__active
+msgid "Activo"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__address
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__address
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__address
+msgid "Address"
+msgstr "Dirección"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__address2
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__address2
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__address2
+msgid "Address 2"
+msgstr "Dirección aparato"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__address3
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__address3
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__address3
+msgid "Address 3"
+msgstr "Dirección 3"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__partner_admin_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__partner_admin_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__partner_admin_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__user_id
+msgid "Admin"
+msgstr "Administrador"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__user_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__user_id
+msgid "Admin user"
+msgstr "Usuario administrador"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__type_contract__all_risk
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__stock_gadgets__type_contract__all_risk
+msgid "All risk"
+msgstr "Todo riesgo"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__is_april
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__is_april
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_month__april
+msgid "April"
+msgstr "Abril"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__assistance_type_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__assistance_type_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__assistance_type_id
+msgid "Assistance type"
+msgstr "Tipo asignación"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bench__message_attachment_count
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bidirectional_model__message_attachment_count
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_push_type__message_attachment_count
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_type__message_attachment_count
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_elevator_type__message_attachment_count
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__message_attachment_count
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_billing_period__message_attachment_count
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_contract_type__message_attachment_count
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_increase_type__message_attachment_count
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_state__message_attachment_count
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_types_assistance__message_attachment_count
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_use__message_attachment_count
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gsm_model__message_attachment_count
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_inspection_type__message_attachment_count
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_doors__message_attachment_count
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_key__message_attachment_count
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_keypad__message_attachment_count
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_lock__message_attachment_count
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__message_attachment_count
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__message_attachment_count
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__message_attachment_count
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__message_attachment_count
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__message_attachment_count
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__message_attachment_count
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_types_cabin_tubes__message_attachment_count
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_wash_cabin__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__is_august
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__is_august
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_month__august
+msgid "August"
+msgstr "Agosto"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__bad_points
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__bad_points
+msgid "Bad points"
+msgstr "Puntos desfavorables"
+
+#. module: sat_companies_stock
+#: model:ir.actions.act_window,name:sat_companies_stock.action_view_stock_bench
+#: model:ir.model,name:sat_companies_stock.model_stock_bench
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__bench_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__bench_id
+#: model:ir.ui.menu,name:sat_companies_stock.menu_stock_bench
+msgid "Bench"
+msgstr "Bancada"
+
+#. module: sat_companies_stock
+#: model:ir.actions.act_window,name:sat_companies_stock.action_view_bidirectional_model
+#: model:ir.model,name:sat_companies_stock.model_stock_bidirectional_model
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__bidirectional_model_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__bidirectional_model_id
+#: model:ir.ui.menu,name:sat_companies_stock.menu_stock_bidirectional_model
+msgid "Bidirectional model"
+msgstr "Modelo bidirecional"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__billing_period
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__billing_period
+msgid "Billing"
+msgstr "Facturar apt"
+
+#. module: sat_companies_stock
+#: model:ir.model,name:sat_companies_stock.model_stock_gadgets_billing_period
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__billing_period_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__billing_period_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__billing_period
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__billing_period_id
+msgid "Billing period"
+msgstr "Periodo de facturación"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__cabin_tubes_type_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__cabin_tubes_type_id
+msgid "Cabin tubes types"
+msgstr "Tipos tubos cabina"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__cabine_phone
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__cabine_phone
+msgid "Cabine phone"
+msgstr "Teléfono cabina"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_bank_statement_line__check_contract_type
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_move__check_contract_type
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_payment__check_contract_type
+msgid "Check Contract Type"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_bank_statement_line__check_product
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_move__check_product
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_payment__check_product
+msgid "Check Product"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.actions.act_window,name:sat_companies_stock.action_view_stock_cockpit_type
+#: model:ir.model,name:sat_companies_stock.model_stock_cockpit_type
+#: model:ir.ui.menu,name:sat_companies_stock.menu_stock_cockpit_type
+msgid "Cockpit keypad type"
+msgstr "Tipo botonera cabina"
+
+#. module: sat_companies_stock
+#: model:ir.actions.act_window,name:sat_companies_stock.action_stock_cockpit_push_type
+#: model:ir.model,name:sat_companies_stock.model_stock_cockpit_push_type
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__cockpit_push_type_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__cockpit_push_type_id
+#: model:ir.ui.menu,name:sat_companies_stock.menu_stock_cockpit_push_type
+msgid "Cockpit push type"
+msgstr "Tipo pulsador cabina"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__cockpit_type_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__cockpit_type_id
+msgid "Cockpit type"
+msgstr "Tipo botonera cabina"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__code
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__code
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_billing_period__code
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_increase_type__code
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_types_assistance__code
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__code
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__code
+msgid "Code"
+msgstr "Código"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__company_product_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__company_product_id
+msgid "Company"
+msgstr "Compañía relacionada"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__type_contract
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__type_contract
+msgid "Contract"
+msgstr "Contrato"
+
+#. module: sat_companies_stock
+#: model:ir.actions.act_window,name:sat_companies_stock.action_view_stock_gadgets_contract_type
+#: model:ir.model,name:sat_companies_stock.model_stock_gadgets_contract_type
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_bank_statement_line__gadget_contract_type
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_move__gadget_contract_type
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_payment__gadget_contract_type
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__type_contract_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__type_contract_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__type_contract_id
+#: model:ir.ui.menu,name:sat_companies_stock.menu_gadgets_contract_type
+#: model:ir.ui.menu,name:sat_companies_stock.menu_gadgets_contract_type_sale_subscription
+msgid "Contract type"
+msgstr "Tipo de suscripción"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__correction_period
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__correction_period
+msgid "Correction period"
+msgstr "Plazo subsanación"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__correction_period_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__correction_period_date
+msgid "Correction period date"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__counterweight_pulley
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__counterweight_pulley
+msgid "Counterweight pulley(cm)"
+msgstr "Polea contrapeso"
+
+#. module: sat_companies_stock
+#: model_terms:ir.actions.act_window,help:sat_companies_stock.action_stock_cockpit_push_type
+#: model_terms:ir.actions.act_window,help:sat_companies_stock.action_view_bidirectional_model
+#: model_terms:ir.actions.act_window,help:sat_companies_stock.action_view_gsm_model
+#: model_terms:ir.actions.act_window,help:sat_companies_stock.action_view_inspection_type
+#: model_terms:ir.actions.act_window,help:sat_companies_stock.action_view_landing_doors
+#: model_terms:ir.actions.act_window,help:sat_companies_stock.action_view_landing_key
+#: model_terms:ir.actions.act_window,help:sat_companies_stock.action_view_landing_keypad
+#: model_terms:ir.actions.act_window,help:sat_companies_stock.action_view_landing_lock
+#: model_terms:ir.actions.act_window,help:sat_companies_stock.action_view_maneuvering_table
+#: model_terms:ir.actions.act_window,help:sat_companies_stock.action_view_state_record
+#: model_terms:ir.actions.act_window,help:sat_companies_stock.action_view_stock_bench
+#: model_terms:ir.actions.act_window,help:sat_companies_stock.action_view_stock_cockpit_type
+#: model_terms:ir.actions.act_window,help:sat_companies_stock.action_view_stock_elevator_type
+#: model_terms:ir.actions.act_window,help:sat_companies_stock.action_view_stock_gadgets
+#: model_terms:ir.actions.act_window,help:sat_companies_stock.action_view_stock_gadgets_contract_type
+#: model_terms:ir.actions.act_window,help:sat_companies_stock.action_view_stock_gadgets_increase_type
+#: model_terms:ir.actions.act_window,help:sat_companies_stock.action_view_stock_gadgets_state
+#: model_terms:ir.actions.act_window,help:sat_companies_stock.action_view_stock_gadgets_types_assistance
+#: model_terms:ir.actions.act_window,help:sat_companies_stock.action_view_stock_gadgets_use
+#: model_terms:ir.actions.act_window,help:sat_companies_stock.action_view_stock_shipment
+#: model_terms:ir.actions.act_window,help:sat_companies_stock.action_view_stock_soil_type
+#: model_terms:ir.actions.act_window,help:sat_companies_stock.action_view_types_cabin_tubes
+#: model_terms:ir.actions.act_window,help:sat_companies_stock.action_view_wash_cabin
+msgid "Create new record"
+msgstr "Crear nuevo registro"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bench__create_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bidirectional_model__create_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_push_type__create_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_type__create_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_elevator_type__create_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__create_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_billing_period__create_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_contract_type__create_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_increase_type__create_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_state__create_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_types_assistance__create_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_use__create_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gsm_model__create_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_inspection_type__create_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_doors__create_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_key__create_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_keypad__create_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_lock__create_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__create_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__create_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__create_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__create_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__create_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__create_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_types_cabin_tubes__create_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_wash_cabin__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bench__create_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bidirectional_model__create_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_push_type__create_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_type__create_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_elevator_type__create_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__create_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_billing_period__create_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_contract_type__create_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_increase_type__create_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_state__create_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_types_assistance__create_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_use__create_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gsm_model__create_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_inspection_type__create_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_doors__create_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_key__create_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_keypad__create_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_lock__create_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__create_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__create_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__create_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__create_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__create_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__create_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_types_cabin_tubes__create_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_wash_cabin__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid "DATOS TÉCNICOS"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_on_month__date
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_on_year__date
+msgid "Date"
+msgstr "Fecha del mes"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_bank_statement_line__date_end
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_move__date_end
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_payment__date_end
+msgid "Date End asingned"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_bank_statement_line__date_begin
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_move__date_begin
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_payment__date_begin
+msgid "Date asigned"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__correction_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__correction_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__correction_date
+msgid "Date of correction"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__date_pending_correction
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__date_pending_correction
+msgid "Date pending correction"
+msgstr "Fecha pendiente subsanación"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__population_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__population_id
+msgid "Date population"
+msgstr "Vecindad"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_on_month__day
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_on_year__day
+msgid "Day"
+msgstr "Día del mes"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_unit__day
+msgid "Days"
+msgstr "Días"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__is_december
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__is_december
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_month__december
+msgid "December"
+msgstr "Diciembre"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__deflection_pulley
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__deflection_pulley
+msgid "Deflection pulley(cm)"
+msgstr "Polea desvío(cm)"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__delegation_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__delegation_id
+msgid "Delegation"
+msgstr "Delegación"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__delegation_name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__delegation_name
+msgid "Delegation name"
+msgstr "Nombre delegación"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_move__display_name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__display_name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_project_task__display_name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bench__display_name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bidirectional_model__display_name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_push_type__display_name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_type__display_name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_elevator_type__display_name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__display_name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_billing_period__display_name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_contract_type__display_name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_increase_type__display_name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_state__display_name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_types_assistance__display_name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_use__display_name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gsm_model__display_name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_inspection_type__display_name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_doors__display_name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_key__display_name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_keypad__display_name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_lock__display_name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_location__display_name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__display_name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__display_name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__display_name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__display_name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__display_name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__display_name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_types_cabin_tubes__display_name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_wash_cabin__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__domicile
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__domicile
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__domicile
+msgid "Domicile"
+msgstr "Domicilio"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__qr_cabine
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__qr_cabine
+msgid "Dowload QR Image Cabine"
+msgstr "Descargar imagen QR cabina"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__qr_machine
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__qr_machine
+msgid "Dowload QR Image Machine"
+msgstr "Descargar imagen QR máquina"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__qr_pit
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__qr_pit
+msgid "Dowload Qr Image Pit"
+msgstr "Descargar imagen QR foso"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__edifice
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__edifice
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__edifice
+msgid "Edifice"
+msgstr "Edificio"
+
+#. module: sat_companies_stock
+#: model:ir.actions.act_window,name:sat_companies_stock.action_view_stock_elevator_type
+#: model:ir.model,name:sat_companies_stock.model_stock_elevator_type
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__elevator_type_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__elevator_type_id
+#: model:ir.ui.menu,name:sat_companies_stock.menu_elevator_type
+msgid "Elevator type"
+msgstr "Tipo ascensor"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__end_date_contract
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__end_date_contract
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__end_date_contract
+msgid "End date contract"
+msgstr "Fecha fin cont"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__end_date_correction
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__end_date_correction
+msgid "End date correction"
+msgstr "Fecha fin subsanación"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__end_guarantee
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__end_guarantee
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__end_guarantee
+msgid "End guarantee"
+msgstr "Fecha garantía"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__engine_brake
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__engine_brake
+msgid "Engine brake"
+msgstr "Freno motor"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__extended_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__extended_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__extended_date
+msgid "Extended date"
+msgstr "Fecha prórroga"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__is_february
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__is_february
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_month__february
+msgid "February"
+msgstr "Febrero"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__is_festive
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__is_festive
+msgid "Festive"
+msgstr "Festivo"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__line__1
+msgid "Fija"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bench__message_follower_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bidirectional_model__message_follower_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_push_type__message_follower_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_type__message_follower_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_elevator_type__message_follower_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__message_follower_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_billing_period__message_follower_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_contract_type__message_follower_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_increase_type__message_follower_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_state__message_follower_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_types_assistance__message_follower_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_use__message_follower_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gsm_model__message_follower_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_inspection_type__message_follower_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_doors__message_follower_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_key__message_follower_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_keypad__message_follower_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_lock__message_follower_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__message_follower_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__message_follower_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__message_follower_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__message_follower_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__message_follower_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__message_follower_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_types_cabin_tubes__message_follower_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_wash_cabin__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bench__message_channel_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bidirectional_model__message_channel_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_push_type__message_channel_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_type__message_channel_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_elevator_type__message_channel_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__message_channel_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_billing_period__message_channel_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_contract_type__message_channel_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_increase_type__message_channel_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_state__message_channel_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_types_assistance__message_channel_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_use__message_channel_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gsm_model__message_channel_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_inspection_type__message_channel_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_doors__message_channel_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_key__message_channel_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_keypad__message_channel_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_lock__message_channel_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__message_channel_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__message_channel_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__message_channel_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__message_channel_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__message_channel_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__message_channel_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_types_cabin_tubes__message_channel_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_wash_cabin__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Seguidores canal"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bench__message_partner_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bidirectional_model__message_partner_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_push_type__message_partner_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_type__message_partner_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_elevator_type__message_partner_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__message_partner_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_billing_period__message_partner_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_contract_type__message_partner_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_increase_type__message_partner_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_state__message_partner_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_types_assistance__message_partner_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_use__message_partner_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gsm_model__message_partner_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_inspection_type__message_partner_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_doors__message_partner_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_key__message_partner_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_keypad__message_partner_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_lock__message_partner_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__message_partner_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__message_partner_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__message_partner_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__message_partner_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__message_partner_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__message_partner_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_types_cabin_tubes__message_partner_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_wash_cabin__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_type__forever
+msgid "Forever"
+msgstr "Por siempre"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__frequency_name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__frequency_name
+msgid "Frequency name"
+msgstr "Nombre frecuencia mantenimiento"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__fri
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__fri
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_weekday__fri
+msgid "Friday"
+msgstr "Viernes"
+
+#. module: sat_companies_stock
+#: model:ir.actions.act_window,name:sat_companies_stock.action_view_gsm_model
+#: model:ir.model,name:sat_companies_stock.model_stock_gsm_model
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__gsm_model_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__gsm_model_id
+#: model:ir.ui.menu,name:sat_companies_stock.menu_stock_gsm_model
+msgid "GSM model"
+msgstr "Modelo GSM"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__gadget_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__gadget_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_project_task__product_id
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.inherit_view_product_template_only_form_view_sat
+msgid "Gadget"
+msgstr "Aparato"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__gadget_high_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__gadget_high_date
+msgid "Gadget high date"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_account_move_inherit_product
+msgid "Gadget information"
+msgstr "Información aparato"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__gadget_low_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__gadget_low_date
+msgid "Gadget low date"
+msgstr "Fecha baja aparato"
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.inherit_view_product_template_only_form_view_sat
+msgid "Gadget maintenance"
+msgstr "Mantenimiento de aparato"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__gadget_model
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__gadget_model
+msgid "Gadget model"
+msgstr "Modelo aparato"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__gadget_population
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__gadget_population
+msgid "Gadget population"
+msgstr "Población aparato"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__gadget_state
+msgid "Gadget state"
+msgstr "Estado aparato"
+
+#. module: sat_companies_stock
+#: model:ir.actions.act_window,name:sat_companies_stock.action_view_stock_gadgets
+#: model:ir.model,name:sat_companies_stock.model_stock_gadgets
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_bank_statement_line__product_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_move__product_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_payment__product_id
+#: model:ir.ui.menu,name:sat_companies_stock.menu_gadgets
+msgid "Gadgets"
+msgstr "Aparatos"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_bank_statement_line__gadgets_contract_type_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_move__gadgets_contract_type_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_payment__gadgets_contract_type_id
+msgid "Gadgets Contract Type"
+msgstr "Tipo de contrato"
+
+#. module: sat_companies_stock
+#: model:ir.actions.act_window,name:sat_companies_stock.action_view_stock_gadgets_state
+#: model:ir.model,name:sat_companies_stock.model_stock_gadgets_state
+#: model:ir.ui.menu,name:sat_companies_stock.menu_gadgets_states
+msgid "Gadgets states"
+msgstr "Estados"
+
+#. module: sat_companies_stock
+#: model:ir.model,name:sat_companies_stock.model_stock_gadgets_types_assistance
+msgid "Gadgets types asistance"
+msgstr "Tipos de asisyencia"
+
+#. module: sat_companies_stock
+#: model:ir.actions.act_window,name:sat_companies_stock.action_view_stock_gadgets_types_assistance
+msgid "Gadgets types assistance"
+msgstr "Tipos de asistencia"
+
+#. module: sat_companies_stock
+#: model:ir.actions.act_window,name:sat_companies_stock.action_view_stock_gadgets_use
+#: model:ir.model,name:sat_companies_stock.model_stock_gadgets_use
+#: model:ir.ui.menu,name:sat_companies_stock.menu_gadgets_use
+msgid "Gadgets use"
+msgstr "Uso"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__gate_operator
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__gate_operator
+msgid "Gate operator"
+msgstr "Operador puerta"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__is_good_points
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__is_good_points
+msgid "Good points"
+msgstr "Puntos favorables"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__employee_greasing_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__employee_greasing_id
+msgid "Greasing operator"
+msgstr "Operador engrase"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__has_rae
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__has_rae
+msgid "Has RAE"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.custom_view_product_template_search
+msgid "Has partner type"
+msgstr "Tipo de contacto establecido"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__high_mto_company
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__high_mto_company
+msgid "High Mto"
+msgstr "Alta para Mto"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__res_partner_high_mto_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__res_partner_high_mto_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__high_mto_company
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__res_partner_high_mto_id
+msgid "High Mto company"
+msgstr "Empresa Mto. alta"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__high_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__high_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__high_date
+msgid "High date"
+msgstr "Fecha alta"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__high_date_call_center
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__high_date_call_center
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__high_date_call_center
+msgid "High date call center"
+msgstr "Fecha alta call center"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_move__id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_project_task__id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bench__id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bidirectional_model__id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_push_type__id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_type__id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_elevator_type__id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_billing_period__id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_contract_type__id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_increase_type__id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_state__id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_types_assistance__id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_use__id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gsm_model__id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_inspection_type__id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_doors__id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_key__id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_keypad__id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_lock__id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_location__id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_types_cabin_tubes__id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_wash_cabin__id
+msgid "ID"
+msgstr "Id"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_bench__message_needaction
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_bench__message_unread
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_bidirectional_model__message_needaction
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_bidirectional_model__message_unread
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_cockpit_push_type__message_needaction
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_cockpit_push_type__message_unread
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_cockpit_type__message_needaction
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_cockpit_type__message_unread
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_elevator_type__message_needaction
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_elevator_type__message_unread
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets__message_needaction
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets__message_unread
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_billing_period__message_needaction
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_billing_period__message_unread
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_contract_type__message_needaction
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_contract_type__message_unread
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_increase_type__message_needaction
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_increase_type__message_unread
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_state__message_needaction
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_state__message_unread
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_types_assistance__message_needaction
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_types_assistance__message_unread
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_use__message_needaction
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_use__message_unread
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gsm_model__message_needaction
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gsm_model__message_unread
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_inspection_type__message_needaction
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_inspection_type__message_unread
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_landing_doors__message_needaction
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_landing_doors__message_unread
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_landing_key__message_needaction
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_landing_key__message_unread
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_landing_keypad__message_needaction
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_landing_keypad__message_unread
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_landing_lock__message_needaction
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_landing_lock__message_unread
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_maintenance_frequency__message_needaction
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_maintenance_frequency__message_unread
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_maneuvering_table__message_needaction
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_maneuvering_table__message_unread
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_planning_type__message_needaction
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_planning_type__message_unread
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_shipment__message_needaction
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_shipment__message_unread
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_soil_type__message_needaction
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_soil_type__message_unread
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_state_record__message_needaction
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_state_record__message_unread
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_types_cabin_tubes__message_needaction
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_types_cabin_tubes__message_unread
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_wash_cabin__message_needaction
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_wash_cabin__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_bench__message_has_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_bench__message_has_sms_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_bidirectional_model__message_has_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_bidirectional_model__message_has_sms_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_cockpit_push_type__message_has_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_cockpit_push_type__message_has_sms_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_cockpit_type__message_has_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_cockpit_type__message_has_sms_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_elevator_type__message_has_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_elevator_type__message_has_sms_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets__message_has_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets__message_has_sms_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_billing_period__message_has_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_billing_period__message_has_sms_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_contract_type__message_has_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_contract_type__message_has_sms_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_increase_type__message_has_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_increase_type__message_has_sms_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_state__message_has_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_state__message_has_sms_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_types_assistance__message_has_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_types_assistance__message_has_sms_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_use__message_has_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_use__message_has_sms_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gsm_model__message_has_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gsm_model__message_has_sms_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_inspection_type__message_has_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_inspection_type__message_has_sms_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_landing_doors__message_has_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_landing_doors__message_has_sms_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_landing_key__message_has_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_landing_key__message_has_sms_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_landing_keypad__message_has_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_landing_keypad__message_has_sms_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_landing_lock__message_has_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_landing_lock__message_has_sms_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_maintenance_frequency__message_has_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_maintenance_frequency__message_has_sms_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_maneuvering_table__message_has_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_maneuvering_table__message_has_sms_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_planning_type__message_has_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_planning_type__message_has_sms_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_shipment__message_has_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_shipment__message_has_sms_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_soil_type__message_has_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_soil_type__message_has_sms_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_state_record__message_has_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_state_record__message_has_sms_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_types_cabin_tubes__message_has_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_types_cabin_tubes__message_has_sms_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_wash_cabin__message_has_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_wash_cabin__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__type_increase
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__type_increase
+msgid "Increase"
+msgstr "Aumento"
+
+#. module: sat_companies_stock
+#: model:ir.actions.act_window,name:sat_companies_stock.action_view_stock_gadgets_increase_type
+#: model:ir.model,name:sat_companies_stock.model_stock_gadgets_increase_type
+#: model:ir.ui.menu,name:sat_companies_stock.menu_gadgets_increase_type
+msgid "Increase type"
+msgstr "Tipo aumento"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__increse_type_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__increse_type_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__increse_type_id
+msgid "Increse type"
+msgstr "Tipo aumento"
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_account_move_inherit_product
+msgid "Información presupuesto/OT"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.actions.act_window,name:sat_companies_stock.action_view_inspection_type
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__inspection_type_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__inspection_type_id
+#: model:ir.ui.menu,name:sat_companies_stock.menu_stock_inspection_type
+msgid "Inspection type"
+msgstr "Tipo de inspección"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__years_inspection
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__years_inspection
+msgid "Inspection years"
+msgstr "Años inspección"
+
+#. module: sat_companies_stock
+#: model:ir.model,name:sat_companies_stock.model_stock_location
+msgid "Inventory Locations"
+msgstr "Ubicaciones de inventario"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__invoice_start_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__invoice_start_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__invoice_start_date
+msgid "Invoice start date"
+msgstr "Inicio de facturación"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__is_full_service
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__is_full_service
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__is_full_service
+msgid "Is 24H"
+msgstr "Servicio 24H"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bench__message_is_follower
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bidirectional_model__message_is_follower
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_push_type__message_is_follower
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_type__message_is_follower
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_elevator_type__message_is_follower
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__message_is_follower
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_billing_period__message_is_follower
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_contract_type__message_is_follower
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_increase_type__message_is_follower
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_state__message_is_follower
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_types_assistance__message_is_follower
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_use__message_is_follower
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gsm_model__message_is_follower
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_inspection_type__message_is_follower
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_doors__message_is_follower
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_key__message_is_follower
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_keypad__message_is_follower
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_lock__message_is_follower
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__message_is_follower
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__message_is_follower
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__message_is_follower
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__message_is_follower
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__message_is_follower
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__message_is_follower
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_types_cabin_tubes__message_is_follower
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_wash_cabin__message_is_follower
+msgid "Is Follower"
+msgstr "Es Seguidor"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_bank_statement_line__is_potential_client
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_move__is_potential_client
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_payment__is_potential_client
+msgid "Is a potential client"
+msgstr "Contacto potencial"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__is_cabin_puffer
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__is_cabin_puffer
+msgid "Is cabin puffer"
+msgstr "Puffer cabina"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__is_cabin_timed_light
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__is_cabin_timed_light
+msgid "Is cabin timed light"
+msgstr "Luz temporizada cabina"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__is_community
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__is_community
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.custom_view_product_template_search
+msgid "Is community"
+msgstr "Es comunidad"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__is_conflictivea_pparatus
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__is_conflictivea_pparatus
+#: model:ir.model.fields,field_description:sat_companies_stock.field_project_task__is_conflictivea_pparatus
+msgid "Is conflictive apparatus"
+msgstr "El aparato es conflictivo"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__is_counterweight_puffer
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__is_counterweight_puffer
+msgid "Is counterweight puffer"
+msgstr "Puffer contrapeso"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__is_counterweight_wedging
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__is_counterweight_wedging
+msgid "Is counterweight wedging"
+msgstr "Acuñamiento contrapeso"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__is_gadget
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__is_gadget
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.custom_view_product_template_search
+msgid "Is gadget"
+msgstr "Es un aparato"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__is_netel_line
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__is_netel_line
+msgid "Is netel line"
+msgstr "Línea netel"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__is_operator_brake
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__is_operator_brake
+msgid "Is operator brake"
+msgstr "Freno operador"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__is_priority
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__is_priority
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__is_priority
+msgid "Is priority"
+msgstr "Prioritario"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__is_wedging_cabin
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__is_wedging_cabin
+msgid "Is wedging cabin"
+msgstr "Acuñamiento cabina"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__is_weigher
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__is_weigher
+msgid "Is weigher"
+msgstr "Pesacargas"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__is_january
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__is_january
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_month__january
+msgid "January"
+msgstr "Enero"
+
+#. module: sat_companies_stock
+#: model:ir.model,name:sat_companies_stock.model_account_move
+msgid "Journal Entry"
+msgstr "Asiento contable"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__is_july
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__is_july
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_month__july
+msgid "July"
+msgstr "Julio"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__is_june
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__is_june
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_month__june
+msgid "June"
+msgstr "Junio"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__keys
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__keys
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__keys
+msgid "Keys"
+msgstr "Llaves"
+
+#. module: sat_companies_stock
+#: model:ir.actions.act_window,name:sat_companies_stock.action_view_landing_doors
+#: model:ir.model,name:sat_companies_stock.model_stock_inspection_type
+#: model:ir.model,name:sat_companies_stock.model_stock_landing_doors
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__landing_doors_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__landing_doors_id
+#: model:ir.ui.menu,name:sat_companies_stock.menu_stock_landing_doors
+msgid "Landing doors"
+msgstr "Puertas rellano"
+
+#. module: sat_companies_stock
+#: model:ir.actions.act_window,name:sat_companies_stock.action_view_landing_key
+#: model:ir.model,name:sat_companies_stock.model_stock_landing_key
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__landing_key_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__landing_key_id
+#: model:ir.ui.menu,name:sat_companies_stock.menu_stock_landing_key
+msgid "Landing key"
+msgstr "Llavín rellano"
+
+#. module: sat_companies_stock
+#: model:ir.actions.act_window,name:sat_companies_stock.action_view_landing_keypad
+#: model:ir.model,name:sat_companies_stock.model_stock_landing_keypad
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__landing_keypad_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__landing_keypad_id
+#: model:ir.ui.menu,name:sat_companies_stock.menu_stock_landing_keypad
+msgid "Landing keypad"
+msgstr "Tipo botonera rellano"
+
+#. module: sat_companies_stock
+#: model:ir.actions.act_window,name:sat_companies_stock.action_view_landing_lock
+#: model:ir.model,name:sat_companies_stock.model_stock_landing_lock
+msgid "Landing lock"
+msgstr "Tipo cerradura rellano"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__landing_lock_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__landing_lock_id
+msgid "Landing lock type"
+msgstr "Tipo cerradura rellano"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_move____last_update
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template____last_update
+#: model:ir.model.fields,field_description:sat_companies_stock.field_project_task____last_update
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bench____last_update
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bidirectional_model____last_update
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_push_type____last_update
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_type____last_update
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_elevator_type____last_update
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets____last_update
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_billing_period____last_update
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_contract_type____last_update
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_increase_type____last_update
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_state____last_update
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_types_assistance____last_update
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_use____last_update
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gsm_model____last_update
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_inspection_type____last_update
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_doors____last_update
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_key____last_update
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_keypad____last_update
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_lock____last_update
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_location____last_update
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency____last_update
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table____last_update
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type____last_update
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment____last_update
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type____last_update
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record____last_update
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_types_cabin_tubes____last_update
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_wash_cabin____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bench__write_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bidirectional_model__write_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_push_type__write_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_type__write_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_elevator_type__write_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__write_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_billing_period__write_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_contract_type__write_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_increase_type__write_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_state__write_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_types_assistance__write_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_use__write_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gsm_model__write_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_inspection_type__write_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_doors__write_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_key__write_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_keypad__write_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_lock__write_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__write_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__write_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__write_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__write_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__write_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__write_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_types_cabin_tubes__write_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_wash_cabin__write_uid
+msgid "Last Updated by"
+msgstr "Última modificación el"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bench__write_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bidirectional_model__write_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_push_type__write_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_type__write_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_elevator_type__write_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__write_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_billing_period__write_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_contract_type__write_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_increase_type__write_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_state__write_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_types_assistance__write_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_use__write_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gsm_model__write_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_inspection_type__write_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_doors__write_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_key__write_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_keypad__write_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_lock__write_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__write_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__write_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__write_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__write_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__write_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__write_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_types_cabin_tubes__write_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_wash_cabin__write_date
+msgid "Last Updated on"
+msgstr "Última actualización por"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__last_inspection
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__last_inspection
+msgid "Last inspection"
+msgstr "Última inspección"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__inspection_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__inspection_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__inspection_date
+msgid "Last inspection date"
+msgstr "Fecha última inspeción"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__latitude
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__latitude
+msgid "Latitude"
+msgstr "Latitud"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__length
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__length
+msgid "Length"
+msgstr "Longitud"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__limiter_pulley
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__limiter_pulley
+msgid "Limiter pulley(cm)"
+msgstr "Polea limitador(cm)"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__line
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__line
+msgid "Line"
+msgstr "Línea"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__gadget_load
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__gadget_load
+msgid "Load(Kgs)"
+msgstr "Carga(Kgs)"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__location
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__location
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__location
+msgid "Location"
+msgstr "Ubicación"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__low_mto_company
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__low_mto_company
+msgid "Low Mto"
+msgstr "Baja para Mto"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__res_partner_low_mto_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__res_partner_low_mto_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__low_mto_company
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__res_partner_low_mto_id
+msgid "Low Mto company"
+msgstr "Empresa Mto Baja"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__low_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__low_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__low_date
+msgid "Low date"
+msgstr "Fecha baja"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__is_machine_room
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__is_machine_room
+msgid "Machine room"
+msgstr "Sala de máquinas"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bench__message_main_attachment_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bidirectional_model__message_main_attachment_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_push_type__message_main_attachment_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_type__message_main_attachment_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_elevator_type__message_main_attachment_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__message_main_attachment_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_billing_period__message_main_attachment_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_contract_type__message_main_attachment_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_increase_type__message_main_attachment_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_state__message_main_attachment_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_types_assistance__message_main_attachment_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_use__message_main_attachment_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gsm_model__message_main_attachment_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_inspection_type__message_main_attachment_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_doors__message_main_attachment_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_key__message_main_attachment_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_keypad__message_main_attachment_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_lock__message_main_attachment_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__message_main_attachment_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__message_main_attachment_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__message_main_attachment_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__message_main_attachment_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__message_main_attachment_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__message_main_attachment_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_types_cabin_tubes__message_main_attachment_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_wash_cabin__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model,name:sat_companies_stock.model_stock_maintenance_frequency
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__maintenance_frequency_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__maintenance_frequency_id
+msgid "Maintenance frequency"
+msgstr "Frecuncia de mantenimiento"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__partner_maker_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__partner_maker_id
+msgid "Maker"
+msgstr "Fabricante"
+
+#. module: sat_companies_stock
+#: model:res.groups,name:sat_companies_stock.gadgets_manager_group
+msgid "Manager gadgets"
+msgstr "Administrador de aparatos"
+
+#. module: sat_companies_stock
+#: model:res.groups,comment:sat_companies_stock.gadgets_manager_group
+msgid "Manager gadgets Permission Group"
+msgstr "Grupo de permisos administrador de aparatos"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__maneuver
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__maneuver
+msgid "Maneuver"
+msgstr "Maniobra"
+
+#. module: sat_companies_stock
+#: model:ir.actions.act_window,name:sat_companies_stock.action_view_maneuvering_table
+#: model:ir.model,name:sat_companies_stock.model_stock_maneuvering_table
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__maneuvering_table_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__maneuvering_table_id
+#: model:ir.ui.menu,name:sat_companies_stock.menu_stock_maneuvering_table
+msgid "Maneuvering table"
+msgstr "Cuadro de maniobras"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__is_march
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__is_march
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_month__march
+msgid "March"
+msgstr "Marzo"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__is_may
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__is_may
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_month__may
+msgid "May"
+msgstr "Mayo"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bench__message_has_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bidirectional_model__message_has_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_push_type__message_has_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_type__message_has_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_elevator_type__message_has_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__message_has_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_billing_period__message_has_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_contract_type__message_has_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_increase_type__message_has_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_state__message_has_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_types_assistance__message_has_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_use__message_has_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gsm_model__message_has_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_inspection_type__message_has_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_doors__message_has_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_key__message_has_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_keypad__message_has_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_lock__message_has_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__message_has_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__message_has_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__message_has_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__message_has_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__message_has_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__message_has_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_types_cabin_tubes__message_has_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_wash_cabin__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bench__message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bidirectional_model__message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_push_type__message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_type__message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_elevator_type__message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_billing_period__message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_contract_type__message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_increase_type__message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_state__message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_types_assistance__message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_use__message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gsm_model__message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_inspection_type__message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_doors__message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_key__message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_keypad__message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_lock__message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_types_cabin_tubes__message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_wash_cabin__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__model_gadget
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__model_gadget
+msgid "Model gadget"
+msgstr "Modelo"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__mon
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__mon
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_weekday__mon
+msgid "Monday"
+msgstr "Lunes"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__months_number
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__months_number
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__months_number
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_unit__month
+msgid "Months"
+msgstr "Meses"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__motor_power
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__motor_power
+msgid "Motor power(KW)"
+msgstr "Potencia motor(KW)"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__line__2
+msgid "Movil"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bench__name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bidirectional_model__name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_push_type__name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_type__name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_elevator_type__name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_billing_period__name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_contract_type__name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_increase_type__name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_state__name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_types_assistance__name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_use__name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gsm_model__name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_inspection_type__name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_doors__name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_key__name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_keypad__name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_lock__name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_types_cabin_tubes__name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_wash_cabin__name
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_stock_bench_form
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_stock_bidirectional_model_form
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_stock_cockpit_push_type_form
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_stock_cockpit_type_form
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_stock_elevator_type_form
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_stock_gadgets_contract_type_form
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_stock_gadgets_increase_type_form
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_stock_gadgets_state_form
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_stock_gadgets_types_assistance_form
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_stock_gadgets_use_form
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_stock_gsm_model_form
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_stock_inspection_type_form
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_stock_landing_doors_form
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_stock_landing_key_form
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_stock_landing_keypad_form
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_stock_landing_lock_form
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_stock_maneuvering_table_form
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_stock_shipment_form
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_stock_soil_type_form
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_stock_state_record_form
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_stock_types_cabin_tubes_form
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_stock_wash_cabin_form
+msgid "Name"
+msgstr "Nombre"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__billing_period_name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__billing_period_name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__billing_period_name
+msgid "Name billing period"
+msgstr "Nombre periodo de facturación"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__increse_type_name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__increse_type_name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__increse_type_name
+msgid "Name increase"
+msgstr "Nombre tipo de aumento"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__next_inspection
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__next_inspection
+msgid "Next inspection"
+msgstr "Próxima inspección"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__nominal_speed
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__nominal_speed
+msgid "Nominal speed(m/s)"
+msgstr "Velocidad nominal(m/s)"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__type_contract__normal
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__stock_gadgets__type_contract__normal
+msgid "Normal"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__is_november
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__is_november
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_month__november
+msgid "November"
+msgstr "Noviembre"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bench__message_needaction_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bidirectional_model__message_needaction_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_push_type__message_needaction_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_type__message_needaction_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_elevator_type__message_needaction_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__message_needaction_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_billing_period__message_needaction_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_contract_type__message_needaction_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_increase_type__message_needaction_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_state__message_needaction_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_types_assistance__message_needaction_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_use__message_needaction_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gsm_model__message_needaction_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_inspection_type__message_needaction_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_doors__message_needaction_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_key__message_needaction_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_keypad__message_needaction_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_lock__message_needaction_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__message_needaction_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__message_needaction_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__message_needaction_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__message_needaction_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__message_needaction_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__message_needaction_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_types_cabin_tubes__message_needaction_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_wash_cabin__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bench__message_has_error_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bidirectional_model__message_has_error_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_push_type__message_has_error_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_type__message_has_error_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_elevator_type__message_has_error_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__message_has_error_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_billing_period__message_has_error_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_contract_type__message_has_error_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_increase_type__message_has_error_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_state__message_has_error_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_types_assistance__message_has_error_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_use__message_has_error_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gsm_model__message_has_error_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_inspection_type__message_has_error_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_doors__message_has_error_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_key__message_has_error_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_keypad__message_has_error_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_lock__message_has_error_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__message_has_error_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__message_has_error_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__message_has_error_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__message_has_error_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__message_has_error_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__message_has_error_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_types_cabin_tubes__message_has_error_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_wash_cabin__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_bench__message_needaction_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_bidirectional_model__message_needaction_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_cockpit_push_type__message_needaction_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_cockpit_type__message_needaction_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_elevator_type__message_needaction_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets__message_needaction_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_billing_period__message_needaction_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_contract_type__message_needaction_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_increase_type__message_needaction_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_state__message_needaction_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_types_assistance__message_needaction_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_use__message_needaction_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gsm_model__message_needaction_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_inspection_type__message_needaction_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_landing_doors__message_needaction_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_landing_key__message_needaction_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_landing_keypad__message_needaction_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_landing_lock__message_needaction_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_maintenance_frequency__message_needaction_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_maneuvering_table__message_needaction_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_planning_type__message_needaction_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_shipment__message_needaction_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_soil_type__message_needaction_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_state_record__message_needaction_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_types_cabin_tubes__message_needaction_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_wash_cabin__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_bench__message_has_error_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_bidirectional_model__message_has_error_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_cockpit_push_type__message_has_error_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_cockpit_type__message_has_error_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_elevator_type__message_has_error_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets__message_has_error_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_billing_period__message_has_error_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_contract_type__message_has_error_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_increase_type__message_has_error_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_state__message_has_error_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_types_assistance__message_has_error_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_use__message_has_error_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gsm_model__message_has_error_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_inspection_type__message_has_error_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_landing_doors__message_has_error_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_landing_key__message_has_error_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_landing_keypad__message_has_error_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_landing_lock__message_has_error_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_maintenance_frequency__message_has_error_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_maneuvering_table__message_has_error_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_planning_type__message_has_error_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_shipment__message_has_error_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_soil_type__message_has_error_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_state_record__message_has_error_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_types_cabin_tubes__message_has_error_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_wash_cabin__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__number_of_tubes
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__number_of_tubes
+msgid "Number of tubes"
+msgstr "Número de tubos"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_bench__message_unread_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_bidirectional_model__message_unread_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_cockpit_push_type__message_unread_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_cockpit_type__message_unread_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_elevator_type__message_unread_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets__message_unread_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_billing_period__message_unread_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_contract_type__message_unread_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_increase_type__message_unread_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_state__message_unread_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_types_assistance__message_unread_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_use__message_unread_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gsm_model__message_unread_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_inspection_type__message_unread_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_landing_doors__message_unread_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_landing_key__message_unread_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_landing_keypad__message_unread_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_landing_lock__message_unread_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_maintenance_frequency__message_unread_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_maneuvering_table__message_unread_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_planning_type__message_unread_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_shipment__message_unread_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_soil_type__message_unread_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_state_record__message_unread_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_types_cabin_tubes__message_unread_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_wash_cabin__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__contract_number
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__contract_number
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__contract_number
+msgid "N° contract"
+msgstr "N° contrato"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__partner_oca_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__partner_oca_id
+msgid "OCA"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__is_october
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__is_october
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_month__october
+msgid "October"
+msgstr "Octubre"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__user_inps_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__user_inps_id
+msgid "Operator inps"
+msgstr "Operario Ins"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__employee_notice_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__employee_notice_id
+msgid "Operator notice"
+msgstr "Operador aviso"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__operator_strap
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__operator_strap
+msgid "Operator strap"
+msgstr "Correa operador"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_location__partner_id
+msgid "Partner"
+msgstr "Cliente"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__partner_type_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__partner_type_id
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.custom_view_product_template_search
+msgid "Partner type"
+msgstr "Tipo de contacto"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__pending_date_corrected
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__pending_date_corrected
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__pending_date_corrected
+msgid "Pending date to be corrected"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__people_numbers
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__people_numbers
+msgid "People numbers"
+msgstr "N° personas"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__photo1
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__photo1
+msgid "Photo 1"
+msgstr "Foto 1"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__photo2
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__photo2
+msgid "Photo 2"
+msgstr "Foto 2"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__photo3
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__photo3
+msgid "Photo 3"
+msgstr "Foto 3"
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.inherit_view_product_template_only_form_view_sat
+msgid "Photos"
+msgstr "Fotos"
+
+#. module: sat_companies_stock
+#: model:ir.model,name:sat_companies_stock.model_stock_planning_type
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__planning_type_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__planning_type_id
+msgid "Planning type"
+msgstr "Tipo de plannig"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__planning_type_name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__planning_type_name
+msgid "Planning type name"
+msgstr "Nombre tipo de planning"
+
+#. module: sat_companies_stock
+#: model:ir.actions.report,name:sat_companies_stock.report_print_template_data
+msgid "Plantilla datos técnicos"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__city
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__city
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__population_id
+msgid "Population"
+msgstr "Población"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__population_name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__population_name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__population_name
+msgid "Population name"
+msgstr "Nombre de la población"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__partner_zip
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__partner_zip
+msgid "Postal code"
+msgstr "Código postal"
+
+#. module: sat_companies_stock
+#: model:ir.model,name:sat_companies_stock.model_product_template
+msgid "Product Template"
+msgstr "Plantilla de producto"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,help:sat_companies_stock.field_account_bank_statement_line__subscription_template_id
+#: model:ir.model.fields,help:sat_companies_stock.field_account_move__subscription_template_id
+#: model:ir.model.fields,help:sat_companies_stock.field_account_payment__subscription_template_id
+msgid "Product will be included in a selected template"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_location__project_id
+msgid "Project"
+msgstr "Proyecto"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__qr_cabine_image
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__qr_cabine_image
+msgid "QR CODE IMAGE CABINE"
+msgstr "Imagen código QR cabina"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__qr_machine_image
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__qr_machine_image
+msgid "QR CODE IMAGE MACHINE"
+msgstr "Imagen código QR máquina"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__qr_pit_image
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__qr_pit_image
+msgid "QR CODE IMAGE PIT"
+msgstr "Imagen código QR foso"
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.inherit_view_product_template_only_form_view_sat
+msgid "Qr Gadget"
+msgstr "QR aparato"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_bank_statement_line__rae
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_move__rae
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_payment__rae
+msgid "R.A.E"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__rae
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__rae
+msgid "R.A.E."
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.report_print_technical_data
+msgid "RECOPILACIÓN DATOS APARATOS"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__is_recurring_task
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__is_recurring_task
+msgid "Recurring"
+msgstr "Recurrente"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__reduced_flight
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__reduced_flight
+msgid "Reduced flight"
+msgstr "Huida reducida"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__reduced_pit
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__reduced_pit
+msgid "Reduced pit"
+msgstr "Foso reducido"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__ref_type
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__ref_type
+msgid "Ref type"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__ref
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__ref
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__ref
+msgid "Reference"
+msgstr "Referencia"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__repeat_interval
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__repeat_interval
+msgid "Repeat interval"
+msgstr "Repetir cada"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__repeat_month
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__repeat_month
+msgid "Repeat month"
+msgstr "Repetir mes"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_type__after
+msgid "Repeat number"
+msgstr "Número de repeticiones"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__repeat_show_day
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__repeat_show_day
+msgid "Repeat show day"
+msgstr "Repetir el día del espectáculo"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__repeat_show_dow
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__repeat_show_dow
+msgid "Repeat show dow"
+msgstr "Repetir Show Dow"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__repeat_show_month
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__repeat_show_month
+msgid "Repeat show month"
+msgstr "Repetir el mes del programa"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__repeat_show_week
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__repeat_show_week
+msgid "Repeat show week"
+msgstr "Repetir la semana del espectáculo"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__repeat_type
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__repeat_type
+msgid "Repeat type"
+msgstr "Hasta"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__repeat_unit
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__repeat_unit
+msgid "Repeat unit"
+msgstr "Repetir"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__repeat_weekday
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__repeat_weekday
+msgid "Repeat weekday"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__repeat_on_month
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__repeat_on_year
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__repeat_on_month
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__repeat_on_year
+msgid "Repeat year"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__responsable_zone_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__responsable_zone_id
+msgid "Responsable"
+msgstr "Responsable zona"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__route_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__route_id
+msgid "Route"
+msgstr "Ruta"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__route_name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__route_name
+msgid "Route name"
+msgstr "Nombre de la ruta"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__route
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__route
+msgid "Route of gadget"
+msgstr "Recorrido"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bench__message_has_sms_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bidirectional_model__message_has_sms_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_push_type__message_has_sms_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_type__message_has_sms_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_elevator_type__message_has_sms_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__message_has_sms_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_billing_period__message_has_sms_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_contract_type__message_has_sms_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_increase_type__message_has_sms_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_state__message_has_sms_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_types_assistance__message_has_sms_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_use__message_has_sms_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gsm_model__message_has_sms_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_inspection_type__message_has_sms_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_doors__message_has_sms_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_key__message_has_sms_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_keypad__message_has_sms_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_lock__message_has_sms_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__message_has_sms_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__message_has_sms_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__message_has_sms_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__message_has_sms_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__message_has_sms_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__message_has_sms_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_types_cabin_tubes__message_has_sms_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_wash_cabin__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_bank_statement_line__sale_type_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_move__sale_type_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_payment__sale_type_id
+msgid "Sale Type"
+msgstr "Tipo presupuesto/OT"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__sat
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__sat
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_weekday__sat
+msgid "Saturday"
+msgstr "Sábado"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__is_september
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__is_september
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_month__september
+msgid "September"
+msgstr "Septiembre"
+
+#. module: sat_companies_stock
+#: model:ir.actions.act_window,name:sat_companies_stock.action_view_stock_shipment
+#: model:ir.model,name:sat_companies_stock.model_stock_shipment
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__shipment_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__shipment_id
+#: model:ir.ui.menu,name:sat_companies_stock.menu_stock_shipment
+msgid "Shipment"
+msgstr "Embarque"
+
+#. module: sat_companies_stock
+#: model:ir.actions.act_window,name:sat_companies_stock.action_view_stock_soil_type
+#: model:ir.model,name:sat_companies_stock.model_stock_soil_type
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__soil_type_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__soil_type_id
+#: model:ir.ui.menu,name:sat_companies_stock.menu_soil_type
+msgid "Soil type"
+msgstr "Tipo suelo"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__start_date_contract
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__start_date_contract
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__start_date_contract
+msgid "Start contract date"
+msgstr "Fecha inicio de contrato"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__start_up_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__start_up_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__start_up_date
+msgid "Start up date"
+msgstr "Fecha puesta en marcha"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__gadget_state_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__gadget_state_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__gadget_state_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__state_gadget
+msgid "State"
+msgstr "Estado"
+
+#. module: sat_companies_stock
+#: model:ir.actions.act_window,name:sat_companies_stock.action_view_state_record
+#: model:ir.model,name:sat_companies_stock.model_stock_state_record
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__state_record_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__state_record_id
+#: model:ir.ui.menu,name:sat_companies_stock.menu_stock_state_record
+msgid "State record"
+msgstr "Estado acta"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__state_gadget
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__state_gadget
+msgid "State test"
+msgstr "Prueba de estado"
+
+#. module: sat_companies_stock
+#: model:ir.ui.menu,name:sat_companies_stock.menu_stock_landing_lock
+msgid "Stock landing lock"
+msgstr "Tipo cerradura rellano"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__stop_numbers
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__stop_numbers
+msgid "Stops numbers"
+msgstr "N° paradas"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_bank_statement_line__subscription_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_move__subscription_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_payment__subscription_id
+msgid "Subscription"
+msgstr "Suscripción"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_bank_statement_line__subscription_template_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_move__subscription_template_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_payment__subscription_template_id
+msgid "Subscription template"
+msgstr "Plantilla de suscripción"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__sun
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__sun
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_weekday__sun
+msgid "Sunday"
+msgstr "Domingo"
+
+#. module: sat_companies_stock
+#: model:ir.model,name:sat_companies_stock.model_project_task
+msgid "Task"
+msgstr "Tarea"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_bank_statement_line__task_user_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_move__task_user_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_payment__task_user_id
+msgid "Task User"
+msgstr "Técnico"
+
+#. module: sat_companies_stock
+#: model:ir.ui.menu,name:sat_companies_stock.menu_technical_data
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.inherit_view_product_template_only_form_view_sat
+msgid "Technical data"
+msgstr "Datos Técnicos"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__tension
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__tension
+msgid "Tension"
+msgstr "Tensión"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__tensioner_pulley
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__tensioner_pulley
+msgid "Tensioner pulley(cm)"
+msgstr "Polea tensora(cm)"
+
+#. module: sat_companies_stock
+#: code:addons/sat_companies_stock/models/.ipynb_checkpoints/product-checkpoint.py:0
+#: code:addons/sat_companies_stock/models/stock_gadgets.py:0
+#, python-format
+msgid "The contract start date cannot be greater than the end date"
+msgstr ""
+
+#. module: sat_companies_stock
+#: code:addons/sat_companies_stock/models/.ipynb_checkpoints/product-checkpoint.py:0
+#, python-format
+msgid "The number of people cannot lesser cero! : %s"
+msgstr ""
+
+#. module: sat_companies_stock
+#: code:addons/sat_companies_stock/models/.ipynb_checkpoints/product-checkpoint.py:0
+#, python-format
+msgid "The number of stops cannot lesser cero! : %s"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__there_are_keys
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__there_are_keys
+msgid "There are keys"
+msgstr "Hay llaves"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__thu
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__thu
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_weekday__thu
+msgid "Thursday"
+msgstr "Jueves"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__today
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__today
+msgid "Today"
+msgstr "Hoy"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__years
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__years
+msgid "Total Years"
+msgstr "Total años"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__traction_cables
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__traction_cables
+msgid "Traction cables"
+msgstr "Cables tracción"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__traction_pulley
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__traction_pulley
+msgid "Traction pulley(cm)"
+msgstr "Polea tractora(cm)"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__tractor_group
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__tractor_group
+msgid "Tractor group"
+msgstr "Grupo tractor"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__tue
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__tue
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_weekday__tue
+msgid "Tuesday"
+msgstr "Martes"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__type_gadget
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__type_gadget
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__ref_type
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__type_gadget
+msgid "Type"
+msgstr "Tipo"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__gadget_type_assistance_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__gadget_type_assistance_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__gadget_type_assistance_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__type_assistance
+msgid "Type assistance"
+msgstr "Tipo de asistencia"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__type_contract
+msgid "Type of contract"
+msgstr "Tipo de contrato"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__type_increase
+msgid "Type of increase"
+msgstr "Tipo de aumento"
+
+#. module: sat_companies_stock
+#: model:ir.ui.menu,name:sat_companies_stock.menu_gadgets_types_assistance
+msgid "Types assistance"
+msgstr "Tipo de asistencia"
+
+#. module: sat_companies_stock
+#: model:ir.actions.act_window,name:sat_companies_stock.action_view_types_cabin_tubes
+#: model:ir.model,name:sat_companies_stock.model_stock_types_cabin_tubes
+#: model:ir.ui.menu,name:sat_companies_stock.menu_stock_types_cabin_tubes
+msgid "Types cabin tubes"
+msgstr "Tipos tubos cabina"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_bank_statement_line__udn_type_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_move__udn_type_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_payment__udn_type_id
+msgid "Udn"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bench__message_unread
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bidirectional_model__message_unread
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_push_type__message_unread
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_type__message_unread
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_elevator_type__message_unread
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__message_unread
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_billing_period__message_unread
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_contract_type__message_unread
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_increase_type__message_unread
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_state__message_unread
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_types_assistance__message_unread
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_use__message_unread
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gsm_model__message_unread
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_inspection_type__message_unread
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_doors__message_unread
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_key__message_unread
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_keypad__message_unread
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_lock__message_unread
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__message_unread
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__message_unread
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__message_unread
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__message_unread
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__message_unread
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__message_unread
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_types_cabin_tubes__message_unread
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_wash_cabin__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bench__message_unread_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bidirectional_model__message_unread_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_push_type__message_unread_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_type__message_unread_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_elevator_type__message_unread_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__message_unread_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_billing_period__message_unread_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_contract_type__message_unread_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_increase_type__message_unread_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_state__message_unread_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_types_assistance__message_unread_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_use__message_unread_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gsm_model__message_unread_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_inspection_type__message_unread_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_doors__message_unread_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_key__message_unread_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_keypad__message_unread_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_lock__message_unread_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__message_unread_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__message_unread_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__message_unread_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__message_unread_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__message_unread_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__message_unread_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_types_cabin_tubes__message_unread_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_wash_cabin__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__gadget_state__unsubscribe
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__stock_gadgets__gadget_state__unsubscribe
+msgid "Unsubscribe"
+msgstr "Darse de baja"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_type__until
+msgid "Until"
+msgstr "Fecha final"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__gadget_use_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__gadget_use_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__gadget_use_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__use
+msgid "Use"
+msgstr "Uso"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__use
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__use
+msgid "Used"
+msgstr "Usabilidad"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__gadget_state
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__gadget_state
+msgid "Validate active"
+msgstr "Validar activo"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__is_validate_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__is_validate_date
+msgid "Validate dates"
+msgstr "Validador de fechas"
+
+#. module: sat_companies_stock
+#: code:addons/sat_companies_stock/models/sale_subscription.py:0
+#, python-format
+msgid "Validate potential client in partner"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.actions.act_window,name:sat_companies_stock.action_view_wash_cabin
+#: model:ir.model,name:sat_companies_stock.model_stock_wash_cabin
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__wash_cabin_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__wash_cabin_id
+#: model:ir.ui.menu,name:sat_companies_stock.menu_stock_wash_cabin
+msgid "Wash cabin"
+msgstr "Llavín cabina"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bench__website_message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bidirectional_model__website_message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_push_type__website_message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_cockpit_type__website_message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_elevator_type__website_message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__website_message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_billing_period__website_message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_contract_type__website_message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_increase_type__website_message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_state__website_message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_types_assistance__website_message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets_use__website_message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gsm_model__website_message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_inspection_type__website_message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_doors__website_message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_key__website_message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_keypad__website_message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_landing_lock__website_message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__website_message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__website_message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__website_message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__website_message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__website_message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__website_message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_types_cabin_tubes__website_message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_wash_cabin__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_bench__website_message_ids
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_bidirectional_model__website_message_ids
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_cockpit_push_type__website_message_ids
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_cockpit_type__website_message_ids
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_elevator_type__website_message_ids
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets__website_message_ids
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_billing_period__website_message_ids
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_contract_type__website_message_ids
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_increase_type__website_message_ids
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_state__website_message_ids
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_types_assistance__website_message_ids
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gadgets_use__website_message_ids
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_gsm_model__website_message_ids
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_inspection_type__website_message_ids
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_landing_doors__website_message_ids
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_landing_key__website_message_ids
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_landing_keypad__website_message_ids
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_landing_lock__website_message_ids
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_maintenance_frequency__website_message_ids
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_maneuvering_table__website_message_ids
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_planning_type__website_message_ids
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_shipment__website_message_ids
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_soil_type__website_message_ids
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_state_record__website_message_ids
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_types_cabin_tubes__website_message_ids
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_wash_cabin__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__wed
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__wed
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_weekday__wed
+msgid "Wednesday"
+msgstr "Miércoles"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_unit__week
+msgid "Weeks"
+msgstr "Semanas"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__years_number
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__years_number
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__years
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__years_number
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_unit__year
+msgid "Years"
+msgstr "Años"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__years_extended
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__years_extended
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__years_extended
+msgid "Years of extended"
+msgstr "Años prorroga"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__zone_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__zone_id
+msgid "Zone"
+msgstr "Zona"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__zone_name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__zone_name
+msgid "Zone name"
+msgstr "Nombre de la zona"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__next_inspection_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__next_inspection_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__next_inspection_date
+msgid "next inspection date"
+msgstr "Fecha próxima inspección"
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_stock_gadgets_form
+msgid "stock_gadgets_form"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_stock_gadgets_tree
+msgid "stock_gadgets_tree"
+msgstr ""

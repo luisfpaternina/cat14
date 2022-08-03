@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="automatization_sat_companies_sale_order_offer" model="base.automation">
+        <field name="name">Oferta Mantenimiento / Montaje / Reparación </field>
+        <field name="model_id" ref="sale.model_sale_order"/>
+        <field name="state">email</field>
+        <field name="trigger">on_create</field>
+        <field name="active" eval="True"/>
+        <field name="template_id" ref="sat_companies.template_sale_order_maintenance_offer"/>
+        <field name="filter_domain">[["sale_type","!=",False]]</field>
+    </record>
+    <record id="automatization_sat_companies_crm_lead_opportunity_notification" model="base.automation">
+        <field name="name">Notificación de Nuevas Oportunidades</field>
+        <field name="model_id" ref="crm.model_crm_lead"/>
+        <field name="state">email</field>
+        <field name="trigger">on_create_or_write</field>
+        <field name="active" eval="True"/>
+        <field name="template_id" ref="sat_companies.template_crm_lead_opportunity_notify"/>
+        <field name="filter_domain">[["is_external","=",True]]</field>
+    </record>
+</odoo>

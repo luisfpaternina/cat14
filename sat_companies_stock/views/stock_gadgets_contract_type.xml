@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>     
+<odoo>
+    <data>
+
+        <record id="view_stock_gadgets_contract_type_tree" model="ir.ui.view">
+            <field name="name">stock.gadgets.contract.type.tree</field>
+            <field name="model">stock.gadgets.contract.type</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_stock_gadgets_contract_type_form" model="ir.ui.view">
+            <field name="name">stock.gadgets.contract.type.form</field>
+            <field name="model">stock.gadgets.contract.type</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <field name="name" required="1" placeholder="Name"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="active" widget="boolean_toggle"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_view_stock_gadgets_contract_type">
+            <field name="name">Contract type</field>
+            <field name="res_model">stock.gadgets.contract.type</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create new record
+                </p>
+            </field>
+        </record>
+
+        <menuitem 
+            id="menu_gadgets_contract_type" 
+            name="Contract type" 
+            parent="sat_companies_stock.menu_gadgets"
+            action="action_view_stock_gadgets_contract_type"
+            sequence="73"
+            />
+
+        <menuitem 
+            id="menu_gadgets_contract_type_sale_subscription" 
+            name="Contract type" 
+            parent="sale_subscription.menu_sale_subscription_config"
+            action="action_view_stock_gadgets_contract_type"
+            sequence="83"
+            />
+
+    </data>
+</odoo> 

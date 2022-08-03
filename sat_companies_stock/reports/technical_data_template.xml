@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+  <data>
+       
+        <template id="report_print_technical_data">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">                    
+                    <div class="header">
+                        <table style="width:100%">
+                          <tr>
+                            <th>
+                                <h4>DATOS TÉCNICOS</h4>
+                                <strong style="font-size:15px">Código aparato:</strong><span> </span><span t-field="o.default_code" style="font-size:15px"></span><br></br>
+                                <strong style="font-size:15px">Nombre aparato:</strong><span> </span><span t-field="o.name" style="font-size:15px"></span>
+                            </th>
+                            <th>
+                                <p align="right">
+                                    <img t-att-src="'data:image/png;base64,%s' % to_text(o.company_product_id.logo)" width="115" height="95"/>
+                                </p>
+                                <p align="right" style="font-size:12px">
+                                    <span t-field="o.company_product_id"></span><br></br>
+                                    <span t-field="o.company_product_id.street"></span><br></br>
+                                    <span t-field="o.company_product_id.phone"></span><br></br>
+                                    <span t-field="o.company_product_id.email"></span>
+                                </p>
+                            </th>
+                          </tr>
+                        </table>
+                    </div>
+                    <div class="article o_report_layout_standard">
+                        <div class="page">
+                            <style>
+                                #customers {
+                                  font-family: Arial, Helvetica, sans-serif;
+                                  border-collapse: collapse;
+                                  width: 100%;
+                                }
+
+                                #customers td, #customers th {
+                                  border: 1px solid #ddd;
+                                  padding: 5px;
+                                }
+
+                                #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+                                #customers tr:hover {background-color: #ddd;}
+
+                                #customers th {
+                                  padding-top: 10px;
+                                  padding-bottom: 8px;
+                                  text-align: left;
+                                  background-color: #04AA6D;
+                                  color: white;
+                                }
+                                span {
+                                font-size: 14px
+                                }
+                            </style>
+                            <br></br><br></br>
+                            <table style="width:100%" id="customers">
+                                <tr>
+                                    <th colspan="2">
+                                        <p align="center" style="font-size:16px">
+                                            RECOPILACIÓN DATOS APARATOS
+                                        </p>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong><span>R.A.E:</span></strong><span> </span><span t-field="o.rae"></span><br></br>
+                                        <strong><span>Tipo ascensor:</span></strong><span> </span><span t-field="o.elevator_type_id"></span><br></br>
+                                        <strong><span>Sala de máquinas:</span></strong><span> </span><t t-if="o.is_machine_room == True"> <span>✔</span></t><br></br>
+                                        <strong><span>Modelo aparato:</span></strong><span> </span><span t-field="o.gadget_model"></span><br></br>
+                                        <strong><span>Fabricante:</span></strong><span> </span><span t-field="o.partner_maker_id"></span><br></br>
+                                        <strong><span>Grupo tractor:</span></strong><span> </span><span t-field="o.tractor_group"></span><br></br>
+                                        <strong><span>Bancada:</span></strong><span> </span><span t-field="o.bench_id"></span><br></br>
+                                        <strong><span>Potencia motor(KW):</span></strong><span> </span><span t-field="o.motor_power"></span><br></br>
+                                        <strong><span>Freno motor(V):</span></strong><span> </span><span t-field="o.engine_brake"></span><br></br>
+                                        <strong><span>N° paradas:</span></strong><span> </span><span t-field="o.stop_numbers"></span><br></br>
+                                        <strong><span>N° personas:</span></strong><span> </span><span t-field="o.people_numbers"></span><br></br>
+                                        <strong><span>Carga(kgs):</span></strong><span> </span><span t-field="o.gadget_load"></span><br></br>
+                                        <strong><span>Velocidad nominal(m/s):</span></strong><span> </span><span t-field="o.nominal_speed"></span><br></br>
+                                        <strong><span>Recorrido(mm):</span></strong><span> </span><span t-field="o.route"></span><br></br>
+                                        <strong><span>Foso reducido:</span></strong><span> </span><t t-if="o.reduced_pit == True"> <span>✔</span></t><br></br>
+                                        <strong><span>Huida reducida:</span></strong><span> </span><t t-if="o.reduced_flight == True"> <span>✔</span></t><br></br>
+                                        <strong><span>Operador puerta:</span></strong><span> </span><span t-field="o.gate_operator"></span><br></br>
+                                        <strong><span>Embarque:</span></strong><span> </span><span t-field="o.shipment_id"></span><br></br>
+                                        <strong><span>Tipo suelo:</span></strong><span> </span><span t-field="o.soil_type_id"></span><br></br>
+                                        <strong><span>Tipo botonera cabina:</span></strong><span> </span><span t-field="o.cockpit_type_id"></span><br></br>
+                                        <strong><span>Tipo pulsador cabina:</span></strong><span> </span><span t-field="o.cockpit_push_type_id"></span><br></br>
+                                        <strong><span>Llavín cabina:</span></strong><span> </span><span t-field="o.wash_cabin_id"></span><br></br>
+                                        <strong><span>Pesacargas:</span></strong><span> </span><t t-if="o.is_weigher == True"> <span>✔</span></t><br></br>
+                                        <strong><span>Puertas Rellano:</span></strong><span> </span><span t-field="o.landing_doors_id"></span><br></br>
+                                    </td>
+                                    <td>
+                                        <strong><span>Tipo botonera rellano:</span></strong><span> </span><span t-field="o.landing_keypad_id"></span><br></br>
+                                        <strong><span>Tipo cerraduras rellano:</span></strong><span> </span><span t-field="o.landing_lock_id"></span><br></br>
+                                        <strong><span>Llavín rellano:</span></strong><span> </span><span t-field="o.landing_keypad_id"></span><br></br>
+                                        <strong><span>Cables tracción:</span></strong><span> </span><span t-field="o.traction_cables"></span><br></br>
+                                        <strong><span>Maniobra:</span></strong><span> </span><span t-field="o.maneuver"></span><br></br>
+                                        <strong><span>Cuadro de maniobras:</span></strong><span> </span><span t-field="o.maneuvering_table_id"></span><br></br>
+                                        <strong><span>Correa operador:</span></strong><span> </span><span t-field="o.operator_strap"></span><br></br>
+                                        <strong><span>Freno operador:</span></strong><span> </span><t t-if="o.is_operator_brake == True"> <span>✔</span></t><br></br>
+                                        <strong><span>Luz temporizada cabina:</span></strong><span> </span><t t-if="o.is_cabin_timed_light == True"> <span>✔</span></t><br></br>
+                                        <strong><span>Tipos tubo cabina:</span></strong><span> </span><span t-field="o.cabin_tubes_type_id"></span><br></br>
+                                        <strong><span>Polea tractora (cm):</span></strong><span> </span><span t-field="o.traction_pulley"></span><br></br>
+                                        <strong><span>Polea tensora (cm):</span></strong><span> </span><t t-if="o.tensioner_pulley == True"> <span>✔</span></t><br></br>
+                                        <strong><span>Polea limitador (cm):</span></strong><span> </span><t t-if="o.limiter_pulley == True"> <span>✔</span></t><br></br>
+                                        <strong><span>Polea desvío (cm):</span></strong><span> </span><span t-field="o.deflection_pulley"></span><br></br>
+                                        <strong><span>Acuñamiento cabina:</span></strong><span> </span><t t-if="o.is_wedging_cabin == True"> <span>✔</span></t><br></br>
+                                        <strong><span>Polea contrapeso (cm):</span></strong><span> </span><span t-field="o.counterweight_pulley"></span><br></br>
+                                        <strong><span>Puffer cabina:</span></strong><span> </span><t t-if="o.is_cabin_puffer == True"> <span>✔</span></t><br></br>
+                                        <strong><span>Acuñamiento contrapeso:</span></strong><span> </span><t t-if="o.is_counterweight_wedging == True"> <span>✔</span></t><br></br>
+                                        <strong><span>Puffer contrapeso:</span></strong><span> </span><t t-if="o.is_counterweight_puffer == True"> <span>✔</span></t><br></br>
+                                        <strong><span>Modelo bidireccional:</span></strong><span> </span><span t-field="o.bidirectional_model_id"></span><br></br>
+                                        <strong><span>Modelo GSM:</span></strong><span> </span><span t-field="o.gsm_model_id"></span><br></br>
+                                        <strong><span>Línea:</span></strong><span> </span><span t-field="o.line"></span><br></br>
+                                        <strong><span>Línea netel:</span></strong><span> </span><t t-if="o.is_netel_line == True"> <span>✔</span></t><br></br>
+                                    </td>
+                                </tr>
+                            </table>
+                       </div>
+                    </div>
+                    <div class="footer">
+                        <p></p>
+                    </div>
+                </t>
+            </t>
+        </template>
+        
+        <report
+                id="report_print_template_data"
+                string="Plantilla datos técnicos"
+                model="product.template"
+                report_type="qweb-pdf"
+                name="sat_companies_stock.report_print_technical_data"
+        />
+
+  </data>
+</odoo>

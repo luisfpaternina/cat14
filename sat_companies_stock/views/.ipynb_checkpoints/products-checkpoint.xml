@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="inherit_view_product_template_only_form_view_sat" model="ir.ui.view">
+        <field name="name">product.template.form.</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+         
+             <xpath expr="//form[@name='Product Template']/sheet[1]/notebook[1]" position="inside">
+                <page string="Gadget" name="page_gadgets"  attrs="{'invisible': [('is_gadget', '!=', True)]}">
+                  <group name="group_gadget_principal">
+                            <group>
+                                <field name="partner_admin_id" options="{'no_create': True, 'no_create_edit':True}" domain = "[('is_admin','=',True)]"/>
+                            </group>
+                            <group>
+                                
+                            </group>
+                            <group>
+                                <field name="is_gadget" invisible="1"/>
+                            </group>
+                            <group>
+                                
+                            </group>
+                            <group>
+                                <field name="ref"/>
+                            </group>
+                            <group>
+                                <field name="high_date_call_center"/>
+                            </group>
+                            <group>
+                                <field name="partner_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                            </group>
+                            <group>
+                                
+                            </group>
+                            <group>
+                                <field name="address"/>
+                                <field name="location"/>
+                            </group>
+                             <group>
+                                
+                            </group>
+                            <group>
+                                 <field name="city"/>
+                            </group>
+                            <group>
+                                <field name="partner_zip"/>
+                            </group>
+                             <group>
+                                <field name="gadget_use_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                                <field name="gadget_state_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                                <field name="type_contract_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                                <field name="gadget_type_assistance_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                            </group>
+                            <group>
+                                <field name="is_priority"/>
+                                <field name="is_full_service"/>
+                                <field name="keys"/>
+                            </group>
+                            <group>
+                                <field name="high_date"/>
+                                <field name="end_guarantee"/>
+                                <field name="start_date_contract"/>
+                                <field name="years_number"/>
+                                <field name="months_number"/>
+                                <field name="contract_number"/>
+                            </group>
+                            <group>
+                                <field name="res_partner_high_mto_id" options="{'no_create': True, 'no_create_edit':True}" domain = "[('is_maintainer','=',True)]" attrs="{'required': [('high_date', '!=', False)]}"/>
+                                <field name="end_date_contract"/>
+                                <field name="years_extended"/>
+                                <field name="extended_date"/>
+                            </group>
+                            <group>
+                                <field name="invoice_start_date"/>
+                                <field name="low_date"/>
+                            </group>
+                            <group>
+                                <field name="start_up_date"/>
+                                <field name="res_partner_low_mto_id" attrs="{'required': [('start_date_contract', '!=', False)]}" options="{'no_create': True, 'no_create_edit':True}" domain = "[('is_maintainer','=',True)]"/>
+                            </group>
+                            <group>
+                                <field name="increse_type_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                            </group>
+                            <group>
+                                <field name="increse_type_name"/>
+                            </group>
+                            <group>
+                                <field name="maintenance_frequency_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                            </group>
+                            <group>
+                                <field name="frequency_name"/>
+                            </group>
+                            <group>
+                                <field name="billing_period_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                            </group>
+                            <group>
+                                <field name="billing_period_name"/>
+                            </group>
+                  </group>
+                </page>
+                 
+                <page name="qr_gadget" string="Qr Gadget" attrs="{'invisible': [('is_gadget', '!=', True)]}">
+                    <group colspan="3">
+                        <group colspan="1" col="2">
+                            <field name="qr_pit_image" widget="image" style="width: 62mm; height: 62mm;"/>
+                            <field name="qr_pit"/>
+                        </group>
+                    </group>
+                    <separator/>
+                    <group colspan="3">
+                        <group colspan="1" col="2">
+                            <field name="qr_cabine_image" widget="image" style="width: 62mm; height: 62mm;"/>
+                            <field name="qr_cabine"/>
+                        </group>
+                    </group>
+                    <separator/>
+                    <group colspan="3">
+                        <group colspan="1" col="2">
+                            <field name="qr_machine_image" widget="image" style="width: 62mm; height: 62mm;"/>
+                            <field name="qr_machine"/>
+                        </group>
+                    </group>
+                </page>
+                 
+                <page string="Gadget maintenance" attrs="{'invisible': [('is_gadget', '!=', True)]}">
+                    <group>
+                        <group>
+                            <field name="delegation_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                        </group>
+                        <group>
+                            <field name="delegation_name"/>
+                        </group>
+                        <group>
+                            <field name="zone_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                        </group>
+                        <group>
+                            <field name="zone_name"/>
+                        </group>
+                        <group>
+                            <field name="employee_notice_id"/>
+                        </group>
+                        <group>
+                            <field name="employee_greasing_id"/>
+                        </group>
+                         <group>
+                            <field name="responsable_zone_id"/>
+                        </group>
+                        <group>
+                            
+                        </group>
+                        <group>
+                            <field name="route_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                            <field name="cabine_phone"/>
+                        </group>
+                        <group>
+                            <field name="route_name"/>
+                        </group>
+                        <group>
+                            <field name="latitude"/>
+                        </group>
+                        <group>
+                            <field name="length"/>
+                        </group>
+                        <group>
+                            <field name="recurring_invoice"/>
+                            <field name="subscription_template_id" attrs="{'invisible': [('recurring_invoice', '!=', True)]}"/>
+                        </group>
+                        <group>
+                            
+                        </group>
+                        <group>
+                            <field name="rae"/>
+                            <field name="partner_oca_id" options="{'no_create': True, 'no_create_edit':True}" domain = "[('is_oca','=',True)]"/>
+                        </group>
+                        <group>
+                            
+                        </group>
+                        <group>
+                            <field name="last_inspection"/>
+                            <field name="years_inspection"/>
+                        </group>
+                        <group>
+                            <field name="next_inspection"/>
+                        </group>
+                    </group>
+                </page>
+                <page string="Technical data" attrs="{'invisible': [('is_gadget', '!=', True)]}">
+                    <group>
+                        <group>
+                            <field name="company_product_id" options="{'no_create': True, 'no_create_edit':True}" invisible="1"/>
+                            <field name="elevator_type_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                            <field name="is_machine_room"/>
+                            <field name="gadget_model"/>
+                            <field name="partner_maker_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                        </group>
+                        <group>
+                            <field name="tractor_group"/>
+                            <field name="bench"/>
+                            <field name="motor_power"/>
+                            <field name="motor_brake"/>
+                        </group>
+                        <group>
+                            <field name="number_stops"/>
+                            <field name="numer_people"/>
+                            <field name="load"/>
+                            <field name="nominal_speed"/>
+                        </group>
+                        <group>
+                            <field name="route"/>
+                            <field name="is_reduced_pit"/>
+                            <field name="is_reduced_flight"/>
+                            <field name="gate_operator"/>
+                        </group>
+                        <group>
+                            <field name="shipment"/>
+                            <field name="soil_type_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                            <field name="cockpit_keypad_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                            <field name="cockpit_push_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                        </group>
+                        <group>
+                            <field name="wash_cabin"/>
+                            <field name="traction_cables"/>
+                            <field name="maneuver"/>
+                            <field name="maneuvering_box"/>
+                        </group>
+                        <group>
+                            <field name="cabin_tube_types"/>
+                            <field name="belt_operator"/>
+                            <field name="is_operator_brake"/>
+                            <field name="is_timed_cabin_light"/>
+                        </group>
+                        <group>
+                            <field name="number_of_tubes"/>
+                            <field name="is_weighing_scales"/>
+                            <field name="tractor_pulley"/>
+                            <field name="tensioner_pulley"/>
+                        </group>
+                        <group>
+                            <field name="limiter_pulley"/>
+                            <field name="deflection_pulley"/>
+                            <field name="counterweight_pulley"/>
+                        </group>
+                        <group>
+                            <field name="counterweight_wedging"/>
+                            <field name="cabine_wedging"/>
+                            <field name="cabin_puffer"/>
+                            <field name="counterweight_puffer"/>
+                        </group>
+                        <group>
+                            <field name="bidirectional_model"/>
+                            <field name="gsm_model"/>
+                            <field name="line"/>
+                            <field name="is_netel_line"/>
+                        </group>
+                        <group>
+                            <field name="landing_gate"/>
+                            <field name="landing_keypad"/>
+                            <field name="landing_lock"/>
+                            <field name="landing_key"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="inherit_view_product_template_form_sat_companies_stock" model="ir.ui.view">
+        <field name="name">product.template.form.</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form/sheet/div[2]/div[1]/div[2]" position="after">
+                <div>
+                    <field name="is_gadget"/>
+                    <label for="is_gadget"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="custom_view_product_template_search">
+            <field name="name">custom.product.template.search</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="stock.product_template_search_form_view_stock"/>
+            <field name="arch" type="xml">
+                
+                <xpath expr="//search/group" position="inside">
+                    <filter string="Is gadget" name="is_gadget" context="{'group_by':'is_gadget'}"/>
+                </xpath>
+
+                <xpath expr="//search/filter[@name='real_stock_negative']" position="after">
+                    <filter string="Is gadget" name="is_gadget" domain="[('is_gadget', '!=', False)]"/>
+                </xpath>
+
+            </field>
+    </record>
+     
+</odoo>     

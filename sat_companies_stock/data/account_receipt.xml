@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="template_account_receipt_26" model="mail.template">
+            <field name="name">Recibo</field>
+            <field name="model_id" ref="account.model_account_move"/>
+            <field name="subject">Recibo</field>
+            <field name="email_from">${(object.write_uid.email_formatted or user.email_formatted) | safe}</field>
+            <field name="email_to"></field>
+            <field name="body_html" type="xml">
+                <div>
+                    <style>
+                        #t01 td {
+                        border: 1px solid black;
+                        padding: 5px;
+                        }
+                        #t02 td {
+                        border: 0px solid black;
+                        }
+                        div#cuadro_concepto{
+                        width:1050px;
+                        height:130px;
+                        background-color:white;
+                        float:left;
+                        border: 1px solid black;
+                        padding: 10px;
+                        }
+                        div#espacio{
+                        width:1000px;
+                        height:5px;
+                        background-color:white;
+                        border: 0px solid black;
+                        padding: 10px;
+                        }
+                        div#cuadro1{
+                        width:600px;
+                        height:130px;
+                        background-color:white;
+                        float:left;
+                        border: 1px solid black;
+                        padding: 10px;
+                        }
+                        div#cuadro2{
+                        width:300px;
+                        height:130px;
+                        background-color:white;
+                        float:right;
+                        border: 0px solid black;
+                        padding: 10px;
+                        }
+                    </style>
+                    <br></br><br></br>
+                    <table width="100%" id="t01">
+                        <tr>
+                            <td>
+                                <span>RECIBO NÚMERO</span><br></br>
+                            </td>
+                            <td>
+                                LOCALIDAD DE EXPEDICIÓN
+                            </td>
+                            <td>
+                                IMPORTE
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <span align="left">FECHA DE EXPEDICIÓN</span>
+                            </td>
+                            <td>
+                                <span align="right">FECHA DE VENCIMIENTO</span>
+                            </td>
+                        </tr>
+                    </table>
+                    <br></br>
+                    <table width="100%" id="t01">
+                        <tr  style="height:100px">
+                            <td>
+                                <span>CONCEPTO:</span><br></br><br></br>
+                                <span>IMPORTE:</span>
+                            </td>
+                        </tr>
+                    </table>
+                    <br></br>
+                    <table width="100%" id="t01">
+                        <tr>
+                            <td>
+                                <span>PAGADO EN (CAJA O BANCO)</span><br></br>
+                            </td>
+                            <td>
+                                <span>OFICINA</span><br></br>
+                            </td>
+                        </tr>
+                    </table>
+                    <div id="espacio"></div>
+                    <div id="cuadro1">
+                        <span>NOMBRE Y DOMICILIO DEL LIBRADO</span>
+                    </div>
+                    <div id="cuadro2">
+                        <strong>SERKI INSTALACIONES</strong>
+                    </div>
+                </div>
+            </field>
+            <field name="lang">${user.lang}</field>
+            <field name="auto_delete" eval="False"/>
+        </record>
+    </data>
+</odoo>

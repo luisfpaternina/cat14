@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="inherit_view_product_template_only_form_view_sat" model="ir.ui.view">
+        <field name="name">product.template.form.</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[(@name='default_code')]" position="after">
+                <field name="rae" attrs="{'invisible': [('is_gadget', '!=', True)]}"/>
+                <field name="has_rae" invisible="1"/>
+            </xpath>
+         
+            <xpath expr="//form[@name='Product Template']/sheet[1]/notebook[1]" position="inside">
+                <page string="Gadget" name="page_gadgets"  attrs="{'invisible': [('is_gadget', '!=', True)]}">
+                  <group name="group_gadget_principal">
+                            <group>
+                                <field name="partner_admin_id" options="{'no_create': True, 'no_create_edit':True}" domain = "[('is_admin','=',True)]"/>
+                                <field name="is_community" invisible="1"/>
+                                <field name="address"/>
+                            </group>
+                            <group>
+                                
+                            </group>
+                            <group>
+                                <field name="is_gadget" invisible="1"/>
+                            </group>
+                            <group>
+                                
+                            </group>
+                            <group>
+                                <field name="default_code"/>
+                                <field name="ref"/>
+                            </group>
+                            <group>
+                                <field name="high_date"/>
+                                <field name="gadget_low_date"/>
+                                <field name="high_date_call_center"/>
+                            </group>
+                            <group>
+                                <field name="partner_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                                <field name="partner_type_id" options="{'no_create': True, 'no_create_edit':True}" invisible="1"/>
+                                <field name="city"/>
+                            </group>
+                            <group>
+                                
+                            </group>
+                            <group>
+                                <field name="address2"/>
+                                <field name="gadget_population"/>
+                            </group>
+                             <group>
+                               
+                            </group>
+                            <group> 
+                                <field name="location"/>
+                            </group>
+                            <group>
+                                <field name="partner_zip"/>
+                            </group>
+                             <group>
+                                <field name="gadget_use_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                                <field name="gadget_state_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                                <field name="type_contract_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                                <field name="gadget_type_assistance_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                            </group>
+                            <group>
+                                <field name="is_priority"/>
+                                <field name="is_full_service"/>
+                                <field name="is_festive"/>
+                                <field name="there_are_keys"/>
+                                <field name="keys"/>
+                            </group>
+                            <group>
+                                <field name="start_date_contract"/>
+                                <field name="end_guarantee"/>
+                                <field name="years_number" invisible="1"/>
+                                <field name="months_number" invisible="1"/>
+                                <field name="contract_number" invisible="1"/>
+                            </group>
+                            <group>
+                                <field name="res_partner_high_mto_id" options="{'no_create': True, 'no_create_edit':True}" domain = "[('is_maintainer','=',True)]"/>
+                                <field name="end_date_contract"/>
+                                <field name="years_extended"/>
+                                <field name="extended_date"/>
+                            </group>
+                            <group>
+                                <field name="invoice_start_date"/>
+                                <field name="low_date"/>
+                                <field name="today" invisible="1"/>
+                                <field name="is_validate_date" invisible="1"/>
+                            </group>
+                            <group>
+                                <field name="start_up_date"/>
+                                <field name="res_partner_low_mto_id" options="{'no_create': True, 'no_create_edit':True}" domain = "[('is_maintainer','=',True)]"/>
+                            </group>
+                            <group>
+                                <field name="increse_type_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                            </group>
+                            <group>
+                                <field name="increse_type_name"/>
+                            </group>
+                            <group>
+                                <field name="is_recurring_task"/>
+                                <label for="repeat_interval"/>
+                                <div class="o_row">
+                                    <field name="repeat_interval" attrs="{'required': [('is_recurring_task', '=', True)]}"/>
+                                    <field name="repeat_unit" attrs="{'required': [('is_recurring_task', '=', True)]}"/>
+                                </div>
+                                <field name="mon" attrs="{'invisible': [('repeat_unit', '!=', 'week')]}"/>
+                                <field name="tue" attrs="{'invisible': [('repeat_unit', '!=', 'week')]}"/>
+                                <field name="wed" attrs="{'invisible': [('repeat_unit', '!=', 'week')]}"/>
+                                <field name="thu" attrs="{'invisible': [('repeat_unit', '!=', 'week')]}"/>
+                                <field name="fri" attrs="{'invisible': [('repeat_unit', '!=', 'week')]}"/>
+                                <field name="sat" attrs="{'invisible': [('repeat_unit', '!=', 'week')]}"/>
+                                <field name="sun" attrs="{'invisible': [('repeat_unit', '!=', 'week')]}"/>
+                                <label for="repeat_type" />
+                                    <div class="o_row">
+                                        <field name="repeat_type" attrs="{'required': [('is_recurring_task', '=', True)]}" />
+                                        <field name="repeat_until" attrs="{'invisible': [('repeat_type', '!=', 'until')], 'required': [('repeat_type', '=', 'until')]}" />
+                                        <field name="repeat_number" attrs="{'invisible': [('repeat_type', '!=', 'after')], 'required': [('repeat_type', '=', 'after')]}" />
+                                    </div>
+
+                            </group>
+                            <group>
+                                <field name="is_conflictivea_pparatus"/>
+                            </group>
+                            <group>
+                                <field name="maintenance_frequency_id" options="{'no_create': True, 'no_create_edit':True}" invisible="1"/>
+                            </group>
+                            <group>
+                                <field name="frequency_name" invisible="1"/>
+                            </group>
+                            <group>
+                                <field name="billing_period_id" options="{'no_create': True, 'no_create_edit':True}" invisible="1"/>
+                            </group>
+                            <group>
+                                <field name="billing_period_name" invisible="1"/>
+                            </group>
+                  </group>
+                </page>
+
+                <page name="qr_gadget" string="Qr Gadget" attrs="{'invisible': [('is_gadget', '!=', True)]}">
+                    <group colspan="3">
+                        <group colspan="1" col="2">
+                            <field name="qr_pit_image" widget="image" style="width: 62mm; height: 62mm;"/>
+                            <field name="qr_pit"/>
+                        </group>
+                    </group>
+                    <separator/>
+                    <group colspan="3">
+                        <group colspan="1" col="2">
+                            <field name="qr_cabine_image" widget="image" style="width: 62mm; height: 62mm;"/>
+                            <field name="qr_cabine"/>
+                        </group>
+                    </group>
+                    <separator/>
+                    <group colspan="3">
+                        <group colspan="1" col="2">
+                            <field name="qr_machine_image" widget="image" style="width: 62mm; height: 62mm;"/>
+                            <field name="qr_machine"/>
+                        </group>
+                    </group>
+                </page>
+                 
+                <page string="Gadget maintenance" attrs="{'invisible': [('is_gadget', '!=', True)]}">
+                    <group>
+                        <group>
+                            <field name="zone_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                        </group>
+                        <group>
+                            <field name="zone_name"/>
+                        </group>
+                        <group>
+                            <field name="delegation_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                        </group>
+                        <group>
+                            <field name="delegation_name"/>
+                        </group>
+                        <group>
+                            <field name="employee_notice_id"/>
+                        </group>
+                        <group>
+                            <field name="employee_greasing_id"/>
+                        </group>
+                         <group>
+                            <field name="responsable_zone_id"/>
+                        </group>
+                        <group>
+                            
+                        </group>
+                        <group>
+                            <field name="route_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                            <field name="cabine_phone"/>
+                        </group>
+                        <group>
+                            <field name="route_name"/>
+                        </group>
+                        <group>
+                            <field name="latitude"/>
+                        </group>
+                        <group>
+                            <field name="length"/>
+                        </group>
+                        <group>
+                            <field name="recurring_invoice"/>
+                            <field name="subscription_template_id" attrs="{'invisible': [('recurring_invoice', '!=', True)]}"/>
+                        </group>
+                        <group>
+                            
+                        </group>
+                        <group>
+                            <field name="partner_oca_id" options="{'no_create': True, 'no_create_edit':True}" domain = "[('is_oca','=',True)]"/>
+                        </group>
+                        <group>
+                            
+                        </group>
+                        <group>
+                            <field name="last_inspection"/>
+                            <field name="years_inspection"/>
+                            <field name="state_record_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                        </group>
+                        <group>
+                            <field name="next_inspection"/>
+                        </group>
+                        <group>
+                            <field name="is_good_points" invisible="1"/>
+                            <field name="bad_points"/>
+                            <field name="end_date_correction"/>
+                        </group>
+                        <group>
+                            <field name="user_inps_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                        </group>
+                        <group>
+                            <field name="inspection_type_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                            <field name="correction_period"/>
+                            <field name="correction_period_date" invisible="1"/>
+                        </group>
+                        <group>
+                            <field name="date_pending_correction"/>
+                        </group>
+                    </group>
+                </page>
+                <page string="Technical data" attrs="{'invisible': [('is_gadget', '!=', True)]}">
+                    <group>
+                        <group>
+                            <field name="company_product_id" options="{'no_create': True, 'no_create_edit':True}" invisible="1"/>
+                            <field name="rae" attrs="{'required': [('has_rae', '=', True)]}"/>
+                            <field name="elevator_type_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                            <field name="landing_doors_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                            <field name="partner_maker_id" options="{'no_create': True, 'no_create_edit':True}" domain = "[('is_maker','=',True)]"/>
+                        </group>
+                        <group>
+                            <field name="is_machine_room"/>
+                            <field name="model_gadget"/>
+                            <field name="tractor_group"/>
+                            <field name="bench_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                        </group>
+                        <group>
+                            <field name="motor_power"/>
+                            <field name="engine_brake"/>
+                            <field name="stop_numbers"/>
+                            <field name="people_numbers"/>
+                        </group>
+                        <group>
+                            <field name="gadget_load"/>
+                            <field name="nominal_speed"/>
+                            <field name="route"/>
+                            <field name="reduced_pit"/>
+                        </group>
+                        <group>
+                            <field name="reduced_flight"/>
+                            <field name="gate_operator"/>
+                            <field name="shipment_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                            <field name="soil_type_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                        </group>
+                        <group>
+                            <field name="cockpit_type_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                            <field name="cockpit_push_type_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                            <field name="wash_cabin_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                            <field name="is_weigher"/>
+                        </group>
+                        <group>
+                            <field name="landing_keypad_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                            <field name="landing_key_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                            <field name="landing_lock_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                            <field name="traction_cables"/>
+                        </group>
+                        <group>
+                            <field name="maneuver"/>
+                            <field name="maneuvering_table_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                            <field name="operator_strap"/>
+                            <field name="is_operator_brake"/>
+                        </group>
+                        <group>
+                            <field name="is_cabin_timed_light"/>
+                            <field name="cabin_tubes_type_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                            <field name="number_of_tubes"/>
+                            <field name="traction_pulley"/>
+                            <field name="tensioner_pulley"/>
+                            <field name="counterweight_pulley"/>
+                        </group>
+                        <group>
+                            <field name="limiter_pulley"/>
+                            <field name="deflection_pulley"/>
+                            <field name="is_wedging_cabin"/>
+                            <field name="is_counterweight_wedging"/>
+                        </group>
+                        <group>
+                            <field name="bidirectional_model_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                            <field name="gsm_model_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                            <field name="line"/>
+                            <field name="is_netel_line"/>
+                        </group>
+                        <group>
+                            <field name="tension"/>
+                            <field name="is_cabin_puffer"/>
+                            <field name="is_counterweight_puffer"/>
+                        </group>
+                    </group>
+                </page>
+                <page string="Photos">
+                    <group>
+                        <group>
+                            <field name="photo1" widget="image"/>
+                        </group>
+                        <group>
+                            <field name="photo2" widget="image"/>
+                        </group>
+                        <group>
+                            <field name="photo3" widget="image"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="inherit_view_product_template_form_sat_companies_stock" model="ir.ui.view">
+        <field name="name">product.template.form.</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+
+            <!--AGREGAR NUEVO CAMPO DE TIPO BOOLEAN-->
+            <xpath expr="//form/sheet/div[2]/div[1]/div[2]" position="after">
+                <div>
+                    <field name="is_gadget"/>
+                    <label for="is_gadget"/>
+                </div>
+            </xpath>
+
+            <xpath expr="//field[@name='purchase_ok']" position="attributes">
+                <attribute name="attrs">{"invisible": [["is_gadget","=",True]]}</attribute>
+            </xpath>
+
+            <xpath expr="//form/sheet/div[2]/div[1]/div[2]" position="attributes">
+                <attribute name="attrs">{"invisible": [["is_gadget","=",True]]}</attribute>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="inherit_view_product_template_only_tree_view_sat" model="ir.ui.view">
+        <field name="name">product.template.tree</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_tree_view"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='default_code']" position="after">
+                <field name="is_gadget"/>
+                <field name="partner_id"/>
+                <field name="partner_type_id"/>
+                <field name="partner_admin_id"/>
+            </xpath>
+            
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="custom_view_product_template_search">
+            <field name="name">custom.product.template.search</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="stock.product_template_search_form_view_stock"/>
+            <field name="arch" type="xml">
+
+                <field name="location_id" position="before">
+                    <separator/>
+                    <field name="default_code"/>
+                    <field name="partner_type_id"/>
+                    <field name="partner_admin_id"/>
+                </field>
+
+                <xpath expr="//search/group" position="inside">
+                    <filter string="Is gadget" name="is_gadget" context="{'group_by':'is_gadget'}"/>
+                    <filter string="Partner type" name="partner_type_id" context="{'group_by':'partner_type_id'}"/>
+                </xpath>
+
+                <xpath expr="//search/filter[@name='real_stock_negative']" position="after">
+                    <filter string="Is gadget" name="is_gadget" domain="[('is_gadget', '!=', False)]"/>
+                    <filter string="Has partner type" name="partner_type_id" domain="[('partner_type_id', '!=', False)]"/>
+                    <filter string="Is community" name="is_community" domain="[('is_community', '!=', False)]"/>
+                </xpath>
+
+            </field>
+    </record>
+     
+</odoo>   

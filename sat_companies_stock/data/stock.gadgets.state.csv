@@ -1,0 +1,10 @@
+id,name,code,active
+id_state_001,"EN SERVICIO CON CONTRATO","07",True
+id_state_002,"EN SERVICIO SIN CONTRATO","02",True
+id_state_003,"BAJA COMPETENCIA","03",True
+id_state_004,"BAJA FIN ACTIVIDAD","04",True
+id_state_005,"PARADA TEMPORAL","05",True
+id_state_006,"SUSTITUCIÓN/REFORMA","06",True
+id_state_007,"EN MONTAJE","01",True
+id_state_008,"FACTURACIÓN SUSPENDIDA","08",True
+id_state_009,"SIN ACCESO","09",True

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>     
+<odoo>
+    
+    <data>
+
+        <record id="view_stock_landing_lock_tree" model="ir.ui.view">
+            <field name="name">stock.landing.lock.tree</field>
+            <field name="model">stock.landing.lock</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_stock_landing_lock_form" model="ir.ui.view">
+            <field name="name">stock.landing.lock.form</field>
+            <field name="model">stock.landing.lock</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <field name="name" required="1" placeholder="Name"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="active" widget="boolean_toggle"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_view_landing_lock">
+            <field name="name">Landing lock</field>
+            <field name="res_model">stock.landing.lock</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create new record
+                </p>
+            </field>
+        </record>
+
+        <menuitem 
+            id="menu_stock_landing_lock" 
+            name="Stock landing lock" 
+            parent="sat_companies_stock.menu_technical_data"
+            action="action_view_landing_lock"
+            sequence="90"
+            />
+
+    </data>
+
+</odoo> 
