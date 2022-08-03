@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem id="main_base_menu_bim"
+                  name="BIM"
+                  web_icon="base_bim_2,static/description/icon.png"
+                  groups="base_bim_2.group_user_bim"
+                  sequence="100"/>
+
+        <menuitem id="menu_bim" name="BIM" parent="main_base_menu_bim" sequence="4" />
+        <menuitem id="menu_bim_assistance" name="Employee Attendance" parent="menu_bim" sequence="77"
+                  action="hr_attendance.hr_attendance_action" groups="base_bim_2.group_attendance_bim"
+        />
+        <menuitem id="menu_bim_maintainer" name="Maintainer" parent="main_base_menu_bim" sequence="90"/>
+        <menuitem id="menu_bim_templates" name="Template" parent="main_base_menu_bim" sequence="99"/>
+
+
+        <menuitem id="menu_hyd" name="Assets and Discounts" parent="main_base_menu_bim" sequence="16"/>
+        <menuitem id="menu_bim_task" name="Tasks" parent="main_base_menu_bim" sequence="20" />
+
+        <menuitem id="menu_bim_config" name="Configuration"
+                  parent="main_base_menu_bim" sequence="200" groups="base_bim_2.group_manager_bim"/>
+
+        <menuitem id="menu_tags_categ" name="Tags" parent="menu_bim_config" sequence="100"/>
+
+        <menuitem id="menu_bim_main_maintenance"  name="Maintenance" parent="main_base_menu_bim" sequence="50" groups="base_bim_2.group_bim_maintenance"/>
+
+        <menuitem id="menu_bim_stock" name="Inventory" parent="main_base_menu_bim" sequence="40" groups="stock.group_stock_user" />
+
+
+        <record id="product_normal_action_bim" model="ir.actions.act_window">
+            <field name="name">Products</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.template</field>
+            <field name="view_mode">kanban,tree,form,activity</field>
+            <field name="search_view_id" ref="product.product_template_search_view"/>
+            <field name="view_id" eval="False"/> <!-- Force empty -->
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                Create a new product
+              </p><p>
+                You must define a product for everything you sell or purchase,
+                whether it's a storable product, a consumable or a service.
+              </p>
+            </field>
+        </record>
+
+        <record id="product_product_action_bim" model="ir.actions.act_window">
+            <field name="name">Product Variants</field>
+            <field name="res_model">product.product</field>
+            <field name="view_mode">tree,kanban,form,activity</field>
+            <field name="search_view_id" ref="product.product_search_form_view"/>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                Create a new product variant
+              </p><p>
+                You must define a product for everything you sell or purchase,
+                whether it's a storable product, a consumable or a service.
+              </p>
+            </field>
+        </record>
+
+         <menuitem id="product_normal_menu_bim"
+            name="Products"
+            parent="menu_bim_stock"
+            action="product_normal_action_bim"
+            sequence="3" />
+
+        <menuitem id="product_product_menu_bim"
+            name="Product Variants"
+            parent="menu_bim_stock"
+            action="product_product_action_bim"
+            sequence="4" />
+
+        <menuitem id="menu_bim_imports" name="Integrations" parent="main_base_menu_bim" sequence="150" groups="base_bim_2.group_bim_integrations" />
+
+        <menuitem id="menu_bim_data"
+        name="Data"
+        parent="base_bim_2.main_base_menu_bim"
+        sequence="20" />
+
+        <record id="action_contacts_bim" model="ir.actions.act_window">
+            <field name="name">Contacts</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">kanban,tree,form,activity</field>
+            <field name="search_view_id" ref="base.view_res_partner_filter"/>
+            <field name="context">{'default_is_company': True}</field>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                Create a contact in your address book
+              </p><p>
+                Odoo helps you to easily track all activities related to a customer.
+              </p>
+            </field>
+        </record>
+
+        <menuitem id="contacts_bim"
+            name="Contacts"
+            parent="menu_bim_data"
+            action="action_contacts_bim"
+            sequence="0" />
+
+        <menuitem id="menu_bim_opening_balance_action"
+            name="Accounting"
+            parent="menu_bim_config"
+            sequence="70" />
+
+        <menuitem id="sub_bim_opening_balance_action"
+            name="Opening Balance"
+            parent="menu_bim_opening_balance_action"
+            action="action_bim_opening_balance"
+            sequence="1" />
+
+        <record id="hr.menu_hr_root" model="ir.ui.menu">
+            <field name="groups_id" eval="[(6, 0, [ref('hr.group_hr_user'), ref('hr.group_hr_manager')])]"/>
+        </record>
+
+        <record id="hr.menu_hr_employee_payroll" model="ir.ui.menu">
+            <field name="groups_id" eval="[(6, 0, [ref('hr.group_hr_user'), ref('hr.group_hr_manager')])]"/>
+        </record>
+
+        <record id="hr.menu_hr_employee_user" model="ir.ui.menu">
+            <field name="groups_id" eval="[(6, 0, [ref('hr.group_hr_user'), ref('hr.group_hr_manager')])]"/>
+        </record>
+
+        <record id="hr_attendance.view_attendance_tree_inherit" model="ir.ui.view">
+            <field name="groups_id" eval="[(4, ref('base_bim_2.group_attendance_bim'))]"/>
+        </record>
+    </data>
+</odoo>

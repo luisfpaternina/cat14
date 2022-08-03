@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_inherit_bim_budget_form" model="ir.ui.view">
+            <field name="name">view.inherit.bim.budget</field>
+            <field name="model">bim.budget</field>
+            <field name="inherit_id" ref="base_bim_2.view_form_bim_budget"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header" position="inside">
+                    <button name="%(bim_concept_importer.action_concept_from_database_wizard)d"
+                            string="Concept DB" type="action" class="btn btn-secondary" groups="base_bim_2.group_user_bim"/>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>

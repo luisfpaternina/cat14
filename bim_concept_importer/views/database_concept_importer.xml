@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="database_concept_importer_view_tree" model="ir.ui.view">
+            <field name="name">database.concept.importer.view.tree</field>
+            <field name="model">database.concept.importer</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="title"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="database_concept_importer_view_form" model="ir.ui.view">
+            <field name="name">database.concept.importer.view.form</field>
+            <field name="model">database.concept.importer</field>
+            <field name="arch" type="xml">
+                <form string="Notas">
+                    <sheet>
+                        <group>
+                            <group>
+                                 <field name="name" required="1"/>
+                                 <field name="project_ids" widget="many2many_tags"/>
+                            </group>
+                            <group>
+                                 <field name="title"/>
+                            </group>
+                        </group>
+                   <notebook>
+
+                   <page name="lineas" string="Lineas">
+                     <field name="line_ids">
+                           <tree string="Lineas"  editable="bottom">
+                                <field name="product_id" required="1" options='{"no_create": 1, "no_open": 1}'/>
+                                <field name="qty" required="1"/>
+                           </tree>
+                     </field>
+                    </page>
+                      <page name="Notas" string="Notas">
+                           <field name="obs"/>
+                    </page>
+                </notebook>
+
+                    </sheet>
+
+                    <div class="oe_chatter">
+                            <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                            <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="database_concept_importer_action" model="ir.actions.act_window">
+            <field name="name">Database Concept Importer</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">database.concept.importer</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="database_concept_importer_act" name="Database Concept Importer"
+                  parent="base_bim_2.menu_bim_imports"
+                  action="database_concept_importer_action"
+                  sequence="100"/>
+    </data>
+</odoo>

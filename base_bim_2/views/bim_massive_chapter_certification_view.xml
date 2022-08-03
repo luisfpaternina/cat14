@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <odoo>
+    <data>
+        <record id="view_bim_massive_chapter_certification_form" model="ir.ui.view">
+             <field name="name">view.bim.massive.chapter.certification.form</field>
+             <field name="model">bim.massive.chapter.certification</field>
+             <field name="arch" type="xml">
+                <form>
+                   <header>
+                       <button name="action_load_lines" type="object"
+                            string="Load" class="oe_highlight"
+                            states="draft"/>
+                       <button name="action_convert_to_draft" type="object"
+                            string="Set to Draft" class="oe_highlight"
+                            states="cancelled"/>
+                       <button name="action_massive_certification" type="object"
+                            string="Certify" class="oe_highlight"
+                            states="ready"/>
+                       <button name="action_cancel" type="object"
+                            string="Cancel" class="oe_highlight"
+                            states="ready,draft"/>
+                       <button name="action_fix" type="object"
+                            string="Undo" class="oe_highlight"
+                            states="done"/>
+                       <!--<button name="fix_certification_by_stage" type="object"
+                            string="Reload Amount Cert" class="oe_highlight"
+                            states="done" groups="base_bim_2.group_special_configuration"/>-->
+
+                       <field name="state" widget="statusbar" statusbar_visible="draft,ready,done,cancelled"/>
+                    </header>
+                      <sheet>
+                          <div class="oe_title">
+                                <h1>
+                                    <field name="name" readonly="1"/>
+                                </h1>
+                            </div>
+                          <group>
+                              <group>
+                                  <field name="project_id" attrs="{'readonly': [('state', '!=', 'draft')]}" options="{'no_create': True}"/>
+                                  <field name="budget_id" attrs="{'readonly': [('state', '!=', 'draft')]}" options="{'no_create': True}"/>
+                                  <field name="type" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                  <field name="greater_than_100" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                               </group>
+                              <group>
+                                  <field name="creation_date"/>
+                                  <field name="certification_date" attrs="{'invisible': [('state', 'in', ['draft','ready'])]}"/>
+                                  <field name="user_id" options="{'no_create': True}"/>
+                                  <field name="company_id"/>
+                                  <field name="certif_percent_mass"/>
+                               </group>
+                          </group>
+
+                          <notebook>
+                              <page string="Certification by Stages" attrs="{'invisible': [('type', '!=', 'current_stage')]}">
+                                  <field name="certification_stage_ids" attrs="{'readonly': [('state', 'in', ['done','cancelled'])]}" >
+                                      <tree editable="bottom" excel_export="1" create="0" decoration-success="percent_acc == 100" decoration-danger="percent_acc > 100">
+                                          <field name="parent_id" options="{'no_create': True}" attrs="{'readonly': True}" style="background-color:#F5F5F4;"/>
+                                          <field name="stage_id" options="{'no_create': True}" attrs="{'readonly': True}" style="background-color:#F5F5F4;" force_save="1"/>
+                                          <field name="certification_line_ids" widget="many2many_tags" attrs="{'readonly': True}" style="background-color:#F5F5F4;" force_save="1" invisible="1"/>
+                                          <field name="concept_ids" widget="many2many_tags" attrs="{'readonly': True}" style="background-color:#F5F5F4;" force_save="1" optional="hide"/>
+                                          <field name="budget_qty" attrs="{'readonly': True}" style="background-color:#F5F5F4;"/>
+                                          <field name="percent_acc" attrs="{'readonly': True}" style="background-color:#F5F5F4;"/>
+                                          <field name="certif_percent" attrs="{'readonly': False}" style="background-color:white;"/>
+                                          <field name="amount_budget" attrs="{'readonly': True}" sum="Total" style="background-color:#F5F5F4;"/>
+                                          <field name="amount_certif" attrs="{'readonly': True}" sum="Total" style="background-color:#F5F5F4;" force_save="1"/>
+                                      </tree>
+                                  </field>
+                              </page>
+
+                              <page string="Manual Certification" attrs="{'invisible': [('type', '!=', 'fixed')]}">
+                                  <field name="concept_ids" attrs="{'readonly': [('state', 'in', ['done','cancelled'])]}">
+                                      <tree editable="bottom" excel_export="1" create="0" decoration-success="percent_acc == 100" decoration-danger="percent_acc > 100">
+                                         <field name="parent_id" options="{'no_create': True}" attrs="{'readonly': True}" style="background-color:#F5F5F4;"/>
+                                          <field name="certifiable_child_ids" widget="many2many_tags" attrs="{'readonly': True}" style="background-color:#F5F5F4;" force_save="1" optional="hide"/>
+                                          <field name="budget_qty" attrs="{'readonly': True}" style="background-color:#F5F5F4;"/>
+                                          <field name="percent_acc" attrs="{'readonly': True}" style="background-color:#F5F5F4;"/>
+                                          <field name="certif_percent" attrs="{'readonly': False}" style="background-color:white;"/>
+                                          <field name="amount_budget" attrs="{'readonly': True}" sum="Total" style="background-color:#F5F5F4;"/>
+                                          <field name="amount_certif" attrs="{'readonly': True}" sum="Total" style="background-color:#F5F5F4;" force_save="1"/>
+                                      </tree>
+                                  </field>
+                              </page>
+                              <page string="Notes" attrs="{'invisible': [('type', '!=', 'current_stage')]}">
+                                  <field name="note" placeholder="Add certification note..."/>
+                              </page>
+                              <page string="Notes" attrs="{'invisible': [('type', '!=', 'fixed')]}">
+                                  <field name="note" placeholder="Add certification note..."/>
+                              </page>
+                          </notebook>
+                       </sheet>
+                    <div class="oe_chatter">
+                            <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                            <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+         <record id="view_bim_massive_chapter_certification_tree" model="ir.ui.view">
+            <field name="name">view.bim.massive.chapter.certification.tree</field>
+            <field name="model">bim.massive.chapter.certification</field>
+            <field name="priority">2</field>
+            <field name="arch" type="xml">
+                <tree string="Massive Certification">
+                    <field name="name"/>
+                    <field name="project_id"/>
+                    <field name="budget_id"/>
+                    <field name="creation_date"/>
+                    <field name="certification_date"/>
+                    <field name="type"/>
+                    <field name="state"/>
+                    <field name="company_id" optional="hide"/>
+                    <field name="total_certif" sum="Total"/>
+                    <field name="percent_certif"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="bim_massive_chapter_certification_action" model="ir.actions.act_window">
+            <field name="name">Massive Chapter Certification</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">bim.massive.chapter.certification</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                Certify the first Budget!
+              </p>
+            </field>
+        </record>
+
+        <menuitem id="bim_massive_chapter_certification_submenu"
+                name="Massive Chapter Certification"
+                parent="menu_bim"
+                action="bim_massive_chapter_certification_action"
+                sequence="11"/>
+     </data>
+</odoo>

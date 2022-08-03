@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="employee_attendance_wzd_from" model="ir.ui.view">
+            <field name="name">employee.attendance.wzd.from</field>
+            <field name="model">employee.attendance.wzd</field>
+            <field name="arch" type="xml">
+                <form string="Load Weekly Hours">
+                    <group>
+                       <group>
+                            <field name="employee_id" readonly="1"/>
+                            <field name="project_id" options="{'no_open': True, 'no_create': True}"/>
+                            <field name="budget_id" options="{'no_open': True, 'no_create': True}" groups="base_bim_2.group_budget_concept_documents"/>
+                            <field name="concept_id" options="{'no_open': True, 'no_create': True}" groups="base_bim_2.group_budget_concept_documents"/>
+                            <field name="bim_extra_hour_id" options="{'no_open': True, 'no_create': True}"/>
+                       </group>
+                        <group>
+                            <field name="date_attendance"/>
+                            <field name="hour_start_job"/>
+                            <field name="minute_start_job"/>
+                            <field name="in_out"/>
+                            <field name="working_hours" attrs="{'required': [('in_out','=',True)], 'invisible': [('in_out','=',False)]}"/>
+                       </group>
+                    </group>
+                    <grop>
+                        <field name="description" nolabel="1" placeholder="Description..."/>
+                    </grop>
+                    <footer>
+                        <button string='Register Attendance' name="action_register_attendance" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+               </form>
+            </field>
+        </record>
+        
+        <record id="action_employee_attendance" model="ir.actions.act_window">
+            <field name="name">Employee Attendance</field>
+            <field name="res_model">employee.attendance.wzd</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="employee_attendance_wzd_from"/>
+            <field name="target">new</field>
+        </record>
+
+        <record model="ir.ui.view" id="view_employee_form_attendance">
+            <field name='name'>view.employee.form.attendance</field>
+            <field name='model'>hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name='type'>form</field>
+            <field name='arch' type='xml'>
+                <xpath expr="//header" position="inside">
+                    <button name="%(action_employee_attendance)d" string="Register Attendance" type="action" />
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

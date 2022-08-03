@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_database_concept_importer,database.concept.importer,model_database_concept_importer,,1,1,1,1
+access_database_concept_importer_line,database.concept.importer.line,model_database_concept_importer_line,,1,1,1,1
+access_work_database_concept_importer,work.database.concept.importer,model_work_database_concept_importer,,1,1,1,1
+access_concept_from_database_wizard,concept.from.database.wizard,model_concept_from_database_wizard,,1,1,1,1

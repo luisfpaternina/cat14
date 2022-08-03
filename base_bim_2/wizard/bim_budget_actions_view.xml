@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <!-- bim.budget.compare.wizard form view -->
+    <record id="bim_budget_actions_wizard_view_form" model="ir.ui.view">
+        <field name="name">bim.budget.actions.wizard.view.form</field>
+        <field name="model">bim.budget.actions.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Budget Compare">
+                <field name="budget_ids" force_save="1" invisible="1"/>
+                <group name="main">
+                    <group name="left">
+                        <field name="change_budget_type"/>
+                        <field name="change_budget_state"/>
+                        <field name="calculate_budget"/>
+                   </group>
+                    <group name="left">
+                        <field name="budget_type" attrs="{'invisible': [('change_budget_type','=',False)],'required': [('change_budget_type','=',True)]}"/>
+                        <field name="budget_state_id" attrs="{'invisible': [('change_budget_state','=',False)],'required': [('change_budget_state','=',True)]}"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="apply_changes" type="object" string="Apply Changes" class="btn-primary"/>
+                    <button name="cancel" string="Cancel" special="cancel" class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="bim_budget_action_wizard_action" model="ir.actions.act_window">
+        <field name="name">Massive Budget Modification</field>
+        <field name="res_model">bim.budget.actions.wizard</field>
+        <field name="binding_model_id" ref="model_bim_budget"/>
+        <field name="binding_view_types">list</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="bim_budget_report_wizard_form" model="ir.ui.view">
+        <field name="name">bim.budget.report.wizard.form</field>
+        <field name="model">bim.budget.report.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Budget">
+                <group>
+                    <group>
+                        <field name="budget_id" invisible="1"/>
+                        <field name="project_id" invisible="1"/>
+                        <field name="display_type" required="1" widget="radio"/>
+                        <field name="summary_type" widget="radio" attrs="{'invisible': [('display_type', 'in',['summary','compare','programming','analysis_ev','compare_detailed'])]}"/>
+                        <field name="compare_type" widget="radio" attrs="{'invisible': [('display_type', '!=','compare')]}"/>
+                    </group>
+                    <group>
+                        <field name="total_type" widget="radio" attrs="{'invisible': [('display_type', 'in',['analysis_ev'])]}"/>
+                        <field name="notes_ok" attrs="{'invisible': [('display_type', 'in',['analysis_ev'])]}"/>
+                        <field name="ev" attrs="{'invisible': [('display_type', 'in',['summary','detailed','full','compare','programming'])]}"/>
+                        <field name="projection" attrs="{'invisible': [('display_type', 'in',['summary','detailed','full','compare','programming'])]}"/>
+                        <field name="show_amount_and_price" attrs="{'invisible': [('display_type','in',['summary','compare','programming','analysis_ev'])]}"/>
+                        <field name="filter_ok" attrs="{'invisible': ['|',('display_type','=','summary'),('summary_type', '=','chapter')]}"/>
+                        <field name="filter_type" widget="radio" attrs="{'invisible': [('filter_ok', '=',False)]}"/>
+                        <field name="space_ids" domain="[('budget_id', '=', budget_id)]" options="{'no_create_edit':True}" widget="many2many_tags"
+                               attrs="{'invisible': ['|',('filter_type', '=', 'object'),('filter_ok', '=', False)],
+                                       'required': [('filter_type', '=', 'space'),('filter_ok', '=', True)]}"/>
+                        <field name="object_ids" domain="[('project_id', '=', project_id)]" options="{'no_create_edit':True}" widget="many2many_tags"
+                               attrs="{'invisible': ['|',('filter_type', '=', 'space'),('filter_ok', '=', False)],
+                                       'required': [('filter_type', '=', 'object'),('filter_ok', '=', True)]}"/>
+                        <field name="text" attrs="{'invisible': [('display_type', '!=', 'full')]}"/>
+                        <field name="measures" attrs="{'invisible': [('display_type', '!=', 'full')]}"/>
+                        <field name="images" attrs="{'invisible': [('display_type', '!=', 'full')]}"/>
+                    </group>
+                </group>
+                <group>
+                    <group>
+                        <field name="bim_parts" attrs="{'invisible': [('compare_type', '=','departure')]}"/>
+                        <field name="bim_attendance" attrs="{'invisible': [('compare_type', '=','departure')]}"/>
+                    </group>
+                    <group>
+                        <field name="bim_invoices" attrs="{'invisible': [('compare_type', '=','departure')]}"/>
+                        <field name="bim_picking_out" attrs="{'invisible': [('compare_type', '=','departure')]}"/>
+                        <field name="bim_open_balance" attrs="{'invisible': [('compare_type', '=','departure')]}"/>
+                    </group>
+                </group>
+                <footer>
+                    <button string="Print" name="check_report" type="object" class="btn-primary"/>
+                    <button string="Print Excel" name="check_report_xls" type="object" class="btn-primary" attrs="{'invisible': ['|',('display_type','in',['programming', 'analysis_ev']),('compare_type','!=','departure')]}"/>
+                    <button string="Cancel" class="btn-default" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="bim_budget_report_wizard_action" model="ir.actions.act_window">
+        <field name="name">Budget Report</field>
+        <field name="res_model">bim.budget.report.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <record id="action_report_multiple_real_execution" model="ir.actions.report">
+        <field name="name">Budget Report</field>
+        <field name="model">bim.budget</field>
+        <field name="report_type">qweb-pdf</field>
+         <field name="report_name">base_bim_2.multiple_real_execute_report</field>
+        <field name="report_file">base_bim_2.multiple_real_execute_report</field>
+        <field name="print_report_name">'Finished products - %s' % object.name</field>
+        <field name="binding_model_id" ref="model_bim_budget"/>
+        <field name="binding_type">report</field>
+    </record>
+
+</odoo>

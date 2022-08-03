@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+
+        <record id="group_user_bim_project_allowed" model="res.groups">
+            <field name="name">BIM User see allowed projects</field>
+            <field name="category_id" ref="base_bim_2.bim_security_rules_category"/>
+            <field name="implied_ids" eval="[(4, ref('base_bim_2.group_user_bim'))]"/>
+        </record>
+
+        <!-- Reglas de Acceso -->
+        <!--See allowed projects-->
+        <record id="rule_see_allowed_project" model="ir.rule">
+            <field name="name">See allowed Projects</field>
+            <field ref="base_bim_2.model_bim_project" name="model_id"/>
+            <field name="domain_force">['|','|',('user_id', '=', user.id),('user_id', '=', False),('id', 'in', user.project_allowed_ids.ids)]</field>
+            <field name="groups" eval="[(4, ref('group_user_bim_project_allowed'))]"/>
+        </record>
+
+        
+        <record id="rule_see_allowed_budget" model="ir.rule">
+            <field name="name">See allowed Budgets</field>
+            <field ref="base_bim_2.model_bim_budget" name="model_id"/>
+            <field name="domain_force">['|','|','|',('project_id', 'in', user.project_allowed_ids.ids),('project_id', 'in', user.bim_project_ids.ids),('user_id', '=', user.id),('user_id', '=', False)]</field>
+            <field name="groups" eval="[(4, ref('group_user_bim_project_allowed'))]"/>
+        </record>
+
+        <record id="rule_see_allowed_paid_state" model="ir.rule">
+            <field name="name">See allowed Projects Paid State</field>
+            <field ref="base_bim_2.model_bim_paidstate" name="model_id"/>
+            <field name="domain_force">['|','|','|',('project_id', 'in', user.project_allowed_ids.ids),('project_id', 'in', user.bim_project_ids.ids),('user_id', '=', user.id),('user_id', '=', False)]</field>
+            <field name="groups" eval="[(4, ref('group_user_bim_project_allowed'))]"/>
+        </record>
+
+        <record id="rule_see_allowed_object" model="ir.rule">
+            <field name="name">See allowed Projects Objects</field>
+            <field ref="base_bim_2.model_bim_object" name="model_id"/>
+            <field name="domain_force">['|','|','|',('project_id', 'in', user.project_allowed_ids.ids),('project_id', 'in', user.bim_project_ids.ids),('user_id', '=', user.id),('user_id', '=', False)]</field>
+            <field name="groups" eval="[(4, ref('group_user_bim_project_allowed'))]"/>
+        </record>
+
+        <record id="rule_see_allowed_stages" model="ir.rule">
+            <field name="name">See allowed Projects Stages</field>
+            <field ref="base_bim_2.model_bim_budget_stage" name="model_id"/>
+            <field name="domain_force">['|',('project_id', 'in', user.project_allowed_ids.ids),('project_id', 'in', user.bim_project_ids.ids)]</field>
+            <field name="groups" eval="[(4, ref('group_user_bim_project_allowed'))]"/>
+        </record>
+
+        <record id="rule_see_allowed_spaces" model="ir.rule">
+            <field name="name">See allowed Projects Spaces</field>
+            <field ref="base_bim_2.model_bim_budget_space" name="model_id"/>
+            <field name="domain_force">['|','|',('project_id', 'in', user.project_allowed_ids.ids),('project_id', '=', False),('project_id', 'in', user.bim_project_ids.ids)]</field>
+            <field name="groups" eval="[(4, ref('group_user_bim_project_allowed'))]"/>
+        </record>
+
+        <record id="rule_see_allowed_attendance" model="ir.rule">
+            <field name="name">See allowed Projects Attendances</field>
+            <field ref="hr_attendance.model_hr_attendance" name="model_id"/>
+            <field name="domain_force">['|','|',('project_id', 'in', user.project_allowed_ids.ids),('project_id', '=', False),('project_id', 'in', user.bim_project_ids.ids)]</field>
+            <field name="groups" eval="[(4, ref('group_user_bim_project_allowed'))]"/>
+        </record>
+
+        <record id="rule_see_allowed_project_employee" model="ir.rule">
+            <field name="name">See allowed Projects Employee</field>
+            <field ref="base_bim_2.model_bim_project_employee" name="model_id"/>
+            <field name="domain_force">['|','|',('project_id', 'in', user.project_allowed_ids.ids),('project_id', '=', False),('project_id', 'in', user.bim_project_ids.ids)]</field>
+            <field name="groups" eval="[(4, ref('group_user_bim_project_allowed'))]"/>
+        </record>
+
+        <record id="rule_see_allowed_massive_certification" model="ir.rule">
+            <field name="name">See allowed Projects Certifications</field>
+            <field ref="base_bim_2.model_bim_massive_certification_by_line" name="model_id"/>
+            <field name="domain_force">['|','|','|',('project_id', 'in', user.project_allowed_ids.ids),('project_id', 'in', user.bim_project_ids.ids),('user_id', '=', user.id),('user_id', '=', False)]</field>
+            <field name="groups" eval="[(4, ref('group_user_bim_project_allowed'))]"/>
+        </record>
+
+        <record id="rule_see_allowed_massive_certification_chapter" model="ir.rule">
+            <field name="name">See allowed Projects Certifications Chapter</field>
+            <field ref="base_bim_2.model_bim_massive_chapter_certification" name="model_id"/>
+            <field name="domain_force">['|','|','|',('project_id', 'in', user.project_allowed_ids.ids),('project_id', 'in', user.bim_project_ids.ids),('user_id', '=', user.id),('user_id', '=', False)]</field>
+            <field name="groups" eval="[(4, ref('group_user_bim_project_allowed'))]"/>
+        </record>
+
+        <record id="rule_see_allowed_import" model="ir.rule">
+            <field name="name">See allowed Imports</field>
+            <field ref="base_bim_2.model_bim_import_temp" name="model_id"/>
+            <field name="domain_force">['|','|','|',('project_id', 'in', user.project_allowed_ids.ids),('project_id', 'in', user.bim_project_ids.ids),('user_id', '=', user.id),('user_id', '=', False)]</field>
+            <field name="groups" eval="[(4, ref('group_user_bim_project_allowed'))]"/>
+        </record>
+
+        <record id="rule_see_allowed_check_list" model="ir.rule">
+            <field name="name">See allowed Check List</field>
+            <field ref="base_bim_2.model_bim_checklist" name="model_id"/>
+            <field name="domain_force">['|','|','|',('project_id', 'in', user.project_allowed_ids.ids),('project_id', 'in', user.bim_project_ids.ids),('user_id', '=', user.id),('user_id', '=', False)]</field>
+            <field name="groups" eval="[(4, ref('group_user_bim_project_allowed'))]"/>
+        </record>
+
+    </data>
+</odoo>

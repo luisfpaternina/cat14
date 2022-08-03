@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="bim_budget_multiple_report_form" model="ir.ui.view">
+        <field name="name">bim.budget.multiple.report.form</field>
+        <field name="model">bim.budget.multiple.report</field>
+        <field name="arch" type="xml">
+            <form string="Budget">
+                <group>
+                    <p>You are about to print Detailed Project Cost Report for the next budgets</p>
+                </group>
+                <group>
+                    <group>
+                        <field name="project_id" readonly="1" force_save="1"/>
+                    </group>
+                </group>
+                <group>
+                    <field name="budget_ids" widget="many2many_tags"/>
+                </group>
+
+                <footer>
+                    <button string="Print Excel" name="generate_multiple_report_xls" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-default" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_detailed_project_cost_report" model="ir.actions.act_window">
+        <field name="name">Detailed Project Cost Report</field>
+        <field name="res_model">bim.budget.multiple.report</field>
+        <field name="binding_model_id" ref="model_bim_budget"/>
+        <field name="binding_view_types">list</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

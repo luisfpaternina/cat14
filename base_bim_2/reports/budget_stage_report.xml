@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="base_bim_2.budget_stage_report">
+        <t t-call="web.html_container">
+          <t t-foreach="docs" t-as="o">
+            <t t-call="base_bim_2.bim_header_external_layout">
+              <div class="page">
+                <style  type="text/css">
+                  th, td {
+                    vertical-align: middle !important;
+                  }
+                </style>
+                <h3 class="text-center">ANALYSIS BY EARNED VALUE METHOD</h3>
+                <t t-set="budget" t-value="o.budget_id"/>
+                  <table class="table table-sm" style="width:100%;">
+                    <tr>
+                        <th class="text-center" style="border:1px solid black;">PROJECT</th>
+                        <th class="text-center text-uppercase" style="border:1px solid black;">BUDGET</th>
+                        <th class="text-center" style="border:1px solid black;width:20%;">PRINTING DATE</th>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><span t-field="budget.project_id"/></td>
+                        <td class="text-center"><span t-field="budget.display_name"/></td>
+                        <td class="text-center"><span t-esc="datetime.datetime.now().strftime('%d/%m/%Y')"/></td>
+                    </tr>
+                  </table>
+                  <t t-if="o.ev">
+                      <table class="table table-sm" style="width:100%;">
+                        <tr>
+                            <th class="text-center" style="solid black;">STAGE</th>
+                            <th class="text-center" style="solid black;">STATE</th>
+                            <th class="text-center" style="solid black;width:20%;">START DATE</th>
+                            <th class="text-center" style="solid black;width:20%;">END DATE</th>
+                        </tr>
+                        <tr>
+                            <td class="text-center"><span t-field="budget.stage_analysis.name"/></td>
+                            <td class="text-center"><span t-field="budget.stage_analysis.state"/></td>
+                            <td class="text-center"><span t-field="budget.stage_analysis.date_start"/></td>
+                            <td class="text-center"><span t-field="budget.stage_analysis.date_stop"/></td>
+                        </tr>
+                      </table>
+                      <div class="row">
+                          <div class="col text-center">
+                              <img t-if="budget.analysis_graph" t-att-src="image_data_uri(budget.analysis_graph)"
+                                 style="max-height: 300px;" alt="Graph"/>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col">
+                              <table class="table table-sm" style="font-size:12px;width:100%;">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th class="text-center">VALUE</th>
+                                        <th class="text-center">ANALYSIS</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-center" style="solid black;">Cost Variation (CV)</td>
+                                        <td class="text-center"><span t-field="budget.stage_cost_var" t-options='{"widget": "monetary", "precision": 2, "display_currency": budget.currency_id}'/></td>
+                                        <td class="text-left"><span t-field="budget.cost_var_analysis"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center" style="solid black;">Cost Performance (CPI)</td>
+                                        <td class="text-center"><span t-field="budget.stage_cost_performance" t-options='{"widget": "float", "precision": 2}'/></td>
+                                        <td class="text-left"><span t-field="budget.cost_perf_analysis"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center" style="solid black;">Advance Variation (SV)</td>
+                                        <td class="text-center"><span t-field="budget.stage_advance_var" t-options='{"widget": "monetary", "precision": 2, "display_currency": budget.currency_id}'/></td>
+                                        <td class="text-left"><span t-field="budget.advance_var_analysis"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center" style="solid black;">Advance Performance (SPI)</td>
+                                        <td class="text-center"><span t-field="budget.stage_advance_performance" t-options='{"widget": "float", "precision": 2}'/></td>
+                                        <td class="text-left"><span t-field="budget.advance_perf_analysis"/></td>
+                                    </tr>
+                                </tbody>
+                              </table>
+                          </div>
+                      </div>
+                      <br/>
+                      <div class="row">
+                          <table class="table table-sm" style="font-size:12px;width:100%;">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th class="text-center">CV</th>
+                                    <th class="text-center">SV</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center" style="solid black;">SUMMARY</td>
+                                    <td class="text-center"><span t-field="budget.summary_cv"/></td>
+                                    <td class="text-center"><span t-field="budget.summary_sv"/></td>
+                                </tr>
+                            </tbody>
+                          </table>
+                      </div>
+                  </t>
+                  <t t-if="o.projection">
+                    <table class="table table-sm" style="width:100%;">
+                        <tr>
+                            <th class="text-center" style="border:1px solid black;">PROJECTION: <span t-field="budget.projection_type"/></th>
+                        </tr>
+                    </table>
+                    <div class="row">
+                        <table class="table table-sm main_table" style="font-size:12px;width:100%;">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">STAGE</th>
+                                    <th class="text-center">ESTIMATE AT END (EAC)</th>
+                                    <th class="text-center">ESTIMATE UP TO END (ETC)</th>
+                                    <th class="text-center">VARIATION AT END (VAC)</th>
+                                    <th class="text-center">WORK TO BE DONE (TCPI)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="budget.projection_ids" t-as="proj">
+                                    <tr>
+                                        <td class="text-center"><span t-field="proj.stage_id"/></td>
+                                        <td class="text-center"><span t-field="proj.estimate_at_end" t-options='{"widget": "monetary", "display_currency": budget.currency_id}'/></td>
+                                        <td class="text-center"><span t-field="proj.estimate_up_to_end" t-options='{"widget": "monetary", "display_currency": budget.currency_id}'/></td>
+                                        <td class="text-center"><span t-field="proj.variation_at_end" t-options='{"widget": "monetary", "display_currency": budget.currency_id}'/></td>
+                                        <td class="text-center"><span t-field="proj.work_to_be_done" t-options='{"widget": "float", "precision": 2}'/></td>
+                                    </tr>
+                                </t>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="row pt-4">
+                        <t t-if="budget.projection_ids">
+                            <div class="col">
+                            <span>The estimate cost at the conclusion is: </span><span class="ml-1" t-field="budget.projection_ids[-1].estimate_at_end" t-options='{"widget": "monetary", "display_currency": budget.currency_id}'/><br/>
+                            <span>It remains to spend until the end of the project: </span><span class="ml-1" t-field="budget.projection_ids[-1].estimate_up_to_end" t-options='{"widget": "monetary", "display_currency": budget.currency_id}'/><br/>
+                            <t t-if="budget.projection_ids[-1].work_to_be_done > 1">
+                                <span>The performance of the project must improve: </span><span class="ml-1" t-field="budget.projection_ids[-1].work_to_be_done" t-options='{"widget": "float", "precision": 2}'/><span> times.</span><br/>
+                            </t>
+                            <t t-if="budget.projection_ids[-1].work_to_be_done == 1">
+                               <span>The project has a real cost equal to the projected. </span><br/>
+                            </t>
+                            <t t-if="budget.projection_ids[-1].work_to_be_done &lt; 1">
+                               <span>Project performance is positive. </span><br/>
+                            </t>
+                            <br/>
+                            <br/>
+                            <strong><span t-field="budget.projection_conclusion"/></strong>
+                        </div>
+                        </t>
+
+                    </div>
+                  </t>
+              </div>
+            </t>
+          </t>
+        </t>
+    </template>
+
+</odoo>

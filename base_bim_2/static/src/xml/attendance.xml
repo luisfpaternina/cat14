@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template xml:space="preserve">
+    <t t-extend="HrAttendanceMyMainMenu">
+        <t t-jquery="h1" t-operation="after">
+            <div t-if="!checked_in &amp;&amp; widget.projects.length &gt; 0" class="form-group row mx-auto w-50">
+                <label for="bim_project" class="col-sm-2 col-form-label">Obra</label>
+                <div class="col-sm-10">
+                    <select name="bim_project" id="bim_project" class="form-control">
+                        <option selected="true" value="19">CONTROL DE JORNADA</option>
+                        <!--<option selected="" disabled="" value="">Seleccione la obra</option>-->
+                        <option t-foreach="widget.projects" t-as="project" t-att-value="project.id" t-esc="'[' + project.name + '] ' + project.nombre"/>
+                    </select>
+                </div>
+            </div>
+        </t>
+    </t>
+
+    <t t-extend="HrAttendanceKioskConfirm">
+        <t t-jquery="h1" t-operation="after">
+            <div t-if="!checked_in &amp;&amp; widget.projects.length &gt; 0" class="form-group row mx-auto w-50">
+                <label for="bim_project" class="col-sm-2 col-form-label">Obra</label>
+                <div class="col-sm-10">
+                    <select name="bim_project" id="bim_project" class="form-control">
+                        <option selected="" disabled="" value="">Seleccione la obra</option>
+                        <option t-foreach="widget.projects" t-as="project" t-att-value="project.id" t-esc="'[' + project.name + '] ' + project.nombre"/>
+                    </select>
+                </div>
+            </div>
+        </t>
+    </t>
+</template>

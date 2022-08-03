@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+<!--
+    CONCEPTOS
+-->
+    <record id="bim_concepts_view_hierarchy" model="ir.ui.view">
+        <field name="name">bim.concepts.view.hierarchy</field>
+        <field name="model">bim.concepts</field>
+        <field name="arch" type="xml">
+            <hierarchy decoration-bf="parent_id==False" decoration-it="type in ['labor','equip','material']">
+                <field name="code" optional="show"/>
+                <button name="do_nature" string="" type="object" icon="fa-folder" />
+                <field name="type" optional="hide"/>
+                <field name="display_name" string="Name"/>
+                <field name="amount_type" invisible="1"/>
+                <field name="budget_type" invisible="1"/>
+                <field name="parent_id" invisible="1"/>
+                <field name="currency_id" invisible="1"/>
+                <field name="child_ids" invisible="1"/>
+                <field name="measuring_ids" invisible="1">
+                    <tree>
+                        <field name="space_id"/>
+                        <field name="name"/>
+                        <field name="qty"/>
+                        <field name="length"/>
+                        <field name="width"/>
+                        <field name="height"/>
+                        <field name="formula"/>
+                        <field name="amount_subtotal" sum="Partial" string="Total Budget"/>
+                        <field name="concept_id" invisible="1"/>
+                        <field name="budget_id" invisible="1"/>
+                    </tree>
+                </field>
+                <field name="note" invisible="1"/>
+                <field name="budget_id" optional="show" invisible="1"/>
+                <field name="uom_id" optional="hide"/>
+
+                <field name="quantity" sum="qty"/>
+                <field name="quantity_cert" sum="qty_cert" invisible="context.get('budget_type') != 'certification'"/>
+                <!--<field name="qty_execute" sum="qty_exec" invisible="context.get('budget_type') != 'execution' and context.get('type') != 'departure'"/>-->
+
+                <field name="percent_cert" invisible="context.get('budget_type') != 'certification'"/>
+                <field name="amount_compute" string="Price" options="{'text-danger': 'amount_type == &quot;fixed&quot;'}" sum="amt_com"/>
+                <field name="amount_compute_cert" string="Price Cert." invisible="context.get('budget_type') != 'certification'"/>
+
+                <field name="balance" optional="hide" sum="bal"/>
+                <field name="amount_execute" invisible="context.get('budget_type') != 'execution'" sum="total"/>
+
+
+                <field name="balance_cert" optional="hide" sum="cert" invisible="context.get('budget_type') != 'certification'"/>
+                <field name="balance_execute" optional="hide" sum="exe" invisible="context.get('budget_type') != 'execution'"/>
+                <field name="balance_execute_percent" widget="percentage" optional="hide" invisible="context.get('budget_type') != 'execution'"/>
+                <field name="balance_execute_profit" optional="hide" sum="exe" invisible="context.get('budget_type') != 'execution'"/>
+                <field name="acs_date_start" widget="date" invisible="context.get('budget_type') != 'gantt'"/>
+                <field name="acs_date_end" widget="date" invisible="context.get('budget_type') != 'gantt'"/>
+            </hierarchy>
+        </field>
+    </record>
+
+    <record id="bim_concepts_view_folder" model="ir.ui.view">
+        <field name="name">bim.concepts.view.folder</field>
+        <field name="model">bim.concepts</field>
+        <field name="arch" type="xml">
+           <folder decoration-bf="parent_id==False" decoration-it="type in ['labor','equip','material']">
+                <field name="code" optional="show"/>
+                <button name="do_nature" string="" type="object" icon="fa-folder" />
+                <field name="type"/>
+                <field name="display_name" string="Name"/>
+                <field name="amount_type" invisible="1"/>
+                <field name="parent_id" invisible="1"/>
+                <field name="budget_id" invisible="1"/>
+                <field name="budget_type" invisible="1"/>
+                <field name="uom_id"/>
+                <field name="quantity" options="{'text-danger': 'amount_type == &quot;fixed&quot;'}"/>
+                <field name="quantity_cert" options="{'text-danger': 'amount_type == &quot;fixed&quot;'}" invisible="context.get('budget_type') != 'certification'"/>
+                <field name="percent_cert" invisible="context.get('budget_type') != 'certification'"/>
+                <field name="amount_compute" string="Price" sum="pre"/>
+                <field name="amount_compute_cert" string="Price Cert." invisible="context.get('budget_type') != 'certification'"/>
+                <field name="balance" sum="bal"/>
+                <field name="balance_cert" sum="cert" invisible="context.get('budget_type') != 'certification'"/>
+                <field name="acs_date_start" widget="date" invisible="context.get('budget_type') != 'gantt'"/>
+                <field name="acs_date_end" widget="date" invisible="context.get('budget_type') != 'gantt'"/>
+            </folder>
+        </field>
+    </record>
+
+    <record id="view_tree_bim_concepts" model="ir.ui.view">
+        <field name="name">view.tree.bim.concepts</field>
+        <field name="model">bim.concepts</field>
+        <field name="arch" type="xml">
+            <tree decoration-bf="parent_id==False" decoration-it="type in ['labor','equip','material']">
+                <field name="sequence" widget="handle"/>
+                <field name="code"/>
+                <button name="do_nature" string="" type="object" icon="fa-folder" />
+                <field name="type"/>
+                <field name="name"/>
+                <field name="amount_type" invisible="1"/>
+                <field name="budget_id" invisible="1"/>
+                <field name="parent_id" invisible="1"/>
+                <field name="budget_type" invisible="1"/>
+                <field name="uom_id"/>
+                <field name="quantity" options="{'text-danger': 'amount_type == &quot;fixed&quot;'}"/>
+                <field name="quantity_cert" options="{'text-danger': 'amount_type == &quot;fixed&quot;'}" invisible="context.get('budget_type') != 'certification'"/>
+                <field name="percent_cert" invisible="context.get('budget_type') != 'certification'"/>
+                <field name="amount_compute" string="Price" sum="pre"/>
+                <field name="amount_compute_cert" string="Price Cert." invisible="context.get('budget_type') != 'certification'"/>
+                <field name="balance" sum="bal"/>
+                <field name="balance_cert" sum="cert" invisible="context.get('budget_type') != 'certification'"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- bim.concepts search view -->
+    <record id="bim_concepts_view_search" model="ir.ui.view">
+        <field name="name">bim.concepts.view.search</field>
+        <field name="model">bim.concepts</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="code"/>
+                <field name="name"/>
+                <field name="type"/>
+                <field name="parent_id"/>
+                <filter name="groupby_budget" string="Budget" context="{'group_by': 'budget_id'}"/>
+                <filter name="groupby_parent" string="Parent" context="{'group_by': 'parent_id'}"/>
+                <filter name="groupby_type" string="Type" context="{'group_by': 'type'}"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_form_bim_concepts" model="ir.ui.view">
+        <field name="name">view.form.bim.concepts</field>
+        <field name="model">bim.concepts</field>
+        <field name="arch" type="xml">
+            <form string="Concepts">
+                <header>
+                    <button name="%(bim_project_stock_location_action)d" type="action" class="oe_highlight"
+                            string="Exit Movement" attrs="{'invisible': [('type','not in',['departure'])]}" groups="stock.group_stock_user"/>
+
+                    <button name="%(base_bim_2.bim_wizard_ite_action)d" type="action"
+                            string="Import ITE" attrs="{'invisible': [('type','not in',['departure'])]}"/>
+
+                    <button name="%(base_bim_2.bim_wizard_bc3_action)d" type="action" context="{'concept_id': id}"
+                            string="Import BC3" attrs="{'invisible': [('type','not in',['departure', 'chapter'])]}"/>
+                    <button name="%(copy_measures_wizard_action)d" type="action" context="{'default_concept_id': id}"
+                            string="Copy measurements" attrs="{'invisible': [('measuring_ids','=',[])]}"/>
+                </header>
+                <div class="alert alert-danger" role="alert" attrs="{'invisible': ['|',('type', '!=', 'departure'),('amount_measure','>=', 0)]}">
+                    <strong>Warning</strong>: Total of measurements cannot be negative.
+                </div>
+                <sheet>
+                     <div class="oe_button_box" name="button_box">
+                        <button name="action_view_equip" type="object" class="oe_stat_button" icon="fa-gears" attrs="{'invisible': [('equip_amount_count', '=', 0)]}"><!--groups="base_bim_2.group_user_bim"-->
+                            <div class="o_form_field o_stat_info">
+                                <span class="o_stat_value"><field name="equip_amount_count" widget="statinfo" nolabel="1"/></span>
+                                <span class="o_stat_text">Equipments</span>
+                            </div>
+                        </button>
+                        <button name="action_view_material" type="object" class="oe_stat_button" icon="fa-wrench" attrs="{'invisible': [('material_amount_count', '=', 0)]}"><!--groups="base_bim_2.group_user_bim" -->
+                            <div class="o_form_field o_stat_info">
+                                <span class="o_stat_value"><field name="material_amount_count" widget="statinfo" nolabel="1"/></span>
+                                <span class="o_stat_text">Materials</span>
+                            </div>
+                        </button>
+                        <button name="action_view_labor" type="object" class="oe_stat_button" icon="fa-male" attrs="{'invisible': [('labor_amount_count', '=', 0)]}"><!--groups="base_bim_2.group_user_bim" -->
+                            <div class="o_form_field o_stat_info">
+                                <span class="o_stat_value"><field name="labor_amount_count" widget="statinfo" nolabel="1"/></span>
+                                <span class="o_stat_text">Labor</span>
+                            </div>
+                        </button>
+                        <button name="action_view_departure" type="object" class="oe_stat_button" icon="fa-percent" attrs="{'invisible': [('aux_amount_count', '=', 0)]}"><!--groups="base_bim_2.group_user_bim" -->
+                            <div class="o_form_field o_stat_info">
+                                <span class="o_stat_value"><field name="aux_amount_count" widget="statinfo" nolabel="1"/></span>
+                                <span class="o_stat_text">Functions</span>
+                            </div>
+                        </button>
+
+                        <button name="action_view_part" type="object" class="oe_stat_button" icon="fa-bars" attrs="{'invisible': [('type', '!=', 'departure')]}"><!--groups="base_bim_2.group_user_bim" -->
+                            <div class="o_form_field o_stat_info">
+                                <span class="o_stat_value"><field name="part_count" widget="statinfo" nolabel="1"/></span>
+                                <span class="o_stat_text">Reports</span>
+                            </div>
+                        </button>
+
+                         <button name="action_view_picking" type="object" class="oe_stat_button" icon="fa-exchange" attrs="{'invisible': ['|',('type', '!=', 'departure'),('picking_count', '=', 0)]}"><!--groups="base_bim_2.group_user_bim" -->
+                            <div class="o_form_field o_stat_info">
+                                <span class="o_stat_value"><field name="picking_count" widget="statinfo" nolabel="1"/></span>
+                                <span class="o_stat_text">Movements</span>
+                            </div>
+                        </button>
+                        <button
+                            name="action_view_concept"
+                            class="oe_stat_button"
+                            icon="fa-sitemap" type="object"
+                            string="Concepts View">
+                        </button>
+                        <button
+                            name="update_amount"
+                            class="oe_stat_button"
+                            icon="fa-gear" type="object"
+                            string="Update Balance">
+                        </button>
+                    </div>
+                    <div class="alert alert-info" role="alert" attrs="{'invisible': [('type','!=','aux')]}">
+                        <strong>FUNCTION USE</strong>: For functions we will use
+                                     the symbol of (%) in the code, and you only have to enter in
+                                     the box "Price" the value of the % to be effected.
+                    </div>
+                    <div>
+                        <h1>
+                            <field name="code" placeholder="Code"  class="oe_inline" required="True"/> -
+                            <field name="name" placeholder="Description" class="oe_inline"/>
+                        </h1>
+                        <label for="parent_id" string="Parent: "/>
+                        <!-- Parent es CAPITULO (para Partida)-->
+                        <field name="parent_id" string="Parent (Chapter)" domain="[('type', '=?', filter_type_domain),('parent_id', '=', False),('budget_id', '=', budget_id)]"
+                               attrs="{'invisible':['|',('type','=',False),('type','not in',['departure','chapter'])]}" readonly="1"/>
+                         <!-- Parent es PARTIDA (para Mano de obra, Materiales y Equipos)-->
+                        <field name="parent_id" string="Parent (Budget Item)" domain="[('type', '=?', filter_type_domain)]"
+                               attrs="{'invisible':['|',('type','=',False),('type','in',['chapter','departure'])]}" readonly="1"/>
+                    </div>
+
+                    <group col="3" name="budget_concept">
+                      <group string="General">
+                            <field name="id" invisible="1"/>
+                            <field name="level"  invisible="1"/>
+                            <field name="update"  invisible="1"/>
+                            <field name="budget_type"  invisible="1"/>
+                            <field name="filter_type_domain" invisible="1"/>
+                            <field name="filter_product_domain" invisible="1"/>
+                            <field name="filter_product_domain_aux" invisible="1"/>
+                            <field name="equip_amount_count" invisible="1"/>
+                            <field name="material_amount_count" invisible="1"/>
+                            <field name="labor_amount_count" invisible="1"/>
+                            <field name="budget_id" invisible="1"/>
+                            <field name="to_certify" invisible="1"/>
+                            <field name="auto_certify" invisible="1"/>
+                            <field name="manual_certify" invisible="1"/>
+                            <field name="amount_measure" invisible="1"/>
+                            <field name="amount_stage_cert" invisible="1"/>
+                            <field name="sequence" invisible="1"/>
+                            <field name="gantt_type" invisible="1"/>
+                            <field name="export_tmp_id" invisible="1"/>
+                            <field name="type" attrs="{'readonly':[('parent_id','=',False)]}"/>
+                            <field name="acs_date_start"
+                                   attrs="{'invisible': [('type', 'not in', ['chapter', 'departure'])],
+                                           'required': [('gantt_type', 'in', ['end', 'time'])],
+                                           'readonly': [('gantt_type', '=', 'begin')]}"
+                                   forcesave="1"
+                                   widget="date"
+                                   string="Start Ddate"/>
+                            <field name="acs_date_end"
+                                   attrs="{'invisible': [('type', 'not in', ['chapter', 'departure'])],
+                                           'required': [('gantt_type', 'in', ['begin', 'time'])],
+                                           'readonly': [('gantt_type', '=', 'end')]}"
+                                   forcesave="1"
+                                   widget="date"
+                                   string="End Date"/>
+                            <field name="duration" string="Duration"
+                                   attrs="{'invisible': [('type', 'not in', ['chapter', 'departure'])]}"
+                                   help="Maximum Duration in Days"/>
+                            <field name="hito" attrs="{'invisible': [('type','!=','departure')]}"/>
+                            <field name="available" attrs="{'invisible': [('type','not in', ['labor', 'equip'])]}"/>
+                            <field name="subcon"/>
+                      </group>
+
+                      <group string="Budget">
+                            <field name="product_id" domain="[('resource_type', 'in', [filter_product_domain,filter_product_domain_aux])]" options="{'no_create': True, 'no_edit': True}"
+                                   attrs="{'invisible':['|',('type','=',False),('type','not in',['labor','equip','material'])],'required':[('type','in',['labor','equip','material'])]}"/>
+                            <field name="amount_type"  widget="radio" attrs="{'invisible':[('type','not in',['chapter','departure'])]}"/>
+                            <field name="amount_fixed" attrs="{'invisible':[('amount_type','in',['compute','locked']),('type','in',['chapter','departure'])]}" widget="monetary"/>
+                            <field name="amount_compute" string="Price" attrs="{'invisible':['|',('amount_type','=','fixed'),('type','not in',['chapter','departure'])]}" widget="monetary"/>
+                            <field name="quantity" attrs="{'invisible':['|',('type','=',False),('type','in',['chapter'])],'readonly':['|',('amount_measure','>',0),('measuring_ids','!=',[])]}" force_save="1"/>
+                            <field name="product_uom_category_id" invisible="1"/>
+                            <field name="uom_id" options="{'no_create': True, 'no_edit': True}" attrs="{'invisible':[('type','in',['chapter'])]}"/>
+                            <field name="balance" attrs="{'invisible':[('type','=',False)]}" widget="monetary"/>
+                            <field name="id_bim"/>
+
+                      </group>
+                       <group string="Certification" attrs="{'invisible':['|',('budget_type','!=','certification'),('to_certify','=',False)]}">
+                            <field name="type_cert"  widget="radio" attrs="{'invisible':['|','|',('to_certify','=',False),('auto_certify','=',True),('manual_certify','=',True)], 'readonly': [('balance_cert','>',0)]}" force_save="1"/>
+                            <field name="amount_fixed_cert" attrs="{'invisible':['|',('type_cert','!=','fixed'),('to_certify','=',False)]}" widget="monetary"/>
+                            <field name="amount_compute_cert" string="Price Cert." attrs="{'invisible':['|',('type_cert','=','fixed'),('to_certify','=',False)]}" widget="monetary"/>
+                            <field name="quantity_cert" attrs="{'readonly':[('type_cert','!=','fixed')]}" force_save="1"/>
+                            <field name="percent_cert" attrs="{'readonly':[('type_cert','!=','fixed')]}" force_save="1"/>
+                            <field name="balance_cert" widget="monetary" force_save="1"/>
+
+                      </group>
+                       <group string="Executed" name="execute_mode" attrs="{'invisible':['|',('budget_type','!=','execution'),('type','!=','departure')]}">
+                            <field name="amount_execute" string="Executed Price" widget="monetary"/>
+                            <field name="qty_execute" string="Executed Quantity"/>
+                            <field name="balance_execute" string="Executed Balance" widget="monetary"/>
+                      </group>
+                    </group>
+
+                    <notebook>
+                        <page name="description_page" string="Notes">
+                            <field name="note" /> <!-- widget="html" -->
+                            <div class="oe_clear"/>
+                        </page>
+
+                        <page string="Images">
+                            <field name="attachment_ids" widget="many2many_binary"/>
+                        </page>
+
+                        <page string="Concepts" attrs="{'invisible': [('child_ids','=',[])]}">
+                            <field name="child_ids" readonly="1" widget="many2many_tags" nolabel="1"/>
+                        </page>
+
+                        <page name="measuring" string="Measurement" attrs="{'invisible': ['|',('type','!=','departure'),'&amp;',('budget_type','!=','budget'),('type_cert','!=','measure')]}">
+                            <field name="measuring_ids">
+                                <tree editable="bottom" excel_export="1" decoration-bf="stage_state =='process'" decoration-danger="stage_state =='cancel'" decoration-muted="stage_state =='draft'">
+                                    <field name="space_id" domain="[('budget_id', '=', parent.budget_id)]" options="{'no_open':True, 'no_quick_create': True, 'no_create_edit': True}" required="1"/>
+                                    <field name="name"/>
+                                    <field name="stage_id" domain="[('budget_id', '=', parent.budget_id)]" options="{'no_open':True, 'no_quick_create': True, 'no_create_edit': True}" invisible="context.get('budget_type') == 'budget'" attrs="{'readonly': [('type_certify','=','fixed'),('to_certify','=',True)]}"/>
+                                    <field name="qty"/>
+                                    <field name="length"/>
+                                    <field name="width"/>
+                                    <field name="height"/>
+                                    <field name="formula" options="{'no_open':True}"/>
+                                    <field name="amount_subtotal" sum="me"/>
+                                    <field name="characteristic"/>
+                                    <field name="concept_id" invisible="1"/>
+                                    <field name="budget_id" invisible="1"/>
+                                    <field name="to_certify" invisible="1"/>
+                                    <field name="type_certify" invisible="1"/>
+                                    <field name="stage_state" readonly="1" invisible="context.get('budget_type') == 'budget'"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page name="stage_certification" string="Certification by Stages" attrs="{'invisible': ['|','|',('type','!=','departure'),('budget_type','!=','certification'),('type_cert','!=','stage')]}">
+                            <field name="certification_stage_ids">
+                                <tree editable="bottom" excel_export="1" create="0" delete="1" decoration-bf="stage_state =='process'" decoration-primary="stage_state =='process'" decoration-danger="stage_state =='cancel'" decoration-muted="stage_state =='draft'">
+                                    <field name="stage_id" domain="[('budget_id', '=', budget_id)]" readonly="1" force_save="1"/>
+                                    <field name="name" readonly="1" force_save="1"/>
+                                    <field name="budget_qty" readonly="1" force_save="1"/>
+                                    <field name="certif_qty"/>
+                                    <field name="certif_percent"/>
+                                    <field name="amount_budget" readonly="1" force_save="1"/>
+                                    <field name="amount_certif" sum="cf"/>
+                                    <field name="concept_id" invisible="1"/>
+                                    <field name="budget_id" invisible="1"/>
+                                    <field name="stage_state" readonly="1"/>
+                                    <!-- <button name="action_next" string="Proximo estado" type="object" icon="fa-forward text-primary" attrs="{'invisible': [('stage_state','in',['cancel','approved'])]}"/>
+                                    <button name="action_cancel" string="Cancelar" type="object" icon="fa-times-circle text-danger" attrs="{'invisible': [('stage_state','=','cancel')]}"/>  -->
+                                </tree>
+                            </field>
+                        </page>
+
+                        <page name="predecessor" string="Predecessors" attrs="{'invisible': [('type','!=','departure')]}">
+                            <field name="bim_predecessor_concept_ids">
+                                <tree editable="bottom" excel_export="1">
+                                    <field name="name" options="{'no_create': True}"
+                                        domain="[('budget_id', '=', parent.budget_id),
+                                                 ('type', 'in', ['chapter', 'departure']),
+                                                 ('child_ids', 'not in', parent.id),
+                                                 ('id', '!=', parent.id)]"/>
+                                    <field name="pred_type"/>
+                                    <field name="difference"/>
+                                </tree>
+                            </field>
+                        </page>
+
+                        <page name="execute" string="Execution" attrs="{'invisible': [('type','!=','departure')]}">
+                            <group>
+                                <group string="Own execution">
+                                    <field name="amount_execute_material"/>
+                                    <field name="amount_execute_equip"/>
+                                    <field name="amount_execute_labor"/>
+                                    <field name="opening_balance"/>
+                                    <field name="opening_balance_ids" invisible="1"/>
+                                </group>
+                                <group string="Childs execution" attrs="{'invisible': [('departure_child_count','=',0)]}">
+                                    <field name="departure_child_count" invisible="1"/>
+                                    <field name="child_amount_execute_material"/>
+                                    <field name="child_amount_execute_equip"/>
+                                    <field name="child_amount_execute_labor"/>
+                                    <field name="child_opening_balance"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+<!--
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+-->
+            </form>
+        </field>
+    </record>
+
+    <record id="action_bim_concepts" model="ir.actions.act_window">
+        <field name="name">Concept</field>
+        <field name="res_model">bim.concepts</field>
+        <field name="view_mode">hierarchy,folder,tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Create a new Concept!
+            </p>
+        </field>
+    </record>
+
+    <!--
+    <menuitem
+        id="menu_bim_conceptss"
+        name="Concepto"
+        parent="base_bim_2.menu_bim"
+        action="action_bim_concepts"
+        sequence="2" />
+        -->
+
+<!--
+text-muted: Gris claro
+text-warning: Naranja
+text-primary: Verde oscuro
+text-success: Verde claro
+text-danger: Rojo
+text-info: Azul
+text-o: Gris
+-->
+</odoo>

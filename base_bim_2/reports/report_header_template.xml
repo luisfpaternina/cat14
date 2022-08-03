@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <template id="bim_header_external_layout">
+            <t t-if="not o and doc">
+                <t t-set="o" t-value="doc"/>
+            </t>
+            <t t-if="o and 'company_id' in o">
+                <t t-set="company" t-value="o.budget_id.company_id"/>
+            </t>
+            <t t-if="not o or not 'company_id' in o">
+                <t t-set="company" t-value="res_company"/>
+            </t>
+            <div class="header" style="text-size: 7px;">
+                <div class="row">
+                    <div class="col-12 text-left">
+                        <strong><span t-esc="company.name"/></strong>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 pull-left">
+                            <t t-if="company.street"><span t-esc="company.street"/> <span class="ml-1"
+                                    t-esc="company.street2"/></t>
+                            <t t-if="company.zip"><span class="ml-1" t-esc="company.zip"/></t> <t
+                                t-if="company.city"><span t-esc="company.city"/></t>
+                            <t t-if="company.state_id"><span
+                                    t-esc="company.state_id.name"/><br/></t>
+                            <t t-if="company.vat">NIF: <span t-esc="company.vat"/><br/></t>
+                            <t t-if="company.phone">Tel. <span
+                                    t-esc="company.phone"/><br/></t>
+                    </div>
+                    <div class="col-6 pull-right h-100 text-right">
+                                <img t-if="company.logo"
+                                     t-att-src="image_data_uri(company.logo)"
+                                     style="max-height: 70px; max-width: 400px;" alt="Logo"/>
+                    </div>
+                </div>
+                <hr/>
+            </div>
+
+            <div class="article" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id"
+                 t-att-data-oe-lang="o and o.env.context.get('lang')">
+                <t t-raw="0"/>
+            </div>
+            <div class="footer last-page text-center">
+                <hr/>
+                <t t-if="company.email">
+                    <span t-esc="company.email"/>
+                </t>
+                <t t-if="company.website">
+                    <span t-esc="company.website"/>
+                </t>
+                <div class="col-12 text-right">
+                        <div class="ml-1 mr-1">
+                            <span class="page"/>
+                            de
+                            <span class="topage"/>
+                        </div>
+                    </div>
+
+
+            </div>
+        </template>
+        <template id="bim_header_project_external_layout">
+            <t t-if="not o and doc">
+                <t t-set="o" t-value="doc"/>
+            </t>
+            <t t-if="o and 'company_id' in o">
+                <t t-set="company" t-value="o.project_id.company_id"/>
+            </t>
+            <t t-if="not o or not 'company_id' in o">
+                <t t-set="company" t-value="res_company"/>
+            </t>
+            <div class="header" style="text-size: 7px;">
+                <div class="row">
+                    <div class="col-12 text-left">
+                        <strong><span t-esc="company.name"/></strong>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 pull-left">
+                            <t t-if="company.street"><span t-esc="company.street"/> <span class="ml-1"
+                                    t-esc="company.street2"/></t>
+                            <t t-if="company.zip"><span class="ml-1" t-esc="company.zip"/></t> <t
+                                t-if="company.city"><span t-esc="company.city"/></t>
+                            <t t-if="company.state_id"><span
+                                    t-esc="company.state_id.name"/><br/></t>
+                            <t t-if="company.vat">NIF: <span t-esc="company.vat"/><br/></t>
+                            <t t-if="company.phone">Tel. <span
+                                    t-esc="company.phone"/><br/></t>
+                    </div>
+                    <div class="col-6 pull-right h-100 text-right">
+                                <img t-if="company.logo"
+                                     t-att-src="image_data_uri(company.logo)"
+                                     style="max-height: 70px; max-width: 400px;" alt="Logo"/>
+                    </div>
+                </div>
+                <hr/>
+            </div>
+
+            <div class="article" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id"
+                 t-att-data-oe-lang="o and o.env.context.get('lang')">
+                <t t-raw="0"/>
+            </div>
+            <div class="footer last-page text-center">
+                <hr/>
+                <t t-if="company.email">
+                    <span t-esc="company.email"/>
+                </t>
+                <t t-if="company.website">
+                    <span t-esc="company.website"/>
+                </t>
+                <div class="col-12 text-right">
+                        <div class="ml-1 mr-1">
+                            <span class="page"/>
+                            de
+                            <span class="topage"/>
+                        </div>
+                    </div>
+
+
+            </div>
+        </template>
+
+    </data>
+</odoo>

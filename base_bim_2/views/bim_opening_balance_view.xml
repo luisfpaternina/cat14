@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_form_bim_opening_balance" model="ir.ui.view">
+            <field name="name">view.form.bim.opening.balance</field>
+            <field name="model">bim.opening.balance</field>
+            <field name="arch" type="xml">
+                <form string="Opening Balance" delete="0">
+                    <sheet>
+                        <div class="o_address_format">
+                           <h1>
+                               <field name="name" required="1" class="oe_inline" colspan="1" readonly="1"/>
+                           </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="project_id" options="{'no_open': True, 'no_create': True}"/>
+                                <field name="budget_id" options="{'no_open': True, 'no_create': True}"/>
+                                <field name="concept_id" options="{'no_open': True, 'no_create': True}"/>
+                            </group>
+                            <group>
+                                <field name="active" widget="boolean_toggle"/>
+                                <field name="company_id" options="{'no_open': True}" groups="base.group_multi_company"/>
+                                <field name="user_id" options="{'no_open': True}"/>
+                                <field name="amount"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_tree_bim_opening_balance" model="ir.ui.view">
+            <field name="name">view.tree.bim.opening.balance</field>
+            <field name="model">bim.opening.balance</field>
+            <field name="arch" type="xml">
+                <tree delete="1">
+                    <field name="name"/>
+                    <field name="project_id"/>
+                    <field name="budget_id"/>
+                    <field name="concept_id"/>
+                    <field name="amount"/>
+                    <field name="user_id"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_bim_opening_balance" model="ir.actions.act_window">
+            <field name="name">Opening Balance</field>
+            <field name="res_model">bim.opening.balance</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create a new Opening Balance!
+                </p>
+            </field>
+        </record>
+
+        <record id="bim_opening_balance_view_search" model="ir.ui.view">
+            <field name="name">bim.opening.balance.view.search</field>
+            <field name="model">bim.opening.balance</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="project_id"/>
+                    <field name="user_id"/>
+                    <field name="budget_id"/>
+                    <field name="concept_id"/>
+                    <filter string="Active"  name="actives"  domain="[('active', '=', True)]"/>
+                    <filter string="Archived" name="archived"  domain="[('active', '=', False)]" />
+                    <filter name="groupby_active" string="Active" context="{'group_by': 'active'}"/>
+                    <filter name="groupby_project" string="Project" context="{'group_by': 'project_id'}"/>
+                    <filter name="groupby_budget" string="Budget" context="{'group_by': 'budget_id'}"/>
+                    <filter name="groupby_concept" string="Concept" context="{'group_by': 'concept_id'}"/>
+                    <filter name="groupby_user" string="Responsable" context="{'group_by': 'user_id'}"/>
+                </search>
+            </field>
+        </record>
+
+    </data>
+
+</odoo>

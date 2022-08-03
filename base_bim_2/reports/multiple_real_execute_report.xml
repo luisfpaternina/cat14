@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="multiple_compare_concept_extra_level">
+        <t t-if="subchapter_level.type == 'chapter'">
+            <tr style="background-color: #E5E5E5;" class="parent_row">
+                <td class="text-left">
+                    <i t-attf-class="fa fa-{{'th-large text-success'}} mr-2 ml-{{pos}} float-left"/><em><strong><span t-field="subchapter_level.code"/></strong></em>
+                </td>
+                <td class="text-left"><em><strong><span t-field="subchapter_level.name"/></strong></em></td>
+                <td class="text-center"><em><strong></strong></em></td>
+                <td class="text-right"><em><strong><span t-field="subchapter_level.balance"/></strong></em></td>
+                <td class="text-center"><em><strong>-</strong></em></td>
+                <td class="text-right"><em><strong><span t-esc="subchapter_level.balance_execute" t-options="{'widget': 'monetary', 'display_currency': subchapter_level.budget_id.currency_id}"/></strong></em></td>
+                <td class="text-right"><em><strong><span t-esc="subchapter_level.balance - subchapter_level.balance_execute" t-options="{'widget': 'monetary', 'display_currency': subchapter_level.budget_id.currency_id}"/></strong></em></td>
+            </tr>
+        </t>
+        <t t-if="subchapter_level.type == 'departure'">
+             <tr class="child_row">
+                    <td class="text-left">
+                        <i t-attf-class="fa fa-{{'th-list text-warning'}} mr-2 ml-{{pos}} float-left"/><span t-field="subchapter_level.code"/>
+                    </td>
+                    <td><span t-field="subchapter_level.name"/></td>
+                    <td class="text-center"><span t-field="subchapter_level.quantity"/></td>
+                    <td class="text-right"><span t-field="subchapter_level.balance"/></td>
+                    <td class="text-center">-</td>
+                    <td class="text-right"><em><strong><span t-esc="subchapter_level.balance_execute" t-options="{'widget': 'monetary', 'display_currency': subchapter_level.budget_id.currency_id}"/></strong></em></td>
+                    <td class="text-right"><span t-esc="subchapter_level.balance - subchapter_level.balance_execute" t-options="{'widget': 'monetary', 'display_currency': subchapter_level.budget_id.currency_id}"/></td>
+             </tr>
+        </t>
+    </template>
+    <template id="base_bim_2.multiple_real_execute_report">
+        <t t-call="web.html_container">
+          <t t-foreach="docs" t-as="o">
+            <t t-set="budget" t-value="o"/>
+            <t t-call="base_bim_2.bim_header_project_external_layout">
+              <div class="page">
+                <style  type="text/css">
+                  th, td {
+                    vertical-align: middle !important;
+                  }
+                </style>
+                <h3 class="text-center">REAL EXECUTION REPORT</h3>
+
+                 <table class="table table-sm" style="width:100%;">
+                    <tr>
+                        <th class="text-center" style="border:1px solid black;">PROJECT</th>
+                        <th class="text-center text-uppercase" style="border:1px solid black;">BUDGET</th>
+                        <th class="text-center" style="border:1px solid black;width:20%;">PRINTING DATE</th>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><span t-esc="budget.project_id.display_name"/></td>
+                        <td class="text-center"><span t-esc="budget.display_name"/></td>
+                        <td class="text-center"><span t-esc="datetime.datetime.now().strftime('%d/%m/%Y')"/></td>
+                    </tr>
+                </table>
+                        <div class="row" id="row_execute">
+                            <table class="table table-sm main_table" style="font-size:10px;width:100%;">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2"></th>
+                                        <th class="text-center" colspan="2">BUDGET</th>
+                                        <th class="text-center" colspan="2">REAL EXECUTED</th>
+                                        <th class="text-center"/>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center" style="width:15%;">CODE</th>
+                                        <th class="text-left">CONCEPT</th>
+                                        <th class="text-center">QUANTITY</th>
+                                        <th class="text-center">BUDGET</th>
+                                        <th class="text-center">QUANTITY</th>
+                                        <th class="text-center">REAL</th>
+                                        <th class="text-center">DIFFERENCE</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <!-- CAPITULOS -->
+                                    <t t-set="chapters" t-value="budget.concept_ids.filtered(lambda c: not c.parent_id)"/>
+                                    <t t-set="balance_total" t-value="0"/>
+                                    <t t-set="budget_total" t-value="0"/>
+                                    <t t-foreach="chapters" t-as="chapter" class="active">
+                                        <t t-set="balance_total" t-value="balance_total + chapter.balance_execute"/>
+                                        <t t-set="budget_total" t-value="budget_total + chapter.balance"/>
+
+                                        <tr style="background-color: #E5E5E5;" class="parent_row">
+                                            <td class="text-left">
+                                                <i t-attf-class="fa fa-{{'th-large text-success' if chapter.type == 'chapter' else 'th-list text-warning' if chapter.type == 'departure' else 'male text-success'}} mr-2 float-left"/><em><strong><span t-field="chapter.code"/></strong></em>
+                                            </td>
+                                            <td class="text-left"><em><strong><span t-field="chapter.name"/></strong></em></td>
+                                            <td class="text-center"><em><strong></strong></em></td>
+                                            <td class="text-right"><em><strong><span t-field="chapter.balance"/></strong></em></td>
+                                            <td class="text-center"><em><strong>-</strong></em></td>
+                                            <td class="text-right"><em><strong><span t-esc="chapter.balance_execute" t-options="{'widget': 'monetary', 'display_currency': budget.currency_id}"/></strong></em></td>
+                                            <td class="text-right"><em><strong><span t-esc="chapter.balance - chapter.balance_execute" t-options="{'widget': 'monetary', 'display_currency': budget.currency_id}"/></strong></em></td>
+                                        </tr>
+
+                                        <!-- PARTIDAS -->
+                                        <t t-foreach="chapter.child_ids" t-as="child">
+                                            <t t-set="pos" t-value="2"/>
+                                            <t t-if="child.type == 'chapter'">
+                                            <t t-call="base_bim_2.multiple_compare_concept_extra_level">
+                                                <t t-set="subchapter_level" t-value="child"/>
+                                            </t>
+                                            <t t-if="child.child_ids" t-foreach="child.child_ids.filtered(lambda c: (c.type == 'departure') or (c.type == 'chapter' and c.parent_id))" t-as="subcharter2">
+                                                <t t-call="base_bim_2.multiple_compare_concept_extra_level">
+                                                    <t t-set="subchapter_level" t-value="subcharter2"/>
+                                                    <t t-set="pos" t-value="3"/>
+                                                </t>
+                                                <t t-if="subcharter2.child_ids" t-foreach="subcharter2.child_ids.filtered(lambda c: (c.type == 'departure') or (c.type == 'chapter' and c.parent_id))" t-as="subcharter3">
+                                                    <t t-call="base_bim_2.multiple_compare_concept_extra_level">
+                                                        <t t-set="subchapter_level" t-value="subcharter3"/>
+                                                        <t t-set="pos" t-value="4"/>
+                                                    </t>
+                                                    <t t-if="subcharter3.child_ids" t-foreach="subcharter3.child_ids.filtered(lambda c: (c.type == 'departure') or (c.type == 'chapter' and c.parent_id))" t-as="subcharter4">
+                                                        <t t-call="base_bim_2.multiple_compare_concept_extra_level">
+                                                            <t t-set="subchapter_level" t-value="subcharter4"/>
+                                                            <t t-set="pos" t-value="5"/>
+                                                        </t>
+                                                    </t>
+                                                </t>
+                                            </t>
+                                        </t>
+                                        <t t-if="child.type == 'departure'">
+                                                <tr class="child_row">
+                                                    <td class="text-left">
+                                                        <i t-attf-class="fa fa-{{'percent text-success' if child.type == 'aux' else 'th-list text-warning' if child.type == 'departure' else 'male text-success' if child.type == 'labor' else 'gears text-danger' if child.type == 'equip' else 'maxcdn text-warning' if child.type == 'material' else 'edit text-info'}} mr-2 ml-2 float-left"/><span t-field="child.code"/>
+                                                    </td>
+                                                    <td><span t-field="child.name"/></td>
+                                                    <td class="text-center"><span t-field="child.quantity"/></td>
+                                                    <td class="text-right"><span t-field="child.balance"/></td>
+                                                    <td class="text-center">-</td>
+                                                    <td class="text-right"><span t-esc="child.balance_execute" t-options="{'widget': 'monetary', 'display_currency': budget.currency_id}"/></td>
+                                                    <td class="text-right"><span t-esc="child.balance - child.balance_execute" t-options="{'widget': 'monetary', 'display_currency': budget.currency_id}"/></td>
+                                                </tr>
+                                            </t>
+                                        </t>
+
+                                    </t>
+                                    <tr style="background-color: #E5E5E5;" class="parent_row">
+                                                    <td class="text-right" colspan="3"><strong>TOTALES</strong></td>
+                                                    <td class="text-right"><strong><span t-esc="budget_total" t-options="{'widget': 'monetary', 'display_currency': budget.currency_id}"/></strong></td>
+                                                    <td/>
+                                                    <td class="text-right"><strong><span t-esc="balance_total" t-options="{'widget': 'monetary', 'display_currency': budget.currency_id}"/></strong></td>
+                                                    <td class="text-right"><strong><span t-esc="budget_total - balance_total" t-options="{'widget': 'monetary', 'display_currency': budget.currency_id}"/></strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                         <div class="row pt-1 pb-auto" >
+                           <div class="col-12 text-justify">
+                              <span t-raw="budget.obs"/>
+                           </div>
+                        </div>
+
+
+              </div>
+            </t>
+          </t>
+        </t>
+    </template>
+</odoo>

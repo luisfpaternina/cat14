@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    <record id="view_form_bim_extra_hour" model="ir.ui.view">
+        <field name="name">view.form.bim.extra.hour</field>
+        <field name="model">bim.extra.hour</field>
+        <field name="arch" type="xml">
+            <form string="Bim Extra Hour">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" required="1"/>
+                        </group>
+                        <group>
+                            <field name="value" required="1"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_bim_extra_hour" model="ir.ui.view">
+        <field name="name">view.tree.bim.extra.hour</field>
+        <field name="model">bim.extra.hour</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="value"/>
+            </tree>
+        </field>
+    </record>
+
+         <record id="action_bim_extra_hour" model="ir.actions.act_window">
+            <field name="name">Extra Hour</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">bim.extra.hour</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_tree_bim_extra_hour"/>
+        </record>
+
+    <menuitem id="menu_bim_bim_extra_hour_action"
+        name="Extra Hour"
+        parent="menu_bim_data"
+        action="action_bim_extra_hour"
+        sequence="100" />
+
+    </data>
+
+</odoo>

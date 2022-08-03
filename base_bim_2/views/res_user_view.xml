@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record model="ir.ui.view" id="view_users_bim_form_inherit">
+      <field name='name'>res.users.bim.form.inherited</field>
+      <field name='model'>res.users</field>
+      <field name="inherit_id" ref="base.view_users_form"/>
+      <field name='type'>form</field>
+      <field name='arch' type='xml'>
+             <xpath expr="//notebook" position="inside">
+                <page string="BIM Projects">
+                    <field name="allowed_project_ids">
+                        <tree editable="bottom">
+                            <field name="project_id"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+
+      </field>
+    </record>
+</odoo>

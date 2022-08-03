@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+
+        <template id="report_quality_control">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.external_layout">
+                        <div class="page">
+                            <div class="container">
+                                <div class="row"><div class="col text-center"> <h4>QUALITY CONTROL PLAN</h4></div> </div>
+                                <div class="row pt-2">
+                                    <div class="col">
+
+                                        <table class="table table-sm table-bordered">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-left">
+                                                        <strong>Reference</strong><br/>
+                                                        <span t-field="o.name" />
+                                                    </td>
+                                                    <td class="text-left">
+                                                        <strong>Customer</strong><br/>
+                                                        <span t-field="o.project_id.customer_id.name" />
+                                                    </td>
+                                                    <td class="text-left">
+                                                        <strong>Project</strong><br/>
+                                                        <span t-field="o.project_id.nombre" />
+                                                    </td>
+                                                    <td class="text-left">
+                                                        <strong>Code</strong><br/>
+                                                        <span t-field="o.code" />
+                                                    </td>
+                                                    <td class="text-left">
+                                                        <strong>Date</strong><br/>
+                                                        <span t-field="o.date" t-options='{"format": "d / MMMM / y"}'/>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div><br/>
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <p><span t-field="o.description"/></p>
+                                    </div>
+                                </div><br/><br/>
+                                <div class="row">
+                                    <div class="col table-responsive">
+                                        <table class="table table-sm table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-center">Code</th>
+                                                    <th class="text-left">Activity</th>
+                                                    <th class="text-left">Insp. Type</th>
+                                                    <th class="text-left">Responsible</th>
+                                                    <th class="text-left">Characteristic</th>
+                                                    <th class="text-left">Frequency</th>
+                                                    <th class="text-left">Criterion</th>
+                                                    <th class="text-left">Docs</th>
+                                                    <th class="text-left">Checklists</th>
+                                                    <th class="text-left">Reg. Type</th>
+                                                    <th class="text-left">Reg. Related</th>
+                                                    <th class="text-left">Insp. IME</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <t t-foreach="o.control_plan_lines" t-as="line">
+                                                    <tr>
+                                                        <td><span t-field="line.code"/></td>
+                                                        <td class="text-left"><span t-field="line.activity"/></td>
+                                                        <td class="text-left"><t t-if="line.inspection_type_id"><span t-esc="line.inspection_type_id.name"/></t></td>
+                                                        <td class="text-left"><t t-if="line.user_id"><span t-esc="line.user_id.display_name"/></t></td>
+                                                        <td class="text-left"><span t-field="line.characteristic"/></td>
+                                                        <td class="text-left"><span t-field="line.frequency"/></td>
+                                                        <td class="text-left"><span t-field="line.criterion"/></td>
+                                                        <td class="text-left">
+                                                            <t t-foreach="line.doc_ids" t-as="doc">
+                                                                <span t-field="doc.name"/>
+                                                            </t>
+                                                        </td>
+                                                        <td class="text-left">
+                                                            <t t-foreach="line.checklist_ids" t-as="doc">
+                                                                <span t-field="doc.name"/>
+                                                            </t>
+                                                        </td>
+                                                        <td class="text-left"><t t-if="line.register_type_id"><span t-esc="line.register_type_id.name"/></t></td>
+                                                        <td class="text-left"><span t-field="line.register_related"/></td>
+                                                        <td class="text-left"><span t-field="line.inspection_ime"/></td>
+                                                    </tr>
+                                                </t>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

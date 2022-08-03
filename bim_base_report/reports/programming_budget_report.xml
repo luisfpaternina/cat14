@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="programming_concept_extra_level">
+        <t t-if="subchapter_level.type == 'chapter'">
+            <tr class="resource_row" style="font-style: italic;">
+                 <tr style="background-color: #E9ECEF;" class="parent_row">
+                        <td class="text-left">
+                            <i t-attf-class="fa fa-{{'th-large text-success'}} mr-2 ml-{{pos}} float-left"/><em><span t-field="subchapter_level.code"/></em>
+                        </td>
+                        <td class="text-left"><em><strong><span t-field="subchapter_level.name"/></strong></em></td>
+                        <td class="text-center"><em>-</em></td>
+                        <td class="text-center"><t t-if="subchapter_level.acs_date_start"><span t-esc="subchapter_level.acs_date_start.strftime('%d/%m/%Y')" /></t></td>
+                        <td class="text-center"><t t-if="subchapter_level.acs_date_end"><span t-esc="subchapter_level.acs_date_end.strftime('%d/%m/%Y')" /></t></td>
+                        <td class="text-right"><span t-field="subchapter_level.balance"/></td>
+                </tr>
+            </tr>
+        </t>
+        <t t-if="subchapter_level.type == 'departure'">
+                <tr class="child_row">
+                    <td class="text-left">
+                        <i t-attf-class="fa fa-{{'th-list text-warning'}} mr-2 ml-{{pos}} float-left"/><span t-field="subchapter_level.code"/>
+                    </td>
+                    <td class="text-left"><span t-field="subchapter_level.name"/></td>
+                    <td class="text-center"><span t-field="subchapter_level.uom_id"/></td>
+                    <td class="text-center"><t t-if="subchapter_level.acs_date_start"><span t-esc="subchapter_level.acs_date_start.strftime('%d/%m/%Y')" /></t></td>
+                    <td class="text-center"><t t-if="subchapter_level.acs_date_end"><span t-esc="subchapter_level.acs_date_end.strftime('%d/%m/%Y')" /></t></td>
+                    <td class="text-right"><span t-field="subchapter_level.balance"/></td>
+                </tr>
+        </t>
+    </template>
+    <template id="bim_budget_programming_report">
+        <t t-call="web.html_container">
+          <t t-foreach="docs" t-as="o">
+            <t t-call="web.external_layout">
+              <div class="page">
+                <style  type="text/css">
+                  th, td {
+                    vertical-align: middle !important;
+                  }
+                </style>
+                <h3 class="text-center">PROGRAMMING BUDGET REPORT</h3>
+                <t t-set="budget" t-value="o.budget_id"/>
+                <table class="table table-sm" style="width:100%;">
+                    <tr>
+                        <th class="text-center" style="border:1px solid black;width:40%;">PROJECT</th>
+                        <th class="text-center text-uppercase" style="border:1px solid black;width:40%;"><span t-field="budget.name"/></th>
+                        <th class="text-center" style="border:1px solid black;width:20%;">FECHA</th>
+                    </tr>
+                    <tr style="background-color: #E9ECEF;">
+                        <td class="text-center"><span t-field="budget.project_id"/></td>
+                        <td class="text-center"><span t-field="budget.code"/></td>
+                        <td class="text-center"><span t-esc="datetime.datetime.now().strftime('%d/%m/%Y')"/></td>
+                    </tr>
+                </table>
+
+              <t t-if="o.notes_ok">
+                     <div class="row pt-1 pb-auto" >
+                       <div class="col-12 text-justify">
+                          <span t-raw="budget.header_notes" style="line-height:11pt;"/>
+                       </div>
+                    </div>
+                </t>
+
+                <div class="row">
+                    <table class="table table-sm main_table" style="font-size:10px;width:100%;">
+                        <thead>
+                            <tr>
+                                <th style="width:15%;">CODE</th>
+                                <th>CONCEPT</th>
+                                <th class="text-center">QUANTITY</th>
+                                <th class="text-center">START</th>
+                                <th class="text-center">END</th>
+                                <th class="text-right">BALANCE</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <t t-set="chapters" t-value="budget.concept_ids.filtered(lambda c: not c.parent_id)"/>
+                            <t t-set="total" t-value="0"/>
+                            <t t-foreach="chapters" t-as="chapter" class="active">
+                                <tr style="background-color: #E9ECEF;" class="parent_row">
+                                    <td class="text-left">
+                                        <i t-attf-class="fa fa-{{'th-large text-success' if chapter.type == 'chapter' else 'th-list text-warning' if chapter.type == 'departure' else 'male text-success'}} mr-2 float-left"/><em><span t-field="chapter.code"/></em>
+                                    </td>
+                                    <td class="text-left"><em><strong><span t-field="chapter.name"/></strong></em></td>
+                                    <td class="text-center"><em>-</em></td>
+                                    <td class="text-center"><em><span t-esc="chapter.acs_date_start.strftime('%d/%m/%Y')"/></em></td>
+                                    <td class="text-center"><em><span t-esc="chapter.acs_date_end.strftime('%d/%m/%Y')" /></em></td>
+                                    <td class="text-right"><em><span t-field="chapter.balance" /></em></td>
+                                </tr>
+                                <t t-set="total" t-value="total+chapter.balance"/>
+                                <t t-set="cert_childs" t-value="chapter.child_ids.filtered(lambda c: (c.type == 'departure') or (c.type == 'chapter' and c.parent_id))"/>
+                                <t t-foreach="cert_childs" t-as="child">
+                                    <t t-set="pos" t-value="2"/>
+                                    <t t-if="child.type == 'chapter'">
+                                        <t t-call="base_bim_2.programming_concept_extra_level">
+                                            <t t-set="subchapter_level" t-value="child"/>
+                                        </t>
+                                        <t t-if="child.child_ids" t-foreach="child.child_ids.filtered(lambda c: (c.type == 'departure') or (c.type == 'chapter' and c.parent_id))" t-as="subcharter2">
+                                            <t t-call="base_bim_2.programming_concept_extra_level">
+                                                <t t-set="subchapter_level" t-value="subcharter2"/>
+                                                <t t-set="pos" t-value="3"/>
+                                            </t>
+                                            <t t-if="subcharter2.child_ids" t-foreach="subcharter2.child_ids.filtered(lambda c: (c.type == 'departure') or (c.type == 'chapter' and c.parent_id))" t-as="subcharter3">
+                                                <t t-call="base_bim_2.programming_concept_extra_level">
+                                                    <t t-set="subchapter_level" t-value="subcharter3"/>
+                                                    <t t-set="pos" t-value="4"/>
+                                                </t>
+                                                <t t-if="subcharter3.child_ids" t-foreach="subcharter3.child_ids.filtered(lambda c: (c.type == 'departure') or (c.type == 'chapter' and c.parent_id))" t-as="subcharter4">
+                                                    <t t-call="base_bim_2.programming_concept_extra_level">
+                                                        <t t-set="subchapter_level" t-value="subcharter4"/>
+                                                        <t t-set="pos" t-value="5"/>
+                                                    </t>
+                                                </t>
+                                            </t>
+                                        </t>
+                                    </t>
+                                    <t t-if="child.type == 'departure'">
+                                        <tr class="child_row">
+                                            <td class="text-left">
+                                                <i t-attf-class="fa fa-{{'th-list text-warning'}} mr-2 ml-{{pos}} float-left"/><span t-field="child.code"/>
+                                            </td>
+                                            <td class="text-left"><span t-field="child.name"/></td>
+                                            <td class="text-center"><span t-field="child.uom_id"/></td>
+                                            <td class="text-center"><t t-if="child.acs_date_start"><span t-esc="child.acs_date_start.strftime('%d/%m/%Y')" /></t></td>
+                                            <td class="text-center"><t t-if="child.acs_date_end"><span t-esc="child.acs_date_end.strftime('%d/%m/%Y')" /></t></td>
+                                            <td class="text-right"><span t-field="child.balance" /></td>
+                                        </tr>
+                                    </t>
+                                    <tr t-if="o.notes_ok">
+                                        <td colspan="1"></td>
+                                        <td colspan="5" style="text-align:justify;"><span t-field="child.note"/></td>
+                                    </tr>
+                                </t>
+                            </t>
+                            <tr style="background-color: #BFBFBF; font-size: 12px;">
+                                <td colspan="1" style="text-align:center;"><strong>TOTAL</strong></td>
+                                <td colspan="4"></td>
+                                <td colspan="1" style="text-align:right;"><strong><span t-esc="total" t-options="{'widget': 'monetary', 'display_currency': budget.currency_id}"/></strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+              </div>
+            </t>
+          </t>
+        </t>
+    </template>
+</odoo>

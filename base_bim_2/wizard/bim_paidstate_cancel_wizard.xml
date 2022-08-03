@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="bim_paidstate_cancel_wizard_form" model="ir.ui.view">
+        <field name="name">bim.paidstate.cancel.wizard.form</field>
+        <field name="model">bim.paidstate.cancel.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Payment Status Cancelation">
+                <sheet>
+                    <p>
+                        "This Payment Status has Invoice related. Are you sure you want to Cancel it?"
+                    </p>
+                    <field name="paidstate_id" invisible="1">
+                    </field>
+                </sheet>
+
+                <footer>
+                    <button string="Process" name="process" type="object" class="btn-primary"/>
+                    <button string="Cancel" special="cancel" class="btn-default"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="bim_paidstate_wizard_cancel_action" model="ir.actions.act_window">
+        <field name="name">Payment Status Cancelation</field>
+        <field name="res_model">bim.paidstate.cancel.wizard</field>
+        <field name="view_mode">form</field>
+       <field name="target">new</field>
+    </record>
+
+</odoo>

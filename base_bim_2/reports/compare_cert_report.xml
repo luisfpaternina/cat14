@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="compare_certification_concept_extra_level">
+        <t t-if="subchapter_level.type == 'chapter'">
+            <tr style="background-color: #E5E5E5;" class="parent_row">
+                    <td class="text-left">
+                        <i t-attf-class="fa fa-{{'th-large text-success' if subchapter_level.type == 'chapter' else 'th-list text-warning' if subchapter_level.type == 'departure' else 'male text-success'}} mr-2 ml-{{pos}} float-left"/><em><strong><span t-field="subchapter_level.code"/></strong></em>
+                    </td>
+                    <td class="text-left"><em><strong><span t-field="subchapter_level.name"/></strong></em></td>
+                    <td class="text-center"><em>-</em></td>
+                    <td class="text-center"><em>-</em></td>
+                    <td class="text-center"><em>-</em></td>
+                    <td class="text-center"><em>-</em></td>
+                    <td class="text-right"><em><strong><span t-field="subchapter_level.balance"/></strong></em></td>
+                    <td class="text-right"><em><strong><span t-field="subchapter_level.balance_cert"/></strong></em></td>
+                    <td class="text-right"><em><strong><span t-esc="round(subchapter_level.balance-subchapter_level.balance_cert,2)" t-options="{'widget': 'monetary', 'display_currency': budget.currency_id}"/></strong></em></td>
+            </tr>
+        </t>
+        <t t-if="subchapter_level.type == 'departure'">
+                <tr class="child_row">
+                    <td class="text-left">
+                        <i t-attf-class="fa fa-{{'th-list text-warning'}} mr-2 ml-{{pos}} float-left"/><span t-field="subchapter_level.code"/>
+                    </td>
+                    <td><span t-field="subchapter_level.name"/></td>
+                    <td class="text-center"><span t-field="subchapter_level.amount_compute"/></td>
+                    <td class="text-center"><span t-field="subchapter_level.quantity"/></td>
+                    <td class="text-center"><span t-field="subchapter_level.quantity_cert"/></td>
+                    <td class="text-center"><span t-esc="round(subchapter_level.quantity-subchapter_level.quantity_cert,2)"/></td>
+                    <td class="text-right"><span t-field="subchapter_level.balance"/></td>
+                    <td class="text-right"><span t-field="subchapter_level.balance_cert"/></td>
+                    <td class="text-right"><span t-esc="round(subchapter_level.balance-subchapter_level.balance_cert,2)" t-options="{'widget': 'monetary', 'display_currency': budget.currency_id}"/></td>
+                </tr>
+        </t>
+    </template>
+    <template id="base_bim_2.compare_cert_report">
+        <t t-call="web.html_container">
+          <t t-foreach="docs" t-as="o">
+            <t t-call="web.external_layout">
+              <div class="page">
+                <style  type="text/css">
+                  th, td {
+                    vertical-align: middle !important;
+                  }
+                </style>
+                <h3 class="text-center">CERTIFICATION COMPARISON - BUDGET</h3>
+                <t t-set="budget" t-value="o.budget_id"/>
+                <table class="table table-sm" style="width:100%;">
+                    <tr>
+                        <th class="text-center" style="border:1px solid black;width:40%;">PROJECT</th>
+                        <th class="text-center text-uppercase" style="border:1px solid black;width:40%;"><span t-field="budget.name"/></th>
+                        <th class="text-center" style="border:1px solid black;width:20%;">PRINTING DATE</th>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><span t-field="budget.project_id"/></td>
+                        <td class="text-center"><span t-field="budget.display_name"/></td>
+                        <td class="text-center"><span t-esc="datetime.datetime.now().strftime('%d/%m/%Y')"/></td>
+                    </tr>
+                </table>
+
+                <div class="row">
+                    <table class="table table-sm main_table" style="font-size:10px;width:100%;">
+                        <thead>
+                            <tr>
+                                <th colspan="2"></th>
+                                <th class="text-center">PRICE</th>
+                                <th class="text-center" colspan="3">QUANTITY</th>
+                                <th class="pl-5 text-center" colspan="2">AMOUNT</th>
+                                <th/>
+                            </tr>
+                            <tr>
+                                <th class="text-left" style="width:15%;">CODE</th>
+                                <th class="text-left">CONCEPT</th>
+                                <th class="text-right">BUDGET</th>
+                                <th class="text-right">BUDGET</th>
+                                <th class="text-center">CERT</th>
+                                <th class="text-right">DIFFERENCE</th>
+                                <th class="text-right">BUDGET</th>
+                                <th class="text-center">CERT</th>
+                                <th class="text-right">DIFFERENCE</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <t t-set="chapters" t-value="budget.concept_ids.filtered(lambda c: not c.parent_id and c.balance_cert > 0)"/>
+                            <t t-set="total_pres" t-value="0"/>
+                            <t t-set="total_cert" t-value="0"/>
+                            <t t-foreach="chapters" t-as="chapter" class="active">
+                                <tr style="background-color: #E5E5E5;" class="parent_row">
+                                    <td class="text-left">
+                                        <i t-attf-class="fa fa-{{'th-large text-success' if chapter.type == 'chapter' else 'th-list text-warning' if chapter.type == 'departure' else 'male text-success'}} mr-2 float-left"/><em><strong><span t-field="chapter.code"/></strong></em>
+                                    </td>
+                                    <td class="text-left"><em><strong><span t-field="chapter.name"/></strong></em></td>
+                                    <td class="text-center"><em>-</em></td>
+                                    <td class="text-center"><em>-</em></td>
+                                    <td class="text-center"><em>-</em></td>
+                                    <td class="text-center"><em>-</em></td>
+                                    <td class="text-right"><em><strong><span t-field="chapter.balance"/></strong></em></td>
+                                    <td class="text-right"><em><strong><span t-field="chapter.balance_cert"/></strong></em></td>
+                                    <td class="text-right"><em><strong><span t-esc="round(chapter.balance-chapter.balance_cert,2)" t-options="{'widget': 'monetary', 'display_currency': budget.currency_id}"/></strong></em></td>
+                                </tr>
+                                <t t-set="total_pres" t-value="total_pres+chapter.balance"/>
+                                <t t-set="total_cert" t-value="total_cert+chapter.balance_cert"/>
+
+                                <t t-set="cert_childs" t-value="chapter.child_ids.filtered(lambda c: (c.type == 'departure' and c.to_certify and c.balance_cert > 0) or (c.type == 'chapter' and c.parent_id and c.balance_cert > 0))"/>
+                                <t t-foreach="cert_childs" t-as="child">
+                                    <t t-set="pos" t-value="2"/>
+                                    <t t-if="child.type == 'chapter'">
+                                        <t t-call="base_bim_2.compare_certification_concept_extra_level">
+                                            <t t-set="subchapter_level" t-value="child"/>
+                                        </t>
+                                        <t t-if="child.child_ids" t-foreach="child.child_ids.filtered(lambda c: (c.type == 'departure' and c.to_certify and c.balance_cert > 0) or (c.type == 'chapter' and c.parent_id))" t-as="subcharter2">
+                                            <t t-call="base_bim_2.compare_certification_concept_extra_level">
+                                                <t t-set="subchapter_level" t-value="subcharter2"/>
+                                                <t t-set="pos" t-value="3"/>
+                                            </t>
+                                            <t t-if="subcharter2.child_ids" t-foreach="subcharter2.child_ids.filtered(lambda c: (c.type == 'departure' and c.to_certify and c.balance_cert > 0) or (c.type == 'chapter' and c.parent_id))" t-as="subcharter3">
+                                                <t t-call="base_bim_2.compare_certification_concept_extra_level">
+                                                    <t t-set="subchapter_level" t-value="subcharter3"/>
+                                                    <t t-set="pos" t-value="4"/>
+                                                </t>
+                                                <t t-if="subcharter3.child_ids" t-foreach="subcharter3.child_ids.filtered(lambda c: (c.type == 'departure' and c.to_certify and c.balance_cert > 0) or (c.type == 'chapter' and c.parent_id))" t-as="subcharter4">
+                                                    <t t-call="base_bim_2.compare_certification_concept_extra_level">
+                                                        <t t-set="subchapter_level" t-value="subcharter4"/>
+                                                        <t t-set="pos" t-value="5"/>
+                                                    </t>
+                                                </t>
+                                            </t>
+                                        </t>
+                                    </t>
+                                    <t t-if="child.type == 'departure'">
+                                        <tr class="child_row">
+                                            <td class="text-left">
+                                                <i t-attf-class="fa fa-{{'th-list text-warning'}} mr-2 ml-{{pos}} float-left"/><span t-field="child.code"/>
+                                            </td>
+                                            <td><span t-field="child.name"/></td>
+                                            <td class="text-center"><span t-field="child.amount_compute"/></td>
+                                            <td class="text-center"><span t-field="child.quantity"/></td>
+                                            <td class="text-center"><span t-field="child.quantity_cert"/></td>
+                                            <td class="text-center"><span t-esc="round(child.quantity-child.quantity_cert,3)"/></td>
+                                            <td class="text-right"><span t-field="child.balance"/></td>
+                                            <td class="text-right"><span t-field="child.balance_cert"/></td>
+                                            <td class="text-right"><span t-esc="round(child.balance-child.balance_cert,2)" t-options="{'widget': 'monetary', 'display_currency': budget.currency_id}"/></td>
+                                        </tr>
+                                    </t>
+                                    <tr t-if="o.text">
+                                        <td colspan="1"></td>
+                                        <td colspan="8" style="text-align:justify;"><span t-field="child.note"/></td>
+                                    </tr>
+                                </t>
+                            </t>
+                            <tr style="background-color: #BFBFBF; font-size: 12px;">
+                                <td colspan="1" style="text-align:left;"><strong>TOTALS</strong></td>
+                                <td colspan="5"></td>
+                                <td colspan="1" style="text-align:right;"><strong><span t-esc="total_pres" t-options="{'widget': 'monetary', 'display_currency': budget.currency_id}"/></strong></td>
+                                <td colspan="1" style="text-align:right;"><strong><span t-esc="total_cert" t-options="{'widget': 'monetary', 'display_currency': budget.currency_id}"/></strong></td>
+                                <td colspan="1" style="text-align:right;"><strong><span t-esc="total_pres-total_cert" t-options="{'widget': 'monetary', 'display_currency': budget.currency_id}"/></strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+              </div>
+            </t>
+          </t>
+        </t>
+    </template>
+</odoo>

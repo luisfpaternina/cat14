@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="compare_detailed_concept_extra_level">
+        <t t-if="pos>=5">
+            <t t-set="pos" t-value="4"/>
+        </t>
+        <t t-if="subchapter_level.type == 'chapter'">
+            <t t-set="subchapter_executed" t-value="subchapter_level.get_real_executed_for_chapter(o.bim_parts, o.bim_attendance, o.bim_invoices, o.bim_picking_out, o.bim_open_balance)"/>
+            <tr style="background-color: #E5E5E5;" class="parent_row">
+                <td class="text-left">
+                    <i t-attf-class="fa fa-{{'th-large text-success'}} mr-2 ml-{{pos}} float-left"/><em><strong><span t-field="subchapter_level.code"/></strong></em>
+                </td>
+                <td class="text-left"><em><strong><span t-field="subchapter_level.name"/></strong></em></td>
+                <td class="text-center"><em><strong></strong></em></td>
+                <td class="text-right"><em><strong><span t-field="subchapter_level.balance"/></strong></em></td>
+                <td class="text-center"><em><strong>-</strong></em></td>
+                <td class="text-right"><em><strong><span t-esc="subchapter_executed" t-options="{'widget': 'monetary', 'display_currency': budget.currency_id}"/></strong></em></td>
+                <td class="text-right"><em><strong><span t-esc="subchapter_level.balance - subchapter_executed" t-options="{'widget': 'monetary', 'display_currency': budget.currency_id}"/></strong></em></td>
+            </tr>
+        </t>
+        <t t-if="subchapter_level.type == 'departure'">
+             <t t-set="subchapter_executed" t-value="subchapter_level.get_real_executed_for_departure(o.bim_parts, o.bim_attendance, o.bim_invoices, o.bim_picking_out, o.bim_open_balance)"/>
+             <tr class="child_row">
+                    <td class="text-left">
+                        <i t-attf-class="fa fa-{{'th-list text-warning'}} mr-2 ml-{{pos}} float-left"/><span t-field="subchapter_level.code"/>
+                    </td>
+                    <td><span t-field="subchapter_level.name"/></td>
+                    <td class="text-center"><span t-field="subchapter_level.quantity"/></td>
+                    <td class="text-right"><span t-field="subchapter_level.balance"/></td>
+                    <td class="text-center">-</td>
+                    <td class="text-right"><em><strong><span t-esc="subchapter_executed" t-options="{'widget': 'monetary', 'display_currency': budget.currency_id}"/></strong></em></td>
+                    <td class="text-right"><span t-esc="subchapter_level.balance - subchapter_executed" t-options="{'widget': 'monetary', 'display_currency': budget.currency_id}"/></td>
+             </tr>
+            <t t-if="o.bim_parts">
+                    <t t-set="concept_parts" t-value="subchapter_level.part_ids.filtered_domain([('state','=','validated')])"/>
+                    <t t-if="concept_parts">
+                        <t t-set="total_parts" t-value="0"/>
+                        <t t-foreach="concept_parts" t-as="part">
+                            <t t-set="total_parts" t-value="total_parts + part.part_total"/>
+                        </t>
+                        <tr>
+                            <td>
+                                  <i t-attf-class="fa fa-bars mr-2 ml-{{pos + 1}}"/>
+                            </td>
+                            <td><strong><span>PARTS</span></strong></td>
+                            <td class="text-center">-</td>
+                            <td class="text-right">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-right"><strong><span t-esc="total_parts" t-options="{'widget': 'monetary', 'display_currency': budget.currency_id}"/></strong></td>
+                            <td class="text-right">-</td>
+                        </tr>
+                        <t t-if="o.compare_type == 'cost_detail'">
+                             <t t-foreach="concept_parts" t-as="part" class="active">
+                            <tr class="child_row">
+                                    <td>
+                                        <i t-attf-class="fa fa-bars mr-2 ml-{{pos + 1}}"/>
+                                    </td>
+                                    <td><span t-field="part.name"/></td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-right">-</td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-right"><span t-field="part.part_total" t-options="{'widget': 'monetary', 'display_currency': budget.currency_id}"/></td>
+                                    <td class="text-right">-</td>
+                            </tr>
+                        </t>
+                        </t>
+                    </t>
+
+            </t>
+            <t t-if="o.bim_attendance">
+                    <t t-set="concept_attendances" t-value="subchapter_level.get_concept_attendance_records()"/>
+                    <t t-if="concept_attendances[0]">
+                        <tr>
+                            <td>
+                                  <i t-attf-class="fa fa-calendar mr-2 ml-{{pos + 1}}"/>
+                            </td>
+                            <td><strong><span>ATTENDANCE</span></strong></td>
+                            <td class="text-center">-</td>
+                            <td class="text-right">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-right"><strong><span t-esc="concept_attendances[1]" t-options="{'widget': 'monetary', 'display_currency': budget.currency_id}"/></strong></td>
+                            <td class="text-right">-</td>
+                        </tr>
+                        <t t-if="o.compare_type == 'cost_detail'">
+                            <t t-foreach="concept_attendances[0]" t-as="attendance" class="active">
+                            <tr class="child_row">
+                                    <td>
+                                        <i t-attf-class="fa fa-calendar mr-2 ml-{{pos + 1}}"/>
+                                    </td>
+                                    <td><span t-field="attendance.employee_id.display_name"/></td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-right">-</td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-right"><span t-field="attendance.attendance_cost" t-options="{'widget': 'monetary', 'display_currency': budget.currency_id}"/></td>
+                                    <td class="text-right">-</td>
+                            </tr>
+                        </t>
+                        </t>
+                    </t>
+
+            </t>
+            <t t-if="o.bim_invoices">
+                    <t t-set="concept_invoices" t-value="subchapter_level.get_concept_invoice_line_totals()"/>
+                    <t t-if="concept_invoices[0]">
+                        <tr>
+                            <td>
+                                  <i t-attf-class="fa fa-pencil mr-2 ml-{{pos + 1}}"/>
+                            </td>
+                            <td><strong><span>INVOICES</span></strong></td>
+                            <td class="text-center">-</td>
+                            <td class="text-right">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-right"><strong><span t-esc="concept_invoices[1]" t-options="{'widget': 'monetary', 'display_currency': budget.currency_id}"/></strong></td>
+                            <td class="text-right">-</td>
+                        </tr>
+                        <t t-if="o.compare_type == 'cost_detail'">
+                            <t t-foreach="concept_invoices[0]" t-as="invoice" class="active">
+                            <tr class="child_row">
+                                    <td>
+                                        <i t-attf-class="fa fa-pencil mr-2 ml-{{pos + 1}}"/>
+                                    </td>
+                                    <td><span t-esc="invoice['invoice_id'].name"/></td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-right">-</td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-right"><span t-esc="invoice['invoice_total']" t-options="{'widget': 'monetary', 'display_currency': budget.currency_id}"/></td>
+                                    <td class="text-right">-</td>
+                            </tr>
+                        </t>
+                        </t>
+                    </t>
+
+            </t>
+            <t t-if="o.bim_picking_out">
+                    <t t-set="concept_pickings" t-value="subchapter_level.get_concept_picking_move_totals()"/>
+                    <t t-if="concept_pickings[0]">
+                        <tr>
+                            <td>
+                                  <i t-attf-class="fa fa-truck mr-2 ml-{{pos + 1}}"/>
+                            </td>
+                            <td><strong><span>PICKING</span></strong></td>
+                            <td class="text-center">-</td>
+                            <td class="text-right">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-right"><strong><span t-esc="concept_pickings[1]" t-options="{'widget': 'monetary', 'display_currency': budget.currency_id}"/></strong></td>
+                            <td class="text-right">-</td>
+                        </tr>
+                        <t t-if="o.compare_type == 'cost_detail'">
+                            <t t-foreach="concept_pickings[0]" t-as="picking" class="active">
+                            <tr class="child_row">
+                                    <td>
+                                        <i t-attf-class="fa fa-truck mr-2 ml-{{pos + 1}}"/>
+                                    </td>
+                                    <td><span t-esc="picking['picking_id'].name"/></td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-right">-</td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-right"><span t-esc="picking['picking_total']" t-options="{'widget': 'monetary', 'display_currency': budget.currency_id}"/></td>
+                                    <td class="text-right">-</td>
+                            </tr>
+                        </t>
+                        </t>
+                    </t>
+
+            </t>
+            <t t-if="o.bim_open_balance">
+                    <t t-set="concept_open_balances" t-value="subchapter_level.get_concept_open_balance_totals()"/>
+                    <t t-if="concept_open_balances[0]">
+                        <tr>
+                            <td>
+                                  <i t-attf-class="fa fa-book mr-2 ml-{{pos + 1}}"/>
+                            </td>
+                            <td><strong><span>OPEN BALANCE</span></strong></td>
+                            <td class="text-center">-</td>
+                            <td class="text-right">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-right"><strong><span t-esc="concept_open_balances[1]" t-options="{'widget': 'monetary', 'display_currency': budget.currency_id}"/></strong></td>
+                            <td class="text-right">-</td>
+                        </tr>
+                        <t t-if="o.compare_type == 'cost_detail'">
+                            <t t-foreach="concept_open_balances[0]" t-as="balance" class="active">
+                            <tr class="child_row">
+                                    <td>
+                                        <i t-attf-class="fa fa-book mr-2 ml-{{pos + 1}}"/>
+                                    </td>
+                                    <td><span t-esc="balance['balance_id'].name"/></td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-right">-</td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-right"><span t-esc="balance['balance_total']" t-options="{'widget': 'monetary', 'display_currency': budget.currency_id}"/></td>
+                                    <td class="text-right">-</td>
+                            </tr>
+                        </t>
+                        </t>
+                    </t>
+
+            </t>
+        </t>
+    </template>
+    <template id="base_bim_2.real_execute_detailed_report">
+        <t t-call="web.html_container">
+          <t t-foreach="docs" t-as="o">
+            <t t-call="base_bim_2.bim_header_external_layout">
+              <div class="page">
+                <style  type="text/css">
+                  th, td {
+                    vertical-align: middle !important;
+                  }
+                </style>
+                <h3 class="text-center">REAL EXECUTION REPORT</h3>
+                <t t-set="budget" t-value="o.budget_id"/>
+                <table class="table table-sm" style="width:100%;">
+                    <tr>
+                        <th class="text-center" style="border:1px solid black;">PROJECT</th>
+                        <th class="text-center text-uppercase" style="border:1px solid black;">BUDGET</th>
+                        <th t-if="o.filter_ok" class="text-center" style="border:1px solid black;">FILTER</th>
+                        <th class="text-center" style="border:1px solid black;width:20%;">PRINTING DATE</th>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><span t-field="budget.project_id"/></td>
+                        <td class="text-center"><span t-field="budget.display_name"/></td>
+                        <td t-if="o.filter_ok" class="text-center"><span t-esc="o.get_filter_glosa()"/></td>
+                        <td class="text-center"><span t-esc="datetime.datetime.now().strftime('%d/%m/%Y')"/></td>
+                    </tr>
+
+                </table>
+                <t t-if="o.notes_ok">
+                     <div class="row pt-1 pb-auto" >
+                       <div class="col-12 text-justify">
+                          <span t-raw="budget.header_notes" style="line-height:11pt;"/>
+                       </div>
+                    </div>
+                </t>
+                <div class="row" id="row_execute">
+                    <table class="table table-sm main_table" style="font-size:10px;width:100%;">
+                        <thead>
+                            <tr>
+                                <th colspan="2"></th>
+                                <th class="text-center" colspan="2">BUDGET</th>
+                                <th class="text-center" colspan="2">REAL EXECUTED</th>
+                                <th class="text-center"/>
+                            </tr>
+                            <tr>
+                                <th class="text-left" style="width:15%;">CODE</th>
+                                <th class="text-left">CONCEPT</th>
+                                <th class="text-center">QUANTITY</th>
+                                <th class="text-center">BUDGET</th>
+                                <th class="text-center">QUANTITY</th>
+                                <th class="text-center">REAL</th>
+                                <th class="text-center">DIFFERENCE</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <!-- CAPITULOS -->
+                            <t t-set="chapters" t-value="budget.concept_ids.filtered(lambda c: not c.parent_id)"/>
+                            <t t-set="balance_total" t-value="0"/>
+                            <t t-set="budget_total" t-value="0"/>
+                            <t t-foreach="chapters" t-as="chapter" class="active">
+                                <t t-set="chapter_executed" t-value="chapter.get_real_executed_for_chapter(o.bim_parts, o.bim_attendance, o.bim_invoices, o.bim_picking_out, o.bim_open_balance)"/>
+                                <t t-set="balance_total" t-value="balance_total + chapter_executed"/>
+                                <t t-set="budget_total" t-value="budget_total + chapter.balance"/>
+                                <t t-if="not o.filter_ok" id="filter_inactive">
+                                    <tr style="background-color: #E5E5E5;" class="parent_row">
+                                        <td class="text-left">
+                                            <i t-attf-class="fa fa-{{'th-large text-success' if chapter.type == 'chapter' else 'th-list text-warning' if chapter.type == 'departure' else 'male text-success'}} mr-2 float-left"/><em><strong><span t-field="chapter.code"/></strong></em>
+                                        </td>
+                                        <td class="text-left"><em><strong><span t-field="chapter.name"/></strong></em></td>
+                                        <td class="text-center"><em><strong></strong></em></td>
+                                        <td class="text-right"><em><strong><span t-field="chapter.balance"/></strong></em></td>
+                                        <td class="text-center"><em><strong>-</strong></em></td>
+                                        <td class="text-right"><em><strong><span t-esc="chapter_executed" t-options="{'widget': 'monetary', 'display_currency': budget.currency_id}"/></strong></em></td>
+                                        <td class="text-right"><em><strong><span t-esc="chapter.balance - chapter_executed" t-options="{'widget': 'monetary', 'display_currency': budget.currency_id}"/></strong></em></td>
+                                    </tr>
+
+                                    <!-- PARTIDAS -->
+                                    <t t-foreach="chapter.child_ids" t-as="child">
+                                        <t t-set="pos" t-value="2"/>
+                                            <t t-call="base_bim_2.compare_detailed_concept_extra_level">
+                                                <t t-set="subchapter_level" t-value="child"/>
+                                            </t>
+                                            <t t-if="child.child_ids" t-foreach="child.child_ids.filtered(lambda c: (c.type == 'departure') or (c.type == 'chapter' and c.parent_id))" t-as="subcharter2">
+                                                <t t-call="base_bim_2.compare_detailed_concept_extra_level">
+                                                    <t t-set="subchapter_level" t-value="subcharter2"/>
+                                                    <t t-set="pos" t-value="3"/>
+                                                </t>
+                                                <t t-if="subcharter2.child_ids" t-foreach="subcharter2.child_ids.filtered(lambda c: (c.type == 'departure') or (c.type == 'chapter' and c.parent_id))" t-as="subcharter3">
+                                                    <t t-call="base_bim_2.compare_detailed_concept_extra_level">
+                                                        <t t-set="subchapter_level" t-value="subcharter3"/>
+                                                        <t t-set="pos" t-value="4"/>
+                                                    </t>
+                                                    <t t-if="subcharter3.child_ids" t-foreach="subcharter3.child_ids.filtered(lambda c: (c.type == 'departure') or (c.type == 'chapter' and c.parent_id))" t-as="subcharter4">
+                                                        <t t-call="base_bim_2.compare_detailed_concept_extra_level">
+                                                            <t t-set="subchapter_level" t-value="subcharter4"/>
+                                                            <t t-set="pos" t-value="5"/>
+                                                            <t t-if="subcharter4.child_ids" t-foreach="subcharter4.child_ids.filtered(lambda c: (c.type == 'departure') or (c.type == 'chapter' and c.parent_id))" t-as="subcharter5">
+                                                                <t t-call="base_bim_2.compare_detailed_concept_extra_level">
+                                                                    <t t-set="subchapter_level" t-value="subcharter5"/>
+                                                                    <t t-set="pos" t-value="6"/>
+                                                                </t>
+                                                            </t>
+                                                        </t>
+                                                    </t>
+                                                </t>
+                                            </t>
+                                    </t>
+                                </t>
+                            </t>
+                            <tr style="background-color: #E5E5E5;" class="parent_row">
+                                            <td class="text-right" colspan="3"><strong>TOTALES</strong></td>
+                                            <td class="text-right"><strong><span t-esc="budget_total" t-options="{'widget': 'monetary', 'display_currency': budget.currency_id}"/></strong></td>
+                                            <td/>
+                                            <td class="text-right"><strong><span t-esc="balance_total" t-options="{'widget': 'monetary', 'display_currency': budget.currency_id}"/></strong></td>
+                                            <td class="text-right"><strong><span t-esc="budget_total - balance_total" t-options="{'widget': 'monetary', 'display_currency': budget.currency_id}"/></strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <t t-if="o.notes_ok">
+                     <div class="row pt-1 pb-auto" >
+                       <div class="col-12 text-justify">
+                          <span t-raw="budget.obs" style="line-height:11pt;"/>
+                       </div>
+                    </div>
+                </t>
+              </div>
+            </t>
+          </t>
+        </t>
+    </template>
+</odoo>

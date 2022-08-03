@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="create_purchase_wizard_form" model="ir.ui.view">
+        <field name="name">create.purchase.wizard.form</field>
+        <field name="model">create.purchase.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Create Purchase Order">
+                <p><b>Consider the following for the execution of this process:</b></p>
+                <p class="text-muted"><i>* You must select one or more providers in each line otherwise the related record will not be generated.</i></p>
+                <p class="text-muted"><i>* If you select 1 supplier in the line, a Purchase Order will be created automatically.</i></p>
+                <p class="text-muted"><i>* If you select 2 or more suppliers in a line, a purchase agreement will be created with the inclusion of 1 quote for each supplier.</i></p>
+                <group>
+                    <field name="filter_categ"/>
+                </group>
+                <group>
+                    <field name="line_ids" nolabel="1">
+                        <tree editable="bottom" create="0">
+                            <field name="product_id" required="1" options='{"no_create": 1, "no_open": 1}'/>
+                            <field name="um_id" required="1" options='{"no_create": 1, "no_open": 1}'/>
+                            <field name="analytic_id"/>
+                            <field name="analytic_tag_ids" options='{"no_create": 1, "no_open": 1}' widget="many2many_tags"/>
+                            <field name="seller_ids" options='{"no_create": 1, "no_open": 1}' widget="many2many_tags" context="{'res_partner_search_mode': 'supplier'}"/>
+                            <field name="bim_req_line_id" invisible="1"/>
+                            <field name="quant"/>
+                            <field name="cost"/>
+                        </tree>
+                    </field>
+                </group>
+                <footer>
+                    <button string="Process" name="create_purchase" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-default" special="cancel"/>
+                </footer>
+           </form>
+        </field>
+    </record>
+
+    <record id="action_create_purchase_wizard" model="ir.actions.act_window">
+        <field name="name">Create Purchase Order</field>
+        <field name="res_model">create.purchase.wizard</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="create_purchase_wizard_form"/>
+        <field name="target">new</field>
+    </record>
+
+</odoo>
+

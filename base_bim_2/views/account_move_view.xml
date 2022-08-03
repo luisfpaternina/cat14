@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="bim_move_tree" model="ir.ui.view">
+        <field name="name">bim.base.move.tree</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_invoice_tree"/>
+        <field name="arch" type="xml">
+            <field name="invoice_date" position="before">
+                <field name="project_id" optional="show"/>
+                <field name="budget_id" groups="base_bim_2.group_budget_concept_documents" optional="hide"/>
+                <field name="concept_id" groups="base_bim_2.group_budget_concept_documents" optional="hide"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="bim_move_form" model="ir.ui.view">
+        <field name="name">bim.base.move.form</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form" />
+        <field name="arch" type="xml">
+            <field name="invoice_date" position="after">
+                <field name="project_id" options='{"no_create": 1, "no_open": 1}' attrs="{'required': [('bim_classification','in',['income','expense'])],'readonly':[('state','!=','draft')]}" />
+                <field name="budget_id" options='{"no_create": 1, "no_open": 1}' groups="base_bim_2.group_budget_concept_documents" attrs="{'readonly':[('state','!=','draft')]}"/>
+                <field name="concept_id" options='{"no_create": 1, "no_open": 1}' groups="base_bim_2.group_budget_concept_documents" attrs="{'readonly':[('state','!=','draft')]}"/>
+                <field name="bim_classification" attrs="{'invisible': [('move_type','in',['in_invoice','in_refund','out_invoice','out_refund'])],'readonly':[('state','!=','draft')]}"/>
+                <field name="workorder_id" options='{"no_create": 1, "no_open": 1}'/>
+            </field>
+            <field name="fiscal_position_id" position="after">
+                <field name="include_for_bim"/>
+                <field name="bim_multi_project"/>
+            </field>
+            <xpath expr="//field[@name='invoice_line_ids']/tree/field[@name='analytic_account_id']" position="attributes">
+                 <attribute name="attrs">{'readonly': [('bim_multi_project', '=', False)]}</attribute>
+                 <attribute name="force_save">True</attribute>
+            </xpath>
+            <xpath expr="//field[@name='invoice_line_ids']/tree/field[@name='quantity']" position="before">
+                <field name="bim_multi_project" invisible="1"/>
+                <field name="budget_ids" widget="many2many_tags" invisible="1"/>
+                <field name="project_id" invisible="1"/>
+                <field name="budget_id" options='{"no_create": 1, "no_open": 1}' groups="base_bim_2.group_budget_concept_documents"/>
+                <field name="concept_id" options='{"no_create": 1, "no_open": 1}' groups="base_bim_2.group_budget_concept_documents"/>
+            </xpath>
+            <xpath expr="//field[@name='line_ids']/tree/field[@name='quantity']" position="before">
+                <field name="bim_multi_project" invisible="1"/>
+                <field name="project_id" invisible="1"/>
+                <field name="budget_ids" invisible="1"/>
+                <field name="budget_id" invisible="1"/>
+                <field name="concept_id" invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

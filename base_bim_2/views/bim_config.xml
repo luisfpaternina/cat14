@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_bim_configuration" model="ir.ui.view">
+        <field name="name">bim.res.config.view</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('settings')]" position="inside">
+                <div class="app_settings_block" name="Bim2" data-string="Bim 2.0" string="Bim 2.0"
+                     data-key="base_bim_2" groups="base_bim_2.group_manager_bim">
+
+                    <h2>General Configuration</h2>
+                    <div class="row mt16 o_settings_container" name="bim_setting_container">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">INVOICING</span>
+                                <span class="fa fa-lg fa-building-o" title="Values set here are company-specific."
+                                      aria-label="Values set here are company-specific."
+                                      groups="base.group_multi_company" role="img"/>
+                                <div class="text-muted">
+                                    You must configure these values to invoice from the Payment Status
+                                </div>
+                                <div class="content-group">
+                                    <div class="row mt16">
+                                        <label for="journal_id" string="Journal" class="col-lg-3 o_light_label"/>
+                                        <field name="journal_id"/>
+                                    </div>
+                                    <div class="row mt16">
+                                        <label for="paidstate_product" string="Product" class="col-lg-3 o_light_label"/>
+                                        <field name="paidstate_product"/>
+                                    </div>
+                                    <div class="row mt16">
+                                        <label for="paidstate_product_mant" string="Maintenance Product" class="col-lg-3 o_light_label"/>
+                                        <field name="paidstate_product_mant"/>
+                                    </div>
+                                    <div class="row mt16">
+                                        <label for="retention_product" string="Retention Product" class="col-lg-3 o_light_label"/>
+                                        <field name="retention_product"/>
+                                    </div>
+                                     <div class="row mt16">
+                                        <label for="department_required" string="Department Required" class="col-lg-5 o_light_label"/>
+                                        <field name="department_required"/>
+                                    </div>
+                                    <div class="row mt16">
+                                        <label for="create_analytic_account" string="Create Analytic Acc" class="col-lg-5 o_light_label"/>
+                                        <field name="create_analytic_account"/>
+                                    </div>
+                                    <div class="row mt16">
+                                        <label for="invoice_debit_credit" class="col-lg-5 o_light_label"/>
+                                        <field name="invoice_debit_credit"/>
+                                    </div>
+                                    <div class="row mt16">
+                                        <label for="bim_include_invoice_sale" class="col-lg-5 o_light_label"/>
+                                        <field name="bim_include_invoice_sale"/>
+                                    </div>
+                                    <div class="row mt16">
+                                        <label for="bim_include_invoice_purchase" class="col-lg-5 o_light_label"/>
+                                        <field name="bim_include_invoice_purchase"/>
+                                    </div>
+                                    <div class="row mt16">
+                                        <label for="bim_include_refund" class="col-lg-5 o_light_label" string="Include Refund"/>
+                                        <field name="bim_include_refund"/>
+                                    </div>
+                                     <div class="row mt16">
+                                        <label for="bim_invoice_multiple_project" class="col-lg-5 o_light_label"/>
+                                        <field name="bim_invoice_multiple_project"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">INVENTORY</span>
+                                <span class="fa fa-lg fa-truck" title="Values set here are company-specific." aria-label="Values set here are company-specific." groups="base.group_multi_company" role="img"/><br/>
+                                <label for="validate_stock"/>
+                                <div class="text-muted">
+                                    Stock movements made from the Work will be automatically validated
+                                </div>
+                                <field name="validate_stock"/>
+                            </div>
+                             <div class="o_setting_left_pane">
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="stock_location_mobile"/>
+                                <div class="text-muted">
+                                    Location that will be used by default for the entry of merchandise in the Mobile Warehouse
+                                </div>
+                                <field name="stock_location_mobile" widget="selection"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="use_project_warehouse"/>
+                                <div class="text-muted">
+                                    Project Warehouse can be used to receive purchased products
+                                </div>
+                                <field name="use_project_warehouse"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="warehouse_prefix"/>
+                                <div class="text-muted">
+                                    Prefix will be used to create Warehouses from Project
+                                </div>
+                                <field name="warehouse_prefix"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="include_picking_cost"/>
+                                <div class="text-muted">
+                                    Picking cost will be included in Project Costs
+                                </div>
+                                <field name="include_picking_cost"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="bim_certificate_chapters" string="Certificate Chapters"/>
+                                <div class="text-muted">
+                                    Certifications by Chapters will be allowed
+                                </div>
+                                <field name="bim_certificate_chapters"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Budget Configuration</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane"/>
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">CALCULATIONS</span>
+                                <span class="fa fa-lg fa-building-o" title="Values set here are company-specific."
+                                      aria-label="Values set here are company-specific."
+                                      groups="base.group_multi_company" role="img"/>
+                                <div class="text-muted">
+                                    Indicate how you want to work the budget, based on product's price or cost.
+                                </div>
+                                <div class="content-group">
+                                    <div class="row mt16">
+                                        <label for="type_work" string="Price Type" class="col-lg-3 o_light_label"/>
+                                        <field name="type_work" widget="selection"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="asset_template_id"/>
+                                <div class="text-muted">
+                                    Assets and Discounts template to use when creating a budget.
+                                </div>
+                                <field name="asset_template_id"/>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <label for="include_vat_in_indicators"/>
+                                <div class="text-muted">
+                                    Vat can be included or not in Sales and Project Cost.
+                                </div>
+                                <field name="include_vat_in_indicators"/>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <label for="product_category_id"/>
+                                <div class="text-muted">
+                                    Category used when creating the products of the resources in budget items.
+                                </div>
+                                <field name="product_category_id"/>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">CERTIFICATION LIMIT</span>
+                                <div class="text-muted">
+                                    Indicate if you want to limit certification percent.
+                                </div>
+                                <div class="content-group">
+                                    <div class="row mt16">
+                                        <label for="limit_certification" string="Limit Certification" class="col-lg-3 o_light_label"/>
+                                        <field name="limit_certification"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-6 o_setting_box" attrs="{'invisible': [('limit_certification','=',False)]}">
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label"/>
+                                <div class="text-muted">
+                                    This limit will be taken for every budget as certification limit.
+                                </div>
+                                <div class="content-group">
+                                    <div class="row mt16">
+                                        <label for="limit_certification_percent" string="Percent Limit" class="col-lg-3 o_light_label"/>
+                                        <field name="limit_certification_percent"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h2>Configuration Maintenance</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane"/>
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">MAINTENANCE REMINDER</span>
+                                <span class="fa fa-lg fa-male" title="Values set here are company-specific."
+                                      aria-label="Values set here are company-specific."
+                                      groups="base.group_multi_company" role="img"/>
+                                <div class="text-muted">
+                                    Configure the number of days for a reminder to be sent to the customer.
+                                </div>
+                                <div class="content-group">
+                                    <div class="row mt16">
+                                        <label for="array_day_ids" string="Days" class="col-lg-3 o_light_label"/>
+                                        <field name="array_day_ids" widget="many2many_tags"/>
+                                    </div>
+                                    <div class="row mt16">
+                                        <label for="template_mant_id" class="col-lg-3 o_light_label"/>
+                                        <field name="template_mant_id" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Retention Configuration</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane"/>
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">RETENTIONS</span>
+                                <span class="fa fa-lg fa-male" title="Values set here are company-specific."
+                                      aria-label="Values set here are company-specific."
+                                      groups="base.group_multi_company" role="img"/>
+                                <div class="text-muted">
+                                    Configure Retentions
+                                </div>
+                                <div class="content-group">
+                                    <div class="row mt16">
+                                        <label for="retention" string="" class="col-lg-3 o_light_label"/>
+                                        <field name="retention"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Human Resources Configuration</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-6 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">WORKING HOURS</span>
+                                <span class="fa fa-lg fa-male" title="Values set here are company-specific."
+                                      aria-label="Values set here are company-specific."
+                                      groups="base.group_multi_company" role="img"/>
+                                <div class="text-muted">
+                                    Configure the number of hours of a Working Day and the calculation factor for overtime.
+                                </div>
+                                <div class="content-group">
+                                    <div class="row mt16">
+                                        <label for="working_hours" string="Working Hours" class="col-lg-3 o_light_label"/>
+                                        <field name="working_hours"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-6 o_setting_box o_setting_left_pane">
+                            <br/><br/><br/>
+                                <div class="text-muted pt-3">
+                                    <label for="extra_hour_factor" string="Overtime Factor" class="o_light_label"/>
+                                </div>
+                                <div class="content-group">
+                                        <field name="extra_hour_factor"/>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-6 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <span class="fa fa-lg fa-male" title="Values set here are company-specific."
+                                      aria-label="Values set here are company-specific."
+                                      groups="base.group_multi_company" role="img"/>
+                                <div class="text-muted">
+                                   At what time do you start to work?
+                                </div>
+                                <div class="content-group">
+                                    <div class="row mt16">
+                                        <label for="hour_start_job" string="Working Hours" class="col-lg-3 o_light_label"/>
+                                        <field name="hour_start_job"/>
+                                    </div>
+                                </div>
+<!--                                server_hour_difference-->
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-6 o_setting_box o_setting_left_pane">
+                            <br/>
+                                <div class="text-muted pt-3">
+                                    <label for="minute_start_job" class="o_light_label"/>
+                                </div>
+                                <div class="content-group">
+                                        <field name="minute_start_job"/>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-6 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <span class="fa fa-lg fa-male" title="Values set here are company-specific."
+                                      aria-label="Values set here are company-specific."
+                                      groups="base.group_multi_company" role="img"/>
+                                <div class="text-muted">
+                                   Hours of difference with Odoo Server?
+                                </div>
+                                <div class="content-group">
+                                    <div class="row mt16">
+                                        <label for="server_hour_difference" string="Working Hours" class="col-lg-3 o_light_label"/>
+                                        <field name="server_hour_difference"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="action_bim_configuration" model="ir.actions.act_window">
+        <field name="name">BIM Configurations</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.config.settings</field>
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+        <field name="context">{'module' : 'base_bim_2'}</field>
+    </record>
+
+
+    <menuitem id="menu_bim_general_settings"
+              name="Settings"
+              parent="menu_bim_config"
+              sequence="10"
+              action="action_bim_configuration"
+              groups="base.group_system"/>
+</odoo>

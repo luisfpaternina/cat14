@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+     <data>
+        <record id="view_form_bim_register_type" model="ir.ui.view">
+            <field name="name">view.form.bim.register.type</field>
+            <field name="model">bim.register.type</field>
+            <field name="arch" type="xml">
+                <form string="Report" delete="0" >
+                    <sheet>
+                        <div class="oe_title">
+                           <h1>
+                               <field name="name"/>
+                           </h1>
+                        </div>
+                     </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_tree_bim_register_type" model="ir.ui.view">
+            <field name="name">view.tree.bim.register.type</field>
+            <field name="model">bim.register.type</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_bim_register_type" model="ir.actions.act_window">
+            <field name="name">Register Types</field>
+            <field name="res_model">bim.register.type</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create a new register type!
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="submenu_bim_register_type"
+            name="Register Types"
+            parent="base_bim_2.menu_bim_project_quality"
+            action="action_bim_register_type"
+            sequence="3" />
+
+
+        <!--Inspection types-->
+        <record id="view_form_bim_inspection_type" model="ir.ui.view">
+            <field name="name">view.form.bim.inspection.type</field>
+            <field name="model">bim.inspection.type</field>
+            <field name="arch" type="xml">
+                <form string="Report" delete="0" >
+                    <sheet>
+                        <div class="oe_title">
+                           <h1>
+                               <field name="name"/>
+                           </h1>
+                        </div>
+                     </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_tree_bim_inspection_type" model="ir.ui.view">
+            <field name="name">view.tree.bim.inspection.type</field>
+            <field name="model">bim.inspection.type</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_bim_inspection_type" model="ir.actions.act_window">
+            <field name="name">Inspection Types</field>
+            <field name="res_model">bim.inspection.type</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create a new inspection type!
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="submenu_bim_inspection_type"
+            name="Inspection Types"
+            parent="base_bim_2.menu_bim_project_quality"
+            action="action_bim_inspection_type"
+            sequence="4" />
+    </data>
+
+</odoo>

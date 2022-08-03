@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="liquidate_stock_wzd_from" model="ir.ui.view">
+            <field name="name">liquidate.stock.wzd.from</field>
+            <field name="model">liquidate.stock.wzd</field>
+            <field name="arch" type="xml">
+                <form string="Load Weekly Hours">
+                    <group>
+                       <group>
+                            <field name="project_id" readonly="1"/>
+                            <field name="location_dest_id" options="{'no_open': True, 'no_create': True}"/>
+                            <field name="company_id" invisible="1"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button string='Liquidate Stock' name="action_liquidate_stock" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+               </form>
+            </field>
+        </record>
+        
+        <record id="action_liquidate_stock" model="ir.actions.act_window">
+            <field name="name">Project Products Liquidation</field>
+            <field name="res_model">liquidate.stock.wzd</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="liquidate_stock_wzd_from"/>
+            <field name="target">new</field>
+        </record>
+
+    </data>
+</odoo>

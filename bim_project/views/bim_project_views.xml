@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_form_bim_project_project" model="ir.ui.view">
+            <field name="name">view.form.bim.project.project</field>
+            <field name="model">bim.project</field>
+            <field name="inherit_id" ref="base_bim_2.view_form_bim_project"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button name="action_view_project_project" type="object" class="oe_stat_button" icon="fa-tasks" groups="base_bim_2.group_user_bim" >
+                            <div class="o_form_field o_stat_info">
+                                <span class="o_stat_value"><field name="projects_count" widget="statinfo" nolabel="1"/></span>
+                                <span class="o_stat_text">Proyectos</span>
+                            </div>
+                    </button>
+                </xpath>
+
+            </field>
+        </record>
+
+    </data>
+</odoo>

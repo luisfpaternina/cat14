@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="purchase_order_form" model="ir.ui.view">
+            <field name="name">purchase.order.form</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form" />
+            <field name="arch" type="xml">
+                <field name="origin" position="after">
+                    <field name="project_id" options='{"no_create": 1, "no_open": 1}'/>
+                    <field name="budget_id" options='{"no_create": 1, "no_open": 1}' groups="base_bim_2.group_budget_concept_documents"/>
+                    <field name="concept_id" options='{"no_create": 1, "no_open": 1}' groups="base_bim_2.group_budget_concept_documents"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="purchase_order_tree" model="ir.ui.view">
+            <field name="name">purchase.order.tree</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_view_tree" />
+            <field name="arch" type="xml">
+                <field name="partner_id" position="after">
+                    <field name="project_id" optional="show"/>
+                    <field name="budget_id" groups="base_bim_2.group_budget_concept_documents" optional="hide"/>
+                    <field name="concept_id" groups="base_bim_2.group_budget_concept_documents" optional="hide"/>
+
+                </field>
+            </field>
+        </record>
+
+        <record id="purchase_order_tree2" model="ir.ui.view">
+            <field name="name">purchase.order.tree2</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_kpis_tree" />
+            <field name="arch" type="xml">
+                <field name="partner_id" position="after">
+                    <field name="project_id" optional="show"/>
+                    <field name="budget_id" groups="base_bim_2.group_budget_concept_documents" optional="hide"/>
+                    <field name="concept_id" groups="base_bim_2.group_budget_concept_documents" optional="hide"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</odoo>

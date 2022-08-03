@@ -1,0 +1,563 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* bim_concept_importer
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-07 10:03+0000\n"
+"PO-Revision-Date: 2021-06-07 10:03+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer__message_needaction
+#: model:ir.model.fields,field_description:bim_concept_importer.field_work_database_concept_importer__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer__activity_ids
+#: model:ir.model.fields,field_description:bim_concept_importer.field_work_database_concept_importer__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer__activity_exception_decoration
+#: model:ir.model.fields,field_description:bim_concept_importer.field_work_database_concept_importer__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer__activity_state
+#: model:ir.model.fields,field_description:bim_concept_importer.field_work_database_concept_importer__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer__activity_type_icon
+#: model:ir.model.fields,field_description:bim_concept_importer.field_work_database_concept_importer__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_work_database_concept_importer__product_cost_or_price
+msgid "Assign to"
+msgstr "Asignar a"
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer__message_attachment_count
+#: model:ir.model.fields,field_description:bim_concept_importer.field_work_database_concept_importer__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: bim_concept_importer
+#: code:addons/bim_concept_importer/models/work_database_concept_importer.py:0
+#: model:ir.model.fields,field_description:bim_concept_importer.field_concept_from_database_wizard__budget_id
+#, python-format
+msgid "Budget"
+msgstr "Presupuesto"
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_work_database_concept_importer__budget_name
+msgid "Budget Name"
+msgstr "Nombre Presupuesto"
+
+#. module: bim_concept_importer
+#: code:addons/bim_concept_importer/models/work_database_concept_importer.py:0
+#, python-format
+msgid "Budget: {} {}"
+msgstr "Presupuesto: {} {}"
+
+#. module: bim_concept_importer
+#: model_terms:ir.ui.view,arch_db:bim_concept_importer.concept_from_database_wizard
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer__name
+#: model:ir.model.fields,field_description:bim_concept_importer.field_work_database_concept_importer__name
+msgid "Code"
+msgstr "Código"
+
+#. module: bim_concept_importer
+#: model_terms:ir.ui.view,arch_db:bim_concept_importer.view_inherit_bim_budget_form
+msgid "Concept DB"
+msgstr "Concepto BD"
+
+#. module: bim_concept_importer
+#: model:ir.actions.act_window,name:bim_concept_importer.action_concept_from_database_wizard
+msgid "Concepts From Database"
+msgstr "Conceptos desde Base de Datos"
+
+#. module: bim_concept_importer
+#: model:ir.model.fields.selection,name:bim_concept_importer.selection__concept_from_database_wizard__price_type__conc_price
+msgid "Concepts Price"
+msgstr ""
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_concept_from_database_wizard__budget_cost_list_id
+msgid "Cost List"
+msgstr "Lista Costos"
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_work_database_concept_importer__create_all_products
+msgid "Create non-existent products"
+msgstr "Crear productos no existentes"
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_work_database_concept_importer__budget_id
+msgid "Created budget"
+msgstr "Presupuesto Creado"
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_concept_from_database_wizard__create_uid
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer__create_uid
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer_line__create_uid
+#: model:ir.model.fields,field_description:bim_concept_importer.field_work_database_concept_importer__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_concept_from_database_wizard__create_date
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer__create_date
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer_line__create_date
+#: model:ir.model.fields,field_description:bim_concept_importer.field_work_database_concept_importer__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: bim_concept_importer
+#: model:ir.actions.act_window,name:bim_concept_importer.database_concept_importer_action
+#: model:ir.model,name:bim_concept_importer.model_database_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer_line__database_concept_importer_id
+#: model:ir.ui.menu,name:bim_concept_importer.database_concept_importer_act
+msgid "Database Concept Importer"
+msgstr "Base de Datos de Importador de Conceptos"
+
+#. module: bim_concept_importer
+#: model:ir.model,name:bim_concept_importer.model_database_concept_importer_line
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer__line_ids
+msgid "Database Concept Importer Line"
+msgstr "Líneas de Base de Datos de Importador de Conceptos"
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_work_database_concept_importer__product_id
+msgid "Default product"
+msgstr "Producto por defecto"
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_concept_from_database_wizard__display_name
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer__display_name
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer_line__display_name
+#: model:ir.model.fields,field_description:bim_concept_importer.field_work_database_concept_importer__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: bim_concept_importer
+#: model:ir.model.fields.selection,name:bim_concept_importer.selection__work_database_concept_importer__state__done
+msgid "Done"
+msgstr "Terminado"
+
+#. module: bim_concept_importer
+#: code:addons/bim_concept_importer/models/work_database_concept_importer.py:0
+#: code:addons/bim_concept_importer/models/work_database_concept_importer.py:0
+#: code:addons/bim_concept_importer/models/work_database_concept_importer.py:0
+#: code:addons/bim_concept_importer/models/work_database_concept_importer.py:0
+#, python-format
+msgid "Empty"
+msgstr "Vacío"
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_work_database_concept_importer__error
+#: model:ir.model.fields.selection,name:bim_concept_importer.selection__work_database_concept_importer__state__error
+msgid "Error"
+msgstr ""
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_work_database_concept_importer__excel_file
+#: model_terms:ir.ui.view,arch_db:bim_concept_importer.work_database_concept_importer_view_form
+msgid "Excel File"
+msgstr "Fichero de Excel"
+
+#. module: bim_concept_importer
+#: code:addons/bim_concept_importer/models/work_database_concept_importer.py:0
+#, python-format
+msgid "File must contain excel extension"
+msgstr "El fichero debe contener extensión excel"
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_work_database_concept_importer__filename
+msgid "File name"
+msgstr "Nombre del Fichero"
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer__message_follower_ids
+#: model:ir.model.fields,field_description:bim_concept_importer.field_work_database_concept_importer__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer__message_channel_ids
+#: model:ir.model.fields,field_description:bim_concept_importer.field_work_database_concept_importer__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer__message_partner_ids
+#: model:ir.model.fields,field_description:bim_concept_importer.field_work_database_concept_importer__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,help:bim_concept_importer.field_database_concept_importer__activity_type_icon
+#: model:ir.model.fields,help:bim_concept_importer.field_work_database_concept_importer__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_concept_from_database_wizard__id
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer__id
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer_line__id
+#: model:ir.model.fields,field_description:bim_concept_importer.field_work_database_concept_importer__id
+msgid "ID"
+msgstr ""
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer__activity_exception_icon
+#: model:ir.model.fields,field_description:bim_concept_importer.field_work_database_concept_importer__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,help:bim_concept_importer.field_database_concept_importer__activity_exception_icon
+#: model:ir.model.fields,help:bim_concept_importer.field_work_database_concept_importer__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,help:bim_concept_importer.field_database_concept_importer__message_needaction
+#: model:ir.model.fields,help:bim_concept_importer.field_database_concept_importer__message_unread
+#: model:ir.model.fields,help:bim_concept_importer.field_work_database_concept_importer__message_needaction
+#: model:ir.model.fields,help:bim_concept_importer.field_work_database_concept_importer__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,help:bim_concept_importer.field_database_concept_importer__message_has_error
+#: model:ir.model.fields,help:bim_concept_importer.field_database_concept_importer__message_has_sms_error
+#: model:ir.model.fields,help:bim_concept_importer.field_work_database_concept_importer__message_has_error
+#: model:ir.model.fields,help:bim_concept_importer.field_work_database_concept_importer__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: bim_concept_importer
+#: model_terms:ir.ui.view,arch_db:bim_concept_importer.work_database_concept_importer_view_form
+msgid "Import"
+msgstr "Importar"
+
+#. module: bim_concept_importer
+#: code:addons/bim_concept_importer/models/work_database_concept_importer.py:0
+#, python-format
+msgid "Importer Records can be only deleted in 'To Execute' state!"
+msgstr ""
+"Los registros del importador sólo pueden ser eliminados en estado 'A "
+"Ejecutar'"
+
+#. module: bim_concept_importer
+#: model:ir.model.fields.selection,name:bim_concept_importer.selection__work_database_concept_importer__state__ongoing
+msgid "In process"
+msgstr "En proceso"
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer__message_is_follower
+#: model:ir.model.fields,field_description:bim_concept_importer.field_work_database_concept_importer__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_concept_from_database_wizard____last_update
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer____last_update
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer_line____last_update
+#: model:ir.model.fields,field_description:bim_concept_importer.field_work_database_concept_importer____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_concept_from_database_wizard__write_uid
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer__write_uid
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer_line__write_uid
+#: model:ir.model.fields,field_description:bim_concept_importer.field_work_database_concept_importer__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_concept_from_database_wizard__write_date
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer__write_date
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer_line__write_date
+#: model:ir.model.fields,field_description:bim_concept_importer.field_work_database_concept_importer__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: bim_concept_importer
+#: model_terms:ir.ui.view,arch_db:bim_concept_importer.database_concept_importer_view_form
+msgid "Lineas"
+msgstr ""
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer__message_main_attachment_id
+#: model:ir.model.fields,field_description:bim_concept_importer.field_work_database_concept_importer__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer__message_has_error
+#: model:ir.model.fields,field_description:bim_concept_importer.field_work_database_concept_importer__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer__message_ids
+#: model:ir.model.fields,field_description:bim_concept_importer.field_work_database_concept_importer__message_ids
+msgid "Messages"
+msgstr "Mensaje"
+
+#. module: bim_concept_importer
+#: model:ir.model.fields.selection,name:bim_concept_importer.selection__work_database_concept_importer__version__1000
+msgid "Mode 1000"
+msgstr "Modelo 1000"
+
+#. module: bim_concept_importer
+#: model:ir.model.fields.selection,name:bim_concept_importer.selection__work_database_concept_importer__version__2000
+msgid "Mode 2000"
+msgstr "Modelo 2000"
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer__activity_date_deadline
+#: model:ir.model.fields,field_description:bim_concept_importer.field_work_database_concept_importer__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer__activity_summary
+#: model:ir.model.fields,field_description:bim_concept_importer.field_work_database_concept_importer__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer__activity_type_id
+#: model:ir.model.fields,field_description:bim_concept_importer.field_work_database_concept_importer__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: bim_concept_importer
+#: model_terms:ir.ui.view,arch_db:bim_concept_importer.database_concept_importer_view_form
+msgid "Notas"
+msgstr ""
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer__message_needaction_counter
+#: model:ir.model.fields,field_description:bim_concept_importer.field_work_database_concept_importer__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer__message_has_error_counter
+#: model:ir.model.fields,field_description:bim_concept_importer.field_work_database_concept_importer__message_has_error_counter
+msgid "Number of errors"
+msgstr "Número de errores"
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,help:bim_concept_importer.field_database_concept_importer__message_needaction_counter
+#: model:ir.model.fields,help:bim_concept_importer.field_work_database_concept_importer__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,help:bim_concept_importer.field_database_concept_importer__message_has_error_counter
+#: model:ir.model.fields,help:bim_concept_importer.field_work_database_concept_importer__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,help:bim_concept_importer.field_database_concept_importer__message_unread_counter
+#: model:ir.model.fields,help:bim_concept_importer.field_work_database_concept_importer__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer__obs
+msgid "Obs"
+msgstr "Notas"
+
+#. module: bim_concept_importer
+#: code:addons/bim_concept_importer/models/work_database_concept_importer.py:0
+#: code:addons/bim_concept_importer/models/work_database_concept_importer.py:0
+#: code:addons/bim_concept_importer/models/work_database_concept_importer.py:0
+#: code:addons/bim_concept_importer/models/work_database_concept_importer.py:0
+#: code:addons/bim_concept_importer/models/work_database_concept_importer.py:0
+#: code:addons/bim_concept_importer/models/work_database_concept_importer.py:0
+#: code:addons/bim_concept_importer/models/work_database_concept_importer.py:0
+#, python-format
+msgid "Please check template header in position: {}"
+msgstr "Necesita chequear el encabezado de la plantilla en la posicion: {}"
+
+#. module: bim_concept_importer
+#: model:ir.model.fields.selection,name:bim_concept_importer.selection__concept_from_database_wizard__price_type__comp_price
+msgid "Price Components"
+msgstr "Precio de Componentes"
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_concept_from_database_wizard__price_type
+msgid "Price Type"
+msgstr "Tipo Precio"
+
+#. module: bim_concept_importer
+#: model_terms:ir.ui.view,arch_db:bim_concept_importer.concept_from_database_wizard
+msgid "Process Concepts"
+msgstr "Procesar Conceptos"
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer_line__product_id
+msgid "Product"
+msgstr "Producto"
+
+#. module: bim_concept_importer
+#: model:ir.model.fields.selection,name:bim_concept_importer.selection__work_database_concept_importer__product_cost_or_price__cost
+msgid "Product Cost"
+msgstr "Costo Producto"
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer__project_ids
+#: model:ir.model.fields,field_description:bim_concept_importer.field_work_database_concept_importer__project_id
+msgid "Project"
+msgstr "Obra"
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer_line__qty
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: bim_concept_importer
+#: model_terms:ir.ui.view,arch_db:bim_concept_importer.concept_from_database_wizard
+msgid "Real Cost Report"
+msgstr "Reporte Costo Real"
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_concept_from_database_wizard__replace_concepts
+msgid "Replace Concepts"
+msgstr "Reemplazar Conceptos"
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_work_database_concept_importer__user_id
+msgid "Responsable"
+msgstr ""
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer__activity_user_id
+#: model:ir.model.fields,field_description:bim_concept_importer.field_work_database_concept_importer__activity_user_id
+msgid "Responsible User"
+msgstr "Responsable"
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer__message_has_sms_error
+#: model:ir.model.fields,field_description:bim_concept_importer.field_work_database_concept_importer__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: bim_concept_importer
+#: model:ir.model.fields.selection,name:bim_concept_importer.selection__work_database_concept_importer__product_cost_or_price__price
+msgid "Sale Price"
+msgstr "Precio Venta"
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_work_database_concept_importer__state
+msgid "Status"
+msgstr "Estado"
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,help:bim_concept_importer.field_database_concept_importer__activity_state
+#: model:ir.model.fields,help:bim_concept_importer.field_work_database_concept_importer__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: bim_concept_importer
+#: code:addons/bim_concept_importer/models/work_database_concept_importer.py:0
+#, python-format
+msgid "There is a wrong character in line: {}. Please check it!"
+msgstr "Hay un caracter inválido en la línea: {}. Por favor revíselo."
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer__title
+msgid "Title"
+msgstr "Título"
+
+#. module: bim_concept_importer
+#: model:ir.model.fields.selection,name:bim_concept_importer.selection__work_database_concept_importer__state__to_execute
+msgid "To execute"
+msgstr "Para Ejecutar"
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,help:bim_concept_importer.field_database_concept_importer__activity_exception_decoration
+#: model:ir.model.fields,help:bim_concept_importer.field_work_database_concept_importer__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer__message_unread
+#: model:ir.model.fields,field_description:bim_concept_importer.field_work_database_concept_importer__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer__message_unread_counter
+#: model:ir.model.fields,field_description:bim_concept_importer.field_work_database_concept_importer__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_concept_from_database_wizard__use_cost_list
+msgid "Use Cost List"
+msgstr ""
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_work_database_concept_importer__version
+msgid "Version"
+msgstr ""
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,field_description:bim_concept_importer.field_database_concept_importer__website_message_ids
+#: model:ir.model.fields,field_description:bim_concept_importer.field_work_database_concept_importer__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: bim_concept_importer
+#: model:ir.model.fields,help:bim_concept_importer.field_database_concept_importer__website_message_ids
+#: model:ir.model.fields,help:bim_concept_importer.field_work_database_concept_importer__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: bim_concept_importer
+#: model:ir.model,name:bim_concept_importer.model_concept_from_database_wizard
+msgid "Wizard Concept From Database"
+msgstr ""
+
+#. module: bim_concept_importer
+#: model_terms:ir.ui.view,arch_db:bim_concept_importer.work_database_concept_importer_view_form
+msgid "Work"
+msgstr "Trabajo"
+
+#. module: bim_concept_importer
+#: model:ir.actions.act_window,name:bim_concept_importer.work_database_concept_importer_action
+#: model:ir.model,name:bim_concept_importer.model_work_database_concept_importer
+#: model:ir.ui.menu,name:bim_concept_importer.work_database_concept_importer_act
+msgid "Work Database Concept Importer"
+msgstr "Trabajos de Importación de Conceptos"
