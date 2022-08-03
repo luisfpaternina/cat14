@@ -87,8 +87,7 @@ class ProjectTask(models.Model):
         string="Observations")
     supervisor_id = fields.Many2one(
         'hr.employee',
-        string="Supervisor",
-        related="product_id.employee_notice_id")
+        string="Supervisor")
     prev_start_date = fields.Datetime(
         string="Prev start date")
     actual_start_date = fields.Datetime(
@@ -183,6 +182,13 @@ class ProjectTask(models.Model):
         string="Assignment date")
 
 
+    @api.onchange('product_id')
+    def domain_udn(self):
+        for record in self:
+            if record.product_id:
+                record.supervisor_id = record.product_id.employee_notice_id
+            else:
+                record.supervisor_id = False
 
     @api.onchange('ot_type_id')
     def domain_udn(self):
