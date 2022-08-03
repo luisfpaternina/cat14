@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="template_origin_po_notification" model="mail.template">
+            <field name="name">Origen</field>
+            <field name="model_id" ref="account.model_account_move"/>
+            <field name="subject">Origen</field>
+            <field name="email_from">${(object.write_uid.email_formatted or user.email_formatted) | safe}</field>
+            <field name="email_to">${object.user_id.id}</field>
+            <field name="body_html" type="xml">
+                <div>
+                    <strong><p align="center">El asiento contable ha sido creado a partir de: ${object.origin_po}</p></strong>
+                </div>
+            </field>
+            <field name="lang">${user.lang}</field>
+            <field name="auto_delete" eval="False"/>
+        </record>
+    </data>
+</odoo>

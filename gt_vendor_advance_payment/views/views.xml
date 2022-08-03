@@ -1,0 +1,63 @@
+<odoo>
+  <data>
+
+    <record id="view_create_invoice_button" model="ir.ui.view">
+        <field name="name">purchase.order.form</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+
+          <xpath expr="//field[@name='partner_id']" position="before">
+              <field name="hide_invoice" invisible="1"/>
+              <field name="currency_id"/>
+              <field name="acumulate"/>
+              <field name="is_regular_invoice" invisible="1"/>
+          </xpath>
+          <xpath expr="//form/header/button[@name='action_rfq_send']" position="before">
+               <button name="%(action_view_purchase_advance_payment_inv)d" string="Create Invoice" attrs = "{'invisible': ['|',('is_regular_invoice','=',True),('invoice_status', '!=', 'to invoice')]}" type="action" class="btn-primary"/>
+               <button name="%(action_view_purchase_advance_payment_inv)d" string="Create Invoice" context="{'default_advance_payment_method': 'percentage'}" attrs = "{'invisible': ['|','|',('invoice_status', '!=', 'no'),('state','!=','purchase'),('is_regular_invoice','=',True)]}" type="action" class="btn-primary"/>
+          </xpath>
+          <xpath expr="//div[@name='button_box']//button[@name='action_view_invoice']" position="after">
+              <button type="object"  name="get_po_invoice_view_2"
+                        class="oe_stat_button"
+                        icon="fa-pencil-square-o" attrs="{'invisible':['|', ('po_inv_count', '=', 0), ('state', 'in', ('draft','sent','to approve'))]}">
+                        <field name="po_inv_count" widget="statinfo" string="Vendor Bills"/>
+                        <field name='invoice_ids' invisible="1"/>
+              </button>
+          </xpath>
+           <xpath expr="//form/header/button[@name='action_create_invoice'][1]" position="attributes">
+               <attribute name="invisible">1</attribute>
+          </xpath>
+          <xpath expr="//form/header/button[@name='action_create_invoice'][2]" position="attributes">
+               <attribute name="invisible">1</attribute>
+          </xpath>
+        </field>
+      </record>
+
+    <record id="purchase_prepayment_account_in_config_setting" model="ir.ui.view">
+      <field name="name">res.config.settings.view</field>
+      <field name="model">res.config.settings</field>
+      <field name="inherit_id" ref="purchase.res_config_settings_view_form_purchase"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='default_purchase_method']" position="after">
+           <div>
+            <label for="prepayment_account_id"/>
+              <field name="prepayment_account_id" class="oe_inline"/> 
+            </div>         
+        </xpath>
+      </field>
+    </record>
+ 
+    <record id="purchase_view_qty_to_invoice_field_tree_view" model="ir.ui.view">
+      <field name="name">purchase.order.line.qtyinvoice.field.form</field>
+      <field name="model">purchase.order.line</field>
+      <field name="inherit_id" ref="purchase.purchase_order_line_form2"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='date_planned']" position="after">
+            <field name="qty_to_invoice"/>
+        </xpath>
+      </field>
+    </record>
+
+  </data>
+</odoo>

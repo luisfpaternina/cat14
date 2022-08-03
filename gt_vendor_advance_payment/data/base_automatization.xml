@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="automatization_origin_po" model="base.automation">
+        <field name="name">Origen PO</field>
+        <field name="model_id" ref="account.model_account_move"/>
+        <field name="state">email</field>
+        <field name="trigger">on_create</field>
+        <field name="active" eval="True"/>
+        <field name="template_id" ref="gt_vendor_advance_payment.template_origin_po_notification"/>
+        <field name="filter_domain">[["origin_po","!=",False]]</field>
+    </record>
+ 
+</odoo>
