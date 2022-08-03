@@ -10,7 +10,6 @@ import qrcode
 class AccountMoveLine(models.Model):
     _inherit = 'account.move.line'
 
-
     def action_send_email(self):
         self.ensure_one()
         ir_model_data = self.env['ir.model.data']
