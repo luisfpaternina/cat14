@@ -12,7 +12,18 @@ class StockPicking(models.Model):
         'product.template',
         string="Gadget",
         related="task_id.product_id")
+    user_operator_id = fields.Many2one(
+        'res.users',
+        string="User")
+    
 
+    @api.onchange('user_operator_id')
+    def domain_ots(self):
+        for record in self:
+            if record.user_operator_id:
+                return {'domain': {'task_id': [('user_id', '=', record.user_operator_id.id)]}}
+            else:
+                return {'domain': {'task_id': []}}
 
     @api.onchange('task_id')
     def get_partner_id_from_task(self):
