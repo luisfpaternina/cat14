@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-27 12:13+0000\n"
-"PO-Revision-Date: 2022-05-27 12:13+0000\n"
+"POT-Creation-Date: 2022-08-03 18:24+0000\n"
+"PO-Revision-Date: 2022-08-03 18:24+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -421,6 +421,12 @@ msgid "Is old task"
 msgstr "Tarea vieja"
 
 #. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn__is_user
+msgid "Is user"
+msgstr "Habilitar usuarios"
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__is_warning
 #: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__is_warning
 msgid "Is warning"
 msgstr "Aviso"
@@ -778,6 +784,11 @@ msgid "State Check Gagdest"
 msgstr "Estado Chequeo del aparato"
 
 #. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn__employee_id
+msgid "Supervisor"
+msgstr ""
+
+#. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task__check_suscription_recurrent
 msgid "Suscription recurrent"
 msgstr "Suscripción recurrente"
@@ -854,18 +865,6 @@ msgid "The Pit has been checked"
 msgstr "El foso ha sido inspeccionado"
 
 #. module: sat_companies_project
-#: code:addons/sat_companies_project/models/.ipynb_checkpoints/res_partner-checkpoint.py:0
-#, python-format
-msgid "The bank account field must be filled out"
-msgstr ""
-
-#. module: sat_companies_project
-#: code:addons/sat_companies_project/models/.ipynb_checkpoints/res_partner-checkpoint.py:0
-#, python-format
-msgid "The identification number field must be filled out"
-msgstr ""
-
-#. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task__ot_type_id
 msgid "Tipo OT"
 msgstr ""
@@ -938,7 +937,6 @@ msgid "Validate potential client in partner"
 msgstr ""
 
 #. module: sat_companies_project
-#: code:addons/sat_companies_project/models/.ipynb_checkpoints/sale_order-checkpoint.py:0
 #: code:addons/sat_companies_project/models/sale_order.py:0
 #, python-format
 msgid "Verify the type of client if it is potential"

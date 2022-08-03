@@ -11,6 +11,9 @@
                     <field name="code" required="1"/>
                     <field name="name" required="1"/>
                     <field name="is_normative"/>
+                    <field name="is_user"/>
+                    <field name="employee_id" invisible="1" attrs="{'required': [('is_user', '=', True)]}" options="{'no_create': True, 'no_create_edit':True}"/>
+                    <field name="user_ids" options="{'no_create': True, 'no_create_edit':True}" widget="many2many_tags" attrs="{'required': [('is_user', '=', True)]}"/>
                     <field name="ot_type_id"/>
                 </tree>
             </field>
