@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="template_send_low_mto_company" model="mail.template">
+            <field name="name">Comunidad de propietarios/servicios jurídicos</field>
+            <field name="model_id" ref="sale_subscription.model_sale_subscription"/>
+            <field name="subject">Servicios jurídicos</field>
+            <field name="email_from">${(object.write_uid.email_formatted or user.email_formatted) | safe}</field>
+            <field name="email_to">${object.partner_id.id}</field>
+            <field name="lang">${user.lang}</field>
+            <field name="auto_delete" eval="False"/>
+            <field name="body_html"><![CDATA[
+                <br/>
+                <p>Comunidad de Propietarios</p>
+                <p>Muy Sres. nuestros:</p>
+                <p>En primer lugar agradecer su confianza depositada en {object.company_id.name} para el mantenimiento de su ascensor. Del mismo modo queremos hacerles saber que desde que usted firma el contrato de mantenimiento, ${object.company_id.name} pone a disposición de su comunidad nuestros servicios jurídicos para el asesoramiento ante cualquier consecuencia que pueda ocasionar el cambio de empresa conservadora.</p>
+                <p>La comunidad de propietarios se compromete a facilitar en todo momento y de forma inmediata la información de cualquier tipo (comunicaciones, cartas o notificaciones) que sea destinataria por parte de la anterior empresa conservadora u organismo oficial, en relación al cambio de empresa conservadora, colaborando en todo momento para un  correcto desarrollo del derecho de defensa de la comunidad ejercido a través de sus representantes, en este caso procuradores y abogados designados. </p>
+                <p>Una vez conocida la sentencia judicial o acuerdo extrajudicial, como consecuencia de la resolución unilateral del contrato de mantenimiento suscrito con la anterior empresa conservadora, la comunidad de propietarios o persona física o jurídica se compromete a continuar el mantenimiento con {object.company_id.name} durante un periodo determinado que se acuerde en el anexo de ampliación que se firme en ese momento. A cambio, {object.company_id.name}, por medio del presente documento, se compromete a asumir a su costa la indemnización a que hubiere lugar, por sentencia judicial o acuerdo extrajudicial. Cantidad de la que ${object.company_id.name} no se hace responsable en el caso de resolución anticipada del contrato de mantenimiento suscrito con {object.company_id.name} por parte del cliente, teniendo que abonar este dichas cantidades</p>
+                <p>De conformidad con lo dispuesto firman,</p>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <strong>Aceptado el cliente</strong>                 <strong>${object.company_id.name}</strong>
+                CONSENTIMIENTO INFORMADO
+
+REGLAMENTO EUROPEO 679/2016 DE PROTECCIÓN DE DATOS PERSONALES
+LEY ORGÁNICA 3/2018 DE PROTECCIÓN DE DATOS PERSONALES Y GARANTÍA DE LOS DERECHOS DIGITALES
+
+Identificación del Responsable.
+
+Le informamos que los datos personales que Usted nos proporciona son incorporados a un tratamiento de datos personales denominado CLIENTES cuyo responsable es {object.company_id.name} con NIF {object.company_id.vat} y con domicilio en {object.company_id.street}, {object.company_id.city}, {object.company_id.state_id.name}. Puede contactar con elResponsable, bien por teléfono en el número {object.company_id.phone} o bien mediante correo electrónico en el buzón {object.company_id.email}.
+
+Finalidad.
+
+­La finalidad es la gestión de la relación mercantil, tanto desde un punto de vista administrativo y de cumplimiento de obligaciones fiscales, como desde un punto de vista comercial y de marketing (comunicaciones, información comercial y gestión sobre productos y servicios). Distribución y comunicación con carácter publicitario.
+
+Plazo de Conservación.
+
+­Una vez finalizada la relación contractual, o prestación de servicio el plazo de conservación de los datos será de 6 años para dar cumplimiento a obligaciones legales, fiscales y mercantiles. Desde un punto de vista comercial y de marketing los datos serán conservados indefinidamente mientras exista un interés mutuo. Respecto a los tratamientos de datos de publicidad y uso de imágenes los datos serán conservados indefinidamente mientras exista un interés mutuo. El usuario podrá ejercitar los derechos reflejados más abajo.
+
+Decisiones automatizadas y elaboración de perfiles.
+
+No se toman decisiones automatizadas ni se elaboran perfiles.
+
+Base Jurídica del Tratamiento.
+
+­La base jurídica del tratamiento es la ejecución de un contrato mercantil o la prestación de un servicio, así como el cumplimiento de obligaciones fiscales y mercantiles. Además de consentimiento EXPLÍCITO para fines determinados. Consentimiento explicito para los tratamientos de datos de publicidad y uso de imágenes los datos.
+
+Destinatarios de cesiones.
+
+­Se prevén cesiones a bancos, cajas de ahorro y cajas rurales, además de aquellas que están autorizadas por ley.
+
+Transferencias Internacionales.
+
+­No se realizan transferencias internacionales.
+
+Derechos.
+
+De acuerdo con la legislación vigente tiene los siguientes derechos:
+
+- Derecho a solicitar el acceso a sus datos personales.  - Derecho a solicitar su rectificación o supresión.  - Derecho a solicitar la limitación de su tratamiento - Derecho a oponerse al tratamiento.  - Derecho a la portabilidad de los datos.
+
+Para ejercer sus derechos, dirigiéndose por escrito con fotocopia de DNI o documento identificativo equivalente y solicitando el correspondiente formulario a {object.company_id.name} o a través de la dirección de correo {object.company_id.email} con el Asunto “Derechos Ley Protección de Datos”. Opcionalmente, puede redirigir al interesado a la Autoridad de Control competente para obtener información adicional acerca de sus derechos. Asimismo, en caso de considerar vulnerado su derecho a la protección de datos personales, podrá interponer una reclamación ante laAgencia Española de Protección de Datos.
+
+ 
+
+De conformidad con el Reglamento (UE) 2016/679, de 27 de abril de 2016, o Reglamento General de Protección de Datos (RGPD), en lo que no contradiga el mencionado Reglamento, por lo dispuesto en la Ley Orgánica 3/2018 de protección de datos de carácter personal y garantías de los derechos digitales y con la Ley 34/2002, de 11 de julio, de servicios de la sociedad de la información y de comercio electrónico (LSSI-CE) deseo recibir información relacionada con {object.company_id.name} por cualquier medio facilitado a la empresa, entendiéndose medios electrónicos y medios de comunicación postales.
+
+Cuadro de texto: ☐   SI quiero   ☐  NO quiero
+
+
+
+La inacción en la selección anterior se entenderá como NO.
+
+Consentimiento. En {object.company_id.city}
+COMUNIDAD DE PROPIETARIOS
+{object.partner_id.name}
+
+ 
+
+{object.partner_id.name} con NIF/CIF {object.partner_id.vat} doy mi consentimiento expreso de acuerdo con lo expuesto en el presente documento.
+
+Firmado. 
+                 ]]>
+            </field>
+        </record>
+    </data>
+</odoo>

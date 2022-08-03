@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="template_email_contract_suspension_repot" model="mail.template">
+            <field name="name">Suspensión de contrato</field>
+            <field name="model_id" ref="sale_subscription.model_sale_subscription"/>
+            <field name="subject">Notificación suspensión de contrato</field>
+            <field name="email_from">${(object.write_uid.email_formatted or user.email_formatted) | safe}</field>
+            <field name="email_to">${object.partner_id.id}</field>
+            <field name="lang">${user.lang}</field>
+            <field name="auto_delete" eval="False"/>
+            <field name="body_html"><![CDATA[
+                <center><strong>SUSPENSION CONTRATO MANTENIMIENTO ASCENSOR.</strong></center>
+                <br/>
+                <p>COMUNIDAD DE PROPIETARIOS</p>
+                <p>Por una parte, ${object.company_id.partner_manager_id.name}, mayor de edad, con DNI Nº ${object.company_id.partner_manager_id.vat} en nombre y representación de la Mercantil  ${object.company_id.name} con domicilio en ${object.company_id.street} y con CIF Nº ${object.company_id.partner_id.vat},</p>
+                <br/>
+                <p>Y por otra, ${object.partner_id.name}, mayor de edad, con DNI Nº ${object.partner_id.vat}. como Presidente de la Comunidad de Propietarios </p>
+                <p>Se reconocen mutuamente capacidad legal bastante para contratar y obligarse, formalizando la presente SUSPENSION DEL CONTRATO DE MANTENIMIENTO DE ASCENSOR, que se sujetará a cuanto determinen las siguientes estipulaciones, y a tal efecto:</p>
+                <strong><p>ACUERDAN:</p></strong>
+                <p>Primero.-Que la COMUNIDAD DE PROPIETARIOS y ${object.company_id.name} suscribieron con fecha ${object.date_start} contrato de mantenimiento del ascensor RAE Nº ${object.product_id.rae} sito en __________________________________ con una duración inicial de _________años.</p>
+                <p>Segundo.-Que mediante el presente escrito ambas partes acuerdan proceder con fecha de hoy y de mutuo acuerdo a su SUSPENSION  por periodo  en el que no se realizará mantenimiento ni reparación alguna al ascensor y en consecuencia  el cliente no deberá abonar el precio pactado,  quedando por tanto en suspenso el contrato y por ende todas las clausulas y acuerdos que constan en el mismo así como en los anexos que se hayan podido firmar vinculados a la prestación del servicio, por lo que ${object.company_id.name} no es responsable de lo que pueda suceder al ascensor en dicho periodo de suspensión.</p>
+                <p>Y en prueba de conformidad a cuanto antecede, lo suscriben los interesados por duplicado y a un solo efecto, quedando un ejemplar en poder de cada parte y todo ello en el lugar y fecha a su principio indicados.</p>
+                <br/><br/>
+                <p>${object.company_id.name}</p>
+                 ]]>
+            </field>
+        </record>
+    </data>
+</odoo>

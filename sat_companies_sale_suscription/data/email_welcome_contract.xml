@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Template and notification section -->
+    <data>
+        <record id="action_welcome_email_contract_signature" model="ir.actions.report">
+            <field name="name">Correo de bienvenida</field>
+            <field name="model">sale.subscription</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">sat_companies_sale_suscription.report_contract_sale</field>
+            <field name="report_file">sat_companies_sale_suscription.report_contract_sale</field>
+            <field name="print_report_name">'Test correo de bienvenida - %s' % (object.name)</field>
+        </record>
+        
+        <template id="report_contract_sale">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.external_layout">
+                        <div class="page">
+                            <h2>Report title</h2>
+                            <p>Suscripción</p>
+                        </div>
+                        <div>
+                        <!--
+                            <t t-foreach="o.type_service_id" t-as="s">
+                                <ul>
+                                    <li><span t-esc="s.type_service_id.name"/></li>
+                                </ul>                    
+                            </t>
+                        -->
+                        </div>
+                        <div>
+                            <img  id="signature_pad_image_document" t-att-src="o.signature_url_text"/>
+                        </div>
+                    </t>
+                </t>
+            </t>
+
+        </template>
+
+        <record id="email_welcome_contract_signature" model="mail.template">
+            <field name="name">Email welcome contract signature</field>
+            <field name="model_id" ref="sale_subscription.model_sale_subscription"/>
+            <field name="subject">${object.company_id.name}</field>
+            <field name="email_from">${(object.user_id.email_formatted or user.email_formatted) | safe}</field>
+            <field name="partner_to">${object.partner_id.id}</field>
+            <field name="body_html" type="html">
+                <div style="margin: 0px; padding: 0px;">
+                    <p style="margin: 0px; padding: 0px; font-size: 13px;">
+                        
+                        <br/><br/>
+                       
+                        <br/><br/>
+                        
+                        <br/>
+                        <div style="margin:16px 0px 16px 0px;">
+                                <a href="/welcome/${object.id}" style="background-color:#875A7B;padding: 20px 30px 20px 30px; text-decoration: none; color: #fff; border-radius: 5px; font-size:13px;">
+                                    Signature
+                                </a>
+                        </div>
+                    </p>
+                </div>
+            </field>
+            <field name="report_name">${(object.name or '').replace('/','_')}</field>
+            <field name="lang">${object.partner_id.lang}</field>
+            <field name="auto_delete" eval="True"/>
+        </record>
+        <record id="pdf_attachment_signatured_wel" model="mail.template">
+            <field name="name">pdf attachment</field>
+            <field name="model_id" ref="sale_subscription.model_sale_subscription"/>
+            <field name="subject">${object.company_id.name}</field>
+            <field name="email_from">${(object.user_id.email_formatted or user.email_formatted) | safe}</field>
+            <field name="partner_to">${object.partner_id.id}</field>
+            <field name="body_html" type="html">
+                <div style="margin: 0px; padding: 0px;">
+                    <p style="margin: 0px; padding: 0px; font-size: 13px;">
+                        <br/>
+                        <div style="margin:16px 0px 16px 0px;">
+                                <a href="/welcome/${object.id}" style="background-color:#875A7B;padding: 20px 30px 20px 30px; text-decoration: none; color: #fff; border-radius: 5px; font-size:13px;">
+                                    Archivo Adjunto
+                                </a>
+                        </div>
+                    </p>
+                </div>
+            </field>
+            <field name="report_name">${(object.name or '').replace('/','_')}</field>
+            <field name="lang">${object.partner_id.lang}</field>
+            <field name="auto_delete" eval="True"/>
+        </record>
+    </data>
+</odoo>

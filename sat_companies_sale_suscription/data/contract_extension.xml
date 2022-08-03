@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="template_email_contract_extension" model="mail.template">
+            <field name="name">Ampliación de contrato</field>
+            <field name="model_id" ref="sale_subscription.model_sale_subscription"/>
+            <field name="subject">Notificación ampliación de contrato</field>
+            <field name="email_from">${(object.write_uid.email_formatted or user.email_formatted) | safe}</field>
+            <field name="email_to">${object.partner_id.id}</field>
+            <field name="lang">${user.lang}</field>
+            <field name="auto_delete" eval="False"/>
+            <field name="body_html"><![CDATA[
+                <center><strong>ANEXO AMPLIACION DURACION CONTRATO MANTENIMIENTO ASCENSOR.</strong></center>
+                <br/>
+                <p>COMUNIDAD DE PROPIETARIOS</p>
+                <p>Por una parte, ${object.company_id.partner_manager_id.name}, mayor de edad, con DNI Nº ${object.company_id.partner_manager_id.vat} en nombre y representación de la Mercantil  ${object.company_id.name} con domicilio en ${object.company_id.street} y con CIF Nº ${object.company_id.partner_id.vat},</p>
+                <br/>
+                <p>Y por otra, ${object.partner_id.name}, con DNI Nº ${object.partner_id.vat}. como Presidente de la Comunidad de Propietarios</p>
+                <p>Se reconocen mutuamente capacidad legal bastante para contratar y obligarse, formalizando el presente <strong>ANEXO DE AMPLIACION DE LA DURACION DEL CONTRATO DE MANTENIMIENTO DE ASCENSOR,</strong> que se sujetará a cuanto determinen las siguientes estipulaciones, y a tal efecto:</p>
+                <strong><p>ACUERDAN:</p></strong>
+                <p><strong>Primero.-</strong> Que con fecha ${object.date_start} ambas partes suscriben contrato de mantenimiento de ascensor por periodo de …………… (… años), renovable por iguales periodos. Que será vigente a partir del inicio del próximo trimestre desde la firma del presente documento. </p>
+                <p><strong>Segundo.-</strong>Segundo.-Que como bonificación por la ampliación de la duración del contrato, la Mercantil ${object.company_id.name} abonará la cantidad de  ${object.recurring_total}(€) por todos los gastos ocasionados a la COMUNIDAD DE PROPIETARIOS con motivo del procedimiento judicial que se ha tramitado en Juzgado de 1ª Instancia Nº …..procedimiento ……….., cuya sentencia nº …………… se ha dictado con fecha ………….. Los gastos satisfechos a la comunidad incluyen principal, costas, intereses, defensa letrada y representación del procurador.</p>
+                <p><strong>Tercero.-</strong>Para el caso de que la COMUNIDAD DE PROPIETARIOS resuelva anticipadamente el contrato de mantenimiento antes del transcurso de la duración pactada, ésta deberá reintegrar a la Mercantil  ${object.company_id.name} la suma total de los gastos devengados por el procedimiento judicial antes señalado y que hayan sido abonados por la misma. </p>
+                <p><strong>Cuarto -</strong> Que ambas partes se someten, del modo más expreso, a los Tribunales de Justicia de Elche para cualquier divergencia, con renuncia a otro fuero que les pudiera corresponder.</p>
+                <p>Y en prueba de conformidad a cuanto antecede, lo suscriben los interesados por duplicado y a un solo efecto, quedando un ejemplar en poder de cada parte y todo ello en el lugar y fecha a su principio indicados.</p>
+                <br/><br/>
+                <p>${object.company_id.name}</p>
+                 ]]>
+            </field>
+        </record>
+    </data>
+</odoo>

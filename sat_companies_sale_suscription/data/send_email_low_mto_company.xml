@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="template_send_low_mto_template" model="mail.template">
+            <field name="name">Carta comunicación mantenedora baja</field>
+            <field name="model_id" ref="sale_subscription.model_sale_subscription"/>
+            <field name="subject">Carta comunicación mantenedora baja</field>
+            <field name="email_from">${(object.write_uid.email_formatted or user.email_formatted) | safe}</field>
+            <field name="email_to">${object.partner_id.id}</field>
+            <field name="lang">${user.lang}</field>
+            <field name="auto_delete" eval="False"/>
+            <field name="body_html"><![CDATA[
+                <br/>
+                <p>Comunidad de Propietarios</p>
+                <p>${object.partner_id.name}</p>
+                <p>Muy Sres. míos</p>
+                <p>Es nuestro deseo dar por concluidos sus servicios de mantenimiento del ascensor, por lo que por el presente les comunicamos formalmente que con fecha de de damos por resuelto el referido contrato de mantenimiento, por lo que expresamente les requerimos a fin de que a partir de dicho día inclusive, se abstengan de entrar en la escalera de la comunidad, así como de realizar cualquier actuación en el ascensor si no cuentan con el consentimiento expreso y por escrito de la comunidad.Asimismo les REQUIERO para que en el improrrogable plazo de 15 días nos faciliten los códigos de acceso de la maniobra del ascensor RAE Nº ${object.product_id.rae} sito en  ${object.partner_id.street} ${object.partner_id.city}  dado que éstos pertenecen al titular del mismo, la comunidad de propietarios ${object.partner_id.name} De no atender esta petición amistosa nos veremos obligados a instar cuantas acciones legales sean necesarias para la defensa de nuestros legítimos intereses , indicándoles que, de no facilitar dichos códigos, serán únicos responsables de cuantos costes , daños y perjuicios suponga para la comunidad la falta de acceso a la maniobra por no disponer de los mismos</p>
+                <p>Sin nada mas, reciban un saludo.</p>
+                <br></br> <br></br>
+                <center>El Presidente de la Comunidad</center>
+                <br></br>
+                 ]]>
+            </field>
+        </record>
+    </data>
+</odoo>

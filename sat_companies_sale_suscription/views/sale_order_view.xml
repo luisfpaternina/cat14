@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_sale_order_inherit_sat_companies_suscription" model="ir.ui.view">
+        <field name="name">sale.orderform.suscription.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[(@name='partner_id')]" position="after">
+                <field name="acc_number"/> 
+            </xpath>
+
+            <xpath expr="//form/sheet/notebook/page[@name='order_lines']" position="after">
+                <page string='Free Months'>
+                    <group>
+                        <field name="exclude_months"/>
+                    </group>
+                    <group attrs="{'invisible': [('exclude_months', '=', False)]}">
+                        <field name="subscription_month_ids"/>
+                    </group>
+                </page>
+            </xpath>
+
+        </field> 
+    </record>
+    <record id="view_sale_order_type_contract" model="ir.ui.view">
+        <field name="name">sale.order.form.type.contract</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sat_companies_sale.view_sale_order_inherit_sat_companies_sale"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[(@name='sale_type_id')]" position="after">
+                <field name="check_contract_type" invisible="True"/>
+                <field name="gadgets_contract_type_id"
+                    attrs="{'invisible': [('check_contract_type', '=', False)]}"/>
+            </xpath>
+
+        </field> 
+    </record>
+</odoo>

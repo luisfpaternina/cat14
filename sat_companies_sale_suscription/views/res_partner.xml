@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="inherit_view_res_partner_sat_subscription" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="priority" eval="1"/>
+        <field name="inherit_id" ref="account.view_partner_property_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='acc_number']" position="after">
+                <field name="is_default"/>
+            </xpath>
+
+        </field>
+    </record>
+ 
+</odoo>     

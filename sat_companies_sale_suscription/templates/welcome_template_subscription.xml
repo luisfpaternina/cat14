@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data >
+        <template id="welcome_subscription_report">
+            <script type="text/javascript" src="/sat_companies_sale_suscription/static/src/js/javascript.js"></script>
+            <link rel="stylesheet" href="/sat_companies_sale_suscription/static/src/css/sale_subscription.css"/>
+            <t t-call="website.layout">
+                <main>
+                    <div class="container text-center" hidden="True">
+                        <p>REF</p>
+                    </div>
+                    <div class="alert alert-success" role="alert" id="alertSignatureSent" hidden="True">
+                      <h4 class="alert-heading">Well done!</h4>
+                      <p>The signed contract has been sent.</p>
+                    </div>
+                    <div class = "alert alert-info alert-dismissible rounded-0 fade show d-print-none css_editable_mode_hidden">
+                        <div class = "container">
+                            <div class="text-center">
+                                This is a preview of the customer portal.
+                            </div>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"> × </button>
+                        </div>
+                    </div>
+                    <div class="container text-center" >
+                        <div class="card">
+                            <!--
+                            <div class="col-sm-auto mt8">
+                                <a role="button" class="btn btn-primary" data-toggle="modal" data-target="#modalaccept" href="#"><i class="fa fa-check"/>Firmar</a>
+                            </div>
+                            <div class="col-sm-auto mt8">
+                                <button id="upload_signature" type="button" class="btn btn-primary">Cargar firma</button>
+                            </div>
+                            <div class="col-sm-auto mt8">
+                                <button id="preview_sale_contract" type="button" class="btn btn-primary">Ver contrato</button>
+                            </div>
+                            -->
+                            <p>
+                                <h2><span>Seleccione una de las opciones para proceder con su firma:</span> </h2>
+                                
+                            </p>
+                            <div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="signature_option" id="signature_draw_option" value="option1" checked="checked"/>
+                                    <label class="form-check-label" for="inlineRadio1">Draw</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="signature_option" id="signature_upload_option" value="option2"/>
+                                    <label class="form-check-label" for="inlineRadio2">Upload File</label>
+                                </div>
+                            </div>
+                            
+                            <div class="container" id="menu_signature_pad">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h1>E-Signature</h1>
+                                        <p>Sign in the canvas below</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <canvas id="sig-canvas" width="620" height="160">
+                                            Get a better browser, bro.
+                                        </canvas>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <button class="btn btn-primary" id="sig-submitBtn">Submit Signature</button>
+                                        <button class="btn btn-default" id="sig-clearBtn">Clear Signature</button>
+                                    </div>
+                                </div>
+                                <br/>
+                                <div class="row" hidden="True">
+                                    <div class="col-md-12">
+                                        <textarea id="sig-dataUrl" class="form-control" rows="5">Data URL for your signature will go here!</textarea>
+                                    </div>
+                                </div>
+                                <br/>
+                                <div class="row" hidden="True">
+                                    <div class="col-md-12">
+                                        <img id="sig-image" src="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <br></br>
+                            <div class="form-group" id="menu_signature_upload" hidden="True">
+                                <br></br>
+                                <div class="text-center">
+                                    <div class="container" id="upload_file_block">
+                                        <input type="file" id="image_input" accept="image/png, image/jpg"/>
+                                        <div id="display_image"></div>
+                                    </div>
+                                </div>
+                                <br></br>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <button class="btn btn-primary" id="sig_submitBtn_file">Submit File</button>
+                                        <button class="btn btn-default" id="sig_clearBtn_file">Clear File</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="container">
+                        <button class="btn btn-primary" id="send_document">Send Document signatured</button>
+                        <div class="card">
+                            <t t-call="web.html_container">
+                                <t t-call="web.external_layout">
+                                    <div class="page">
+                                        <h2>Report</h2>
+                                        <p>Suscripción<span t-esc="name"/></p>
+                                    </div>
+                                    <div>
+                                    <!--
+                                        <t t-foreach="sale_object.type_service_id" t-as="s">
+                                            <ul>
+                                                <li><span t-esc="s.type_service_id.name"/></li>
+                                            </ul>                    
+                                        </t>
+                                    -->
+                                    </div>
+                                    <div>
+                                        <img id="signature_pad_image_document" src=""/>
+                                    </div>
+                                </t>
+                            </t>
+                        </div>
+                    </div>
+
+                    <!--
+                    <body class="table-light">
+                        <div class="card">
+                            <div role="dialog" class="modal fade" id="modalaccept">
+
+                                <div class="modal-dialog">
+                                    <form id="accept" method="POST" class="js_accept_json modal-content js_website_submit_form">
+                                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                        <header class="modal-header">
+                                            <h4 class="modal-title">Validate Order</h4>
+                                        </header>
+                                        
+                                    </form>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </body>
+                    -->
+                </main>
+            <!--
+                <link rel="stylesheet"
+                href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+                integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+                crossorigin="anonymous"/>
+                <body class="table-light">
+                    <div role="dialog" class="modal fade" id="modalaccept">
+                        <div class="modal-dialog">
+                            <form id="accept" method="POST" class="js_accept_json modal-content js_website_submit_form">
+                                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                <header class="modal-header">
+                                    <h4 class="modal-title">Validate Order</h4>
+                                </header>
+                                <main class="modal-body" id="sign-dialog">
+                                    <p>
+                                        <span>FIRMA DE CONTRATO:</span>
+                                        <ul>
+                                            <li><span>Seleccione una de las opciones para proceder con su firma:</span> </li>
+                                        </ul>
+                                        <div class="o_portal_signature_form"/>
+                                    </p>
+                                </main>
+                            </form>
+                        </div>
+                    </div>
+                    <br></br>
+                    <br></br>
+                    <div id="div_principal_id" style="text-align: -webkit-center" class="table-light">
+                        <form class="col-sm-5">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h2>Header</h2>
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <div class="form-group">
+                                            <label for="formGroupExampleInput">Example label</label>
+                                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="col-sm-auto mt8">
+                                        <a role="button" class="btn btn-primary" data-toggle="modal" data-target="#modalaccept" href="#"><i class="fa fa-check"/>Firmar</a>
+                                    </div>
+                                    <div class="col-sm-auto mt8">
+                                        <button id="upload_signature" type="button" class="btn btn-primary">Cargar firma</button>
+                                    </div>
+                                    <div class="col-sm-auto mt8">
+                                        <button id="preview_sale_contract" type="button" class="btn btn-primary">Ver contrato</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div>
+                        <h1>DOCUMENTO CONTRATO</h1>
+                        <t t-call="web.html_container">
+                            <t t-call="web.external_layout">
+                                <div class="page">
+                                    <h2>Report title</h2>
+                                    <p>Cotización Número <span t-esc="name"/></p>
+                                </div>
+                            </t>
+                        </t>
+                    </div>
+                </body>
+            -->
+            </t>
+        </template>
+    </data>
+</odoo>

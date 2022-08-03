@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="sale_subscription_inherit_form" model="ir.ui.view">
+        <field name="name">sale.subscription.form.inherit</field>
+        <field name="model">sale.subscription</field>
+        <field name="inherit_id" ref="sale_subscription.sale_subscription_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form/sheet/group[1]" position="after">
+                <group name="dates_group">
+                    <field name="check_contract_type" invisible="True"/>
+                    <group name="group_left" string="Gadget information">
+                        <field name="show_technical" invisible="True"/>
+                        <field name="product_id" domain = "[('is_gadget','=',True),('partner_id','=',partner_id)]" required="True"/>
+                        <field name="task_user_id" attrs="{'invisible': [('show_technical', '!=', True)]}"/>
+                        <field name="low_date" invisible="True"/>
+                        <field name="res_partner_low_mto_id" invisible="True"/>
+                    </group>
+                    <group name="group_right" string="Information project">
+                        <field name="sale_type_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                        <field name="udn_type_id" options="{'no_create': True, 'no_create_edit':True}" attrs="{'required': [('sale_type_id', '!=', False)]}"/>
+                        <field name="gadgest_contract_type_id" invisible="1"/>
+                        <field name="pdf_file_sale_contract"/>
+                        <field name="is_extension" attrs="{'invisible': [('is_extension_stage', '!=', True)]}"/>
+                        <field name="is_extension_stage" invisible="1"/>
+                        <field name="is_suspension_stage" invisible="1"/>
+                        <field name="recurring_rule_boundary" invisible="1"/>
+                        <field name="document_ids" widget="many2many_binary" invisible="1"/>
+                        <field name="check_signature" invisible="1"/>
+                        <field name="pdf_file_welcome" invisible="1"/>
+                        <field name="stage_code" invisible="1"/>
+                        <field name="exclude_months"/>
+                        <field name="lines_count"/>
+                    </group>
+
+                </group>
+            </xpath>
+
+            <xpath expr="//form[1]/sheet[1]/div[not(@name)][3]/notebook[1]" position="inside">
+                <page string="Contract dates" name="contract_dates_page" invisible="1">
+                  <group>
+                    
+                  </group>
+                </page>
+                <page string='Free Months' attrs="{'invisible': [('exclude_months', '=', False)]}">
+                        <group>
+                            <field name="subscription_month_ids"/>
+                        </group>
+                </page>
+            </xpath>
+
+            <xpath expr="//header" position="inside">
+                <button name="action_get_attachment"
+                        type="object"
+                        string="Email welcome"
+                        invisible="1"/>
+            </xpath>
+
+            <xpath expr="//header" position="inside">
+                <button 
+                string="Discontinued"
+                name="button_rejected_stage"
+                type="object"
+                class="btn-primary"
+                attrs="{'invisible': [('stage_code', '=', '1')]}"/>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="sale_subscription_inherit_kanban" model="ir.ui.view">
+        <field name="name">sale.subscription.form.inherit</field>
+        <field name="model">sale.subscription</field>
+        <field name="inherit_id" ref="sale_subscription.sale_subscription_view_kanban"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='code']" position="after">
+                <field name="product_id" display="full"/>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="sale_subscription_inherit_tree" model="ir.ui.view">
+        <field name="name">sale.subscription.form.inherit</field>
+        <field name="model">sale.subscription</field>
+        <field name="inherit_id" ref="sale_subscription.sale_subscription_view_list"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="product_id"/>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="custom_view_sale_subscription_search">
+            <field name="name">custom.sale.subscription.search</field>
+            <field name="model">sale.subscription</field>
+            <field name="inherit_id" ref="sale_subscription.sale_subscription_view_search"/>
+            <field name="arch" type="xml">
+                <field name="user_id" position="after">
+                    <separator/>
+                    <field name="product_id"/>
+                </field>
+               
+                <xpath expr="//search/group" position="inside">
+                    <filter string="Aparato" name="product_id" context="{'group_by':'product_id'}"/>
+                </xpath>
+
+                <xpath expr="//search/filter[@name='filter_date_start']" position="after">
+                    <filter string="Aparato" name="product_id" domain="[('product_id', '!=', False)]"/>
+                </xpath>
+
+            </field>
+    </record>
+    
+</odoo>     

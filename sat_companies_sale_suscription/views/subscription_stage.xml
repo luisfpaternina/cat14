@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="sale_subscription_stage_inherit_form" model="ir.ui.view">
+        <field name="name">sale.subscription.stage.form.inherit</field>
+        <field name="model">sale.subscription.stage</field>
+        <field name="inherit_id" ref="sale_subscription.sale_subscription_stage_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='sequence']" position="after">
+                <field name="stage_code"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

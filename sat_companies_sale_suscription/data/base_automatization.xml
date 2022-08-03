@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="automatization_sat_companies_suspension" model="base.automation">
+        <field name="name">Suspensión de contrato</field>
+        <field name="model_id" ref="sale_subscription.model_sale_subscription"/>
+        <field name="state">email</field>
+        <field name="trigger">on_write</field>
+        <field name="active" eval="True"/>
+        <field name="template_id" ref="sat_companies_sale_suscription.template_email_contract_suspension_repot"/>
+        <field name="filter_domain">[["stage_id.stage_code","=","1"]]</field>
+    </record>
+
+    <record id="automatization_sat_companies_extension" model="base.automation">
+        <field name="name">Ampliación de contrato</field>
+        <field name="model_id" ref="sale_subscription.model_sale_subscription"/>
+        <field name="state">email</field>
+        <field name="trigger">on_write</field>
+        <field name="active" eval="True"/>
+        <field name="template_id" ref="sat_companies_sale_suscription.template_email_contract_extension"/>
+        <field name="filter_pre_domain">[["stage_id.stage_code","=","2"]]</field>
+        <field name="filter_domain">[["is_extension","=",True]]</field>
+    </record>
+
+    <record id="automatization_sat_companies_subscription_expired" model="base.automation">
+        <field name="name">Notificar vencimiento de suscripción</field>
+        <field name="model_id" ref="sale_subscription.model_sale_subscription"/>
+        <field name="state">next_activity</field>
+        <field name="trigger">on_create_or_write</field>
+        <field name="active" eval="True"/>
+        <field name="activity_type_id" ref="mail.mail_activity_data_todo"/>
+        <field name="activity_user_id" ref="base.user_admin"/>
+        <field name="activity_summary"></field>
+        <field name="activity_date_deadline_range">30</field>
+        <field name="filter_pre_domain">[["recurring_rule_boundary","=","limited"]]</field>
+        <field name="filter_domain">[["recurring_rule_boundary","=","limited"]]</field>
+    </record>
+
+    <record id="automatization_welcome_client" model="base.automation">
+        <field name="name">Correo de bienvenida</field>
+        <field name="model_id" ref="sale_subscription.model_sale_subscription"/>
+        <field name="state">email</field>
+        <field name="trigger">on_create</field>
+        <field name="active" eval="True"/>
+        <field name="template_id" ref="sat_companies_sale_suscription.template_email_welcome"/>
+        <field name="filter_pre_domain"></field>
+        <field name="filter_domain"></field>
+    </record>
+
+    <record id="automatization_fired_subscription" model="base.automation">
+        <field name="name">¡Gracias! baja</field>
+        <field name="model_id" ref="sale_subscription.model_sale_subscription"/>
+        <field name="state">email</field>
+        <field name="trigger">on_create_or_write</field>
+        <field name="active" eval="True"/>
+        <field name="template_id" ref="sat_companies_sale_suscription.template_send_email_fired_template"/>
+        <field name="filter_pre_domain">[["stage_id.stage_code","=","5"]]</field>
+        <field name="filter_domain">[["stage_id.stage_code","=","5"]]</field>
+    </record>
+
+    <record id="automatization_welcome_mto_subscription" model="base.automation">
+        <field name="name">Comunidad de propietarios/servicios jurídicos</field>
+        <field name="model_id" ref="sale_subscription.model_sale_subscription"/>
+        <field name="state">email</field>
+        <field name="trigger">on_create</field>
+        <field name="active" eval="True"/>
+        <field name="template_id" ref="sat_companies_sale_suscription.template_send_low_mto_company"/>
+        <field name="filter_pre_domain"></field>
+        <field name="filter_domain"></field>
+    </record>
+
+    <record id="automatization_low_mto_company_subscription" model="base.automation">
+        <field name="name">Carta comunicación mantenedora baja</field>
+        <field name="model_id" ref="sale_subscription.model_sale_subscription"/>
+        <field name="state">email</field>
+        <field name="trigger">on_create</field>
+        <field name="active" eval="True"/>
+        <field name="template_id" ref="sat_companies_sale_suscription.template_send_low_mto_template"/>
+        <field name="filter_pre_domain"></field>
+        <field name="filter_domain"></field>
+    </record>
+
+</odoo>

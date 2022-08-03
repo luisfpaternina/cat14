@@ -1,0 +1,5 @@
+id,name,active
+id_001,"IMPORTE MANTENIMIENTO",True
+id_002,"IMPORTE NORMATIVA",True
+id_003,"MAL SERVICIO",True
+id_004,"OTROS",True

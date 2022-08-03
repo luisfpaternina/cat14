@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="template_send_email_fired_template" model="mail.template">
+            <field name="name">¡Gracias! Baja</field>
+            <field name="model_id" ref="sale_subscription.model_sale_subscription"/>
+            <field name="subject">¡Gracias! Baja</field>
+            <field name="email_from">${(object.write_uid.email_formatted or user.email_formatted) | safe}</field>
+            <field name="email_to">${object.partner_id.id}</field>
+            <field name="lang">${user.lang}</field>
+            <field name="auto_delete" eval="False"/>
+            <field name="body_html"><![CDATA[
+                <strong align="right">
+                ${object.partner_id.name}<br></br>
+                ${object.partner_id.street}<br></br>
+                ${object.partner_id.zip}${object.partner_id.city}${object.partner_id.state_id.name}<br></br>
+                </strong>
+                <br/>
+                <p>Estimados vecinos,</p>
+                <br></br>
+                <p>Recientemente hemos recibido la rescisión de contrato de mantenimiento del ascensor de su comunidad con nuestra compañía, que le comunico se hará efectiva</p>
+                <p>Queremos mostrarles nuestro más sincero agradecimiento por la confianza que han depositado durante todo este tiempo en nuestra compañía. Ha sido para nosotros una satisfacción contribuir al buen funcionamiento y a la seguridad del ascensor del edificio. </p>
+                <strong>¡MUCHAS GRACIAS!</strong>
+                <p>Porque durante este tiempo de colaboración hemos podido contribuir al mantenimiento del empleo en la ciudad y  al desarrollo de planes de responsabilidad social que nos han permitido apoyar iniciativas dirigidas a los más desfavorecidos o a fomentar el deporte amateur, sobre todo entre los más jóvenes.</p>
+                <strong>A partir de ahora vamos a trabajar con más empeño si cabe para recuperar su confianza y para que cuando lo consideren oportuno volvamos a ser la empresa de mantenimiento de su ascensor. </strong>
+                <strong>Por último, para seguir avanzando en el sistema de mejora continua de nuestra empresa, sería muy útil para nosotros que nos informaran de los motivos por la que han decidido dar de baja nuestro servicio, con un mensaje al correo ${object.company_id.email}</strong>
+                <p>Atentamente,</p>
+                <strong>${object.company_id.name}</strong>
+                 ]]>
+            </field>
+        </record>
+    </data>
+</odoo>
