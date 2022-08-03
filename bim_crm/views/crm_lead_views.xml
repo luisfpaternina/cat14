@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+        <record id="crm_case_form_view_oppor" model="ir.ui.view">
+            <field name="name">crm.lead.oppor.inherited.crm</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+            <field name="arch" type="xml">
+
+                <button name="action_schedule_meeting" position="after">
+                    <button class="oe_stat_button" type="object"
+                        name="action_view_bim_project" icon="fa-building-o" attrs="{'invisible': [('type', '=', 'lead')]}"
+                        groups="base_bim_2.group_user_bim,base_bim_2.group_manager_bim">
+                        <field name="bim_quotation_count" widget="statinfo" string="Projects"/>
+                    </button>
+                </button>
+
+            </field>
+        </record>
+
+</odoo>

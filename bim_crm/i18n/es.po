@@ -1,0 +1,70 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* bim_crm
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-03 11:08+0000\n"
+"PO-Revision-Date: 2020-12-03 11:08+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: bim_crm
+#: model:ir.model.fields,field_description:bim_crm.field_bim_project__display_name
+#: model:ir.model.fields,field_description:bim_crm.field_crm_lead__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: bim_crm
+#: model:ir.model.fields,field_description:bim_crm.field_bim_project__id
+#: model:ir.model.fields,field_description:bim_crm.field_crm_lead__id
+msgid "ID"
+msgstr ""
+
+#. module: bim_crm
+#: model:ir.model.fields,field_description:bim_crm.field_bim_project____last_update
+#: model:ir.model.fields,field_description:bim_crm.field_crm_lead____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: bim_crm
+#: model:ir.model,name:bim_crm.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Iniciativa/Oportunidad"
+
+#. module: bim_crm
+#: model:ir.model.fields,field_description:bim_crm.field_crm_lead__bim_quotation_count
+msgid "Number of Sale Orders"
+msgstr "Número de Órdenes de Ventas"
+
+#. module: bim_crm
+#: model:ir.model.fields,field_description:bim_crm.field_bim_project__opportunity_id
+msgid "Opportunity"
+msgstr "Oportunidad"
+
+#. module: bim_crm
+#: model:ir.model,name:bim_crm.model_bim_project
+msgid "Project"
+msgstr "Proyecto"
+
+#. module: bim_crm
+#: model:ir.model.fields,field_description:bim_crm.field_crm_lead__bim_order_ids
+#: model_terms:ir.ui.view,arch_db:bim_crm.crm_case_form_view_oppor
+msgid "Projects"
+msgstr "Proyectos"
+
+#. module: bim_crm
+#: model:ir.model.fields,field_description:bim_crm.field_crm_lead__bim_order_amount_total
+msgid "Sum of Orders"
+msgstr "Suma de Órdenes"
+
+#. module: bim_crm
+#: model:ir.model.fields,help:bim_crm.field_crm_lead__bim_order_amount_total
+msgid "Untaxed Total of Confirmed Orders"
+msgstr "Total órdenes confirmadas sin impuestos"
