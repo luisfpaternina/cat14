@@ -21,6 +21,14 @@ class ProjectTaskCategUdn(models.Model):
         string="OT type")
     is_normative = fields.Boolean(
         string="Normative")
+    is_user = fields.Boolean(
+        string="Is user")
+    employee_id = fields.Many2one(
+        'hr.employee',
+        string="Supervisor")
+    user_ids = fields.Many2many(
+        'res.users',
+        string="Users")
     
 
     @api.onchange('name','code')
