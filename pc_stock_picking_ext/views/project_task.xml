@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>     
+<odoo>
+    <record id="view_project_task_transfer_request" model="ir.ui.view">
+        <field name="name">inherit.form.project.task</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2"/>
+        <field name="arch" type="xml"> 
+            <xpath expr="//form[1]/sheet[1]/notebook[1]" position="inside">
+                <page string="Transfer request" name="transfer_request">
+                  <group>
+                        <field name="stock_picking_ids">
+                            <tree>
+                                <field name="name"/>
+                                <field name="partner_id"/>
+                                <field name="scheduled_date"/>
+                                <field name="state"/>
+                            </tree>
+                        </field>
+                  </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
