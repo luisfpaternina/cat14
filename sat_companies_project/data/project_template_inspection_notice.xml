@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="template_project_sent_inspection_notice_data" model="mail.template">
+            <field name="name">Carta aviso de inspeccion</field>
+            <field name="model_id" ref="project.model_project_project"/>
+            <field name="subject">Carta Aviso Inspección</field>
+            <field name="email_from">${(object.write_uid.email_formatted or user.email_formatted) | safe}</field>
+            <field name="email_to"></field>
+            <field name="body_html" type="xml">
+                <div>
+                    <p> <img src="data:image/png;base64,${object.company_id.logo}" style="width: 150px;height: 80px;" /> </p>
+                    <p align="justify">
+                     ASUNTO: INSPECCIÓN PERIÓDICA EN EL APARATO ELEVADOR <br></br>
+                     R.A.E.:
+                    </p>
+                    <p align="justify">
+                        Muy señores nuestros:
+                    </p>
+                    <p align="justify">
+                        El reglamento de aparatos de elevación y manutención, aprobado por rela decreto 2291/85 (B.O.E 11-12-1985), estabalece en su articulo 11, apartado F, como obligación de la empresa conservadora "COMUNICAR AL PROPIETARIO DEL APARATO LA FECHA EN QUE LE CORRESPONDE SOLICITAR LA INSPECCIÓN PERIÓDICA".
+                    </p>
+                    <p align="justify">
+                        Por tal motivo, tenemos a bien informarle que la INSPECCIÓN PERIÓDICA de sus aparatos elevado-res deben edectuarse por entidad de inspección y control reglamentario, antes del:
+                    </p>
+                    <p>
+                        <strong>17/07/2021</strong>
+                    </p>
+                    <p align="justify">
+                        Asimismo, les informamos que la PERIODICDAD de dichas inspecciones periódicas, está regulada por la orden ministerial de 23/09/87 (B.O.E. 06/10/87 ) donde la instrucción técnica reglamentaria (I.T.C) establece en su apartado 16.1.3.4 que:
+                    </p>
+                    <p>
+                        LAS INSPECCIONES PERIÓDICAS SE REALIZAN EN LOS SIGUIENTES PLAZOS:
+                    </p>
+                    <br></br>
+                    <ul>
+                        <li>
+                           Ascensores instalados en edificios industriales y lugares de pública concurrencia, cada 2 años. 
+                        </li>
+                        <li>
+                            Ascensores instalados en edfificios de más de veinte viviendas o mas de cuatro plantas servidas, cada 4 años.
+                        </li>
+                        <li>
+                            Ascensores instalados en edificios no incluidos en los aparatos anteriores cada 6 años
+                        </li>
+                    </ul>
+                    <br></br>
+                    <p align="justify">
+                        Quedamos a su disposición para cualquier aclaración que precisen al respecto, y aprovechamos la ocasión para saludarles muy antentamente.
+                    </p>
+                    <p>
+                        ${(object.company_id.name)}
+                    </p>
+                </div>
+            </field>
+            <field name="lang">${user.lang}</field>
+            <field name="auto_delete" eval="False"/>
+        </record>
+    </data>
+</odoo>

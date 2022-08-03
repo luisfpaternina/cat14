@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>     
+<odoo>
+    <data>
+
+        <record id="view_sale_order_typet_tree" model="ir.ui.view">
+            <field name="name">sale.order.type.tree</field>
+            <field name="model">sale.order.type</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="contract_tree">
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_sale_order_typet_form" model="ir.ui.view">
+            <field name="name">sale.order.type.form</field>
+            <field name="model">sale.order.type</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form string="sale_type_form">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <field name="name" required="1" placeholder="Name"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="code"/>
+                            </group>
+                            <group>
+                                <field name="active" widget="boolean_toggle"/>
+                            </group>
+                               
+                            <group>
+                                <field name="is_create_task" widget="boolean_toggle"/>
+                                <field name="task_template_id" options="{'no_create': True, 'no_create_edit':True}" attrs="{'invisible': [('is_create_task', '!=', True)]}"/>
+                            </group>
+                            <group>
+                                <field name="is_maintenance" attrs="{'invisible': ['|','|','|',('is_warning', '!=', False),('is_line', '!=', False),('is_mounting', '!=', False),('is_other', '!=', False)]}"/>
+                                <field name="is_line" attrs="{'invisible': ['|','|','|',('is_warning', '!=', False),('is_maintenance', '!=', False),('is_mounting', '!=', False),('is_other', '!=', False)]}"/>
+                                <field name="is_mounting" attrs="{'invisible': ['|','|','|',('is_warning', '!=', False),('is_maintenance', '!=', False),('is_line', '!=', False),('is_other', '!=', False)]}"/>
+                                <field name="is_other" attrs="{'invisible': ['|','|','|',('is_warning', '!=', False),('is_maintenance', '!=', False),('is_line', '!=', False),('is_mounting', '!=', False)]}"/>
+                                <field name="is_warning" attrs="{'invisible': ['|','|','|',('is_other', '!=', False),('is_maintenance', '!=', False),('is_line', '!=', False),('is_mounting', '!=', False)]}"/>
+                            </group>
+
+                        </group>
+
+                        <notebook>
+                            <page name="project_stages" string="Stages">
+                                <group>
+                                    <field name="project_stage_ids" options="{'no_open': False}"/>
+                                </group>
+                            </page>
+                            <page name="project_task" string="Task" attrs="{'invisible': [('is_create_task', '!=', True)]}">
+                                <group>
+                                    <group>
+                                        <field name="project_task_ids" widget="many2many_tags" options="{'no_open': False}" domain="[('is_old_task', '!=', True)]"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_view_sale_order_type">
+            <field name="name">Sale type</field>
+            <field name="res_model">sale.order.type</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create new record
+                </p>
+            </field>
+        </record>
+
+        <menuitem 
+            id="menu_sale_order_type" 
+            name="Sale type" 
+            parent="sale.menu_sale_config"
+            action="action_view_sale_order_type"
+            />
+        
+        <menuitem 
+            id="menu_sale_order_type_subscription" 
+            name="Tipo de presupuesto/OT" 
+            parent="sale_subscription.menu_sale_subscription_config"
+            action="action_view_sale_order_type"
+            />
+        
+        <menuitem 
+            id="menu_sale_order_type_field_service" 
+            name="Sale type Field service" 
+            parent="industry_fsm.fsm_menu_settings"
+            action="action_view_sale_order_type"
+            />
+
+    </data>
+</odoo> 

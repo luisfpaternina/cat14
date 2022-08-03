@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>     
+<odoo>
+    <data>
+
+        <record id="view_project_task_categ_udn_tree" model="ir.ui.view">
+            <field name="name">project.task.categ.udn.tree</field>
+            <field name="model">project.task.categ.udn</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree editable="bottom">
+                    <field name="code" required="1"/>
+                    <field name="name" required="1"/>
+                    <field name="is_normative"/>
+                    <field name="ot_type_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_project_task_categ_udn_form" model="ir.ui.view">
+            <field name="name">project.task.categ.udn.form</field>
+            <field name="model">project.task.categ.udn</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form string="ot_checklist_form">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <field name="name" required="1" placeholder="Name"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="ot_type_id"  options="{'no_create': True, 'no_create_edit':True}"/>
+                            </group>
+                            <group>
+                                
+                            </group>
+                            <group>
+                                
+                            </group>
+                            <group>
+                                
+                            </group>
+                            <field name="description" placeholder="Description...!"/>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_view_categ_udn">
+            <field name="name">Categorty udn</field>
+            <field name="res_model">project.task.categ.udn</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create new record
+                </p>
+            </field>
+        </record>
+
+        <menuitem 
+            id="menu_project_task_categ_udn" 
+            name="Categorty udn" 
+            parent="industry_fsm.fsm_menu_settings"
+            action="sat_companies_project.action_view_categ_udn"
+            />
+        <menuitem 
+            id="menu_project_task_categ_udn_subscription" 
+            name="Categoría Udn/OT" 
+            parent="sale_subscription.menu_sale_subscription_config"
+            action="sat_companies_project.action_view_categ_udn"
+            />
+        
+        <menuitem 
+            id="menu_project_task_categ_udn_sale" 
+            name="Categoría Udn/OT" 
+            parent="sale.menu_sale_config"
+            action="sat_companies_project.action_view_categ_udn"
+            />
+    </data>
+</odoo> 

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_sale_order_inherit_sat_companies_project" model="ir.ui.view">
+        <field name="name">sale.orderform.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//button[@name='action_quotation_send']" position="replace">
+                <button 
+                    name="action_quotation_send" 
+                    type="object" 
+                    string="ENVIAR PRESUPUESTO"  
+                    attrs="{'invisible': [('state', '!=', 'draft')]}"
+                    context="{'proforma': True}"/>
+                <field name="is_potential_client" invisible="1"/>
+            </xpath>
+
+            <xpath expr="//button[@name='action_confirm']" position="replace">
+                <button 
+                name="action_confirm" 
+                id="action_confirm" 
+                string="Confirm" 
+                class="btn-primary" 
+                type="object" 
+                attrs="{'invisible': [('state', '=', 'sale')]}"/>
+            </xpath>
+
+            <xpath expr="//field[(@name='partner_id')]" position="after">
+                <field name="is_potential_client" invisible="1"/>
+                <field name="is_mounting" invisible="1"/>
+                <field name="is_maintenance" invisible="1"/>
+                <field name="is_normative" invisible="1"/>
+            </xpath>
+
+            <xpath expr="//field[@name='payment_term_id']" position="attributes">
+                <attribute name="attrs">{}</attribute>
+                <attribute name="required">1</attribute>
+            </xpath>
+
+            <xpath expr="//form[1]/sheet[1]/notebook[1]" position="inside">
+                <page string="Description" name="commercial_description">
+                    <group name="principal_group">
+                        <field name="comercial_description"/>
+                    </group>
+                </page>
+            </xpath>
+
+        </field> 
+    </record>
+</odoo>

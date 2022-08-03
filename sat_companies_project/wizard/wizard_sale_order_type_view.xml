@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>     
+<odoo>
+    <data>
+
+       <record id="wizard_sale_order_type_form" model="ir.ui.view">
+           <field name="name">wizard_sale_order_type_form</field>
+           <field name="model">wizard.sale.order.type</field>
+           <field name="arch" type="xml">
+               <form string="Sale order Type">
+                    <sheet string="Create or Related a Project">
+                        <group colspan="2">
+                           <group colspan="1" col="2">
+                                <field name="is_new_project"
+                                      widget="boolean_toggle" 
+                                />
+                           </group>
+                           <group colspan="1" col="2">
+                                <field name="add_task_line"
+                                        widget="boolean_toggle"
+                                        attrs="{'invisible': [('is_new_project', '!=', True)]}"
+                                />
+                            </group>
+                        
+                        </group>
+                        <!--
+                        <group>
+                            <field name="duplicate_task"/>
+                        </group>
+                        -->
+
+                       <group>
+                           <group>
+                               <field name="sale_order_id" invisible="True"/>
+                               <field name="sale_type_id"/>
+                            </group>
+                       </group>
+                       <group string="Project name">
+                           <group>
+                               <div class="oe_title">
+                                    <h1>
+                                        <field name="name" required='True'/>
+                                    </h1>
+                                </div>
+                           </group>
+                       </group>
+
+                       <group string="Project related"
+                              attrs="{'invisible': [('is_new_project', '!=', True)]}">
+                            <group>
+                                <field name="project_id"  
+                                       options="{'no_create': True, 'no_create_edit':True}"
+                                       attrs="{'invisible': [('is_new_project', '!=', True)],
+                                              'required': [('is_new_project', '=', True)]}"/>
+                            </group>
+                       </group>
+
+
+                       <notebook>
+                                <page string="Related Lines" id="related_lines"  attrs="{'invisible': [('add_task_line', '!=', True)]}">
+                                    <field name="project_line_ids" string="Task lines" widget="many2many_tags"/>
+                                </page>
+                        </notebook>
+
+                       <footer>
+                            <button string="Cancel"
+                                class="btn-secondary"
+                                special="cancel"/>
+                            <button string="Accept"
+                                name="accept_task_type_sale" 
+                                type="object" 
+                                class="oe_highlight"
+                                />
+                       </footer>
+                    </sheet>
+               </form>
+           </field>
+       </record>
+       
+       <!--
+       <record id="sale_order_rtpe_action_wizard" model="ir.actions.act_window">
+           <field name="name">sale.order.rtpe.action.wizard</field>
+           <field name="res_model">wizard.sale.order.type</field>
+           <field name="view_mode">form</field>
+           <field name="view_id" ref="sat_companies.wizard_sale_order_type_form"/>
+       </record>
+        -->
+    </data>
+</odoo>

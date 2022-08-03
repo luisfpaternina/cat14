@@ -1,0 +1,5 @@
+id,name,code,active
+id_001,"MANTENIMIENTO","01",True
+id_002,"LINEA","02",True
+id_003,"REPARACIÓN","03",True
+id_004,"MONTAJE Y MODERNIZACIÓN","04",True

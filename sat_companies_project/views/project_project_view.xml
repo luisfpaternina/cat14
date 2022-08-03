@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="inherit_view_project_project_sat_companies_project" model="ir.ui.view">
+        <field name="name">project.project.inherit</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//form/sheet/div[2]" position="after">
+                <group>
+                    <field name="start_date_project"/>
+                </group>
+            </xpath>
+
+            <div name="button_box" position="inside">
+                <button 
+                    class="oe_stat_button" 
+                    type="object" 
+                    name="get_location"
+                    icon="fa-truck">
+                    <field string="Locations" name="location_count" widget="statinfo"/>
+                </button>
+            </div>
+
+        </field>
+    </record>
+
+</odoo>     
