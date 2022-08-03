@@ -74,6 +74,7 @@
                         </div>
                         <group>
                             <group>
+                                <field name="user_operator_id" options="{'no_create': True, 'no_create_edit':True}" required="1"/>
                                 <field name="task_id" options="{'no_create': True, 'no_create_edit':True}" domain = "[('is_fsm','=',True)]"/>
                                 <field name="gadget_id" options="{'no_create': True, 'no_create_edit':True}" domain = "[('is_gadget','=',True)]"/>
                                 <field name="company_id" invisible="1"/>
