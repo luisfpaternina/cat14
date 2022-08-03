@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+        <template id="report_custom_template_gadget_document">
+            <t t-call="web.html_container">
+                <t t-foreach="range(2)" t-as="p">
+                  <t t-foreach="docs" t-as="o">                    
+                    <div class="header">
+                        <style>
+                            #t01, td{
+                            border: 1px solid black;
+                            }
+                        </style>
+                        <!-- PAGINA # 1 LOGOS-->
+                        <table class="one" align="left" border="0"  width="50%" t-if="p == 0"> 
+                            <tr> 
+                                <th>
+                                    <p align="justify">
+                                        <img t-att-src="'data:image/png;base64,%s' % to_text(o.company_id.logo)" width="115" height="90"/>
+                                    </p>
+                                </th> 
+                            </tr> 
+                        </table>
+                        <table class="one" align="right" border="0"  width="50%" t-if="p == 0"> 
+                            <tr> 
+                                <th>
+                                    <p align="right">
+                                        <img src="/sat_companies_sale/static/description/logo_tuv.png" width="115" height="100"/>
+                                    </p>
+                                </th> 
+                            </tr> 
+                        </table>
+                        <!-- PAGINA # 2-->
+                        <table width="100%" t-if="p == 1" id="t01">
+                            <tr>
+                                <td>Modelo:</td>
+                                <td>
+                                    <span t-field="o.product_id.model_gadget"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td>Carga útil:</td>
+                                 <td>
+                                     <span t-field="o.product_id.gadget_load"></span>
+                                 </td>
+                            </tr>
+                            <tr>
+                                 <td>Personas:</td>
+                                 <td>
+                                     <span t-field="o.product_id.people_numbers"></span>
+                                 </td>
+                            </tr>
+                            <tr>
+                                 <td>Número de paradas:</td>
+                                 <td>
+                                     <span t-field="o.product_id.stop_numbers"></span>
+                                 </td>
+                            </tr>
+                            <tr>
+                                 <td>Número de accesos:</td>
+                                 <td>
+                                     <span></span>
+                                 </td>
+                            </tr>
+                            <tr>
+                                 <td>Embarques en cabina:</td>
+                                 <td>
+                                     <span></span>
+                                 </td>
+                            </tr>
+                            <tr>
+                                 <td>Recorrido:</td>
+                                 <td>
+                                     <span t-field="o.product_id.route"></span>
+                                 </td>
+                            </tr>
+                            <tr>
+                                 <td>Velocidad:</td>
+                                 <td>
+                                     <span t-field="o.product_id.nominal_speed"></span>
+                                 </td>
+                            </tr>
+                            <tr>
+                                 <td>Situación de máquina:</td>
+                                 <td>
+                                     <span></span>
+                                 </td>
+                            </tr>
+                            <tr>
+                                 <td>Paracaídas en contrapeso:</td>
+                                 <td>
+                                     <span></span>
+                                 </td>
+                            </tr>
+                            <tr>
+                                 <td><strong>Cabina</strong></td>
+                                 <td>
+                                     <span></span>
+                                 </td>
+                            </tr>
+                            <tr>
+                                 <td>Acabado de paños:</td>
+                                 <td>
+                                     <span></span>
+                                 </td>
+                            </tr>
+                            <tr>
+                                 <td>Acabado de suelo:</td>
+                                 <td>
+                                     <span></span>
+                                 </td>
+                            </tr>
+                            <tr>
+                                 <td>Acabado de techo:</td>
+                                 <td>
+                                     <span></span>
+                                 </td>
+                            </tr>
+                            <tr>
+                                 <td>Pasamanos:</td>
+                                 <td>
+                                     <span></span>
+                                 </td>
+                            </tr>
+                            <tr>
+                                 <td><strong>Maniobra</strong></td>
+                                 <td>
+                                     <span t-field="o.product_id.maneuver"></span>
+                                 </td>
+                            </tr>
+                            <tr>
+                                 <td>Botonera de cabina:</td>
+                                 <td>
+                                     <span t-field="o.product_id.cockpit_type_id"></span>
+                                 </td>
+                            </tr>
+                            <tr>
+                                 <td>Posicional de cabina:</td>
+                                 <td>
+                                     <span></span>
+                                 </td>
+                            </tr>
+                            <tr>
+                                 <td>Pulsadores:</td>
+                                 <td>
+                                     <span></span>
+                                 </td>
+                            </tr>
+                            <tr>
+                                 <td>Botoneras exteriores:</td>
+                                 <td>
+                                     <span></span>
+                                 </td>
+                            </tr>
+                            <tr>
+                                 <td><strong>Puertas cabina:</strong></td>
+                                 <td>
+                                     <span></span>
+                                 </td>
+                            </tr>
+                            <tr>
+                                 <td>Accionamiento:</td>
+                                 <td>
+                                     <span></span>
+                                 </td>
+                            </tr>
+                            <tr>
+                                 <td>Paso libre:</td>
+                                 <td>
+                                     <span></span>
+                                 </td>
+                            </tr>
+                            <tr>
+                                 <td>Acabado:</td>
+                                 <td>
+                                     <span></span>
+                                 </td>
+                            </tr>
+                            <tr>
+                                 <td><strong>Puertas de piso:</strong></td>
+                                 <td>
+                                     <span></span>
+                                 </td>
+                            </tr>
+                            <tr>
+                                 <td>Accionamiento:</td>
+                                 <td>
+                                     <span></span>
+                                 </td>
+                            </tr>
+                            <tr>
+                                 <td>Paso libre:</td>
+                                 <td>
+                                     <span></span>
+                                 </td>
+                            </tr>
+                            <tr>
+                                 <td>Acabado:</td>
+                                 <td>
+                                     <span></span>
+                                 </td>
+                            </tr>
+                            <tr>
+                                 <td><strong>Dimensiones:</strong></td>
+                                 <td>
+                                     <span></span>
+                                 </td>
+                            </tr>
+                            <tr>
+                                 <td>Ancho de hueco:</td>
+                                 <td>
+                                     <span></span>
+                                 </td>
+                            </tr>
+                            <tr>
+                                 <td>Fondo de hueco:</td>
+                                 <td>
+                                     <span></span>
+                                 </td>
+                            </tr>
+                            <tr>
+                                 <td>Recorrido de seguridad:</td>
+                                 <td>
+                                     <span></span>
+                                 </td>
+                            </tr>
+                            <tr>
+                                 <td>Profundidad de foso:</td>
+                                 <td>
+                                     <span></span>
+                                 </td>
+                            </tr>
+                            <tr>
+                                 <td>Ancho de cabina:</td>
+                                 <td>
+                                     <span></span>
+                                 </td>
+                            </tr>
+                            <tr>
+                                 <td>Fondo cabina:</td>
+                                 <td>
+                                     <span></span>
+                                 </td>
+                            </tr>
+                        </table>
+                        <strong t-if="p == 1">
+                            *Las medidas de cabina son orientativas y no vinculantes
+                            <br></br>
+                            ACEPTADO                                                                          
+                        </strong>
+                    </div>
+                    <div class="article o_report_layout_standard">
+                       <div class="page">
+                         <!-- PAGINA # 1-->
+                        <style>
+                            table, th, td {
+                            border: 1px solid black;
+                            }
+                            h6 span { display: block; }
+                        </style>
+                          <center>
+                              <strong t-if="p == 0">
+                                  <span t-field="o.partner_id"></span>
+                              </strong>
+                          </center>
+                          <br></br>
+                          <table width="100%" t-if="p == 0">
+                              <tr>
+                                  <td><strong>Presupuesto nº</strong></td>
+                                  <td><span t-field="o.name"></span></td>
+                                  <td><strong>Fecha</strong></td>
+                                  <td><span t-field="o.create_date"></span></td>
+                              </tr>
+                              <tr>
+                                  <td><strong>Domicilio de la obra</strong></td>
+                                  <td colspan="3">REF.SB33SP</td>
+                              </tr>
+                              <tr>
+                                  <td><strong>Población/Provincia</strong></td>
+                                  <td colspan="3">
+                                      <span t-field="o.product_id.city"></span>
+                                      <span> </span>
+                                      <span>/</span>
+                                      <span> </span>
+                                      <span t-field="o.product_id.partner_id.state_id"></span>
+                                  </td>
+                              </tr>
+                          </table>
+                          <br></br>
+                          <table width="100%" t-if="p == 0">
+                            <tr>
+                                <th style="background-color:#6ABDDD">
+                                    <center>
+                                        <p>DATOS TECNICOS PRINCIPALES</p>
+                                    </center>
+                                </th>
+                            </tr>
+                         </table>
+                         <br></br>
+                         <table t-if="p == 0">
+                            <tr>
+                                <th>
+                                    <h6>
+                                        <span>1</span>
+                                    </h6>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <h6>
+                                        <span> A </span>
+                                        <span> S </span>
+                                        <span> C </span>
+                                        <span> E </span>
+                                        <span> N </span>
+                                        <span> S </span>
+                                        <span> O </span>
+                                        <span> R </span>
+                                        <span> G </span>
+                                        <span> E </span>
+                                        <span> A </span>
+                                        <span> R </span>
+                                        <span> L </span>
+                                        <span> E </span>
+                                        <span> S </span>
+                                        <span> S </span>
+                                        <span> S </span>
+                                        <span> E </span>
+                                        <span> R </span>
+                                        <span> K </span>
+                                        <span> I </span>
+                                        <span> 6 </span>
+                                        <span> 1 </span>
+                                        <span> 0 </span>
+                                        <span> G </span>
+                                        <span> 0 </span>
+                                        <span> ! </span>
+                                        <span> F </span>
+                                        <span> L </span>
+                                        <span> E </span>
+                                        <span> X </span>
+                                        <span> S </span>
+                                    </h6>
+                                </th>
+                            </tr>
+                         </table>
+                         <br></br>
+                         <strong t-if="p == 0"> Unidades:______________   Tipo:_____ </strong>
+                       </div>
+                    </div>
+                    <div class="footer">
+                        
+                    </div>
+                  </t>
+                </t>
+            </t>
+        </template>
+
+        <report
+                id="id_template_gadget_document"
+                string="Características del aparato"
+                model="sale.order"
+                report_type="qweb-pdf"
+                name="sat_companies_sale.report_custom_template_gadget_document"
+        />
+
+    </data>
+</odoo>

@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data >
+        <template id="template_sale_front_sample" inherit_id="website.assets_frontend" name="Template Sample">
+           <xpath expr="." position="inside">
+                <script type="text/javascript" src="/sat_companies_sale/static/src/js/contract_sale.js"></script>
+           </xpath>
+        </template>
+    </data>
+</odoo>

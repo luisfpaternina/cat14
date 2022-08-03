@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="template_email_welcome_sale" model="mail.template">
+            <field name="name">Bienvenidos</field>
+            <field name="model_id" ref="sale.model_sale_order"/>
+            <field name="subject">Notificación de bienvenida</field>
+            <field name="email_from">${(object.write_uid.email_formatted or user.email_formatted) | safe}</field>
+            <field name="email_to">${object.partner_id.id}</field>
+            <field name="lang">${user.lang}</field>
+            <field name="auto_delete" eval="False"/>
+            <field name="body_html"><![CDATA[
+                <strong align="right">
+                ${object.partner_id.name}<br></br>
+                ${object.partner_id.street}<br></br>
+                ${object.partner_id.zip}${object.partner_id.city}${object.partner_id.state_id.name}<br></br>
+                </strong>
+                <br/>
+                <p>Estimados vecinos,</p>
+                <br></br>
+                <p>Todo el equipo de ${object.company_id.name} queremos daros la bienvenida y aprovechar la oportunidad para agradeceros que hayan elegido nuestros servicios. Su confianza nos ayuda a ser cada día mejores profesionales y refuerza nuestro compromiso con su satisfacción, con la calidad y con su seguridad, aspectos en los que trabajamos sin descanso.</p>
+                <p>${object.company_id.name}</p>
+                <strong>¡MUCHAS GRACIAS!</strong>
+                <br></br>
+                <p>Si tienes cualquier tipo de duda, puedes llamarnos al ${object.company_id.phone} y le atenderemos las 24 horas. Os informamos que vuestro número de cliente es el ${object.partner_id.client_code}. Aunque no es necesario, es recomendable que nos lo facilitéis para agilizar cualquier consulta. </p>
+                <p>Además, nos encanta escuchar y aprender, por eso, si tienes alguna sugerencia para nosotros puedes enviárnosla a través del email ${object.company_id.email}</p>
+                <strong>¡Nos encanta recibir propuestas y mejorar con vosotros día a día!</strong>
+                <p>De nuevo queremos daros las gracias por la confianza depositada en todo nuestro equipo y daros la bienvenida a la  <strong> ${object.company_id.name}. </strong></p>
+                <p>Nos vemos pronto,</p>
+                <p>${object.company_id.name}</p>
+                 ]]>
+            </field>
+        </record>
+    </data>
+</odoo>

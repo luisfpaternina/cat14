@@ -1,0 +1,2174 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sat_companies_sale
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-27 13:53+0000\n"
+"PO-Revision-Date: 2022-05-27 13:53+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sat_companies_sale
+#: model:mail.template,body_html:sat_companies_sale.template_send_sale_low_mto_company
+msgid ""
+"\n"
+"                <br/>\n"
+"                <p>Comunidad de Propietarios</p>\n"
+"                <p>Muy Sres. nuestros:</p>\n"
+"                <p>En primer lugar agradecer su confianza depositada en {object.company_id.name} para el mantenimiento de su ascensor. Del mismo modo queremos hacerles saber que desde que usted firma el contrato de mantenimiento, ${object.company_id.name} pone a disposición de su comunidad nuestros servicios jurídicos para el asesoramiento ante cualquier consecuencia que pueda ocasionar el cambio de empresa conservadora.</p>\n"
+"                <p>La comunidad de propietarios se compromete a facilitar en todo momento y de forma inmediata la información de cualquier tipo (comunicaciones, cartas o notificaciones) que sea destinataria por parte de la anterior empresa conservadora u organismo oficial, en relación al cambio de empresa conservadora, colaborando en todo momento para un  correcto desarrollo del derecho de defensa de la comunidad ejercido a través de sus representantes, en este caso procuradores y abogados designados. </p>\n"
+"                <p>Una vez conocida la sentencia judicial o acuerdo extrajudicial, como consecuencia de la resolución unilateral del contrato de mantenimiento suscrito con la anterior empresa conservadora, la comunidad de propietarios o persona física o jurídica se compromete a continuar el mantenimiento con {object.company_id.name} durante un periodo determinado que se acuerde en el anexo de ampliación que se firme en ese momento. A cambio, {object.company_id.name}, por medio del presente documento, se compromete a asumir a su costa la indemnización a que hubiere lugar, por sentencia judicial o acuerdo extrajudicial. Cantidad de la que ${object.company_id.name} no se hace responsable en el caso de resolución anticipada del contrato de mantenimiento suscrito con {object.company_id.name} por parte del cliente, teniendo que abonar este dichas cantidades</p>\n"
+"                <p>De conformidad con lo dispuesto firman,</p>\n"
+"                <br></br>\n"
+"                <br></br>\n"
+"                <br></br>\n"
+"                <br></br>\n"
+"                <strong>Aceptado el cliente</strong>                 <strong>${object.company_id.name}</strong>\n"
+"                CONSENTIMIENTO INFORMADO\n"
+"\n"
+"REGLAMENTO EUROPEO 679/2016 DE PROTECCIÓN DE DATOS PERSONALES\n"
+"LEY ORGÁNICA 3/2018 DE PROTECCIÓN DE DATOS PERSONALES Y GARANTÍA DE LOS DERECHOS DIGITALES\n"
+"\n"
+"Identificación del Responsable.\n"
+"\n"
+"Le informamos que los datos personales que Usted nos proporciona son incorporados a un tratamiento de datos personales denominado CLIENTES cuyo responsable es {object.company_id.name} con NIF {object.company_id.vat} y con domicilio en {object.company_id.street}, {object.company_id.city}, {object.company_id.state_id.name}. Puede contactar con elResponsable, bien por teléfono en el número {object.company_id.phone} o bien mediante correo electrónico en el buzón {object.company_id.email}.\n"
+"\n"
+"Finalidad.\n"
+"\n"
+"­La finalidad es la gestión de la relación mercantil, tanto desde un punto de vista administrativo y de cumplimiento de obligaciones fiscales, como desde un punto de vista comercial y de marketing (comunicaciones, información comercial y gestión sobre productos y servicios). Distribución y comunicación con carácter publicitario.\n"
+"\n"
+"Plazo de Conservación.\n"
+"\n"
+"­Una vez finalizada la relación contractual, o prestación de servicio el plazo de conservación de los datos será de 6 años para dar cumplimiento a obligaciones legales, fiscales y mercantiles. Desde un punto de vista comercial y de marketing los datos serán conservados indefinidamente mientras exista un interés mutuo. Respecto a los tratamientos de datos de publicidad y uso de imágenes los datos serán conservados indefinidamente mientras exista un interés mutuo. El usuario podrá ejercitar los derechos reflejados más abajo.\n"
+"\n"
+"Decisiones automatizadas y elaboración de perfiles.\n"
+"\n"
+"No se toman decisiones automatizadas ni se elaboran perfiles.\n"
+"\n"
+"Base Jurídica del Tratamiento.\n"
+"\n"
+"­La base jurídica del tratamiento es la ejecución de un contrato mercantil o la prestación de un servicio, así como el cumplimiento de obligaciones fiscales y mercantiles. Además de consentimiento EXPLÍCITO para fines determinados. Consentimiento explicito para los tratamientos de datos de publicidad y uso de imágenes los datos.\n"
+"\n"
+"Destinatarios de cesiones.\n"
+"\n"
+"­Se prevén cesiones a bancos, cajas de ahorro y cajas rurales, además de aquellas que están autorizadas por ley.\n"
+"\n"
+"Transferencias Internacionales.\n"
+"\n"
+"­No se realizan transferencias internacionales.\n"
+"\n"
+"Derechos.\n"
+"\n"
+"De acuerdo con la legislación vigente tiene los siguientes derechos:\n"
+"\n"
+"- Derecho a solicitar el acceso a sus datos personales.  - Derecho a solicitar su rectificación o supresión.  - Derecho a solicitar la limitación de su tratamiento - Derecho a oponerse al tratamiento.  - Derecho a la portabilidad de los datos.\n"
+"\n"
+"Para ejercer sus derechos, dirigiéndose por escrito con fotocopia de DNI o documento identificativo equivalente y solicitando el correspondiente formulario a {object.company_id.name} o a través de la dirección de correo {object.company_id.email} con el Asunto “Derechos Ley Protección de Datos”. Opcionalmente, puede redirigir al interesado a la Autoridad de Control competente para obtener información adicional acerca de sus derechos. Asimismo, en caso de considerar vulnerado su derecho a la protección de datos personales, podrá interponer una reclamación ante laAgencia Española de Protección de Datos.\n"
+"\n"
+" \n"
+"\n"
+"De conformidad con el Reglamento (UE) 2016/679, de 27 de abril de 2016, o Reglamento General de Protección de Datos (RGPD), en lo que no contradiga el mencionado Reglamento, por lo dispuesto en la Ley Orgánica 3/2018 de protección de datos de carácter personal y garantías de los derechos digitales y con la Ley 34/2002, de 11 de julio, de servicios de la sociedad de la información y de comercio electrónico (LSSI-CE) deseo recibir información relacionada con {object.company_id.name} por cualquier medio facilitado a la empresa, entendiéndose medios electrónicos y medios de comunicación postales.\n"
+"\n"
+"Cuadro de texto: ☐   SI quiero   ☐  NO quiero\n"
+"\n"
+"\n"
+"\n"
+"La inacción en la selección anterior se entenderá como NO.\n"
+"\n"
+"Consentimiento. En {object.company_id.city}\n"
+"COMUNIDAD DE PROPIETARIOS\n"
+"{object.partner_id.name}\n"
+"\n"
+" \n"
+"\n"
+"{object.partner_id.name} con NIF/CIF {object.partner_id.vat} doy mi consentimiento expreso de acuerdo con lo expuesto en el presente documento.\n"
+"\n"
+"Firmado. \n"
+"                 \n"
+"            "
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:mail.template,body_html:sat_companies_sale.email_template_contract_suspension
+msgid ""
+"\n"
+"                <p>COMUNIDAD DE PROPIETARIOS</p>\n"
+"                <br/>\n"
+"                <p>En Elche a de de 2022</p>\n"
+"                <p>Por una parte,</p>\n"
+"                <br/>\n"
+"                 \n"
+"           "
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:mail.template,body_html:sat_companies_sale.template_email_welcome
+#: model:mail.template,body_html:sat_companies_sale.template_email_welcome_sale
+msgid ""
+"\n"
+"                <strong align=\"right\">\n"
+"                ${object.partner_id.name}<br></br>\n"
+"                ${object.partner_id.street}<br></br>\n"
+"                ${object.partner_id.zip}${object.partner_id.city}${object.partner_id.state_id.name}<br></br>\n"
+"                </strong>\n"
+"                <br/>\n"
+"                <p>Estimados vecinos,</p>\n"
+"                <br></br>\n"
+"                <p>Todo el equipo de ${object.company_id.name} queremos daros la bienvenida y aprovechar la oportunidad para agradeceros que hayan elegido nuestros servicios. Su confianza nos ayuda a ser cada día mejores profesionales y refuerza nuestro compromiso con su satisfacción, con la calidad y con su seguridad, aspectos en los que trabajamos sin descanso.</p>\n"
+"                <p>${object.company_id.name}</p>\n"
+"                <strong>¡MUCHAS GRACIAS!</strong>\n"
+"                <br></br>\n"
+"                <p>Si tienes cualquier tipo de duda, puedes llamarnos al ${object.company_id.phone} y le atenderemos las 24 horas. Os informamos que vuestro número de cliente es el ${object.partner_id.client_code}. Aunque no es necesario, es recomendable que nos lo facilitéis para agilizar cualquier consulta. </p>\n"
+"                <p>Además, nos encanta escuchar y aprender, por eso, si tienes alguna sugerencia para nosotros puedes enviárnosla a través del email ${object.company_id.email}</p>\n"
+"                <strong>¡Nos encanta recibir propuestas y mejorar con vosotros día a día!</strong>\n"
+"                <p>De nuevo queremos daros las gracias por la confianza depositada en todo nuestro equipo y daros la bienvenida a la  <strong> ${object.company_id.name}. </strong></p>\n"
+"                <p>Nos vemos pronto,</p>\n"
+"                <p>${object.company_id.name}</p>\n"
+"                 \n"
+"            "
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:mail.template,report_name:sat_companies_sale.email_contract_signature
+#: model:mail.template,report_name:sat_companies_sale.pdf_attachment_signatured
+msgid "${(object.name or '').replace('/','_')}"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:mail.template,subject:sat_companies_sale.email_contract_signature
+#: model:mail.template,subject:sat_companies_sale.pdf_attachment_signatured
+msgid "${object.company_id.name}"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.actions.report,print_report_name:sat_companies_sale.action_email_contract_signature
+msgid "'Contrato - %s' % (object.name)"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid ""
+"*Las medidas de cabina son orientativas y no vinculantes\n"
+"                            <br/>\n"
+"                            ACEPTADO"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:mail.template,body_html:sat_companies_sale.template_sale_sent_legal_letter
+msgid ""
+"<?xml version=\"1.0\"?>\n"
+"<div>\n"
+"                    <p align=\"justify\">\n"
+"                    Muy Sres nuestros:<br/><br/>\n"
+"                    En primer lugar agradecer su confianza depositada en <strong>${object.company_id.name}</strong> para el mantenimiento de su ascensor. Del mismo modo queremos hacerle saber que normalmente, desde que se firma el contrato de mantenimiento <strong>${object.company_id.name}</strong> pone a disposición su comunidad nuestros servicios jurídicos para el asesoramiento anre cualquier consecuencia que pueda ocasionar el cambio de empresa conservadora, pero en esta ocasión, al no disponer de la información de penalización existente con el anterior mantenedor, esta condición queda anulada.\n"
+"                    <br/><br/><br/>\n"
+"                    De conformidad con lo dispuesto firman\n"
+"                    <br/><br/>\n"
+"                    <strong>Aceptado el cliente</strong><span> </span><strong>${object.company_id.name}</strong>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:mail.template,body_html:sat_companies_sale.sale_contract_mail_template
+msgid ""
+"<?xml version=\"1.0\"?>\n"
+"<div>\n"
+"                    <strong><p align=\"center\">CONTRATO DE MANTENIMIENTO T-R</p></strong>\n"
+"                    <br/>\n"
+"                    <img src=\"/sat_companies_sale/static/src/description/serki_logo.jpg\"/>\n"
+"                    <strong><p>De una parte:</p></strong>\n"
+"                    <br/>\n"
+"                    <strong><p>Con domicilio en:</p></strong>\n"
+"                    <br/>\n"
+"                    <strong><p>Y con N.F.L.:</p></strong>\n"
+"                    <br/>\n"
+"                    <strong><p>Y de otra:</p></strong>\n"
+"                    <br/>\n"
+"                    <strong><p>Objeto</p></strong>\n"
+"                    <br/>\n"
+"                    <strong><p>Lugar de instalación Edificio:</p></strong>\n"
+"                    <br/>\n"
+"                    <strong><p>Núm. de Unidad:</p></strong>\n"
+"                    <br/>\n"
+"                    <br/>\n"
+"                    <br/>\n"
+"                    ${object.get_table_type_contracts() | safe}\n"
+"                </div>\n"
+"            "
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:mail.template,body_html:sat_companies_sale.template_crm_lead_opportunity_notify
+msgid ""
+"<?xml version=\"1.0\"?>\n"
+"<div>\n"
+"                    <strong><p align=\"center\">Notificación de oportunidad</p></strong>\n"
+"                </div>\n"
+"            "
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:mail.template,body_html:sat_companies_sale.template_crm_lead_max_days_notify
+msgid ""
+"<?xml version=\"1.0\"?>\n"
+"<div>\n"
+"                    <strong><p align=\"center\">Notificación responsable del departamento</p></strong>\n"
+"                </div>\n"
+"            "
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:mail.template,body_html:sat_companies_sale.template_sale_order_maintenance_offer
+msgid ""
+"<?xml version=\"1.0\"?>\n"
+"<div>\n"
+"                    <strong><p align=\"center\">Oferta de Mantenimiento de Ascensores</p></strong>\n"
+"                    <ul>\n"
+"                        <li>Contrato de mantenimiento</li>\n"
+"                        <li>Oficina y alamcen de respuesto</li>\n"
+"                        <li>Mecanicos de zona</li>\n"
+"                        <li>Servicios de averias</li>\n"
+"                        <li>Servicio de apuesta en marcha</li>\n"
+"                        <li>Mantenimiento preventivo</li>\n"
+"                        <li>Asesoramiento jurídico</li>\n"
+"                        <li>La gestión e inspección por cambio de conversador gratis</li>\n"
+"                    </ul>\n"
+"                    <br/>\n"
+"                    <strong><p>OFERTA DE MANTENIMIENTO</p></strong>\n"
+"                    <br/>\n"
+"                    <strong><p>OBSERVACIONES</p></strong>\n"
+"                </div>\n"
+"            "
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_contract
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_subscription_contract
+msgid ""
+"<br/>\n"
+"                          <strong><span>Con dominio en:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_contract
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_subscription_contract
+msgid ""
+"<br/>\n"
+"                          <strong><span>y con N.I.F:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_contract
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_subscription_contract
+msgid ""
+"<br/>\n"
+"                          <strong><span>y de otra:</span></strong><span> </span><span/><br/>\n"
+"                          <strong><span>Objeto:</span></strong><span> </span><span/><br/>\n"
+"                          <strong><span>Lugar de instalación edificio:</span><span> </span></strong><span/><br/>\n"
+"                          <strong><span>Núm. de Unidad:</span></strong><span> </span><span/>\n"
+"                          <br/><br/>"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:mail.template,body_html:sat_companies_sale.email_contract_signature
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                        % set doc_name = 'quotation' if object.state in ('draft', 'sent') else 'order'\n"
+"                        <br/><br/>\n"
+"                        Your\n"
+"                        % if ctx.get('proforma'):\n"
+"                            Pro forma invoice for ${doc_name} <strong>${object.name}</strong>\n"
+"                            % if object.origin:\n"
+"                                (with reference: ${object.origin} )\n"
+"                            % endif\n"
+"                            amounting in <strong>${format_amount(object.amount_total, object.pricelist_id.currency_id)}</strong> is available.\n"
+"                        % else:\n"
+"                            ${doc_name} <strong>${object.name}</strong>\n"
+"                            % if object.origin:\n"
+"                                (with reference: ${object.origin} )\n"
+"                            % endif\n"
+"                            amounting in <strong>${format_amount(object.amount_total, object.pricelist_id.currency_id)}</strong> is ready for review.\n"
+"                        % endif\n"
+"                        <br/><br/>\n"
+"                        Do not hesitate to contact us if you have any questions.\n"
+"                        <br/>\n"
+"                        <div style=\"margin:16px 0px 16px 0px;\">\n"
+"                                <a href=\"/contract/${object.id}\" style=\"background-color:#875A7B;padding: 20px 30px 20px 30px; text-decoration: none; color: #fff; border-radius: 5px; font-size:13px;\">\n"
+"                                    Signature Contract\n"
+"                                </a>\n"
+"                        </div>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:mail.template,body_html:sat_companies_sale.pdf_attachment_signatured
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                        <br/>\n"
+"                        <div style=\"margin:16px 0px 16px 0px;\">\n"
+"                                <a href=\"/contract/${object.id}\" style=\"background-color:#875A7B;padding: 20px 30px 20px 30px; text-decoration: none; color: #fff; border-radius: 5px; font-size:13px;\">\n"
+"                                    Archivo Adjunto\n"
+"                                </a>\n"
+"                        </div>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.view_sale_order_inherit_sat_companies_sale
+msgid ""
+"<i class=\"fa fa-long-arrow-right mx-2\" aria-label=\"Arrow icon\" "
+"title=\"Arrow\" attrs=\"{'invisible': [('show_technical', '=', False)]}\"/>"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "<span>COMUNIDAD DE PROPIETARIOS</span><br/>"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.sale_contract_report
+msgid ""
+"<span>Seleccione una de las opciones para proceder con su firma:</span>"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_contract
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_subscription_contract
+msgid "<strong><span>De una parte:</span></strong><span> </span>"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "<strong>Aceptado el cliente</strong>"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid ""
+"<strong>Base Jurídica del Tratamiento.</strong>\n"
+"                                    ¬La base jurídica del tratamiento es la ejecución de un contrato mercantil o la prestación de un servicio, así como el cumplimiento de obligaciones fiscales y mercantiles. Además de consentimiento EXPLÍCITO para fines determinados. Consentimiento explicito para los tratamientos de datos de publicidad y uso de imágenes los datos."
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_contract
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_subscription_contract
+msgid "<strong>CONTRATO DE MANTENIMIENTO T - R</strong>"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "<strong>Cabina</strong>"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid ""
+"<strong>Consentimiento.</strong> En ELCHE a "
+"................................................"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid ""
+"<strong>Decisiones automatizadas y elaboración de perfiles.</strong>\n"
+"                                    No se toman decisiones automatizadas ni se elaboran perfiles."
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid ""
+"<strong>Derechos.</strong>\n"
+"                                    De acuerdo con la legislación vigente tiene los siguientes derechos: \n"
+"                                    - Derecho a solicitar el acceso a sus datos personales.  - Derecho a solicitar su rectificación o supresión.  - Derecho a solicitar la limitación de su tratamiento - Derecho a oponerse al tratamiento.  - Derecho a la portabilidad de los datos. \n"
+"                                    Para ejercer sus derechos, dirigiéndose por escrito con fotocopia de DNI o documento identificativo equivalente y solicitando el correspondiente formulario a SERKI INSTALACIONES Y SERVICIOS, S.L o a través de la dirección de correo contabilidad@serki.es con el Asunto “Derechos Ley Protección de Datos”. Opcionalmente, puede redirigir al interesado a la Autoridad de Control competente para obtener información adicional acerca de sus derechos. Asimismo, en caso de considerar vulnerado su derecho a la protección de datos personales, podrá interponer una reclamación ante la Agencia Española de Protección de Datos."
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid ""
+"<strong>Destinatarios de cesiones.</strong>\n"
+"                                    ¬Se prevén cesiones a bancos, cajas de ahorro y cajas rurales, además de aquellas que están autorizadas por ley."
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "<strong>Dimensiones:</strong>"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "<strong>Domicilio de la obra</strong>"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "<strong>FIRMADO.</strong>"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "<strong>Fecha</strong>"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid ""
+"<strong>Finalidad.</strong>\n"
+"                                    ¬La finalidad es la gestión de la relación mercantil, tanto desde un punto de vista administrativo y de cumplimiento de obligaciones fiscales, como desde un punto de vista comercial y de marketing (comunicaciones, información comercial y gestión sobre productos y servicios). Distribución y comunicación con carácter publicitario."
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid ""
+"<strong>Identificación del Responsable.</strong> \n"
+"                                    Le informamos que los datos personales que Usted nos proporciona son incorporados a un tratamiento de datos personales denominado CLIENTES cuyo responsable es SERKI INSTALACIONES Y SERVICIOS, S.L conNIF B84241454 y con domicilio en AV. DE L’ALTET Nº29 BAJO, 03208 de ELCHE, ALICANTE (ESPAÑA). Puede contactar con elResponsable, bien por teléfono en el número 965422376 o bien mediante correo electrónico en el buzón contabilidad@serki.es."
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "<strong>Maniobra</strong>"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "<strong>NO</strong> quiero"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid ""
+"<strong>Plazo de Conservación.</strong>\n"
+"                                    ¬Una vez finalizada la relación contractual, o prestación de servicio el plazo de conservación de los datos será de 6 años para dar cumplimiento a obligaciones legales, fiscales y mercantiles. Desde un punto de vista comercial y de marketing los datos serán conservados indefinidamente mientras exista un interés mutuo. Respecto a los tratamientos de datos de publicidad y uso de imágenes los datos serán conservados indefinidamente mientras exista un interés mutuo. El usuario podrá ejercitar los derechos reflejados más abajo."
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "<strong>Población/Provincia</strong>"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "<strong>Presupuesto nº</strong>"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "<strong>Puertas cabina:</strong>"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "<strong>Puertas de piso:</strong>"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "<strong>SI</strong> quiero"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "<strong>Serki Instalaciones y Servicios, S. L </strong>"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_subscription_suspension_contract
+msgid "<strong>Suspensión de Contrato</strong>"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid ""
+"<strong>Transferencias Internacionales.</strong>\n"
+"                                    ¬No se realizan transferencias internacionales."
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_welcome_msj
+msgid "<strong>¡MUCHAS GRACIAS!</strong>"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_welcome_msj
+msgid ""
+"<strong>¡Nos encanta recibir propuestas y mejorar con vosotros día a "
+"día!</strong>"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid ""
+"AVISO LEGAL: La información contenida en este correo electrónico, y en su "
+"caso en los documentos adjuntos, es información privilegiada para uso "
+"exclusivo de la persona y/o personas a las que va dirigido. No está "
+"permitido el acceso a este mensaje a cualquier otra persona  distinta a los "
+"indicados. Si Usted no es uno de los destinatarios, cualquier duplicación, "
+"reproducción, distribución, así como cualquier uso de la información "
+"contenida en él o cualquiera otra acción u omisión tomada en relación con el"
+" mismo, está prohibida y puede ser ilegal. En dicho caso, por favor, "
+"notifíquelo al remitente y proceda a la eliminación de este correo "
+"electrónico así como de sus adjuntos si los hubiere. Asimismo y en "
+"cumplimiento de la legislación española vigente en materia de protección de "
+"datos de carácter personal y del reglamento europeo RGPD 679/2016 le "
+"informamos que sus datos están siendo objeto de tratamiento por parte de "
+"SERKI INSTALACIONES Y SERVICIOS, S.L con CIF B84241454, con la finalidad del"
+" mantenimiento y gestión de relaciones comerciales y administrativas. La "
+"base jurídica del tratamiento es el cumplimiento de la legislación fiscal, "
+"mercantil y contable. No se preveen cesiones y/o transferencias "
+"internacionales de datos. Para ejercitar sus derechos puede dirigirse a "
+"SERKI INSTALACIONES Y SERVICIOS, S.L, domiciliada en Av. de l’altet nº 29, "
+"bajo,  03208, Elche (ALICANTE), o bien por email a contabilidad@serki.es, "
+"con el fin de ejercer sus derechos de acceso, rectificación, supresión "
+"(derecho al olvido), limitación de tratamiento, portabilidad de los datos, "
+"oposición, y a no ser objeto de decisiones automatizadas, indicando como "
+"Asunto: “Derechos Ley Protección de Datos”, y adjuntando fotocopia de su DNI"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Acabado de paños:"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Acabado de suelo:"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Acabado de techo:"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Acabado:"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Accionamiento:"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__message_needaction
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_needaction
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__active
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__address
+msgid "Address"
+msgstr "Dirección"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "Administrador"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields.selection,name:sat_companies_sale.selection__crm_lead__managed_by__admin
+msgid "Administrator"
+msgstr "Administrador"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields.selection,name:sat_companies_sale.selection__sale_order__type_contract__risk
+#: model:ir.model.fields.selection,name:sat_companies_sale.selection__sale_subscription__type_contract__all_risk
+msgid "All risk"
+msgstr "Todo riesgo"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Ancho de cabina:"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Ancho de hueco:"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_order_maintenance_offer
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_subscription_maintenance_offer
+msgid "Asesoramiento jurídico"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid ""
+"Asimismo les REQUIERO para que en el improrrogable plazo de 15 días nos "
+"faciliten los códigos de acceso de la maniobra del ascensor Rae nº"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.view_sale_order_inherit_sat_companies_sale
+msgid "Assignment date"
+msgstr "Fecha de asignación"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__message_attachment_count
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_attachment_count
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__message_attachment_count
+msgid "Attachment Count"
+msgstr "Cuenta adjunta"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_welcome_msj
+msgid ""
+"Aunque no es necesario, es recomendable que nos lo facilitéis para agilizar cualquier consulta.\n"
+"\n"
+"Además, nos encanta escuchar y aprender, por eso, si tienes alguna sugerencia para nosotros puedes enviárnosla a través del email"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Botonera de cabina:"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Botoneras exteriores:"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "C. I.F*………………………………………………………  RAE*…………………………………………"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "CIF TITULAR"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "COMUNIDAD DE PROPIETARIOS  [DPCLI]  [POBCLI]"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "CONSENTIMIENTO INFORMADO"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.sale_contract_report
+msgid "CONTRATO"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model,name:sat_companies_sale.model_crm_stage
+msgid "CRM Stages"
+msgstr "Etapas del CRM"
+
+#. module: sat_companies_sale
+#: model:ir.actions.report,name:sat_companies_sale.id_template_gadget_document
+msgid "Características del aparato"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Carga útil:"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:mail.template,subject:sat_companies_sale.template_sale_sent_legal_letter
+msgid "Carta de No Defensa Jurídica"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.actions.report,name:sat_companies_sale.id_welcome_mjs
+msgid "Carta de bienvenida"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__check_contract_type
+msgid "Check Contract Type"
+msgstr "Tipo de contrato"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__check_product
+msgid "Check Product"
+msgstr "Chequeo producto"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_check_type_contract__check_service
+msgid "Check Service in contract"
+msgstr "Chequeo servicio en contrat"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__check_signature
+msgid "Check signature"
+msgstr "Chequeo firma"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.sale_contract_report
+msgid "Clear File"
+msgstr "Limpiar"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.sale_contract_report
+msgid "Clear Signature"
+msgstr "Limpiar firma"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead__client_type
+msgid "Client type"
+msgstr "Tipo de cliente"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__code
+msgid "Code"
+msgstr "Código"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields.selection,name:sat_companies_sale.selection__crm_lead__client_type__companies
+msgid "Companies/builders"
+msgstr "Compañias/constructoras"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "Comunidad de Propietarios"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "Comunidad……………………………………………………………………………………………………"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model,name:sat_companies_sale.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__contract_send
+msgid "Contract Send"
+msgstr "Contrato enviado"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__type_contract
+msgid "Contract type"
+msgstr "Tipo de contrato"
+
+#. module: sat_companies_sale
+#: model:ir.actions.report,name:sat_companies_sale.id_report_custom_template_sale_contract
+#: model:ir.actions.report,name:sat_companies_sale.id_template_subscription_contract
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_order_maintenance_offer
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_subscription_maintenance_offer
+msgid "Contrato de mantenimiento"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.actions.report,name:sat_companies_sale.action_email_contract_signature
+msgid "Contrato firma"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_contract_sale
+msgid "Cotización Número"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.actions.act_window,help:sat_companies_sale.action_view_crm_lead_type
+msgid "Create new record"
+msgstr "Crear nuevo registro"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__is_create_task
+msgid "Create task"
+msgstr "Crear tarea"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__create_uid
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__create_uid
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_check_type_contract__create_uid
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__create_date
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__create_date
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_check_type_contract__create_date
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "DATOS COMUNIDAD"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "DATOS CONTRATO ANTERIOR:"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "DATOS TECNICOS PRINCIPALES"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.sale_contract_report
+msgid "Data URL for your signature will go here!"
+msgstr "La URL de datos de su firma irá aquí"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__date
+msgid "Date"
+msgstr "Fecha"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__date_begin
+msgid "Date begin"
+msgstr "Fecha inicio"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__date_end
+msgid "Date end"
+msgstr "Fecha fin"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__days_maximum_stage
+msgid "Days maximum stage"
+msgstr "Días máximos"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid ""
+"De conformidad con el <strong>Reglamento (UE) 2016/679</strong>, de 27 de "
+"abril de 2016, o Reglamento General de Protección de Datos (RGPD), en lo que"
+" no contradiga el mencionado Reglamento, por lo dispuesto en la <strong>Ley "
+"Orgánica 3/2018</strong> de protección de datos de carácter personal y "
+"garantías de los derechos digitales y con la Ley 34/2002, de 11 de julio, de"
+" servicios de la sociedad de la información y de comercio electrónico (LSSI-"
+"CE) deseo recibir información relacionada con SERKI INSTALACIONES Y "
+"SERVICIOS, S.L por cualquier medio facilitado a la empresa, entendiéndose "
+"medios electrónicos y medios de comunicación postales."
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "De conformidad con lo dispuesto firman,"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid ""
+"De no atender esta petición amistosa nos veremos obligados a instar cuantas "
+"acciones legales sean necesarias para la defensa de nuestros legítimos "
+"intereses , indicándoles que, de no facilitar dichos códigos, serán únicos "
+"responsables de cuantos costes , daños y perjuicios suponga para la "
+"comunidad la falta de acceso a la maniobra por no disponer de los mismos , "
+"que serán reclamados debidamente."
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_welcome_msj
+msgid ""
+"De nuevo queremos daros las gracias por la confianza depositada en todo "
+"nuestro equipo y daros la bienvenida a la  familia"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__description
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__type_description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__description_html
+msgid "Description Html"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead__display_name
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__display_name
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__display_name
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_stage__display_name
+#: model:ir.model.fields,field_description:sat_companies_sale.field_res_partner__display_name
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_advance_payment_inv__display_name
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_check_type_contract__display_name
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__display_name
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order_line__display_name
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_subscription__display_name
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_subscription_template__display_name
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid ""
+"Dn./a, "
+"............................................................................................................."
+" con DNI / NIE ......................... doy mi consentimiento expreso de "
+"acuerdo con lo expuesto en el presente documento."
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.actions.report,name:sat_companies_sale.id_template_sale_client_documentation
+msgid "Documentación nuevos clientes"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.sale_contract_report
+msgid "Draw"
+msgstr "Dibujar"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.sale_contract_report
+msgid "E-Signature"
+msgstr "Firma"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order_line__elevator_type_id
+msgid "Elevator type"
+msgstr "Tipo de ascensor"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead__is_medium_email
+msgid "Email medium"
+msgstr "Medio de correo electrónico"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Embarques en cabina:"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "Empresa Mantenedora……………………………………………………………………………………"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid ""
+"En primer lugar agradecer su confianza depositada en Ascensores Serki para "
+"el mantenimiento de su ascensor. Del mismo modo queremos hacerles saber que "
+"desde que usted firma el contrato de mantenimiento, Serki pone a  "
+"disposición de su comunidad nuestros servicios jurídicos para el "
+"asesoramiento ante cualquier consecuencia que pueda ocasionar el cambio de "
+"empresa conservadora."
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__show_technical
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_subscription__show_technical
+msgid "Enable technical"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.sale_contract_report
+msgid "Enviar documento firmado"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "En……………a……… de……………………. de………….."
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid ""
+"Es nuestro deseo dar por concluidos sus servicios de mantenimiento del "
+"ascensor, por lo que por el presente les comunicamos formalmente que con "
+"fecha      de                de          damos por resuelto el referido "
+"contrato de mantenimiento, por lo que expresamente les requerimos a fin de "
+"que a partir de dicho día inclusive, se abstengan de entrar en la escalera "
+"de la comunidad, así como de realizar cualquier actuación en el ascensor si "
+"no cuentan con el consentimiento expreso y por escrito de la comunidad."
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid ""
+"Estado OCA           Favorable         Favorable con defectos"
+"                  Condicionada      Negativa"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_welcome_msj
+msgid "Estimados vecinos,"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead__expected_revenue
+msgid "Expected revenue"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead__expected_total
+msgid "Expected total"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid ""
+"FDO………………………………………<br/>\n"
+"                                EN CALIDAD DE…………………………<br/>\n"
+"                                DNI………………………………………"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "FICHA EXPENDIENTE"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead__partner_admin_id
+msgid "Farm administrator"
+msgstr "Administrador de finca"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "Fdo. Presidente de la Comunidad"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "Fecha Contrato  ………/………/………       Duración contrato…………………..años"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "Fecha Última Inspección………/……/……… ¿Ascensor Parado?*  SI   NO"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "Firma"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__message_follower_ids
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_follower_ids
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__message_follower_ids
+msgid "Followers"
+msgstr "Segidores"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__message_channel_ids
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_channel_ids
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Seguidores (Canales)"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__message_partner_ids
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_partner_ids
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Fondo cabina:"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Fondo de hueco:"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__is_forecast_made
+msgid "Forecast Made"
+msgstr "Previsión realizada"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__product_id
+msgid "Gadget"
+msgstr "Aparato"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.view_sale_order_inherit_sat_companies_sale
+msgid "Gadget information"
+msgstr "Información del aparato"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.sale_contract_report
+msgid "Get a better browser, bro."
+msgstr "Obtén un mejor navegador"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead__id
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__id
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__id
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_stage__id
+#: model:ir.model.fields,field_description:sat_companies_sale.field_res_partner__id
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_advance_payment_inv__id
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_check_type_contract__id
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__id
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order_line__id
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_subscription__id
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_subscription_template__id
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__id
+msgid "ID"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,help:sat_companies_sale.field_crm_lead_tracing__message_needaction
+#: model:ir.model.fields,help:sat_companies_sale.field_crm_lead_tracing__message_unread
+#: model:ir.model.fields,help:sat_companies_sale.field_crm_lead_type__message_needaction
+#: model:ir.model.fields,help:sat_companies_sale.field_crm_lead_type__message_unread
+#: model:ir.model.fields,help:sat_companies_sale.field_sale_type_service__message_needaction
+#: model:ir.model.fields,help:sat_companies_sale.field_sale_type_service__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Si está marcada, los mensajes nuevos requieren su atención."
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,help:sat_companies_sale.field_crm_lead_tracing__message_has_error
+#: model:ir.model.fields,help:sat_companies_sale.field_crm_lead_tracing__message_has_sms_error
+#: model:ir.model.fields,help:sat_companies_sale.field_crm_lead_type__message_has_error
+#: model:ir.model.fields,help:sat_companies_sale.field_crm_lead_type__message_has_sms_error
+#: model:ir.model.fields,help:sat_companies_sale.field_sale_type_service__message_has_error
+#: model:ir.model.fields,help:sat_companies_sale.field_sale_type_service__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si está marcado, algunos mensajes tienen un error de entrega."
+
+#. module: sat_companies_sale
+#: model:ir.ui.menu,name:sat_companies_sale.menu_sale_type_service
+msgid "Información Contrato"
+msgstr "Información contrato/cláusulas"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead__int_opportunity_days
+msgid "Int opportunity days"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead__int_stage_days
+msgid "Int stage days"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_res_partner__is_admin
+#: model:ir.model.fields,field_description:sat_companies_sale.field_res_users__is_admin
+msgid "Is Admin"
+msgstr "Es administrador"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__message_is_follower
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_is_follower
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__message_is_follower
+msgid "Is Follower"
+msgstr "Es seguidor"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_subscription__is_maintenance
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_subscription_template__is_maintenance
+msgid "Is a maintenance"
+msgstr "Es un mantenimiento"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead__is_external
+msgid "Is external"
+msgstr "Es externo"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order_line__check_is_gadget
+msgid "Is gadget"
+msgstr "Es un aparato"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__is_line
+msgid "Is line"
+msgstr "Es línea"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead__is_low
+#: model:ir.model.fields,field_description:sat_companies_sale.field_res_partner__is_low
+#: model:ir.model.fields,field_description:sat_companies_sale.field_res_users__is_low
+msgid "Is low"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__is_maintenance
+msgid "Is maintenance"
+msgstr "Mantenimiento"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__is_mounting
+msgid "Is mounting"
+msgstr "Montaje"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_check_type_contract__item
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__item
+msgid "Item"
+msgstr "Ítem"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid ""
+"La comunidad de propietarios se compromete a facilitar en todo momento y de "
+"forma inmediata la información de cualquier tipo (comunicaciones, cartas o "
+"notificaciones) que sea destinataria por parte de la anterior empresa "
+"conservadora u organismo oficial, en relación al cambio de empresa "
+"conservadora, colaborando en todo momento para un  correcto desarrollo del "
+"derecho de defensa de la comunidad ejercido a través de sus representantes, "
+"en este caso procuradores y abogados designados."
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_order_maintenance_offer
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_subscription_maintenance_offer
+msgid "La gestión e inspección por cambio de conversador gratis"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "La inacción en la selección anterior se entenderá como NO."
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead____last_update
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing____last_update
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type____last_update
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_stage____last_update
+#: model:ir.model.fields,field_description:sat_companies_sale.field_res_partner____last_update
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_advance_payment_inv____last_update
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_check_type_contract____last_update
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order____last_update
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order_line____last_update
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_subscription____last_update
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_subscription_template____last_update
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__write_uid
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__write_uid
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_check_type_contract__write_uid
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__write_date
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__write_date
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_check_type_contract__write_date
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__lead_id
+msgid "Lead"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model,name:sat_companies_sale.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Iniciativa/Oportunidad"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order_line__gadget_load
+msgid "Load(Kgs)"
+msgstr "Carga(kgs)"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "Localidad donde se firma"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__message_main_attachment_id
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_main_attachment_id
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Acceso principal"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields.selection,name:sat_companies_sale.selection__sale_order__sale_type__maintenance
+msgid "Maintenance"
+msgstr "Mantenimiento"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead__managed_by
+msgid "Managed by"
+msgstr "Gestionada por"
+
+#. module: sat_companies_sale
+#: model:res.groups,name:sat_companies_sale.oportunity_type_manager_group
+msgid "Manager oportunity type"
+msgstr "Administrador tipo de oportunidad"
+
+#. module: sat_companies_sale
+#: model:res.groups,comment:sat_companies_sale.oportunity_type_manager_group
+msgid "Manager oportunity type Permission Group"
+msgstr "Administrador grupo de permisos tipo de oportunidad"
+
+#. module: sat_companies_sale
+#: model:res.groups,name:sat_companies_sale.sale_forecast_manager_group
+msgid "Manager sale forecast"
+msgstr "Responsable técnico"
+
+#. module: sat_companies_sale
+#: model:res.groups,comment:sat_companies_sale.sale_forecast_manager_group
+msgid "Manager sale forecast Permission Group"
+msgstr "Administrador/Responsable técnico"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order_line__maneuver
+msgid "Maneuver"
+msgstr "Maniobra"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_order_maintenance_offer
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_subscription_maintenance_offer
+msgid "Mantenimiento preventivo"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_order_maintenance_offer
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_subscription_maintenance_offer
+msgid "Mecanicos de zona"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid ""
+"Mediante la firma del presente formulario de Orden de Domiciliación, Usted "
+"autoriza a SERKI INSTALACIONES Y SERVICIOS, S.L. a enviar órdenes a su "
+"entidad financiera, para adeudar en su cuenta los importes que se devenguen "
+"como consecuencia de la prestación de los servicios de mantenimiento y "
+"reparación de ascensores y, asimismo, autoriza a su entidad financiera para "
+"cargar en su cuenta los importes debidamente notificados por SERKI "
+"INSTALACIONES Y SERVICIOS, S.L.. Usted tiene derecho a ser reembolsado por "
+"su entidad financiera, de acuerdo con los términos y condiciones del "
+"contrato suscrito con la misma. Dicho reembolso deberá reclamarse en un "
+"plazo máximo de 8 semanas a contar desde la fecha en que se realizó el "
+"adeudo de su cuenta."
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__message_has_error
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_has_error
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__message_has_error
+msgid "Message Delivery error"
+msgstr "Mensajes de error"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__message_ids
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_ids
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__message_ids
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Modelo:"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields.selection,name:sat_companies_sale.selection__sale_order__sale_type__mounting
+msgid "Mounting"
+msgstr "Montaje"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "Muy Sres. míos:"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "Muy Sres. nuestros:"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__name
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__name
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_check_type_contract__name
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__name
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.sale_type_service_form
+msgid "Name"
+msgstr "Nombre"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.view_crm_lead_type_form
+msgid "Name of opportunity type"
+msgstr "Nombre tipo de oportunidad"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields.selection,name:sat_companies_sale.selection__crm_lead__client_type__neighborhood_community
+msgid "Neighborhood community"
+msgstr "Comunidad de vecinos"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__x_studio_html_field_tdqSo
+msgid "New Html"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__next_date
+msgid "Next Date"
+msgstr "Próx. Contacto"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "Nombre del acreedor"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "Nombre………………………………………………………………………………………………………"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order_line__nominal_speed
+msgid "Nominal speed(m/s)"
+msgstr "Velicidad Nominal(m/s)"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields.selection,name:sat_companies_sale.selection__sale_order__type_contract__normal
+#: model:ir.model.fields.selection,name:sat_companies_sale.selection__sale_subscription__type_contract__normal
+msgid "Normal"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__is_normative
+msgid "Normative"
+msgstr "Normativa"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__normative_date
+msgid "Normative date"
+msgstr "Fecha cumplimiento normativa"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_welcome_msj
+msgid "Nos vemos pronto,"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:base.automation,name:sat_companies_sale.automatization_sat_companies_crm_lead_opportunity_notification
+#: model:ir.actions.server,name:sat_companies_sale.automatization_sat_companies_crm_lead_opportunity_notification_ir_actions_server
+msgid "Notificación de Nuevas Oportunidades"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:mail.template,subject:sat_companies_sale.template_email_welcome
+#: model:mail.template,subject:sat_companies_sale.template_email_welcome_sale
+msgid "Notificación de bienvenida"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:mail.template,subject:sat_companies_sale.template_crm_lead_opportunity_notify
+msgid "Notificación de oportunidad"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:base.automation,name:sat_companies_sale.automatization_sat_companies_crm_lead_max_days
+#: model:ir.actions.server,name:sat_companies_sale.automatization_sat_companies_crm_lead_max_days_ir_actions_server
+#: model:mail.template,subject:sat_companies_sale.template_crm_lead_max_days_notify
+msgid "Notificación responsable del departamento"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__message_needaction_counter
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_needaction_counter
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Número de acciones"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__message_has_error_counter
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_has_error_counter
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__message_has_error_counter
+msgid "Number of errors"
+msgstr "Número de errores"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,help:sat_companies_sale.field_crm_lead_tracing__message_needaction_counter
+#: model:ir.model.fields,help:sat_companies_sale.field_crm_lead_type__message_needaction_counter
+#: model:ir.model.fields,help:sat_companies_sale.field_sale_type_service__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Número de mensajes cuales requieren una atención"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,help:sat_companies_sale.field_crm_lead_tracing__message_has_error_counter
+#: model:ir.model.fields,help:sat_companies_sale.field_crm_lead_type__message_has_error_counter
+#: model:ir.model.fields,help:sat_companies_sale.field_sale_type_service__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Número de mensajes con error de entrega"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,help:sat_companies_sale.field_crm_lead_tracing__message_unread_counter
+#: model:ir.model.fields,help:sat_companies_sale.field_crm_lead_type__message_unread_counter
+#: model:ir.model.fields,help:sat_companies_sale.field_sale_type_service__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Número de mensajes no leídos"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Número de accesos:"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Número de paradas:"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_order_maintenance_offer
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_subscription_maintenance_offer
+msgid "OBSERVACIONES"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_order_maintenance_offer
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_subscription_maintenance_offer
+msgid "OFERTA DE MANTENIMIENTO"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:base.automation,name:sat_companies_sale.automatization_sat_companies_sale_order_offer
+#: model:ir.actions.server,name:sat_companies_sale.automatization_sat_companies_sale_order_offer_ir_actions_server
+msgid "Oferta Mantenimiento / Montaje / Reparación "
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.actions.report,name:sat_companies_sale.id_template_sale_order_maintenance_offer
+#: model:ir.actions.report,name:sat_companies_sale.id_template_subscription_maintenance_offer
+msgid "Oferta de mantenimiento"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:mail.template,subject:sat_companies_sale.template_sale_order_maintenance_offer
+msgid "Oferta de mantenimiento de Ascensores"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_order_maintenance_offer
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_subscription_maintenance_offer
+msgid "Oferta de mantenimiento de ascensores"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_order_maintenance_offer
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_subscription_maintenance_offer
+msgid "Oficina y alamcen de respuesto"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.actions.act_window,name:sat_companies_sale.action_view_crm_lead_type
+#: model:ir.model,name:sat_companies_sale.model_crm_lead_type
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead__oportunity_type_id
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_stage__oportunity_type_id
+#: model:ir.ui.menu,name:sat_companies_sale.menu_crm_lead_type
+msgid "Oportunity type"
+msgstr "Tipo de oportunidad"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead__opportunity_days
+msgid "Opportunity days"
+msgstr "Días tipo de oportunidad"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "Orden de domiciliación de <strong>DEBITO DIRECTO SEPA</strong>"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__is_other
+msgid "Other"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__is_pdf_true
+msgid "PDF True"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__pdf_description
+msgid "PDF description"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "Pago trimestral Actual…………………………………………………………………………………."
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Paracaídas en contrapeso:"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Pasamanos:"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Paso libre:"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__pdf_file_sale_contract
+msgid "Pdf File Sale Contract"
+msgstr "PDF contrato"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order_line__people_numbers
+msgid "People numbers"
+msgstr "Número de personas"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Personas:"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__population_id
+msgid "Population"
+msgstr "Poblración"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "Por favor, complete los campos marcados con un *"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "Por nuestra parte le remitiremos la factura de la forma acordada."
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Posicional de cabina:"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields.selection,name:sat_companies_sale.selection__crm_lead__managed_by__president
+msgid "President"
+msgstr "Presidente"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "Presidente"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:base.automation,name:sat_companies_sale.automatization_sat_companies_sale_prevision
+#: model:ir.actions.server,name:sat_companies_sale.automatization_sat_companies_sale_prevision_ir_actions_server
+msgid "Previsión"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.sale_contract_report
+msgid "Previsualizar firma"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Profundidad de foso:"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields.selection,name:sat_companies_sale.selection__crm_lead__client_type__public_organisms
+msgid "Public organisms"
+msgstr "Organismos publicos"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Pulsadores:"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__quote_date_sent
+msgid "Quote date sent"
+msgstr "Fecha presupuesto enviado"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead__quote_date_sent_min
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__quote_date_sent_min
+msgid "Quote date sent min"
+msgstr "Fecha presupuesto enviado min"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__rae
+msgid "R.A.E"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order_line__rae
+msgid "R.A.E."
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.sale_contract_report
+msgid "REF QUOTATION"
+msgstr "REFERENCIA COTIZACIÓN"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "REF.SB33SP"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid ""
+"REGLAMENTO EUROPEO 679/2016 DE PROTECCIÓN DE DATOS PERSONALES\n"
+"                                LEY ORGÁNICA 3/2018 DE PROTECCIÓN DE DATOS PERSONALES Y GARANTÍA DE LOS DERECHOS DIGITALES"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Recorrido de seguridad:"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Recorrido:"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:mail.template,subject:sat_companies_sale.email_template_contract_suspension
+msgid "Ref ${object.name or 'n/a' }"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order_line__ref
+msgid "Reference"
+msgstr "Referencia"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.sale_contract_report
+msgid "Regresar a la orden del Back"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields.selection,name:sat_companies_sale.selection__sale_order__sale_type__repair
+msgid "Repair"
+msgstr "Reparar"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_contract_sale
+msgid "Report title"
+msgstr "Título del reporte"
+
+#. module: sat_companies_sale
+#: model:ir.actions.report,name:sat_companies_sale.id_subscription_suspension_contract
+msgid "Resolución / Suspensión de Contrato"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid ""
+"SERKI INSTALACIONES Y SERVICIOS, S.L es el Responsable del tratamiento de "
+"los datos personales proporcionados bajo su consentimiento y le informa de "
+"que estos datos serán tratados de conformidad con lo dispuesto en el "
+"Reglamento (UE) 2016/679, de 27 de abril (GDPR), y la Ley Orgánica 3/2018, "
+"de 5 de diciembre (LOPDGDD), con la finalidad de mantener una relación "
+"comercial (por interés legítimo del responsable, art. 6.1.f GDPR) y "
+"conservarlos durante no más tiempo del necesario para mantener el fin del "
+"tratamiento o mientras existan prescripciones legales que dictaminen su "
+"custodia. No se comunicarán los datos a terceros, salvo obligación legal. "
+"Asimismo, se le informa de que puede ejercer los derechos de acceso, "
+"rectificación, portabilidad y supresión de sus datos y los de limitación y "
+"oposición a su tratamiento dirigiéndose a SERKI INSTALACIONES Y SERVICIOS, "
+"S.L en AV. DEL ALTET, Nº 29. BAJO, - 03208 ELCHE (Alicante). Email: "
+"contabilidad@serki.es y el de reclamación a www.aepd.es."
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__message_has_sms_error
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_has_sms_error
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Error en la entrega"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_check_type_contract__order_id
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__order_id
+msgid "Sale Order"
+msgstr "Pedido"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead__sale_type_id
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__sale_type
+msgid "Sale type"
+msgstr "Tipo de presupuesto"
+
+#. module: sat_companies_sale
+#: model:ir.model,name:sat_companies_sale.model_sale_type_service
+msgid "Sale type service"
+msgstr "Información contrato/cláusulas"
+
+#. module: sat_companies_sale
+#: model:ir.model,name:sat_companies_sale.model_sale_advance_payment_inv
+msgid "Sales Advance Payment Invoice"
+msgstr "Ventas. Anticipo pago factura"
+
+#. module: sat_companies_sale
+#: model:ir.model,name:sat_companies_sale.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de venta"
+
+#. module: sat_companies_sale
+#: model:ir.model,name:sat_companies_sale.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Línea de pedido de venta"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.view_sale_order_inherit_sat_companies_sale
+msgid "Send Contrat to signature"
+msgstr "Enviar contrato para firma"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.view_sale_order_inherit_sat_companies_sale
+msgid "Send Email to Contact"
+msgstr "Enviar correo con contrato"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.view_sale_order_inherit_sat_companies_sale
+msgid "Send welcome mjs"
+msgstr "Enviar carta de bienvenida"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_order_maintenance_offer
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_subscription_maintenance_offer
+msgid "Servicio de apuesta en marcha"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_order_maintenance_offer
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_subscription_maintenance_offer
+msgid "Servicios de averias"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:mail.template,subject:sat_companies_sale.template_send_sale_low_mto_company
+msgid "Servicios jurídicos"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_welcome_msj
+msgid ""
+"Si tienes cualquier tipo de duda, puedes llamarnos al y le atenderemos las "
+"24 horas. Os informamos que vuestro número de cliente es el"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__sign_contract_date
+msgid "Sign contract date"
+msgstr "Fecha firma contrato"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.sale_contract_report
+msgid "Sign in the canvas below"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__signature_url_text
+msgid "Signature URL"
+msgstr "URL de firma"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "Sin nada mas, reciban un saludo."
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields.selection,name:sat_companies_sale.selection__crm_lead__client_type__family_home
+msgid "Single-family private homes"
+msgstr "Viviendas Particulares Unifamiliares"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Situación de máquina:"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead__stage_days
+msgid "Stage days"
+msgstr "Días máximos etapa"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "Su número de cuenta"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.sale_contract_report
+msgid "Submit File"
+msgstr "Enviar archivo"
+
+#. module: sat_companies_sale
+#: model:ir.model,name:sat_companies_sale.model_sale_subscription
+msgid "Subscription"
+msgstr "Suscripción"
+
+#. module: sat_companies_sale
+#: model:ir.model,name:sat_companies_sale.model_sale_subscription_template
+msgid "Subscription Template"
+msgstr "Plantilla de suscripción"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__suscription_id
+msgid "Suscription"
+msgstr "Suscripción"
+
+#. module: sat_companies_sale
+#: model:mail.template,subject:sat_companies_sale.sale_contract_mail_template
+msgid "TEST"
+msgstr "PRUEBA"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "TITULAR"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__task_user_id
+msgid "Task User id"
+msgstr "Asignar tarea a ténico"
+
+#. module: sat_companies_sale
+#: code:addons/sat_companies_sale/models/.ipynb_checkpoints/sale_order-checkpoint.py:0
+#, python-format
+msgid "The item should be one per line"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.sale_contract_report
+msgid "The signed contract has been sent."
+msgstr "Se ha enviado el contrato firmado."
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.inherit_view_crm_lead_sat_companies
+msgid "This contact is low"
+msgstr "Este contacto esta de baja"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.sale_contract_report
+msgid "This is a preview of the customer portal."
+msgstr "Esta es una vista previa del portal del cliente."
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "Tipo Contrato Anterior…………………………………………………………………………………"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "Tipo de pago"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.view_sale_order_inherit_sat_companies_sale
+msgid "Tipos de Servicios en Contrato"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "Tlf.* ……………………………………………… Email……………………………………………………"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "Tlf.…………………………………………… Email*……………………………………………………"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_welcome_msj
+msgid ""
+"Todo el equipo de My Company queremos daros la bienvenida y aprovechar la "
+"oportunidad para agradeceros que hayan elegido nuestros servicios. Su "
+"confianza nos ayuda a ser cada día mejores profesionales y refuerza nuestro "
+"compromiso con su satisfacción, con la calidad y con su seguridad, aspectos "
+"en los que trabajamos sin descanso."
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model,name:sat_companies_sale.model_crm_lead_tracing
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead__tracing_ids
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.inherit_view_crm_lead_sat_companies
+msgid "Tracing"
+msgstr "Seguimiento"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_check_type_contract__type_service_id
+msgid "Type Service"
+msgstr "Información contrato/cláusulas"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_subscription__type_contract
+msgid "Type of contract"
+msgstr "Tipo de contrato"
+
+#. module: sat_companies_sale
+#: model:ir.actions.act_window,name:sat_companies_sale.sale_type_servic_action
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__type_service_id
+msgid "Type service"
+msgstr "Información contrato/cláusulas"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead__udn_type_id
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__udn_id
+msgid "Udn"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid ""
+"Una vez conocida la sentencia judicial o acuerdo extrajudicial, como "
+"consecuencia de la resolución unilateral del contrato de mantenimiento "
+"suscrito con la anterior empresa conservadora, la comunidad de propietarios "
+"o persona física o jurídica se compromete a continuar el mantenimiento con "
+"Ascensores Serki durante un periodo determinado que se acuerde en el anexo "
+"de ampliación que se firme en ese momento. A cambio, Ascensores Serki, por "
+"medio del presente documento, se compromete a asumir a su costa la "
+"indemnización a que hubiere lugar, por sentencia judicial o acuerdo "
+"extrajudicial. Cantidad de la que Ascensores Serki no se hace responsable en"
+" el caso de resolución anticipada del contrato de mantenimiento suscrito con"
+" Ascensores Serki por parte del cliente, teniendo que abonar este dichas "
+"cantidades."
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Unidades:______________   Tipo:_____"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__message_unread
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_unread
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__message_unread
+msgid "Unread Messages"
+msgstr "Mensajes no leídos"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__message_unread_counter
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__message_unread_counter
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Contador de mensajes no leídos"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.sale_contract_report
+msgid "Upload File"
+msgstr "Cargar archivo"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead__is_validate_days
+msgid "Validate days"
+msgstr "Validar días"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_gadget_document
+msgid "Velocidad:"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__website_message_ids
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_type__website_message_ids
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__website_message_ids
+msgid "Website Messages"
+msgstr "Mnesajes del website"
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,help:sat_companies_sale.field_crm_lead_tracing__website_message_ids
+#: model:ir.model.fields,help:sat_companies_sale.field_crm_lead_type__website_message_ids
+#: model:ir.model.fields,help:sat_companies_sale.field_sale_type_service__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead__is_medium_website
+msgid "Website medium"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.sale_contract_report
+msgid "Well done!"
+msgstr "Bien hecho!"
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid ""
+"[DOMCLI]\n"
+"                                    [DPCLI]  [POBCLI]"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "[DPCLI]"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid ""
+"[NOMEC]<br/>\n"
+"                                    [DOMEC]<br/>\n"
+"                                    [DPEC][POBEC]"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "[POBCLI]"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "[POBCLI],       de                        de"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.view_crm_lead_type_form
+msgid "crm_lead_type_form"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.view_crm_lead_type_tree
+msgid "crm_lead_type_tree"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model,name:sat_companies_sale.model_sale_check_type_contract
+msgid "sale.check.type.contract"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid ""
+"sito en [DPCLI]  [POBCLI]  \n"
+"                                    dado que éstos  pertenecen al titular del mismo, la comunidad de propietarios [DPCLI]  [POBCLI]"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__type_service_id
+msgid "testing"
+msgstr ""
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
+msgid "¿Quiere recibir facturas por email?*      SI     NO"
+msgstr ""

@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data >
+        <template id="sale_contract_report">
+            <script type="text/javascript" src="/sat_companies_sale/static/src/js/javascript.js"></script>
+            <link rel="stylesheet" href="/sat_companies_sale/static/src/css/contract_sale.css"/>
+            <t t-call="website.layout">
+                <main>
+                    <div class="container text-center" hidden="True">
+                        <p>REF QUOTATION <span t-esc="name"/></p>
+                        <p id="id_value_sale" t-esc="id_value"/>
+                        <p id="BackendUrl" t-esc="backend_url"/>
+                    </div>
+                    <div class = "alert alert-info alert-dismissible rounded-0 fade show d-print-none css_editable_mode_hidden">
+
+                    </div>
+                    <div class="container text-center" >
+                        <div class="card">
+                            <div class="text-center">
+                                This is a preview of the customer portal.
+                                <!--<a href="<script>" backendUrl "</script>"><i class="fa fa-arrow-right mr-1"></i>Back to edit mode</a>
+                                -->
+                                <a id="return_orderback" href="#" onclick="location.href=document.getElementById('BackendUrl').textContent">Regresar a la orden del Back</a>
+                            </div>
+                            
+                            <!--
+                            <div class="col-sm-auto mt8">
+                                <a role="button" class="btn btn-primary" data-toggle="modal" data-target="#modalaccept" href="#"><i class="fa fa-check"/>Firmar</a>
+                            </div>
+                            <div class="col-sm-auto mt8">
+                                <button id="upload_signature" type="button" class="btn btn-primary">Cargar firma</button>
+                            </div>
+                            <div class="col-sm-auto mt8">
+                                <button id="preview_sale_contract" type="button" class="btn btn-primary">Ver contrato</button>
+                            </div>
+                            -->
+                            <p>
+                                <h2><span>Seleccione una de las opciones para proceder con su firma:</span> </h2>
+                                
+                            </p>
+                            <div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="signature_option" id="signature_draw_option" value="option1" checked="checked"/>
+                                    <label class="form-check-label" for="inlineRadio1">Draw</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="signature_option" id="signature_upload_option" value="option2"/>
+                                    <label class="form-check-label" for="inlineRadio2">Upload File</label>
+                                </div>
+                            </div>
+                            
+                            <div class="container" id="menu_signature_pad">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h1>E-Signature</h1>
+                                        <p>Sign in the canvas below</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <canvas id="sig-canvas" width="620" height="160">
+                                            Get a better browser, bro.
+                                        </canvas>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <button class="btn btn-primary" id="sig-submitBtn">Previsualizar firma</button>
+                                        <button class="btn btn-default" id="sig-clearBtn">Clear Signature</button>
+                                    </div>
+                                </div>
+                                <br/>
+                                <div class="row" hidden="True">
+                                    <div class="col-md-12">
+                                        <textarea id="sig-dataUrl" class="form-control" rows="5">Data URL for your signature will go here!</textarea>
+                                    </div>
+                                </div>
+                                <br/>
+                                <div class="row" hidden="True">
+                                    <div class="col-md-12">
+                                        <img id="sig-image" src="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <br></br>
+                            <div class="form-group" id="menu_signature_upload" hidden="True">
+                                <br></br>
+                                <div class="text-center">
+                                    <div class="container" id="upload_file_block">
+                                        <input type="file" id="image_input" accept="image/png, image/jpg"/>
+                                        <div id="display_image"></div>
+                                    </div>
+                                </div>
+                                <br></br>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <button class="btn btn-primary" id="sig_submitBtn_file">Submit File</button>
+                                        <button class="btn btn-default" id="sig_clearBtn_file">Clear File</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div>
+                            <button class="btn btn-primary" id="send_document">Enviar documento firmado</button>
+                            <div class="alert alert-success" role="alert" id="alertSignatureSent" hidden="True">
+                                <h4 class="alert-heading">Well done!</h4>
+                                <p>The signed contract has been sent.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <t t-call="web.html_container">
+                                <t t-call="web.external_layout">
+                                    <div class="page">
+                                        <h2>CONTRATO</h2>
+                                    </div>
+                                    <div>
+                                        <t t-foreach="sale_object.type_service_id" t-as="s">
+                                            <ul>
+                                                <li><span t-esc="s.name"/></li>
+                                                <span t-raw="s.description_html"/>
+                                            </ul>                    
+                                        </t>
+                                    </div>
+                                    <div>
+                                        <img id="signature_pad_image_document" src=""/>
+                                    </div>
+                                </t>
+                            </t>
+                        </div>
+                    </div>
+                </main>
+            </t>
+        </template>
+    </data>
+</odoo>

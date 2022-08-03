@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="automatization_sat_companies_sale_order_offer" model="base.automation">
+        <field name="name">Oferta Mantenimiento / Montaje / Reparación </field>
+        <field name="model_id" ref="sale.model_sale_order"/>
+        <field name="state">email</field>
+        <field name="trigger">on_create</field>
+        <field name="active" eval="True"/>
+        <field name="template_id" ref="sat_companies_sale.template_sale_order_maintenance_offer"/>
+        <field name="filter_domain">[["sale_type_id","!=",False]]</field>
+    </record>
+
+    <record id="automatization_sat_companies_crm_lead_opportunity_notification" model="base.automation">
+        <field name="name">Notificación de Nuevas Oportunidades</field>
+        <field name="model_id" ref="crm.model_crm_lead"/>
+        <field name="state">email</field>
+        <field name="trigger">on_create_or_write</field>
+        <field name="active" eval="True"/>
+        <field name="template_id" ref="sat_companies_sale.template_crm_lead_opportunity_notify"/>
+        <field name="filter_pre_domain">[["type","=","opportunity"]]</field>
+        <field name="filter_domain">["|",["medium_id.name","=","Website"],["medium_id.name","=","Email"]]</field>
+    </record>
+
+    <record id="automatization_sat_companies_crm_lead_max_days" model="base.automation">
+        <field name="name">Notificación responsable del departamento</field>
+        <field name="model_id" ref="crm.model_crm_lead"/>
+        <field name="state">email</field>
+        <field name="trigger">on_create_or_write</field>
+        <field name="active" eval="True"/>
+        <field name="template_id" ref="sat_companies_sale.template_crm_lead_max_days_notify"/>
+        <field name="filter_pre_domain">[["is_validate_days","=",True]]</field>
+        <field name="filter_domain">[["is_validate_days","=",True]]</field>
+    </record>
+
+    <record id="automatization_sat_companies_sale_prevision" model="base.automation">
+        <field name="name">Previsión</field>
+        <field name="model_id" ref="sale.model_sale_order"/>
+        <field name="state">next_activity</field>
+        <field name="trigger">on_write</field>
+        <field name="active" eval="True"/>
+        <field name="activity_type_id" ref="mail.mail_activity_data_todo"/>
+        <field name="filter_pre_domain">[["is_mounting","=",True]]</field>
+        <field name="filter_domain">[["state","=","sale"]]</field>
+        <field name="activity_summary">Realizar previsión</field>
+        <field name="activity_user_id" ref="base.user_admin"/>
+    </record>
+
+</odoo>

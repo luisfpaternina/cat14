@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+        <template id="report_welcome_msj">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">                    
+                    <div class="header">
+                        <table class="one" align="left" border="1"  width="50%"> 
+                            <tr> 
+                                <td>
+                                    <p align="justify">
+                                        <span t-field="o.partner_id.name"></span><br></br>
+                                        <span t-field="o.partner_id.street"></span><br></br>
+                                        <span t-field="o.partner_id.zip"></span>,<span t-field="o.partner_id.city"></span>,<span t-field="o.partner_id.country_id"></span>
+                                    </p>
+                                </td> 
+                            </tr> 
+                        </table>
+                    </div>
+                    <div class="article o_report_layout_standard">
+                       <div class="page">
+                          <p>Estimados vecinos,</p>
+                          <p>
+                            Todo el equipo de My Company queremos daros la bienvenida y aprovechar la oportunidad para agradeceros que hayan elegido nuestros servicios. Su confianza nos ayuda a ser cada día mejores profesionales y refuerza nuestro compromiso con su satisfacción, con la calidad y con su seguridad, aspectos en los que trabajamos sin descanso.
+                          </p>
+                          <p>
+                            <span t-field="o.company_id"></span>
+                          </p>
+                          <strong>¡MUCHAS GRACIAS!</strong>
+                          <p>
+                            Si tienes cualquier tipo de duda, puedes llamarnos al y le atenderemos las 24 horas. Os informamos que vuestro número de cliente es el <span t-field="o.partner_id.code"></span> Aunque no es necesario, es recomendable que nos lo facilitéis para agilizar cualquier consulta.
+
+Además, nos encanta escuchar y aprender, por eso, si tienes alguna sugerencia para nosotros puedes enviárnosla a través del email <span t-field="o.company_id.email"></span>
+                          </p>
+                           <strong>¡Nos encanta recibir propuestas y mejorar con vosotros día a día!</strong>
+                           <p>De nuevo queremos daros las gracias por la confianza depositada en todo nuestro equipo y daros la bienvenida a la  familia <strong><span t-field="o.company_id.name"></span></strong></p>
+                           <p>Nos vemos pronto,</p>
+                           <p> 
+                            <span t-field="o.company_id.name"></span>
+                           </p>
+                       </div>
+                    </div>
+                    <div class="footer">
+                        <p>
+                            <span t-field="o.company_id.name"></span><br></br>
+                            <span t-field="o.company_id.street"></span>
+                        </p>
+                    </div>
+                </t>
+            </t>
+        </template>
+
+        <report
+                id="id_welcome_mjs"
+                string="Carta de bienvenida"
+                model="sale.order"
+                report_type="qweb-pdf"
+                name="sat_companies_sale.report_welcome_msj"
+        />
+
+    </data>
+</odoo>

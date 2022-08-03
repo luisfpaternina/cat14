@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="sale_contract_mail_template" model="mail.template">
+            <field name="name">TEST</field>
+            <field name="model_id" ref="sale.model_sale_order"/>
+            <field name="subject">TEST</field>
+            <field name="email_from">${(object.write_uid.email_formatted or user.email_formatted) | safe}</field>
+            <field name="email_to"></field>
+            <field name="body_html" type="xml">
+                <div>
+                    <strong><p align="center">CONTRATO DE MANTENIMIENTO T-R</p></strong>
+                    <br></br>
+                    <img  src="/sat_companies_sale/static/src/description/serki_logo.jpg"/>
+                    <strong><p>De una parte:</p></strong>
+                    <br></br>
+                    <strong><p>Con domicilio en:</p></strong>
+                    <br></br>
+                    <strong><p>Y con N.F.L.:</p></strong>
+                    <br></br>
+                    <strong><p>Y de otra:</p></strong>
+                    <br></br>
+                    <strong><p>Objeto</p></strong>
+                    <br></br>
+                    <strong><p>Lugar de instalación Edificio:</p></strong>
+                    <br></br>
+                    <strong><p>Núm. de Unidad:</p></strong>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    ${object.get_table_type_contracts() | safe}
+                </div>
+            </field>
+            <field name="lang">${user.lang}</field>
+            <field name="auto_delete" eval="False"/>
+        </record>
+    </data>
+</odoo>

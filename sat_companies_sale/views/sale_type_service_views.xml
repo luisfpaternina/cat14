@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>     
+<odoo>
+    <data>
+        <record id="sale_type_service_tree" model="ir.ui.view">
+            <field name="name">sale.type.service.tree</field>
+            <field name="model">sale.type.service</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+        <record id="sale_type_service_form" model="ir.ui.view">
+            <field name="name">sale.type.service.form</field>
+            <field name="model">sale.type.service</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <field name="name" required="1" placeholder="Name"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="active" widget="boolean_toggle"/>
+                            </group>
+                            <group>
+                                
+                            </group>
+                        </group>
+                        <field name="description_html"/>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="sale_type_servic_action">
+            <field name="name">Type service</field>
+            <field name="res_model">sale.type.service</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            id="menu_sale_type_service" 
+            name="Información Contrato" 
+            parent="sale.menu_sale_config"
+            action="sat_companies_sale.sale_type_servic_action"
+            sequence="50"/>
+
+    </data>
+</odoo> 

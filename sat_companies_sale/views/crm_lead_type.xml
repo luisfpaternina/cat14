@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>     
+<odoo>
+    <data>
+
+        <record id="view_crm_lead_type_tree" model="ir.ui.view">
+            <field name="name">crm.lead.type.tree</field>
+            <field name="model">crm.lead.type</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="crm_lead_type_tree">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_crm_lead_type_form" model="ir.ui.view">
+            <field name="name">crm.lead.type.form</field>
+            <field name="model">crm.lead.type</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form string="crm_lead_type_form">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <field name="name" required="1" placeholder="Name of opportunity type"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="active" widget="boolean_toggle"/>
+                            </group>
+                            <group>
+                                <field name="days_maximum_stage"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_view_crm_lead_type">
+            <field name="name">Oportunity type</field>
+            <field name="res_model">crm.lead.type</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create new record
+                </p>
+            </field>
+        </record>
+
+        <menuitem 
+            id="menu_crm_lead_type" 
+            name="Oportunity type" 
+            parent="crm.crm_menu_config"
+            action="action_view_crm_lead_type"
+            />
+
+    </data>
+</odoo> 

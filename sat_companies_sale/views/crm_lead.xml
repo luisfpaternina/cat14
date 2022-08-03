@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="inherit_view_crm_lead_sat_companies" model="ir.ui.view">
+        <field name="name">crm.lead.form.inherit</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[(@name='priority')]" position="after">
+                <field name="is_external"/>
+                <field name="expected_total" invisible="1"/>
+                <field name="is_low" invisible="1"/>
+            </xpath>
+
+            <xpath expr="//sheet" position="before">
+                <div class="alert alert-danger" role="alert" style="margin-bottom:10px;"
+                        attrs="{'invisible': [('is_low', '!=', True)]}">
+                    This contact is low
+                </div>
+            </xpath>
+
+            <xpath expr="//field[@name='lost_reason']" position="before">
+                <field name="partner_admin_id" options="{'no_create': True, 'no_create_edit':True}" domain = "[('is_admin','=',True)]"/>
+                <field name="sale_type_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                <field name="udn_type_id" options="{'no_create': True, 'no_create_edit':True}" attrs="{'invisible': [('sale_type_id', '=', False)], 'required': [('sale_type_id', '!=', False)]}"/>
+                <field name="oportunity_type_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                <field name="managed_by"/>
+                <field name="quote_date_sent_min"/>
+                <field name="opportunity_days"/>
+                <field name="stage_days"/>
+                <field name="is_validate_days" invisible="1"/>
+            </xpath>
+
+            <xpath expr="//form[1]/sheet[1]/notebook[1]" position="inside">
+                <page string="Tracing" name="tracing_page">
+                    <group name="tracing_group">
+                        <group name="tracing_group_left">
+
+                        </group>
+                        <group name="tracing_group_right">
+
+                        </group>
+                        <field name="tracing_ids">
+                            <tree editable="bottom">
+                                <field name="date"/>
+                                <field name="name"/>
+                                <field name="description"/>
+                                <field name="next_date"/>
+                            </tree>
+                        </field>
+                    </group>
+                </page>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>     

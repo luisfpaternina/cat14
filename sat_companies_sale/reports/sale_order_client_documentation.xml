@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+        <record id="paperformat_sat_companies_sale" model="report.paperformat">
+            <field name="name">A4 client documentation</field>
+            <field name="default" eval="True" />
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">40</field>
+            <field name="margin_bottom">23</field>
+            <field name="margin_left">7</field>
+            <field name="margin_right">7</field>
+            <field name="header_line" eval="False" />
+            <field name="header_spacing">35</field>
+            <field name="dpi">90</field>
+        </record>
+
+        <template id="report_custom_template_sale_documentation">
+            <t t-call="web.html_container">
+                <t t-foreach="range(5)" t-as="p">
+                    <t t-foreach="docs" t-as="o">                    
+                        <div class="header">
+                            <!--ENCABEZADO -->
+                            <p t-if="p == 0">
+                                <span>COMUNIDAD DE PROPIETARIOS</span><br></br>
+                                <span t-field="o.partner_id"></span><br></br>
+                                <span t-field="o.partner_id.vat"></span><br></br>
+                            </p>
+                            <p t-if="p == 1" align="right">
+                                <img t-att-src="'data:image/png;base64,%s' % to_text(o.company_id.logo)" width="115" height="90"/>
+                            </p>
+                            <p t-if="p == 2" align="right">
+                                <img t-att-src="'data:image/png;base64,%s' % to_text(o.company_id.logo)" width="115" height="90"/>
+                            </p>
+                            <h3 t-if="p == 2">CONSENTIMIENTO INFORMADO</h3>
+                            <i t-if="p == 2" style="font-size:15px">REGLAMENTO EUROPEO 679/2016 DE PROTECCIÓN DE DATOS PERSONALES
+                                LEY ORGÁNICA 3/2018 DE PROTECCIÓN DE DATOS PERSONALES Y GARANTÍA DE LOS DERECHOS DIGITALES
+                            </i>
+                            <p t-if="p == 3" align="right">
+                                <img t-att-src="'data:image/png;base64,%s' % to_text(o.company_id.logo)" width="115" height="90"/>
+                            </p>
+                            <p align="justify" t-if="p == 3">
+                                    Orden de domiciliación de <strong>DEBITO DIRECTO SEPA</strong>
+                            </p>
+                            <p align="justify" t-if="p == 3" style="font-size:13px">
+                                    Mediante la firma del presente formulario de Orden de Domiciliación, Usted autoriza a SERKI INSTALACIONES Y SERVICIOS, S.L. a enviar órdenes a su entidad financiera, para adeudar en su cuenta los importes que se devenguen como consecuencia de la prestación de los servicios de mantenimiento y reparación de ascensores y, asimismo, autoriza a su entidad financiera para cargar en su cuenta los importes debidamente notificados por SERKI INSTALACIONES Y SERVICIOS, S.L.. Usted tiene derecho a ser reembolsado por su entidad financiera, de acuerdo con los términos y condiciones del contrato suscrito con la misma. Dicho reembolso deberá reclamarse en un plazo máximo de 8 semanas a contar desde la fecha en que se realizó el adeudo de su cuenta.
+                            </p>
+                            <p align="justify" t-if="p == 3" style="font-size:13px">
+                                Por nuestra parte le remitiremos la factura de la forma acordada.
+                            </p>
+                            <p t-if="p == 4" align="right">
+                                <img t-att-src="'data:image/png;base64,%s' % to_text(o.company_id.logo)" width="115" height="90"/>
+                            </p>
+                            <table width="100%" t-if="p == 4">
+                                <tr style="background-color:#59B36F">
+                                    <th>
+                                        <h4 align="center" style="color:white;">FICHA EXPENDIENTE</h4>
+                                    </th>
+                                </tr>
+                            </table>
+                            <h6 t-if="p == 4" style="color:#59B36F;">
+                                DATOS CONTRATO ANTERIOR:
+                            </h6>
+                            <p t-if="p == 4">
+                                Empresa Mantenedora……………………………………………………………………………………
+                            </p>
+                            <p t-if="p == 4">
+                                Fecha Contrato  ………/………/………       Duración contrato…………………..años
+                            </p>
+                            <p t-if="p == 4">
+                                Tipo Contrato Anterior…………………………………………………………………………………
+                            </p>
+                            <p t-if="p == 4">
+                                Pago trimestral Actual………………………………………………………………………………….
+                            </p>
+                            <p t-if="p == 4">
+                                Fecha Última Inspección………/……/……… ¿Ascensor Parado?*  SI   NO
+                            </p>
+                            <p t-if="p == 4">
+                                Estado OCA           Favorable         Favorable con defectos                  Condicionada      Negativa
+                            </p>
+                            <h6 t-if="p == 4" style="color:#59B36F;">
+                                DATOS COMUNIDAD
+                            </h6>
+                            <p t-if="p == 4">
+                                Comunidad……………………………………………………………………………………………………
+                            </p>
+                            <p t-if="p == 4">
+                                C. I.F*………………………………………………………  RAE*…………………………………………
+                            </p>
+                            <p t-if="p == 4">
+                                ¿Quiere recibir facturas por email?*      SI     NO
+                            </p>
+                            <h6 t-if="p == 4" style="color:#59B36F;">
+                                Presidente
+                            </h6>
+                            <p t-if="p == 4">
+                               Nombre……………………………………………………………………………………………………… 
+                            </p>
+                            <p t-if="p == 4">
+                               Tlf.* ……………………………………………… Email…………………………………………………… 
+                            </p>
+                            <p t-if="p == 4" style="color:#59B36F;">
+                               Administrador 
+                            </p>
+                            <p t-if="p == 4">
+                               Nombre……………………………………………………………………………………………………… 
+                            </p>
+                            <p t-if="p == 4">
+                                Tlf.…………………………………………… Email*……………………………………………………
+                            </p>
+                            <h5 t-if="p == 4" style="color:#59B36F;">
+                                OBSERVACIONES
+                            </h5>
+                            <br></br>
+                        </div>
+                        <div class="article o_report_layout_standard">
+                           <div class="page">
+                            <style>
+                                div#b{
+                                width:250px;
+                                height:20px;
+                                background-color:white;
+                                float:left;
+                                }
+                                div#cuadro{
+                                width:20px;
+                                height:20px;
+                                background-color:white;
+                                float:left;
+                                border: 1px solid black;
+                                border-radius: 40px;
+                                }
+                                table1 {
+                                width: 100%;
+                                border: 1px solid black;
+                                }
+                            </style>
+                            <!--PRIMERA PAGINA! -->
+                            <p align="center" t-if="p == 0">
+                                    [NOMEC]<br></br>
+                                    [DOMEC]<br></br>
+                                    [DPEC][POBEC] 
+
+                            </p>
+                            <p t-if="p == 0">
+                                [POBCLI],       de                        de
+                            </p>
+                              <p t-if="p == 0">Muy Sres. míos:</p>
+                              <p align="justify" t-if="p == 0">Es nuestro deseo dar por concluidos sus servicios de mantenimiento del ascensor, por lo que por el presente les comunicamos formalmente que con fecha      de                de          damos por resuelto el referido contrato de mantenimiento, por lo que expresamente les requerimos a fin de que a partir de dicho día inclusive, se abstengan de entrar en la escalera de la comunidad, así como de realizar cualquier actuación en el ascensor si no cuentan con el consentimiento expreso y por escrito de la comunidad.</p>
+                              <p align="justify" t-if="p == 0">
+                                  Asimismo les REQUIERO para que en el improrrogable plazo de 15 días nos faciliten los códigos de acceso de la maniobra del ascensor Rae nº <span t-field="o.product_id.rae"></span>    sito en [DPCLI]  [POBCLI]  
+                                    dado que éstos  pertenecen al titular del mismo, la comunidad de propietarios [DPCLI]  [POBCLI]  
+
+                              </p>
+                              <p align="justify" t-if="p == 0">
+                                  De no atender esta petición amistosa nos veremos obligados a instar cuantas acciones legales sean necesarias para la defensa de nuestros legítimos intereses , indicándoles que, de no facilitar dichos códigos, serán únicos responsables de cuantos costes , daños y perjuicios suponga para la comunidad la falta de acceso a la maniobra por no disponer de los mismos , que serán reclamados debidamente.
+                              </p>
+                              <p align="justify" t-if="p == 0">
+                                  Sin nada mas, reciban un saludo.
+                              </p>
+                              <!--SEGUNDA PAGINA! -->
+                              <p align="justify" t-if="p == 1">
+                                  Comunidad de Propietarios
+                              </p>
+                              <p align="center" t-if="p == 1">
+                                    [DOMCLI]
+                                    [DPCLI]  [POBCLI]  
+
+                              </p>
+                              <p align="justify" t-if="p == 1">
+                                  Muy Sres. nuestros:
+                              </p>
+                              <p align="justify" t-if="p == 1">
+                                  En primer lugar agradecer su confianza depositada en Ascensores Serki para el mantenimiento de su ascensor. Del mismo modo queremos hacerles saber que desde que usted firma el contrato de mantenimiento, Serki pone a  disposición de su comunidad nuestros servicios jurídicos para el asesoramiento ante cualquier consecuencia que pueda ocasionar el cambio de empresa conservadora.
+                              </p>
+                              <p align="justify" t-if="p == 1">
+                                La comunidad de propietarios se compromete a facilitar en todo momento y de forma inmediata la información de cualquier tipo (comunicaciones, cartas o notificaciones) que sea destinataria por parte de la anterior empresa conservadora u organismo oficial, en relación al cambio de empresa conservadora, colaborando en todo momento para un  correcto desarrollo del derecho de defensa de la comunidad ejercido a través de sus representantes, en este caso procuradores y abogados designados. 
+                              </p>
+                              <p align="justify" t-if="p == 1">
+                                Una vez conocida la sentencia judicial o acuerdo extrajudicial, como consecuencia de la resolución unilateral del contrato de mantenimiento suscrito con la anterior empresa conservadora, la comunidad de propietarios o persona física o jurídica se compromete a continuar el mantenimiento con Ascensores Serki durante un periodo determinado que se acuerde en el anexo de ampliación que se firme en ese momento. A cambio, Ascensores Serki, por medio del presente documento, se compromete a asumir a su costa la indemnización a que hubiere lugar, por sentencia judicial o acuerdo extrajudicial. Cantidad de la que Ascensores Serki no se hace responsable en el caso de resolución anticipada del contrato de mantenimiento suscrito con Ascensores Serki por parte del cliente, teniendo que abonar este dichas cantidades.
+                              </p>
+                              <p align="justify" t-if="p == 1">
+                                De conformidad con lo dispuesto firman,
+                              </p>
+                              <p align="justify" t-if="p == 1">
+                                  En……………a……… de……………………. de…………..
+                              </p>
+                               <p align="justify" t-if="p == 1">
+                               </p>
+                               <br></br><br></br>
+                               <div id="b" t-if="p == 1">
+                                   <strong>Aceptado el cliente</strong>
+                               </div>
+                                <div id="b" t-if="p == 1">
+                                   <strong>Serki Instalaciones y Servicios, S. L </strong>
+                                </div>
+                                <br></br><br></br>
+                               <p align="justify" t-if="p == 1">
+                                FDO………………………………………<br></br>
+                                EN CALIDAD DE…………………………<br></br>
+                                DNI………………………………………
+                               </p>
+                                <!--3RA PAGINA! -->
+                                <p align="justify" t-if="p == 2" style="font-size:12px">
+                                    <strong>Identificación del Responsable.</strong> 
+                                    Le informamos que los datos personales que Usted nos proporciona son incorporados a un tratamiento de datos personales denominado CLIENTES cuyo responsable es SERKI INSTALACIONES Y SERVICIOS, S.L conNIF B84241454 y con domicilio en AV. DE L’ALTET Nº29 BAJO, 03208 de ELCHE, ALICANTE (ESPAÑA). Puede contactar con elResponsable, bien por teléfono en el número 965422376 o bien mediante correo electrónico en el buzón contabilidad@serki.es.
+
+                                </p>
+                                <p align="justify" t-if="p == 2" style="font-size:12px">
+                                    <strong>Finalidad.</strong>
+                                    ¬La finalidad es la gestión de la relación mercantil, tanto desde un punto de vista administrativo y de cumplimiento de obligaciones fiscales, como desde un punto de vista comercial y de marketing (comunicaciones, información comercial y gestión sobre productos y servicios). Distribución y comunicación con carácter publicitario.
+
+                                </p>
+                                <p align="justify" t-if="p == 2" style="font-size:12px">
+                                    <strong>Plazo de Conservación.</strong>
+                                    ¬Una vez finalizada la relación contractual, o prestación de servicio el plazo de conservación de los datos será de 6 años para dar cumplimiento a obligaciones legales, fiscales y mercantiles. Desde un punto de vista comercial y de marketing los datos serán conservados indefinidamente mientras exista un interés mutuo. Respecto a los tratamientos de datos de publicidad y uso de imágenes los datos serán conservados indefinidamente mientras exista un interés mutuo. El usuario podrá ejercitar los derechos reflejados más abajo. 
+
+                                </p>
+                                <p align="justify" t-if="p == 2" style="font-size:12px">
+                                    <strong>Decisiones automatizadas y elaboración de perfiles.</strong>
+                                    No se toman decisiones automatizadas ni se elaboran perfiles.
+                                </p>
+                                <p align="justify" t-if="p == 2" style="font-size:12px">
+                                    <strong>Base Jurídica del Tratamiento.</strong>
+                                    ¬La base jurídica del tratamiento es la ejecución de un contrato mercantil o la prestación de un servicio, así como el cumplimiento de obligaciones fiscales y mercantiles. Además de consentimiento EXPLÍCITO para fines determinados. Consentimiento explicito para los tratamientos de datos de publicidad y uso de imágenes los datos.
+                                </p>
+                                <p align="justify" t-if="p == 2" style="font-size:12px">
+                                    <strong>Destinatarios de cesiones.</strong>
+                                    ¬Se prevén cesiones a bancos, cajas de ahorro y cajas rurales, además de aquellas que están autorizadas por ley.
+                                </p>
+                                <p align="justify" t-if="p == 2" style="font-size:12px">
+                                    <strong>Transferencias Internacionales.</strong>
+                                    ¬No se realizan transferencias internacionales.
+                                </p>
+                                <p align="justify" t-if="p == 2" style="font-size:12px">
+                                    <strong>Derechos.</strong>
+                                    De acuerdo con la legislación vigente tiene los siguientes derechos: 
+                                    - Derecho a solicitar el acceso a sus datos personales.  - Derecho a solicitar su rectificación o supresión.  - Derecho a solicitar la limitación de su tratamiento - Derecho a oponerse al tratamiento.  - Derecho a la portabilidad de los datos. 
+                                    Para ejercer sus derechos, dirigiéndose por escrito con fotocopia de DNI o documento identificativo equivalente y solicitando el correspondiente formulario a SERKI INSTALACIONES Y SERVICIOS, S.L o a través de la dirección de correo contabilidad@serki.es con el Asunto “Derechos Ley Protección de Datos”. Opcionalmente, puede redirigir al interesado a la Autoridad de Control competente para obtener información adicional acerca de sus derechos. Asimismo, en caso de considerar vulnerado su derecho a la protección de datos personales, podrá interponer una reclamación ante la Agencia Española de Protección de Datos.
+                                </p>
+                                <p align="justify" t-if="p == 2" style="font-size:12px">
+                                    De conformidad con el <strong>Reglamento (UE) 2016/679</strong>, de 27 de abril de 2016, o Reglamento General de Protección de Datos (RGPD), en lo que no contradiga el mencionado Reglamento, por lo dispuesto en la <strong>Ley Orgánica 3/2018</strong> de protección de datos de carácter personal y garantías de los derechos digitales y con la Ley 34/2002, de 11 de julio, de servicios de la sociedad de la información y de comercio electrónico (LSSI-CE) deseo recibir información relacionada con SERKI INSTALACIONES Y SERVICIOS, S.L por cualquier medio facilitado a la empresa, entendiéndose medios electrónicos y medios de comunicación postales.
+                                </p>
+                                <br></br>
+                                <table style="width:100%;" t-if="p == 2">
+                                    <tr>
+                                        <td><p style="font-size:13px"><strong>SI</strong> quiero</p></td>
+                                        <td><div id="cuadro" style=" text-align: center;"> <t> <span></span>  </t></div></td>
+                                        <td><p style="font-size:13px"><strong>NO</strong> quiero</p></td>
+                                        <td><div id="cuadro" style=" text-align: center;"><t> <span></span>  </t></div></td>
+                                    </tr>
+                                </table>
+                                <p align="justify" t-if="p == 2" style="font-size:13px">
+                                    La inacción en la selección anterior se entenderá como NO.
+                                </p>
+                                <p align="justify" t-if="p == 2" style="font-size:13px">
+                                    <strong>Consentimiento.</strong> En ELCHE a ................................................ 
+                                </p>
+                                <p align="justify" t-if="p == 2" style="font-size:13px">
+                                    COMUNIDAD DE PROPIETARIOS  [DPCLI]  [POBCLI]  
+                                </p>
+                                <p align="justify" t-if="p == 2" style="font-size:13px">
+                                    Dn./a, ............................................................................................................. con DNI / NIE ......................... doy mi consentimiento expreso de acuerdo con lo expuesto en el presente documento.
+                                </p>
+                                <p align="justify" t-if="p == 2" style="font-size:13px">
+                                    <strong>FIRMADO.</strong>
+                                </p>
+                                <!--4TA PAGINA! -->
+                                <p align="justify" t-if="p == 3" style="font-size:13px">
+                                    Por favor, complete los campos marcados con un *
+                                </p>
+                                <br></br>
+                                <table width="100%" t-if="p == 3">
+                                    <tr>
+                                        <td>
+                                            <p style="font-size:13px">TITULAR</p>
+                                        </td>
+                                        <td>
+                                            <p style="font-size:13px">[DPCLI]</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p style="font-size:13px">CIF TITULAR</p>
+                                        </td>
+                                        <td>
+                                            <p style="font-size:13px">[POBCLI]</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p style="font-size:13px">Su número de cuenta</p>
+                                        </td>
+                                        <td>
+                                            <p style="font-size:13px"></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p style="font-size:13px">Nombre del acreedor</p>
+                                        </td>
+                                        <td>
+                                            <p style="font-size:13px"></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p style="font-size:13px">Tipo de pago</p>
+                                        </td>
+                                        <td>
+                                            <p style="font-size:13px"></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p style="font-size:13px">Localidad donde se firma</p>
+                                        </td>
+                                        <td>
+                                            <p style="font-size:13px"></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p style="font-size:13px">Firma</p>
+                                        </td>
+                                        <td>
+                                            <p style="font-size:13px"></p>
+                                        </td>
+                                    </tr>
+                                </table>
+                           </div>
+                        </div>
+                        <div class="footer">
+                            <p t-if="p == 0" align="center">
+                                Fdo. Presidente de la Comunidad
+                            </p>
+                            <p t-if="p == 1" align="justify" style="font-size:9px">
+                                SERKI INSTALACIONES Y SERVICIOS, S.L es el Responsable del tratamiento de los datos personales proporcionados bajo su consentimiento y le informa de que estos datos serán tratados de conformidad con lo dispuesto en el Reglamento (UE) 2016/679, de 27 de abril (GDPR), y la Ley Orgánica 3/2018, de 5 de diciembre (LOPDGDD), con la finalidad de mantener una relación comercial (por interés legítimo del responsable, art. 6.1.f GDPR) y conservarlos durante no más tiempo del necesario para mantener el fin del tratamiento o mientras existan prescripciones legales que dictaminen su custodia. No se comunicarán los datos a terceros, salvo obligación legal. Asimismo, se le informa de que puede ejercer los derechos de acceso, rectificación, portabilidad y supresión de sus datos y los de limitación y oposición a su tratamiento dirigiéndose a SERKI INSTALACIONES Y SERVICIOS, S.L en AV. DEL ALTET, Nº 29. BAJO, - 03208 ELCHE (Alicante). Email: contabilidad@serki.es y el de reclamación a www.aepd.es.
+                            </p>
+                            <p t-if="p == 3" align="justify" style="font-size:7px">              
+                                AVISO LEGAL: La información contenida en este correo electrónico, y en su caso en los documentos adjuntos, es información privilegiada para uso exclusivo de la persona y/o personas a las que va dirigido. No está permitido el acceso a este mensaje a cualquier otra persona  distinta a los indicados. Si Usted no es uno de los destinatarios, cualquier duplicación, reproducción, distribución, así como cualquier uso de la información contenida en él o cualquiera otra acción u omisión tomada en relación con el mismo, está prohibida y puede ser ilegal. En dicho caso, por favor, notifíquelo al remitente y proceda a la eliminación de este correo electrónico así como de sus adjuntos si los hubiere. Asimismo y en cumplimiento de la legislación española vigente en materia de protección de datos de carácter personal y del reglamento europeo RGPD 679/2016 le informamos que sus datos están siendo objeto de tratamiento por parte de SERKI INSTALACIONES Y SERVICIOS, S.L con CIF B84241454, con la finalidad del mantenimiento y gestión de relaciones comerciales y administrativas. La base jurídica del tratamiento es el cumplimiento de la legislación fiscal, mercantil y contable. No se preveen cesiones y/o transferencias internacionales de datos. Para ejercitar sus derechos puede dirigirse a SERKI INSTALACIONES Y SERVICIOS, S.L, domiciliada en Av. de l’altet nº 29, bajo,  03208, Elche (ALICANTE), o bien por email a contabilidad@serki.es, con el fin de ejercer sus derechos de acceso, rectificación, supresión (derecho al olvido), limitación de tratamiento, portabilidad de los datos, oposición, y a no ser objeto de decisiones automatizadas, indicando como Asunto: “Derechos Ley Protección de Datos”, y adjuntando fotocopia de su DNI
+                            </p>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+        <report
+                id="id_template_sale_client_documentation"
+                string="Documentación nuevos clientes"
+                model="sale.order"
+                report_type="qweb-pdf"
+                name="sat_companies_sale.report_custom_template_sale_documentation"
+        />
+
+        <record id="sat_companies_sale.id_template_sale_client_documentation" model="ir.actions.report">
+            <field name="paperformat_id" ref="sat_companies_sale.paperformat_sat_companies_sale"/>
+        </record>
+
+    </data>
+</odoo>

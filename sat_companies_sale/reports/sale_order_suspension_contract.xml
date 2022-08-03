@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+   <data noupdate="1">
+       <!--Email template -->
+       <record id="email_template_contract_suspension" model="mail.template">
+           <field name="name">Email Template contract suspension</field>
+           <field name="model_id" ref="sale.model_sale_order"/>
+           <field name="email_from">${(object.company_id.email |safe}</field>
+           <field name="email_to" >${object.partner_id.email}</field>
+           <field name="subject">Ref ${object.name or 'n/a' }</field>
+           <field name="auto_delete" eval="True"/>
+           <field name="lang">${object.partner_id.lang}</field>
+           <field name="body_html"><![CDATA[
+                <p>Hi</p>
+                <br/>
+                <p>Here is the details</p>
+                <br/>
+                 ]]>
+           </field>
+       </record>
+   </data>
+</odoo>

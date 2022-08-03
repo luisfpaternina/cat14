@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+        <template id="report_custom_template_sale_order_maintenance_offer">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">                    
+                    <div class="header">
+                        <table class="one" align="left" border="1"  width="50%"> 
+                            <tr> 
+                                <td>
+                                    <p align="justify">
+                                        <img t-att-src="'data:image/png;base64,%s' % to_text(o.company_id.logo)" width="115" height="90"/>
+                                    </p>
+                                </td> 
+                            </tr> 
+                        </table>
+                    </div>
+                    <div class="article o_report_layout_standard">
+                        <div class="page">
+                            <strong>
+                                <p align="center">Oferta de mantenimiento de ascensores</p>
+                            </strong>
+                                <ul>
+                                    <li>Contrato de mantenimiento</li>
+                                    <li>Oficina y alamcen de respuesto</li>
+                                    <li>Mecanicos de zona</li>
+                                    <li>Servicios de averias</li>
+                                    <li>Servicio de apuesta en marcha</li>
+                                    <li>Mantenimiento preventivo</li>
+                                    <li>Asesoramiento jurídico</li>
+                                    <li>La gestión e inspección por cambio de conversador gratis</li>
+                                </ul>
+                                <br></br>
+                                <strong><p>OFERTA DE MANTENIMIENTO</p></strong>
+                                <br></br>
+                                <strong><p>OBSERVACIONES</p></strong>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        
+                    </div>
+                </t>
+            </t>
+        </template>
+
+        <report
+                id="id_template_sale_order_maintenance_offer"
+                string="Oferta de mantenimiento"
+                model="sale.order"
+                report_type="qweb-pdf"
+                name="sat_companies_sale.report_custom_template_sale_order_maintenance_offer"
+        />
+
+    </data>
+</odoo>

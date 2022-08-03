@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Template and notification section -->
+    <data>
+        <record id="action_email_contract_signature" model="ir.actions.report">
+            <field name="name">Contrato firma</field>
+            <field name="model">sale.order</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">sat_companies_sale.report_contract_sale</field>
+            <field name="report_file">sat_companies_sale.report_contract_sale</field>
+            <field name="print_report_name">'Contrato - %s' % (object.name)</field>
+        </record>
+        
+        <template id="report_contract_sale">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.external_layout">
+                        <div class="page">
+                            <h2>Report title</h2>
+                            <p>Cotización Número <span t-field="o.name"/></p>
+                        </div>
+                        <div>
+                            <t t-foreach="o.type_service_id" t-as="s">
+                                <ul>
+                                    <li><span t-esc="s.type_service_id.name"/></li>
+                                </ul>                    
+                            </t>
+                        </div>
+                        <div>
+                            <img  id="signature_pad_image_document" t-att-src="o.signature_url_text"/>
+                        </div>
+                    </t>
+                </t>
+            </t>
+
+        </template>
+
+        <record id="email_contract_signature" model="mail.template">
+            <field name="name">email contract signature</field>
+            <field name="model_id" ref="sale.model_sale_order"/>
+            <field name="subject">${object.company_id.name}</field>
+            <field name="email_from">${(object.user_id.email_formatted or user.email_formatted) | safe}</field>
+            <field name="partner_to">${object.partner_id.id}</field>
+            <field name="body_html" type="html">
+                <div style="margin: 0px; padding: 0px;">
+                    <p style="margin: 0px; padding: 0px; font-size: 13px;">
+                        % set doc_name = 'quotation' if object.state in ('draft', 'sent') else 'order'
+                        <br/><br/>
+                        Your
+                        % if ctx.get('proforma'):
+                            Pro forma invoice for ${doc_name} <strong>${object.name}</strong>
+                            % if object.origin:
+                                (with reference: ${object.origin} )
+                            % endif
+                            amounting in <strong>${format_amount(object.amount_total, object.pricelist_id.currency_id)}</strong> is available.
+                        % else:
+                            ${doc_name} <strong>${object.name}</strong>
+                            % if object.origin:
+                                (with reference: ${object.origin} )
+                            % endif
+                            amounting in <strong>${format_amount(object.amount_total, object.pricelist_id.currency_id)}</strong> is ready for review.
+                        % endif
+                        <br/><br/>
+                        Do not hesitate to contact us if you have any questions.
+                        <br/>
+                        <div style="margin:16px 0px 16px 0px;">
+                                <a href="/contract/${object.id}" style="background-color:#875A7B;padding: 20px 30px 20px 30px; text-decoration: none; color: #fff; border-radius: 5px; font-size:13px;">
+                                    Signature Contract
+                                </a>
+                        </div>
+                    </p>
+                </div>
+            </field>
+            <field name="report_name">${(object.name or '').replace('/','_')}</field>
+            <field name="lang">${object.partner_id.lang}</field>
+            <field name="auto_delete" eval="True"/>
+        </record>
+        <record id="pdf_attachment_signatured" model="mail.template">
+            <field name="name">pdf attachment</field>
+            <field name="model_id" ref="sale.model_sale_order"/>
+            <field name="subject">${object.company_id.name}</field>
+            <field name="email_from">${(object.user_id.email_formatted or user.email_formatted) | safe}</field>
+            <field name="partner_to">${object.partner_id.id}</field>
+            <field name="body_html" type="html">
+                <div style="margin: 0px; padding: 0px;">
+                    <p style="margin: 0px; padding: 0px; font-size: 13px;">
+                        <br/>
+                        <div style="margin:16px 0px 16px 0px;">
+                                <a href="/contract/${object.id}" style="background-color:#875A7B;padding: 20px 30px 20px 30px; text-decoration: none; color: #fff; border-radius: 5px; font-size:13px;">
+                                    Archivo Adjunto
+                                </a>
+                        </div>
+                    </p>
+                </div>
+            </field>
+            <field name="report_name">${(object.name or '').replace('/','_')}</field>
+            <field name="lang">${object.partner_id.lang}</field>
+            <field name="auto_delete" eval="True"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="inherit_view_crm_stage_sat_companies" model="ir.ui.view">
+        <field name="name">crm.stage.form.inherit</field>
+        <field name="model">crm.stage</field>
+        <field name="inherit_id" ref="crm.crm_stage_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//form[1]/sheet[1]/group[1]" position="after">
+                <group name="principal_group">
+                  <group name="gp_left">
+                      <field name="oportunity_type_id"/>
+                  </group>
+                  <group name="gp_right">
+                      
+                  </group>
+                </group>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>
+   
