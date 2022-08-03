@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>     
+<odoo>
+    <data>
+
+        <record id="view_maintenance_minute_point_tree" model="ir.ui.view">
+            <field name="name">maintenance.minute.point.tree</field>
+            <field name="model">maintenance.minute.point</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="maintenance_minute_point_tree">
+                    <field name="code"/>
+                    <field name="description"/>
+                    <field name="type_deffect_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_maintenance_minute_point_form" model="ir.ui.view">
+            <field name="name">maintenance.minute.point.form</field>
+            <field name="model">maintenance.minute.point</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form string="minute_point_form">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            
+                                        </td>
+                                    </tr>
+                                </table>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="code" required="1"/>
+                            </group>
+                            <group>
+                                <field name="type_deffect_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                            </group>
+                            <field name="description" placeholder="Add description..."/>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_maintenance_minute_point_search" model="ir.ui.view">                      
+          <field name="name">maintenance.minute.point.search</field>                                
+          <field name="model">maintenance.minute.point</field>                                
+          <field name="arch" type="xml">                                    
+            <search string="Search ot minute point">
+                <field name="code"/> 
+                <field name="name"/>                                                  
+                <filter string="name" domain="[('name', '!=', '')]" name="has_name"></filter>                                    
+            </search>                                
+          </field>                            
+        </record>
+    
+        <record model="ir.actions.act_window" id="action_view_minute_point">
+            <field name="name">Minute Point</field>
+            <field name="res_model">maintenance.minute.point</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create new record
+                </p>
+            </field>
+        </record>
+
+        <menuitem 
+            id="menu_maintenance_minute_point" 
+            name="Minute point" 
+            parent="industry_fsm.fsm_menu_settings"
+            action="action_view_minute_point"
+            />
+
+    </data>
+</odoo> 

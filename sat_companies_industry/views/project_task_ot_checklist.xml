@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>     
+<odoo>
+    <data>
+
+        <record id="view_project_task_ot_checklist_tree" model="ir.ui.view">
+            <field name="name">project.task.ot.checklist.tree</field>
+            <field name="model">project.task.ot.checklist</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="project_task_ot_checklist_tree" editable="bottom">
+                    <field name="line_number"/>
+                    <field name="user_id" options="{'no_create': True, 'no_create_edit':True}" invisible="1"/>
+                    <field name="name" required="1"/>
+                    <field name="location_id" required="1" options="{'no_create': True, 'no_create_edit':True}"/>
+                    <field name="task_id" options="{'no_create': True, 'no_create_edit':True}" domain = "[('is_fsm','=',True)]" invisible="1"/>
+                    <field name="check_1"/>
+                    <field name="check_2"/>
+                    <field name="check_3"/>
+                    <field name="check_4"/>
+                    <field name="check_5"/>
+                    <field name="check_6"/>
+                    <field name="check_7"/>
+                    <field name="check_8"/>
+                    <field name="check_9"/>
+                    <field name="check_10"/>
+                    <field name="check_11"/>
+                    <field name="check_12"/>
+                    <field name="month_date" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_project_task_ot_checklist_form" model="ir.ui.view">
+            <field name="name">project.task.ot.checklist.form</field>
+            <field name="model">project.task.ot.checklist</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form string="ot_checklist_form">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            
+                                        </td>
+                                    </tr>
+                                </table>
+                            </h1>
+                        </div>
+                        <group>
+                            
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_project_task_ot_checklist_search" model="ir.ui.view">                      
+          <field name="name">project.task.ot.checklist.search</field>                                
+          <field name="model">project.task.ot.checklist</field>                                
+          <field name="arch" type="xml">                                    
+            <search string="Search ot checklist">
+                <field name="name"/> 
+                <field name="location"/>                                                  
+                <filter string="name" domain="[('name', '!=', '')]" name="has_name"></filter>                                    
+            </search>                                
+          </field>                            
+        </record>
+    
+        <record model="ir.actions.act_window" id="action_view_ot_checklist">
+            <field name="name">OT checklist</field>
+            <field name="res_model">project.task.ot.checklist</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create new record
+                </p>
+            </field>
+        </record>
+
+        <menuitem 
+            id="menu_project_task_ot_checklist" 
+            name="OT checklist" 
+            parent="industry_fsm.fsm_menu_settings"
+            action="action_view_ot_checklist"
+            />
+
+    </data>
+</odoo> 

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_project_task_sat_companies" model="ir.ui.view">
+        <field name="name">inherit.form.project.task</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2"/>
+        <field name="arch" type="xml"> 
+            <xpath expr="//form[1]/sheet[1]/notebook[1]" position="inside">
+                <page string="Checklists" name="pag_work_order_tab">
+                  <group name="studio_group_SidLz">
+                        <field name="checklist_ot_ids">
+                            <tree editable="botttom">
+                                <field name="checklist_id" required="1"/>
+                                <field name="is_reviewed_checklist"/>
+                                <field name="month_date" invisible="1"/>
+                                <field name="create_date"/>
+                            </tree>
+                        </field>
+                    <group name="group_ot_right">
+                        
+                    </group>
+                  </group>
+                </page>
+                <page string="Checklist OCA minute point" name="checklist_page">
+                    <group>
+                        <field name="checklist_line_ids">
+                            <tree editable="botttom">
+                                <field name="minute_point_id" options="{'no_create': True, 'no_create_edit':True}" required="1"/>
+                                <field name="minute_point_description"/>
+                                <field name="type_deffect_id"/>
+                                <field name="is_reviewed"/>
+                            </tree>
+                        </field>
+                    </group>
+                </page>
+                <page name="gadgets" string="Gadgets" attrs="{'invisible': [('product_id', '=', False)]}" invisible="1">
+                    <group>
+                        <group>
+                            <field name="address"/>
+                        </group>
+                        <group>
+                            <field name="reference"/>
+                        </group>
+                    </group>
+                </page>
+                <page name="OT information" string="OT information">
+                    <group>
+                        <group>
+                            <field name="ot_date"/>
+                        </group>
+                        <group>
+                            
+                        </group>
+                        <group>
+                            <field name="delegation_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                        </group>
+                        <group>
+                            <field name="delegation_name"/>
+                        </group>
+                        <group>
+                            <field name="zone_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                        </group>
+                        <group>
+                            <field name="zone_name"/>
+                        </group>
+                        <group>
+                            <field name="ot_ref"/>
+                        </group>
+                        <group>
+                            <field name="planned_date_begin" string="Begin prev"/>
+                            <field name="actual_start_date"/>
+                            <field name="planned_date_end" string="End prev"/>
+                            <field name="actual_end_date"/>
+                            <field name="verification_date"/>
+                            <field name="reading_date"/>
+                        </group>
+                        <group>
+                            <field name="is_pending_validate"/>
+                        </group>
+                        <group>
+                            
+                        </group>
+                        <group string="Contact">
+                            <field name="contact_person"/>
+                            <field name="phone_contact"/>
+                            <field name="fax_contact"/>
+                            <field name="email_contact"/>
+                        </group>
+                        <group>
+                            
+                        </group>
+                        <group>
+                            <field name="is_pda"/>
+                        </group>
+                        <group>
+                            
+                        </group>
+                        <group>
+                            <field name="supervisor_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                        </group>
+                        <group>
+                            
+                        </group>
+                        <field name="ot_description" placeholder="Observations"/>
+                    </group>
+                </page>
+                <page name="notes" string="Notes">
+                    <group>
+                        <field name="notes"/>
+                    </group>
+                </page>
+            </xpath>
+            
+            <xpath expr="//field[(@name='partner_id')]" position="after">
+                <field name="ot_code"/>
+                <field name="product_id" options="{'no_create': True, 'no_create_edit':True}" domain = "[('is_gadget','=',True),('partner_id','=',partner_id)]"/>
+                <field name="rae"/>
+                <field name="ot_type_id" invisible="1"/>
+                <field name="categ_udn_id"  options="{'no_create': True, 'no_create_edit':True}" attrs="{'invisible': [('ot_type_id','=',False)],'required':[('ot_type_id','!=',False)]}"/>
+                <field name="inspection_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                <field name="ot_date" invisible="1"/>
+                <field name="month_date" invisible="1"/>
+                <field name="is_warning" invisible="1"/>
+            </xpath>
+
+            <xpath expr="//field[(@name='project_id')]" position="after">
+                <field name="create_date"/>
+            </xpath>
+
+            <xpath expr="//field[(@name='user_id')]" position="after">
+                <field name="assignment_date"/>
+            </xpath>
+
+            <xpath expr="//form[1]/sheet[1]/group[1]" position="after">
+                <group>
+                  <group>
+                        <field name="fsm_done" invisible="1"/>
+                        <field name="name_of_signatory" attrs="{'invisible': [('fsm_done', '!=', True)]}"/>
+                        <field name="dni" attrs="{'invisible': [('fsm_done', '!=', True)]}"/>
+                        <field name="floor" attrs="{'invisible': [('fsm_done', '!=', True)]}"/>
+                  </group>
+                  <group>
+                        <field name="task_signature" widget="signature" attrs="{'invisible': [('fsm_done', '!=', True)]}"/>
+                  </group>
+                  <group attrs="{'invisible': [('is_warning', '!=', True)]}">
+                      <field name="contact_person_ot"/>
+                      <field name="contact_person_telephone"/>
+                      <field name="is_stop_with_company"/>
+                      <field name="gadget_pda_observations"/>
+                      <field name="gadget_notes"/>
+                      <field name="floor_number"/>
+                      <field name="maximum_rescue_time"/>
+                      <field name="maximum_warning_time"/>
+                  </group>
+                  <group string="Warning" name="warning" attrs="{'invisible': [('is_warning', '!=', True)]}">
+                      <field name="breakdowns_id" options="{'no_create': True, 'no_create_edit':True}" attrs="{'invisible': [('is_warning', '!=', True)]}"/>
+                      <field name="breakdowns_notice"/>
+                      <field name="stop_type" widget="radio" options="{'horizontal': true}"/>
+                      <field name="community_mood_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                      <field name="is_technical_notice_ot"/>
+                      <field name="is_apartament"/>
+                      <field name="is_blocked"/>
+                      <field name="service_h"/>
+                      <field name="is_conflictive_apparatus"/>
+                      <field name="done_work"/>
+                  </group>
+                </group>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="inherit_treeview_project_task_sat_companies" model="ir.ui.view">
+        <field name="name">inherit.form.project.task</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="industry_fsm.project_task_view_list_fsm"/>
+        <field name="arch" type="xml"> 
+            <xpath expr="//field[@name='user_id']" position="after">
+                <field name="product_id"/>
+                <field name="rae"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>     

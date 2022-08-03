@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        
+        <template id="report_custom_template_worksheet">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">                    
+                    <div class="header">
+                        <style>
+                            #t01 td {
+                            border: 1px solid black;
+                            padding: 5px;
+                        </style>
+                        <table class="one" align="left" border="1"  width="50%"> 
+                            <tr> 
+                                <td>
+                                    <p align="justify">
+                                        <img t-att-src="'data:image/png;base64,%s' % to_text(o.company_id.logo)" width="115" height="90"/>
+                                    </p>
+                                </td> 
+                            </tr> 
+                        </table> 
+                        <table class="two" align="right" border="1"  width="40%" id="t01">
+                            <tr>
+                                <td>N° OT:</td>
+                                <td><span t-field="o.name"></span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <span>PUESTA EN MARCHA:</span><br></br>
+                                    <span>REPARACIÓN:</span><br></br>
+                                    <span>MANTENIMIENTO:</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="article o_report_layout_standard">
+                       <div class="page">
+                            <style>
+                                #t01 td {
+                                border: 1px solid black;
+                                }
+                                th, td {
+                                padding: 5px;
+                                }
+                            </style>
+                            <table width="100%" id="t01">
+                            <tr>
+                                <td>
+                                    <strong>DATOS PUERTA</strong>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>PUERTA:</strong>
+                                </td>
+                            </tr>
+                        </table>
+                        <br></br>
+                        <table width="100%" id="t01">
+                            <tr>
+                                <td>
+                                    <strong>DATOS SERVICIO</strong>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>FECHA:</strong><span> </span><span t-field="o.planned_date_begin"></span><br></br>
+                                    <strong>TEC.DESTINO:</strong>
+                                </td>
+                            </tr>
+                        </table>
+                        <br></br>
+                        <table width="100%" id="t01">
+                            <tr>
+                                <td>
+                                    <strong>SERVICIO</strong>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>TRABAJO REALIZADO:</strong> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>MATERIALES:</strong>
+                                    <table width="100%" id="t01">
+                                        <tr>
+                                            <td><strong>CANT.</strong></td>
+                                            <td><strong>CONCEPTO</strong></td>
+                                            <td><strong>OBSERVACIONES</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>1</strong></td>
+                                            <td><strong>tapas y protecciones cuadro</strong></td>
+                                            <td><strong></strong></td>
+                                        </tr>
+                                    </table> 
+                                </td>
+                            </tr>
+                        </table>
+                        <br></br>
+                        <table width="100%" id="t01">
+                            <tr>
+                                <td>
+                                    <strong>POR EL OPERARIO</strong><br></br><br></br>
+                                    <span>Fecha:</span><br></br>
+                                    <span>Hora inicio:</span><br></br>
+                                    <span>Hora fin:</span><br></br>
+                                    <span>N° horas:</span><br></br>
+                                    <span>Nombres:</span><span> </span><span t-field="o.user_id"></span>
+                                </td>
+                                <td>
+                                    <strong>POR EL CLIENTE</strong><br></br><br></br>
+                                    <span>Nombre del cliente:</span><span> </span><span t-field="o.partner_id"></span><br></br>
+                                    <span>Piso:</span>
+                                </td>
+                            </tr>
+                        </table> 
+                       </div>
+                    </div>
+                    <div class="footer">
+                        
+                    </div>
+                </t>
+            </t>
+        </template>
+        
+        <report
+                id="report_custom_template"
+                string="Trabajos OT"
+                model="project.task"
+                report_type="qweb-pdf"
+                name="sat_companies_industry.report_custom_template_worksheet"
+        />
+    </data>
+</odoo>

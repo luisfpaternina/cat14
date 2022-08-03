@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>     
+<odoo>
+    <data>
+
+        <record id="sequence_minute_point_sat_companies_industry" model="ir.sequence">
+           <field name="name">Sequence minute point</field>
+           <field name="code">minute.point</field>
+           <field name="active">TRUE</field>
+           <field name="prefix"></field>
+           <field name="padding">10</field>
+           <field name="number_next">1</field>
+           <field name="number_increment">1</field>
+        </record>
+
+        <record id="sequence_ot_checklist_sat_companies_industry" model="ir.sequence">
+           <field name="name">Sequence checklist</field>
+           <field name="code">checklist</field>
+           <field name="active">TRUE</field>
+           <field name="prefix"></field>
+           <field name="padding">5</field>
+           <field name="number_next">1</field>
+           <field name="number_increment">1</field>
+        </record>
+
+    </data>
+</odoo> 

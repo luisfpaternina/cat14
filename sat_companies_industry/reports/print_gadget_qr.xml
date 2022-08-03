@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+  <data>
+       
+        <template id="report_print_labels_gadget_qr">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">                    
+                    <div class="header">
+                       
+                    </div>
+                    <div class="article o_report_layout_standard">
+                       <div class="page">
+                            <t t-if="o.qr_pit_image">
+                                <center>
+                                    <img t-att-src="'data:image/png;base64,%s' % to_text(o.qr_pit)"/>
+                                    <div>
+                                        <span style="font-size:60px">RAE:</span><span t-field="o.rae" style="font-size:60px"></span><br></br>
+                                        <span t-field="o.delegation_id" style="font-size:60px"></span><span> </span><span style="font-size:60px">Foso</span><br></br>
+                                        <span t-field="o.name" style="font-size:60px"></span><br></br>
+                                        <span t-field="o.partner_id.city" style="font-size:60px"></span>
+                                    </div>
+                                </center>
+                            </t>
+                            <t t-if="o.qr_cabine_image">
+                                <center>
+                                    <img t-att-src="'data:image/png;base64,%s' % to_text(o.qr_cabine)"/>
+                                    <div>
+                                        <span style="font-size:60px">RAE:</span><span t-field="o.rae" style="font-size:60px"></span><br></br>
+                                        <span t-field="o.delegation_id" style="font-size:60px"></span><span> </span><span style="font-size:60px">Cabina</span><br></br>
+                                        <span t-field="o.name" style="font-size:60px"></span><br></br>
+                                         <span t-field="o.partner_id.city" style="font-size:60px"></span>
+                                    </div>
+                                </center>
+                            </t>
+                            <t t-if="o.qr_machine_image">
+                                <center>
+                                    <img t-att-src="'data:image/png;base64,%s' % to_text(o.qr_machine)"/>
+                                    <div>
+                                        <span style="font-size:60px">RAE:</span><span t-field="o.rae" style="font-size:60px"></span><br></br>
+                                        <span t-field="o.delegation_id" style="font-size:60px"></span><span> </span><span style="font-size:60px">Máquina</span><br></br>
+                                        <span t-field="o.name" style="font-size:60px"></span><br></br>
+                                         <span t-field="o.partner_id.city" style="font-size:60px"></span>
+                                    </div>
+                                </center>
+                            </t>
+                       </div>
+                    </div>
+                    <div class="footer">
+                        <div class="row">
+                            <div class="col-xs-2 pull-left">
+                               
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </template>
+        
+        <report
+                id="report_print_gadget_qr"
+                string="Imprimir etiquetas QR de aparatos"
+                model="product.template"
+                report_type="qweb-pdf"
+                name="sat_companies_industry.report_print_labels_gadget_qr"
+        />
+
+  </data>
+</odoo>
