@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="automatization_po_material_has_not_arrived" model="base.automation">
+        <field name="name">Pedido de compra no ha llegado el material</field>
+        <field name="model_id" ref="purchase.model_purchase_order"/>
+        <field name="state">email</field>
+        <field name="trigger">on_create_or_write</field>
+        <field name="active" eval="True"/>
+        <field name="template_id" ref="sat_companies_purchase.template_material_not_arrived"/>
+        <field name="filter_pre_domain">[["is_validator","=",True]]</field>
+        <field name="filter_domain">[["is_validator","=",True]]</field>
+    </record>
+ 
+</odoo>

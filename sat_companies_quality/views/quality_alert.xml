@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="inherit_view_quality_control_quality_alert_view_form" model="ir.ui.view">
+        <field name="name">quality.alert.form.inherit</field>
+        <field name="model">quality.alert</field>
+        <field name="inherit_id" ref="quality_control.quality_alert_view_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//form[1]/sheet[1]/notebook[1]" position="inside">
+                <page string="Not conformities" name="not_conformities">
+                    <group name="group_1">
+                        <group name="group_left">
+                            <field name="nonconformity_date"/>
+                        </group>
+                        <group name="group_right">
+                            <field name="nonconformity_number"/>
+                        </group>
+                        <group>
+                            <field name="is_audit"/>
+                            <field name="is_process"/>
+                            <field name="is_documentary"/>
+                        </group>
+                        <group>
+                            <field name="is_purchases_suppliers"/>
+                            <field name="is_complaints"/>
+                            <field name="is_indicators"/>
+                        </group>
+                        <group>
+                            <field name="nonconformity_description"/>
+                        </group>
+                        <group>
+                            <field name="nonconformity_causes"/>
+                            <field name="detected_by"/>
+                            <field name="detected_date"/>
+                        </group>
+                        <group>
+                            <field name="immediate_solution"/>
+                        </group>
+                        <group>
+                            <field name="user_execution_id"/>
+                            <field name="execution_period"/>
+                            <field name="closing_date"/>
+                        </group>
+                        <group>
+                            <field name="risks_opportunities"/>
+                        </group>
+                        <group>
+                            <field name="responsable_sign"  widget="signature"/>
+                        </group>
+                        <group>
+                            <field name="is_corrective_action"/>
+                        </group>
+                        <group>
+                            <field name="quality_responsable_sign" widget="signature"/>
+                        </group>
+                        <group>
+                            <field name="actions_carried_out"/>
+                        </group>
+                        <group>
+                            <field name="user_carried_id"/>
+                            <field name="term"/>
+                        </group>
+                        <group>
+                            <field name="monitoring_verification"/>
+                        </group>
+                        <group>
+                            <field name="quality_responsable"  widget="signature"/>
+                            <field name="quality_date"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>  

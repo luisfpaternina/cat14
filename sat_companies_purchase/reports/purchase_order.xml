@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        
+        <template id="report_template_purchase_order">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">                    
+                    <div class="header">
+                        <img t-att-src="'data:image/png;base64,%s' % to_text(o.company_id.logo)" width="115" height="90"/>
+                        <p style="font-size:10vw">
+                            <span t-field="o.company_id"></span><br></br>
+                            <span t-field="o.company_id.street"></span><br></br>
+                            <span t-field="o.company_id.phone"></span>
+                        </p>
+                    </div>
+                    <div class="article o_report_layout_standard">
+                       <div class="page">
+                            <style>
+                                div#pedido_compra{
+                                width:400px;
+                                height:20px;
+                                background-color:white;
+                                float:left;
+                                border: 1px solid black;
+                                padding: 1px;
+                                }
+                                div#cuadro1{
+                                width:350px;
+                                height:200px;
+                                background-color:white;
+                                float:right;
+                                border: 1px solid black;
+                                padding: 15px;
+                                }
+                                div#numero{
+                                width:150px;
+                                height:20px;
+                                background-color:white;
+                                border: 1px solid black;
+                                float:left;
+                                }
+                                div#fecha{
+                                width:125px;
+                                height:20px;
+                                background-color:white;
+                                border: 1px solid black;
+                                float:left;
+                                }
+                                div#proveedor{
+                                width:125px;
+                                height:20px;
+                                background-color:white;
+                                border: 1px solid black;
+                                float:left;
+                                }
+                                div#field_numero{
+                                width:150px;
+                                height:20px;
+                                background-color:white;
+                                border: 1px solid black;
+                                float:left;
+                                }
+                                div#field_fecha{
+                                width:125px;
+                                height:20px;
+                                background-color:white;
+                                border: 1px solid black;
+                                float:left;
+                                }
+                                div#field_proveedor{
+                                width:125px;
+                                height:20px;
+                                background-color:white;
+                                border: 1px solid black;
+                                float:left;
+                                }
+                                div#direccion_entrega{
+                                width:400px;
+                                height:20px;
+                                background-color:white;
+                                float:left;
+                                border: 1px solid black;
+                                padding: 1px;
+                                margin-top: 25px;
+                                }
+                                div#field_direccion_entrega{
+                                width:400px;
+                                height:20px;
+                                background-color:white;
+                                float:left;
+                                border: 1px solid black;
+                                padding: 1px;
+                                }
+                                div#pedido_realizado{
+                                width:400px;
+                                height:20px;
+                                background-color:white;
+                                float:left;
+                                border: 1px solid black;
+                                padding: 1px;
+                                margin-top: 25px;
+                                }
+                                div#field_pedido_realizado{
+                                width:400px;
+                                height:20px;
+                                background-color:white;
+                                float:left;
+                                border: 1px solid black;
+                                padding: 1px;
+                                }
+                                div#persona_solicitante{
+                                width:400px;
+                                height:20px;
+                                background-color:white;
+                                float:left;
+                                border: 1px solid black;
+                                padding: 1px;
+                                margin-top: 30px;
+                                }
+                                div#field_persona_solicitante{
+                                width:400px;
+                                height:20px;
+                                background-color:white;
+                                float:left;
+                                border: 1px solid black;
+                                padding: 1px;
+                                }
+                                div#cuadro_observaciones{
+                                width:350px;
+                                height:200px;
+                                background-color:white;
+                                float:right;
+                                border: 1px solid black;
+                                padding: 15px;
+                                margin-top: 25px;
+                                }
+                                div#fecha_entrega{
+                                width:400px;
+                                height:20px;
+                                background-color:white;
+                                float:left;
+                                border: 1px solid black;
+                                padding: 1px;
+                                margin-top: 30px;
+                                }
+                                div#field_fecha_entrega{
+                                width:400px;
+                                height:20px;
+                                background-color:white;
+                                float:left;
+                                border: 1px solid black;
+                                padding: 1px;
+                                }
+                                div#referencia{
+                                width:400px;
+                                height:20px;
+                                background-color:white;
+                                float:left;
+                                border: 1px solid black;
+                                padding: 1px;
+                                margin-top: 30px;
+                                }
+                                div#field_referencia{
+                                width:400px;
+                                height:20px;
+                                background-color:white;
+                                float:left;
+                                border: 1px solid black;
+                                padding: 1px;
+                                }
+                                div#espacio{
+                                width:500px;
+                                height:20px;
+                                background-color:white;
+                                float:left;
+                                border: 0px solid black;
+                                padding: 1px;
+                                }
+                                table, th, td {
+                                  border:1px solid black;
+                                }
+                              </style>
+                            <br></br><br></br>
+                           <div id="pedido_compra">
+                             <strong>PEDIDO DE COMPRA</strong>
+                           </div>
+                           <div id="cuadro1">
+                             <strong>
+                               <span t-field="o.partner_id"></span>
+                             </strong>
+                             <br></br>
+                             <span t-field="o.partner_id.street"></span><br></br>
+                             <span t-field="o.partner_id.city"></span>
+                           </div>
+                           <div id="numero" style="border-top-style: none;  border-right-style: solid;">
+                             Número
+                           </div>
+                           <div id="fecha"  style="border-top-style: none;  border-left-style: solid;">
+                             Fecha
+                           </div>
+                           <div id="proveedor" style="border-top-style: none;  border-left-style: solid;">
+                             Proveedor
+                           </div>
+                           <div id="field_numero"  style="border-top-style: none;">
+                             <span t-field="o.name"></span>
+                           </div>
+                           <div id="field_fecha"  style="border-top-style: none;  border-left-style: solid;">
+                             <span t-field="o.date_order" t-options='{"widget": "date"}'></span>
+                           </div>
+                           <div id="field_proveedor"  style="border-top-style: none;  border-left-style: solid;">
+                             <span t-field="o.partner_ref"></span>
+                           </div>
+                           <br></br>
+                           <div id="direccion_entrega">
+                             <strong>DIRECCIÓN DE ENTREGA</strong>
+                           </div>
+                           <div id="field_direccion_entrega" style="border-top-style: none;">
+                             <span t-field="o.partner_id.street"></span>
+                           </div>
+                           <div id="pedido_realizado">
+                             <strong>PEDIDO REALIZADO POR EL EMPLEADO</strong>
+                           </div>
+                           <div id="field_pedido_realizado" style="border-top-style: none;">
+                             <span t-field="o.user_id"></span>
+                           </div>
+                           <div id="persona_solicitante">
+                             <strong>PERSONA SOLICITANTE</strong>
+                           </div>
+                           <div id="cuadro_observaciones">
+                             <center><strong>Observaciones</strong></center>
+                           </div>
+                           <div id="field_persona_solicitante" style="border-top-style: none;">
+                             <span t-field="o.user_id"></span>
+                           </div>
+                           <div id="fecha_entrega">
+                             <strong>FECHA DE ENTREGA</strong>
+                           </div>
+                           <div id="field_fecha_entrega" style="border-top-style: none;">
+                             <span t-field="o.date_order"></span>
+                           </div>
+                           <div id="referencia">
+                             <strong>REFERENCIA</strong>
+                           </div>
+                           <div id="field_referencia" style="border-top-style: none;">
+                             <span></span>
+                           </div>
+                           <div id="espacio"></div>
+                           <table  style="width:100%">
+                              <thead>
+                                <tr>
+                                  <th><center>Cód.Articulo</center></th>
+                                  <th><center>Descripción</center></th>
+                                   <th><center>Uds.</center></th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <t t-foreach="o.order_line" t-as="line">
+                                  <tr>
+                                    <td>
+                                       <span t-field="line.product_id.default_code"/>
+                                    </td>
+                                    <td>
+                                       <span t-field="line.name"/>
+                                    </td>
+                                    <td>
+                                       <span t-field="line.product_qty"/>
+                                    </td>
+                                  </tr>
+                                </t>
+                              </tbody>
+                            </table>
+                       </div>
+                    </div>
+                    <div class="footer">
+                        <p align="center">
+                           <span t-field="o.company_id"></span><br></br>
+                           <span t-field="o.company_id.street"></span> 
+                        </p>
+                    </div>
+                </t>
+            </t>
+        </template>
+
+        <report
+                id="report_template_purchase_order_sat"
+                string="Orden de compra personalizada"
+                model="purchase.order"
+                report_type="qweb-pdf"
+                name="sat_companies_purchase.report_template_purchase_order"
+        />
+
+    </data>
+</odoo>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="inherit_view_purchase_order_sat_companies_purchase" model="ir.ui.view">
+        <field name="name">purchase.order.form.inherit</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[(@name='partner_ref')]" position="after"> 
+                <field name="order_type_id" options="{'no_create': True, 'no_create_edit':True}" required="1"/>
+                <field name="is_validate_reception" invisible="1"/>
+                <field name="is_validator" invisible="1"/>
+            </xpath>
+
+        </field> 
+    </record>
+</odoo>

@@ -1,0 +1,324 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sat_companies_quality
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-18 12:21+0000\n"
+"PO-Revision-Date: 2022-04-18 12:21+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sat_companies_quality
+#: model_terms:ir.ui.view,arch_db:sat_companies_quality.report_template_notconformities
+msgid ""
+"<br/>\n"
+"                                            DOCUMENTAL"
+msgstr ""
+
+#. module: sat_companies_quality
+#: model_terms:ir.ui.view,arch_db:sat_companies_quality.report_template_notconformities
+msgid ""
+"<br/>\n"
+"                                            INDICADORES/OBJETIVOS"
+msgstr ""
+
+#. module: sat_companies_quality
+#: model_terms:ir.ui.view,arch_db:sat_companies_quality.report_template_notconformities
+msgid ""
+"<br/>\n"
+"                                            PROCESO"
+msgstr ""
+
+#. module: sat_companies_quality
+#: model_terms:ir.ui.view,arch_db:sat_companies_quality.report_template_notconformities
+msgid ""
+"<br/>\n"
+"                                            RECLAMACIÓN/QUEJA(N°HR)"
+msgstr ""
+
+#. module: sat_companies_quality
+#: model_terms:ir.ui.view,arch_db:sat_companies_quality.report_template_notconformities
+msgid ""
+"<br/>\n"
+"                                        <strong><span>Detectada por:</span></strong><span> </span><strong><span>Fecha:</span></strong>"
+msgstr ""
+
+#. module: sat_companies_quality
+#: model_terms:ir.ui.view,arch_db:sat_companies_quality.report_template_notconformities
+msgid ""
+"<strong align=\"center\">INFORME DE NO CONFORMIDADES<br/>\n"
+"                                    ACCIÓN CORRECTIVA</strong>"
+msgstr ""
+
+#. module: sat_companies_quality
+#: model_terms:ir.ui.view,arch_db:sat_companies_quality.report_template_notconformities
+msgid "<strong>ACCIONES A LLEVAR A CABO:</strong>"
+msgstr ""
+
+#. module: sat_companies_quality
+#: model_terms:ir.ui.view,arch_db:sat_companies_quality.report_template_notconformities
+msgid "<strong>CAUSAS DE LA NO CONFORMIDAD:</strong><br/>"
+msgstr ""
+
+#. module: sat_companies_quality
+#: model_terms:ir.ui.view,arch_db:sat_companies_quality.report_template_notconformities
+msgid ""
+"<strong>Cierre:</strong><br/>\n"
+"                                        <strong>Fecha:</strong><br/>\n"
+"                                        <strong>Firma:</strong>"
+msgstr ""
+
+#. module: sat_companies_quality
+#: model_terms:ir.ui.view,arch_db:sat_companies_quality.report_template_notconformities
+msgid "<strong>DESCRIPCIÓN DE LA NO CONFORMIDAD:</strong>"
+msgstr ""
+
+#. module: sat_companies_quality
+#: model_terms:ir.ui.view,arch_db:sat_companies_quality.report_template_notconformities
+msgid "<strong>Fecha de cierre:</strong>"
+msgstr ""
+
+#. module: sat_companies_quality
+#: model_terms:ir.ui.view,arch_db:sat_companies_quality.report_template_notconformities
+msgid "<strong>Plazo de Ejecución:</strong>"
+msgstr ""
+
+#. module: sat_companies_quality
+#: model_terms:ir.ui.view,arch_db:sat_companies_quality.report_template_notconformities
+msgid "<strong>Plazo:</strong>"
+msgstr ""
+
+#. module: sat_companies_quality
+#: model_terms:ir.ui.view,arch_db:sat_companies_quality.report_template_notconformities
+msgid "<strong>Responsable de ejecución:</strong>"
+msgstr ""
+
+#. module: sat_companies_quality
+#: model_terms:ir.ui.view,arch_db:sat_companies_quality.report_template_notconformities
+msgid "<strong>Responsable de llevar a cabo la acción:</strong>"
+msgstr ""
+
+#. module: sat_companies_quality
+#: model_terms:ir.ui.view,arch_db:sat_companies_quality.report_template_notconformities
+msgid ""
+"<strong>Responsable ejecución:</strong><br/>\n"
+"                                        <strong>Fecha Fin:</strong><br/>\n"
+"                                        <strong>Firma:</strong>"
+msgstr ""
+
+#. module: sat_companies_quality
+#: model_terms:ir.ui.view,arch_db:sat_companies_quality.report_template_notconformities
+msgid ""
+"<strong>SEGUIMIENTO Y VERIFICACIÓN:</strong><br/><br/>\n"
+"                                        Firma del Responsable de Calidad:"
+msgstr ""
+
+#. module: sat_companies_quality
+#: model_terms:ir.ui.view,arch_db:sat_companies_quality.report_template_notconformities
+msgid "<strong>SOLUCIÓN INMEDIATA:</strong>"
+msgstr ""
+
+#. module: sat_companies_quality
+#: model_terms:ir.ui.view,arch_db:sat_companies_quality.report_template_notconformities
+msgid ""
+"<strong>¿Se requiere actualizar los riegos y oportunidades?</strong> <br/><br/>\n"
+"                                        Firma Responsable de Calidad:"
+msgstr ""
+
+#. module: sat_companies_quality
+#: model_terms:ir.ui.view,arch_db:sat_companies_quality.report_template_notconformities
+msgid "AUDITORIA"
+msgstr ""
+
+#. module: sat_companies_quality
+#: model:ir.model.fields,field_description:sat_companies_quality.field_quality_alert__actions_carried_out
+msgid "Actions to be carried out"
+msgstr "Acciones a llevar a cabo"
+
+#. module: sat_companies_quality
+#: model_terms:ir.ui.view,arch_db:sat_companies_quality.report_template_notconformities
+msgid "COMPRAS Y PROVEEDORES"
+msgstr ""
+
+#. module: sat_companies_quality
+#: model:ir.model.fields,field_description:sat_companies_quality.field_quality_alert__user_carried_id
+msgid "Carried out responsable"
+msgstr "Responsable de llevar a cabo la acción"
+
+#. module: sat_companies_quality
+#: model:ir.model.fields,field_description:sat_companies_quality.field_quality_alert__nonconformity_causes
+msgid "Causes"
+msgstr "Causas"
+
+#. module: sat_companies_quality
+#: model:ir.model.fields,field_description:sat_companies_quality.field_quality_alert__closing_date
+msgid "Closing date"
+msgstr "Fecha de cierre"
+
+#. module: sat_companies_quality
+#: model_terms:ir.ui.view,arch_db:sat_companies_quality.report_template_notconformities
+msgid "CÓDIGO:"
+msgstr ""
+
+#. module: sat_companies_quality
+#: model:ir.model.fields,field_description:sat_companies_quality.field_quality_alert__nonconformity_description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: sat_companies_quality
+#: model:ir.model.fields,field_description:sat_companies_quality.field_quality_alert__detected_by
+msgid "Detected by"
+msgstr "Detectado por"
+
+#. module: sat_companies_quality
+#: model:ir.model.fields,field_description:sat_companies_quality.field_quality_alert__detected_date
+msgid "Detected date"
+msgstr "Fecha"
+
+#. module: sat_companies_quality
+#: model:ir.model.fields,field_description:sat_companies_quality.field_quality_alert__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: sat_companies_quality
+#: model_terms:ir.ui.view,arch_db:sat_companies_quality.report_template_notconformities
+msgid "EMISION"
+msgstr ""
+
+#. module: sat_companies_quality
+#: model:ir.model.fields,field_description:sat_companies_quality.field_quality_alert__execution_period
+msgid "Execution period"
+msgstr "Plazo de ejecución"
+
+#. module: sat_companies_quality
+#: model_terms:ir.ui.view,arch_db:sat_companies_quality.report_template_notconformities
+msgid "FECHA:"
+msgstr ""
+
+#. module: sat_companies_quality
+#: model:ir.model.fields,field_description:sat_companies_quality.field_quality_alert__id
+msgid "ID"
+msgstr ""
+
+#. module: sat_companies_quality
+#: model:ir.model.fields,field_description:sat_companies_quality.field_quality_alert__immediate_solution
+msgid "Immediate solution"
+msgstr "Solución inmediata"
+
+#. module: sat_companies_quality
+#: model:ir.actions.report,name:sat_companies_quality.id_template_notconformities
+msgid "Informe de no conformidad"
+msgstr ""
+
+#. module: sat_companies_quality
+#: model:ir.model.fields,field_description:sat_companies_quality.field_quality_alert__is_audit
+msgid "Is audit"
+msgstr "Auditoria"
+
+#. module: sat_companies_quality
+#: model:ir.model.fields,field_description:sat_companies_quality.field_quality_alert__is_complaints
+msgid "Is complaints"
+msgstr "Reclamación/queja"
+
+#. module: sat_companies_quality
+#: model:ir.model.fields,field_description:sat_companies_quality.field_quality_alert__is_corrective_action
+msgid "Is corrective action"
+msgstr "Se abre acción correctiva?"
+
+#. module: sat_companies_quality
+#: model:ir.model.fields,field_description:sat_companies_quality.field_quality_alert__is_documentary
+msgid "Is documentary"
+msgstr "Documental"
+
+#. module: sat_companies_quality
+#: model:ir.model.fields,field_description:sat_companies_quality.field_quality_alert__is_indicators
+msgid "Is indicators"
+msgstr "Indicadores/Objetivos"
+
+#. module: sat_companies_quality
+#: model:ir.model.fields,field_description:sat_companies_quality.field_quality_alert__is_process
+msgid "Is process"
+msgstr "Proceso"
+
+#. module: sat_companies_quality
+#: model:ir.model.fields,field_description:sat_companies_quality.field_quality_alert____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: sat_companies_quality
+#: model:ir.model.fields,field_description:sat_companies_quality.field_quality_alert__monitoring_verification
+msgid "Monitoring and verification"
+msgstr "Seguimiento y verificación"
+
+#. module: sat_companies_quality
+#: model:ir.model.fields,field_description:sat_companies_quality.field_quality_alert__nonconformity_date
+msgid "Nonconformity date"
+msgstr "Fecha no conformidad"
+
+#. module: sat_companies_quality
+#: model:ir.model.fields,field_description:sat_companies_quality.field_quality_alert__nonconformity_number
+msgid "Nonconformity number"
+msgstr "N°"
+
+#. module: sat_companies_quality
+#: model_terms:ir.ui.view,arch_db:sat_companies_quality.inherit_view_quality_control_quality_alert_view_form
+msgid "Not conformities"
+msgstr "No conformidad"
+
+#. module: sat_companies_quality
+#: model_terms:ir.ui.view,arch_db:sat_companies_quality.report_template_notconformities
+msgid "ORIGEN"
+msgstr ""
+
+#. module: sat_companies_quality
+#: model:ir.model.fields,field_description:sat_companies_quality.field_quality_alert__is_purchases_suppliers
+msgid "Purchases and suppliers"
+msgstr "Compras y proveedores"
+
+#. module: sat_companies_quality
+#: model_terms:ir.ui.view,arch_db:sat_companies_quality.report_template_notconformities
+msgid "Página<span> </span><span class=\"page\"/>/<span class=\"topage\"/>"
+msgstr ""
+
+#. module: sat_companies_quality
+#: model:ir.model,name:sat_companies_quality.model_quality_alert
+msgid "Quality Alert"
+msgstr "Alerta de Calidad"
+
+#. module: sat_companies_quality
+#: model:ir.model.fields,field_description:sat_companies_quality.field_quality_alert__quality_date
+msgid "Quality date"
+msgstr "Fecha"
+
+#. module: sat_companies_quality
+#: model:ir.model.fields,field_description:sat_companies_quality.field_quality_alert__quality_responsable
+#: model:ir.model.fields,field_description:sat_companies_quality.field_quality_alert__quality_responsable_sign
+msgid "Quality responsable sign"
+msgstr "Firma responsable de calidad"
+
+#. module: sat_companies_quality
+#: model:ir.model.fields,field_description:sat_companies_quality.field_quality_alert__responsable_sign
+msgid "Responsable sign"
+msgstr "Firma responsable de calidad"
+
+#. module: sat_companies_quality
+#: model:ir.model.fields,field_description:sat_companies_quality.field_quality_alert__user_execution_id
+msgid "Responsible execution"
+msgstr "Responsable de ejecución"
+
+#. module: sat_companies_quality
+#: model:ir.model.fields,field_description:sat_companies_quality.field_quality_alert__risks_opportunities
+msgid "Risks and opportunities"
+msgstr "Se requiere actualizar los riesgos y oportunidades?"
+
+#. module: sat_companies_quality
+#: model:ir.model.fields,field_description:sat_companies_quality.field_quality_alert__term
+msgid "Term"
+msgstr "Plazo"
