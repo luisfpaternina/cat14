@@ -56,6 +56,7 @@
         'views/stock_state_record.xml',
         'views/stock_location.xml',
         'views/stock_inspection_type.xml',
+        'views/stock_product_tags.xml',
         'reports/technical_data_template.xml',
         
     ],

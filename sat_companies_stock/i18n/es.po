@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-07 10:52+0000\n"
-"PO-Revision-Date: 2022-07-07 10:52+0000\n"
+"POT-Creation-Date: 2022-08-04 12:25+0000\n"
+"PO-Revision-Date: 2022-08-04 12:25+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -392,6 +392,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__message_needaction
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__message_needaction
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__message_needaction
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_product_tags__message_needaction
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__message_needaction
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__message_needaction
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__message_needaction
@@ -421,6 +422,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__active
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__active
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__active
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_product_tags__active
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__active
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__active
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__active
@@ -518,6 +520,7 @@ msgstr "Tipo asignación"
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__message_attachment_count
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__message_attachment_count
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__message_attachment_count
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_product_tags__message_attachment_count
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__message_attachment_count
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__message_attachment_count
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__message_attachment_count
@@ -632,6 +635,11 @@ msgid "Code"
 msgstr "Código"
 
 #. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_product_tags__color
+msgid "Color"
+msgstr ""
+
+#. module: sat_companies_stock
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__company_product_id
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__company_product_id
 msgid "Company"
@@ -685,6 +693,7 @@ msgstr "Polea contrapeso"
 #: model_terms:ir.actions.act_window,help:sat_companies_stock.action_view_landing_keypad
 #: model_terms:ir.actions.act_window,help:sat_companies_stock.action_view_landing_lock
 #: model_terms:ir.actions.act_window,help:sat_companies_stock.action_view_maneuvering_table
+#: model_terms:ir.actions.act_window,help:sat_companies_stock.action_view_product_tags
 #: model_terms:ir.actions.act_window,help:sat_companies_stock.action_view_state_record
 #: model_terms:ir.actions.act_window,help:sat_companies_stock.action_view_stock_bench
 #: model_terms:ir.actions.act_window,help:sat_companies_stock.action_view_stock_cockpit_type
@@ -724,6 +733,7 @@ msgstr "Crear nuevo registro"
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__create_uid
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__create_uid
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__create_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_product_tags__create_uid
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__create_uid
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__create_uid
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__create_uid
@@ -754,6 +764,7 @@ msgstr "Creado por"
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__create_date
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__create_date
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__create_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_product_tags__create_date
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__create_date
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__create_date
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__create_date
@@ -868,6 +879,7 @@ msgstr "Nombre delegación"
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__display_name
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__display_name
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__display_name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_product_tags__display_name
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__display_name
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__display_name
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__display_name
@@ -916,6 +928,12 @@ msgstr "Edificio"
 #: model:ir.ui.menu,name:sat_companies_stock.menu_elevator_type
 msgid "Elevator type"
 msgstr "Tipo ascensor"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__repeat_until
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__repeat_until
+msgid "End Date"
+msgstr ""
 
 #. module: sat_companies_stock
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__end_date_contract
@@ -990,6 +1008,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__message_follower_ids
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__message_follower_ids
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__message_follower_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_product_tags__message_follower_ids
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__message_follower_ids
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__message_follower_ids
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__message_follower_ids
@@ -1020,6 +1039,7 @@ msgstr "Seguidores"
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__message_channel_ids
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__message_channel_ids
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__message_channel_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_product_tags__message_channel_ids
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__message_channel_ids
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__message_channel_ids
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__message_channel_ids
@@ -1050,6 +1070,7 @@ msgstr "Seguidores canal"
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__message_partner_ids
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__message_partner_ids
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__message_partner_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_product_tags__message_partner_ids
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__message_partner_ids
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__message_partner_ids
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__message_partner_ids
@@ -1256,6 +1277,7 @@ msgstr "Fecha alta call center"
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__id
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__id
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_product_tags__id
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__id
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__id
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__id
@@ -1307,6 +1329,8 @@ msgstr "Id"
 #: model:ir.model.fields,help:sat_companies_stock.field_stock_maneuvering_table__message_unread
 #: model:ir.model.fields,help:sat_companies_stock.field_stock_planning_type__message_needaction
 #: model:ir.model.fields,help:sat_companies_stock.field_stock_planning_type__message_unread
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_product_tags__message_needaction
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_product_tags__message_unread
 #: model:ir.model.fields,help:sat_companies_stock.field_stock_shipment__message_needaction
 #: model:ir.model.fields,help:sat_companies_stock.field_stock_shipment__message_unread
 #: model:ir.model.fields,help:sat_companies_stock.field_stock_soil_type__message_needaction
@@ -1363,6 +1387,8 @@ msgstr ""
 #: model:ir.model.fields,help:sat_companies_stock.field_stock_maneuvering_table__message_has_sms_error
 #: model:ir.model.fields,help:sat_companies_stock.field_stock_planning_type__message_has_error
 #: model:ir.model.fields,help:sat_companies_stock.field_stock_planning_type__message_has_sms_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_product_tags__message_has_error
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_product_tags__message_has_sms_error
 #: model:ir.model.fields,help:sat_companies_stock.field_stock_shipment__message_has_error
 #: model:ir.model.fields,help:sat_companies_stock.field_stock_shipment__message_has_sms_error
 #: model:ir.model.fields,help:sat_companies_stock.field_stock_soil_type__message_has_error
@@ -1456,6 +1482,7 @@ msgstr "Servicio 24H"
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__message_is_follower
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__message_is_follower
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__message_is_follower
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_product_tags__message_is_follower
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__message_is_follower
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__message_is_follower
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__message_is_follower
@@ -1534,6 +1561,13 @@ msgstr "Freno operador"
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__is_priority
 msgid "Is priority"
 msgstr "Prioritario"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__is_second_hand
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__is_second_hand
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.custom_view_product_template_search
+msgid "Is second hand"
+msgstr "Segunda mano"
 
 #. module: sat_companies_stock
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__is_wedging_cabin
@@ -1646,6 +1680,7 @@ msgstr "Tipo cerradura rellano"
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency____last_update
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table____last_update
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type____last_update
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_product_tags____last_update
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment____last_update
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type____last_update
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record____last_update
@@ -1676,6 +1711,7 @@ msgstr "Última modificación el"
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__write_uid
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__write_uid
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__write_uid
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_product_tags__write_uid
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__write_uid
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__write_uid
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__write_uid
@@ -1706,6 +1742,7 @@ msgstr "Última modificación el"
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__write_date
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__write_date
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__write_date
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_product_tags__write_date
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__write_date
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__write_date
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__write_date
@@ -1813,6 +1850,7 @@ msgstr "Sala de máquinas"
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__message_main_attachment_id
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__message_main_attachment_id
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__message_main_attachment_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_product_tags__message_main_attachment_id
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__message_main_attachment_id
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__message_main_attachment_id
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__message_main_attachment_id
@@ -1895,6 +1933,7 @@ msgstr "Mayo"
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__message_has_error
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__message_has_error
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__message_has_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_product_tags__message_has_error
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__message_has_error
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__message_has_error
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__message_has_error
@@ -1925,6 +1964,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__message_ids
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__message_ids
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_product_tags__message_ids
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__message_ids
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__message_ids
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__message_ids
@@ -1989,6 +2029,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__name
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__name
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_product_tags__name
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__name
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__name
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__name
@@ -2011,6 +2052,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_stock_landing_keypad_form
 #: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_stock_landing_lock_form
 #: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_stock_maneuvering_table_form
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_stock_product_tags_form
 #: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_stock_shipment_form
 #: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_stock_soil_type_form
 #: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_stock_state_record_form
@@ -2080,6 +2122,7 @@ msgstr "Noviembre"
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__message_needaction_counter
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__message_needaction_counter
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__message_needaction_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_product_tags__message_needaction_counter
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__message_needaction_counter
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__message_needaction_counter
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__message_needaction_counter
@@ -2110,6 +2153,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__message_has_error_counter
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__message_has_error_counter
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__message_has_error_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_product_tags__message_has_error_counter
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__message_has_error_counter
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__message_has_error_counter
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__message_has_error_counter
@@ -2140,6 +2184,7 @@ msgstr ""
 #: model:ir.model.fields,help:sat_companies_stock.field_stock_maintenance_frequency__message_needaction_counter
 #: model:ir.model.fields,help:sat_companies_stock.field_stock_maneuvering_table__message_needaction_counter
 #: model:ir.model.fields,help:sat_companies_stock.field_stock_planning_type__message_needaction_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_product_tags__message_needaction_counter
 #: model:ir.model.fields,help:sat_companies_stock.field_stock_shipment__message_needaction_counter
 #: model:ir.model.fields,help:sat_companies_stock.field_stock_soil_type__message_needaction_counter
 #: model:ir.model.fields,help:sat_companies_stock.field_stock_state_record__message_needaction_counter
@@ -2170,6 +2215,7 @@ msgstr ""
 #: model:ir.model.fields,help:sat_companies_stock.field_stock_maintenance_frequency__message_has_error_counter
 #: model:ir.model.fields,help:sat_companies_stock.field_stock_maneuvering_table__message_has_error_counter
 #: model:ir.model.fields,help:sat_companies_stock.field_stock_planning_type__message_has_error_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_product_tags__message_has_error_counter
 #: model:ir.model.fields,help:sat_companies_stock.field_stock_shipment__message_has_error_counter
 #: model:ir.model.fields,help:sat_companies_stock.field_stock_soil_type__message_has_error_counter
 #: model:ir.model.fields,help:sat_companies_stock.field_stock_state_record__message_has_error_counter
@@ -2206,6 +2252,7 @@ msgstr "Número de tubos"
 #: model:ir.model.fields,help:sat_companies_stock.field_stock_maintenance_frequency__message_unread_counter
 #: model:ir.model.fields,help:sat_companies_stock.field_stock_maneuvering_table__message_unread_counter
 #: model:ir.model.fields,help:sat_companies_stock.field_stock_planning_type__message_unread_counter
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_product_tags__message_unread_counter
 #: model:ir.model.fields,help:sat_companies_stock.field_stock_shipment__message_unread_counter
 #: model:ir.model.fields,help:sat_companies_stock.field_stock_soil_type__message_unread_counter
 #: model:ir.model.fields,help:sat_companies_stock.field_stock_state_record__message_unread_counter
@@ -2342,6 +2389,13 @@ msgstr "Código postal"
 #: model:ir.model,name:sat_companies_stock.model_product_template
 msgid "Product Template"
 msgstr "Plantilla de producto"
+
+#. module: sat_companies_stock
+#: model:ir.actions.act_window,name:sat_companies_stock.action_view_product_tags
+#: model:ir.model,name:sat_companies_stock.model_stock_product_tags
+#: model:ir.ui.menu,name:sat_companies_stock.menu_stock_product_tags
+msgid "Product tags"
+msgstr "Etiquetas de producto"
 
 #. module: sat_companies_stock
 #: model:ir.model.fields,help:sat_companies_stock.field_account_bank_statement_line__subscription_template_id
@@ -2495,6 +2549,12 @@ msgid "Repeat year"
 msgstr ""
 
 #. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__repeat_number
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__repeat_number
+msgid "Repetitions"
+msgstr ""
+
+#. module: sat_companies_stock
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__responsable_zone_id
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__responsable_zone_id
 msgid "Responsable"
@@ -2540,6 +2600,7 @@ msgstr "Recorrido"
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__message_has_sms_error
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__message_has_sms_error
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__message_has_sms_error
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_product_tags__message_has_sms_error
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__message_has_sms_error
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__message_has_sms_error
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__message_has_sms_error
@@ -2655,6 +2716,12 @@ msgstr "Plantilla de suscripción"
 #: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_weekday__sun
 msgid "Sunday"
 msgstr "Domingo"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__product_tag_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__product_tag_id
+msgid "Tags"
+msgstr "Etiquetas"
 
 #. module: sat_companies_stock
 #: model:ir.model,name:sat_companies_stock.model_project_task
@@ -2822,6 +2889,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__message_unread
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__message_unread
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__message_unread
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_product_tags__message_unread
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__message_unread
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__message_unread
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__message_unread
@@ -2852,6 +2920,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__message_unread_counter
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__message_unread_counter
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__message_unread_counter
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_product_tags__message_unread_counter
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__message_unread_counter
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__message_unread_counter
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__message_unread_counter
@@ -2934,6 +3003,7 @@ msgstr "Llavín cabina"
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maintenance_frequency__website_message_ids
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_maneuvering_table__website_message_ids
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_planning_type__website_message_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_stock_product_tags__website_message_ids
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_shipment__website_message_ids
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_soil_type__website_message_ids
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_state_record__website_message_ids
@@ -2964,6 +3034,7 @@ msgstr ""
 #: model:ir.model.fields,help:sat_companies_stock.field_stock_maintenance_frequency__website_message_ids
 #: model:ir.model.fields,help:sat_companies_stock.field_stock_maneuvering_table__website_message_ids
 #: model:ir.model.fields,help:sat_companies_stock.field_stock_planning_type__website_message_ids
+#: model:ir.model.fields,help:sat_companies_stock.field_stock_product_tags__website_message_ids
 #: model:ir.model.fields,help:sat_companies_stock.field_stock_shipment__website_message_ids
 #: model:ir.model.fields,help:sat_companies_stock.field_stock_soil_type__website_message_ids
 #: model:ir.model.fields,help:sat_companies_stock.field_stock_state_record__website_message_ids
