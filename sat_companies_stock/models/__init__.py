@@ -29,3 +29,4 @@ from . import stock_gadgets_planning_type
 from . import stock_state_record
 from . import stock_location
 from . import stock_inspection_type
+from . import stock_product_tags

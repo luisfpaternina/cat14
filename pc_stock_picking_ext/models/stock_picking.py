@@ -19,6 +19,7 @@ class StockPicking(models.Model):
 
     @api.onchange('user_operator_id')
     def domain_ots(self):
+    # FUNCIÓN PARA APLICAR DOMINIO (TRAE SOLO LAS OTS ASOCIADAS DEL TÉCNICO)
         for record in self:
             if record.user_operator_id:
                 return {'domain': {'task_id': [('user_id', '=', record.user_operator_id.id)]}}

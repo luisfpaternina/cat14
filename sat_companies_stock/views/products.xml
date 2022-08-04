@@ -10,6 +10,10 @@
                 <field name="rae" attrs="{'invisible': [('is_gadget', '!=', True)]}"/>
                 <field name="has_rae" invisible="1"/>
             </xpath>
+
+            <xpath expr="//field[(@name='default_code')]" position="after">
+                <field name="product_tag_id" options="{'color_field': 'color'}" widget="many2many_tags"/>
+            </xpath>
          
             <xpath expr="//form[@name='Product Template']/sheet[1]/notebook[1]" position="inside">
                 <page string="Gadget" name="page_gadgets"  attrs="{'invisible': [('is_gadget', '!=', True)]}">
@@ -351,6 +355,14 @@
                 </div>
             </xpath>
 
+            <!--AGREGAR NUEVO CAMPO DE TIPO BOOLEAN-->
+            <xpath expr="//form/sheet/div[2]/div[1]/div[2]" position="after">
+                <div>
+                    <field name="is_second_hand"/>
+                    <label for="is_second_hand"/>
+                </div>
+            </xpath>
+
             <xpath expr="//field[@name='purchase_ok']" position="attributes">
                 <attribute name="attrs">{"invisible": [["is_gadget","=",True]]}</attribute>
             </xpath>
@@ -393,11 +405,13 @@
 
                 <xpath expr="//search/group" position="inside">
                     <filter string="Is gadget" name="is_gadget" context="{'group_by':'is_gadget'}"/>
+                    <filter string="Is second hand" name="is_second_hand" context="{'group_by':'is_second_hand'}"/>
                     <filter string="Partner type" name="partner_type_id" context="{'group_by':'partner_type_id'}"/>
                 </xpath>
 
                 <xpath expr="//search/filter[@name='real_stock_negative']" position="after">
                     <filter string="Is gadget" name="is_gadget" domain="[('is_gadget', '!=', False)]"/>
+                    <filter string="Is second hand" name="is_second_hand" domain="[('is_second_hand', '!=', False)]"/>
                     <filter string="Has partner type" name="partner_type_id" domain="[('partner_type_id', '!=', False)]"/>
                     <filter string="Is community" name="is_community" domain="[('is_community', '!=', False)]"/>
                 </xpath>

@@ -556,6 +556,11 @@ class ProductTemplate(models.Model):
         string="Bad points")
     is_conflictivea_pparatus = fields.Boolean(
         string="Is conflictive apparatus")
+    is_second_hand = fields.Boolean(
+        string="Is second hand")
+    product_tag_id = fields.Many2many(
+        'stock.product.tags',
+        string="Tags")
 
     
     @api.depends('is_gadget')
