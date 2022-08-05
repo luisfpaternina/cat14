@@ -44,6 +44,9 @@ class ResConfigSettings(models.TransientModel):
         related="company_id.is_forecast_made",
         readonly=False,
         config_parameter='sat_companies.is_forecast_made')
+    user_operator_id = fields.Many2many(
+        'res.users',
+        string="Users")
     
 
     def set_values(self):
