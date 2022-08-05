@@ -23,7 +23,7 @@ class ProjectTaks(models.Model):
                     if product.is_recurring_task:
                         record._compute_repeat()
     """
-
+    
     def _compute_repeat(self):
         print('test')
         res = super(ProjectTaks, self)._compute_repeat()
@@ -32,8 +32,14 @@ class ProjectTaks(models.Model):
             if product.is_recurring_task:
                 self.recurring_task = product.is_recurring_task
                 self.repeat_interval = product.repeat_interval
-                self.repeat_unit = product.repeat_unit
-                self.repeat_until = product.repeat_until
+                self.repeat_unit = product.repeat_unit 
+                self.repeat_on_month = product.repeat_on_month 
+                self.repeat_on_year = product.repeat_on_year 
+                self.repeat_day = False 
+                self.repeat_week = False
+                self.repeat_weekday = 'mon'
+                self.repeat_month = product.repeat_month
+                self.repeat_until = product.repeat_until 
                 self.repeat_number = product.repeat_number
                 self.repeat_type = product.repeat_type
                 self.mon = product.mon
