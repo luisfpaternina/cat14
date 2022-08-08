@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-04 23:50+0000\n"
-"PO-Revision-Date: 2022-04-04 23:50+0000\n"
+"POT-Creation-Date: 2022-08-08 15:20+0000\n"
+"PO-Revision-Date: 2022-08-08 15:20+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -21,6 +21,16 @@ msgid "# of Orders"
 msgstr ""
 
 #. module: gt_vendor_advance_payment
+#: model:mail.template,body_html:gt_vendor_advance_payment.template_origin_po_notification
+msgid ""
+"<?xml version=\"1.0\"?>\n"
+"<div>\n"
+"                    <strong><p align=\"center\">El asiento contable ha sido creado a partir de: ${object.origin_po}</p></strong>\n"
+"                </div>\n"
+"            "
+msgstr ""
+
+#. module: gt_vendor_advance_payment
 #: model:ir.model.fields,help:gt_vendor_advance_payment.field_purchase_advance_payment_inv__advance_payment_method
 msgid ""
 "A standard invoice is issued with all the order lines ready for invoicing,"
@@ -31,6 +41,16 @@ msgstr ""
 #. module: gt_vendor_advance_payment
 #: model:ir.model.fields,help:gt_vendor_advance_payment.field_purchase_advance_payment_inv__deposit_account_id
 msgid "Account used for deposits"
+msgstr ""
+
+#. module: gt_vendor_advance_payment
+#: model:ir.model.fields,field_description:gt_vendor_advance_payment.field_purchase_advance_payment_inv__acumulate
+msgid "Accumulate"
+msgstr ""
+
+#. module: gt_vendor_advance_payment
+#: model:ir.model.fields,field_description:gt_vendor_advance_payment.field_purchase_order__acumulate
+msgid "Acumulate"
 msgstr ""
 
 #. module: gt_vendor_advance_payment
@@ -90,6 +110,8 @@ msgid "Deduct down payments"
 msgstr ""
 
 #. module: gt_vendor_advance_payment
+#: model:ir.model.fields,field_description:gt_vendor_advance_payment.field_account_move__display_name
+#: model:ir.model.fields,field_description:gt_vendor_advance_payment.field_product_product__display_name
 #: model:ir.model.fields,field_description:gt_vendor_advance_payment.field_purchase_advance_payment_inv__display_name
 #: model:ir.model.fields,field_description:gt_vendor_advance_payment.field_purchase_order__display_name
 #: model:ir.model.fields,field_description:gt_vendor_advance_payment.field_purchase_order_line__display_name
@@ -101,7 +123,7 @@ msgstr "Nombre mostrado"
 #: code:addons/gt_vendor_advance_payment/wizard/purchase_make_invoice_advance.py:0
 #, python-format
 msgid "Down Payment"
-msgstr ""
+msgstr "Depósito"
 
 #. module: gt_vendor_advance_payment
 #: model:ir.model.fields,field_description:gt_vendor_advance_payment.field_purchase_advance_payment_inv__fixed_amount
@@ -135,6 +157,11 @@ msgid "Down payment (percentage)"
 msgstr ""
 
 #. module: gt_vendor_advance_payment
+#: model:ir.model.constraint,message:gt_vendor_advance_payment.constraint_product_product_down_payment
+msgid "Down payment is already exists...!"
+msgstr "Ya existe un producto marcado como depósito"
+
+#. module: gt_vendor_advance_payment
 #: code:addons/gt_vendor_advance_payment/wizard/purchase_make_invoice_advance.py:0
 #, python-format
 msgid "Down payment of %s%%"
@@ -160,7 +187,7 @@ msgstr "Pago total"
 #. module: gt_vendor_advance_payment
 #: model:ir.model.fields,field_description:gt_vendor_advance_payment.field_purchase_advance_payment_inv__has_down_payments
 msgid "Has down payments"
-msgstr ""
+msgstr "Tiene depósitos"
 
 #. module: gt_vendor_advance_payment
 #: model:ir.model.fields,field_description:gt_vendor_advance_payment.field_purchase_order__hide_invoice
@@ -168,6 +195,8 @@ msgid "Hide Invoice"
 msgstr ""
 
 #. module: gt_vendor_advance_payment
+#: model:ir.model.fields,field_description:gt_vendor_advance_payment.field_account_move__id
+#: model:ir.model.fields,field_description:gt_vendor_advance_payment.field_product_product__id
 #: model:ir.model.fields,field_description:gt_vendor_advance_payment.field_purchase_advance_payment_inv__id
 #: model:ir.model.fields,field_description:gt_vendor_advance_payment.field_purchase_order__id
 #: model:ir.model.fields,field_description:gt_vendor_advance_payment.field_purchase_order_line__id
@@ -198,6 +227,18 @@ msgid "Is a down payment"
 msgstr ""
 
 #. module: gt_vendor_advance_payment
+#: model:ir.model.fields,field_description:gt_vendor_advance_payment.field_product_product__is_down_payment
+msgid "Is down payment"
+msgstr "Depósito"
+
+#. module: gt_vendor_advance_payment
+#: model:ir.model,name:gt_vendor_advance_payment.model_account_move
+msgid "Journal Entry"
+msgstr "Asiento contable"
+
+#. module: gt_vendor_advance_payment
+#: model:ir.model.fields,field_description:gt_vendor_advance_payment.field_account_move____last_update
+#: model:ir.model.fields,field_description:gt_vendor_advance_payment.field_product_product____last_update
 #: model:ir.model.fields,field_description:gt_vendor_advance_payment.field_purchase_advance_payment_inv____last_update
 #: model:ir.model.fields,field_description:gt_vendor_advance_payment.field_purchase_order____last_update
 #: model:ir.model.fields,field_description:gt_vendor_advance_payment.field_purchase_order_line____last_update
@@ -216,6 +257,28 @@ msgid "Last Updated on"
 msgstr ""
 
 #. module: gt_vendor_advance_payment
+#: model:ir.model.fields,field_description:gt_vendor_advance_payment.field_account_bank_statement_line__origin_po
+#: model:ir.model.fields,field_description:gt_vendor_advance_payment.field_account_move__origin_po
+#: model:ir.model.fields,field_description:gt_vendor_advance_payment.field_account_payment__origin_po
+#: model:mail.template,subject:gt_vendor_advance_payment.template_origin_po_notification
+msgid "Origen"
+msgstr ""
+
+#. module: gt_vendor_advance_payment
+#: model:base.automation,name:gt_vendor_advance_payment.automatization_origin_po
+#: model:ir.actions.server,name:gt_vendor_advance_payment.automatization_origin_po_ir_actions_server
+msgid "Origen PO"
+msgstr ""
+
+#. module: gt_vendor_advance_payment
+#: model:ir.model.fields,field_description:gt_vendor_advance_payment.field_account_bank_statement_line__is_payment_validator
+#: model:ir.model.fields,field_description:gt_vendor_advance_payment.field_account_move__is_payment_validator
+#: model:ir.model.fields,field_description:gt_vendor_advance_payment.field_account_payment__is_payment_validator
+#: model:ir.model.fields,field_description:gt_vendor_advance_payment.field_purchase_order__is_payment_validator
+msgid "Payment validate"
+msgstr ""
+
+#. module: gt_vendor_advance_payment
 #: code:addons/gt_vendor_advance_payment/models/purchase.py:0
 #, python-format
 msgid "Please select Product lines to confirm the order"
@@ -227,6 +290,11 @@ msgid "Prepayment Account"
 msgstr ""
 
 #. module: gt_vendor_advance_payment
+#: model:ir.model,name:gt_vendor_advance_payment.model_product_product
+msgid "Product"
+msgstr "Producto"
+
+#. module: gt_vendor_advance_payment
 #: model:ir.model.fields,field_description:gt_vendor_advance_payment.field_purchase_order__po_inv_count
 msgid "Purchase Invoice Count"
 msgstr ""
@@ -234,7 +302,7 @@ msgstr ""
 #. module: gt_vendor_advance_payment
 #: model:ir.model,name:gt_vendor_advance_payment.model_purchase_order
 msgid "Purchase Order"
-msgstr "Orden de compra"
+msgstr "Pedido de compra"
 
 #. module: gt_vendor_advance_payment
 #: model:ir.model,name:gt_vendor_advance_payment.model_purchase_order_line
