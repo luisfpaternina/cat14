@@ -20,6 +20,8 @@
         'sale_management',
         'sale_subscription',
         'sat_companies_stock',
+        'timesheet_grid',
+        'hr_timesheet',
 
     ],
 
@@ -36,6 +38,7 @@
         'views/project_task_ot_checklist_location.xml',
         'views/project_task_breakdowns.xml',
         'views/project_task_community_mood.xml',
+        'views/project_task_create_timesheet.xml',
         'reports/worksheet.xml',
         'reports/print_qr.xml',
         'reports/technical_data_template.xml',

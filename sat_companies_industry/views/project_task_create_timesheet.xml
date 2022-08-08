@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+     <record id="inherit_project_task_create_timesheet_view" model="ir.ui.view">
+        <field name="name">inherit.form.project.task.create.timesheet</field>
+        <field name="model">project.task.create.timesheet</field>
+        <field name="inherit_id" ref="hr_timesheet.project_task_create_timesheet_view_form"/>
+        <field name="arch" type="xml"> 
+            <xpath expr="//field[@name='time_spent']" position="attributes">
+                <attribute name="attrs">{}</attribute>
+                <attribute name="force_save">True</attribute>
+                <attribute name="readonly">1</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -183,4 +183,15 @@
         </field>
     </record>
 
+    <record id="inherit_timesheet_grid_project_task_view_form" model="ir.ui.view">
+        <field name="name">inherit.form.timesheet.project.task</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="timesheet_grid.project_task_view_form"/>
+        <field name="arch" type="xml"> 
+            <xpath expr="//button[@name='action_timer_pause']" position="attributes">
+                <attribute name="string">FINALIZAR OT</attribute>
+            </xpath>
+        </field>
+    </record>
+
 </odoo>     
