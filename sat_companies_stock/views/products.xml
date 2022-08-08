@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
+
     <record id="inherit_view_product_template_only_form_view_sat" model="ir.ui.view">
         <field name="name">product.template.form.</field>
         <field name="model">product.template</field>
@@ -9,6 +10,22 @@
             <xpath expr="//field[(@name='default_code')]" position="after">
                 <field name="rae" attrs="{'invisible': [('is_gadget', '!=', True)]}"/>
                 <field name="has_rae" invisible="1"/>
+            </xpath>
+
+            <xpath expr="//header" position="inside">
+                <button 
+                string="Gadget sttoped"
+                name="action_done_show_wizard"
+                type="object"
+                class="btn btn-warning"
+                context="{'default_product_id': active_id}"
+                attrs="{'invisible': [('is_gadget_stopped', '!=', False)]}"/>
+                <button 
+                string="Not stopped"
+                name="not_gadget_stopped"
+                type="object"
+                confirm="Are you sure you want to do this?"
+                attrs="{'invisible': [('is_gadget_stopped', '!=', True)]}"/>
             </xpath>
 
             <xpath expr="//field[(@name='default_code')]" position="after">
@@ -24,7 +41,8 @@
                                 <field name="address"/>
                             </group>
                             <group>
-                                
+                                <field name="is_gadget_stopped"/>
+                                <field name="stop_reason_id" attrs="{'invisible': [('is_gadget_stopped', '!=', True)]}" readonly="1"/>
                             </group>
                             <group>
                                 <field name="is_gadget" invisible="1"/>

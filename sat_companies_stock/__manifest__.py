@@ -30,6 +30,7 @@
        
         'security/security.xml',
         'security/ir.model.access.csv',
+        'data/gadget.stop.reason.csv',
         'views/account_move_views.xml',
         'views/products.xml',
         'views/stock_gadgets.xml',
@@ -57,6 +58,8 @@
         'views/stock_location.xml',
         'views/stock_inspection_type.xml',
         'views/stock_product_tags.xml',
+        'views/stock_gadget_stopped_reason.xml',
+        'wizard/wizard_gadget_stopped.xml',
         'reports/technical_data_template.xml',
         
     ],
