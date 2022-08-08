@@ -23,14 +23,19 @@ class PurchaseOrder(models.Model):
     po_inv_count = fields.Integer(string="Purchase Invoice Count", compute='compute_purchase_inv_count')
     is_regular_invoice = fields.Boolean(string="Full payment",default=False,copy=False)
     partner_shipping_id = fields.Many2one('res.partner', string="Shipping partner")
-    acumulate = fields.Float(string="Acumulate")
+    acumulate = fields.Float(string="Acumulate", compute="lines_acumulate")
+    is_payment_validator = fields.Boolean(string="Payment validate")
 
 
-    def calculate_acumulate(self):
-        invoice_obj = self.env['account.move'].search([('invoice_origin', '=', self.name)])
-        if invoice_obj:
-            for inv in invoice_obj:
-                self.acumulate = inv.amount_total
+    def lines_acumulate(self):
+        com_total = 0
+        for line in self.order_line: 
+            com_total += line.price_unit
+        self.update({'acumulate': com_total})
+        if self.acumulate >= self.amount_total:
+            self.write({'invoice_status': 'invoiced'})
+        else:
+            self.write({'invoice_status': 'to invoice'})
 
     def copy(self, default=None):
         duplicate_po = super(PurchaseOrder, self).copy(default=default)

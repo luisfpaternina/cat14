@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="inherit_view_product_product_po" model="ir.ui.view">
+        <field name="name">inherit.form.product.product</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_normal_form_view"/>
+        <field name="arch" type="xml">
+
+            <!--AGREGAR CAMPOS A LA VISTA-->
+            <xpath expr="//field[(@name='type')]" position="after">
+                <field name="is_down_payment" invisible="1"/>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>  
