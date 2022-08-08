@@ -44,9 +44,17 @@ class ResConfigSettings(models.TransientModel):
         related="company_id.is_forecast_made",
         readonly=False,
         config_parameter='sat_companies.is_forecast_made')
-    user_operator_id = fields.Many2many(
+    user_operator_id = fields.Many2one(
         'res.users',
-        string="Users")
+        string="Users",
+        related="company_id.user_operator_id",
+        readonly=False,
+        config_parameter='sat_companies.user_operator_id')
+    is_qr_required = fields.Boolean(
+        string="Is QR required?",
+        related="company_id.is_qr_required",
+        readonly=False,
+        config_parameter='sat_companies.is_qr_required')
     
 
     def set_values(self):
@@ -56,4 +64,5 @@ class ResConfigSettings(models.TransientModel):
         self.env['ir.config_parameter'].sudo().set_param('is_potencial_client', self.is_potencial_client)
         self.env['ir.config_parameter'].sudo().set_param('has_rae', self.has_rae)
         self.env['ir.config_parameter'].sudo().set_param('is_forecast_made', self.is_forecast_made)
+        self.env['ir.config_parameter'].sudo().set_param('user_operator_id', self.user_operator_id)
         return res
