@@ -561,7 +561,28 @@ class ProductTemplate(models.Model):
     product_tag_id = fields.Many2many(
         'stock.product.tags',
         string="Tags")
+    is_gadget_stopped = fields.Boolean(
+        string="Is gadget stopped",
+        tracking=True)
+    stop_reason_id = fields.Many2one(
+        'gadget.stop.reason',
+        string="Reason",
+        tracking=True)
 
+    def not_gadget_stopped(self):
+        for record in self:
+            if record.is_gadget_stopped:
+                record.write({'is_gadget_stopped': False})
+
+    def action_done_show_wizard(self):
+       return {'type': 'ir.actions.act_window',
+               'name': _('Gadget stopped reason'),
+               'res_model': 'product.stopped.wizard',
+               'target': 'new',
+               'view_id': self.env.ref('sat_companies_stock.product_stopped_wizard_form').id,
+               'view_mode': 'form',
+               'context': {}
+               }
     
     @api.depends('is_gadget')
     def compute_rae(self):

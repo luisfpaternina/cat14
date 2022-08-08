@@ -7,5 +7,10 @@
 	        <field name="comment">Manager gadgets Permission Group</field>
 	    </record>
 
+		<record id="gadgets_stopped_manager_group" model="res.groups">
+	        <field name="name">Manager gadgets stopped</field>
+	        <field name="comment">Manager gadgets stopped Permission Group</field>
+	    </record>
+
 	</data>
 </odoo>
