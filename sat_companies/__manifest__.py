@@ -21,6 +21,7 @@
         'crm',
         'base',
         'base_automation',
+        'industry_fsm',
         'sat_companies_stock',
 
     ],
@@ -33,6 +34,7 @@
         'views/account_move_line.xml',
         'views/res_partner.xml',
         'views/views_res_config_settings.xml',
+        'views/project_task.xml',
         'reports/invoice.xml',
         'reports/inherit_sale_order.xml',
         'data/account_receipt.xml',
