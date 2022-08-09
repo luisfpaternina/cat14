@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 from typing import DefaultDict
+
+from markupsafe import string
 from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
 import logging
@@ -32,7 +34,19 @@ class SaleOrder(models.Model):
         string="Normative date")
     comercial_description = fields.Html(
         string="Description")
+    project_task_id = fields.Many2one(
+        'project.project',
+        string="Project task name",
+        compute="_compute_check_project_task_id")
     
+
+    @api.depends('name','partner_id')
+    def _compute_check_project_task_id(self):
+        project_obj = self.env['project.project'].search([('name','=','Field Service')],limit=1)
+        if project_obj:
+            self.project_task_id = project_obj
+        else:
+            self.project_task_id = False
 
     @api.onchange(
         'sale_order_type',
@@ -54,7 +68,8 @@ class SaleOrder(models.Model):
                     default_model='wizard.sale.order.type',
                     default_sale_order_id=record.id,
                     default_sale_type_id=record.sale_type_id.id,
-                    default_project_line_ids= record.order_line.ids
+                    default_project_line_ids= record.order_line.ids,
+                    default_project_id= record.project_task_id.id
                 )
                 return {
                     'name': ('Tipo de operación'),

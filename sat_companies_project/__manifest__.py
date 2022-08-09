@@ -19,6 +19,8 @@
         'sat_companies_stock',
         'sat_companies_industry',
         'base_automation',
+        'sale_project',
+        'sale_timesheet',
 
     ],
 

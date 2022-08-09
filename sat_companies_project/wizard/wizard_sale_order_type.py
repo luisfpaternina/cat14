@@ -14,9 +14,11 @@ class WizardSaleOrderType(models.TransientModel):
         'sale.order.type',
         'Sale order Type')
     is_new_project = fields.Boolean(
-        'Is a project existing ?')
+        'Is a project existing ?',
+        default=True)
     add_task_line = fields.Boolean(
-        'Add Task line ?')
+        'Add Task line ?',
+        default=True)
     project_id = fields.Many2one(
         'project.project',
         'Project')
