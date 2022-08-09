@@ -10,3 +10,4 @@ from . import notes
 from . import license_plates
 from . import hobbies
 from . import res_partner
+from . import cancel_license_plates
