@@ -26,6 +26,12 @@
                             	    type="object" 
                             	    class="oe_highlight" 
                             	    confirm="Are you sure?"/>
+                            <button 
+                                    string="Cancel license plates"
+                                    name="action_show_wizard"
+                                    type="object"
+                                    class="btn btn-warning"
+                                    />
 
                         </header>
                     <sheet>
