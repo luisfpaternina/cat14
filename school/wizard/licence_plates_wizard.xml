@@ -2,17 +2,17 @@
 <odoo>
 
     <record id="product_stopped_wizard_form" model="ir.ui.view">
-        <field name="name">product.stopped.wizard.form</field>
-        <field name="model">product.stopped.wizard</field>
+        <field name="name">license.plates.wizard.form</field>
+        <field name="model">license.plates.wizard</field>
         <field name="type">form</field>
         <field name="arch" type="xml">
-           <form string="Stock Brand Tracking Wizard">
+           <form>
                     <group>
-                        <field name='product_id' readonly="1"/>
-                        <field name="stop_reason_id" required="1" options="{'no_create': True, 'no_create_edit':True}" />
+                        <field name='license_plates_id' readonly="1"/>
+                        <field name="description" required="1"/>
                     </group>
                 <footer>
-                    <button name="gadget_stopped_confirm" string="CONFIRM" type="object" class="btn btn-success"/>
+                    <button name="cancel_licence_plates" string="CONFIRM" type="object" class="btn btn-success"/>
                     <button special='cancel' string='CANCEL' class="btn btn-danger"/>
                 </footer>
             </form>
