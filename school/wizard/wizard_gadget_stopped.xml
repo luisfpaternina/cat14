@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="product_stopped_wizard_form" model="ir.ui.view">
+        <field name="name">product.stopped.wizard.form</field>
+        <field name="model">product.stopped.wizard</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+           <form string="Stock Brand Tracking Wizard">
+                    <group>
+                        <field name='product_id' readonly="1"/>
+                        <field name="stop_reason_id" required="1" options="{'no_create': True, 'no_create_edit':True}" />
+                    </group>
+                <footer>
+                    <button name="gadget_stopped_confirm" string="CONFIRM" type="object" class="btn btn-success"/>
+                    <button special='cancel' string='CANCEL' class="btn btn-danger"/>
+                </footer>
+            </form>
+         </field>
+    </record>
+
+</odoo>
