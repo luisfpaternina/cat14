@@ -19,13 +19,15 @@
                 type="object"
                 class="btn btn-warning"
                 context="{'default_product_id': active_id}"
-                attrs="{'invisible': [('is_gadget_stopped', '!=', False)]}"/>
+                attrs="{'invisible': [('is_gadget_stopped', '!=', False)]}"
+                groups="sat_companies_stock.gadgets_stopped_manager_group"/>
                 <button 
                 string="Not stopped"
                 name="not_gadget_stopped"
                 type="object"
                 confirm="Are you sure you want to do this?"
-                attrs="{'invisible': [('is_gadget_stopped', '!=', True)]}"/>
+                attrs="{'invisible': [('is_gadget_stopped', '!=', True)]}"
+                groups="sat_companies_stock.gadgets_stopped_manager_group"/>
             </xpath>
 
             <xpath expr="//field[(@name='default_code')]" position="after">
@@ -41,7 +43,7 @@
                                 <field name="address"/>
                             </group>
                             <group>
-                                <field name="is_gadget_stopped"/>
+                                <field name="is_gadget_stopped" readonly="1"/>
                                 <field name="stop_reason_id" attrs="{'invisible': [('is_gadget_stopped', '!=', True)]}" readonly="1"/>
                             </group>
                             <group>
