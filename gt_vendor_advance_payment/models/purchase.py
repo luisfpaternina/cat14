@@ -28,9 +28,10 @@ class PurchaseOrder(models.Model):
 
 
     def lines_acumulate(self):
+        move_obj = self.env['account.move'].search([('invoice_origin','=', self.name),('state','=','posted')])
         com_total = 0
-        for line in self.order_line: 
-            com_total += line.price_unit
+        for line in move_obj: 
+            com_total += line.amount_total
         self.update({'acumulate': com_total})
         if self.acumulate >= self.amount_total:
             self.write({'invoice_status': 'invoiced'})
