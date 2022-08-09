@@ -6,7 +6,7 @@
         <field name="model">product.stopped.wizard</field>
         <field name="type">form</field>
         <field name="arch" type="xml">
-           <form string="Stock Brand Tracking Wizard">
+           <form>
                     <group>
                         <field name='product_id' readonly="1"/>
                         <field name="stop_reason_id" required="1" options="{'no_create': True, 'no_create_edit':True}" />
