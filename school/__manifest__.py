@@ -46,6 +46,7 @@
         'views/courses.xml',
         'views/area.xml',
         'views/license_plates.xml',
+        'wizard/licence_plates_wizard.xml',
         'data/sequences.xml',
         'reports/report_license_plates.xml',
               

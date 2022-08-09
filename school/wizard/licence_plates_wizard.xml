@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
 
-    <record id="product_stopped_wizard_form" model="ir.ui.view">
+    <record id="license_plates_wizard_form" model="ir.ui.view">
         <field name="name">license.plates.wizard.form</field>
         <field name="model">license.plates.wizard</field>
         <field name="type">form</field>

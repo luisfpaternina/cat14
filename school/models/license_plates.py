@@ -72,6 +72,17 @@ class LicensePlates(models.Model):
         string="Description")
 
 
+    def action_show_wizard(self):
+       return {'type': 'ir.actions.act_window',
+               'name': _('Cancel licence plates'),
+               'res_model': 'license.plates.wizard',
+               'target': 'new',
+               'view_id': self.env.ref('school.license_plates_wizard_form').id,
+               'view_mode': 'form',
+               'context': {}
+               }
+
+
     def method_name(self):
         converted_content = mail_template.mako_template_env.from_string(notes).render({'object': object_value,})
         return converted_content
