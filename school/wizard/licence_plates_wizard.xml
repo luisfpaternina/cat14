@@ -8,7 +8,7 @@
         <field name="arch" type="xml">
            <form>
                     <group>
-                        <field name='license_plates_id' readonly="1"/>
+                        <field name='license_plates_id'/>
                         <field name="description" required="1"/>
                     </group>
                 <footer>

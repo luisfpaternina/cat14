@@ -31,7 +31,7 @@
                                     name="action_show_wizard"
                                     type="object"
                                     class="btn btn-warning"
-                                    context="{'default_licence_plates_id': active_id}"
+                                    context="{'default_license_plates_id': active_id}"
                                     />
 
                         </header>
