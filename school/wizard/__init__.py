@@ -1,2 +1,2 @@
 # -*- coding: utf:8 -*-
-from . import wizard_mark_gadget_stopped
+from . import licence_plates_wizard

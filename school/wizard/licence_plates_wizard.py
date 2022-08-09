@@ -19,10 +19,10 @@ class LicencePlatesWizard(models.TransientModel):
         string="Description")
     
 
-    def gadget_stopped_confirm(self):
+    def cancel_licence_plates(self):
         license_plates_obj =  self.env['license.plates'].search([('id','=',self.license_plates_id.id)])
         if license_plates_obj:
             license_plates_obj.write({
-                'is_gadget_stopped': True, 
-                'stop_reason_id': self.stop_reason_id.id
+                'description': self.description, 
+                'student_id': self.student_id.id
                 })
