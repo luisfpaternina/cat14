@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+        <template id="pos_action_button" inherit_id="point_of_sale.assets">
+            <xpath expr="." position="inside">
+
+                <!--LLAMAR ESTILOS CSS-->
+                <link rel="stylesheet" href="/pos_action_button/static/src/css/action_button.css"/>
+                
+                <!--LLAMAR ARCHIVO JS-->
+                <script type="text/javascript" src="/pos_action_button_static/src/js/action_button.js"/>
+
+            </xpath>
+        </template>
+    </data>
+</odoo>

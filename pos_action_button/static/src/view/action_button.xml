@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template_pos_action_button" xml:space="preserve">
+    <t t-name="DashBoardButton">
+        <div class="control-button">
+            <i class="fa fa-dashboard"/>Dashboard lfpv
+        </div>
+    </t>
+</templates>
