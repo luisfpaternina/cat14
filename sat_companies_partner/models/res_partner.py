@@ -85,8 +85,7 @@ class ResPartner(models.Model):
         tracking=True)
     is_potential_client = fields.Boolean(
         string="Is a potential client",
-        tracking=True,
-        default=True)
+        tracking=True)
     fiscal_name = fields.Char(
         string="Fiscal name",
         tracking=True)
@@ -275,19 +274,6 @@ class ResPartner(models.Model):
     def _upper_contact_name(self):        
         self.name = self.name.upper() if self.name else False
 
-    @api.model
-    def create(self, vals):
-        if vals.get('client_code', 'New') == 'New' and vals.get('is_potential_client')==False:
-            vals['client_code'] = self.env['ir.sequence'].next_by_code('partner')
-        result = super(ResPartner, self).create(vals)
-        return result
-
-    def write(self, vals):
-        if vals.get('client_code', 'New') == 'New' and vals.get('is_potential_client')==False:
-            vals['client_code'] = self.env['ir.sequence'].next_by_code('partner')
-        result = super(ResPartner, self).write(vals)
-        return result
-
     @api.constrains(
         'name',
         'bank_ids',
@@ -311,3 +297,8 @@ class ResPartner(models.Model):
                     if not record.city:
                         raise ValidationError(_(
                             'You must register a city'))
+
+    @api.onchange('company_type','name','parent_id','type')
+    def get_default_potencial_contact(self):
+        if self.parent_id:
+            self.is_potential_client = self.parent_id.is_potential_client
