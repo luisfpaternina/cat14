@@ -7,7 +7,8 @@ var pos_screens = require('point_of_sale.screens')
 // Crear boton y heredar de ActionButtonWidget
 var DashboardButton = pos_screens.ActionButtonWidget.extend({
     template: 'DashBoardButton',
-    button_click: function(){
+    button_click: async function(){
+        await selectClient()
         alert("Button clicked")
     },
 });
