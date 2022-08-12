@@ -28,7 +28,7 @@ class PurchaseOrder(models.Model):
 
 
     def lines_acumulate(self):
-        move_obj = self.env['account.move'].search([('invoice_origin','=', self.name),('state','=','posted')])
+        move_obj = self.env['account.move'].search([('invoice_origin','=', self.name)])
         com_total = 0
         for line in move_obj: 
             com_total += line.amount_total

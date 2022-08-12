@@ -91,7 +91,16 @@ class SaleOrder(models.Model):
     sign_contract_date = fields.Date(
         string="Sign contract date",
         compute="compute_contract_date")
+    user_partner_contact_id = fields.Many2one(
+        'res.users',
+        string="Comercial mantenimiento",
+        tracking=True)
 
+    @api.onchange('partner_id')
+    def maintenance_partner(self):
+        for record in self:
+            if record.partner_id:
+                record.user_partner_contact_id = record.partner_id.user_partner_contact_id.id
 
     @api.depends('state','pdf_file_sale_contract')
     def compute_contract_date(self):
