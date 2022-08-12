@@ -26,7 +26,8 @@
 
     'data': [
 
-        'data/sequences.xml',   
+        'data/sequences.xml',
+        'data/base_automatization.xml',  
         'security/security.xml',
         'security/ir.model.access.csv',
         'views/res_partner_delegation.xml',
