@@ -168,6 +168,8 @@ class ResPartner(models.Model):
     is_low = fields.Boolean(
         string="Is low",
         compute="compute_low_date")
+    child_vat = fields.Char(
+        string="VAT")
     
 
     @api.depends('low_date')

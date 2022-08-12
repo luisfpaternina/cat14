@@ -63,6 +63,7 @@
             <xpath expr="//field[(@name='email')]" position="after">
                 <field name="fax"/>
                 <field name="has_account" invisible="1"/>
+                <field name="child_vat" invisible="1"/>
             </xpath>
 
             <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='sales_purchases']/group[@name='container_row_2']/group[@name='sale']/field[@name='user_id']" position="after">
@@ -215,13 +216,6 @@
                             </tree>
                         </field>
                     </group>
-                    <!--
-                    <field name="comunities_ids">
-                        <tree editable="botttom">
-                            <field name="partner_community_id" options="{'no_create': True, 'no_create_edit':True}" required="1" domain = "[('is_community','=',True)]"/>
-                        </tree>
-                    </field>
-                    -->
                 </page>
                 <page name="comunity_partner" string="Comunities" invisible="1">
                     <group>
@@ -231,13 +225,6 @@
                             </tree>
                         </field>
                     </group>
-                    <!--
-                    <field name="comunities_ids">
-                        <tree editable="botttom">
-                            <field name="partner_community_id" options="{'no_create': True, 'no_create_edit':True}" required="1" domain = "[('is_community','=',True)]"/>
-                        </tree>
-                    </field>
-                    -->
                 </page>
             </xpath>
 
@@ -290,6 +277,29 @@
                 <field name="street" string="Address"/>
             </xpath>
             
+        </field>
+    </record>
+
+    <record id="inherit_l10n_latam_base_view_partner_latam_form" model="ir.ui.view">
+        <field name="name">res.partner.tree.inherit.latam</field>
+        <field name="model">res.partner</field>
+        <field name="priority" eval="1"/>
+        <field name="inherit_id" ref="l10n_latam_base.view_partner_latam_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[(@name='vat')]" position="after">
+                <field name="parent_id" invisible="1"/>
+                <field name="child_vat" attrs="{'invisible': [('parent_id', '=', False)]}"/>
+            </xpath>
+
+            <xpath expr="//div" position="attributes">
+                <attribute name="attrs">{'invisible':[('parent_id', '!=', False)]}</attribute>
+            </xpath>
+
+            <xpath expr="//field[(@name='vat')]" position="attributes">
+                <attribute name="attrs">{'invisible':[('parent_id', '=', False)]}</attribute>
+            </xpath>
+   
         </field>
     </record>
  
