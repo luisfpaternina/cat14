@@ -55,6 +55,15 @@
                 <field name="is_mounting" invisible="1"/>
             </xpath>
 
+            <xpath expr="//field[(@name='user_id')]" position="after"> 
+                <field name="user_partner_contact_id"/>
+            </xpath>
+
+            <xpath expr="//field[@name='user_id']" position="attributes">
+                <attribute name="attrs">{}</attribute>
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
             <xpath expr="//form/sheet/notebook/page[(@name='customer_signature')]" position="after">
                 <page string="Tipos de Servicios en Contrato" name="type_service_contract" attrs="{'invisible': [('is_maintenance', '!=', True)]}">
                     <group>
@@ -93,5 +102,24 @@
             </xpath>
 
         </field> 
+    </record>
+
+    <!--HEREDAR VISTA TREE SALE.ORDER-->
+    <record id="tree_view_sale_order_inherit_sat_companies_sale" model="ir.ui.view">
+        <field name="name">sale.orderform.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_quotation_tree_with_onboarding"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[(@name='user_id')]" position="after"> 
+                <field name="user_partner_contact_id"/>
+            </xpath>
+
+            <xpath expr="//field[@name='user_id']" position="attributes">
+                <attribute name="attrs">{}</attribute>
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+        </field>
     </record>
 </odoo>
