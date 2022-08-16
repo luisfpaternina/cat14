@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-08 23:38+0000\n"
-"PO-Revision-Date: 2022-08-08 23:38+0000\n"
+"POT-Creation-Date: 2022-08-16 13:06+0000\n"
+"PO-Revision-Date: 2022-08-16 13:06+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -877,6 +877,11 @@ msgid "Delegation name"
 msgstr "Nombre delegación"
 
 #. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_gadget_stop_reason__description
+msgid "Description"
+msgstr ""
+
+#. module: sat_companies_stock
 #: model:ir.model.fields,field_description:sat_companies_stock.field_account_move__display_name
 #: model:ir.model.fields,field_description:sat_companies_stock.field_gadget_stop_reason__display_name
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_stopped_wizard__display_name
@@ -1206,6 +1211,7 @@ msgid "Gadget sttoped"
 msgstr "Aparato parado"
 
 #. module: sat_companies_stock
+#: model:ir.actions.act_window,name:sat_companies_stock.action_view_only_gadgets
 #: model:ir.actions.act_window,name:sat_companies_stock.action_view_stock_gadgets
 #: model:ir.model,name:sat_companies_stock.model_stock_gadgets
 #: model:ir.model.fields,field_description:sat_companies_stock.field_account_bank_statement_line__product_id
@@ -2378,6 +2384,11 @@ msgid "October"
 msgstr "Octubre"
 
 #. module: sat_companies_stock
+#: model:ir.ui.menu,name:sat_companies_stock.id_gadgets_list
+msgid "Only gadgets"
+msgstr "Aparatos"
+
+#. module: sat_companies_stock
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__user_inps_id
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__user_inps_id
 msgid "Operator inps"
@@ -2790,14 +2801,15 @@ msgid "State test"
 msgstr "Prueba de estado"
 
 #. module: sat_companies_stock
-#: model_terms:ir.ui.view,arch_db:sat_companies_stock.product_stopped_wizard_form
-msgid "Stock Brand Tracking Wizard"
-msgstr ""
-
-#. module: sat_companies_stock
 #: model:ir.ui.menu,name:sat_companies_stock.menu_stock_landing_lock
 msgid "Stock landing lock"
 msgstr "Tipo cerradura rellano"
+
+#. module: sat_companies_stock
+#: model:ir.actions.act_window,name:sat_companies_stock.action_view_stop_gadgets
+#: model:ir.ui.menu,name:sat_companies_stock.id_stop_gadgets_list
+msgid "Stop gadgets"
+msgstr "Aparatos parados"
 
 #. module: sat_companies_stock
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__stop_numbers
@@ -3197,6 +3209,11 @@ msgid "Zone name"
 msgstr "Nombre de la zona"
 
 #. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_gadgets_tree
+msgid "gadgets_tree"
+msgstr ""
+
+#. module: sat_companies_stock
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__next_inspection_date
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__next_inspection_date
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__next_inspection_date
@@ -3211,4 +3228,9 @@ msgstr ""
 #. module: sat_companies_stock
 #: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_stock_gadgets_tree
 msgid "stock_gadgets_tree"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_stop_gadgets_tree
+msgid "stop_gadgets_tree"
 msgstr ""
