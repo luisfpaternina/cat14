@@ -78,6 +78,9 @@
                         Paola Bonilla, 4088443408, pgalindo@example.com<br></br>
                         <strong>Gracias!</strong>
                     	</p>
+                        <p>
+                            <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d %H:%M')"/>
+                        </p>
                     </div>
                 </t>
             </t>
