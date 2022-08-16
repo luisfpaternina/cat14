@@ -1,6 +1,8 @@
+from xmlrpc.client import DateTime
 from markupsafe import string
 from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
+from datetime import datetime,date,timedelta
 from datetime import date
 import datetime
 
@@ -182,10 +184,66 @@ class ProjectTask(models.Model):
         string="Assignment date")
     is_stop_gadget = fields.Boolean(
         string="Stop gadget")
+    open_date = fields.Datetime(
+        'Open date',
+        tracking=True)
+    closed_date = fields.Datetime(
+        'Closed date',
+        tracking=True,
+        compute="compute_closed_date")
+    open_time = fields.Float(
+        'Seconds',
+        tracking=True,
+        compute="compute_ot_time")
+    open_time_minutes = fields.Float(
+        'Minutes',
+        tracking=True,
+        compute="compute_ot_time")
+    open_time_hours = fields.Float(
+        'Hours',
+        tracking=True,
+        compute="compute_ot_time")
+    is_calculed_time = fields.Boolean(
+        string="Is caluled time")
+
     
+    def compute_closed_date(self):
+        if self.stage_id.sequence == 5 and self.is_calculed_time == False:
+            self.closed_date = datetime.datetime.now()
+            self.write({'is_calculed_time': True})
+        else: 
+            self.closed_date = False
+    
+    @api.depends('closed_date','stage_id','name')
+    def compute_is_calculate(self):
+        if self.closed_date:
+            self.write({'is_calculed_time': True})
+        else: 
+            self.is_calculed_time = False
+
+    def compute_ot_time(self):
+    # CALCULAR TIEMPO DE OT DESDE QUE SE INICIA HASTA QUE SE FINALIZA
+        for record in self:
+            if record.stage_id.sequence == 5 and record.closed_date:
+                calc = record.closed_date - record.create_date
+                year = record.create_date.year
+                month = record.create_date.month
+                day = record.create_date.day
+                calc = calc.seconds
+                minutes = calc/60
+                hours = minutes/60
+                record.open_time_hours = hours
+                record.open_time_minutes = minutes
+                record.open_time = calc
+            else:
+                record.open_time = 0
+                record.open_time_minutes = 0
+                record.open_time_hours = 0
+
 
     @api.constrains('product_id', 'name', 'partner_id')
     def validate_stop_gadget(self):
+    # VALIDAR SI EL APARATO ESTA 'PARADO'
         for record in self:
             if record.product_id.is_gadget_stopped:
                 raise ValidationError(_(

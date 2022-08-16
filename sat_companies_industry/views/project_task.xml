@@ -118,6 +118,12 @@
                 <field name="ot_type_id" invisible="1"/>
                 <field name="categ_udn_id"  options="{'no_create': True, 'no_create_edit':True}" attrs="{'invisible': [('ot_type_id','=',False)],'required':[('ot_type_id','!=',False)]}"/>
                 <field name="inspection_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                <field name="open_date" invisible="1"/>
+                <field name="closed_date" invisible="1"/>
+                <field name="open_time" invisible="1"/>
+                <field name="open_time_minutes" invisible="1"/>
+                <field name="open_time_hours" invisible="1"/>
+                <field name="is_calculed_time" invisible="1"/>
                 <field name="ot_date" invisible="1"/>
                 <field name="month_date" invisible="1"/>
                 <field name="is_warning" invisible="1"/>
@@ -189,9 +195,11 @@
         <field name="model">project.task</field>
         <field name="inherit_id" ref="timesheet_grid.project_task_view_form"/>
         <field name="arch" type="xml"> 
+
             <xpath expr="//button[@name='action_timer_pause']" position="attributes">
                 <attribute name="string">FINALIZAR OT</attribute>
             </xpath>
+
         </field>
     </record>
 

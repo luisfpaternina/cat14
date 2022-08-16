@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-16 11:43+0000\n"
-"PO-Revision-Date: 2022-08-16 11:43+0000\n"
+"POT-Creation-Date: 2022-08-16 20:10+0000\n"
+"PO-Revision-Date: 2022-08-16 20:10+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -604,6 +604,11 @@ msgid "Client signature"
 msgstr "Firma cliente"
 
 #. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__closed_date
+msgid "Closed date"
+msgstr "Fecha culminación OT"
+
+#. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__code
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_breakdowns__code
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__code
@@ -843,6 +848,11 @@ msgid "Gadgets"
 msgstr "Aparato"
 
 #. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__open_time_hours
+msgid "Hours"
+msgstr "Tiempo mostrado en horas"
+
+#. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__id
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__id
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__id
@@ -1008,6 +1018,11 @@ msgstr "Is septiembre"
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__is_apartament
 msgid "Is apartament"
 msgstr "Atrapamiento"
+
+#. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__is_calculed_time
+msgid "Is caluled time"
+msgstr ""
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__is_conflictive_apparatus
@@ -1249,6 +1264,11 @@ msgid "Minute point"
 msgstr "Punto de acta"
 
 #. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__open_time_minutes
+msgid "Minutes"
+msgstr "Tiempo mostrado en minutos"
+
+#. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__month_date
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__month_date
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__month_date
@@ -1426,6 +1446,11 @@ msgid "October"
 msgstr "Octubre"
 
 #. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__open_date
+msgid "Open date"
+msgstr ""
+
+#. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__user_id
 msgid "Operator"
 msgstr "Operario"
@@ -1546,6 +1571,11 @@ msgid "Search ot minute point"
 msgstr ""
 
 #. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__open_time
+msgid "Seconds"
+msgstr "Tiempo mostrado en segundos"
+
+#. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__check_9
 msgid "September"
 msgstr "Septiembre"
@@ -1573,7 +1603,7 @@ msgstr "Parado"
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__is_stop_gadget
 msgid "Stop gadget"
-msgstr ""
+msgstr "Aparato parado"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__supervisor_id
