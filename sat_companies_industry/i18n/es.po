@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-25 11:49+0000\n"
-"PO-Revision-Date: 2022-07-25 11:49+0000\n"
+"POT-Creation-Date: 2022-08-16 11:43+0000\n"
+"PO-Revision-Date: 2022-08-16 11:43+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -747,6 +747,11 @@ msgid "FAX"
 msgstr ""
 
 #. module: sat_companies_industry
+#: model_terms:ir.ui.view,arch_db:sat_companies_industry.inherit_timesheet_grid_project_task_view_form
+msgid "FINALIZAR OT"
+msgstr ""
+
+#. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__check_2
 msgid "February"
 msgstr "Febrero"
@@ -1034,7 +1039,7 @@ msgstr "Aviso técnico"
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__is_warning
 msgid "Is warning"
-msgstr ""
+msgstr "Aviso"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__check_1
@@ -1566,6 +1571,11 @@ msgid "Stop"
 msgstr "Parado"
 
 #. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__is_stop_gadget
+msgid "Stop gadget"
+msgstr ""
+
+#. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__supervisor_id
 msgid "Supervisor"
 msgstr ""
@@ -1584,11 +1594,16 @@ msgid "Telephone contact"
 msgstr "Télefono"
 
 #. module: sat_companies_industry
-#: code:addons/sat_companies_industry/models/.ipynb_checkpoints/project_task-checkpoint.py:0
 #: code:addons/sat_companies_industry/models/project_task.py:0
 #, python-format
 msgid "The column should be one per line"
 msgstr ""
+
+#. module: sat_companies_industry
+#: code:addons/sat_companies_industry/models/project_task.py:0
+#, python-format
+msgid "This device is 'STOPPED' : %s"
+msgstr "El aparato esta 'PARADO'"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__ot_type_id
