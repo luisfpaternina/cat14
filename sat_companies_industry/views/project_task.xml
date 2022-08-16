@@ -121,6 +121,7 @@
                 <field name="ot_date" invisible="1"/>
                 <field name="month_date" invisible="1"/>
                 <field name="is_warning" invisible="1"/>
+                <field name="is_stop_gadget" invisible="1"/>
             </xpath>
 
             <xpath expr="//field[(@name='project_id')]" position="after">

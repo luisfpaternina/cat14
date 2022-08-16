@@ -180,7 +180,16 @@ class ProjectTask(models.Model):
         string="Reading date")
     assignment_date = fields.Datetime(
         string="Assignment date")
+    is_stop_gadget = fields.Boolean(
+        string="Stop gadget")
+    
 
+    @api.constrains('product_id', 'name', 'partner_id')
+    def validate_stop_gadget(self):
+        for record in self:
+            if record.product_id.is_gadget_stopped:
+                raise ValidationError(_(
+                    "This device is 'STOPPED' : %s" % record.product_id.name))
 
     @api.onchange('product_id')
     def domain_udn(self):
