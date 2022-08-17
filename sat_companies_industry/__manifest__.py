@@ -30,6 +30,7 @@
         'security/security.xml',
         'security/ir.model.access.csv',
         'data/project.task.breakdowns.csv',
+        'data/ir_filters.xml',
         'views/maintenance_minute_point.xml',
         'views/maintenance_type_deffect.xml',
         'views/project_task.xml',

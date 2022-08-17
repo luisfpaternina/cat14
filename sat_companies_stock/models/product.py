@@ -555,7 +555,8 @@ class ProductTemplate(models.Model):
     bad_points = fields.Boolean(
         string="Bad points")
     is_conflictivea_pparatus = fields.Boolean(
-        string="Is conflictive apparatus")
+        string="Is conflictive apparatus",
+        compute="compute_is_conflictive_gadgets")
     is_second_hand = fields.Boolean(
         string="Is second hand")
     product_tag_id = fields.Many2many(
@@ -568,6 +569,25 @@ class ProductTemplate(models.Model):
         'gadget.stop.reason',
         string="Reason",
         tracking=True)
+    ots_id = fields.Many2many(
+        'project.task',
+        string="OTs",
+        compute="compute_ots_in_gadgets")
+
+
+    def compute_ots_in_gadgets(self):
+        for record in self:
+            ots = self.env['project.task'].search([('product_id','=',self.id),('is_warning','=', True)])
+            if ots:
+                record.ots_id= ots.ids
+            else:
+                record.ots_id = False
+    
+    def compute_is_conflictive_gadgets(self):
+        if len(self.ots_id) >= 2:
+            self.write({'is_conflictivea_pparatus': True})
+        else:
+            self.is_conflictivea_pparatus = False
 
     def not_gadget_stopped(self):
         for record in self:

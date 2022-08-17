@@ -20,6 +20,7 @@
         'stock',
         'purchase',
         'contacts',
+        'industry_fsm',
         'sat_companies_partner',
         'sale_subscription',
         'sat_companies_zones',
