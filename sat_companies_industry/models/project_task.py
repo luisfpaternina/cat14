@@ -1,3 +1,4 @@
+from email import message
 from xmlrpc.client import DateTime
 from markupsafe import string
 from odoo import models, fields, api, _
@@ -247,7 +248,7 @@ class ProjectTask(models.Model):
         for record in self:
             if record.product_id.is_gadget_stopped:
                 raise ValidationError(_(
-                    "This device is 'STOPPED' : %s" % record.product_id.name))
+                    "El aparato esta parado : %s" % record.product_id.name))
 
     @api.onchange('product_id')
     def domain_udn(self):

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-16 20:10+0000\n"
-"PO-Revision-Date: 2022-08-16 20:10+0000\n"
+"POT-Creation-Date: 2022-08-17 11:45+0000\n"
+"PO-Revision-Date: 2022-08-17 11:45+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -1627,13 +1627,13 @@ msgstr "Télefono"
 #: code:addons/sat_companies_industry/models/project_task.py:0
 #, python-format
 msgid "The column should be one per line"
-msgstr ""
+msgstr "No se puede agregar la misma línea mas de una vez"
 
 #. module: sat_companies_industry
 #: code:addons/sat_companies_industry/models/project_task.py:0
 #, python-format
-msgid "This device is 'STOPPED' : %s"
-msgstr "El aparato esta 'PARADO'"
+msgid "This gadget is stop : %s"
+msgstr "El aparato esta parado"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__ot_type_id
