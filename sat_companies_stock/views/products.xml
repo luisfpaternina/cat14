@@ -356,6 +356,11 @@
                         </group>
                     </group>
                 </page>
+                <page string="OTs">
+                    <group>
+                        <field name="ots_id"/>
+                    </group>
+                </page>
             </xpath>
 
         </field>
