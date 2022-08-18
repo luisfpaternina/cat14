@@ -223,9 +223,7 @@ class SaleOrder(models.Model):
 
 
     @api.onchange(
-        'partner_id',
-        'sale_type_id',
-        'product_id')
+        'partner_id')
     def onchange_partner(self):
     # plazos de pagos del contacto
         for record in self:

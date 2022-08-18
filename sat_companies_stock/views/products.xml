@@ -505,5 +505,5 @@
         name="Stop gadgets"
         parent="stock.menu_warehouse_report"
         action="action_view_stop_gadgets"/>
-     
+ 
 </odoo>   
