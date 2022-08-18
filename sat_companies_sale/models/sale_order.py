@@ -95,6 +95,8 @@ class SaleOrder(models.Model):
         'res.users',
         string="Comercial mantenimiento",
         tracking=True)
+    is_conditioned = fields.Boolean(
+        string="Is conditioned")
 
     @api.onchange('partner_id')
     def maintenance_partner(self):

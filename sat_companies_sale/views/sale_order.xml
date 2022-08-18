@@ -97,6 +97,7 @@
                         <field name="udn_id" options="{'no_create': True, 'no_create_edit':True}" attrs="{'invisible': [('sale_type_id','=',False)],'required':[('sale_type_id','!=',False)]}"/>
                         <field name="is_normative" invisible="1"/>
                         <field name="normative_date" attrs="{'invisible': [('is_normative', '=', False)]}"/>
+                        <field name="is_conditioned" attrs="{'invisible': [('is_normative', '=', False)]}"/>
                     </group>
                 </group>
             </xpath>

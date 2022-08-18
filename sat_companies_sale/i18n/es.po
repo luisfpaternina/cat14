@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-27 13:53+0000\n"
-"PO-Revision-Date: 2022-05-27 13:53+0000\n"
+"POT-Creation-Date: 2022-08-18 15:24+0000\n"
+"PO-Revision-Date: 2022-08-18 15:24+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,100 +16,18 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: sat_companies_sale
-#: model:mail.template,body_html:sat_companies_sale.template_send_sale_low_mto_company
-msgid ""
-"\n"
-"                <br/>\n"
-"                <p>Comunidad de Propietarios</p>\n"
-"                <p>Muy Sres. nuestros:</p>\n"
-"                <p>En primer lugar agradecer su confianza depositada en {object.company_id.name} para el mantenimiento de su ascensor. Del mismo modo queremos hacerles saber que desde que usted firma el contrato de mantenimiento, ${object.company_id.name} pone a disposición de su comunidad nuestros servicios jurídicos para el asesoramiento ante cualquier consecuencia que pueda ocasionar el cambio de empresa conservadora.</p>\n"
-"                <p>La comunidad de propietarios se compromete a facilitar en todo momento y de forma inmediata la información de cualquier tipo (comunicaciones, cartas o notificaciones) que sea destinataria por parte de la anterior empresa conservadora u organismo oficial, en relación al cambio de empresa conservadora, colaborando en todo momento para un  correcto desarrollo del derecho de defensa de la comunidad ejercido a través de sus representantes, en este caso procuradores y abogados designados. </p>\n"
-"                <p>Una vez conocida la sentencia judicial o acuerdo extrajudicial, como consecuencia de la resolución unilateral del contrato de mantenimiento suscrito con la anterior empresa conservadora, la comunidad de propietarios o persona física o jurídica se compromete a continuar el mantenimiento con {object.company_id.name} durante un periodo determinado que se acuerde en el anexo de ampliación que se firme en ese momento. A cambio, {object.company_id.name}, por medio del presente documento, se compromete a asumir a su costa la indemnización a que hubiere lugar, por sentencia judicial o acuerdo extrajudicial. Cantidad de la que ${object.company_id.name} no se hace responsable en el caso de resolución anticipada del contrato de mantenimiento suscrito con {object.company_id.name} por parte del cliente, teniendo que abonar este dichas cantidades</p>\n"
-"                <p>De conformidad con lo dispuesto firman,</p>\n"
-"                <br></br>\n"
-"                <br></br>\n"
-"                <br></br>\n"
-"                <br></br>\n"
-"                <strong>Aceptado el cliente</strong>                 <strong>${object.company_id.name}</strong>\n"
-"                CONSENTIMIENTO INFORMADO\n"
-"\n"
-"REGLAMENTO EUROPEO 679/2016 DE PROTECCIÓN DE DATOS PERSONALES\n"
-"LEY ORGÁNICA 3/2018 DE PROTECCIÓN DE DATOS PERSONALES Y GARANTÍA DE LOS DERECHOS DIGITALES\n"
-"\n"
-"Identificación del Responsable.\n"
-"\n"
-"Le informamos que los datos personales que Usted nos proporciona son incorporados a un tratamiento de datos personales denominado CLIENTES cuyo responsable es {object.company_id.name} con NIF {object.company_id.vat} y con domicilio en {object.company_id.street}, {object.company_id.city}, {object.company_id.state_id.name}. Puede contactar con elResponsable, bien por teléfono en el número {object.company_id.phone} o bien mediante correo electrónico en el buzón {object.company_id.email}.\n"
-"\n"
-"Finalidad.\n"
-"\n"
-"­La finalidad es la gestión de la relación mercantil, tanto desde un punto de vista administrativo y de cumplimiento de obligaciones fiscales, como desde un punto de vista comercial y de marketing (comunicaciones, información comercial y gestión sobre productos y servicios). Distribución y comunicación con carácter publicitario.\n"
-"\n"
-"Plazo de Conservación.\n"
-"\n"
-"­Una vez finalizada la relación contractual, o prestación de servicio el plazo de conservación de los datos será de 6 años para dar cumplimiento a obligaciones legales, fiscales y mercantiles. Desde un punto de vista comercial y de marketing los datos serán conservados indefinidamente mientras exista un interés mutuo. Respecto a los tratamientos de datos de publicidad y uso de imágenes los datos serán conservados indefinidamente mientras exista un interés mutuo. El usuario podrá ejercitar los derechos reflejados más abajo.\n"
-"\n"
-"Decisiones automatizadas y elaboración de perfiles.\n"
-"\n"
-"No se toman decisiones automatizadas ni se elaboran perfiles.\n"
-"\n"
-"Base Jurídica del Tratamiento.\n"
-"\n"
-"­La base jurídica del tratamiento es la ejecución de un contrato mercantil o la prestación de un servicio, así como el cumplimiento de obligaciones fiscales y mercantiles. Además de consentimiento EXPLÍCITO para fines determinados. Consentimiento explicito para los tratamientos de datos de publicidad y uso de imágenes los datos.\n"
-"\n"
-"Destinatarios de cesiones.\n"
-"\n"
-"­Se prevén cesiones a bancos, cajas de ahorro y cajas rurales, además de aquellas que están autorizadas por ley.\n"
-"\n"
-"Transferencias Internacionales.\n"
-"\n"
-"­No se realizan transferencias internacionales.\n"
-"\n"
-"Derechos.\n"
-"\n"
-"De acuerdo con la legislación vigente tiene los siguientes derechos:\n"
-"\n"
-"- Derecho a solicitar el acceso a sus datos personales.  - Derecho a solicitar su rectificación o supresión.  - Derecho a solicitar la limitación de su tratamiento - Derecho a oponerse al tratamiento.  - Derecho a la portabilidad de los datos.\n"
-"\n"
-"Para ejercer sus derechos, dirigiéndose por escrito con fotocopia de DNI o documento identificativo equivalente y solicitando el correspondiente formulario a {object.company_id.name} o a través de la dirección de correo {object.company_id.email} con el Asunto “Derechos Ley Protección de Datos”. Opcionalmente, puede redirigir al interesado a la Autoridad de Control competente para obtener información adicional acerca de sus derechos. Asimismo, en caso de considerar vulnerado su derecho a la protección de datos personales, podrá interponer una reclamación ante laAgencia Española de Protección de Datos.\n"
-"\n"
-" \n"
-"\n"
-"De conformidad con el Reglamento (UE) 2016/679, de 27 de abril de 2016, o Reglamento General de Protección de Datos (RGPD), en lo que no contradiga el mencionado Reglamento, por lo dispuesto en la Ley Orgánica 3/2018 de protección de datos de carácter personal y garantías de los derechos digitales y con la Ley 34/2002, de 11 de julio, de servicios de la sociedad de la información y de comercio electrónico (LSSI-CE) deseo recibir información relacionada con {object.company_id.name} por cualquier medio facilitado a la empresa, entendiéndose medios electrónicos y medios de comunicación postales.\n"
-"\n"
-"Cuadro de texto: ☐   SI quiero   ☐  NO quiero\n"
-"\n"
-"\n"
-"\n"
-"La inacción en la selección anterior se entenderá como NO.\n"
-"\n"
-"Consentimiento. En {object.company_id.city}\n"
-"COMUNIDAD DE PROPIETARIOS\n"
-"{object.partner_id.name}\n"
-"\n"
-" \n"
-"\n"
-"{object.partner_id.name} con NIF/CIF {object.partner_id.vat} doy mi consentimiento expreso de acuerdo con lo expuesto en el presente documento.\n"
-"\n"
-"Firmado. \n"
-"                 \n"
-"            "
-msgstr ""
-
-#. module: sat_companies_sale
 #: model:mail.template,body_html:sat_companies_sale.email_template_contract_suspension
 msgid ""
 "\n"
-"                <p>COMUNIDAD DE PROPIETARIOS</p>\n"
+"                <p>Hi</p>\n"
 "                <br/>\n"
-"                <p>En Elche a de de 2022</p>\n"
-"                <p>Por una parte,</p>\n"
+"                <p>Here is the details</p>\n"
 "                <br/>\n"
 "                 \n"
 "           "
 msgstr ""
 
 #. module: sat_companies_sale
-#: model:mail.template,body_html:sat_companies_sale.template_email_welcome
 #: model:mail.template,body_html:sat_companies_sale.template_email_welcome_sale
 msgid ""
 "\n"
@@ -742,6 +660,11 @@ msgid "Code"
 msgstr "Código"
 
 #. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__user_partner_contact_id
+msgid "Comercial mantenimiento"
+msgstr ""
+
+#. module: sat_companies_sale
 #: model:ir.model.fields.selection,name:sat_companies_sale.selection__crm_lead__client_type__companies
 msgid "Companies/builders"
 msgstr "Compañias/constructoras"
@@ -1184,6 +1107,11 @@ msgid "Is a maintenance"
 msgstr "Es un mantenimiento"
 
 #. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__is_conditioned
+msgid "Is conditioned"
+msgstr "Condicionada"
+
+#. module: sat_companies_sale
 #: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead__is_external
 msgid "Is external"
 msgstr "Es externo"
@@ -1208,7 +1136,7 @@ msgstr ""
 #. module: sat_companies_sale
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__is_maintenance
 msgid "Is maintenance"
-msgstr "Mantenimiento"
+msgstr "Es mantenedora"
 
 #. module: sat_companies_sale
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__is_mounting
@@ -1420,11 +1348,6 @@ msgid "Neighborhood community"
 msgstr "Comunidad de vecinos"
 
 #. module: sat_companies_sale
-#: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__x_studio_html_field_tdqSo
-msgid "New Html"
-msgstr ""
-
-#. module: sat_companies_sale
 #: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead_tracing__next_date
 msgid "Next Date"
 msgstr "Próx. Contacto"
@@ -1472,7 +1395,6 @@ msgid "Notificación de Nuevas Oportunidades"
 msgstr ""
 
 #. module: sat_companies_sale
-#: model:mail.template,subject:sat_companies_sale.template_email_welcome
 #: model:mail.template,subject:sat_companies_sale.template_email_welcome_sale
 msgid "Notificación de bienvenida"
 msgstr ""
@@ -1862,11 +1784,6 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_order_maintenance_offer
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_subscription_maintenance_offer
 msgid "Servicios de averias"
-msgstr ""
-
-#. module: sat_companies_sale
-#: model:mail.template,subject:sat_companies_sale.template_send_sale_low_mto_company
-msgid "Servicios jurídicos"
 msgstr ""
 
 #. module: sat_companies_sale
