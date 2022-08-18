@@ -584,7 +584,24 @@ class ProductTemplate(models.Model):
                 record.ots_id = False
     
     def compute_is_conflictive_gadgets(self):
-        if len(self.ots_id) >= 2:
+    # VALIDAR SI UN APARATO ES CONFLICTIVO
+        values = []
+        repeat = []
+        unique = []
+        resultSum = 0
+        ots = self.env['project.task'].search([('product_id','=',self.id),('is_warning','=', True)])
+        for o in ots:
+            month = o.create_date.month
+            values.append(month)
+        for i in values:
+            if i not in unique:
+                unique.append(i)
+            else:
+                resultSum += i
+                if i not in repeat:
+                    repeat.append(i)
+        print("Los valores que se repiten son:", repeat)
+        if len(self.ots_id) >= 2 and resultSum > 0:
             self.write({'is_conflictivea_pparatus': True})
         else:
             self.is_conflictivea_pparatus = False
