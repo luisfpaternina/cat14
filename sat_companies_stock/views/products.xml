@@ -356,7 +356,7 @@
                         </group>
                     </group>
                 </page>
-                <page string="OTs">
+                <page string="OTs" invisible="1">
                     <group>
                         <field name="ots_id"/>
                     </group>
@@ -473,7 +473,7 @@
     <menuitem 
         id="id_gadgets_list"
         name="Only gadgets"
-        parent="stock.menu_stock_inventory_control"
+        parent="stock.menu_warehouse_report"
         action="action_view_only_gadgets"/>
     
     <!--VISTA ARBOL NUEVA SOLO APARATOS PARADOS-->
@@ -503,7 +503,7 @@
     <menuitem 
         id="id_stop_gadgets_list"
         name="Stop gadgets"
-        parent="stock.menu_stock_inventory_control"
+        parent="stock.menu_warehouse_report"
         action="action_view_stop_gadgets"/>
      
 </odoo>   
