@@ -70,7 +70,9 @@ class LicensePlates(models.Model):
         string="Notes")
     description = fields.Text(
         string="Description")
-
+    state = fields.Selection([
+        ('draft','Draft'),
+        ('finished','Finished')],string="State")
 
     def action_show_wizard(self):
        return {'type': 'ir.actions.act_window',
