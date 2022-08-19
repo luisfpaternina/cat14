@@ -72,7 +72,8 @@ class LicensePlates(models.Model):
         string="Description")
     state = fields.Selection([
         ('draft','Draft'),
-        ('finished','Finished')],string="State", default="draft")
+        ('finished','Finished'),
+        ('cancel','Cancel')],string="State", default="draft")
 
 
     def mark_finished(self):
