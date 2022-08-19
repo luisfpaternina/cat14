@@ -182,11 +182,18 @@
         <field name="name">inherit.form.project.task</field>
         <field name="model">project.task</field>
         <field name="inherit_id" ref="industry_fsm.project_task_view_list_fsm"/>
-        <field name="arch" type="xml"> 
+        <field name="arch" type="xml">
+
             <xpath expr="//field[@name='user_id']" position="after">
                 <field name="product_id"/>
                 <field name="rae"/>
             </xpath>
+
+            <xpath expr="//field[@name='user_id']" position="before">
+                <field name="create_date"/>
+                <field name="create_uid"/>
+            </xpath>
+
         </field>
     </record>
 
@@ -201,17 +208,6 @@
             </xpath>
 
         </field>
-    </record>
-
-    <!-- My Tasks: kanban action -->
-    <record id="project_task_action_fsm" model="ir.actions.act_window">
-        <field name="name">My Tasks LFPV</field>
-        <field name="view_mode">map,kanban,gantt,calendar,tree,form,activity</field>
-    </record>
-
-    <record id="project_task_action_fsm_view_tree" model="ir.actions.act_window.view">
-        <field name="sequence" eval="2"/>
-        <field name="view_mode">tree</field>
     </record>
 
 </odoo>     
