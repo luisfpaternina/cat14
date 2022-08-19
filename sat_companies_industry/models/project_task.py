@@ -209,11 +209,12 @@ class ProjectTask(models.Model):
 
     
     def compute_closed_date(self):
-        if self.stage_id.sequence == 5 and self.is_calculed_time == False:
-            self.closed_date = datetime.datetime.now()
-            self.write({'is_calculed_time': True})
-        else: 
-            self.closed_date = False
+        for record in self:
+            if record.stage_id.sequence == 5 and record.is_calculed_time == False:
+                record.closed_date = datetime.datetime.now()
+                record.write({'is_calculed_time': True})
+            else: 
+                record.closed_date = False
     
     @api.depends('closed_date','stage_id','name')
     def compute_is_calculate(self):

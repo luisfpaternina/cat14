@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-03 18:24+0000\n"
-"PO-Revision-Date: 2022-08-03 18:24+0000\n"
+"POT-Creation-Date: 2022-08-19 13:39+0000\n"
+"PO-Revision-Date: 2022-08-19 13:39+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -105,6 +105,12 @@ msgstr "Activo"
 #: model:ir.model.fields,field_description:sat_companies_project.field_wizard_sale_order_type__add_task_line
 msgid "Add Task line ?"
 msgstr "Adicionar líneas de tarea ?"
+
+#. module: sat_companies_project
+#: code:addons/sat_companies_project/models/project_task.py:0
+#, python-format
+msgid "At least one QR code must be scanned"
+msgstr "Al menos un código QR debe ser escaneado para marcar la OT como hecho"
 
 #. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn__message_attachment_count
@@ -382,6 +388,11 @@ msgid "Is Follower"
 msgstr "Es un seguidor"
 
 #. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__is_qr_required
+msgid "Is QR required?"
+msgstr "Habilitar QR obligatorio"
+
+#. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_account_bank_statement_line__is_potential_client
 #: model:ir.model.fields,field_description:sat_companies_project.field_account_move__is_potential_client
 #: model:ir.model.fields,field_description:sat_companies_project.field_account_payment__is_potential_client
@@ -482,7 +493,7 @@ msgstr "Ubicaciones"
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task__check_machine
 #: model_terms:ir.ui.view,arch_db:sat_companies_project.project_task_inherit_form_view
 msgid "Machine"
-msgstr ""
+msgstr "Máquina"
 
 #. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task__machine_confirm
@@ -616,7 +627,7 @@ msgstr "Líneas de orden"
 #. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task__origin
 msgid "Origin"
-msgstr ""
+msgstr "Origen"
 
 #. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__is_other
@@ -631,13 +642,13 @@ msgstr "Plazos de pago"
 #. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task__picking_ids
 msgid "Picking"
-msgstr ""
+msgstr "Transferencia"
 
 #. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task__check_pit
 #: model_terms:ir.ui.view,arch_db:sat_companies_project.project_task_inherit_form_view
 msgid "Pit"
-msgstr ""
+msgstr "Foso"
 
 #. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task__pit_confirm
@@ -664,6 +675,11 @@ msgstr "Nombre de proyecto"
 #: model_terms:ir.ui.view,arch_db:sat_companies_project.wizard_sale_order_type_form
 msgid "Project related"
 msgstr "Seleccionar proyecto"
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order__project_task_id
+msgid "Project task name"
+msgstr "Nombre de la tarea/OT"
 
 #. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task__qr_cabine_image
@@ -716,7 +732,7 @@ msgstr "Error de entrega de SMS"
 #. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_project__sale_order_id
 msgid "Sale Order"
-msgstr ""
+msgstr "Pedido de venta"
 
 #. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_project__sale_type_origin_id
@@ -807,7 +823,7 @@ msgstr "Estado tarea"
 #. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task__task_code
 msgid "Task code"
-msgstr ""
+msgstr "Código tarea"
 
 #. module: sat_companies_project
 #: model:ir.model.fields,help:sat_companies_project.field_sale_order_line__task_id
@@ -928,6 +944,11 @@ msgstr "Mensajes no leídos"
 #: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__message_unread_counter
 msgid "Unread Messages Counter"
 msgstr "Conteo mensajes no leídos"
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn__user_ids
+msgid "Users"
+msgstr ""
 
 #. module: sat_companies_project
 #: code:addons/sat_companies_project/models/account_move.py:0

@@ -18,6 +18,7 @@
         'industry_fsm',
         'sat_companies_stock',
         'sat_companies_industry',
+        'sat_companies',
         'base_automation',
         'sale_project',
         'sale_timesheet',

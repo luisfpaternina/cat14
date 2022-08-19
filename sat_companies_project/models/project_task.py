@@ -6,7 +6,7 @@ import base64
 from io import BytesIO
 import qrcode
 
-class ProjectTaskInherit(models.Model):
+class ProjectTask(models.Model):
     _inherit = 'project.task'
     
     ##QR SCANNER FIELDS##
@@ -121,6 +121,8 @@ class ProjectTaskInherit(models.Model):
     is_warning = fields.Boolean(
         string="Is warning",
         related="ot_type_id.is_warning")
+    is_qr_required = fields.Boolean(
+        string="Is QR required?")
 
 
     @api.onchange('partner_id','ot_type_id')
@@ -191,7 +193,7 @@ class ProjectTaskInherit(models.Model):
                 record.check_qr_active = False
 
     def write(self, vals):
-        res = super(ProjectTaskInherit, self).write(vals)
+        res = super(ProjectTask, self).write(vals)
         for record in self:
             if 'check_pit' in vals or 'check_cabine' in vals or 'check_machine' in vals :
                 if record.check_pit == True and record.check_cabine == True and record.check_machine == True:
@@ -207,3 +209,24 @@ class ProjectTaskInherit(models.Model):
             'target'   : 'self',
             'url'      : self.qr_scanner
             }
+
+    @api.constrains(
+        'check_machine',
+        'check_cabine',
+        'check_pit',
+        'name',
+        'partner_id'
+        'stage_id')
+    def validate_check_scann_qrs(self):
+    # VALIDAR QUE AL MENOS UN QR SEA ESCANEADO ANTES DE MARCAR COMO HECHO
+        qr_required = self.env['ir.config_parameter'].sudo().get_param('sat_companies.is_qr_required') or False
+        for record in self:
+            record.is_qr_required = qr_required
+            if record.is_qr_required and record.stage_id.sequence == 5:
+                if record.check_machine == False and record.check_pit == False and record.check_cabine == False:
+                    raise ValidationError(_("At least one QR code must be scanned"))
+    
+    def action_fsm_validate(self):
+        rec = super(ProjectTask, self).action_fsm_validate()
+        self.validate_check_scann_qrs()   
+        return rec
