@@ -31,6 +31,7 @@
                                     name="mark_finished"
                                     type="object"
                                     class="oe_highlight"
+                                    attrs="{'invisible': [('state', '=', 'finished')]}"
                                     />
                             <button 
                                     string="Cancel"

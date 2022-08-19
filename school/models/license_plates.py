@@ -79,6 +79,9 @@ class LicensePlates(models.Model):
     def mark_finished(self):
         self.write({'state': 'finished'})
 
+    def mark_cancel(self):
+        self.write({'state': 'cancel'})
+
     def action_show_wizard(self):
        return {'type': 'ir.actions.act_window',
                'name': _('Cancel licence plates'),
