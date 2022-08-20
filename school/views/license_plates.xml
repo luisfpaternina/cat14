@@ -40,9 +40,9 @@
                                     context="{'default_license_plates_id': active_id}"
                                     />
                             <field name="state" widget="statusbar"/>
-                            <widget name="web_ribbon" title="Finished" attrs="{'invisible': [('state', '=', 'finished')]}"/>
                         </header>
                     <sheet>
+                        <widget name="web_ribbon" title="Finished" attrs="{'invisible': [('state', '=', 'finished')]}"/>
                         <div class="oe_title">
                             <h1>
                                 <table>
