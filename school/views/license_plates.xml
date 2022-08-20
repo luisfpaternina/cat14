@@ -42,6 +42,7 @@
                             <field name="state" widget="statusbar"/>
                         </header>
                     <sheet>
+                        <widget name="web_ribbon" title="Finished" attrs="{'invisible': [('state', '!=', 'finished')]}"/>
                         <div class="oe_title">
                             <h1>
                                 <table>
