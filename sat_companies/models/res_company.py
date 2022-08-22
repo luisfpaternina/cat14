@@ -14,7 +14,7 @@ class ResCompany(models.Model):
     is_forecast_made = fields.Boolean(
         string="Is forecast made")
     user_operator_id = fields.Many2one(
-        'res.users',
+        'hr.employee',
         string="Users")
     is_qr_required = fields.Boolean(
         string="Is QR required?")

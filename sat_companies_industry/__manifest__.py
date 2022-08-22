@@ -22,6 +22,7 @@
         'sat_companies_stock',
         'timesheet_grid',
         'hr_timesheet',
+        'sat_companies',
 
     ],
 
