@@ -1,4 +1,5 @@
 from email import message
+from email.policy import default
 from xmlrpc.client import DateTime
 from markupsafe import string
 from odoo import models, fields, api, _
@@ -251,13 +252,11 @@ class ProjectTask(models.Model):
                 raise ValidationError(_(
                     "El aparato esta parado : %s" % record.product_id.name))
 
-    @api.onchange('product_id')
-    def domain_udn(self):
-        for record in self:
-            if record.product_id:
-                record.supervisor_id = record.product_id.employee_notice_id
-            else:
-                record.supervisor_id = False
+    @api.onchange('partner_id', 'name')
+    def get_default_supervisor(self):
+        supervisor = self.env['res.config.settings'].search([])
+        if supervisor:
+            self.supervisor_id = supervisor.user_operator_id.id
 
     @api.onchange('ot_type_id')
     def domain_udn(self):
