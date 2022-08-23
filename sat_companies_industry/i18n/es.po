@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-23 10:28+0000\n"
-"PO-Revision-Date: 2022-08-23 10:28+0000\n"
+"POT-Creation-Date: 2022-08-23 13:21+0000\n"
+"PO-Revision-Date: 2022-08-23 13:21+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -534,6 +534,11 @@ msgstr "Abril"
 #: model_terms:ir.ui.view,arch_db:sat_companies_industry.inherit_timesheet_grid_project_task_view_form
 msgid "Are you sure you want to mark notice technical?"
 msgstr "Estas seguro que desea marcar el aviso como técnico?"
+
+#. module: sat_companies_industry
+#: model_terms:ir.ui.view,arch_db:sat_companies_industry.inherit_timesheet_grid_project_task_view_form
+msgid "Are you sure you want to not mark notice technical?"
+msgstr "Estas seguro que desea desmarcar el aviso como técnico?"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__assignment_date
@@ -1186,6 +1191,16 @@ msgid "Manager maintenance type deffect"
 msgstr "Administrador tipos de defecto"
 
 #. module: sat_companies_industry
+#: model:res.groups,name:sat_companies_industry.notice_technical_manager_group
+msgid "Manager mark notice technical"
+msgstr "Administrador marcar aviso como técnico"
+
+#. module: sat_companies_industry
+#: model:res.groups,comment:sat_companies_industry.notice_technical_manager_group
+msgid "Manager mark notice technical Permission Group"
+msgstr "Grupo de permisos marcar aviso como técnico"
+
+#. module: sat_companies_industry
 #: model:res.groups,comment:sat_companies_industry.maintenance_minute_point_manager_group
 msgid "Manager minute point Permission Group"
 msgstr "Administrador grupo de permisos puntos de acta"
@@ -1829,3 +1844,8 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_maintenance_type_deffect_tree
 msgid "type_deffect_tree"
 msgstr ""
+
+#. module: sat_companies_industry
+#: model_terms:ir.ui.view,arch_db:sat_companies_industry.inherit_timesheet_grid_project_task_view_form
+msgid "uncheck notice like technical"
+msgstr "Desmarcar aviso como técnico"
