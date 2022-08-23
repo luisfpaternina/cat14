@@ -22,13 +22,16 @@
             <field name="context"></field>
         </record>
 
-        <delete model="ir.ui.menu" id="sale.menu_sale_report"/>
+
 
         <menuitem 
             id="sale_order_venta_Actual"
             name="Venta actual"
             parent="sale.menu_sale_report"
             action="action_view_sale_order_venta_actual"/>
+
+
+        <delete model="ir.ui.menu" id="sale.menu_sale_report"/>
 
     </data>
 </odoo>
