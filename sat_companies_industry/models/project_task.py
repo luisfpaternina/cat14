@@ -209,6 +209,10 @@ class ProjectTask(models.Model):
         string="Is caluled time")
 
     
+    def mark_notice_technical(self):
+        for record in self:
+            record.write({'is_technical_notice_ot': True})
+
     def compute_closed_date(self):
         for record in self:
             if record.stage_id.sequence == 5 and record.is_calculed_time == False:
