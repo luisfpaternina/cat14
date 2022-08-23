@@ -124,6 +124,7 @@ class ProjectTask(models.Model):
     is_qr_required = fields.Boolean(
         string="Is QR required?")
 
+    allowed_user_ids = fields.Many2many('res.users')
 
     @api.onchange('partner_id','ot_type_id')
     def _payment_terms(self):

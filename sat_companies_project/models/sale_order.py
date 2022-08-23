@@ -38,6 +38,7 @@ class SaleOrder(models.Model):
         'project.project',
         string="Project task name",
         compute="_compute_check_project_task_id")
+    allowed_user_ids = fields.Many2many('res.users')
     
 
     @api.depends('name','partner_id')
