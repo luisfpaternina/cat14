@@ -212,6 +212,10 @@ class ProjectTask(models.Model):
     def mark_notice_technical(self):
         for record in self:
             record.write({'is_technical_notice_ot': True})
+    
+    def not_mark_notice_technical(self):
+        for record in self:
+            record.write({'is_technical_notice_ot': False})
 
     def compute_closed_date(self):
         for record in self:

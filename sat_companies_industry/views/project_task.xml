@@ -214,7 +214,15 @@
                 type="object"
                 class="btn btn-warning"
                 confirm="Are you sure you want to mark notice technical?"
-                attrs="{'invisible':['|',('is_technical_notice_ot','=',True),('is_warning','=',False)]}"/>
+                attrs="{'invisible':['|',('is_technical_notice_ot','=',True),('is_warning','=',False)]}"
+                groups="sat_companies_industry.notice_technical_manager_group"/>
+                <button 
+                name="not_mark_notice_technical"
+                string="uncheck notice like technical"
+                type="object"
+                confirm="Are you sure you want to not mark notice technical?"
+                attrs="{'invisible':[('is_technical_notice_ot','!=',True)]}"
+                groups="sat_companies_industry.notice_technical_manager_group"/>
             </xpath>
 
         </field>

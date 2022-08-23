@@ -32,5 +32,10 @@
 	        <field name="comment">Manager breakdowns Permission Group</field>
 	    </record>
 
+		<record id="notice_technical_manager_group" model="res.groups">
+	        <field name="name">Manager mark notice technical</field>
+	        <field name="comment">Manager mark notice technical Permission Group</field>
+	    </record>
+
 	</data>
 </odoo>
