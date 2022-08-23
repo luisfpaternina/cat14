@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-17 11:45+0000\n"
-"PO-Revision-Date: 2022-08-17 11:45+0000\n"
+"POT-Creation-Date: 2022-08-23 13:21+0000\n"
+"PO-Revision-Date: 2022-08-23 13:21+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -531,6 +531,16 @@ msgid "April"
 msgstr "Abril"
 
 #. module: sat_companies_industry
+#: model_terms:ir.ui.view,arch_db:sat_companies_industry.inherit_timesheet_grid_project_task_view_form
+msgid "Are you sure you want to mark notice technical?"
+msgstr "Estas seguro que desea marcar el aviso como técnico?"
+
+#. module: sat_companies_industry
+#: model_terms:ir.ui.view,arch_db:sat_companies_industry.inherit_timesheet_grid_project_task_view_form
+msgid "Are you sure you want to not mark notice technical?"
+msgstr "Estas seguro que desea desmarcar el aviso como técnico?"
+
+#. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__assignment_date
 msgid "Assignment date"
 msgstr "Fecha asignación"
@@ -735,6 +745,12 @@ msgstr "Nombre mostrado"
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__done_work
 msgid "Done work"
 msgstr "Trabajo realizado"
+
+#. module: sat_companies_industry
+#: code:addons/sat_companies_industry/models/project_task.py:0
+#, python-format
+msgid "El aparato esta parado : %s"
+msgstr ""
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__email_contact
@@ -1125,6 +1141,11 @@ msgid "Location"
 msgstr "Ubicación"
 
 #. module: sat_companies_industry
+#: model:ir.filters,name:sat_companies_industry.default_filter_user_id_task
+msgid "MIS TAREAS"
+msgstr ""
+
+#. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__message_main_attachment_id
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__message_main_attachment_id
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_breakdowns__message_main_attachment_id
@@ -1170,6 +1191,16 @@ msgid "Manager maintenance type deffect"
 msgstr "Administrador tipos de defecto"
 
 #. module: sat_companies_industry
+#: model:res.groups,name:sat_companies_industry.notice_technical_manager_group
+msgid "Manager mark notice technical"
+msgstr "Administrador marcar aviso como técnico"
+
+#. module: sat_companies_industry
+#: model:res.groups,comment:sat_companies_industry.notice_technical_manager_group
+msgid "Manager mark notice technical Permission Group"
+msgstr "Grupo de permisos marcar aviso como técnico"
+
+#. module: sat_companies_industry
 #: model:res.groups,comment:sat_companies_industry.maintenance_minute_point_manager_group
 msgid "Manager minute point Permission Group"
 msgstr "Administrador grupo de permisos puntos de acta"
@@ -1203,6 +1234,11 @@ msgstr "Grupo de permisos administrador de aviso"
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__check_3
 msgid "March"
 msgstr "Marzo"
+
+#. module: sat_companies_industry
+#: model_terms:ir.ui.view,arch_db:sat_companies_industry.inherit_timesheet_grid_project_task_view_form
+msgid "Mark notice like technical"
+msgstr "Marcar aviso como técnico"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__maximum_rescue_time
@@ -1466,6 +1502,11 @@ msgid "PDA"
 msgstr ""
 
 #. module: sat_companies_industry
+#: model:ir.filters,name:sat_companies_industry.default_filter_done_task
+msgid "POR HACER"
+msgstr ""
+
+#. module: sat_companies_industry
 #: model:ir.model.fields.selection,name:sat_companies_industry.selection__project_task__situation__pending
 msgid "Pending"
 msgstr "Pendiente"
@@ -1628,12 +1669,6 @@ msgstr "Télefono"
 #, python-format
 msgid "The column should be one per line"
 msgstr "No se puede agregar la misma línea mas de una vez"
-
-#. module: sat_companies_industry
-#: code:addons/sat_companies_industry/models/project_task.py:0
-#, python-format
-msgid "This gadget is stop : %s"
-msgstr "El aparato esta parado"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__ot_type_id
@@ -1809,3 +1844,8 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_maintenance_type_deffect_tree
 msgid "type_deffect_tree"
 msgstr ""
+
+#. module: sat_companies_industry
+#: model_terms:ir.ui.view,arch_db:sat_companies_industry.inherit_timesheet_grid_project_task_view_form
+msgid "uncheck notice like technical"
+msgstr "Desmarcar aviso como técnico"
