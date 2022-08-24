@@ -123,9 +123,7 @@ class ProjectTask(models.Model):
         related="ot_type_id.is_warning")
     is_qr_required = fields.Boolean(
         string="Is QR required?")
-
     allowed_user_ids = fields.Many2many('res.users')
-
     users_ids = fields.Many2many(
         'res.users',
         'res_users_ids',
