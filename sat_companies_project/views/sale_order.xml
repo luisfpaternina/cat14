@@ -27,7 +27,7 @@
             </xpath>
 
             <xpath expr="//field[(@name='partner_id')]" position="after">
-                <field name="allowed_user_ids"/>
+                <field name="users_ids" widget="many2many_tags"/>
                 <field name="is_potential_client" invisible="1"/>
                 <field name="is_mounting" invisible="1"/>
                 <field name="is_maintenance" invisible="1"/>

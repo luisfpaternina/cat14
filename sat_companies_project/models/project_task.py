@@ -126,6 +126,13 @@ class ProjectTask(models.Model):
 
     allowed_user_ids = fields.Many2many('res.users')
 
+    users_ids = fields.Many2many(
+        'res.users',
+        'res_users_ids',
+        'user_id',
+        'users_ids',
+        string='Assigned to')
+
     @api.onchange('partner_id','ot_type_id')
     def _payment_terms(self):
         for record in self:

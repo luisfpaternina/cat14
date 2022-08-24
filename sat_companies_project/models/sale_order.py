@@ -38,7 +38,9 @@ class SaleOrder(models.Model):
         'project.project',
         string="Project task name",
         compute="_compute_check_project_task_id")
-    allowed_user_ids = fields.Many2many('res.users')
+    users_ids = fields.Many2many(
+                'res.users',
+                string='Assigned to')
     
 
     @api.depends('name','partner_id')
@@ -114,13 +116,14 @@ class SaleOrder(models.Model):
                     
                     
                     if task_ids:
-                        for task in task_ids:
+                        for task in task_ids: 
                             task_value = {
                                     'partner_id': record.partner_id.id,
                                     'ot_type_id': record.sale_type_id.id,
                                     'gadgest_contract_type_id': record.gadgets_contract_type_id.id,
                                     'project_id': new_project.id,
                                     'user_id': record.task_user_id.id,
+                                    'users_ids': record.users_ids.ids,
                                     'product_id': record.product_id.id,
                                     'recurring_task': record.product_id.is_recurring_task,
                                     'repeat_interval': record.product_id.repeat_interval,
@@ -156,6 +159,7 @@ class SaleOrder(models.Model):
                                     'comercial_description': record.comercial_description,
                                     'sale_order_id': record.id,
                                     'user_id': record.task_user_id.id,
+                                    'users_ids': record.users_ids.ids,
                                     'product_id': record.product_id.id,
                                     'recurring_task': record.product_id.is_recurring_task,
                                     'repeat_interval': record.product_id.repeat_interval,
@@ -190,6 +194,7 @@ class SaleOrder(models.Model):
                                     'comercial_description': record.comercial_description,
                                     'sale_order_id': record.id,
                                     'user_id': record.task_user_id.id,
+                                    'users_ids': record.users_ids.ids,
                                     'product_id': record.product_id.id,
                                     'recurring_task': record.product_id.is_recurring_task,
                                     'repeat_interval': record.product_id.repeat_interval,
