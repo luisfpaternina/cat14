@@ -7,6 +7,9 @@ from odoo.exceptions import ValidationError
 from datetime import datetime,date,timedelta
 from datetime import date
 import datetime
+import os
+
+
 
 class ProjectTask(models.Model):
     _inherit = 'project.task'
@@ -296,3 +299,28 @@ class ProjectTask(models.Model):
                 if line.checklist_id.id in exis_record_lines:
                     raise ValidationError(_('The column should be one per line'))
                 exis_record_lines.append(line.checklist_id.id)
+    
+    def show_notification(self):
+        return {
+            'type': 'ir.actions.client',
+            'tag': 'display_notification',
+            'params': {
+                'title': _('Notification OT!'),
+                'message': 'Notificación de OT aviso',
+                'sticky': False,
+                'type': 'warning',
+                }
+            }
+    
+    def notify_users(self):
+        notificacion = []
+        if self.partner_id:
+            duration = 1  # seconds
+            freq = 440  # Hz
+            os.system('play -nq -t alsa synth {} sine {}'.format(duration, freq))
+            self.env['mail.message'].create({
+                'message_type': "comment",
+                'body': 'prueba pater',
+                'subject': 'prueba 2022',
+                'model': 'mail.channel',
+                })
