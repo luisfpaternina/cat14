@@ -194,6 +194,11 @@
                 <field name="create_uid"/>
             </xpath>
 
+            <xpath expr="//field[@name='user_id']" position="attributes">
+                <attribute name="attrs">{}</attribute>
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
         </field>
     </record>
 

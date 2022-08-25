@@ -79,7 +79,6 @@
                         <field name="check_pit" readonly="1"/>
                         <field name="check_cabine" readonly="1"/>
                         <field name="check_machine" readonly="1"/>
-                        <!--<field name="url_home" invisible="True"/>-->
                     </group>
                     <group colspan="3">
                         <group colspan="1" col="2">
@@ -141,13 +140,6 @@
                         </group>
                     </group>
                 </page>
-                <!--
-                <page name="order_lines_quotation" string="Lines quotations">
-                    <group>
-                        <field name="order_lines"/>
-                    </group>
-                </page>
-                -->
             </xpath>
         </field>
     </record>
@@ -214,6 +206,19 @@
                         </field>
                     </group>
                 </page>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="inherit_tree_view_project_task_sat_companies_project" model="ir.ui.view">
+        <field name="name">inherit.form.project.task</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="industry_fsm.project_task_view_list_fsm"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='user_id']" position="after">
+                <field name="users_ids"/>
             </xpath>
 
         </field>
