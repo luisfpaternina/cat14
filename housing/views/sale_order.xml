@@ -22,7 +22,7 @@
             <field name="context"></field>
         </record>
 
-        
+        <delete model="ir.ui.menu" id="purchase.purchase_report"/>
 
     </data>
 </odoo>
