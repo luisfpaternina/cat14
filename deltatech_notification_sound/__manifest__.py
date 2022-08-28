@@ -12,7 +12,6 @@
     "depends": ["base", "web"],
     "license": "LGPL-3",
     "data": ["views/assets.xml"],
-    "images": ["static/description/main_screenshot.png"],
     "development_status": "Beta",
     "maintainers": ["dhongu"],
 }

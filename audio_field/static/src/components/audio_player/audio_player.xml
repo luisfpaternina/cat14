@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="audio_field.AudioPlayer" owl="1">
+        <audio t-att="audio_attributes">
+            <source t-if="props.source" t-att-src="props.source" type="audio/mpeg"/>
+            Your browser does not support HTML5.
+        </audio>
+    </t>
+
+</templates>

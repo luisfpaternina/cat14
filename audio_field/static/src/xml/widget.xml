@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+
+    <t t-name="audio_field">
+        <AudioPlayer
+            source="widget.value"
+            class="pbx-audio"
+            preload="'metadata'"
+            width="options.width || 0"
+            height="options.height || 0"
+            style="options.add_styles || ''"/>
+    </t>
+
+</templates>
