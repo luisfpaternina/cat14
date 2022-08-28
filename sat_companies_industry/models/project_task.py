@@ -8,7 +8,14 @@ from datetime import datetime,date,timedelta
 from datetime import date
 import datetime
 import os
-
+from playsound import playsound
+import io
+import time
+import requests
+import vlc
+from pydub import AudioSegment
+from pydub.playback import play
+import webbrowser
 
 
 class ProjectTask(models.Model):
@@ -210,6 +217,15 @@ class ProjectTask(models.Model):
         compute="compute_ot_time")
     is_calculed_time = fields.Boolean(
         string="Is caluled time")
+    alarm_sound = fields.Binary(
+        string="Alarm sound")
+    attachment_id = fields.Many2one(
+        'ir.attachment',
+        string="Audio")
+    store_fname = fields.Char(
+        string="File Name")
+    audio_url = fields.Char(
+        string="Audio")
 
     
     def mark_notice_technical(self):
@@ -313,14 +329,17 @@ class ProjectTask(models.Model):
             }
     
     def notify_users(self):
-        notificacion = []
-        if self.partner_id:
-            duration = 1  # seconds
-            freq = 440  # Hz
-            os.system('play -nq -t alsa synth {} sine {}'.format(duration, freq))
-            self.env['mail.message'].create({
-                'message_type': "comment",
-                'body': 'prueba pater',
-                'subject': 'prueba 2022',
-                'model': 'mail.channel',
-                })
+        # playsound(self.store_fname)
+        stream_url = 'https://rr2---sn-t0a7ln7d.googlevideo.com/videoplayback?expire=1661481281&ei=4dwHY6PMOqyS2LYP48SygAo&ip=51.222.100.145&id=o-AFIRZJrmG5-khuzmpPSBp7SQhcjE5-_CNXcKJvxUGiVD&itag=18&source=youtube&requiressl=yes&mh=I5&mm=31%2C26&mn=sn-t0a7ln7d%2Csn-tt1e7n7e&ms=au%2Conr&mv=m&mvi=2&pl=25&initcwndbps=298750&vprv=1&mime=video%2Fmp4&cnr=14&ratebypass=yes&dur=371.658&lmt=1635284433098012&mt=1661459588&fvip=6&fexp=24001373%2C24007246&c=ANDROID&rbqsm=fr&txp=2218224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIhAMf9SDwjyiTddj5ocZQTIosyatE1LqkSsJnI6hYuEGTHAiB_943LGNon8qz7a8euPKy7lgzdmvY4NQnA4VD8vR1eXQ%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRgIhAJzapbWADh6R0SRdfBDAT8K7-k8S8IbFyvuZQSP30NnKAiEAtIy8QoLb9ZEYeA4XQ-yu3RAIMvdqwd8N-HE18eoAGW0%3D&&title=Me+la+Juego+Toda+-+Silvestre+Dangond+y+Rolando+Ochoa+%28Parranda%29'
+        r = requests.get(stream_url, stream=True)
+        with open('stream.mp3', 'wb') as f:
+            try:
+                for block in r.iter_content(1024):
+                    f.write(block)
+            except KeyboardInterrupt:
+                pass
+    
+    def show_message_warning(self):
+        Warning('prueba')
+        self.env.user.notify_info('My information message')
+        self.env.user.notify_warning('My marning message')

@@ -3,7 +3,7 @@ odoo.define("deltatech_notification_sound.Notification", function (require) {
 
     const AbstractWebClient = require("web.AbstractWebClient");
 
-    AbstractWebClient.include({
+    AbstractWebClient.extend({
         _onDisplayWarning: function (e) {
             var data = e.data;
             this.play_sound(data.type);
