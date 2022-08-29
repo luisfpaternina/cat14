@@ -229,6 +229,7 @@
                         <group>
                             <field name="recurring_invoice"/>
                             <field name="subscription_template_id" attrs="{'invisible': [('recurring_invoice', '!=', True)]}"/>
+                            <field name="subscription_ids" widget="many2many_tags"/>
                         </group>
                         <group>
                             
@@ -359,6 +360,11 @@
                 <page string="OTs" invisible="1">
                     <group>
                         <field name="ots_id"/>
+                    </group>
+                </page>
+                <page string="Gadget subscriptions" invisible="1">
+                    <group>
+                        <field name="subscription_ids" widget="many2many_tags"/>
                     </group>
                 </page>
             </xpath>

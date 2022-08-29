@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-16 13:06+0000\n"
-"PO-Revision-Date: 2022-08-16 13:06+0000\n"
+"POT-Creation-Date: 2022-08-29 12:00+0000\n"
+"PO-Revision-Date: 2022-08-29 12:00+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -1211,6 +1211,11 @@ msgid "Gadget sttoped"
 msgstr "Aparato parado"
 
 #. module: sat_companies_stock
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.inherit_view_product_template_only_form_view_sat
+msgid "Gadget subscriptions"
+msgstr "Suscripciones de aparatos"
+
+#. module: sat_companies_stock
 #: model:ir.actions.act_window,name:sat_companies_stock.action_view_only_gadgets
 #: model:ir.actions.act_window,name:sat_companies_stock.action_view_stock_gadgets
 #: model:ir.model,name:sat_companies_stock.model_stock_gadgets
@@ -2377,6 +2382,13 @@ msgid "OCA"
 msgstr ""
 
 #. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__ots_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__ots_id
+#: model_terms:ir.ui.view,arch_db:sat_companies_stock.inherit_view_product_template_only_form_view_sat
+msgid "OTs"
+msgstr ""
+
+#. module: sat_companies_stock
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__is_october
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__is_october
 #: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_month__october
@@ -2830,6 +2842,12 @@ msgstr "Suscripción"
 #: model:ir.model.fields,field_description:sat_companies_stock.field_account_payment__subscription_template_id
 msgid "Subscription template"
 msgstr "Plantilla de suscripción"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__subscription_ids
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__subscription_ids
+msgid "Subscriptions"
+msgstr "Suscripciones"
 
 #. module: sat_companies_stock
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__sun
