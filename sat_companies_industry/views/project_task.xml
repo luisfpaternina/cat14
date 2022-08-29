@@ -115,6 +115,9 @@
                 <field name="ot_code"/>
                 <field name="product_id" options="{'no_create': True, 'no_create_edit':True}" domain = "[('is_gadget','=',True),('partner_id','=',partner_id)]"/>
                 <field name="rae"/>
+                <field name="subscription_ids" widget="many2many_tags"/>
+                <field name="cabine_phone"/>
+                <field name="gadget_admin_id"/>
                 <field name="ot_type_id" invisible="1"/>
                 <field name="categ_udn_id"  options="{'no_create': True, 'no_create_edit':True}" attrs="{'invisible': [('ot_type_id','=',False)],'required':[('ot_type_id','!=',False)]}"/>
                 <field name="inspection_id" options="{'no_create': True, 'no_create_edit':True}"/>
@@ -136,6 +139,7 @@
 
             <xpath expr="//field[(@name='project_id')]" position="after">
                 <field name="create_date"/>
+                <field name="create_uid"/>
             </xpath>
 
             <xpath expr="//field[(@name='user_id')]" position="after">
@@ -191,6 +195,9 @@
             <xpath expr="//field[@name='user_id']" position="after">
                 <field name="product_id"/>
                 <field name="rae"/>
+                <field name="subscription_ids" widget="many2many_tags"/>
+                <field name="cabine_phone"/>
+                <field name="gadget_admin_id"/>
             </xpath>
 
             <xpath expr="//field[@name='user_id']" position="before">
