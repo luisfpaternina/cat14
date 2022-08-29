@@ -238,11 +238,6 @@
                 type="object"
                 />
                 <button 
-                name="notify_users"
-                string="notify"
-                type="object"
-                />
-                <button 
                 name="show_message_warning"
                 string="warning"
                 type="object"
