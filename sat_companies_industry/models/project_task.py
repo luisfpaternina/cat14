@@ -221,6 +221,17 @@ class ProjectTask(models.Model):
         string="File Name")
     audio_url = fields.Char(
         string="Audio")
+    subscription_ids = fields.Many2many(
+        'sale.subscription',
+        string="Subscriptions",
+        related="product_id.subscription_ids")
+    cabine_phone = fields.Char(
+        string="Cabine phone",
+        related="product_id.cabine_phone")
+    gadget_admin_id = fields.Many2one(
+        'res.partner',
+        string="Gadget admin",
+        related="product_id.partner_admin_id")
 
     
     def mark_notice_technical(self):

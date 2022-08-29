@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-23 13:21+0000\n"
-"PO-Revision-Date: 2022-08-23 13:21+0000\n"
+"POT-Creation-Date: 2022-08-29 13:01+0000\n"
+"PO-Revision-Date: 2022-08-29 13:01+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -526,6 +526,11 @@ msgid "Address 3"
 msgstr "Dirección 3"
 
 #. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__alarm_sound
+msgid "Alarm sound"
+msgstr ""
+
+#. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__check_4
 msgid "April"
 msgstr "Abril"
@@ -566,6 +571,12 @@ msgid "Attachment Count"
 msgstr "Contador"
 
 #. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__attachment_id
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__audio_url
+msgid "Audio"
+msgstr ""
+
+#. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__check_8
 msgid "August"
 msgstr "Agosto"
@@ -586,6 +597,11 @@ msgstr "Averías"
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__breakdowns_notice
 msgid "Breakdowns notice"
 msgstr "Motivo averia"
+
+#. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__cabine_phone
+msgid "Cabine phone"
+msgstr "Teléfono cabina"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__categ_udn_id
@@ -778,6 +794,11 @@ msgid "February"
 msgstr "Febrero"
 
 #. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__store_fname
+msgid "File Name"
+msgstr ""
+
+#. module: sat_companies_industry
 #: model:ir.model.fields.selection,name:sat_companies_industry.selection__project_task__situation__finished
 msgid "Finished"
 msgstr "Finalizada"
@@ -847,6 +868,11 @@ msgstr "Aparato"
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__gadget_pda_observations
 msgid "Gadget PDA observations"
 msgstr "Observaciones PDA aparato"
+
+#. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__gadget_admin_id
+msgid "Gadget admin"
+msgstr "Administrador aparato"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__gadget_code
@@ -1347,6 +1373,12 @@ msgid "Notes"
 msgstr "Notas"
 
 #. module: sat_companies_industry
+#: code:addons/sat_companies_industry/models/project_task.py:0
+#, python-format
+msgid "Notification OT!"
+msgstr ""
+
+#. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__check_11
 msgid "November"
 msgstr "Noviembre"
@@ -1647,6 +1679,11 @@ msgid "Stop gadget"
 msgstr "Aparato parado"
 
 #. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__subscription_ids
+msgid "Subscriptions"
+msgstr "Suscripciones"
+
+#. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__supervisor_id
 msgid "Supervisor"
 msgstr ""
@@ -1758,7 +1795,7 @@ msgstr "Aviso"
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__website_message_ids
 #: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__website_message_ids
 msgid "Website Messages"
-msgstr ""
+msgstr "Mensajes del sitio web"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,help:sat_companies_industry.field_maintenance_minute_point__website_message_ids
@@ -1823,6 +1860,11 @@ msgid "name"
 msgstr "Nombre"
 
 #. module: sat_companies_industry
+#: model_terms:ir.ui.view,arch_db:sat_companies_industry.inherit_timesheet_grid_project_task_view_form
+msgid "notification"
+msgstr "Notificación"
+
+#. module: sat_companies_industry
 #: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_project_task_breakdowns_form
 #: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_project_task_ot_checklist_form
 #: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_project_task_ot_checklist_location_form
@@ -1849,3 +1891,8 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:sat_companies_industry.inherit_timesheet_grid_project_task_view_form
 msgid "uncheck notice like technical"
 msgstr "Desmarcar aviso como técnico"
+
+#. module: sat_companies_industry
+#: model_terms:ir.ui.view,arch_db:sat_companies_industry.inherit_timesheet_grid_project_task_view_form
+msgid "warning"
+msgstr "Aviso/Notificación"
