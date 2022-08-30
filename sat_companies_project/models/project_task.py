@@ -1,6 +1,7 @@
+from email.policy import default
 from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
-from datetime import tzinfo, timedelta, datetime
+from datetime import tzinfo, timedelta, datetime, date
 from odoo.http import request
 import base64
 from io import BytesIO
@@ -133,6 +134,224 @@ class ProjectTask(models.Model):
         'users_ids',
         string='Assigned to')
 
+    ids_overlapping_tasks_users = fields.Char()
+    overlapping_tasks_users = fields.Boolean(default=False)
+
+    def get_date_range_crossing(
+        self,
+        model_compare,
+        planned_date_begin,
+        planned_date_end
+        ):
+        model_crossing = []
+        for rec in model_compare:
+            if rec._name == 'project.task':
+                r1 = rec.planned_date_begin
+                r2 = rec.planned_date_end
+            else:
+                my_time = datetime.min.time()
+                r1 = rec.request_date_from
+                r1 = datetime.combine(r1, my_time)
+                r2 = rec.request_date_to
+                r2 = datetime.combine(r2, my_time)
+
+            r3 = planned_date_begin
+            r4 = planned_date_end
+
+            if r3<=r1<=r4 or r3<=r2<=r4:
+                model_crossing.append(rec)
+            elif r1<=r3 and r4<=r2:
+                model_crossing.append(rec)
+            else:
+                continue
+        
+        return model_crossing
+
+
+    def get_model_user_crossing(
+                                self,
+                                users_ids,
+                                model,
+                                planned_date_begin,
+                                planned_date_end):
+        
+        model_user_crossing = []
+        for id_user in users_ids:
+            if model._name == 'project.task':
+                all_user_model = list(filter(lambda x: id_user in x.users_ids.ids, model))
+            else:
+                all_user_model = list(filter(lambda x: id_user == x.employee_id.user_id.id, model))
+
+            tasks = self.get_date_range_crossing(
+                                        all_user_model,
+                                        planned_date_begin,
+                                        planned_date_end
+                                        )
+            if tasks:
+                user  = self.env['res.users'].search([('id','=', id_user)])
+                data_crossing = {
+                    'user': user,
+                    'task': tasks
+                }
+                model_user_crossing.append(data_crossing)
+            else:
+                continue
+        
+        return model_user_crossing
+
+    def get_hr_leave_crossing(self):
+        fsm_task_form_view = self.env.ref('project.view_task_form2')
+        fsm_task_list_view = self.env.ref('industry_fsm.project_task_view_list_fsm')
+        fsm_task_kanban_view = self.env.ref('industry_fsm.project_task_view_kanban_fsm')
+        ids = self.ids_overlapping_tasks_users.replace('{','')
+        ids = ids.replace('}','')
+        ids = ids.split(',')
+        ids = list(map(int, ids))
+        domain = [('id','in', ids)]
+        return {
+            'type': 'ir.actions.act_window',
+            'name': _('Overlapping Tasks'),
+            'res_model': 'project.task',
+            'domain': domain,
+            'views': [(fsm_task_list_view.id, 'tree'), (fsm_task_kanban_view.id, 'kanban'), (fsm_task_form_view.id, 'form')],
+            'context': {
+                'fsm_mode': True,
+                'task_nameget_with_hours': False,
+            }
+        }
+
+    @api.model
+    def create(self, vals):
+        if not vals['users_ids'][0][2]:
+            return super(ProjectTask, self).create(vals)
+        else:
+            if vals['planned_date_begin'] and vals['planned_date_end']:
+                users_ids = vals['users_ids']
+                ids = False
+                users_ids = users_ids[0][2]
+                tasks_data = self.env['project.task'].search([])
+                tasks_data = self.env['project.task'].search([('users_ids','!=', False),
+                                                                ('planned_date_begin','!=', False),
+                                                                ('planned_date_end','!=', False)])
+                hr_leave_data = self.env['hr.leave'].search([])
+                hr_leave_crossing = []
+                tasks_user_crossing = []
+                planned_date_begin = vals['planned_date_begin']
+                planned_date_begin = datetime.strptime(planned_date_begin, '%Y-%m-%d %H:%M:%S')
+                planned_date_end = vals['planned_date_end']
+                planned_date_end = datetime.strptime(planned_date_end, '%Y-%m-%d %H:%M:%S')
+                tasks_user_crossing = self.get_model_user_crossing(
+                                        users_ids,
+                                        tasks_data,
+                                        planned_date_begin,
+                                        planned_date_end)
+                if tasks_user_crossing:
+                    ids = []
+                    for item in tasks_user_crossing:
+                        for task in item['task']:
+                            ids.append(task.id)
+
+                    ids = set(ids)
+
+                hr_leave_crossing = self.get_model_user_crossing(
+                                        users_ids,
+                                        hr_leave_data,
+                                        planned_date_begin,
+                                        planned_date_end)
+
+                if hr_leave_crossing:
+                    users = ''
+                    for item in hr_leave_crossing:
+                        users += item['user'].name+" \n"
+                    
+
+                    raise ValidationError(_("The users: \n \n"+users+"\nAre absent on the selected date"))
+
+                res = super(ProjectTask, self).create(vals)
+                for record in res:
+                    if ids:
+                        record.overlapping_tasks_users = True
+                        record.ids_overlapping_tasks_users = ids
+                return res
+            else:
+                return super(ProjectTask, self).create(vals)
+    
+
+    def write(self, vals):
+        if not vals.get('users_ids'):
+            users_ids = self.users_ids.ids
+        else:
+            users_ids = vals.get('users_ids')
+            users_ids = users_ids[0][2]
+            
+        if  vals.get('planned_date_begin') or vals.get('planned_date_end'):
+            if vals.get('planned_date_begin'):
+                planned_date_begin = vals.get('planned_date_begin')
+                planned_date_begin = datetime.strptime(planned_date_begin, '%Y-%m-%d %H:%M:%S')
+            else:
+                planned_date_begin = self.planned_date_begin
+
+            if vals.get('planned_date_end'):
+                planned_date_end = vals.get('planned_date_end')
+                planned_date_end = datetime.strptime(planned_date_end, '%Y-%m-%d %H:%M:%S')
+            else:
+                planned_date_end = self.planned_date_end
+
+            
+
+            ids = False
+            tasks_data = self.env['project.task'].search([])
+            tasks_data = self.env['project.task'].search([('users_ids','!=', False),
+                                                            ('planned_date_begin','!=', False),
+                                                            ('planned_date_end','!=', False)])
+            hr_leave_data = self.env['hr.leave'].search([])
+            hr_leave_crossing = []
+            tasks_user_crossing = []
+            tasks_user_crossing = self.get_model_user_crossing(
+                                    users_ids,
+                                    tasks_data,
+                                    planned_date_begin,
+                                    planned_date_end)
+            if tasks_user_crossing:
+                ids = []
+                for item in tasks_user_crossing:
+                    for task in item['task']:
+                        if task.id == self.id:
+                            continue
+                        ids.append(task.id)
+
+                ids = set(ids)
+
+            hr_leave_crossing = self.get_model_user_crossing(
+                                    users_ids,
+                                    hr_leave_data,
+                                    planned_date_begin,
+                                    planned_date_end)
+
+            if hr_leave_crossing:
+                users = ''
+                for item in hr_leave_crossing:
+                    users += item['user'].name+" \n"
+                
+
+                raise ValidationError(_("The users: \n \n"+users+"\nAre absent on the selected date"))
+            
+            if len(ids) == 0:
+                vals.update({
+                    'overlapping_tasks_users': False,
+                    'ids_overlapping_tasks_users': ids,
+
+                })
+            else:
+                vals.update({
+                    'overlapping_tasks_users': True,
+                    'ids_overlapping_tasks_users': ids,
+
+                })
+
+            return super(ProjectTask, self).write(vals)
+
+
     @api.onchange('partner_id','ot_type_id')
     def _payment_terms(self):
         for record in self:
@@ -199,15 +418,6 @@ class ProjectTask(models.Model):
                 record.check_qr_active = True
             else:
                 record.check_qr_active = False
-
-    def write(self, vals):
-        res = super(ProjectTask, self).write(vals)
-        for record in self:
-            if 'check_pit' in vals or 'check_cabine' in vals or 'check_machine' in vals :
-                if record.check_pit == True and record.check_cabine == True and record.check_machine == True:
-                    record.state_check_qr = 'done'
-                else:
-                    record.state_check_qr = 'checking'
 
     def action_url(self):
         return {  

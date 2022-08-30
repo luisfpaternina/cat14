@@ -1,12 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
+    <record id="view_task_form2_inherit_2" model="ir.ui.view">
+        <field name="name">project.task.form.2.quick_create</field>
+        <field name="model">project.task</field>
+        <field name="priority">1000</field>
+        <field name="inherit_id" ref="industry_fsm.view_task_form2_inherit"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[1]" position="replace">
+                <field name="overlapping_tasks_users" invisible="True"/>
+                <div role="alert" class="alert alert-warning p-3 text-center alert-overflow"
+                    attrs="{'invisible': [('overlapping_tasks_users', '=', False)]}">
+                    <button name="get_hr_leave_crossing" type="object" class="btn-link pr-1">
+                        overlapping tasks
+                    </button>
+                    <span class="align-middle">for theses employees at the same time.</span>
+                </div>
+            </xpath>
+        </field>
+    </record>
+    
+    
     <record id="project_task_inherit_form_view" model="ir.ui.view">
         <field name="name">project.task.form.inherit.view</field>
         <field name="model">project.task</field>
         <field name="inherit_id" ref="project.view_task_form2"/>
         <field name="arch" type="xml">
+            
             <xpath expr="//field[@name='user_id']" position="after">
-                <field name="users_ids" widget="many2many_tags"/>
+                <field name="users_ids" attrs="{'required': ['|',('planned_date_begin', '!=', False),('planned_date_end', '!=', False)]}" widget="many2many_tags"/>
             </xpath>
             <xpath expr="//field[@name='tag_ids']" position="after">
                 <field name="check_suscription_recurrent" invisible="1"/>
