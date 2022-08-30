@@ -12,6 +12,8 @@
                     <group>
                     <group>
                         <field name="count" attrs="{'invisible': [('count','=',1)]}" readonly="True"/>
+                        <field name="order_id" invisible="1"/>
+                        <field name="acumulate" invisible="1"/>
                         <field name="advance_payment_method" class="oe_inline" widget="radio"
                             attrs="{'invisible': [('count','&gt;',1)]}"/>
                         <field name="has_down_payments" invisible="1" />
@@ -54,6 +56,7 @@
             <field name="view_mode">form</field>
             <field name="target">new</field>
             <field name="binding_model_id" ref="purchase.model_purchase_order" />
+            <field name="context">{'default_order_id': active_id}</field>
         </record>
 
 </odoo>

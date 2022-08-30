@@ -3,6 +3,7 @@ import time
 from odoo import models, fields, api, _
 from odoo.exceptions import UserError
 import odoo.addons.decimal_precision as dp
+from odoo.exceptions import ValidationError
 
 class PurchaseMakeInvoiceAdvance(models.TransientModel):
 	_name = 'purchase.advance.payment.inv'
@@ -58,7 +59,17 @@ class PurchaseMakeInvoiceAdvance(models.TransientModel):
 	fixed_amount = fields.Monetary('Down Payment Amount(Fixed)', help="The fixed amount to be invoiced in advance, taxes excluded.")
 	has_down_payments = fields.Boolean('Has down payments', default=_default_has_down_payment, readonly=True)
 	deduct_down_payments = fields.Boolean('Deduct down payments', default=True)
-	acumulate = fields.Float(string="Accumulate")
+	acumulate = fields.Float(string="Accumulate",related="order_id.acumulate")
+	order_id = fields.Many2one(
+		'purchase.order',
+		string="Order")
+
+	@api.depends('acumulate','advance_payment_method','order_id')
+	def validate_acumulate_values(self):
+		for record in self:
+			if record.order_id:
+				if record.acumulate >= record.order_id.amount_total:
+					raise ValidationError(_("you can not make more payments to this order"))
 
 	@api.onchange('advance_payment_method')
 	def onchange_advance_payment_method(self):
@@ -74,46 +85,55 @@ class PurchaseMakeInvoiceAdvance(models.TransientModel):
 		return res
 
 	def _create_invoice(self, order, po_line, amount):
-		if (self.advance_payment_method == 'percentage' and self.amount <= 0.00) or (self.advance_payment_method == 'fixed' and self.fixed_amount <= 0.00):
-			raise UserError(_('The value of the down payment amount must be positive.'))
-		if self.advance_payment_method == 'percentage':
-			amount = order.amount_untaxed * self.amount / 100
-			name = _("Down payment of %s%%") % (self.amount,)
+		value = 0
+		if order.acumulate < order.amount_total:
+			if (self.advance_payment_method == 'percentage' and self.amount <= 0.00) or (self.advance_payment_method == 'fixed' and self.fixed_amount <= 0.00):
+				raise UserError(_('The value of the down payment amount must be positive.'))
+			if self.advance_payment_method == 'percentage':
+				value = order.amount_total - order.acumulate
+				print(value)
+				amount = value * self.amount / 100
+				name = _("Down payment of %s%%") % (self.amount,)
+			else:
+				value = order.amount_total - order.acumulate
+				amount = value
+				name = _('Down Payment')
+			invoice_vals = {
+			'move_type': 'in_invoice',
+			'invoice_origin': order.name,
+			'invoice_user_id': order.user_id.id,
+			'narration': order.notes,
+			'partner_id': order.partner_id.id,#order.partner_invoice_id.id,
+			'fiscal_position_id': order.fiscal_position_id.id or order.partner_id.property_account_position_id.id,
+			'partner_shipping_id': order.dest_address_id.id,#order.partner_shipping_id.id,
+			'currency_id': order.currency_id.id,#order.pricelist_id.currency_id.id,
+			'payment_reference': order.client_order_ref,
+			'invoice_payment_term_id': order.payment_term_id.id,
+			'team_id': order.team_id.id,
+			'invoice_line_ids': [(0, 0, {
+				'name': name,
+				'price_unit': amount,
+				'quantity': 1.0,
+				'product_id': self.product_id.id,
+				'purchase_line_id': [(6, 0, [po_line.id])],
+				'analytic_tag_ids': [(6, 0, po_line.analytic_tag_ids.ids)],
+				'analytic_account_id': po_line.account_analytic_id.id or False,
+				'tax_ids': [(6, 0, self.deposit_taxes_id.ids)],
+				})],
+			}
+			if order.fiscal_position_id:
+				invoice_vals['fiscal_position_id'] = order.fiscal_position_id.id
+			invoice = self.env['account.move'].create(invoice_vals)
+			invoice.message_post_with_view('mail.message_origin_link',
+						values={'self': invoice, 'origin': order},
+						subtype_id=self.env.ref('mail.mt_note').id)
+			return invoice
 		else:
-			amount = self.fixed_amount
-			name = _('Down Payment')
-		invoice_vals = {
-		'move_type': 'in_invoice',
-		'invoice_origin': order.name,
-		'invoice_user_id': order.user_id.id,
-		'narration': order.notes,
-		'partner_id': order.partner_id.id,#order.partner_invoice_id.id,
-		'fiscal_position_id': order.fiscal_position_id.id or order.partner_id.property_account_position_id.id,
-		'partner_shipping_id': order.dest_address_id.id,#order.partner_shipping_id.id,
-		'currency_id': order.currency_id.id,#order.pricelist_id.currency_id.id,
-		'payment_reference': order.client_order_ref,
-		'invoice_payment_term_id': order.payment_term_id.id,
-		'team_id': order.team_id.id,
-		'invoice_line_ids': [(0, 0, {
-			'name': name,
-			'price_unit': amount,
-			'quantity': 1.0,
-			'product_id': self.product_id.id,
-			'purchase_line_id': [(6, 0, [po_line.id])],
-			'analytic_tag_ids': [(6, 0, po_line.analytic_tag_ids.ids)],
-			'analytic_account_id': po_line.account_analytic_id.id or False,
-			'tax_ids': [(6, 0, self.deposit_taxes_id.ids)],
-			})],
-		}
-		if order.fiscal_position_id:
-			invoice_vals['fiscal_position_id'] = order.fiscal_position_id.id
-		invoice = self.env['account.move'].create(invoice_vals)
-		invoice.message_post_with_view('mail.message_origin_link',
-                    values={'self': invoice, 'origin': order},
-                    subtype_id=self.env.ref('mail.mt_note').id)
-		return invoice
+			print('YA ESTA PAGADA LA PO')
 
 	def create_invoices(self):
+		if self.count == 1:
+			self.validate_acumulate_values()
 		purchase_orders = self.env['purchase.order'].browse(self._context.get('active_ids', []))
 
 		if self.advance_payment_method == 'delivered':
@@ -127,7 +147,8 @@ class PurchaseMakeInvoiceAdvance(models.TransientModel):
 			purchase_line_obj = self.env['purchase.order.line']
 			for order in purchase_orders:
 				if self.advance_payment_method == 'percentage':
-					amount = order.amount_untaxed * self.amount / 100
+					value = order.amount_total - order.acumulate
+					amount = value * self.amount / 100
 					for line in order.order_line:
 						if line.product_qty == 0.0 and line.price_subtotal == 0.0 and line.qty_received == 0.0:
 							line.dowm_payment = True
@@ -158,7 +179,6 @@ class PurchaseMakeInvoiceAdvance(models.TransientModel):
 					'taxes_id': [(6, 0, tax_ids)],
 					'is_downpayment': True,
 					'qty_invoiced':-1,
-					#'date_planned':line.date_planned,
 					'dowm_payment':True,
 					})
 				del context
