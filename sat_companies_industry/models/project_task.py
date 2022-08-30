@@ -7,6 +7,11 @@ from odoo.exceptions import ValidationError
 from datetime import datetime,date,timedelta
 from datetime import date
 import datetime
+import io
+import time
+import requests
+
+
 
 class ProjectTask(models.Model):
     _inherit = 'project.task'
@@ -207,6 +212,26 @@ class ProjectTask(models.Model):
         compute="compute_ot_time")
     is_calculed_time = fields.Boolean(
         string="Is caluled time")
+    alarm_sound = fields.Binary(
+        string="Alarm sound")
+    attachment_id = fields.Many2one(
+        'ir.attachment',
+        string="Audio")
+    store_fname = fields.Char(
+        string="File Name")
+    audio_url = fields.Char(
+        string="Audio")
+    subscription_ids = fields.Many2many(
+        'sale.subscription',
+        string="Subscriptions",
+        related="product_id.subscription_ids")
+    cabine_phone = fields.Char(
+        string="Cabine phone",
+        related="product_id.cabine_phone")
+    gadget_admin_id = fields.Many2one(
+        'res.partner',
+        string="Gadget admin",
+        related="product_id.partner_admin_id")
 
     
     def mark_notice_technical(self):
@@ -296,3 +321,23 @@ class ProjectTask(models.Model):
                 if line.checklist_id.id in exis_record_lines:
                     raise ValidationError(_('The column should be one per line'))
                 exis_record_lines.append(line.checklist_id.id)
+    
+    def show_notification(self):
+        return {
+            'type': 'ir.actions.client',
+            'tag': 'display_notification',
+            'params': {
+                'title': _('Notification OT!'),
+                'message': 'Notificación de OT aviso',
+                'sticky': False,
+                'type': 'warning',
+                }
+            }
+ 
+    def show_message_warning(self):
+        self.env.user.notify_info('My information message')
+        self.env.user.notify_warning('My marning message')
+        raise Exception(
+            'Cannot do something',
+            'The reason why... {{ sound: /sat_comapnies/static/sounds/bell.wav }}'
+            )

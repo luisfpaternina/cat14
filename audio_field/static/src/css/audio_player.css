@@ -1,0 +1,13 @@
+/*
+
+Copyright © 2022 Oleksandr Komarov (https://modool.pro) <info@modool.pro>
+See LICENSE file for licensing details.
+
+*/
+
+audio.default_style {
+  width: 250px;
+  height: 26px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 17px;
+}

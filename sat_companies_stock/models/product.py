@@ -573,7 +573,19 @@ class ProductTemplate(models.Model):
         'project.task',
         string="OTs",
         compute="compute_ots_in_gadgets")
+    subscription_ids = fields.Many2many(
+        'sale.subscription',
+        string="Subscriptions",
+        compute="compute_subscriptions")
 
+
+    def compute_subscriptions(self):
+        for record in self:
+            subscriptions = self.env['sale.subscription'].search([('product_id','=',self.id)])
+            if subscriptions:
+                record.subscription_ids= subscriptions.ids
+            else:
+                record.subscription_ids = False
 
     def compute_ots_in_gadgets(self):
         for record in self:

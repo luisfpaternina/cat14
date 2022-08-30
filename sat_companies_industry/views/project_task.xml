@@ -115,6 +115,9 @@
                 <field name="ot_code"/>
                 <field name="product_id" options="{'no_create': True, 'no_create_edit':True}" domain = "[('is_gadget','=',True),('partner_id','=',partner_id)]"/>
                 <field name="rae"/>
+                <field name="subscription_ids" widget="many2many_tags"/>
+                <field name="cabine_phone"/>
+                <field name="gadget_admin_id"/>
                 <field name="ot_type_id" invisible="1"/>
                 <field name="categ_udn_id"  options="{'no_create': True, 'no_create_edit':True}" attrs="{'invisible': [('ot_type_id','=',False)],'required':[('ot_type_id','!=',False)]}"/>
                 <field name="inspection_id" options="{'no_create': True, 'no_create_edit':True}"/>
@@ -128,10 +131,15 @@
                 <field name="month_date" invisible="1"/>
                 <field name="is_warning" invisible="1"/>
                 <field name="is_stop_gadget" invisible="1"/>
+                <field name="attachment_id" widget="attachment_many2one_audio_widget"/>
+                <field name="alarm_sound" widget="attachment_binary_audio_widget"/>
+                <field name="store_fname" />
+                <field name="audio_url" widget="audio_field"/>
             </xpath>
 
             <xpath expr="//field[(@name='project_id')]" position="after">
                 <field name="create_date"/>
+                <field name="create_uid"/>
             </xpath>
 
             <xpath expr="//field[(@name='user_id')]" position="after">
@@ -187,11 +195,19 @@
             <xpath expr="//field[@name='user_id']" position="after">
                 <field name="product_id"/>
                 <field name="rae"/>
+                <field name="subscription_ids" widget="many2many_tags"/>
+                <field name="cabine_phone"/>
+                <field name="gadget_admin_id"/>
             </xpath>
 
             <xpath expr="//field[@name='user_id']" position="before">
                 <field name="create_date"/>
                 <field name="create_uid"/>
+            </xpath>
+
+            <xpath expr="//field[@name='user_id']" position="attributes">
+                <attribute name="attrs">{}</attribute>
+                <attribute name="invisible">1</attribute>
             </xpath>
 
         </field>
@@ -223,6 +239,16 @@
                 confirm="Are you sure you want to not mark notice technical?"
                 attrs="{'invisible':[('is_technical_notice_ot','!=',True)]}"
                 groups="sat_companies_industry.notice_technical_manager_group"/>
+                <button 
+                name="show_notification"
+                string="notification"
+                type="object"
+                />
+                <button 
+                name="show_message_warning"
+                string="warning"
+                type="object"
+                />
             </xpath>
 
         </field>

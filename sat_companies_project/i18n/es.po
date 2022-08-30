@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-19 13:39+0000\n"
-"PO-Revision-Date: 2022-08-19 13:39+0000\n"
+"POT-Creation-Date: 2022-08-25 10:36+0000\n"
+"PO-Revision-Date: 2022-08-25 10:36+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -105,6 +105,12 @@ msgstr "Activo"
 #: model:ir.model.fields,field_description:sat_companies_project.field_wizard_sale_order_type__add_task_line
 msgid "Add Task line ?"
 msgstr "Adicionar líneas de tarea ?"
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__users_ids
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order__users_ids
+msgid "Assigned to"
+msgstr "Asignada"
 
 #. module: sat_companies_project
 #: code:addons/sat_companies_project/models/project_task.py:0
@@ -732,7 +738,7 @@ msgstr "Error de entrega de SMS"
 #. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_project__sale_order_id
 msgid "Sale Order"
-msgstr "Pedido de venta"
+msgstr ""
 
 #. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_project__sale_type_origin_id
@@ -962,6 +968,11 @@ msgstr ""
 #, python-format
 msgid "Verify the type of client if it is potential"
 msgstr ""
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__allowed_user_ids
+msgid "Visible to"
+msgstr "Visible por"
 
 #. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn__website_message_ids
