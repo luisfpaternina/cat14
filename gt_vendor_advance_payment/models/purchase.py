@@ -207,6 +207,11 @@ class ResConfigSettings(models.TransientModel):
 class PurchaseOrderLine(models.Model):
     _inherit='purchase.order.line'
 
+    _sql_constraints = [
+        ('accountable_required_fields',
+            "check(1=1)",
+            "Missing required fields on accountable purchase order line.")]
+
     @api.depends('qty_invoiced', 'qty_received', 'product_qty', 'order_id.state')
     def _get_to_invoice_qty(self):
         """

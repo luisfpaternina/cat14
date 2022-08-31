@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-25 10:36+0000\n"
-"PO-Revision-Date: 2022-08-25 10:36+0000\n"
+"POT-Creation-Date: 2022-08-31 18:15+0000\n"
+"PO-Revision-Date: 2022-08-31 18:15+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -81,6 +81,11 @@ msgid ""
 "                    </p>\n"
 "                </div>\n"
 "            "
+msgstr ""
+
+#. module: sat_companies_project
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.view_task_form2_inherit_2
+msgid "<span class=\"align-middle\">for theses employees at the same time.</span>"
 msgstr ""
 
 #. module: sat_companies_project
@@ -367,6 +372,11 @@ msgid "ID"
 msgstr "Id"
 
 #. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__ids_overlapping_tasks_users
+msgid "Ids Overlapping Tasks Users"
+msgstr ""
+
+#. module: sat_companies_project
 #: model:ir.model.fields,help:sat_companies_project.field_project_task_categ_udn__message_needaction
 #: model:ir.model.fields,help:sat_companies_project.field_project_task_categ_udn__message_unread
 #: model:ir.model.fields,help:sat_companies_project.field_project_task_template__message_needaction
@@ -452,6 +462,11 @@ msgstr "Aviso"
 #: model:ir.model,name:sat_companies_project.model_account_move
 msgid "Journal Entry"
 msgstr "Asiento contable"
+
+#. module: sat_companies_project
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.view_sale_order_inherit_sat_companies_project
+msgid "KIT/Checklist"
+msgstr ""
 
 #. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_account_move____last_update
@@ -639,6 +654,17 @@ msgstr "Origen"
 #: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__is_other
 msgid "Other"
 msgstr "Otro"
+
+#. module: sat_companies_project
+#: code:addons/sat_companies_project/models/project_task.py:0
+#, python-format
+msgid "Overlapping Tasks"
+msgstr ""
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__overlapping_tasks_users
+msgid "Overlapping Tasks Users"
+msgstr ""
 
 #. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task__payment_term_ot_id
@@ -887,6 +913,17 @@ msgid "The Pit has been checked"
 msgstr "El foso ha sido inspeccionado"
 
 #. module: sat_companies_project
+#: code:addons/sat_companies_project/models/project_task.py:0
+#: code:addons/sat_companies_project/models/project_task.py:0
+#, python-format
+msgid ""
+"The users: \n"
+" \n"
+"\n"
+"Are absent on the selected date"
+msgstr "No puede asignar usuarios que tengan ausencias para esas fechas"
+
+#. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task__ot_type_id
 msgid "Tipo OT"
 msgstr ""
@@ -997,6 +1034,11 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:sat_companies_project.view_project_task_categ_udn_form
 #: model_terms:ir.ui.view,arch_db:sat_companies_project.view_project_task_template_form
 msgid "ot_checklist_form"
+msgstr ""
+
+#. module: sat_companies_project
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.view_task_form2_inherit_2
+msgid "overlapping tasks"
 msgstr ""
 
 #. module: sat_companies_project
