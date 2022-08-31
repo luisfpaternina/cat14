@@ -129,7 +129,7 @@ class PurchaseMakeInvoiceAdvance(models.TransientModel):
 						subtype_id=self.env.ref('mail.mt_note').id)
 			return invoice
 		else:
-			print('YA ESTA PAGADA LA PO')
+			print('No se puede realizar mas anticipos a esta PO')
 
 	def create_invoices(self):
 		if self.count == 1:
@@ -137,8 +137,68 @@ class PurchaseMakeInvoiceAdvance(models.TransientModel):
 		purchase_orders = self.env['purchase.order'].browse(self._context.get('active_ids', []))
 
 		if self.advance_payment_method == 'delivered':
-			purchase_orders._create_invoices(final=self.deduct_down_payments)
+			# purchase_orders._create_invoices(final=self.deduct_down_payments)
 			purchase_orders.is_regular_invoice = True
+			if not self.product_id:
+				vals = self._prepare_deposit_product()
+				self.product_id = self.env['product.product'].create(vals)
+				self.env['ir.config_parameter'].sudo().set_param('sale.default_deposit_product_id', self.product_id.id)
+			purchase_line_obj = self.env['purchase.order.line']
+			for order in purchase_orders:
+				if self.advance_payment_method == 'delivered':
+					value = order.amount_total - order.acumulate
+					amount = value
+					for line in order.order_line:
+						if line.product_qty == 0.0 and line.price_subtotal == 0.0 and line.qty_received == 0.0:
+							line.dowm_payment = True
+				else:
+					amount = self.fixed_amount
+				if self.product_id.invoice_policy != 'order':
+					raise UserError(_('The product used to invoice a down payment should have an invoice policy set to "Ordered quantities". Please update your deposit product to be able to create a deposit invoice.'))
+				if self.product_id.type != 'service':
+					raise UserError(_("The product used to invoice a down payment should be of type 'Service'. Please use another product or update this product."))
+				taxes = self.product_id.taxes_id.filtered(lambda r: not order.company_id or r.company_id == order.company_id)
+				if order.fiscal_position_id and taxes:
+					tax_ids = order.fiscal_position_id.map_tax(taxes, self.product_id, order.partner_shipping_id).ids
+				else:
+					tax_ids = taxes.ids
+				context = {'lang': order.partner_id.lang}
+				analytic_tag_ids = []
+				for line in order.order_line:
+					analytic_tag_ids = [(4, analytic_tag.id, None) for analytic_tag in line.analytic_tag_ids]
+
+				po_line = purchase_line_obj.create({
+					'name': _('Down Payment: %s') % (time.strftime('%m %Y'),),
+					'price_unit': amount,
+					'product_qty':0.0,
+					'order_id': order.id,
+					'product_uom': self.product_id.uom_id.id,
+					'product_id': self.product_id.id,
+					'analytic_tag_ids': analytic_tag_ids,
+					'taxes_id': [(6, 0, tax_ids)],
+					'is_downpayment': True,
+					'qty_invoiced':-1,
+					'dowm_payment':True,
+					})
+				del context
+				po_invoice_id = self._create_invoice(order, po_line, amount)
+				purchase_orders.hide_invoice = False
+				if po_invoice_id:
+					purchase_orders = self.env['purchase.order'].browse(self._context.get('active_ids', []))
+					inv_ids = self.env['account.move'].search([('invoice_origin', '=',purchase_orders.name)]).ids
+					list_view_id = self.env.ref('account.view_invoice_tree').id
+					form_view_id = self.env.ref('account.view_move_form').id
+					result = {
+					       "type": "ir.actions.act_window",
+					       "res_model": "account.move",
+					       "views": [[list_view_id, "tree"], [form_view_id, "form"]],
+					       "domain": [("id", "in", inv_ids)],
+					       "name":"Inv"
+					}
+					if len(inv_ids) == 1:
+					   result['views'] = [(form_view_id, 'form')]
+					   result['res_id'] = inv_ids[0]
+				return result
 		else:
 			if not self.product_id:
 				vals = self._prepare_deposit_product()

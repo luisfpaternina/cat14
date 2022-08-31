@@ -131,9 +131,9 @@ class ProjectTask(models.Model):
         'user_id',
         'users_ids',
         string='Assigned to')
-
     ids_overlapping_tasks_users = fields.Char()
-    overlapping_tasks_users = fields.Boolean(default=False)
+    overlapping_tasks_users = fields.Boolean(
+        default=False)
 
     def get_date_range_crossing(
         self,

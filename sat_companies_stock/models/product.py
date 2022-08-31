@@ -575,8 +575,7 @@ class ProductTemplate(models.Model):
         compute="compute_ots_in_gadgets")
     subscription_ids = fields.Many2many(
         'sale.subscription',
-        string="Subscriptions",
-        compute="compute_subscriptions")
+        string="Subscriptions")
 
 
     def compute_subscriptions(self):
