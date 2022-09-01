@@ -299,4 +299,4 @@ class SaleOrder(models.Model):
         for record in self:
             if record.sale_type_id:
                 if record.udn_id.ot_type_id != record.sale_type_id:
-                    raise ValidationError("La Udn no corresponte al tipo, cambie el tipo de presupuesto  : %s" % record.udn_id.name)
+                    raise ValidationError("La Udn no corresponte al tipo de OT/presupuesto: %s" % record.udn_id.name)
