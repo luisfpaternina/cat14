@@ -16,6 +16,7 @@
         'maintenance',
         'industry_fsm',
         'project',
+        'hr_holidays',
         'base_automation',
         'sale_management',
         'sale_subscription',

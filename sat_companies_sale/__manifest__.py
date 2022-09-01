@@ -16,6 +16,7 @@
         'sale_management',
         'crm',
         'website',
+        'hr_holidays',
         'sat_companies_project',
         'base_automation',
         'sale_subscription',
