@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-29 12:00+0000\n"
-"PO-Revision-Date: 2022-08-29 12:00+0000\n"
+"POT-Creation-Date: 2022-09-02 11:45+0000\n"
+"PO-Revision-Date: 2022-09-02 11:45+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -1209,11 +1209,6 @@ msgstr "Motivo de parada aparato"
 #: model_terms:ir.ui.view,arch_db:sat_companies_stock.inherit_view_product_template_only_form_view_sat
 msgid "Gadget sttoped"
 msgstr "Aparato parado"
-
-#. module: sat_companies_stock
-#: model_terms:ir.ui.view,arch_db:sat_companies_stock.inherit_view_product_template_only_form_view_sat
-msgid "Gadget subscriptions"
-msgstr "Suscripciones de aparatos"
 
 #. module: sat_companies_stock
 #: model:ir.actions.act_window,name:sat_companies_stock.action_view_only_gadgets
@@ -2834,6 +2829,12 @@ msgstr "N° paradas"
 #: model:ir.model.fields,field_description:sat_companies_stock.field_account_move__subscription_id
 #: model:ir.model.fields,field_description:sat_companies_stock.field_account_payment__subscription_id
 msgid "Subscription"
+msgstr "Suscripción"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__subscription_name
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__subscription_name
+msgid "Subscription name"
 msgstr "Suscripción"
 
 #. module: sat_companies_stock

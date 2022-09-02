@@ -576,15 +576,17 @@ class ProductTemplate(models.Model):
     subscription_ids = fields.Many2many(
         'sale.subscription',
         string="Subscriptions")
+    subscription_name = fields.Char(
+        string="Subscription name",
+        compute="compute_subscription_name")
 
 
-    def compute_subscriptions(self):
-        for record in self:
-            subscriptions = self.env['sale.subscription'].search([('product_id','=',self.id)])
-            if subscriptions:
-                record.subscription_ids= subscriptions.ids
-            else:
-                record.subscription_ids = False
+    def compute_subscription_name(self):
+        subscription = self.env['sale.subscription'].search([('product_id', '=', self.id)],limit=1)
+        if subscription:
+            self.subscription_name = subscription.name
+        else:
+            self.subscription_name = False
 
     def compute_ots_in_gadgets(self):
         for record in self:

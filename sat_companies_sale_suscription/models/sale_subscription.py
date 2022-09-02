@@ -100,6 +100,9 @@ class SaleSuscriptionInherit(models.Model):
         string="Lines count",
         compute="compute_lines_count")
 
+    _sql_constraints = [
+        ('name_uniq', 'unique (product_id)','This gadget already a subscription')
+    ]
 
     @api.depends('recurring_invoice_line_ids')
     def compute_lines_count(self):
