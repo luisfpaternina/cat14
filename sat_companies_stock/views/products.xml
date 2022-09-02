@@ -86,6 +86,7 @@
                                 <field name="gadget_use_id" options="{'no_create': True, 'no_create_edit':True}"/>
                                 <field name="gadget_state_id" options="{'no_create': True, 'no_create_edit':True}"/>
                                 <field name="type_contract_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                                <field name="subscription_name"/>
                                 <field name="gadget_type_assistance_id" options="{'no_create': True, 'no_create_edit':True}"/>
                             </group>
                             <group>
@@ -229,7 +230,6 @@
                         <group>
                             <field name="recurring_invoice"/>
                             <field name="subscription_template_id" attrs="{'invisible': [('recurring_invoice', '!=', True)]}"/>
-                            <field name="subscription_ids" widget="many2many_tags"/>
                         </group>
                         <group>
                             
@@ -360,11 +360,6 @@
                 <page string="OTs" invisible="1">
                     <group>
                         <field name="ots_id"/>
-                    </group>
-                </page>
-                <page string="Gadget subscriptions" invisible="1">
-                    <group>
-                        <field name="subscription_ids" widget="many2many_tags"/>
                     </group>
                 </page>
             </xpath>

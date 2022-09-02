@@ -223,8 +223,7 @@ class ProjectTask(models.Model):
         string="Audio")
     subscription_ids = fields.Many2many(
         'sale.subscription',
-        string="Subscriptions",
-        related="product_id.subscription_ids")
+        string="Subscriptions")
     cabine_phone = fields.Char(
         string="Cabine phone",
         related="product_id.cabine_phone")
@@ -232,8 +231,11 @@ class ProjectTask(models.Model):
         'res.partner',
         string="Gadget admin",
         related="product_id.partner_admin_id")
-
+    subscription_name = fields.Char(
+        string="Subscription name",
+        related="product_id.subscription_name")
     
+
     def mark_notice_technical(self):
         for record in self:
             record.write({'is_technical_notice_ot': True})
