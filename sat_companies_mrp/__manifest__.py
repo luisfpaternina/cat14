@@ -17,6 +17,7 @@
         'base',
         'mrp',
         'sat_companies',
+        'sat_companies_industry',
 
     ],
 
@@ -24,7 +25,8 @@
        
         #'security/security.xml',
         #'security/ir.model.access.csv',
-        #'views/res_company.xml',
+        'views/sale_order.xml',
+        'views/mrp_bom.xml',
                    
     ],
     'installable': True

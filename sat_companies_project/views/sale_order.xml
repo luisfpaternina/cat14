@@ -41,11 +41,6 @@
             </xpath>
 
             <xpath expr="//form[1]/sheet[1]/notebook[1]" position="inside">
-                <page string="KIT/Checklist" name="kit_checklist">
-                    <group name="principal">
-                        
-                    </group>
-                </page>
                 <page string="Description" name="commercial_description">
                     <group name="principal_group">
                         <field name="comercial_description"/>
