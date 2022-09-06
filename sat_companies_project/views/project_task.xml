@@ -238,7 +238,7 @@
         <field name="inherit_id" ref="industry_fsm.project_task_view_list_fsm"/>
         <field name="arch" type="xml">
 
-            <xpath expr="//field[@name='user_id']" position="after">
+            <xpath expr="//field[@name='user_id']" position="replace">
                 <field name="users_ids" widget="many2many_tags"/>
             </xpath>
 

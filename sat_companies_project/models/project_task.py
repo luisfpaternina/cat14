@@ -235,9 +235,13 @@ class ProjectTask(models.Model):
                 hr_leave_crossing = []
                 tasks_user_crossing = []
                 planned_date_begin = vals['planned_date_begin']
-                planned_date_begin = datetime.strptime(planned_date_begin, '%Y-%m-%d %H:%M:%S')
+                if type(planned_date_begin) is str:
+                    planned_date_begin = datetime.strptime(planned_date_begin, '%Y-%m-%d %H:%M:%S')
+                
                 planned_date_end = vals['planned_date_end']
-                planned_date_end = datetime.strptime(planned_date_end, '%Y-%m-%d %H:%M:%S')
+                if type(planned_date_end) is str:
+                    planned_date_end = datetime.strptime(planned_date_end, '%Y-%m-%d %H:%M:%S')
+    
                 tasks_user_crossing = self.get_model_user_crossing(
                                         users_ids,
                                         tasks_data,
