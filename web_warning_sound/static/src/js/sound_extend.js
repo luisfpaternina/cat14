@@ -1,4 +1,4 @@
-openerp.web_warning_sound = function(instance) {
+odoo.web_warning_sound = function(instance) {
     var QWeb = instance.web.qweb;
     var _t = instance.web._t;
 

@@ -337,9 +337,5 @@ class ProjectTask(models.Model):
             }
  
     def show_message_warning(self):
-        self.env.user.notify_info('My information message')
-        self.env.user.notify_warning('My marning message')
-        raise Exception(
-            'Cannot do something',
-            'The reason why... {{ sound: /sat_comapnies/static/sounds/bell.wav }}'
-            )
+        raise Warning('Cannot do something')
+        
