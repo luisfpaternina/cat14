@@ -8,6 +8,7 @@
             <field name="priority" eval="8" />
             <field name="arch" type="xml">
                 <tree string="maintenance_minute_point_tree">
+                    <field name="concatenate"/>
                     <field name="code"/>
                     <field name="description"/>
                     <field name="type_deffect_id"/>
@@ -27,7 +28,7 @@
                                 <table>
                                     <tr>
                                         <td>
-                                            
+                                            <field name="concatenate" invisible="1"/>
                                         </td>
                                     </tr>
                                 </table>
@@ -40,7 +41,7 @@
                             <group>
                                 <field name="type_deffect_id" options="{'no_create': True, 'no_create_edit':True}"/>
                             </group>
-                            <field name="description" placeholder="Add description..."/>
+                            <field name="description" placeholder="Add description..." required="1"/>
                         </group>
                     </sheet>
                     <div class="oe_chatter">
