@@ -41,8 +41,19 @@ class SaleOrder(models.Model):
     users_ids = fields.Many2many(
                 'res.users',
                 string='Assigned to')
-    
+    date_begin = fields.Datetime("Start date")
+    date_end = fields.Datetime("End date")
+    check_users = fields.Boolean(
+        compute="_compute_check_users",
+        store=True)
 
+    @api.depends('users_ids')
+    def _compute_check_users(self):
+        for record in self:
+            record.check_users = False
+            if record.users_ids:
+                record.check_users = True
+    
     @api.depends('name','partner_id')
     def _compute_check_project_task_id(self):
         project_obj = self.env['project.project'].search([('name','=','Field Service')],limit=1)

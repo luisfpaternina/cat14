@@ -6,3 +6,4 @@ from . import account_move_line
 from . import res_partner
 from . import res_config_settings
 from . import project_task
+from . import mrp_bom

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-06 17:13+0000\n"
-"PO-Revision-Date: 2022-09-06 17:13+0000\n"
+"POT-Creation-Date: 2022-09-07 10:01+0000\n"
+"PO-Revision-Date: 2022-09-07 10:01+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -641,6 +641,11 @@ msgstr "Fecha culminación OT"
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__code
 msgid "Code"
 msgstr "Código"
+
+#. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__commercial_id
+msgid "Commercial"
+msgstr "Comercial"
 
 #. module: sat_companies_industry
 #: model:ir.actions.act_window,name:sat_companies_industry.action_view_community_mood
@@ -1699,12 +1704,22 @@ msgid "Supervisor"
 msgstr ""
 
 #. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__supervisor_end_date
+msgid "Supervisor end date"
+msgstr "Fecha fin supervisor"
+
+#. module: sat_companies_industry
 #: model:ir.model,name:sat_companies_industry.model_project_task
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_checklist_minute__task_id
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__task_id
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__task_id
 msgid "Task"
 msgstr "Tarea"
+
+#. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__technical_end_date
+msgid "Technical end date"
+msgstr "Fecha fin técnico"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__contact_person_telephone

@@ -22,11 +22,10 @@
     ],
 
     'data': [
-       
-        #'security/security.xml',
-        #'security/ir.model.access.csv',
+
         'views/sale_order.xml',
         'views/mrp_bom.xml',
+        'reports/inherit_report_mrp_bom.xml',
                    
     ],
     'installable': True

@@ -7,3 +7,8 @@ class SaleOrder(models.Model):
         'mrp.bom.line',
         'sale_order_id',
         string="Bom lines")
+
+
+
+class SaleOrderLine(models.Model):
+    _inherit = 'sale.order.line'

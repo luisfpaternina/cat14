@@ -31,6 +31,9 @@ class WizardSaleOrderType(models.TransientModel):
     def accept_task_type_sale(self):
         for record in self:
             project_fsm = self.env.ref('industry_fsm.fsm_project', raise_if_not_found=False)
+            
+            users_ids = record.sale_order_id.users_ids.ids
+            users_ids = [(6,0,users_ids)]
             if record.sale_order_id.sale_order_template_id:
                 sale_order_template = record.sale_order_id.sale_order_template_id.name +' - '
             else:
@@ -53,13 +56,13 @@ class WizardSaleOrderType(models.TransientModel):
                                 'ot_type_id': record.sale_order_id.sale_type_id.id,
                                 'gadgest_contract_type_id': record.sale_order_id.gadgets_contract_type_id.id,
                                 'project_id': new_project.id,
-                                'users_ids': record.sale_order_id.users_ids.ids,
+                                'users_ids': users_ids,
                                 'product_id': record.sale_order_id.product_id.id,
                                 'origin': record.sale_order_id.name,
                                 'comercial_description': record.sale_order_id.comercial_description,
                                 #'sale_line_id':record.sale_order_id.id,
-                                #'planned_date_begin': record.sale_order_id.date_begin,
-                                #'planned_date_end': record.sale_order_id.date_end,
+                                'planned_date_begin': record.sale_order_id.date_begin,
+                                'planned_date_end': record.sale_order_id.date_end,
                                 #'is_fsm': True,
                                 'categ_udn_id': record.sale_order_id.udn_id.id
                                 }
@@ -91,11 +94,11 @@ class WizardSaleOrderType(models.TransientModel):
                                 'fri': record.sale_order_id.product_id.fri,
                                 'sat': record.sale_order_id.product_id.sat,
                                 'sun': record.sale_order_id.product_id.sun,
-                                'users_ids': record.sale_order_id.users_ids.ids,
+                                'users_ids': users_ids,
                                 'product_id': record.sale_order_id.product_id.id,
                                 #'sale_line_id':record.sale_order_id.id,
-                                #'planned_date_begin': record.sale_order_id.date_begin,
-                                #'planned_date_end': record.sale_order_id.date_end,
+                                'planned_date_begin': record.sale_order_id.date_begin,
+                                'planned_date_end': record.sale_order_id.date_end,
                                 'is_fsm': True,
                                 'categ_udn_id': record.sale_order_id.udn_id.id
                                 
@@ -136,7 +139,7 @@ class WizardSaleOrderType(models.TransientModel):
                         'fri': record.sale_order_id.product_id.fri,
                         'sat': record.sale_order_id.product_id.sat,
                         'sun': record.sale_order_id.product_id.sun,
-                        'users_ids': record.sale_order_id.users_ids.ids,
+                        'users_ids': users_ids,
                         'product_id': record.sale_order_id.product_id.id,
                         #'sale_line_id':record.sale_order_id.id,
                         'planned_date_begin': record.sale_order_id.date_begin,
@@ -176,7 +179,7 @@ class WizardSaleOrderType(models.TransientModel):
                                                 'origin': record.sale_order_id.name,
                                                 'comercial_description': record.sale_order_id.comercial_description,
                                                 'gadgest_contract_type_id': record.sale_order_id.gadgets_contract_type_id.id,
-                                                'users_ids': record.sale_order_id.users_ids.ids,
+                                                'users_ids': users_ids,
                                                 'product_id': record.sale_order_id.product_id.id,
                                                 #'sale_line_id':record.sale_order_id.id,
                                             }

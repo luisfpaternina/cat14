@@ -51,10 +51,6 @@ class SaleOrder(models.Model):
         'Task User id')
     check_product = fields.Boolean(
         compute='compute_check_product')
-    date_begin = fields.Datetime(
-        string="Date begin")
-    date_end = fields.Datetime(
-        string="Date end")
     quote_date_sent = fields.Date(
         string="Quote date sent",
         compute="_calculated_quote_date_sent")
