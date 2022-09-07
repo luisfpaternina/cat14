@@ -579,6 +579,8 @@ class ProductTemplate(models.Model):
         compute="compute_subscriptions")
     subscription_name = fields.Char(
         string="Subscription name")
+    is_priority_prm = fields.Boolean(
+        string="Service PRM")
 
 
     def compute_subscriptions(self):
