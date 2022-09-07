@@ -47,8 +47,8 @@
         'reports/technical_data_template.xml',
         'reports/print_gadget_qr.xml',
         'data/sequences.xml',
+        'data/ir_rule.xml',
         
     ],
     'installable': True
 }
-
