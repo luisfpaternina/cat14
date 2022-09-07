@@ -234,6 +234,13 @@ class ProjectTask(models.Model):
         related="product_id.partner_admin_id")
     subscription_name = fields.Char(
         string="Subscription name")
+    commercial_id = fields.Many2one(
+        'res.users',
+        string="Commercial")
+    technical_end_date = fields.Datetime(
+        string="Technical end date")
+    supervisor_end_date = fields.Datetime(
+        string="Supervisor end date")
     
 
     def mark_notice_technical(self):

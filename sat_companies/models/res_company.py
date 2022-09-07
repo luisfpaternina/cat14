@@ -18,4 +18,6 @@ class ResCompany(models.Model):
         string="Users")
     is_qr_required = fields.Boolean(
         string="Is QR required?")
+    is_minute_point = fields.Boolean(
+        string="Enable minute point")
     

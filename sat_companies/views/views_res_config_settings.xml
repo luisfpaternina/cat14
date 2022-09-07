@@ -9,7 +9,7 @@
             <field name="arch" type="xml">
 
                 <xpath expr="//div[hasclass('settings')]" position="inside">
-                    <div class="app_settings_block" data-string="My Module" string="SAT" data-key="my_module">
+                    <div class="app_settings_block" data-string="My Module" string="sat_companies" data-key="sat_companies">
                         <h2>Potencial client configuration</h2>
                         <div class="row mt16 o_settings_container">
                             <div class="col-12 col-lg-6 o_setting_box">
@@ -140,6 +140,17 @@
                                     <label string="Transfer request for technicians" for="module_pc_stock_picking_ext"/>
                                     <div class="text-muted">Enable Transfer request</div>
                                     <field name="module_pc_stock_picking_ext"/>
+                                </div>
+                            </div> 
+                        </div>
+                        <h2>Minute point/componentes</h2>
+                        <div class="row mt16 o_settings_container">
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_left_pane"/>
+                                <div class="o_setting_right_pane">
+                                    <label string="Activate minute point/componentes" for="is_minute_point"/>
+                                    <div class="text-muted">Enable minute point in components</div>
+                                    <field name="is_minute_point"/>
                                 </div>
                             </div> 
                         </div>

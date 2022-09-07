@@ -58,6 +58,11 @@ class ResConfigSettings(models.TransientModel):
     company_vehicles = fields.Many2many(
         'res.partner',
         string="Speific")
+    is_minute_point = fields.Boolean(
+        string="Is potencial client",
+        related="company_id.is_minute_point",
+        readonly=False,
+        config_parameter='sat_companies.is_minute_point')
     
 
     def set_values(self):
@@ -68,4 +73,5 @@ class ResConfigSettings(models.TransientModel):
         self.env['ir.config_parameter'].sudo().set_param('has_rae', self.has_rae)
         self.env['ir.config_parameter'].sudo().set_param('is_forecast_made', self.is_forecast_made)
         self.env['ir.config_parameter'].sudo().set_param('sat_companies.user_operator_id', self.user_operator_id.id)
+        self.env['ir.config_parameter'].sudo().set_param('is_minute_point', self.is_minute_point)
         return res

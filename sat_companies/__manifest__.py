@@ -34,6 +34,7 @@
         'views/res_company.xml',
         'views/account_move_line.xml',
         'views/res_partner.xml',
+        'views/mrp_bom.xml',
         'views/views_res_config_settings.xml',
         'views/project_task.xml',
         'reports/invoice.xml',

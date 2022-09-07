@@ -7,7 +7,7 @@
            <field name="model_id" ref="project.model_project_task"/>
            <field name="active">True</field>
            <field name="global">True</field>
-           <field name="domain_force">[('users_ids','=',user.ids)]</field>
+           <field name="domain_force">[('users_ids','in',user.ids)]</field>
         </record>
 
     </data>
