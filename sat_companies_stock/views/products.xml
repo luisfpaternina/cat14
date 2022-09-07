@@ -286,6 +286,7 @@
                             <field name="engine_brake"/>
                             <field name="stop_numbers"/>
                             <field name="people_numbers"/>
+                            <field name="is_priority_prm"/>
                         </group>
                         <group>
                             <field name="gadget_load"/>
