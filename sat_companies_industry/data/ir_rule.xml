@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>     
+<odoo>
+    <data>
+
+        <record id="ir_rule_my_ots_by_users" model="ir.rule">
+           <field name="name">Mis tareas/OTs</field>
+           <field name="model_id" ref="project.model_project_task"/>
+           <field name="active">True</field>
+           <field name="global">True</field>
+           <field name="domain_force">[('users_ids','=',user.ids)]</field>
+        </record>
+
+    </data>
+</odoo> 
