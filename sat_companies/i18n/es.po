@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-19 15:07+0000\n"
-"PO-Revision-Date: 2022-08-19 15:07+0000\n"
+"POT-Creation-Date: 2022-09-08 09:39+0000\n"
+"PO-Revision-Date: 2022-09-08 09:39+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -152,6 +152,11 @@ msgstr "Acción"
 
 #. module: sat_companies
 #: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
+msgid "Activate minute point/componentes"
+msgstr "Activar punto del acta en lista de materiales"
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
 msgid "Activate potencial client"
 msgstr "Activar contactos potenciales"
 
@@ -181,6 +186,11 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:sat_companies.report_template_invoice
 msgid "Base imponible"
 msgstr ""
+
+#. module: sat_companies
+#: model:ir.model,name:sat_companies.model_mrp_bom
+msgid "Bill of Material"
+msgstr "Lista de materiales"
 
 #. module: sat_companies
 #: model_terms:ir.ui.view,arch_db:sat_companies.report_template_invoice
@@ -252,6 +262,7 @@ msgstr "Fecha"
 #: model:ir.model.fields,field_description:sat_companies.field_account_move__display_name
 #: model:ir.model.fields,field_description:sat_companies.field_account_move_line__display_name
 #: model:ir.model.fields,field_description:sat_companies.field_account_move_unpaid__display_name
+#: model:ir.model.fields,field_description:sat_companies.field_mrp_bom__display_name
 #: model:ir.model.fields,field_description:sat_companies.field_project_task__display_name
 #: model:ir.model.fields,field_description:sat_companies.field_res_company__display_name
 #: model:ir.model.fields,field_description:sat_companies.field_res_config_settings__display_name
@@ -273,6 +284,17 @@ msgstr "Habilitar solicitud de transferencias"
 #: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
 msgid "Enable forecast made"
 msgstr "Habilitar previsión en ventas"
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_mrp_bom__is_minute_point
+#: model:ir.model.fields,field_description:sat_companies.field_res_company__is_minute_point
+msgid "Enable minute point"
+msgstr "Punto del acat"
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
+msgid "Enable minute point in components"
+msgstr "Esta opción permite relacionar punto del acta con la lista de materiales"
 
 #. module: sat_companies
 #: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
@@ -365,6 +387,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sat_companies.field_account_move__id
 #: model:ir.model.fields,field_description:sat_companies.field_account_move_line__id
 #: model:ir.model.fields,field_description:sat_companies.field_account_move_unpaid__id
+#: model:ir.model.fields,field_description:sat_companies.field_mrp_bom__id
 #: model:ir.model.fields,field_description:sat_companies.field_project_task__id
 #: model:ir.model.fields,field_description:sat_companies.field_res_company__id
 #: model:ir.model.fields,field_description:sat_companies.field_res_config_settings__id
@@ -457,6 +480,7 @@ msgstr "Mantenedora"
 
 #. module: sat_companies
 #: model:ir.model.fields,field_description:sat_companies.field_res_company__is_potencial_client
+#: model:ir.model.fields,field_description:sat_companies.field_res_config_settings__is_minute_point
 #: model:ir.model.fields,field_description:sat_companies.field_res_config_settings__is_potencial_client
 msgid "Is potencial client"
 msgstr "Es un contacto potencial"
@@ -475,6 +499,7 @@ msgstr "Apunte contable"
 #: model:ir.model.fields,field_description:sat_companies.field_account_move____last_update
 #: model:ir.model.fields,field_description:sat_companies.field_account_move_line____last_update
 #: model:ir.model.fields,field_description:sat_companies.field_account_move_unpaid____last_update
+#: model:ir.model.fields,field_description:sat_companies.field_mrp_bom____last_update
 #: model:ir.model.fields,field_description:sat_companies.field_project_task____last_update
 #: model:ir.model.fields,field_description:sat_companies.field_res_company____last_update
 #: model:ir.model.fields,field_description:sat_companies.field_res_config_settings____last_update
@@ -526,6 +551,16 @@ msgstr ""
 #: model:ir.model.fields,field_description:sat_companies.field_account_move_unpaid__message_ids
 msgid "Messages"
 msgstr "Mnesajes"
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_mrp_bom__minute_point_id
+msgid "Minute point"
+msgstr "Punto de acta"
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
+msgid "Minute point/componentes"
+msgstr "Punto de acta/Lista de materiales"
 
 #. module: sat_companies
 #: model:ir.model.fields,field_description:sat_companies.field_account_move_unpaid__name
@@ -691,14 +726,14 @@ msgid "Reversed"
 msgstr "Revertido"
 
 #. module: sat_companies
-#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
-msgid "SAT"
-msgstr ""
-
-#. module: sat_companies
 #: model:ir.model.fields,field_description:sat_companies.field_account_move_unpaid__message_has_sms_error
 msgid "SMS Delivery error"
 msgstr ""
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_mrp_bom__sale_order_id
+msgid "Sale order"
+msgstr "Presupuesto"
 
 #. module: sat_companies
 #: model:ir.model.fields,field_description:sat_companies.field_res_config_settings__module_sale_revision_history
@@ -736,6 +771,11 @@ msgstr "Mostar QR en el reporte"
 #: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
 msgid "Show technical"
 msgstr "Habilitar técnico"
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_res_config_settings__company_vehicles
+msgid "Speific"
+msgstr ""
 
 #. module: sat_companies
 #: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
@@ -830,19 +870,19 @@ msgstr ""
 #: code:addons/sat_companies/models/res_partner.py:0
 #, python-format
 msgid "You must register a Bank account"
-msgstr "Es necesario registrar una cuenta bancaría"
+msgstr ""
 
 #. module: sat_companies
 #: code:addons/sat_companies/models/res_partner.py:0
 #, python-format
 msgid "You must register a city"
-msgstr "Es necesario registrar una ciudad"
+msgstr ""
 
 #. module: sat_companies
 #: code:addons/sat_companies/models/res_partner.py:0
 #, python-format
 msgid "You must register an identification number"
-msgstr "Es necesario el número de identificación"
+msgstr ""
 
 #. module: sat_companies
 #: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
@@ -852,4 +892,9 @@ msgstr "Cambio"
 #. module: sat_companies
 #: model:ir.model.fields,field_description:sat_companies.field_res_config_settings__module_pc_stock_picking_ext
 msgid "pc stock picking ext"
+msgstr ""
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
+msgid "sat_companies"
 msgstr ""
