@@ -16,5 +16,5 @@ class MrpBom(models.Model):
 
     @api.depends('product_tmpl_id')
     def compute_is_minute_point(self):
-        mp = self.env['ir.config_parameter'].sudo().get_param('sat_companies_mrp.is_minute_point') or False
+        mp = self.env['ir.config_parameter'].sudo().get_param('sat_companies.is_minute_point') or False
         self.is_minute_point = mp
