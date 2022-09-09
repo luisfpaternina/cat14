@@ -39,7 +39,7 @@ msgstr "Línea de Lista de Materiales"
 #: model:ir.model.fields,field_description:sat_companies_mrp.field_sale_order_bom__bom_line_ids
 #: model:ir.model.fields,field_description:sat_companies_mrp.field_sale_order_line__bom_line_ids
 msgid "BoM Lines"
-msgstr ""
+msgstr "Lista de materiales"
 
 #. module: sat_companies_mrp
 #: model:ir.model.fields,field_description:sat_companies_mrp.field_sale_order__bom_line_ids
