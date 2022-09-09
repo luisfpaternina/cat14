@@ -9,11 +9,11 @@
             <xpath expr="//form/sheet/notebook/page[(@name='customer_signature')]" position="after">
                 <page string="KITS/Checklist" name="kits_components">
                     <group>
-                        <field name="sale_bom_ids">
+                        <field name="sale_bom_ids" force_save="1">
                             <tree>
-                                <field name="product_id"/>
-                                <field name="bom_id" invisible="1"/>
-                                <field name="bom_line_ids"  widget="many2many_tags"/>
+                                <field name="product_id" force_save="1"/>
+                                <field name="bom_id" invisible="1" force_save="1"/>
+                                <field name="bom_line_ids"  widget="many2many_tags" force_save="1"/>
                             </tree>
                         </field>
                     </group>

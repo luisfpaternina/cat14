@@ -12,6 +12,7 @@ class SaleOrder(models.Model):
         'sale.order.bom',
         'sale_order_id',
         string="Componets",
+        compute="compute_components",
         store = True)
 
 
