@@ -24,6 +24,7 @@
         'industry_fsm',
         'sat_companies_stock',
         'hr',
+        'mrp',
 
     ],
 
