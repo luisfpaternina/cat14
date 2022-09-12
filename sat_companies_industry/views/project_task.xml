@@ -250,11 +250,6 @@
                 string="notification"
                 type="object"
                 />
-                <button 
-                name="show_message_warning"
-                string="warning"
-                type="object"
-                />
             </xpath>
 
         </field>

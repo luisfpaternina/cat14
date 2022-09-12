@@ -24,6 +24,7 @@
         'timesheet_grid',
         'hr_timesheet',
         'sat_companies',
+        'sat_companies_zones',
 
     ],
 

@@ -135,6 +135,7 @@ class ProjectTask(models.Model):
     overlapping_tasks_users = fields.Boolean(
         default=False)
 
+
     def get_date_range_crossing(
         self,
         model_compare,
@@ -299,8 +300,6 @@ class ProjectTask(models.Model):
             else:
                 planned_date_end = self.planned_date_end
 
-            
-
             ids = False
             tasks_data = self.env['project.task'].search([])
             tasks_data = self.env['project.task'].search([('users_ids','!=', False),
@@ -352,7 +351,6 @@ class ProjectTask(models.Model):
                 })
 
             return super(ProjectTask, self).write(vals)
-
 
     @api.onchange('partner_id','ot_type_id')
     def _payment_terms(self):

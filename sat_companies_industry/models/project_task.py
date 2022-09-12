@@ -2,6 +2,7 @@ from email import message
 from email.policy import default
 from xmlrpc.client import DateTime
 from markupsafe import string
+from psutil import users
 from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
 from datetime import datetime,date,timedelta
@@ -241,7 +242,31 @@ class ProjectTask(models.Model):
         string="Technical end date")
     supervisor_end_date = fields.Datetime(
         string="Supervisor end date")
+    now = fields.Datetime(
+        string="Now")
     
+
+    @api.onchange('product_id','partner_id')
+    def assign_correct_technician(self):
+        tecnicos = []
+        responsables = []
+        morning = ['08', '09', '10', '11', '12', '13', '14', '15']
+        now = datetime.datetime.now()
+        hours = now.strftime("%I")
+        users = self.env['res.partner.zones'].search([('id', '=', self.product_id.zone_id.id)])
+        if users and self.ot_type_id.is_warning:
+            if hours in morning:
+                for u in users:
+                    responsables.append(u.user_id.id)
+                    self.users_ids = responsables
+            else:
+                for u in users.users_ids:
+                    tecnicos.append(u)
+                    self.users_ids = self.product_id.zone_id.users_ids[0]
+
+    def mark_notice_technical(self):
+        for record in self:
+            record.write({'is_technical_notice_ot': True})
 
     def mark_notice_technical(self):
         for record in self:
@@ -344,5 +369,5 @@ class ProjectTask(models.Model):
             }
  
     def show_message_warning(self):
-        raise Warning('Cannot do something')
+        print('testing')
         
