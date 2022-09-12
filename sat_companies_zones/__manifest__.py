@@ -18,7 +18,6 @@
         'stock',
         'sat_companies_partner',
         'sat_companies_hr',
-        'sat_companies_zones',
 
     ],
 
