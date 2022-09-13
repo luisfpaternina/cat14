@@ -7,9 +7,9 @@
         <field name="inherit_id" ref="industry_fsm.view_task_form2_inherit"/>
         <field name="arch" type="xml">
             <xpath expr="//div[1]" position="replace">
-                <field name="overlapping_tasks_users" invisible="True"/>
+                <field name="overlapping_tasks" invisible="True"/>
                 <div role="alert" class="alert alert-warning p-3 text-center alert-overflow"
-                    attrs="{'invisible': [('overlapping_tasks_users', '=', False)]}">
+                    attrs="{'invisible': [('overlapping_tasks', '=', False)]}">
                     <button name="get_hr_leave_crossing" type="object" class="btn-link pr-1">
                         overlapping tasks
                     </button>
