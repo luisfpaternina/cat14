@@ -134,7 +134,6 @@ class ProjectTask(models.Model):
     ids_overlapping_tasks_users = fields.Char()
     overlapping_tasks = fields.Boolean(default=False)
 
-
     def get_date_range_crossing(
         self,
         model_compare,
@@ -164,7 +163,6 @@ class ProjectTask(models.Model):
                 continue
         
         return model_crossing
-
 
     def get_model_user_crossing(
                                 self,
