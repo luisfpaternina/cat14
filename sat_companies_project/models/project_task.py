@@ -1,4 +1,6 @@
 from email.policy import default
+
+from numpy import subtract
 from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
 from datetime import tzinfo, timedelta, datetime, date
@@ -137,7 +139,31 @@ class ProjectTask(models.Model):
     ids_overlapping_tasks_users = fields.Char()
     overlapping_tasks_users = fields.Boolean(
         default=False)
+    calculate_planed_hours = fields.Float(
+        string="Subtract hours")
+    progress_calculated = fields.Float(
+        string="Progress percentaje",
+        related="calculate_planed_hours")
+    is_late_hours = fields.Boolean(
+        string="Is late hours",
+        compute="compute_is_late_hours")
 
+
+    def compute_is_late_hours(self):
+        if self.effective_hours > self.planned_hours:
+            self.is_late_hours = True
+        else:
+            self.is_late_hours = False
+
+    @api.depends('planned_hours','effective_hours')
+    def compute_subtract_hours(self):
+        if self.effective_hours > 0:
+            subtract = self.effective_hours - self.planned_hours
+            cal = subtract * 100
+            percentaje = cal - 100
+            self.calculate_planed_hours =  percentaje
+        else:
+            self.calculate_planed_hours = 0
 
     @api.onchange('product_id','partner_id')
     def assign_correct_technician(self):
@@ -300,7 +326,7 @@ class ProjectTask(models.Model):
             else:
                 return super(ProjectTask, self).create(vals)
     
-    """"
+    """
     def write(self, vals):
         if not vals.get('users_ids'):
             users_ids = self.users_ids.ids
@@ -372,7 +398,7 @@ class ProjectTask(models.Model):
                 })
 
             return super(ProjectTask, self).write(vals)
-    """""
+    """
 
     @api.onchange('partner_id','ot_type_id')
     def _payment_terms(self):
