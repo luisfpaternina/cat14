@@ -137,7 +137,6 @@ class ProjectTask(models.Model):
         string='Assigned to',
         store=True)
     ids_overlapping_tasks_users = fields.Char()
-<<<<<<< HEAD
     overlapping_tasks_users = fields.Boolean(
         default=False)
     calculate_planed_hours = fields.Float(
@@ -148,10 +147,8 @@ class ProjectTask(models.Model):
     is_late_hours = fields.Boolean(
         string="Is late hours",
         compute="compute_is_late_hours")
-
-=======
     overlapping_tasks = fields.Boolean(default=False)
->>>>>>> 0a19778540c6a3fee1b119f4eae9b811f2e47d86
+
 
     def compute_is_late_hours(self):
         if self.effective_hours > self.planned_hours:
@@ -402,11 +399,9 @@ class ProjectTask(models.Model):
                 })
 
             return super(ProjectTask, self).write(vals)
-<<<<<<< HEAD
-    """
-=======
 
->>>>>>> 0a19778540c6a3fee1b119f4eae9b811f2e47d86
+    """
+
 
     @api.onchange('partner_id','ot_type_id')
     def _payment_terms(self):
