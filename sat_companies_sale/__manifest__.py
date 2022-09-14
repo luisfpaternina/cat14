@@ -14,6 +14,7 @@
     'depends': [
 
         'sale_management',
+        'sale',
         'crm',
         'website',
         'hr_holidays',

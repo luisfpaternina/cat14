@@ -3,6 +3,8 @@ from markupsafe import string
 from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
 import re
+from playsound import playsound
+import os
 
 
 class ResPartner(models.Model):
@@ -28,6 +30,9 @@ class ResPartner(models.Model):
     potencial_contact = fields.Boolean(
         string="Validator potencial contact")
 
+    def play_sound(self):
+        # myfile = 'cat14/sat_companies/static/description/sounds/alarma.mp3'
+        playsound('/sat_companies/static/description/sounds/alarma.mp3')
 
     @api.constrains(
         'name',

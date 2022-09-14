@@ -22,6 +22,8 @@
         'base_automation',
         'sale_project',
         'sale_timesheet',
+        'sale',
+        'hr_timesheet',
 
     ],
 

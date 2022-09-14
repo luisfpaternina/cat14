@@ -133,10 +133,6 @@
                 <field name="month_date" invisible="1"/>
                 <field name="is_warning" invisible="1"/>
                 <field name="is_stop_gadget" invisible="1"/>
-                <field name="attachment_id" widget="attachment_many2one_audio_widget"/>
-                <field name="alarm_sound" widget="attachment_binary_audio_widget"/>
-                <field name="store_fname" />
-                <field name="audio_url" widget="audio_field"/>
             </xpath>
 
             <xpath expr="//field[(@name='project_id')]" position="after">
