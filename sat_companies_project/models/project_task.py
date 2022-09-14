@@ -2,6 +2,8 @@ from email.policy import default
 from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
 from datetime import tzinfo, timedelta, datetime, date
+from datetime import date
+import datetime
 from odoo.http import request
 import base64
 from io import BytesIO
@@ -130,11 +132,30 @@ class ProjectTask(models.Model):
         'res_users_ids',
         'user_id',
         'users_ids',
-        string='Assigned to')
+        string='Assigned to',
+        store=True)
     ids_overlapping_tasks_users = fields.Char()
     overlapping_tasks_users = fields.Boolean(
         default=False)
 
+
+    @api.onchange('product_id','partner_id')
+    def assign_correct_technician(self):
+        tecnicos = []
+        responsables = []
+        morning = ['08', '09', '10', '11', '12', '13', '14', '15']
+        now = datetime.datetime.now()
+        hours = now.strftime("%I")
+        users = self.env['res.partner.zones'].search([('id', '=', self.product_id.zone_id.id)])
+        if users and self.ot_type_id.is_warning:
+            if hours in morning:
+                for u in users:
+                    responsables.append(u.user_id.id)
+                    self.users_ids = responsables
+            else:
+                for u in users.users_ids:
+                    tecnicos.append(u)
+                    self.users_ids = self.product_id.zone_id.users_ids[0]
 
     def get_date_range_crossing(
         self,
@@ -279,7 +300,7 @@ class ProjectTask(models.Model):
             else:
                 return super(ProjectTask, self).create(vals)
     
-
+    """"
     def write(self, vals):
         if not vals.get('users_ids'):
             users_ids = self.users_ids.ids
@@ -351,6 +372,7 @@ class ProjectTask(models.Model):
                 })
 
             return super(ProjectTask, self).write(vals)
+    """""
 
     @api.onchange('partner_id','ot_type_id')
     def _payment_terms(self):
