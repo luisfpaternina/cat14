@@ -27,6 +27,19 @@
             
             <xpath expr="//field[@name='user_id']" position="after">
                 <field name="users_ids" attrs="{'required': ['|',('planned_date_begin', '!=', False),('planned_date_end', '!=', False)]}" widget="many2many_tags" force_save="1"/>
+                <field name="is_late_hours" invisible="1"/>
+            </xpath>
+
+            <xpath expr="//sheet" position="before">
+                <div class="alert alert-danger" role="alert" style="margin-bottom:0px;"
+                        attrs="{'invisible': [('is_late_hours', '!=', True)]}">
+                    This ot exceeded the number of planned hours.
+                    <bold>
+                        <a class="alert-link" role="button">
+                            <field name="name" readonly="True"/>
+                        </a>
+                    </bold>
+                </div>
             </xpath>
 
             <xpath expr="//field[@name='tag_ids']" position="after">
@@ -244,4 +257,33 @@
 
         </field>
     </record>
-</odoo>     
+
+    <record id="inhertit_view_view_task_form2_inherited" model="ir.ui.view">
+        <field name="name">project.task.form</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="hr_timesheet.view_task_form2_inherited"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='progress']" position="after">
+                <field name="calculate_planed_hours" invisible="1"/>
+                <field name="progress_calculated" widget="progressbar" invisible="1"/>
+                <field name="is_late_hours" invisible="1"/>
+            </xpath>
+
+            <xpath expr="//form[1]/sheet[1]/notebook[1]/page[not(@name)][1]/group[1]" position="after">
+                <div class="alert alert-danger" role="alert" style="margin-bottom: 20px" attrs="{'invisible': [('is_late_hours', '!=', True)]}">
+                    <strong>This ot exceeded the number of planned hours.</strong>
+                </div>
+                <group name="group_BRr6S">
+                    <group>
+                        <field name="is_late_hours" invisible="1"/>
+                    </group>
+                    <group>
+
+                    </group>
+                </group>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>    

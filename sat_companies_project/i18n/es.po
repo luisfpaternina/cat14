@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-31 18:15+0000\n"
-"PO-Revision-Date: 2022-08-31 18:15+0000\n"
+"POT-Creation-Date: 2022-09-14 14:21+0000\n"
+"PO-Revision-Date: 2022-09-14 14:21+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -84,9 +84,21 @@ msgid ""
 msgstr ""
 
 #. module: sat_companies_project
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.view_sale_order_inherit_sat_companies_project
+msgid ""
+"<i class=\"fa fa-long-arrow-right mx-2 oe_edit_only\" aria-label=\"Arrow icon\" title=\"Arrow\"/>\n"
+"                        <i class=\"fa fa-long-arrow-right mx-2 oe_read_only\" aria-label=\"Arrow icon\" title=\"Arrow\"/>"
+msgstr ""
+
+#. module: sat_companies_project
 #: model_terms:ir.ui.view,arch_db:sat_companies_project.view_task_form2_inherit_2
 msgid "<span class=\"align-middle\">for theses employees at the same time.</span>"
 msgstr ""
+
+#. module: sat_companies_project
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.inhertit_view_view_task_form2_inherited
+msgid "<strong>This ot exceeded the number of planned hours.</strong>"
+msgstr "Esta OT superó el número de Horas iniciales planificadas"
 
 #. module: sat_companies_project
 #: model_terms:ir.ui.view,arch_db:sat_companies_project.wizard_sale_order_type_form
@@ -193,6 +205,11 @@ msgstr "Fecha de scanner foso"
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task__check_qr_active
 msgid "Check Qr"
 msgstr "Chequeo Qr"
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order__check_users
+msgid "Check Users"
+msgstr ""
 
 #. module: sat_companies_project
 #: model:ir.model.fields.selection,name:sat_companies_project.selection__project_task__state_check_qr__checking
@@ -315,6 +332,11 @@ msgid "ENVIAR PRESUPUESTO"
 msgstr ""
 
 #. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order__date_end
+msgid "End date"
+msgstr ""
+
+#. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn__message_follower_ids
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task_template__message_follower_ids
 #: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__message_follower_ids
@@ -425,6 +447,11 @@ msgid "Is a project existing ?"
 msgstr "Proyecto existente"
 
 #. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__is_late_hours
+msgid "Is late hours"
+msgstr "Supero límite de horas planificadas"
+
+#. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__is_line
 msgid "Is line"
 msgstr "Línea"
@@ -462,11 +489,6 @@ msgstr "Aviso"
 #: model:ir.model,name:sat_companies_project.model_account_move
 msgid "Journal Entry"
 msgstr "Asiento contable"
-
-#. module: sat_companies_project
-#: model_terms:ir.ui.view,arch_db:sat_companies_project.view_sale_order_inherit_sat_companies_project
-msgid "KIT/Checklist"
-msgstr ""
 
 #. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_account_move____last_update
@@ -688,6 +710,16 @@ msgid "Pit confirm"
 msgstr "Foso confimación"
 
 #. module: sat_companies_project
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.view_sale_order_inherit_sat_companies_project
+msgid "Planned Date"
+msgstr "Fecha planificación"
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__progress_calculated
+msgid "Progress percentaje"
+msgstr "Porcentaje horas"
+
+#. module: sat_companies_project
 #: model:ir.model,name:sat_companies_project.model_project_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_wizard_sale_order_type__project_id
 msgid "Project"
@@ -822,6 +854,11 @@ msgid "Stages"
 msgstr "Etapas"
 
 #. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order__date_begin
+msgid "Start date"
+msgstr ""
+
+#. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_project__start_date_project
 msgid "Start date project"
 msgstr "Fecha inicio proyecto"
@@ -830,6 +867,11 @@ msgstr "Fecha inicio proyecto"
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task__state_check_qr
 msgid "State Check Gagdest"
 msgstr "Estado Chequeo del aparato"
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__calculate_planed_hours
+msgid "Subtract hours"
+msgstr "Calculo de horas"
 
 #. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn__employee_id
@@ -914,7 +956,6 @@ msgstr "El foso ha sido inspeccionado"
 
 #. module: sat_companies_project
 #: code:addons/sat_companies_project/models/project_task.py:0
-#: code:addons/sat_companies_project/models/project_task.py:0
 #, python-format
 msgid ""
 "The users: \n"
@@ -922,6 +963,11 @@ msgid ""
 "\n"
 "Are absent on the selected date"
 msgstr "No puede asignar usuarios que tengan ausencias para esas fechas"
+
+#. module: sat_companies_project
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.project_task_inherit_form_view
+msgid "This ot exceeded the number of planned hours."
+msgstr "Esta OT superó el número de Horas iniciales planificadas"
 
 #. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task__ot_type_id
@@ -958,6 +1004,11 @@ msgstr "Hasta el aparato"
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task__to_zone
 msgid "To the Zone"
 msgstr "Hasta la zona"
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order__total_service_line
+msgid "Total service"
+msgstr ""
 
 #. module: sat_companies_project
 #: model:ir.model,name:sat_companies_project.model_stock_picking
