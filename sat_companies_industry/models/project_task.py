@@ -8,10 +8,6 @@ from odoo.exceptions import ValidationError
 from datetime import datetime,date,timedelta
 from datetime import date
 import datetime
-import io
-import time
-import requests
-
 
 
 class ProjectTask(models.Model):
@@ -244,25 +240,7 @@ class ProjectTask(models.Model):
         string="Supervisor end date")
     now = fields.Datetime(
         string="Now")
-    
 
-    @api.onchange('product_id','partner_id')
-    def assign_correct_technician(self):
-        tecnicos = []
-        responsables = []
-        morning = ['08', '09', '10', '11', '12', '13', '14', '15']
-        now = datetime.datetime.now()
-        hours = now.strftime("%I")
-        users = self.env['res.partner.zones'].search([('id', '=', self.product_id.zone_id.id)])
-        if users and self.ot_type_id.is_warning:
-            if hours in morning:
-                for u in users:
-                    responsables.append(u.user_id.id)
-                    self.users_ids = responsables
-            else:
-                for u in users.users_ids:
-                    tecnicos.append(u)
-                    self.users_ids = self.product_id.zone_id.users_ids[0]
 
     def mark_notice_technical(self):
         for record in self:
@@ -332,10 +310,6 @@ class ProjectTask(models.Model):
                 return {'domain': {'categ_udn_id': [('ot_type_id', '=', record.ot_type_id.id)]}}
             else:
                 return {'domain': {'categ_udn_id': []}}
-
-    @api.onchange('contact_person')
-    def _capitalizate_name(self):        
-        self.contact_person = self.contact_person.title() if self.contact_person else False
 
     @api.depends('ot_date')
     def calculate_month(self):

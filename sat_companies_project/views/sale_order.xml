@@ -50,6 +50,10 @@
                 <attribute name="required">1</attribute>
             </xpath>
 
+            <xpath expr="//field[@name='amount_total']" position="after">
+               <field name="total_service_line"/>
+            </xpath>
+
             <xpath expr="//form[1]/sheet[1]/notebook[1]" position="inside">
                 <page string="Description" name="commercial_description">
                     <group name="principal_group">

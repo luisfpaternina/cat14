@@ -15,6 +15,7 @@
 
         'maintenance',
         'industry_fsm',
+        'sale',
         'project',
         'hr_holidays',
         'base_automation',
@@ -34,6 +35,7 @@
         'security/ir.model.access.csv',
         'data/project.task.breakdowns.csv',
         'data/ir_filters.xml',
+        'data/base_automatization.xml',
         'views/maintenance_minute_point.xml',
         'views/maintenance_type_deffect.xml',
         'views/project_task.xml',

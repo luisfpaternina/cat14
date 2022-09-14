@@ -46,6 +46,20 @@ class SaleOrder(models.Model):
     check_users = fields.Boolean(
         compute="_compute_check_users",
         store=True)
+    total_service_line = fields.Float(
+        string="Total service",
+        compute="compute_total_Service_line")
+
+
+    def compute_total_Service_line(self):
+        suma = []
+        for line in self.order_line:
+            if line.product_id.type == 'service' and line.product_uom.name == 'Horas':
+                suma.append(line.product_uom_qty)
+                total = sum(suma)
+                self.total_service_line = total
+            else:
+                self.total_service_line = 0
 
     @api.depends('users_ids')
     def _compute_check_users(self):
@@ -151,6 +165,7 @@ class SaleOrder(models.Model):
                                     'sun': record.product_id.sun,
                                     'origin': record.name,
                                     'comercial_description': record.comercial_description,
+                                    'planned_hours': record.total_service_line,
                                     #'sale_line_id':record.sale_order_id.id,
                                     #'planned_date_begin': record.sale_order_id.date_begin,
                                     #'planned_date_end': record.sale_order_id.date_end,
@@ -168,6 +183,7 @@ class SaleOrder(models.Model):
                                     'project_id': project_fsm.id,
                                     'origin': record.name,
                                     'comercial_description': record.comercial_description,
+                                    'planned_hours': record.total_service_line,
                                     'sale_order_id': record.id,
                                     'user_id': record.task_user_id.id,
                                     'users_ids': record.users_ids.ids,
@@ -203,6 +219,7 @@ class SaleOrder(models.Model):
                                     'project_id': project_fsm.id,
                                     'origin': record.name,
                                     'comercial_description': record.comercial_description,
+                                    'planned_hours': record.total_service_line,
                                     'sale_order_id': record.id,
                                     'user_id': record.task_user_id.id,
                                     'users_ids': record.users_ids.ids,
