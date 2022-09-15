@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <template id="iherit_report_report_mrp_bom" inherit_id="mrp.report_mrp_bom">
+        <template id="inherit_sale_report_saleorder_document" inherit_id="sale.report_saleorder_document">
 
-            <xpath expr="/t/div/t[1]/div[1]/div/h6" position="after">
-                <t t-if="data['bom'].is_minute_point == True">
-                <span>Punto del acta:  <t t-esc="data['bom'].minute_point_id.concatenate"/> </span>
-                </t>
+            <xpath expr="/t/t/div/table/thead/tr/th[1]" position="after">
+                <th>
+                    <span>Punto de acta</span>
+                </th>
+            </xpath>
+
+            <xpath expr="/t/t/div/table/tbody/t[2]/tr/t[1]/td[1]" position="after">
+                <td>
+                    <span t-field="line.minute_point_id"/>
+                </td>
             </xpath>
 
         </template>
