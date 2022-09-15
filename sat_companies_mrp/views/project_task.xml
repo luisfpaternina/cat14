@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_project_task_sat_companies_mrp" model="ir.ui.view">
+        <field name="name">inherit.form.project.task</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//button[@name='action_timer_pause']" position="after">
+                <button 
+                name="get_values_minute_point_from_sale"
+                string="punto del acat del pedido"
+                type="object"
+                invisible="1"/>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>
