@@ -50,7 +50,7 @@
                 <page string="Description" name="commercial_description">
                     <group name="principal_group">
                         <field name="comercial_description" attrs="{'readonly': [('origin', '!=', False)]}"/>
-                        <field name="origin" invisible="0"/>
+                        <field name="origin" invisible="1"/>
                     </group>
                 </page>
             </xpath>

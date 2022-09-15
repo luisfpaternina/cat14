@@ -25,8 +25,10 @@
 
         'security/security.xml',
         'security/ir.model.access.csv',
+        'data/base_automatization.xml',
         'views/sale_order.xml',
         'views/mrp_bom.xml',
+        'views/project_task.xml',
         'reports/inherit_report_mrp_bom.xml',
         'reports/inherit_report_sale_order.xml',
 
