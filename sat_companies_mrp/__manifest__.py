@@ -28,6 +28,7 @@
         'views/sale_order.xml',
         'views/mrp_bom.xml',
         'reports/inherit_report_mrp_bom.xml',
+        'reports/inherit_report_sale_order.xml',
 
                    
     ],
