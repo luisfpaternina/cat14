@@ -19,7 +19,7 @@
                 type="object"
                 class="btn btn-warning"
                 context="{'default_product_id': active_id}"
-                attrs="{'invisible': [('is_gadget_stopped', '!=', False)]}"
+                attrs="{'invisible': ['|',('is_gadget_stopped', '!=', False),('is_gadget', '!=', True)]}"
                 groups="sat_companies_stock.gadgets_stopped_manager_group"/>
                 <button 
                 string="Not stopped"

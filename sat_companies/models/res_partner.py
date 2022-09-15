@@ -3,7 +3,6 @@ from markupsafe import string
 from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
 import re
-from playsound import playsound
 import os
 # from ..static.description import
 
@@ -33,7 +32,7 @@ class ResPartner(models.Model):
 
     def play_sound(self):
         # myfile = 'cat14/sat_companies/static/description/sounds/alarma.mp3'
-        playsound('/sat_companies/static/description/sounds/alarma.mp3')
+        print('xxxxxxxxxxxxxxx')
 
     @api.constrains(
         'name',

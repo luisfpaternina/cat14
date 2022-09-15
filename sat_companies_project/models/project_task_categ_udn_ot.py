@@ -29,6 +29,9 @@ class ProjectTaskCategUdn(models.Model):
     user_ids = fields.Many2many(
         'res.users',
         string="Users")
+    user_id = fields.Many2one(
+        'res.users',
+        string="User/supervisor")
     
 
     @api.onchange('name','code')

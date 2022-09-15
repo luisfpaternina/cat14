@@ -498,3 +498,9 @@ class ProjectTask(models.Model):
         rec = super(ProjectTask, self).action_fsm_validate()
         self.validate_check_scann_qrs()   
         return rec
+    
+    @api.onchange('categ_udn_id')
+    def get_user_from_udn(self):
+        for record in self:
+            if record.categ_udn_id and record.categ_udn_id.is_normative == True:
+                record.supervisor_id = record.categ_udn_id.user_id.id

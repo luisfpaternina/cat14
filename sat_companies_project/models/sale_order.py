@@ -53,13 +53,16 @@ class SaleOrder(models.Model):
 
     def compute_total_Service_line(self):
         suma = []
-        for line in self.order_line:
-            if line.product_id.type == 'service' and line.product_uom.name == 'Horas':
-                suma.append(line.product_uom_qty)
-                total = sum(suma)
-                self.total_service_line = total
-            else:
-                self.total_service_line = 0
+        if self.order_line:
+            for line in self.order_line:
+                if line.product_id.type == 'service' and line.product_uom.name == 'Horas':
+                    suma.append(line.product_uom_qty)
+                    total = sum(suma)
+                    self.total_service_line = total
+                else:
+                    self.total_service_line = 0
+        else:
+            self.total_service_line = 0
 
     @api.depends('users_ids')
     def _compute_check_users(self):

@@ -16,17 +16,21 @@ class SaleOrder(models.Model):
         store = True)
 
 
-    @api.depends('order_line','partner_id')
+    @api.depends('partner_id','order_line')
     def compute_components(self):
         for rec in self:
-            lines = []
-            for p in rec.order_line:
-                vals = (0, 0, {
-                    'product_id': p.product_id.id,
-                    'bom_id': p.bom_id.id,
-                })
-                lines.append(vals)
-            rec.sale_bom_ids = lines
+            if rec.partner_id and rec.order_line:
+                lines = []
+                for p in rec.order_line:
+                    vals = (0, 0, {
+                        'product_id': p.product_id.id,
+                        'bom_id': p.bom_id.id,
+                    })
+                    lines.append(vals)
+                rec.sale_bom_ids = lines
+            else:
+                rec.sale_bom_ids.unlink()
+
 
 
 
@@ -40,6 +44,10 @@ class SaleOrderLine(models.Model):
         compute="compute_bom_id")
     bom_line_ids = fields.One2many(
         related="bom_id.bom_line_ids")
+    minute_point_id = fields.Many2one(
+        'maintenance.minute.point',
+        string="Minute point",
+        compute="compute_minute_point_id")
 
 
     @api.depends('product_id')
@@ -53,3 +61,15 @@ class SaleOrderLine(models.Model):
                     line.bom_id = False
             else:
                 line.bom_id = False
+    
+    @api.depends('product_id')
+    def compute_minute_point_id(self):
+        for line in self:
+            if line.product_id:
+                mrp_bom_obj = self.env['mrp.bom'].search([('product_id', '=', line.product_id.name)])
+                if mrp_bom_obj:
+                    line.write({'minute_point_id': mrp_bom_obj.minute_point_id.id})
+                else:
+                    line.minute_point_id = False
+            else:
+                line.minute_point_id = False

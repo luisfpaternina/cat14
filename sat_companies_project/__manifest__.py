@@ -39,6 +39,7 @@
         'views/stock_picking.xml',
         'views/project_project_view.xml',
         'views/project_task_template.xml',
+        'views/project_task_type.xml',
         'wizard/wizard_sale_order_type_view.xml',
         'data/project_template_inspection_notice.xml',
         'data/project_template_new_task.xml',

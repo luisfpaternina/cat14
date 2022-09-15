@@ -10,3 +10,4 @@ from . import project_task_categ_udn_ot
 from . import stock_picking
 from . import sale_order_template
 from . import project_task_template
+from . import project_task_type

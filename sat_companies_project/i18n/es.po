@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-14 14:21+0000\n"
-"PO-Revision-Date: 2022-09-14 14:21+0000\n"
+"POT-Creation-Date: 2022-09-15 12:54+0000\n"
+"PO-Revision-Date: 2022-09-15 12:54+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -127,7 +127,7 @@ msgstr "Adicionar líneas de tarea ?"
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task__users_ids
 #: model:ir.model.fields,field_description:sat_companies_project.field_sale_order__users_ids
 msgid "Assigned to"
-msgstr "Asignada"
+msgstr "Técnico asignado"
 
 #. module: sat_companies_project
 #: code:addons/sat_companies_project/models/project_task.py:0
@@ -291,6 +291,7 @@ msgstr "Descripción"
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task__display_name
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn__display_name
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task_template__display_name
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_type__display_name
 #: model:ir.model.fields,field_description:sat_companies_project.field_res_partner__display_name
 #: model:ir.model.fields,field_description:sat_companies_project.field_sale_order__display_name
 #: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_line__display_name
@@ -383,6 +384,7 @@ msgstr "Tareas generadas"
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task__id
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn__id
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task_template__id
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_type__id
 #: model:ir.model.fields,field_description:sat_companies_project.field_res_partner__id
 #: model:ir.model.fields,field_description:sat_companies_project.field_sale_order__id
 #: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_line__id
@@ -447,6 +449,11 @@ msgid "Is a project existing ?"
 msgstr "Proyecto existente"
 
 #. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_type__is_project_fsm
+msgid "Is done in fsm project"
+msgstr "Hecho fsm"
+
+#. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task__is_late_hours
 msgid "Is late hours"
 msgstr "Supero límite de horas planificadas"
@@ -496,6 +503,7 @@ msgstr "Asiento contable"
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task____last_update
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn____last_update
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task_template____last_update
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_type____last_update
 #: model:ir.model.fields,field_description:sat_companies_project.field_res_partner____last_update
 #: model:ir.model.fields,field_description:sat_companies_project.field_sale_order____last_update
 #: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_line____last_update
@@ -663,6 +671,11 @@ msgid "Observaciones"
 msgstr ""
 
 #. module: sat_companies_project
+#: model:ir.model.constraint,message:sat_companies_project.constraint_project_task_type_is_project_fsm_uniq
+msgid "Only one stage can be marked as done in external service"
+msgstr "Solo se permite activar hecho fsm a una etapa"
+
+#. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task__order_lines
 msgid "Order Lines"
 msgstr "Líneas de orden"
@@ -679,6 +692,7 @@ msgstr "Otro"
 
 #. module: sat_companies_project
 #: code:addons/sat_companies_project/models/project_task.py:0
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__overlapping_tasks
 #, python-format
 msgid "Overlapping Tasks"
 msgstr ""
@@ -890,6 +904,11 @@ msgid "Task"
 msgstr "Tarea"
 
 #. module: sat_companies_project
+#: model:ir.model,name:sat_companies_project.model_project_task_type
+msgid "Task Stage"
+msgstr "Etapa de la tarea"
+
+#. module: sat_companies_project
 #: model_terms:ir.ui.view,arch_db:sat_companies_project.project_task_inherit_form_view
 msgid "Task State"
 msgstr "Estado tarea"
@@ -955,6 +974,7 @@ msgid "The Pit has been checked"
 msgstr "El foso ha sido inspeccionado"
 
 #. module: sat_companies_project
+#: code:addons/sat_companies_project/models/project_task.py:0
 #: code:addons/sat_companies_project/models/project_task.py:0
 #, python-format
 msgid ""
