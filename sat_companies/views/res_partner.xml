@@ -9,7 +9,6 @@
 
             <xpath expr="//field[(@name='type')]" position="after">
                 <field name="potencial_contact" invisible="1"/>
-                <button name="play_sound" string="sonido" type="object"/>
             </xpath>
         
         </field>

@@ -162,9 +162,13 @@ class ProjectTask(models.Model):
     done_work = fields.Text(
         string="Done work")
     contact_person_ot = fields.Char(
+        string="Person OT")
+    contact_person_ot = fields.Many2one(
+        'res.partner',
         string="Contact Person OT")
     contact_person_telephone = fields.Char(
-        string="Telephone contact")
+        string="Telephone contact",
+        related='contact_person_ot.phone')
     is_stop_with_company = fields.Boolean(
         string="Is stop with company")
     gadget_pda_observations = fields.Text(
