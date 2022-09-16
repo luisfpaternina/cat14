@@ -490,7 +490,7 @@ class ProjectTask(models.Model):
         qr_required = self.env['ir.config_parameter'].sudo().get_param('sat_companies.is_qr_required') or False
         for record in self:
             record.is_qr_required = qr_required
-            if record.is_qr_required and record.stage_id.sequence == 5:
+            if record.is_qr_required and record.stage_id.is_project_fsm:
                 if record.check_machine == False and record.check_pit == False and record.check_cabine == False:
                     raise ValidationError(_("At least one QR code must be scanned"))
     
@@ -502,5 +502,7 @@ class ProjectTask(models.Model):
     @api.onchange('categ_udn_id')
     def get_user_from_udn(self):
         for record in self:
-            if record.categ_udn_id and record.categ_udn_id.is_normative == True:
+            if record.ot_type_id.is_mounting and record.categ_udn_id.is_normative == True:
+                record.supervisor_id = False
+            else:
                 record.supervisor_id = record.categ_udn_id.user_id.id
