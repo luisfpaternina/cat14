@@ -11,3 +11,4 @@ from . import project_task_ot_checklist_minute
 from . import project_task_warning
 from . import project_task_breakdowns
 from . import project_task_community_mood
+from . import project_task_type

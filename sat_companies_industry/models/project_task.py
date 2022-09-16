@@ -260,7 +260,7 @@ class ProjectTask(models.Model):
 
     def compute_closed_date(self):
         for record in self:
-            if record.stage_id.sequence == 5 and record.is_calculed_time == False:
+            if record.stage_id.is_project_fsm and record.is_calculed_time == False:
                 record.closed_date = datetime.datetime.now()
                 record.write({'is_calculed_time': True})
             else: 
@@ -276,7 +276,7 @@ class ProjectTask(models.Model):
     def compute_ot_time(self):
     # CALCULAR TIEMPO DE OT DESDE QUE SE INICIA HASTA QUE SE FINALIZA
         for record in self:
-            if record.stage_id.sequence == 5 and record.closed_date:
+            if record.stage_id.is_project_fsm and record.closed_date:
                 calc = record.closed_date - record.create_date
                 year = record.create_date.year
                 month = record.create_date.month
