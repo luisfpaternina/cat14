@@ -244,7 +244,9 @@ class ProjectTask(models.Model):
         string="Supervisor end date")
     now = fields.Datetime(
         string="Now")
-
+    is_end_ot = fields.Boolean(
+        string="Is end OT")
+    
 
     def mark_notice_technical(self):
         for record in self:
