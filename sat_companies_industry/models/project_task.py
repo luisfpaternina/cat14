@@ -301,12 +301,6 @@ class ProjectTask(models.Model):
                 raise ValidationError(_(
                     "El aparato esta parado : %s" % record.product_id.name))
 
-    @api.onchange('partner_id', 'name')
-    def get_default_supervisor(self):
-        supervisor = self.env['res.config.settings'].search([])
-        if supervisor:
-            self.supervisor_id = supervisor.user_operator_id.id
-
     @api.onchange('ot_type_id')
     def domain_udn(self):
         for record in self:

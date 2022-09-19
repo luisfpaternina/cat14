@@ -401,7 +401,6 @@ class ProjectTask(models.Model):
         return super(ProjectTask, self).write(vals)
 
 
-
     @api.onchange('partner_id','ot_type_id')
     def _payment_terms(self):
         for record in self:
@@ -499,7 +498,9 @@ class ProjectTask(models.Model):
         self.validate_check_scann_qrs()   
         return rec
     
-    @api.onchange('categ_udn_id')
+    @api.onchange(
+        'categ_udn_id',
+        'ot_type_id')
     def get_user_from_udn(self):
         for record in self:
             if record.ot_type_id.is_mounting and record.categ_udn_id.is_normative == True:
