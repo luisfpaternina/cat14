@@ -14,25 +14,11 @@ class SaleOrder(models.Model):
         string="Componets",
         compute="compute_components",
         store = True)
+    order_bom_line = fields.One2many(
+        'sale.order.line',
+        related="order_line")
 
-
-    @api.depends('partner_id','order_line')
-    def compute_components(self):
-        for rec in self:
-            if rec.partner_id and rec.order_line:
-                lines = []
-                for p in rec.order_line:
-                    vals = (0, 0, {
-                        'product_id': p.product_id.id,
-                        'bom_id': p.bom_id.id,
-                    })
-                    lines.append(vals)
-                rec.sale_bom_ids = lines
-            else:
-                rec.sale_bom_ids.unlink()
-
-
-
+ 
 
 
 class SaleOrderLine(models.Model):
@@ -56,7 +42,8 @@ class SaleOrderLine(models.Model):
             if line.product_id:
                 mrp_bom_obj = self.env['mrp.bom'].search([('product_id', '=', line.product_id.name)])
                 if mrp_bom_obj:
-                    line.write({'bom_id': mrp_bom_obj.id})
+                    for m in mrp_bom_obj:
+                        line.write({'bom_id': m.id})
                 else:
                     line.bom_id = False
             else:

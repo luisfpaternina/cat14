@@ -11,7 +11,21 @@
             </xpath>
 
             <xpath expr="//field[(@name='partner_id')]" position="after">
-                <field name="has_account"/>
+                <field name="client_code"/>
+                <field name="has_account" invisible="1"/>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="inherit_tree_view_account_move_sat_companies_partner" model="ir.ui.view">
+        <field name="name">inherit.tree.account.move</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_out_invoice_tree"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[(@name='invoice_date')]" position="before">
+                <field name="client_code"/>
             </xpath>
 
         </field>

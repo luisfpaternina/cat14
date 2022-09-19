@@ -36,6 +36,7 @@
         'views/res_partner_communities.xml',
         'views/crm_lead.xml',
         'views/products.xml',
+        'views/account_move.xml',
         
     ],
     'installable': True

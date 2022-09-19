@@ -14,6 +14,9 @@ class AccountMove(models.Model):
     has_account = fields.Boolean(
         string="Has a account",
         related="partner_id.has_account")
+    client_code = fields.Char(
+        string="Client code",
+        related="partner_id.client_code")
 
 
     @api.constrains('name', 'partner_id')
