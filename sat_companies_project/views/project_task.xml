@@ -51,6 +51,7 @@
                     <group name="principal_group">
                         <field name="comercial_description" attrs="{'readonly': [('origin', '!=', False)]}"/>
                         <field name="origin" invisible="1"/>
+                        <field name="is_end_ot" invisible="1"/>
                     </group>
                 </page>
             </xpath>

@@ -1,5 +1,4 @@
 from email.policy import default
-
 from numpy import subtract
 from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
@@ -7,6 +6,7 @@ from datetime import tzinfo, timedelta, datetime, date
 from datetime import date
 import datetime
 from odoo.http import request
+from datetime import datetime
 import base64
 from io import BytesIO
 import qrcode
@@ -148,6 +148,8 @@ class ProjectTask(models.Model):
         string="Is late hours",
         compute="compute_is_late_hours")
     overlapping_tasks = fields.Boolean(default=False)
+    is_end_ot = fields.Boolean(
+        string="Is end OT")
 
 
     def compute_is_late_hours(self):
@@ -171,7 +173,7 @@ class ProjectTask(models.Model):
         tecnicos = []
         responsables = []
         morning = ['08', '09', '10', '11', '12', '13', '14', '15']
-        now = datetime.datetime.now()
+        now = datetime.now()
         hours = now.strftime("%I")
         users = self.env['res.partner.zones'].search([('id', '=', self.product_id.zone_id.id)])
         if users and self.ot_type_id.is_warning:
@@ -497,13 +499,3 @@ class ProjectTask(models.Model):
         rec = super(ProjectTask, self).action_fsm_validate()
         self.validate_check_scann_qrs()   
         return rec
-    
-    @api.onchange(
-        'categ_udn_id',
-        'ot_type_id')
-    def get_user_from_udn(self):
-        for record in self:
-            if record.ot_type_id.is_mounting and record.categ_udn_id.is_normative == True:
-                record.supervisor_id = False
-            else:
-                record.supervisor_id = record.categ_udn_id.user_id.id
