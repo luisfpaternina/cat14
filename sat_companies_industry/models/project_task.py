@@ -161,7 +161,7 @@ class ProjectTask(models.Model):
         string="Is conflictive apparatus")
     done_work = fields.Text(
         string="Done work")
-    contact_person_ot = fields.Char(
+    contact_person_ot_old = fields.Char(
         string="Person OT")
     contact_person_ot = fields.Many2one(
         'res.partner',
@@ -246,7 +246,10 @@ class ProjectTask(models.Model):
         string="Now")
     is_end_ot = fields.Boolean(
         string="Is end OT")
-    
+    location = fields.Char(
+        string="Location",
+        related="product_id.location")
+
 
     def mark_notice_technical(self):
         for record in self:

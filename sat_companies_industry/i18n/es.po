@@ -1604,6 +1604,11 @@ msgid "R.A.E"
 msgstr ""
 
 #. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__location
+msgid "Location"
+msgstr "Ubicación"
+
+#. module: sat_companies_industry
 #: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
 msgid "RECOPILACIÓN DATOS APARATOS"
 msgstr ""
