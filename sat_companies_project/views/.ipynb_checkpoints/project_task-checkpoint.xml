@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="project_task_inherit_form_view" model="ir.ui.view">
+        <field name="name">project.task.form.inherit.view</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form/sheet/notebook/page[@name='extra_info']" position="after">
+                <page name="description_page" string="Qr Scanner">
+                    <field name="pit_confirm" invisible="True"/>
+                    <field name="cabin_confirm" invisible="True"/>
+                    <field name="machine_confirm" invisible="True"/>
+                    <group name="pit_alert_checked" attrs="{'invisible': [('pit_confirm', '!=', True)]}">
+                        <div class="alert alert-success" role="alert" style="margin-bottom:10px;font-size: 20px;">
+                            <bold>
+                                The Pit has been checked
+                            </bold>
+                        </div>
+                    </group>
+                    <group name="cabin_alert_checked"  attrs="{'invisible': [('cabin_confirm', '!=', True)]}">
+                        <div class="alert alert-success" role="alert" style="margin-bottom:10px;font-size: 20px;">
+                            <bold>
+                                The Cabin has been checked
+                            </bold>
+                        </div>
+                    </group>
+                    <group name="machine_alert_checked"  attrs="{'invisible': [('machine_confirm', '!=', True)]}">
+                        <div class="alert alert-success" role="alert" style="margin-bottom:10px;font-size: 20px;">
+                            <bold>
+                                The Machine has been checked
+                            </bold>
+                        </div>
+                    </group>
+                    <group>
+                        <field name="qr_scanner" widget="qr_code" options="{'confirm': true, 'select':true, 'mobile_dialog':true}"/>
+                        <field name="check_qr_active" invisible="True"/>
+                    </group>
+                    <footer>
+                        <button string="Cancel"
+                            class="btn-secondary"
+                            special="cancel"/>
+                        <button string="Confirm"
+                            attrs="{'invisible': [('check_qr_active', '!=', True)]}"
+                            name="confirm_check_gadget"
+                            type="object"
+                            class="oe_highlight"/>
+                    </footer>
+                </page>
+                <page name="task_state" string="Task State">
+                    <group>
+                        <field name="state_check_qr" widget="statusbar"/>
+                    </group>
+                    <group>
+                        <field name="check_pit" readonly="1"/>
+                        <field name="check_cabine" readonly="1"/>
+                        <field name="check_machine" readonly="1"/>
+                        <!--<field name="url_home" invisible="True"/>-->
+                    </group>
+                    <group colspan="3">
+                        <group colspan="1" col="2">
+                            <field name="qr_pit_image" widget="image" style="width: 62mm; height: 62mm;"/>
+                            <field name="qr_pit"/>
+                        </group>
+                        <group colspan="1" col="1">
+                            <br></br>
+                            <br></br>
+                            <span style="padding: 5px; float: left">RAE: <field name="rae_gadget" nolabel="1" readonly="1"/></span>
+                            <span style="padding: 5px; float: left">
+                                <field name="to_gadget"
+                                    nolabel="1"
+                                    readonly="1"
+                                    options="{'no_open': true, 'no_quick_create': true ,'no_create_edit': true,'no_create':true}"
+                                /> Pit</span>
+                            <field style="padding: 5px; float: left" name="to_gadget_location" nolabel="1" readonly="1"/>
+                            <field style="padding: 5px; float: left" name="delegation_location" nolabel="1" readonly="1"/>
+                        </group>
+                    </group>
+                    <separator/>
+                    <group colspan="3">
+                        <group colspan="1" col="2">
+                            <field name="qr_cabine_image" widget="image" style="width: 62mm; height: 62mm;"/>
+                            <field name="qr_cabine"/>
+                        </group>
+                        <group colspan="1" col="1">
+                            <br></br>
+                            <br></br>
+                            <span style="padding: 5px; float: left">RAE: <field name="rae_gadget" nolabel="1" readonly="1"/></span>
+                            <span style="padding: 5px; float: left">
+                                <field name="to_gadget"
+                                    nolabel="1"
+                                    readonly="1"
+                                    options="{'no_open': true, 'no_quick_create': true ,'no_create_edit': true,'no_create':true}"
+                                    /> Cabine</span>
+                            <field style="padding: 5px; float: left" name="to_gadget_location" nolabel="1" readonly="1"/>
+                            <field style="padding: 5px; float: left" name="delegation_location" nolabel="1" readonly="1"/>
+                        </group>
+                    </group>
+                    <separator/>
+                    <group colspan="3">
+                        <group colspan="1" col="2">
+                            <field name="qr_machine_image" widget="image" style="width: 62mm; height: 62mm;"/>
+                            <field name="qr_machine"/>
+                        </group>
+                        <group colspan="1" col="1">
+                            <br></br>
+                            <br></br>
+                            <span style="padding: 5px; float: left">RAE: <field name="rae_gadget" nolabel="1" readonly="1"/></span>
+                            <span style="padding: 5px; float: left">
+                                <field name="to_gadget"
+                                    nolabel="1"
+                                    readonly="1"
+                                    options="{'no_open': true, 'no_quick_create': true ,'no_create_edit': true,'no_create':true}"
+                                /> Machine</span>
+                            <field style="padding: 5px; float: left" name="to_gadget_location" nolabel="1" readonly="1"/>
+                            <field style="padding: 5px; float: left" name="delegation_location" nolabel="1" readonly="1"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+    <record id="project_task_inherit_industry_form_view" model="ir.ui.view">
+        <field name="name">project.task.industry.form.inherit.view</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="sat_companies_industry.view_project_task_sat_companies"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='gadgets']/group[1]" position="after">
+                <group>
+                    <group>
+                       
+                    </group>
+
+                    <group>
+                        
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>     
