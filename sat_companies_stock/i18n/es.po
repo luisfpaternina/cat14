@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-07 18:28+0000\n"
-"PO-Revision-Date: 2022-09-07 18:28+0000\n"
+"POT-Creation-Date: 2022-09-20 11:39+0000\n"
+"PO-Revision-Date: 2022-09-20 11:39+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,10 +16,120 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_day__10
+msgid "10"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_day__11
+msgid "11"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_day__12
+msgid "12"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_day__13
+msgid "13"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_day__14
+msgid "14"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_day__15
+msgid "15"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_day__16
+msgid "16"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_day__17
+msgid "17"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_day__18
+msgid "18"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_day__19
+msgid "19"
+msgstr ""
+
+#. module: sat_companies_stock
 #: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__years__two
 #: model:ir.model.fields.selection,name:sat_companies_stock.selection__stock_gadgets__years__two
 msgid "2 years"
 msgstr "2 años"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_day__20
+msgid "20"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_day__21
+msgid "21"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_day__22
+msgid "22"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_day__23
+msgid "23"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_day__24
+msgid "24"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_day__25
+msgid "25"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_day__26
+msgid "26"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_day__27
+msgid "27"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_day__28
+msgid "28"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_day__29
+msgid "29"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_day__30
+msgid "30"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_day__31
+msgid "31"
+msgstr ""
 
 #. module: sat_companies_stock
 #: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__years__four
@@ -2603,6 +2713,12 @@ msgid "Reference"
 msgstr "Referencia"
 
 #. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__repeat_day
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__repeat_day
+msgid "Repeat days"
+msgstr "Repetir días"
+
+#. module: sat_companies_stock
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__repeat_interval
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__repeat_interval
 msgid "Repeat interval"
@@ -2656,10 +2772,16 @@ msgid "Repeat unit"
 msgstr "Repetir"
 
 #. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__repeat_week
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__repeat_week
+msgid "Repeat week"
+msgstr "Repetir semana"
+
+#. module: sat_companies_stock
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__repeat_weekday
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__repeat_weekday
 msgid "Repeat weekday"
-msgstr ""
+msgstr "Repetir días de semana"
 
 #. module: sat_companies_stock
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__repeat_on_month
@@ -2667,7 +2789,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__repeat_on_month
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__repeat_on_year
 msgid "Repeat year"
-msgstr ""
+msgstr "Repetir año"
 
 #. module: sat_companies_stock
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__repeat_number
@@ -3234,8 +3356,18 @@ msgid "Zone name"
 msgstr "Nombre de la zona"
 
 #. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_week__first
+msgid "first"
+msgstr ""
+
+#. module: sat_companies_stock
 #: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_gadgets_tree
 msgid "gadgets_tree"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_week__last
+msgid "last"
 msgstr ""
 
 #. module: sat_companies_stock
@@ -3244,6 +3376,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__next_inspection_date
 msgid "next inspection date"
 msgstr "Fecha próxima inspección"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_week__second
+msgid "second"
+msgstr ""
 
 #. module: sat_companies_stock
 #: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_stock_gadgets_form
@@ -3258,4 +3395,9 @@ msgstr ""
 #. module: sat_companies_stock
 #: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_stop_gadgets_tree
 msgid "stop_gadgets_tree"
+msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields.selection,name:sat_companies_stock.selection__product_template__repeat_week__third
+msgid "third"
 msgstr ""

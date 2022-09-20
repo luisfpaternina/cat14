@@ -35,8 +35,8 @@ class ProjectTaks(models.Model):
                 self.repeat_unit = product.repeat_unit 
                 self.repeat_on_month = product.repeat_on_month 
                 self.repeat_on_year = product.repeat_on_year 
-                self.repeat_day = False 
-                self.repeat_week = False
+                self.repeat_day = product.repeat_day
+                self.repeat_week = product.repeat_week
                 self.repeat_weekday = 'mon'
                 self.repeat_month = product.repeat_month
                 self.repeat_until = product.repeat_until 
