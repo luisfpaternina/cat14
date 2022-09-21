@@ -8,6 +8,7 @@
 
             <xpath expr="//field[@name='is_closed']" position="after">
                 <field name="is_project_fsm"/>
+                <field name="is_progress"/>
             </xpath>
 
         </field>

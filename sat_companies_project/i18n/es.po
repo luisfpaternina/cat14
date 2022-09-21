@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-15 12:54+0000\n"
-"PO-Revision-Date: 2022-09-15 12:54+0000\n"
+"POT-Creation-Date: 2022-09-21 11:12+0000\n"
+"PO-Revision-Date: 2022-09-21 11:12+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -127,7 +127,7 @@ msgstr "Adicionar líneas de tarea ?"
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task__users_ids
 #: model:ir.model.fields,field_description:sat_companies_project.field_sale_order__users_ids
 msgid "Assigned to"
-msgstr "Técnico asignado"
+msgstr "Asignada"
 
 #. module: sat_companies_project
 #: code:addons/sat_companies_project/models/project_task.py:0
@@ -428,6 +428,11 @@ msgid "Is Follower"
 msgstr "Es un seguidor"
 
 #. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_type__is_progress
+msgid "Is Progress"
+msgstr "Empezada fsm"
+
+#. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task__is_qr_required
 msgid "Is QR required?"
 msgstr "Habilitar QR obligatorio"
@@ -452,6 +457,11 @@ msgstr "Proyecto existente"
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task_type__is_project_fsm
 msgid "Is done in fsm project"
 msgstr "Hecho fsm"
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__is_end_ot
+msgid "Is end OT"
+msgstr ""
 
 #. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task__is_late_hours
@@ -671,9 +681,9 @@ msgid "Observaciones"
 msgstr ""
 
 #. module: sat_companies_project
-#: model:ir.model.constraint,message:sat_companies_project.constraint_project_task_type_is_project_fsm_uniq
-msgid "Only one stage can be marked as done in external service"
-msgstr "Solo se permite activar hecho fsm a una etapa"
+#: model:ir.model.constraint,message:sat_companies_project.constraint_project_task_type_is_progress
+msgid "Only one stage can be marked as progress in external service"
+msgstr ""
 
 #. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task__order_lines
@@ -898,6 +908,12 @@ msgid "Suscription recurrent"
 msgstr "Suscripción recurrente"
 
 #. module: sat_companies_project
+#: model:base.automation,name:sat_companies_project.action_automated_qr_done_state_timesheet
+#: model:ir.actions.server,name:sat_companies_project.action_automated_qr_done_state_timesheet_ir_actions_server
+msgid "TRABAJOS FINALIZADOS OTs"
+msgstr ""
+
+#. module: sat_companies_project
 #: model:ir.model,name:sat_companies_project.model_project_task
 #: model_terms:ir.ui.view,arch_db:sat_companies_project.view_sale_order_typet_form
 msgid "Task"
@@ -972,6 +988,18 @@ msgstr "La máquina ha sido inspeccionada"
 #: model_terms:ir.ui.view,arch_db:sat_companies_project.project_task_inherit_form_view
 msgid "The Pit has been checked"
 msgstr "El foso ha sido inspeccionado"
+
+#. module: sat_companies_project
+#: code:addons/sat_companies_project/models/.ipynb_checkpoints/res_partner-checkpoint.py:0
+#, python-format
+msgid "The bank account field must be filled out"
+msgstr ""
+
+#. module: sat_companies_project
+#: code:addons/sat_companies_project/models/.ipynb_checkpoints/res_partner-checkpoint.py:0
+#, python-format
+msgid "The identification number field must be filled out"
+msgstr ""
 
 #. module: sat_companies_project
 #: code:addons/sat_companies_project/models/project_task.py:0
@@ -1060,6 +1088,12 @@ msgid "Unread Messages Counter"
 msgstr "Conteo mensajes no leídos"
 
 #. module: sat_companies_project
+#: model:base.automation,name:sat_companies_project.update_fields_from_end_ot
+#: model:ir.actions.server,name:sat_companies_project.update_fields_from_end_ot_ir_actions_server
+msgid "Update fields from end OT"
+msgstr ""
+
+#. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn__user_ids
 msgid "Users"
 msgstr ""
@@ -1072,6 +1106,7 @@ msgid "Validate potential client in partner"
 msgstr ""
 
 #. module: sat_companies_project
+#: code:addons/sat_companies_project/models/.ipynb_checkpoints/sale_order-checkpoint.py:0
 #: code:addons/sat_companies_project/models/sale_order.py:0
 #, python-format
 msgid "Verify the type of client if it is potential"

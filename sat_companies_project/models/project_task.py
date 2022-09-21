@@ -499,3 +499,13 @@ class ProjectTask(models.Model):
         rec = super(ProjectTask, self).action_fsm_validate()
         self.validate_check_scann_qrs()   
         return rec
+    
+    def change_stage_to_progress(self):
+        for record in self:
+            stage = self.env['project.task.type'].search([('is_progress','=', True)])
+            if stage:
+                record.stage_id = stage
+    
+    def action_timer_start(self):
+        self.change_stage_to_progress()
+        return super(ProjectTask, self).action_timer_start()
