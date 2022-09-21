@@ -233,6 +233,10 @@
                 <attribute name="string">FINALIZAR OT</attribute>
             </xpath>
 
+            <xpath expr="//button[@name='action_timer_pause']" position="attributes">
+                <attribute name="attrs">{'invisible':[('stage_id','!=',2)]}</attribute>
+            </xpath>
+
             <xpath expr="//button[@name='action_timer_pause']" position="after">
                 <button 
                 name="mark_notice_technical"
