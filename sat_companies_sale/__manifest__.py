@@ -42,7 +42,7 @@
         'views/crm_lead.xml',
         'views/crm_lead_type.xml',
         'views/sale_order.xml',
-        'views/crm_stage.xml',
+        #'views/crm_stage.xml',
         'templates/sale_contract_report_web_template.xml',
         'templates/sale_contract_mail_template.xml',
         'templates/template_sale_sample.xml',

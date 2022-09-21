@@ -19,22 +19,6 @@ class AccountMove(models.Model):
         related="partner_id.client_code")
 
 
-    @api.constrains('name', 'partner_id')
-    def _validate_has_account(self):
-        for record in self:
-            if record.has_account:
-                raise ValidationError(_(
-                    'Validate potencial client has account!'))
-
-
-    def write(self, values):
-        for record in self:
-            if record.has_account:
-                raise ValidationError(_(
-                    'Validate potencial client has account!'))
-        return super(AccountMove, self).write(values)
-
-
     def action_post(self):
         for record in self:
             if record.is_potential_client:
