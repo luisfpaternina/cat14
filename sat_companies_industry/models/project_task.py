@@ -249,15 +249,17 @@ class ProjectTask(models.Model):
     location = fields.Char(
         string="Location",
         related="product_id.location")
+    is_project_fsm = fields.Boolean(
+        string="Is done in fsm project",
+        related="stage_id.is_project_fsm")
 
-
+    
     def mark_notice_technical(self):
         for record in self:
-            record.write({'is_technical_notice_ot': True})
-
-    def mark_notice_technical(self):
-        for record in self:
-            record.write({'is_technical_notice_ot': True})
+            if record.is_project_fsm:
+                record.write({'is_technical_notice_ot': True})
+            else:
+                raise ValidationError(_("The notice can only be marked as technical in the done state"))
     
     def not_mark_notice_technical(self):
         for record in self:

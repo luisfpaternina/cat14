@@ -1,13 +1,13 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* sat_companies_industry
+# 	* sat_companies_project
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-07 10:01+0000\n"
-"PO-Revision-Date: 2022-09-07 10:01+0000\n"
+"POT-Creation-Date: 2022-09-21 13:39+0000\n"
+"PO-Revision-Date: 2022-09-21 13:39+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -15,1914 +15,1139 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
+#. module: sat_companies_project
+#: model:mail.template,body_html:sat_companies_project.project_template_new_task
 msgid ""
-"<br/>\n"
-"                                        <strong><span>Acuñamiento cabina:</span></strong><span> </span>"
+"<?xml version=\"1.0\"?>\n"
+"<div>\n"
+"                    <p> <img src=\"data:image/png;base64,${object.company_id.logo}\" style=\"width: 150px;height: 80px;\"/> </p>\n"
+"                    <p align=\"justify\">\n"
+"                        Señor ${(object.user_id.name)}:\n"
+"                    </p>\n"
+"                    <p align=\"justify\">\n"
+"                       Se ha creado la tarea ${(object.name)} en el Servicio Externo.\n"
+"                    </p>\n"
+"\n"
+"                </div>\n"
+"            "
 msgstr ""
 
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
+#. module: sat_companies_project
+#: model:mail.template,body_html:sat_companies_project.template_project_sent_inspection_notice_data
 msgid ""
-"<br/>\n"
-"                                        <strong><span>Acuñamiento contrapeso:</span></strong><span> </span>"
+"<?xml version=\"1.0\"?>\n"
+"<div>\n"
+"                    <p> <img src=\"data:image/png;base64,${object.company_id.logo}\" style=\"width: 150px;height: 80px;\"/> </p>\n"
+"                    <p align=\"justify\">\n"
+"                     ASUNTO: INSPECCIÓN PERIÓDICA EN EL APARATO ELEVADOR <br/>\n"
+"                     R.A.E.:\n"
+"                    </p>\n"
+"                    <p align=\"justify\">\n"
+"                        Muy señores nuestros:\n"
+"                    </p>\n"
+"                    <p align=\"justify\">\n"
+"                        El reglamento de aparatos de elevación y manutención, aprobado por rela decreto 2291/85 (B.O.E 11-12-1985), estabalece en su articulo 11, apartado F, como obligación de la empresa conservadora \"COMUNICAR AL PROPIETARIO DEL APARATO LA FECHA EN QUE LE CORRESPONDE SOLICITAR LA INSPECCIÓN PERIÓDICA\".\n"
+"                    </p>\n"
+"                    <p align=\"justify\">\n"
+"                        Por tal motivo, tenemos a bien informarle que la INSPECCIÓN PERIÓDICA de sus aparatos elevado-res deben edectuarse por entidad de inspección y control reglamentario, antes del:\n"
+"                    </p>\n"
+"                    <p>\n"
+"                        <strong>17/07/2021</strong>\n"
+"                    </p>\n"
+"                    <p align=\"justify\">\n"
+"                        Asimismo, les informamos que la PERIODICDAD de dichas inspecciones periódicas, está regulada por la orden ministerial de 23/09/87 (B.O.E. 06/10/87 ) donde la instrucción técnica reglamentaria (I.T.C) establece en su apartado 16.1.3.4 que:\n"
+"                    </p>\n"
+"                    <p>\n"
+"                        LAS INSPECCIONES PERIÓDICAS SE REALIZAN EN LOS SIGUIENTES PLAZOS:\n"
+"                    </p>\n"
+"                    <br/>\n"
+"                    <ul>\n"
+"                        <li>\n"
+"                           Ascensores instalados en edificios industriales y lugares de pública concurrencia, cada 2 años. \n"
+"                        </li>\n"
+"                        <li>\n"
+"                            Ascensores instalados en edfificios de más de veinte viviendas o mas de cuatro plantas servidas, cada 4 años.\n"
+"                        </li>\n"
+"                        <li>\n"
+"                            Ascensores instalados en edificios no incluidos en los aparatos anteriores cada 6 años\n"
+"                        </li>\n"
+"                    </ul>\n"
+"                    <br/>\n"
+"                    <p align=\"justify\">\n"
+"                        Quedamos a su disposición para cualquier aclaración que precisen al respecto, y aprovechamos la ocasión para saludarles muy antentamente.\n"
+"                    </p>\n"
+"                    <p>\n"
+"                        ${(object.company_id.name)}\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
 msgstr ""
 
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
+#. module: sat_companies_project
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.view_sale_order_inherit_sat_companies_project
 msgid ""
-"<br/>\n"
-"                                        <strong><span>Bancada:</span></strong><span> </span><span/><br/>\n"
-"                                        <strong><span>Potencia motor(KW):</span></strong><span> </span>"
+"<i class=\"fa fa-long-arrow-right mx-2 oe_edit_only\" aria-label=\"Arrow icon\" title=\"Arrow\"/>\n"
+"                        <i class=\"fa fa-long-arrow-right mx-2 oe_read_only\" aria-label=\"Arrow icon\" title=\"Arrow\"/>"
 msgstr ""
 
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid ""
-"<br/>\n"
-"                                        <strong><span>Cables tracción:</span></strong><span> </span>"
+#. module: sat_companies_project
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.view_task_form2_inherit_2
+msgid "<span class=\"align-middle\">for theses employees at the same time.</span>"
 msgstr ""
 
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid ""
-"<br/>\n"
-"                                        <strong><span>Carga(kgs):</span></strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid ""
-"<br/>\n"
-"                                        <strong><span>Correa operador:</span></strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid ""
-"<br/>\n"
-"                                        <strong><span>Cuadro de maniobras:</span></strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid ""
-"<br/>\n"
-"                                        <strong><span>Embarque:</span></strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid ""
-"<br/>\n"
-"                                        <strong><span>Fabricante:</span></strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid ""
-"<br/>\n"
-"                                        <strong><span>Foso reducido:</span></strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid ""
-"<br/>\n"
-"                                        <strong><span>Freno motor(V):</span></strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid ""
-"<br/>\n"
-"                                        <strong><span>Freno operador:</span></strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid ""
-"<br/>\n"
-"                                        <strong><span>Grupo tractor:</span></strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid ""
-"<br/>\n"
-"                                        <strong><span>Huida reducida:</span></strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid ""
-"<br/>\n"
-"                                        <strong><span>Linea netel:</span></strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid ""
-"<br/>\n"
-"                                        <strong><span>Linea:</span></strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid ""
-"<br/>\n"
-"                                        <strong><span>Llavín cabina:</span></strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid ""
-"<br/>\n"
-"                                        <strong><span>Llavín rellano:</span></strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid ""
-"<br/>\n"
-"                                        <strong><span>Luz temporizada cabina:</span></strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid ""
-"<br/>\n"
-"                                        <strong><span>Maniobra:</span></strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid ""
-"<br/>\n"
-"                                        <strong><span>Modelo GSM:</span></strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid ""
-"<br/>\n"
-"                                        <strong><span>Modelo aparato:</span></strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid ""
-"<br/>\n"
-"                                        <strong><span>Modelo bidireccional:</span></strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid ""
-"<br/>\n"
-"                                        <strong><span>N° paradas:</span></strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid ""
-"<br/>\n"
-"                                        <strong><span>N° personas:</span></strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid ""
-"<br/>\n"
-"                                        <strong><span>Operador puerta:</span></strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid ""
-"<br/>\n"
-"                                        <strong><span>Pesacargas:</span></strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid ""
-"<br/>\n"
-"                                        <strong><span>Polea contrapeso (cm):</span></strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid ""
-"<br/>\n"
-"                                        <strong><span>Polea desvío (cm):</span></strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid ""
-"<br/>\n"
-"                                        <strong><span>Polea limitador (cm):</span></strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid ""
-"<br/>\n"
-"                                        <strong><span>Polea tensora (cm):</span></strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid ""
-"<br/>\n"
-"                                        <strong><span>Polea tractora (cm):</span></strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid ""
-"<br/>\n"
-"                                        <strong><span>Puertas Rellano:</span></strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid ""
-"<br/>\n"
-"                                        <strong><span>Puffer cabina:</span></strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid ""
-"<br/>\n"
-"                                        <strong><span>Puffer contrapeso:</span></strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid ""
-"<br/>\n"
-"                                        <strong><span>Recorrido(mm):</span></strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid ""
-"<br/>\n"
-"                                        <strong><span>Sala de máquinas:</span></strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid ""
-"<br/>\n"
-"                                        <strong><span>Tipo ascensor:</span></strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid ""
-"<br/>\n"
-"                                        <strong><span>Tipo botonera cabina:</span></strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid ""
-"<br/>\n"
-"                                        <strong><span>Tipo cerraduras rellano:</span></strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid ""
-"<br/>\n"
-"                                        <strong><span>Tipo pulsador cabina:</span></strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid ""
-"<br/>\n"
-"                                        <strong><span>Tipo suelo:</span></strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid ""
-"<br/>\n"
-"                                        <strong><span>Tipos tubo cabina:</span></strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid ""
-"<br/>\n"
-"                                        <strong><span>Velocidad nominal(m/s):</span></strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_custom_template_worksheet
-msgid ""
-"<br/>\n"
-"                                    <span>Piso:</span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_custom_template_worksheet
-msgid ""
-"<br/>\n"
-"                                    <strong>TEC.DESTINO:</strong>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid ""
-"<br/>\n"
-"                                <strong style=\"font-size:15px\">Nombre aparato:</strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_labels_gadget_qr
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_labels_qr
-msgid "<span style=\"font-size:60px\">RAE:</span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_labels_gadget_qr
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_labels_qr
-msgid "<span> </span><span style=\"font-size:60px\">Cabina</span><br/>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_labels_gadget_qr
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_labels_qr
-msgid "<span> </span><span style=\"font-size:60px\">Foso</span><br/>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_labels_gadget_qr
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_labels_qr
-msgid "<span> </span><span style=\"font-size:60px\">Máquina</span><br/>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_custom_template_worksheet
-msgid ""
-"<span>PUESTA EN MARCHA:</span><br/>\n"
-"                                    <span>REPARACIÓN:</span><br/>\n"
-"                                    <span>MANTENIMIENTO:</span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid "<strong style=\"font-size:15px\">Código aparato:</strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid "<strong><span>R.A.E:</span></strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid "<strong><span>Tipo botonera rellano:</span></strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_custom_template_worksheet
-msgid "<strong>CANT.</strong>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_custom_template_worksheet
-msgid "<strong>CONCEPTO</strong>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_custom_template_worksheet
-msgid "<strong>DATOS PUERTA</strong>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_custom_template_worksheet
-msgid "<strong>DATOS SERVICIO</strong>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_custom_template_worksheet
-msgid "<strong>FECHA:</strong><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_custom_template_worksheet
-msgid "<strong>MATERIALES:</strong>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_custom_template_worksheet
-msgid "<strong>OBSERVACIONES</strong>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_custom_template_worksheet
-msgid ""
-"<strong>POR EL CLIENTE</strong><br/><br/>\n"
-"                                    <span>Nombre del cliente:</span><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_custom_template_worksheet
-msgid ""
-"<strong>POR EL OPERARIO</strong><br/><br/>\n"
-"                                    <span>Fecha:</span><br/>\n"
-"                                    <span>Hora inicio:</span><br/>\n"
-"                                    <span>Hora fin:</span><br/>\n"
-"                                    <span>N° horas:</span><br/>\n"
-"                                    <span>Nombres:</span><span> </span>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_custom_template_worksheet
-msgid "<strong>PUERTA:</strong>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_custom_template_worksheet
-msgid "<strong>SERVICIO</strong>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_custom_template_worksheet
-msgid "<strong>TRABAJO REALIZADO:</strong>"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_custom_template_worksheet
-msgid "<strong>tapas y protecciones cuadro</strong>"
-msgstr ""
+#. module: sat_companies_project
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.inhertit_view_view_task_form2_inherited
+msgid "<strong>This ot exceeded the number of planned hours.</strong>"
+msgstr "Esta OT superó el número de Horas iniciales planificadas"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__accomplished
-msgid "Accomplished"
-msgstr "Logrado"
+#. module: sat_companies_project
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.wizard_sale_order_type_form
+msgid "Accept"
+msgstr "ACEPTAR"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__message_needaction
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__message_needaction
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_breakdowns__message_needaction
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_checklist_minute__message_needaction
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__message_needaction
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__message_needaction
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__message_needaction
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_location__message_needaction
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__message_needaction
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__message_needaction
-#: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__message_needaction
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn__message_needaction
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_template__message_needaction
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__message_needaction
 msgid "Action Needed"
 msgstr "Acción necesaria"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__active
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_breakdowns__active
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__active
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__active
-#: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__active
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_template__active
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__active
 msgid "Active"
 msgstr "Activo"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__actual_end_date
-msgid "Actual end date"
-msgstr "Fecha fin real"
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_wizard_sale_order_type__add_task_line
+msgid "Add Task line ?"
+msgstr "Adicionar líneas de tarea ?"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__actual_start_date
-msgid "Actual start date"
-msgstr "Fecha inicio real"
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__users_ids
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order__users_ids
+msgid "Assigned to"
+msgstr "Asignada"
 
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_maintenance_minute_point_form
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_maintenance_type_deffect_form
-msgid "Add description..."
-msgstr "Descripción"
+#. module: sat_companies_project
+#: code:addons/sat_companies_project/models/project_task.py:0
+#, python-format
+msgid "At least one QR code must be scanned"
+msgstr "Al menos un código QR debe ser escaneado para marcar la OT como hecho"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__address
-msgid "Address"
-msgstr "Dirección"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__address2
-msgid "Address 2"
-msgstr "Dirección 2"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__address3
-msgid "Address 3"
-msgstr "Dirección 3"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__alarm_sound
-msgid "Alarm sound"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__check_4
-msgid "April"
-msgstr "Abril"
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.inherit_timesheet_grid_project_task_view_form
-msgid "Are you sure you want to mark notice technical?"
-msgstr "Estas seguro que desea marcar el aviso como técnico?"
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.inherit_timesheet_grid_project_task_view_form
-msgid "Are you sure you want to not mark notice technical?"
-msgstr "Estas seguro que desea desmarcar el aviso como técnico?"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__assignment_date
-msgid "Assignment date"
-msgstr "Fecha asignación"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__associated_type_id
-msgid "Associated type"
-msgstr "Tipo de asociado"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__message_attachment_count
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__message_attachment_count
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_breakdowns__message_attachment_count
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_checklist_minute__message_attachment_count
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__message_attachment_count
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__message_attachment_count
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__message_attachment_count
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_location__message_attachment_count
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__message_attachment_count
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__message_attachment_count
-#: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__message_attachment_count
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn__message_attachment_count
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_template__message_attachment_count
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__message_attachment_count
 msgid "Attachment Count"
-msgstr "Contador"
+msgstr "Atchivos Adjuntos"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__attachment_id
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__audio_url
-msgid "Audio"
+#. module: sat_companies_project
+#: model:mail.template,subject:sat_companies_project.project_template_new_task
+msgid "Aviso nuevo servicio externo"
 msgstr ""
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__check_8
-msgid "August"
-msgstr "Agosto"
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__check_cabine
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.project_task_inherit_form_view
+msgid "Cabine"
+msgstr "Cabina"
 
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_project_task_sat_companies
-msgid "Begin prev"
-msgstr "Fecha inicio.Prev"
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__cabin_confirm
+msgid "Cabine confirm"
+msgstr "Confirmación Techo cabina"
 
-#. module: sat_companies_industry
-#: model:ir.actions.act_window,name:sat_companies_industry.action_view_breakdowns
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__breakdowns_id
-#: model:ir.ui.menu,name:sat_companies_industry.menu_project_task_breakdowns
-msgid "Breakdowns"
-msgstr "Averías"
+#. module: sat_companies_project
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.project_task_inherit_form_view
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.wizard_sale_order_type_form
+msgid "Cancel"
+msgstr "CANCELAR"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__breakdowns_notice
-msgid "Breakdowns notice"
-msgstr "Motivo averia"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__cabine_phone
-msgid "Cabine phone"
-msgstr "Teléfono cabina"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__categ_udn_id
-msgid "Category/Udn OT"
-msgstr "Categoría/UdN OT"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__checklist_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__checklist_id
-msgid "Checklist"
+#. module: sat_companies_project
+#: model:mail.template,subject:sat_companies_project.template_project_sent_inspection_notice_data
+msgid "Carta Aviso Inspección"
 msgstr ""
 
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_project_task_sat_companies
-msgid "Checklist OCA minute point"
-msgstr "Checklist puntos de acta OCA"
+#. module: sat_companies_project
+#: model:ir.actions.act_window,name:sat_companies_project.action_view_categ_udn
+#: model:ir.ui.menu,name:sat_companies_project.menu_project_task_categ_udn
+msgid "Categorty udn"
+msgstr "Categoría Udn/OT"
 
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_project_task_sat_companies
-msgid "Checklists"
+#. module: sat_companies_project
+#: model:ir.model,name:sat_companies_project.model_project_task_categ_udn
+msgid "Category Udn OT"
+msgstr "Categoria/UdN OT"
+
+#. module: sat_companies_project
+#: model:ir.ui.menu,name:sat_companies_project.menu_project_task_categ_udn_sale
+#: model:ir.ui.menu,name:sat_companies_project.menu_project_task_categ_udn_subscription
+msgid "Categoría Udn/OT"
 msgstr ""
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__task_signature
-msgid "Client signature"
-msgstr "Firma cliente"
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__check_cabine_datetime
+msgid "Check Datetime Cabine"
+msgstr "Fecha de scanner Techo cabina"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__closed_date
-msgid "Closed date"
-msgstr "Fecha culminación OT"
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__check_machine_datetime
+msgid "Check Datetime Machine"
+msgstr "Fecha de scanner Sala de Máquinas"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__code
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_breakdowns__code
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__code
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__code
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__check_pit_datetime
+msgid "Check Datetime Pit"
+msgstr "Fecha de scanner foso"
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__check_qr_active
+msgid "Check Qr"
+msgstr "Chequeo Qr"
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order__check_users
+msgid "Check Users"
+msgstr ""
+
+#. module: sat_companies_project
+#: model:ir.model.fields.selection,name:sat_companies_project.selection__project_task__state_check_qr__checking
+msgid "Checking"
+msgstr "En Inspección"
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn__code
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__code
 msgid "Code"
 msgstr "Código"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__commercial_id
-msgid "Commercial"
-msgstr "Comercial"
+#. module: sat_companies_project
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.project_task_inherit_form_view
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.view_sale_order_inherit_sat_companies_project
+msgid "Confirm"
+msgstr "Confirmar"
 
-#. module: sat_companies_industry
-#: model:ir.actions.act_window,name:sat_companies_industry.action_view_community_mood
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__community_mood_id
-#: model:ir.ui.menu,name:sat_companies_industry.menu_community_mood
-msgid "Community mood"
-msgstr "Estado ánimo"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__concatenate
-msgid "Concatenate minute point"
-msgstr "Punto de acta"
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_project_task_sat_companies
+#. module: sat_companies_project
+#: model:ir.model,name:sat_companies_project.model_res_partner
 msgid "Contact"
 msgstr "Contacto"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__contact_person_ot
-msgid "Contact Person OT"
-msgstr "Persona de contacto"
-
-#. module: sat_companies_industry
-#: model_terms:ir.actions.act_window,help:sat_companies_industry.action_view_breakdowns
-#: model_terms:ir.actions.act_window,help:sat_companies_industry.action_view_community_mood
-#: model_terms:ir.actions.act_window,help:sat_companies_industry.action_view_inspection
-#: model_terms:ir.actions.act_window,help:sat_companies_industry.action_view_minute_point
-#: model_terms:ir.actions.act_window,help:sat_companies_industry.action_view_ot_checklist
-#: model_terms:ir.actions.act_window,help:sat_companies_industry.action_view_ot_checklist_location
-#: model_terms:ir.actions.act_window,help:sat_companies_industry.action_view_type_deffect
+#. module: sat_companies_project
+#: model_terms:ir.actions.act_window,help:sat_companies_project.action_view_categ_udn
+#: model_terms:ir.actions.act_window,help:sat_companies_project.action_view_project_task_template
+#: model_terms:ir.actions.act_window,help:sat_companies_project.action_view_sale_order_type
 msgid "Create new record"
 msgstr "Crear nuevo registro"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__create_uid
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__create_uid
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_breakdowns__create_uid
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_checklist_minute__create_uid
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__create_uid
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__create_uid
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__create_uid
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_location__create_uid
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__create_uid
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__create_uid
-#: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__create_uid
+#. module: sat_companies_project
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.wizard_sale_order_type_form
+msgid "Create or Related a Project"
+msgstr "Crear o relacionar un proyecto"
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__is_create_task
+msgid "Create task"
+msgstr "Crear tarea"
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn__create_uid
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_template__create_uid
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__create_uid
+#: model:ir.model.fields,field_description:sat_companies_project.field_wizard_sale_order_type__create_uid
 msgid "Created by"
 msgstr "Creado por"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__create_date
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__create_date
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_breakdowns__create_date
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_checklist_minute__create_date
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__create_date
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__create_date
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__create_date
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_location__create_date
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__create_date
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__create_date
-#: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__create_date
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn__create_date
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_template__create_date
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__create_date
+#: model:ir.model.fields,field_description:sat_companies_project.field_wizard_sale_order_type__create_date
 msgid "Created on"
 msgstr "Creado en"
 
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid "DATOS TÉCNICOS"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__dni
-msgid "DNI"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__ot_date
-msgid "Date"
-msgstr "Fecha"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__check_12
-msgid "December"
-msgstr "Diciembre"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__delegation_id
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__delegation
 msgid "Delegation"
 msgstr "Delegación"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__delegation_name
-msgid "Delegation name"
-msgstr "Nombre delegación"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__description
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__description
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_checklist_minute__minute_point_description
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__description
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__minute_point_description
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__description
-#: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__description
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__comercial_description
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn__description
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order__comercial_description
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.project_task_inherit_form_view
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.view_sale_order_inherit_sat_companies_project
 msgid "Description"
 msgstr "Descripción"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__display_name
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__display_name
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__display_name
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_breakdowns__display_name
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_checklist_minute__display_name
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__display_name
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__display_name
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__display_name
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_location__display_name
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__display_name
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__display_name
-#: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__display_name
+#. module: sat_companies_project
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.view_project_task_categ_udn_form
+msgid "Description...!"
+msgstr "Descripción"
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_account_move__display_name
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_project__display_name
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__display_name
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn__display_name
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_template__display_name
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_type__display_name
+#: model:ir.model.fields,field_description:sat_companies_project.field_res_partner__display_name
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order__display_name
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_line__display_name
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_template__display_name
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__display_name
+#: model:ir.model.fields,field_description:sat_companies_project.field_stock_picking__display_name
+#: model:ir.model.fields,field_description:sat_companies_project.field_wizard_sale_order_type__display_name
 msgid "Display Name"
 msgstr "Nombre mostrado"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__done_work
-msgid "Done work"
-msgstr "Trabajo realizado"
+#. module: sat_companies_project
+#: model:ir.model.fields.selection,name:sat_companies_project.selection__project_task__state_check_qr__done
+msgid "Done"
+msgstr "Hecho"
 
-#. module: sat_companies_industry
-#: code:addons/sat_companies_industry/models/project_task.py:0
-#, python-format
-msgid "El aparato esta parado : %s"
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__qr_cabine
+msgid "Dowload QR Image Cabine"
+msgstr "Descargar Imagen QR para Techo cabina"
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__qr_machine
+msgid "Dowload QR Image Machine"
+msgstr "Descargar Imagen QR para Máquina"
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__qr_pit
+msgid "Dowload Qr Image Pit"
+msgstr "Descargar Imagen QR para Foso"
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_wizard_sale_order_type__duplicate_task
+msgid "Duplicate Task"
+msgstr "Duplicar tarea"
+
+#. module: sat_companies_project
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.view_sale_order_inherit_sat_companies_project
+msgid "ENVIAR PRESUPUESTO"
 msgstr ""
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__email_contact
-msgid "Email"
-msgstr "Correo"
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_project_task_sat_companies
-msgid "End prev"
-msgstr "Fecha fin.Prev"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__fax_contact
-msgid "FAX"
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order__date_end
+msgid "End date"
 msgstr ""
 
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.inherit_timesheet_grid_project_task_view_form
-msgid "FINALIZAR OT"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__check_2
-msgid "February"
-msgstr "Febrero"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__store_fname
-msgid "File Name"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model:ir.model.fields.selection,name:sat_companies_industry.selection__project_task__situation__finished
-msgid "Finished"
-msgstr "Finalizada"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__floor
-msgid "Floor"
-msgstr "Piso"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__floor_number
-msgid "Floor number"
-msgstr "Piso."
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__message_follower_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__message_follower_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_breakdowns__message_follower_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_checklist_minute__message_follower_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__message_follower_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__message_follower_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__message_follower_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_location__message_follower_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__message_follower_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__message_follower_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__message_follower_ids
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn__message_follower_ids
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_template__message_follower_ids
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__message_follower_ids
 msgid "Followers"
 msgstr "Seguidores"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__message_channel_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__message_channel_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_breakdowns__message_channel_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_checklist_minute__message_channel_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__message_channel_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__message_channel_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__message_channel_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_location__message_channel_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__message_channel_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__message_channel_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__message_channel_ids
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn__message_channel_ids
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_template__message_channel_ids
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__message_channel_ids
 msgid "Followers (Channels)"
 msgstr "Seguidores"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__message_partner_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__message_partner_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_breakdowns__message_partner_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_checklist_minute__message_partner_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__message_partner_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__message_partner_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__message_partner_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_location__message_partner_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__message_partner_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__message_partner_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__message_partner_ids
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn__message_partner_ids
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_template__message_partner_ids
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__message_partner_ids
 msgid "Followers (Partners)"
 msgstr "Seguidores"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__gadget_id
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__product_id
-msgid "Gadget"
-msgstr "Aparato"
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order__is_forecast_made
+msgid "Forecast Made"
+msgstr "Previsión realizada"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__gadget_pda_observations
-msgid "Gadget PDA observations"
-msgstr "Observaciones PDA aparato"
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__from_gadget
+msgid "From the Gadget"
+msgstr "Desde el Aparato"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__gadget_admin_id
-msgid "Gadget admin"
-msgstr "Administrador aparato"
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__from_zone
+msgid "From the Zone"
+msgstr "Desde la Zona"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__gadget_code
-msgid "Gadget code"
-msgstr "Código del aparato"
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_line__task_id
+msgid "Generated Task"
+msgstr "Tareas generadas"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__gadget_notes
-msgid "Gadget notes"
-msgstr "Notas aparato"
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_project_task_sat_companies
-msgid "Gadgets"
-msgstr "Aparato"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__open_time_hours
-msgid "Hours"
-msgstr "Tiempo mostrado en horas"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__id
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__id
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__id
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_breakdowns__id
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_checklist_minute__id
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__id
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__id
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__id
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_location__id
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__id
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__id
-#: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__id
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_account_move__id
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_project__id
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__id
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn__id
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_template__id
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_type__id
+#: model:ir.model.fields,field_description:sat_companies_project.field_res_partner__id
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order__id
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_line__id
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_template__id
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__id
+#: model:ir.model.fields,field_description:sat_companies_project.field_stock_picking__id
+#: model:ir.model.fields,field_description:sat_companies_project.field_wizard_sale_order_type__id
 msgid "ID"
 msgstr "Id"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,help:sat_companies_industry.field_maintenance_minute_point__message_needaction
-#: model:ir.model.fields,help:sat_companies_industry.field_maintenance_minute_point__message_unread
-#: model:ir.model.fields,help:sat_companies_industry.field_maintenance_type_deffect__message_needaction
-#: model:ir.model.fields,help:sat_companies_industry.field_maintenance_type_deffect__message_unread
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_breakdowns__message_needaction
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_breakdowns__message_unread
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_checklist_minute__message_needaction
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_checklist_minute__message_unread
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_inspection__message_needaction
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_inspection__message_unread
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_ot_checklist__message_needaction
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_ot_checklist__message_unread
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_ot_checklist_line__message_needaction
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_ot_checklist_line__message_unread
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_ot_checklist_location__message_needaction
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_ot_checklist_location__message_unread
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_type_associated__message_needaction
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_type_associated__message_unread
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_warning__message_needaction
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_warning__message_unread
-#: model:ir.model.fields,help:sat_companies_industry.field_task_community_mood__message_needaction
-#: model:ir.model.fields,help:sat_companies_industry.field_task_community_mood__message_unread
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__ids_overlapping_tasks_users
+msgid "Ids Overlapping Tasks Users"
+msgstr ""
+
+#. module: sat_companies_project
+#: model:ir.model.fields,help:sat_companies_project.field_project_task_categ_udn__message_needaction
+#: model:ir.model.fields,help:sat_companies_project.field_project_task_categ_udn__message_unread
+#: model:ir.model.fields,help:sat_companies_project.field_project_task_template__message_needaction
+#: model:ir.model.fields,help:sat_companies_project.field_project_task_template__message_unread
+#: model:ir.model.fields,help:sat_companies_project.field_sale_order_type__message_needaction
+#: model:ir.model.fields,help:sat_companies_project.field_sale_order_type__message_unread
 msgid "If checked, new messages require your attention."
-msgstr ""
+msgstr "Si está marcada, los mensajes nuevos requieren su atención."
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,help:sat_companies_industry.field_maintenance_minute_point__message_has_error
-#: model:ir.model.fields,help:sat_companies_industry.field_maintenance_minute_point__message_has_sms_error
-#: model:ir.model.fields,help:sat_companies_industry.field_maintenance_type_deffect__message_has_error
-#: model:ir.model.fields,help:sat_companies_industry.field_maintenance_type_deffect__message_has_sms_error
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_breakdowns__message_has_error
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_breakdowns__message_has_sms_error
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_checklist_minute__message_has_error
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_checklist_minute__message_has_sms_error
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_inspection__message_has_error
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_inspection__message_has_sms_error
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_ot_checklist__message_has_error
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_ot_checklist__message_has_sms_error
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_ot_checklist_line__message_has_error
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_ot_checklist_line__message_has_sms_error
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_ot_checklist_location__message_has_error
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_ot_checklist_location__message_has_sms_error
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_type_associated__message_has_error
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_type_associated__message_has_sms_error
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_warning__message_has_error
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_warning__message_has_sms_error
-#: model:ir.model.fields,help:sat_companies_industry.field_task_community_mood__message_has_error
-#: model:ir.model.fields,help:sat_companies_industry.field_task_community_mood__message_has_sms_error
+#. module: sat_companies_project
+#: model:ir.model.fields,help:sat_companies_project.field_project_task_categ_udn__message_has_error
+#: model:ir.model.fields,help:sat_companies_project.field_project_task_categ_udn__message_has_sms_error
+#: model:ir.model.fields,help:sat_companies_project.field_project_task_template__message_has_error
+#: model:ir.model.fields,help:sat_companies_project.field_project_task_template__message_has_sms_error
+#: model:ir.model.fields,help:sat_companies_project.field_sale_order_type__message_has_error
+#: model:ir.model.fields,help:sat_companies_project.field_sale_order_type__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
-msgstr ""
+msgstr "Si está marcado, algunos mensajes tienen un error de entrega."
 
-#. module: sat_companies_industry
-#: model:ir.actions.report,name:sat_companies_industry.report_print_gadget_qr
-#: model:ir.actions.report,name:sat_companies_industry.report_print_qr
-msgid "Imprimir etiquetas QR de aparatos"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model:ir.actions.act_window,name:sat_companies_industry.action_view_inspection
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__inspection_id
-#: model:ir.ui.menu,name:sat_companies_industry.menu_project_task_inspection
-msgid "Inspection"
-msgstr "Inspección"
-
-#. module: sat_companies_industry
-#: model:ir.model,name:sat_companies_industry.model_project_task_inspection
-#: model:ir.model,name:sat_companies_industry.model_task_community_mood
-msgid "Inspections"
-msgstr "Inspecciones"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__is_april
-msgid "Is April"
-msgstr "Es abril"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__is_august
-msgid "Is August"
-msgstr "Es agosto"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__is_december
-msgid "Is December"
-msgstr "Es diciembre"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__is_february
-msgid "Is February"
-msgstr "Es febrero"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__message_is_follower
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__message_is_follower
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_breakdowns__message_is_follower
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_checklist_minute__message_is_follower
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__message_is_follower
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__message_is_follower
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__message_is_follower
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_location__message_is_follower
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__message_is_follower
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__message_is_follower
-#: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__message_is_follower
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn__message_is_follower
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_template__message_is_follower
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__message_is_follower
 msgid "Is Follower"
 msgstr "Es un seguidor"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__is_january
-msgid "Is January"
-msgstr "Es enero"
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_type__is_progress
+msgid "Is Progress"
+msgstr "Empezada fsm"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__is_july
-msgid "Is July"
-msgstr "Es julio"
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__is_qr_required
+msgid "Is QR required?"
+msgstr "Habilitar QR obligatorio"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__is_june
-msgid "Is June"
-msgstr "Es junio"
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_account_bank_statement_line__is_potential_client
+#: model:ir.model.fields,field_description:sat_companies_project.field_account_move__is_potential_client
+#: model:ir.model.fields,field_description:sat_companies_project.field_account_payment__is_potential_client
+#: model:ir.model.fields,field_description:sat_companies_project.field_res_partner__is_potential_client
+#: model:ir.model.fields,field_description:sat_companies_project.field_res_users__is_potential_client
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order__is_potential_client
+#: model:ir.model.fields,field_description:sat_companies_project.field_stock_picking__is_potential_client
+msgid "Is a potential client"
+msgstr "Contacto potencial"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__is_march
-msgid "Is March"
-msgstr "Es marzo"
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_wizard_sale_order_type__is_new_project
+msgid "Is a project existing ?"
+msgstr "Proyecto existente"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__is_may
-msgid "Is May"
-msgstr "Es mayo"
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_type__is_project_fsm
+msgid "Is done in fsm project"
+msgstr "Hecho fsm"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__is_november
-msgid "Is November"
-msgstr "Is noviembre"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__is_october
-msgid "Is October"
-msgstr "Es octubre"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__is_september
-msgid "Is September"
-msgstr "Is septiembre"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__is_apartament
-msgid "Is apartament"
-msgstr "Atrapamiento"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__is_calculed_time
-msgid "Is caluled time"
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__is_end_ot
+msgid "Is end OT"
 msgstr ""
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__is_conflictive_apparatus
-msgid "Is conflictive apparatus"
-msgstr "El aparato es conflictivo"
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__is_late_hours
+msgid "Is late hours"
+msgstr "Supero límite de horas planificadas"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__is_maintenance
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__is_line
+msgid "Is line"
+msgstr "Línea"
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__is_maintenance
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order__is_maintenance
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__is_maintenance
 msgid "Is maintenance"
 msgstr "Es mantenedora"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_checklist_minute__is_reviewed
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__is_reviewed
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__is_reviewed_checklist
-msgid "Is reviewed"
-msgstr "Revisado"
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order__is_mounting
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__is_mounting
+msgid "Is mounting"
+msgstr "Montaje"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__is_stop_with_company
-msgid "Is stop with company"
-msgstr "Parado por la empresa"
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__is_old_task
+msgid "Is old task"
+msgstr "Tarea vieja"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__is_technical_notice_ot
-msgid "Is technical notice"
-msgstr "Aviso técnico"
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn__is_user
+msgid "Is user"
+msgstr "Habilitar usuarios"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__is_warning
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__is_warning
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__is_warning
 msgid "Is warning"
 msgstr "Aviso"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__check_1
-msgid "January"
-msgstr "Enero"
+#. module: sat_companies_project
+#: model:ir.model,name:sat_companies_project.model_account_move
+msgid "Journal Entry"
+msgstr "Asiento contable"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__check_7
-msgid "July"
-msgstr "Julio"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__check_6
-msgid "June"
-msgstr "Junio"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point____last_update
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect____last_update
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task____last_update
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_breakdowns____last_update
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_checklist_minute____last_update
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection____last_update
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist____last_update
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line____last_update
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_location____last_update
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated____last_update
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning____last_update
-#: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood____last_update
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_account_move____last_update
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_project____last_update
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task____last_update
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn____last_update
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_template____last_update
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_type____last_update
+#: model:ir.model.fields,field_description:sat_companies_project.field_res_partner____last_update
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order____last_update
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_line____last_update
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_template____last_update
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type____last_update
+#: model:ir.model.fields,field_description:sat_companies_project.field_stock_picking____last_update
+#: model:ir.model.fields,field_description:sat_companies_project.field_wizard_sale_order_type____last_update
 msgid "Last Modified on"
 msgstr "Última modificación el"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__write_uid
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__write_uid
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_breakdowns__write_uid
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_checklist_minute__write_uid
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__write_uid
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__write_uid
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__write_uid
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_location__write_uid
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__write_uid
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__write_uid
-#: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__write_uid
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn__write_uid
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_template__write_uid
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__write_uid
+#: model:ir.model.fields,field_description:sat_companies_project.field_wizard_sale_order_type__write_uid
 msgid "Last Updated by"
 msgstr "Última actualización por"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__write_date
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__write_date
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_breakdowns__write_date
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_checklist_minute__write_date
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__write_date
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__write_date
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__write_date
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_location__write_date
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__write_date
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__write_date
-#: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__write_date
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn__write_date
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_template__write_date
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__write_date
+#: model:ir.model.fields,field_description:sat_companies_project.field_wizard_sale_order_type__write_date
 msgid "Last Updated on"
 msgstr "Última actualización en"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__location
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__location_id
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_project_task_ot_checklist_location_form
-msgid "Location"
-msgstr "Ubicación"
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_project__location_count
+msgid "Location count"
+msgstr "Contador de ubicaciones"
 
-#. module: sat_companies_industry
-#: model:ir.filters,name:sat_companies_industry.default_filter_user_id_task
-msgid "MIS TAREAS"
-msgstr ""
+#. module: sat_companies_project
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.inherit_view_project_project_sat_companies_project
+msgid "Locations"
+msgstr "Ubicaciones"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__message_main_attachment_id
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__message_main_attachment_id
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_breakdowns__message_main_attachment_id
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_checklist_minute__message_main_attachment_id
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__message_main_attachment_id
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__message_main_attachment_id
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__message_main_attachment_id
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_location__message_main_attachment_id
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__message_main_attachment_id
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__message_main_attachment_id
-#: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__message_main_attachment_id
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__check_machine
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.project_task_inherit_form_view
+msgid "Machine"
+msgstr "Máquina"
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__machine_confirm
+msgid "Machine confirm"
+msgstr "Confirmar máquina"
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn__message_main_attachment_id
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_template__message_main_attachment_id
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__message_main_attachment_id
 msgid "Main Attachment"
-msgstr ""
+msgstr "Accesorio principal"
 
-#. module: sat_companies_industry
-#: model:res.groups,name:sat_companies_industry.project_task_ot_checklist_manager_group
-msgid "Manager OT checklist"
-msgstr "Administrador OT checklist"
+#. module: sat_companies_project
+#: model:res.groups,name:sat_companies_project.ot_type_manager_group
+msgid "Manager OT type"
+msgstr "Administrador Tipo OT"
 
-#. module: sat_companies_industry
-#: model:res.groups,comment:sat_companies_industry.project_task_ot_checklist_manager_group
-msgid "Manager OT checklist Permission Group"
-msgstr "Administrador grupo de permisos OT checklist"
+#. module: sat_companies_project
+#: model:res.groups,comment:sat_companies_project.ot_type_manager_group
+msgid "Manager OT type Permission Group"
+msgstr "Administrador tipo OT permisos de grupo"
 
-#. module: sat_companies_industry
-#: model:res.groups,name:sat_companies_industry.project_tast_breakdowns_manager_group
-msgid "Manager breakdowns"
-msgstr "Administrador averías"
+#. module: sat_companies_project
+#: model:res.groups,name:sat_companies_project.sale_order_type_group
+msgid "Manager sale type"
+msgstr "Administrador tipo de presupuesto"
 
-#. module: sat_companies_industry
-#: model:res.groups,comment:sat_companies_industry.project_tast_breakdowns_manager_group
-msgid "Manager breakdowns Permission Group"
-msgstr "Grupo de permisos averías"
+#. module: sat_companies_project
+#: model:res.groups,comment:sat_companies_project.sale_order_type_group
+msgid "Manager sale type Permission Group"
+msgstr "Administrador grupo de permisos tipo de presupuesto"
 
-#. module: sat_companies_industry
-#: model:res.groups,name:sat_companies_industry.maintenance_minute_point_manager_group
-msgid "Manager maintenance minute point"
-msgstr "Administrador puntos de acta"
-
-#. module: sat_companies_industry
-#: model:res.groups,name:sat_companies_industry.maintenance_type_deffect_manager_group
-msgid "Manager maintenance type deffect"
-msgstr "Administrador tipos de defecto"
-
-#. module: sat_companies_industry
-#: model:res.groups,name:sat_companies_industry.notice_technical_manager_group
-msgid "Manager mark notice technical"
-msgstr "Administrador marcar aviso como técnico"
-
-#. module: sat_companies_industry
-#: model:res.groups,comment:sat_companies_industry.notice_technical_manager_group
-msgid "Manager mark notice technical Permission Group"
-msgstr "Grupo de permisos marcar aviso como técnico"
-
-#. module: sat_companies_industry
-#: model:res.groups,comment:sat_companies_industry.maintenance_minute_point_manager_group
-msgid "Manager minute point Permission Group"
-msgstr "Administrador grupo de permisos puntos de acta"
-
-#. module: sat_companies_industry
-#: model:res.groups,name:sat_companies_industry.project_tast_type_associated_manager_group
-msgid "Manager type associated"
-msgstr "Administrador tipo de asociado"
-
-#. module: sat_companies_industry
-#: model:res.groups,comment:sat_companies_industry.project_tast_type_associated_manager_group
-msgid "Manager type associated Permission Group"
-msgstr "Administrador grupo de permisos tipo de asociado"
-
-#. module: sat_companies_industry
-#: model:res.groups,comment:sat_companies_industry.maintenance_type_deffect_manager_group
-msgid "Manager type deffect Permission Group"
-msgstr "Administrador grupo de permisos tipo de defecto"
-
-#. module: sat_companies_industry
-#: model:res.groups,name:sat_companies_industry.project_tast_warning_manager_group
-msgid "Manager warning"
-msgstr "Administrador de aviso"
-
-#. module: sat_companies_industry
-#: model:res.groups,comment:sat_companies_industry.project_tast_warning_manager_group
-msgid "Manager warning Permission Group"
-msgstr "Grupo de permisos administrador de aviso"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__check_3
-msgid "March"
-msgstr "Marzo"
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.inherit_timesheet_grid_project_task_view_form
-msgid "Mark notice like technical"
-msgstr "Marcar aviso como técnico"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__maximum_rescue_time
-msgid "Maximum rescue time"
-msgstr "Tiempo máximo rescate"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__maximum_warning_time
-msgid "Maximum warning time"
-msgstr "Tiempo máximo avisos"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__check_5
-msgid "May"
-msgstr "Mayo"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__message_has_error
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__message_has_error
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_breakdowns__message_has_error
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_checklist_minute__message_has_error
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__message_has_error
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__message_has_error
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__message_has_error
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_location__message_has_error
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__message_has_error
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__message_has_error
-#: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__message_has_error
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn__message_has_error
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_template__message_has_error
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__message_has_error
 msgid "Message Delivery error"
-msgstr ""
+msgstr "Error de entrega de mensaje"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__message_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__message_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_breakdowns__message_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_checklist_minute__message_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__message_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__message_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__message_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_location__message_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__message_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__message_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__message_ids
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn__message_ids
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_template__message_ids
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__message_ids
 msgid "Messages"
 msgstr "Mensajes"
 
-#. module: sat_companies_industry
-#: model:ir.actions.act_window,name:sat_companies_industry.action_view_minute_point
-msgid "Minute Point"
-msgstr "Punto de acta"
-
-#. module: sat_companies_industry
-#: model:ir.model,name:sat_companies_industry.model_maintenance_minute_point
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__minute_point_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_checklist_minute__minute_point_id
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__minute_point_id
-#: model:ir.ui.menu,name:sat_companies_industry.menu_maintenance_minute_point
-msgid "Minute point"
-msgstr "Punto de acta"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__open_time_minutes
-msgid "Minutes"
-msgstr "Tiempo mostrado en minutos"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__month_date
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__month_date
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__month_date
-msgid "Month"
-msgstr "Mes"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__name
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__name
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_breakdowns__name
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_checklist_minute__name
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__name
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__name
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_location__name
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__name
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__name
-#: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__name
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_maintenance_type_deffect_form
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_project_task_breakdowns_form
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_project_task_inspection_form
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_task_community_mood_form
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__delegation_location
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__from_gadget_location
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__from_zone_location
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__to_gadget_location
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__to_zone_location
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn__name
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_template__name
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__name
+#: model:ir.model.fields,field_description:sat_companies_project.field_wizard_sale_order_type__name
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.view_project_task_categ_udn_form
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.view_project_task_template_form
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.view_sale_order_typet_form
 msgid "Name"
 msgstr "Nombre"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__name_of_signatory
-msgid "Name of signatory"
-msgstr "Nombre del firmante"
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn__is_normative
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order__is_normative
+msgid "Normative"
+msgstr "Normativa"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields.selection,name:sat_companies_industry.selection__project_task__stop_type__not
-#: model:ir.model.fields.selection,name:sat_companies_industry.selection__project_task_ot_checklist__accomplished__not
-msgid "Not"
-msgstr "No"
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order__normative_date
+msgid "Normative date"
+msgstr "Fecha cumplimiento normativa"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__notes
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_project_task_sat_companies
-msgid "Notes"
-msgstr "Notas"
-
-#. module: sat_companies_industry
-#: code:addons/sat_companies_industry/models/project_task.py:0
-#, python-format
-msgid "Notification OT!"
+#. module: sat_companies_project
+#: model:base.automation,name:sat_companies_project.action_automated_template_field_service
+#: model:ir.actions.server,name:sat_companies_project.action_automated_template_field_service_ir_actions_server
+msgid "Notificar creación servicio externo"
 msgstr ""
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__check_11
-msgid "November"
-msgstr "Noviembre"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__message_needaction_counter
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__message_needaction_counter
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_breakdowns__message_needaction_counter
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_checklist_minute__message_needaction_counter
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__message_needaction_counter
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__message_needaction_counter
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__message_needaction_counter
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_location__message_needaction_counter
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__message_needaction_counter
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__message_needaction_counter
-#: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__message_needaction_counter
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn__message_needaction_counter
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_template__message_needaction_counter
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__message_needaction_counter
 msgid "Number of Actions"
-msgstr ""
+msgstr "Número de acciones"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__message_has_error_counter
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__message_has_error_counter
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_breakdowns__message_has_error_counter
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_checklist_minute__message_has_error_counter
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__message_has_error_counter
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__message_has_error_counter
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__message_has_error_counter
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_location__message_has_error_counter
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__message_has_error_counter
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__message_has_error_counter
-#: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__message_has_error_counter
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn__message_has_error_counter
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_template__message_has_error_counter
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__message_has_error_counter
 msgid "Number of errors"
-msgstr ""
+msgstr "Número de errores"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,help:sat_companies_industry.field_maintenance_minute_point__message_needaction_counter
-#: model:ir.model.fields,help:sat_companies_industry.field_maintenance_type_deffect__message_needaction_counter
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_breakdowns__message_needaction_counter
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_checklist_minute__message_needaction_counter
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_inspection__message_needaction_counter
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_ot_checklist__message_needaction_counter
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_ot_checklist_line__message_needaction_counter
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_ot_checklist_location__message_needaction_counter
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_type_associated__message_needaction_counter
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_warning__message_needaction_counter
-#: model:ir.model.fields,help:sat_companies_industry.field_task_community_mood__message_needaction_counter
+#. module: sat_companies_project
+#: model:ir.model.fields,help:sat_companies_project.field_project_task_categ_udn__message_needaction_counter
+#: model:ir.model.fields,help:sat_companies_project.field_project_task_template__message_needaction_counter
+#: model:ir.model.fields,help:sat_companies_project.field_sale_order_type__message_needaction_counter
 msgid "Number of messages which requires an action"
-msgstr ""
+msgstr "Número de mensajes que requieren una acción"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,help:sat_companies_industry.field_maintenance_minute_point__message_has_error_counter
-#: model:ir.model.fields,help:sat_companies_industry.field_maintenance_type_deffect__message_has_error_counter
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_breakdowns__message_has_error_counter
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_checklist_minute__message_has_error_counter
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_inspection__message_has_error_counter
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_ot_checklist__message_has_error_counter
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_ot_checklist_line__message_has_error_counter
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_ot_checklist_location__message_has_error_counter
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_type_associated__message_has_error_counter
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_warning__message_has_error_counter
-#: model:ir.model.fields,help:sat_companies_industry.field_task_community_mood__message_has_error_counter
+#. module: sat_companies_project
+#: model:ir.model.fields,help:sat_companies_project.field_project_task_categ_udn__message_has_error_counter
+#: model:ir.model.fields,help:sat_companies_project.field_project_task_template__message_has_error_counter
+#: model:ir.model.fields,help:sat_companies_project.field_sale_order_type__message_has_error_counter
 msgid "Number of messages with delivery error"
-msgstr ""
+msgstr "Número de mensajes con error de entrega"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,help:sat_companies_industry.field_maintenance_minute_point__message_unread_counter
-#: model:ir.model.fields,help:sat_companies_industry.field_maintenance_type_deffect__message_unread_counter
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_breakdowns__message_unread_counter
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_checklist_minute__message_unread_counter
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_inspection__message_unread_counter
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_ot_checklist__message_unread_counter
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_ot_checklist_line__message_unread_counter
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_ot_checklist_location__message_unread_counter
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_type_associated__message_unread_counter
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_warning__message_unread_counter
-#: model:ir.model.fields,help:sat_companies_industry.field_task_community_mood__message_unread_counter
+#. module: sat_companies_project
+#: model:ir.model.fields,help:sat_companies_project.field_project_task_categ_udn__message_unread_counter
+#: model:ir.model.fields,help:sat_companies_project.field_project_task_template__message_unread_counter
+#: model:ir.model.fields,help:sat_companies_project.field_sale_order_type__message_unread_counter
 msgid "Number of unread messages"
+msgstr "Número de mensajes no leídos"
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn__ot_type_id
+msgid "OT type"
+msgstr "Tipo OT"
+
+#. module: sat_companies_project
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.project_task_inherit_form_view
+msgid "Observaciones"
 msgstr ""
 
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_custom_template_worksheet
-msgid "N° OT:"
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__order_lines
+msgid "Order Lines"
+msgstr "Líneas de orden"
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__origin
+msgid "Origin"
+msgstr "Origen"
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__is_other
+msgid "Other"
+msgstr "Otro"
+
+#. module: sat_companies_project
+#: code:addons/sat_companies_project/models/project_task.py:0
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__overlapping_tasks
+#, python-format
+msgid "Overlapping Tasks"
 msgstr ""
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__line_number
-msgid "N° line"
-msgstr "N° línea"
-
-#. module: sat_companies_industry
-#: model:ir.actions.act_window,name:sat_companies_industry.action_view_ot_checklist
-#: model:ir.model,name:sat_companies_industry.model_project_task_ot_checklist
-#: model:ir.ui.menu,name:sat_companies_industry.menu_project_task_ot_checklist
-msgid "OT checklist"
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__overlapping_tasks_users
+msgid "Overlapping Tasks Users"
 msgstr ""
 
-#. module: sat_companies_industry
-#: model:ir.model,name:sat_companies_industry.model_project_task_ot_checklist_line
-msgid "OT checklist line"
-msgstr ""
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__payment_term_ot_id
+msgid "Payment term"
+msgstr "Plazos de pago"
 
-#. module: sat_companies_industry
-#: model:ir.actions.act_window,name:sat_companies_industry.action_view_ot_checklist_location
-#: model:ir.model,name:sat_companies_industry.model_project_task_ot_checklist_location
-#: model:ir.ui.menu,name:sat_companies_industry.menu_project_task_ot_checklist_location
-msgid "OT checklist location"
-msgstr "Ubicación/checklist"
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__picking_ids
+msgid "Picking"
+msgstr "Transferencia"
 
-#. module: sat_companies_industry
-#: model:ir.model,name:sat_companies_industry.model_project_task_checklist_minute
-msgid "OT checklist minute"
-msgstr "Checklist puntos del acta"
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__check_pit
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.project_task_inherit_form_view
+msgid "Pit"
+msgstr "Foso"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__ot_code
-msgid "OT code"
-msgstr "Código OT"
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__pit_confirm
+msgid "Pit confirm"
+msgstr "Foso confimación"
 
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_project_task_sat_companies
-msgid "OT information"
-msgstr "Información OT"
+#. module: sat_companies_project
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.view_sale_order_inherit_sat_companies_project
+msgid "Planned Date"
+msgstr "Fecha planificación"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__ot_description
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_project_task_sat_companies
-msgid "Observations"
-msgstr "Observaciones"
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__progress_calculated
+msgid "Progress percentaje"
+msgstr "Porcentaje horas"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__check_10
-msgid "October"
-msgstr "Octubre"
+#. module: sat_companies_project
+#: model:ir.model,name:sat_companies_project.model_project_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_wizard_sale_order_type__project_id
+msgid "Project"
+msgstr "Proyecto"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__open_date
-msgid "Open date"
-msgstr ""
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_wizard_sale_order_type__project_line_ids
+msgid "Project Line"
+msgstr "Línea de projecto"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__user_id
-msgid "Operator"
-msgstr "Operario"
+#. module: sat_companies_project
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.wizard_sale_order_type_form
+msgid "Project name"
+msgstr "Nombre de proyecto"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__checklist_ot_ids
-msgid "Ot checklist"
-msgstr ""
+#. module: sat_companies_project
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.wizard_sale_order_type_form
+msgid "Project related"
+msgstr "Seleccionar proyecto"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__is_pda
-msgid "PDA"
-msgstr ""
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order__project_task_id
+msgid "Project task name"
+msgstr "Nombre de la tarea/OT"
 
-#. module: sat_companies_industry
-#: model:ir.filters,name:sat_companies_industry.default_filter_done_task
-msgid "POR HACER"
-msgstr ""
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__qr_cabine_image
+msgid "QR CODE IMAGE CABINE"
+msgstr "IMAGEN QR - TECHO CABINA"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields.selection,name:sat_companies_industry.selection__project_task__situation__pending
-msgid "Pending"
-msgstr "Pendiente"
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__qr_machine_image
+msgid "QR CODE IMAGE MACHINE"
+msgstr "IMAGEN QR - MÁQUINA"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__is_pending_validate
-msgid "Pending to validate"
-msgstr "Pendiente validar"
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__qr_pit_image
+msgid "QR CODE IMAGE PIT"
+msgstr "IMAGEN QR - FOSO"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__name
-msgid "Periodicity"
-msgstr "Periocidad"
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__qr_scanner
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.project_task_inherit_form_view
+msgid "Qr Scanner"
+msgstr "Qr Escaner"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__contact_person
-msgid "Pers.Ctto"
-msgstr ""
+#. module: sat_companies_project
+#: model:ir.model,name:sat_companies_project.model_sale_order_template
+msgid "Quotation Template"
+msgstr "Plantilla de presupuesto"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__phone_contact
-msgid "Phone"
-msgstr "Télefono"
-
-#. module: sat_companies_industry
-#: model:ir.actions.report,name:sat_companies_industry.report_print_template_data_industry
-msgid "Plantilla datos técnicos"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__population_code
-msgid "Population code"
-msgstr "Código población"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__population_name
-msgid "Population name"
-msgstr "Nombre población"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__prev_end_date
-msgid "Prev end date"
-msgstr "Fecha fin.Prev"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__prev_start_date
-msgid "Prev start date"
-msgstr "Fecha inicio.Prev"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__rae
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__rae_gadget
 msgid "R.A.E"
 msgstr ""
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__location
-msgid "Location"
-msgstr "Ubicación"
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_print_technical_data_industry
-msgid "RECOPILACIÓN DATOS APARATOS"
+#. module: sat_companies_project
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.project_task_inherit_form_view
+msgid "RAE:"
 msgstr ""
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__reading_date
-msgid "Reading date"
-msgstr "Fecha lectura"
+#. module: sat_companies_project
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.wizard_sale_order_type_form
+msgid "Related Lines"
+msgstr "Relacionar líneas"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__received_material
-msgid "Received material"
-msgstr "Material pedido/recibido"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__ot_ref
-msgid "Ref. Obra OT"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__reference
-msgid "Reference"
-msgstr "Referencia"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__message_has_sms_error
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__message_has_sms_error
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_breakdowns__message_has_sms_error
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_checklist_minute__message_has_sms_error
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__message_has_sms_error
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__message_has_sms_error
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__message_has_sms_error
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_location__message_has_sms_error
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__message_has_sms_error
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__message_has_sms_error
-#: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__message_has_sms_error
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn__message_has_sms_error
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_template__message_has_sms_error
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__message_has_sms_error
 msgid "SMS Delivery error"
+msgstr "Error de entrega de SMS"
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_project__sale_order_id
+msgid "Sale Order"
 msgstr ""
 
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_project_task_ot_checklist_search
-msgid "Search ot checklist"
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_project__sale_type_origin_id
+msgid "Sale Type Origin"
+msgstr "Origen tipo de pedido"
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_wizard_sale_order_type__sale_order_id
+msgid "Sale order"
+msgstr "Presupesto"
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_wizard_sale_order_type__sale_type_id
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.wizard_sale_order_type_form
+msgid "Sale order Type"
+msgstr "Tipo de presupuesto"
+
+#. module: sat_companies_project
+#: model:ir.model,name:sat_companies_project.model_sale_order_type
+msgid "Sale order type"
+msgstr "Tipo de presupuesto"
+
+#. module: sat_companies_project
+#: model:ir.actions.act_window,name:sat_companies_project.action_view_sale_order_type
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order__sale_type_id
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_template__sale_type_id
+#: model:ir.ui.menu,name:sat_companies_project.menu_sale_order_type
+msgid "Sale type"
+msgstr "Tipo de presupuesto/OT"
+
+#. module: sat_companies_project
+#: model:ir.ui.menu,name:sat_companies_project.menu_sale_order_type_field_service
+msgid "Sale type Field service"
+msgstr "Tipo de presupuesto/OT"
+
+#. module: sat_companies_project
+#: model:ir.model,name:sat_companies_project.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de venta"
+
+#. module: sat_companies_project
+#: model:ir.model,name:sat_companies_project.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Línea de pedido de venta"
+
+#. module: sat_companies_project
+#: model:ir.model.fields,help:sat_companies_project.field_project_project__sale_order_id
+msgid "Sales order to which the project is linked."
+msgstr "Pedido de venta al que está vinculado el proyecto."
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__project_stage_ids
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.view_sale_order_typet_form
+msgid "Stages"
+msgstr "Etapas"
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order__date_begin
+msgid "Start date"
 msgstr ""
 
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_maintenance_minute_point_search
-msgid "Search ot minute point"
-msgstr ""
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_project__start_date_project
+msgid "Start date project"
+msgstr "Fecha inicio proyecto"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__open_time
-msgid "Seconds"
-msgstr "Tiempo mostrado en segundos"
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__state_check_qr
+msgid "State Check Gagdest"
+msgstr "Estado Chequeo del aparato"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__check_9
-msgid "September"
-msgstr "Septiembre"
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__calculate_planed_hours
+msgid "Subtract hours"
+msgstr "Calculo de horas"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__service_h
-msgid "Service 24h"
-msgstr "Servicio 24H"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__situation
-msgid "Situation"
-msgstr "Situación"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields.selection,name:sat_companies_industry.selection__project_task__situation__started
-msgid "Started"
-msgstr "Empezada"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__stop_type
-msgid "Stop"
-msgstr "Parado"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__is_stop_gadget
-msgid "Stop gadget"
-msgstr "Aparato parado"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__subscription_name
-msgid "Subscription name"
-msgstr "Suscripción"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__subscription_ids
-msgid "Subscriptions"
-msgstr "Suscripciones"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__supervisor_id
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn__employee_id
 msgid "Supervisor"
 msgstr ""
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__supervisor_end_date
-msgid "Supervisor end date"
-msgstr "Fecha fin supervisor"
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__check_suscription_recurrent
+msgid "Suscription recurrent"
+msgstr "Suscripción recurrente"
 
-#. module: sat_companies_industry
-#: model:ir.model,name:sat_companies_industry.model_project_task
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_checklist_minute__task_id
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__task_id
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__task_id
+#. module: sat_companies_project
+#: model:base.automation,name:sat_companies_project.action_automated_qr_done_state_timesheet
+#: model:ir.actions.server,name:sat_companies_project.action_automated_qr_done_state_timesheet_ir_actions_server
+msgid "TRABAJOS FINALIZADOS OTs"
+msgstr ""
+
+#. module: sat_companies_project
+#: model:ir.model,name:sat_companies_project.model_project_task
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.view_sale_order_typet_form
 msgid "Task"
 msgstr "Tarea"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__technical_end_date
-msgid "Technical end date"
-msgstr "Fecha fin técnico"
+#. module: sat_companies_project
+#: model:ir.model,name:sat_companies_project.model_project_task_type
+msgid "Task Stage"
+msgstr "Etapa de la tarea"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__contact_person_telephone
-msgid "Telephone contact"
-msgstr "Télefono"
+#. module: sat_companies_project
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.project_task_inherit_form_view
+msgid "Task State"
+msgstr "Estado tarea"
 
-#. module: sat_companies_industry
-#: code:addons/sat_companies_industry/models/project_task.py:0
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__task_code
+msgid "Task code"
+msgstr "Código tarea"
+
+#. module: sat_companies_project
+#: model:ir.model.fields,help:sat_companies_project.field_sale_order_line__task_id
+msgid "Task generated by the sales order item"
+msgstr "Tarea generada por el elemento del pedido de venta"
+
+#. module: sat_companies_project
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.wizard_sale_order_type_form
+msgid "Task lines"
+msgstr "Líneas de tarea"
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__task_template_id
+msgid "Task template"
+msgstr "Plantilla de tareas"
+
+#. module: sat_companies_project
+#: model:ir.actions.act_window,name:sat_companies_project.action_view_project_task_template
+#: model:ir.model,name:sat_companies_project.model_project_task_template
+#: model:ir.ui.menu,name:sat_companies_project.menu_project_task_template
+msgid "Task templates"
+msgstr "Plantillas de tareas"
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_template__task_ids
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__project_task_ids
+msgid "Tasks"
+msgstr "Tareas"
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_res_partner__payment_term_maintenance_id
+#: model:ir.model.fields,field_description:sat_companies_project.field_res_users__payment_term_maintenance_id
+msgid "Terms maintenance sale"
+msgstr "Plazos de pago mantenimiento"
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_res_partner__payment_term_tel_id
+#: model:ir.model.fields,field_description:sat_companies_project.field_res_users__payment_term_tel_id
+msgid "Terms telephone sale"
+msgstr "Plazos de pago línea"
+
+#. module: sat_companies_project
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.project_task_inherit_form_view
+msgid "The Cabin has been checked"
+msgstr "Techo cabina ha sido inspecionada"
+
+#. module: sat_companies_project
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.project_task_inherit_form_view
+msgid "The Machine has been checked"
+msgstr "La máquina ha sido inspeccionada"
+
+#. module: sat_companies_project
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.project_task_inherit_form_view
+msgid "The Pit has been checked"
+msgstr "El foso ha sido inspeccionado"
+
+#. module: sat_companies_project
+#: code:addons/sat_companies_project/models/.ipynb_checkpoints/res_partner-checkpoint.py:0
 #, python-format
-msgid "The column should be one per line"
-msgstr "No se puede agregar la misma línea mas de una vez"
+msgid "The bank account field must be filled out"
+msgstr ""
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__ot_type_id
+#. module: sat_companies_project
+#: code:addons/sat_companies_project/models/.ipynb_checkpoints/res_partner-checkpoint.py:0
+#, python-format
+msgid "The identification number field must be filled out"
+msgstr ""
+
+#. module: sat_companies_project
+#: code:addons/sat_companies_project/models/project_task.py:0
+#: code:addons/sat_companies_project/models/project_task.py:0
+#, python-format
+msgid ""
+"The users: \n"
+" \n"
+"\n"
+"Are absent on the selected date"
+msgstr "No puede asignar usuarios que tengan ausencias para esas fechas"
+
+#. module: sat_companies_project
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.project_task_inherit_form_view
+msgid "This ot exceeded the number of planned hours."
+msgstr "Esta OT superó el número de Horas iniciales planificadas"
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__ot_type_id
 msgid "Tipo OT"
 msgstr ""
 
-#. module: sat_companies_industry
-#: model:ir.actions.report,name:sat_companies_industry.report_custom_template
-msgid "Trabajos OT"
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__gadgest_contract_type_id
+msgid "Tipo Suscripción"
 msgstr ""
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__type_ot
-msgid "Type OT"
-msgstr "Tipo OT"
+#. module: sat_companies_project
+#: model:ir.model,name:sat_companies_project.model_wizard_sale_order_type
+msgid "Tipo de presupuesto"
+msgstr ""
 
-#. module: sat_companies_industry
-#: model:ir.actions.act_window,name:sat_companies_industry.action_view_type_deffect
-#: model:ir.model,name:sat_companies_industry.model_maintenance_type_deffect
-#: model:ir.ui.menu,name:sat_companies_industry.menu_maintenance_type_deffect
-msgid "Type deffect"
-msgstr "Tipo de defecto"
+#. module: sat_companies_project
+#: model:ir.ui.menu,name:sat_companies_project.menu_sale_order_type_subscription
+msgid "Tipo de presupuesto/OT"
+msgstr ""
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__type_deffect_id
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_checklist_minute__type_deffect_id
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__type_deffect_id
-msgid "Type of deffect"
-msgstr "Tipo de defecto"
+#. module: sat_companies_project
+#: code:addons/sat_companies_project/wizard/wizard_sale_order_type.py:0
+#, python-format
+msgid "To create a task you must select a Gadget in the quote"
+msgstr "Para crear una tarea debes seleccionar un Gadget en la cotización"
 
-#. module: sat_companies_industry
-#: model:ir.model,name:sat_companies_industry.model_project_task_type_associated
-msgid "Types of associated tasks"
-msgstr "Tipos de tareas asociadas"
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__to_gadget
+msgid "To the Gadget"
+msgstr "Hasta el aparato"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__message_unread
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__message_unread
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_breakdowns__message_unread
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_checklist_minute__message_unread
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__message_unread
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__message_unread
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__message_unread
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_location__message_unread
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__message_unread
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__message_unread
-#: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__message_unread
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__to_zone
+msgid "To the Zone"
+msgstr "Hasta la zona"
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order__total_service_line
+msgid "Total service"
+msgstr ""
+
+#. module: sat_companies_project
+#: model:ir.model,name:sat_companies_project.model_stock_picking
+msgid "Transfer"
+msgstr "Albarán"
+
+#. module: sat_companies_project
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.inherit_view_project_task_one
+msgid "Transfers"
+msgstr "Transferencias"
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order__udn_id
+msgid "Udn"
+msgstr ""
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn__message_unread
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_template__message_unread
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__message_unread
 msgid "Unread Messages"
-msgstr ""
+msgstr "Mensajes no leídos"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__message_unread_counter
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__message_unread_counter
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_breakdowns__message_unread_counter
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_checklist_minute__message_unread_counter
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__message_unread_counter
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__message_unread_counter
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__message_unread_counter
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_location__message_unread_counter
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__message_unread_counter
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__message_unread_counter
-#: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__message_unread_counter
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn__message_unread_counter
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_template__message_unread_counter
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__message_unread_counter
 msgid "Unread Messages Counter"
+msgstr "Conteo mensajes no leídos"
+
+#. module: sat_companies_project
+#: model:base.automation,name:sat_companies_project.update_fields_from_end_ot
+#: model:ir.actions.server,name:sat_companies_project.update_fields_from_end_ot_ir_actions_server
+msgid "Update fields from end OT"
 msgstr ""
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__verification_date
-msgid "Verification date"
-msgstr "Fecha verificación"
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn__user_ids
+msgid "Users"
+msgstr ""
 
-#. module: sat_companies_industry
-#: model:ir.model,name:sat_companies_industry.model_project_task_warning
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_project_task_sat_companies
-msgid "Warning"
-msgstr "Aviso"
+#. module: sat_companies_project
+#: code:addons/sat_companies_project/models/account_move.py:0
+#: code:addons/sat_companies_project/models/stock_picking.py:0
+#, python-format
+msgid "Validate potential client in partner"
+msgstr ""
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__website_message_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_type_deffect__website_message_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_breakdowns__website_message_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_checklist_minute__website_message_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__website_message_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__website_message_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__website_message_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_location__website_message_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__website_message_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__website_message_ids
-#: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__website_message_ids
+#. module: sat_companies_project
+#: code:addons/sat_companies_project/models/.ipynb_checkpoints/sale_order-checkpoint.py:0
+#: code:addons/sat_companies_project/models/sale_order.py:0
+#, python-format
+msgid "Verify the type of client if it is potential"
+msgstr ""
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__allowed_user_ids
+msgid "Visible to"
+msgstr "Visible por"
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn__website_message_ids
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_template__website_message_ids
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__website_message_ids
 msgid "Website Messages"
-msgstr "Mensajes del sitio web"
+msgstr "Mensajes sitio Web"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,help:sat_companies_industry.field_maintenance_minute_point__website_message_ids
-#: model:ir.model.fields,help:sat_companies_industry.field_maintenance_type_deffect__website_message_ids
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_breakdowns__website_message_ids
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_checklist_minute__website_message_ids
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_inspection__website_message_ids
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_ot_checklist__website_message_ids
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_ot_checklist_line__website_message_ids
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_ot_checklist_location__website_message_ids
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_type_associated__website_message_ids
-#: model:ir.model.fields,help:sat_companies_industry.field_project_task_warning__website_message_ids
-#: model:ir.model.fields,help:sat_companies_industry.field_task_community_mood__website_message_ids
+#. module: sat_companies_project
+#: model:ir.model.fields,help:sat_companies_project.field_project_task_categ_udn__website_message_ids
+#: model:ir.model.fields,help:sat_companies_project.field_project_task_template__website_message_ids
+#: model:ir.model.fields,help:sat_companies_project.field_sale_order_type__website_message_ids
 msgid "Website communication history"
 msgstr "Historial de comunicación del website"
 
-#. module: sat_companies_industry
-#: model:ir.model.fields.selection,name:sat_companies_industry.selection__project_task__stop_type__yes
-#: model:ir.model.fields.selection,name:sat_companies_industry.selection__project_task_ot_checklist__accomplished__yes
-msgid "Yes"
-msgstr "Si"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__zone_id
-msgid "Zone"
-msgstr "Zona"
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__zone_name
-msgid "Zone name"
-msgstr "Nombre zona"
-
-#. module: sat_companies_industry
-#: model:ir.model,name:sat_companies_industry.model_project_task_breakdowns
-msgid "breakdowns"
+#. module: sat_companies_project
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.view_sale_order_typet_tree
+msgid "contract_tree"
 msgstr ""
 
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__checklist_line_ids
-msgid "checklist lines"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__is_blocked
-msgid "is Blocked"
-msgstr "Incidencia"
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_maintenance_minute_point_tree
-msgid "maintenance_minute_point_tree"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_maintenance_minute_point_form
-msgid "minute_point_form"
-msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_maintenance_minute_point_search
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_project_task_ot_checklist_search
-msgid "name"
-msgstr "Nombre"
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.inherit_timesheet_grid_project_task_view_form
-msgid "notification"
-msgstr "Notificación"
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_project_task_breakdowns_form
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_project_task_ot_checklist_form
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_project_task_ot_checklist_location_form
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_task_community_mood_form
+#. module: sat_companies_project
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.view_project_task_categ_udn_form
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.view_project_task_template_form
 msgid "ot_checklist_form"
 msgstr ""
 
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_project_task_ot_checklist_tree
-msgid "project_task_ot_checklist_tree"
+#. module: sat_companies_project
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.view_task_form2_inherit_2
+msgid "overlapping tasks"
 msgstr ""
 
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_maintenance_type_deffect_form
-msgid "type_deffect_form"
+#. module: sat_companies_project
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.view_sale_order_typet_form
+msgid "sale_type_form"
 msgstr ""
 
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_maintenance_type_deffect_tree
-msgid "type_deffect_tree"
+#. module: sat_companies_project
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.project_task_inherit_form_view
+msgid "start OT"
 msgstr ""
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.inherit_timesheet_grid_project_task_view_form
-msgid "uncheck notice like technical"
-msgstr "Desmarcar aviso como técnico"
-
-#. module: sat_companies_industry
-#: model_terms:ir.ui.view,arch_db:sat_companies_industry.inherit_timesheet_grid_project_task_view_form
-msgid "warning"
-msgstr "Aviso/Notificación"

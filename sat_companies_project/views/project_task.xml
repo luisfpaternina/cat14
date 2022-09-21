@@ -44,6 +44,7 @@
 
             <xpath expr="//field[@name='tag_ids']" position="after">
                 <field name="check_suscription_recurrent" invisible="1"/>
+                <button name="change_stage_to_progress" string="start OT" type="object" invisible="1"/>
             </xpath>
 
             <xpath expr="//form[1]/sheet[1]/notebook[1]" position="inside">
