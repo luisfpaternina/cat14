@@ -7,7 +7,7 @@
         <field name="arch" type="xml">
 
             <xpath expr="//field[(@name='partner_id')]" position="after">
-                <field name="acc_number"/> 
+                <field name="acc_number" invisible="1"/> 
             </xpath>
 
             <xpath expr="//form/sheet/notebook/page[@name='order_lines']" position="after">

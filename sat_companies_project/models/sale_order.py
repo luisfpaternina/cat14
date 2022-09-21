@@ -49,6 +49,8 @@ class SaleOrder(models.Model):
     total_service_line = fields.Float(
         string="Total service",
         compute="compute_total_Service_line")
+    show_technical = fields.Boolean(
+        string="Enable Technical")
 
 
     def compute_total_Service_line(self):
