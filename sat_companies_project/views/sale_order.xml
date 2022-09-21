@@ -27,7 +27,8 @@
             </xpath>
 
             <xpath expr="//field[(@name='partner_id')]" position="after">
-                <field name="users_ids" widget="many2many_tags"/>
+                <field name="show_technical" invisible="1"/>
+                <field name="users_ids" widget="many2many_tags" attrs="{'invisible': [('show_technical', '=', False)]}"/>
                 <field name="check_users" invisible="True"/>
                 <label for="date_begin" string="Planned Date" attrs="{'invisible': [('check_users', '=', False)]}"/>
                 <div class="w-100" attrs="{'invisible': [('check_users', '=', False)]}">
