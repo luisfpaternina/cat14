@@ -9,7 +9,7 @@
             <field name="trigger">on_create_or_write</field>
             <field name="filter_domain"></field>
             <field name="state">code</field>
-            <field name="code">if record.check_pit and record.check_cabine and record.check_machine:
+            <field name="code">if record.check_pit or record.check_cabine or record.check_machine:
   if record.timesheet_ids and record.stage_id.is_project_fsm:
     record.write({'is_end_ot': True})</field>
         </record>
