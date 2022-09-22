@@ -221,7 +221,7 @@ class ProjectTask(models.Model):
     store_fname = fields.Char(
         string="File Name")
     audio_url = fields.Char(
-        string="Audio")
+        string="URL audio")
     subscription_ids = fields.Many2many(
         'sale.subscription',
         string="Subscriptions",
