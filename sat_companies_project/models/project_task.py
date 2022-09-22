@@ -150,6 +150,8 @@ class ProjectTask(models.Model):
     overlapping_tasks = fields.Boolean(default=False)
     is_end_ot = fields.Boolean(
         string="Is end OT")
+    is_hr_leave_crossing = fields.Boolean(
+        string="Has not leave")
 
 
     def compute_is_late_hours(self):
@@ -168,7 +170,7 @@ class ProjectTask(models.Model):
         else:
             self.calculate_planed_hours = 0
 
-    @api.onchange('product_id','partner_id')
+    @api.onchange('product_id','partner_id', 'name')
     def assign_correct_technician(self):
         tecnicos = []
         responsables = []
@@ -176,15 +178,15 @@ class ProjectTask(models.Model):
         now = datetime.now()
         hours = now.strftime("%I")
         users = self.env['res.partner.zones'].search([('id', '=', self.product_id.zone_id.id)])
-        if users and self.ot_type_id.is_warning:
+        if users and self.ot_type_id.is_warning and self.ot_type_id.is_warning:
             if hours in morning:
                 for u in users:
                     responsables.append(u.user_id.id)
                     self.users_ids = responsables
             else:
-                for u in users.users_ids:
-                    tecnicos.append(u)
-                    self.users_ids = self.product_id.zone_id.users_ids[0]
+                for u in users:
+                    tecnicos.append(u.user_notice_id.id)
+                    self.users_ids = tecnicos
 
     def get_date_range_crossing(
         self,
@@ -316,7 +318,6 @@ class ProjectTask(models.Model):
                     for item in hr_leave_crossing:
                         users += item['user'].name+" \n"
                     
-
                     raise ValidationError(_("The users: \n \n"+users+"\nAre absent on the selected date"))
 
                 res = super(ProjectTask, self).create(vals)

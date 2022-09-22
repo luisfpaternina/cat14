@@ -70,6 +70,12 @@ class ResPartnerZones(models.Model):
         related="responsable_id.code")
     users_ids = fields.Many2many('res.users',
         string="Users")
+    user_notice_id = fields.Many2one(
+        'res.users',
+        string="Technical notice")
+    user_greasing_id = fields.Many2one(
+        'res.users',
+        string="Greasing technical")
 
 
     _sql_constraints = [

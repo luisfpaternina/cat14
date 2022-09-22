@@ -28,6 +28,7 @@
             <xpath expr="//field[@name='user_id']" position="after">
                 <field name="users_ids" attrs="{'required': ['|',('planned_date_begin', '!=', False),('planned_date_end', '!=', False)]}" widget="many2many_tags" force_save="1"/>
                 <field name="is_late_hours" invisible="1"/>
+                <field name="is_hr_leave_crossing"/>
             </xpath>
 
             <xpath expr="//sheet" position="before">

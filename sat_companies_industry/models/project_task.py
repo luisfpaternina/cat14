@@ -304,7 +304,7 @@ class ProjectTask(models.Model):
     def validate_stop_gadget(self):
     # VALIDAR SI EL APARATO ESTA 'PARADO'
         for record in self:
-            if record.product_id.is_gadget_stopped:
+            if record.product_id.is_gadget_stopped and record.ot_type_id.is_warning:
                 raise ValidationError(_(
                     "El aparato esta parado : %s" % record.product_id.name))
 
