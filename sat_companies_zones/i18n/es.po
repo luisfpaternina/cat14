@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-15 12:31+0000\n"
-"PO-Revision-Date: 2021-11-15 12:31+0000\n"
+"POT-Creation-Date: 2022-09-22 15:59+0000\n"
+"PO-Revision-Date: 2022-09-22 15:59+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -137,6 +137,11 @@ msgid "Greasing operator"
 msgstr "Técnico de engrase"
 
 #. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__user_greasing_id
+msgid "Greasing technical"
+msgstr "Técnico de engrase"
+
+#. module: sat_companies_zones
 #: model_terms:ir.ui.view,arch_db:sat_companies_zones.view_res_partner_zones_search
 msgid "Group By"
 msgstr "Agrupado por"
@@ -162,6 +167,7 @@ msgid "Guard zone"
 msgstr "Zona de guardia"
 
 #. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_guard_zones__name
 #: model_terms:ir.ui.view,arch_db:sat_companies_zones.view_res_partner_guard_zones_form
 #: model_terms:ir.ui.view,arch_db:sat_companies_zones.view_res_partner_zones_form
 msgid "Guard zone name"
@@ -278,9 +284,7 @@ msgid "Messages"
 msgstr ""
 
 #. module: sat_companies_zones
-#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_guard_zones__name
 #: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes__name
-#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__name
 msgid "Name"
 msgstr "Nombre"
 
@@ -395,6 +399,11 @@ msgid "Search partner zone"
 msgstr ""
 
 #. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__user_notice_id
+msgid "Technical notice"
+msgstr "Técnico aviso"
+
+#. module: sat_companies_zones
 #: model:ir.model.constraint,message:sat_companies_zones.constraint_res_partner_guard_zones_code_uniq
 #: model:ir.model.constraint,message:sat_companies_zones.constraint_res_partner_routes_code_uniq
 #: model:ir.model.constraint,message:sat_companies_zones.constraint_res_partner_zones_code_uniq
@@ -450,6 +459,11 @@ msgstr "Zona"
 #: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes__zone_name
 msgid "Zone name"
 msgstr "Nombre zona"
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__name
+msgid "Zone's name"
+msgstr ""
 
 #. module: sat_companies_zones
 #: model:ir.actions.act_window,name:sat_companies_zones.action_view_res_partner_zones

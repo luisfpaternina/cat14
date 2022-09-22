@@ -163,8 +163,8 @@
                   </group>
                   <group attrs="{'invisible': [('is_warning', '!=', True)]}">
                       <field name="contact_person_ot_old" readonly="1"/>
-                      <field name="contact_person_ot" domain = "[('parent_id', '=', partner_id)]" options="{'no_create': True, 'no_create_edit':True}"/>
-                      <field name="contact_person_telephone"/>
+                      <field name="contact_person_ot" domain = "[('parent_id', '=', partner_id)]" options="{'no_quick_create': True}"/>
+                      <field name="contact_person_telephone" readonly="1"/>
                       <field name="is_stop_with_company"/>
                       <field name="gadget_pda_observations"/>
                       <field name="gadget_notes"/>
