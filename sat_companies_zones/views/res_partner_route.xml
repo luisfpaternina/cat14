@@ -48,7 +48,7 @@
                             </group>
                         </group>
                         <group>
-                            <field name="users_ids"/>
+                            <field name="users_ids" invisible="1"/>
                         </group>
                     </sheet>
                     <div class="oe_chatter">

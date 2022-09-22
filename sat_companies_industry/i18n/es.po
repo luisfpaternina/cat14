@@ -904,7 +904,7 @@ msgstr "Notas aparato"
 #. module: sat_companies_industry
 #: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_project_task_sat_companies
 msgid "Gadgets"
-msgstr "Aparato"
+msgstr "Aparatos"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__open_time_hours
@@ -1082,7 +1082,7 @@ msgstr "Atrapamiento"
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__is_calculed_time
 msgid "Is caluled time"
-msgstr ""
+msgstr "Tiempo calculado"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__is_conflictive_apparatus

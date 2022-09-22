@@ -9,9 +9,12 @@
             <field name="trigger">on_create_or_write</field>
             <field name="filter_domain"></field>
             <field name="state">code</field>
-            <field name="code">if record.check_pit or record.check_cabine or record.check_machine:
-  if record.timesheet_ids and record.stage_id.is_project_fsm:
-    record.write({'is_end_ot': True})</field>
+            <field name="code">for record in records:
+  if record.check_pit or record.check_cabine or record.check_machine:
+    if record.timesheet_ids and record.stage_id.is_project_fsm:
+      for line in record.checklist_ot_ids:
+        if line.is_reviewed_checklist:
+          record.write({'is_end_ot': True})</field>
         </record>
 
         <record id="action_automated_qr_done_state_timesheet" model="base.automation">

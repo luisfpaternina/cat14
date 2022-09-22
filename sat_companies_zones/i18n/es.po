@@ -47,7 +47,7 @@ msgstr "Código"
 #. module: sat_companies_zones
 #: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__responsable_code
 msgid "Code responsable"
-msgstr "Código del responsable"
+msgstr "Código del responsable/Supervisor"
 
 #. module: sat_companies_zones
 #: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes__country_id
@@ -134,7 +134,7 @@ msgstr "Aparatos"
 #. module: sat_companies_zones
 #: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__employee_greasing_id
 msgid "Greasing operator"
-msgstr "Operador de engrase"
+msgstr "Técnico de engrase"
 
 #. module: sat_companies_zones
 #: model_terms:ir.ui.view,arch_db:sat_companies_zones.view_res_partner_zones_search
@@ -353,7 +353,7 @@ msgstr "Operador de engrase"
 #: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes__user_operator_id
 #: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__employee_id
 msgid "Operator notice"
-msgstr "Operador de aviso"
+msgstr "Técnico de aviso"
 
 #. module: sat_companies_zones
 #: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes__employee_id
@@ -361,7 +361,7 @@ msgstr "Operador de aviso"
 #: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__user_id
 #: model_terms:ir.ui.view,arch_db:sat_companies_zones.view_res_partner_zones_form
 msgid "Responsable"
-msgstr ""
+msgstr "Responsable/Supervisor"
 
 #. module: sat_companies_zones
 #: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes__route_type
