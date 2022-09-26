@@ -159,7 +159,7 @@
                         <field name="floor" attrs="{'invisible': [('fsm_done', '!=', True)]}"/>
                   </group>
                   <group>
-                        <field name="task_signature" widget="signature" attrs="{'invisible': [('fsm_done', '!=', True)]}"/>
+                        <field name="task_signature" widget="signature" invisible="1"/>
                   </group>
                   <group attrs="{'invisible': [('is_warning', '!=', True)]}">
                       <field name="contact_person_ot_old" readonly="1"/>
