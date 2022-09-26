@@ -128,7 +128,7 @@ class WizardSaleOrderType(models.TransientModel):
                         'project_id': project_fsm.id,
                         'recurring_task': record.sale_order_id.product_id.is_recurring_task,
                         'repeat_interval': record.sale_order_id.product_id.repeat_interval,
-                        'repeat_weekday': 'mon',
+                        'repeat_weekday': record.sale_order_id.product_id.repeat_interval,
                         'repeat_unit': record.sale_order_id.product_id.repeat_unit,
                         'repeat_until': record.sale_order_id.product_id.repeat_until,
                         'repeat_number': record.sale_order_id.product_id.repeat_number,
