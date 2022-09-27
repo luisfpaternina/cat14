@@ -68,7 +68,7 @@
             </xpath>
 
             <xpath expr="//form/sheet/notebook/page[@name='extra_info']" position="after">
-                <page name="description_page" string="Qr Scanner">
+                <page name="qr_scanner_page" string="Qr Scanner">
                     <field name="pit_confirm" invisible="True"/>
                     <field name="cabin_confirm" invisible="True"/>
                     <field name="machine_confirm" invisible="True"/>
