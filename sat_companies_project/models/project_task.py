@@ -507,6 +507,20 @@ class ProjectTask(models.Model):
             if stage:
                 record.stage_id = stage
     
+    @api.onchange('supervisor_id')
+    def send_to_supervisor(self):
+        actual_supervisor = []
+        is_old = False
+        for record in self:
+            if record.supervisor_id and is_old == False:
+                actual_supervisor.append(record.supervisor_id.id)
+                if record.supervisor_id in actual_supervisor:
+                    is_old = True
+                else:
+                    stage = self.env['project.task.type'].search([('is_send_to_supervisor','=', True)])
+                    if stage:
+                        record.stage_id = stage
+                    
     def action_timer_start(self):
         self.change_stage_to_progress()
         return super(ProjectTask, self).action_timer_start()

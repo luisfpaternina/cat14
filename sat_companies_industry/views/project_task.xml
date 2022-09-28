@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
+
+     <!--FORM VIEW -->
     <record id="view_project_task_sat_companies" model="ir.ui.view">
         <field name="name">inherit.form.project.task</field>
         <field name="model">project.task</field>
@@ -142,7 +144,7 @@
             </xpath>
 
             <xpath expr="//field[(@name='user_id')]" position="after">
-                <field name="supervisor_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                <field name="supervisor_id" domain = "[('supervisor','=',True)]" options="{'no_create': True, 'no_create_edit':True}"/>
                 <field name="assignment_date"/>
             </xpath>
 
@@ -195,6 +197,7 @@
         </field>
     </record>
 
+    <!--TREE VIEW -->
     <record id="inherit_treeview_project_task_sat_companies" model="ir.ui.view">
         <field name="name">inherit.form.project.task</field>
         <field name="model">project.task</field>
