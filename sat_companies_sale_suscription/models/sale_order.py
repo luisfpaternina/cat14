@@ -27,12 +27,26 @@ class SaleOrderTemplateInherit(models.Model):
             else:
                 record.check_contract_type = False
 
+    '''
     @api.onchange('partner_id')
     def _get_partner_acc_account(self):
         partner_obj = self.env['res.partner'].search([('name', '=', self.partner_id.name)],limit=1)
         for p in partner_obj.bank_ids:
             if p.is_default:
                 self.acc_number = p.acc_number
+    '''
+
+    @api.onchange('partner_id')
+    def _get_partner_acc_account(self):
+        if self.partner_id.bank_ids:
+            acc_default = self.partner_id.bank_ids.filtered(lambda r: r.is_default == True)
+            if acc_default:
+                self.acc_number = acc_default[0].acc_number #Por si hubiese más de 1 marcada por defecto (en teoría no se podría, pero por importaciones).
+            else:
+                self.acc_number = self.partner_id.bank_ids[0].acc_number
+        else:
+            self.acc_number = ''
+
 
     @api.onchange('sale_type_id')
     def domain_saletype_udn(self):

@@ -11,10 +11,8 @@ class SaleSuscriptionTemplateInherit(models.Model):
     type_contract = fields.Selection([
         ('normal','Normal'),
         ('risk','All risk')],string="Type of contract",tracking=True)
-    gadgets_contract_type_id = fields.Many2one(
-        'stock.gadgets.contract.type')
-
-    subscription_month_ids = fields.Many2many('sale.subscription.month')
+    
+    gadgets_contract_type_id = fields.Many2one('stock.gadgets.contract.type')
 
     """
     sale_order_template_id = fields.Many2one(

@@ -11,9 +11,8 @@
                     <field name="code" required="1"/>
                     <field name="name" required="1"/>
                     <field name="is_normative"/>
-                    <field name="is_user" attrs="{'readonly': [('is_normative', '=', False)]}"/>
-                    <field name="employee_id" options="{'no_create': True, 'no_create_edit':True}" attrs="{'required': [('is_user', '=', True)], 'readonly': [('is_user', '=', False)]}"/>
-                    <!--<field name="user_id" options="{'no_create': True, 'no_create_edit':True}" attrs="{'required': [('is_user', '=', True)], 'readonly': [('is_user', '=', False)]}"/>-->
+                    <field name="is_user"/>
+                    <field name="employee_id" options="{'no_create': True, 'no_create_edit':True}" attrs="{'required': [('is_user', '=', True)]}"/>
                     <field name="ot_type_id"/>
                 </tree>
             </field>
