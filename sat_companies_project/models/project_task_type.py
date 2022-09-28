@@ -8,4 +8,6 @@ class ProjectTaskType(models.Model):
     is_project_fsm = fields.Boolean(
         string="Is done in fsm project")
     is_progress = fields.Boolean(
-        stting="Progress stage")
+        string="Progress stage")
+    is_send_to_supervisor = fields.Boolean(
+        string="Send to supervisor")

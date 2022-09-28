@@ -133,11 +133,11 @@ class ResPartner(models.Model):
     gadget_oca_ids = fields.Many2many(
         'product.template',
         compute="compute_gadgets_oca",
-        string='Gadgets')
+        string='OCA IDs')
     gadget_maintener_ids = fields.Many2many(
         'product.template',
         compute="compute_gadgets_comunities",
-        string='Gadgets')
+        string='Maintener IDs')
     is_community = fields.Boolean(
         string="Is community",
         related="partner_type_id.is_community")

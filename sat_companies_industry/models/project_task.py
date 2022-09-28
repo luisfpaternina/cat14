@@ -334,19 +334,3 @@ class ProjectTask(models.Model):
                 if line.checklist_id.id in exis_record_lines:
                     raise ValidationError(_('The column should be one per line'))
                 exis_record_lines.append(line.checklist_id.id)
-    
-    def show_notification(self):
-        return {
-            'type': 'ir.actions.client',
-            'tag': 'display_notification',
-            'params': {
-                'title': _('Notification OT!'),
-                'message': 'Notificación de OT aviso',
-                'sticky': False,
-                'type': 'warning',
-                }
-            }
- 
-    def show_message_warning(self):
-        print('testing')
-        
