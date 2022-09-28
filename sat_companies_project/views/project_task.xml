@@ -208,6 +208,8 @@
                 <field name="ot_type_id" options="{'no_create': True, 'no_create_edit':True}" required="1"/>
                 <field name="is_maintenance" invisible="1"/>
                 <field name="origin" invisible="1"/>
+                <field name="firs_assigned_id" invisible="1"/>
+                <field name="is_full_super" invisible="1"/>
                 <field name="gadgest_contract_type_id" options="{'no_create': True, 'no_create_edit':True}" attrs="{'invisible': [('is_maintenance', '!=', True)]}"/>
             </xpath>
 

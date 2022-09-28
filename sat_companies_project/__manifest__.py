@@ -24,6 +24,7 @@
         'sale_timesheet',
         'sale',
         'hr_timesheet',
+        'hr',
 
     ],
 
