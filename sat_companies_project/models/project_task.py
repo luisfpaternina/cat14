@@ -152,6 +152,11 @@ class ProjectTask(models.Model):
         string="Is end OT")
     is_hr_leave_crossing = fields.Boolean(
         string="Has not leave")
+    firs_assigned_id = fields.Many2one(
+        'hr.employee',
+        string="First assigned")
+    is_full_super = fields.Boolean(
+        string="Is full")
 
 
     def compute_is_late_hours(self):
@@ -506,20 +511,25 @@ class ProjectTask(models.Model):
             stage = self.env['project.task.type'].search([('is_progress','=', True)])
             if stage:
                 record.stage_id = stage
-    
+
+    @api.onchange('supervisor_id')
+    def get_firs_assigned_id(self):
+        for record in self:
+            if record.supervisor_id and record.is_full_super == False:
+                record.firs_assigned_id = record.supervisor_id.id
+                record.is_full_super = True
+            else:
+                record.supervisor_id = record.supervisor_id.id
+
     @api.onchange('supervisor_id')
     def send_to_supervisor(self):
-        actual_supervisor = []
-        is_old = False
         for record in self:
-            if record.supervisor_id and is_old == False:
-                actual_supervisor.append(record.supervisor_id.id)
-                if record.supervisor_id in actual_supervisor:
-                    is_old = True
-                else:
-                    stage = self.env['project.task.type'].search([('is_send_to_supervisor','=', True)])
-                    if stage:
-                        record.stage_id = stage
+            if record.supervisor_id.id == record.firs_assigned_id.id:
+                record.supervisor_id = record.supervisor_id
+            else:
+                stage = self.env['project.task.type'].search([('is_send_to_supervisor','=', True)])
+                if stage:
+                    record.stage_id = stage
                     
     def action_timer_start(self):
         self.change_stage_to_progress()
