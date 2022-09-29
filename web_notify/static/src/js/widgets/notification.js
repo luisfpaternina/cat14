@@ -28,7 +28,7 @@ odoo.define('web_notify.Notification', function (require) {
                     var self = this;
                     const newAudio = document.createElement("audio");
                     newAudio.id = 'audiotag1';
-                    newAudio.src = 'web_notify/static/src/audio/notification.wav';
+                    newAudio.src = 'web_notify/static/src/audio/notification.mp3';
                     newAudio.preload = 'auto';
                     newAudio.play();
                     console.log(newAudio)
