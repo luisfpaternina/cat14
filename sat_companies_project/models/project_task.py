@@ -85,7 +85,7 @@ class ProjectTask(models.Model):
         'Cabine confirm')
     machine_confirm = fields.Boolean(
         'Machine confirm')
-    rae_gadget = fields.Char("R.A.E",
+    rae_gadget = fields.Char("Product code",
                             related="product_id.rae")
     check_suscription_recurrent = fields.Boolean(
         "Suscription recurrent",
@@ -176,21 +176,21 @@ class ProjectTask(models.Model):
         else:
             self.calculate_planed_hours = 0
 
-    @api.onchange('product_id','partner_id', 'name')
+    @api.onchange('product_id', 'partner_id', 'name')
     def assign_correct_technician(self):
         tecnicos = []
         responsables = []
         morning = ['08', '09', '10', '11', '12', '13', '14', '15']
         now = datetime.now()
         hours = now.strftime("%I")
-        users = self.env['res.partner.zones'].search([('id', '=', self.product_id.zone_id.id)])
-        if users and self.ot_type_id.is_warning and self.ot_type_id.is_warning:
+        zones_obj = self.env['res.partner.zones'].search([('id', '=', self.product_id.zone_id.id)])
+        if zones_obj and self.ot_type_id.is_warning:
             if hours in morning:
-                for u in users:
+                for u in zones_obj:
                     responsables.append(u.user_id.id)
                     self.users_ids = responsables
             else:
-                for u in users:
+                for u in zones_obj:
                     tecnicos.append(u.user_notice_id.id)
                     self.users_ids = tecnicos
 

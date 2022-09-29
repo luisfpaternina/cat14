@@ -30,7 +30,7 @@ class ProjectTask(models.Model):
         tracking=True)
     gadget_id = fields.Many2one(
         'stock.gadgets',
-        string="Gadget")
+        string="Old")
     product_id = fields.Many2one(
         'product.template',
         string="Gadget")
