@@ -26,6 +26,7 @@
         'hr_timesheet',
         'sat_companies',
         'sat_companies_zones',
+        'sat_companies_hr',
 
     ],
 

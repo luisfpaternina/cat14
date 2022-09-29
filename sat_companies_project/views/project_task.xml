@@ -28,7 +28,7 @@
             <xpath expr="//field[@name='user_id']" position="after">
                 <field name="users_ids" attrs="{'required': ['|',('planned_date_begin', '!=', False),('planned_date_end', '!=', False)]}" widget="many2many_tags" force_save="1"/>
                 <field name="is_late_hours" invisible="1"/>
-                <field name="is_hr_leave_crossing"/>
+                <field name="is_hr_leave_crossing" invisible="1"/>
             </xpath>
 
             <xpath expr="//sheet" position="before">
@@ -68,7 +68,7 @@
             </xpath>
 
             <xpath expr="//form/sheet/notebook/page[@name='extra_info']" position="after">
-                <page name="description_page" string="Qr Scanner">
+                <page name="qr_scanner_page" string="Qr Scanner">
                     <field name="pit_confirm" invisible="True"/>
                     <field name="cabin_confirm" invisible="True"/>
                     <field name="machine_confirm" invisible="True"/>
@@ -208,6 +208,8 @@
                 <field name="ot_type_id" options="{'no_create': True, 'no_create_edit':True}" required="1"/>
                 <field name="is_maintenance" invisible="1"/>
                 <field name="origin" invisible="1"/>
+                <field name="firs_assigned_id" invisible="1"/>
+                <field name="is_full_super" invisible="1"/>
                 <field name="gadgest_contract_type_id" options="{'no_create': True, 'no_create_edit':True}" attrs="{'invisible': [('is_maintenance', '!=', True)]}"/>
             </xpath>
 

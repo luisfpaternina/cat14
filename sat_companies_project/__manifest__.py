@@ -25,6 +25,7 @@
         'sale',
         'hr_timesheet',
         'web_notify',
+        'hr',
 
     ],
 

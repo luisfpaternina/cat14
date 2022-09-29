@@ -136,7 +136,7 @@
                                 <field name="repeat_day" attrs="{'invisible': [('repeat_on_month', '!=', 'date')], 'required': [('repeat_on_month', '=', 'date')]}"/>
                                 <field name="repeat_week" attrs="{'invisible': [('repeat_on_month', '!=', 'day')], 'required': [('repeat_on_month', '=', 'day')]}"/>
                                 <field name="repeat_weekday" attrs="{'invisible': [('repeat_on_month', '!=', 'day')], 'required': [('repeat_on_month', '=', 'day')]}"/>
-                                <field name="repeat_month" attrs="{'invisible': [('repeat_on_month', '!=', 'day'),('repeat_unit','!=','year')], 'required': [('repeat_on_month', '=', 'day'),('repeat_unit','=','year')]}"/>
+                                <field name="repeat_month" invisible="1"/>
                                 <field name="mon" attrs="{'invisible': [('repeat_unit', '!=', 'week')]}"/>
                                 <field name="tue" attrs="{'invisible': [('repeat_unit', '!=', 'week')]}"/>
                                 <field name="wed" attrs="{'invisible': [('repeat_unit', '!=', 'week')]}"/>
