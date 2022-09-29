@@ -11,3 +11,4 @@ from . import stock_picking
 from . import sale_order_template
 from . import project_task_template
 from . import project_task_type
+from . import res_users

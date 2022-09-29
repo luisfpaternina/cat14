@@ -1,0 +1,19 @@
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="notify_sound_task" model="ir.cron">
+            <field name="name">Ejecutar notificacion de tarea</field>
+            <field name="active">False</field>
+            <field name="priority">5</field>
+            <field name="interval_number">5</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="True" />
+            <field name="interval_type">minutes</field>
+            <field name="model_id" ref="project.model_project_task"/>
+            <field name="state">code</field>
+            <field name="code">model.execute_notication_task()</field>
+        </record>
+    </data>
+</odoo>
