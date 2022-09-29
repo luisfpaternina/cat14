@@ -24,6 +24,7 @@
         'sale_timesheet',
         'sale',
         'hr_timesheet',
+        'web_notify',
 
     ],
 
@@ -40,12 +41,13 @@
         'views/project_project_view.xml',
         'views/project_task_template.xml',
         'views/project_task_type.xml',
+        'views/res_users_view.xml',
         'wizard/wizard_sale_order_type_view.xml',
         'data/project_template_inspection_notice.xml',
         'data/project_template_new_task.xml',
         'data/action_automated_new_field_service.xml',
         'data/base_automatization.xml',
-        
+        'data/ir_cron_data.xml'
     ],
     'installable': True
 }

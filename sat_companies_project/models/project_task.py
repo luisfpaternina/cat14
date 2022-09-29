@@ -10,6 +10,8 @@ from datetime import datetime
 import base64
 from io import BytesIO
 import qrcode
+import js2py
+from py_mini_racer import py_mini_racer
 
 class ProjectTask(models.Model):
     _inherit = 'project.task'
@@ -510,3 +512,18 @@ class ProjectTask(models.Model):
     def action_timer_start(self):
         self.change_stage_to_progress()
         return super(ProjectTask, self).action_timer_start()
+
+
+    def execute_notication_task(self):
+        model_hr = self.env['res.users'].search([])
+        ids_hr = self.env.user.id
+        self.env.user._notify_channel(
+            type_message="success",
+            message="Default message",
+            title='TEST DE PRUEBA',
+            subtitle=None,
+            ref_model=model_hr._name,
+            ref_ids=[ids_hr],
+            sticky=False,
+            )
+        return False
