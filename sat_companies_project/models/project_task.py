@@ -10,8 +10,6 @@ from datetime import datetime
 import base64
 from io import BytesIO
 import qrcode
-import js2py
-from py_mini_racer import py_mini_racer
 
 class ProjectTask(models.Model):
     _inherit = 'project.task'

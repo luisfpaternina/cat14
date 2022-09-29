@@ -36,16 +36,16 @@ class RedirectActionNotify(http.Controller):
         return out
     
     @http.route(['/notify/playsound'], type='json', auth="user", methods=['POST'])
-    def action_notify_redirect_view(self, res_model, res_ids, **kw):
+    def action_notify_play_audio(self, res_model, res_ids, **kw):
         res_ids = res_ids[0]
         user = request.env['res.users'].search([('id','=',res_ids)])
         audio_user = user.audio_notification_task
-        audio_enc=base64.b64encode(audio_user)
+        #audio_enc=base64.b64encode(audio_user)
         if not audio_user:
             raise ValidationError(_('The User does not have audio file upload '))
         
         
-        result = audio_enc
+        result = audio_user
         #result = dict(**{
         #        'audio_enc': audio_enc
         #        })
