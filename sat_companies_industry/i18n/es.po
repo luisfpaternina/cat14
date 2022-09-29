@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-21 14:10+0000\n"
-"PO-Revision-Date: 2022-09-21 14:10+0000\n"
+"POT-Creation-Date: 2022-09-29 10:16+0000\n"
+"PO-Revision-Date: 2022-09-29 10:16+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -578,7 +578,6 @@ msgstr "Contador"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__attachment_id
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__audio_url
 msgid "Audio"
 msgstr ""
 
@@ -876,7 +875,6 @@ msgid "Followers (Partners)"
 msgstr "Seguidores"
 
 #. module: sat_companies_industry
-#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__gadget_id
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__product_id
 msgid "Gadget"
 msgstr "Aparato"
@@ -904,7 +902,7 @@ msgstr "Notas aparato"
 #. module: sat_companies_industry
 #: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_project_task_sat_companies
 msgid "Gadgets"
-msgstr "Aparatos"
+msgstr "Aparato"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__open_time_hours
@@ -1404,12 +1402,6 @@ msgid "Notes"
 msgstr "Notas"
 
 #. module: sat_companies_industry
-#: code:addons/sat_companies_industry/models/project_task.py:0
-#, python-format
-msgid "Notification OT!"
-msgstr ""
-
-#. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__check_11
 msgid "November"
 msgstr "Noviembre"
@@ -1550,9 +1542,14 @@ msgid "October"
 msgstr "Octubre"
 
 #. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__gadget_id
+msgid "Old"
+msgstr "Viejo"
+
+#. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__open_date
 msgid "Open date"
-msgstr ""
+msgstr "Fecha de apertura"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__user_id
@@ -1808,6 +1805,11 @@ msgstr "Tipo de defecto"
 #: model:ir.model,name:sat_companies_industry.model_project_task_type_associated
 msgid "Types of associated tasks"
 msgstr "Tipos de tareas asociadas"
+
+#. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__audio_url
+msgid "URL audio"
+msgstr ""
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_maintenance_minute_point__message_unread

@@ -1318,7 +1318,7 @@ msgstr "Motivo de parada aparato"
 #. module: sat_companies_stock
 #: model_terms:ir.ui.view,arch_db:sat_companies_stock.inherit_view_product_template_only_form_view_sat
 msgid "Gadget sttoped"
-msgstr "Aparato parado"
+msgstr "Parar aparato"
 
 #. module: sat_companies_stock
 #: model:ir.actions.act_window,name:sat_companies_stock.action_view_only_gadgets
