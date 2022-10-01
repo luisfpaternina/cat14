@@ -23,6 +23,24 @@ odoo.define('web_notify.Notification', function (require) {
             this.className += ' o_' + this.type;
             this.rids = (arguments[1].rids) ? arguments[1].rids : [];
             this.rmodel = arguments[1].rmodel;
+            // Init play sound in notification
+            var self = this;
+                    const newAudio = document.createElement("audio");
+                    newAudio.id = 'audiotag1';
+                    newAudio.src = 'web_notify/static/src/audio/notification.mp3';
+                    newAudio.preload = 'auto';
+                    newAudio.play();
+                    console.log(newAudio)
+                    this._rpc({
+                            route: '/notify/playsound',
+                            params: {
+                                res_model: self.rmodel,
+                                res_ids: self.rids
+                            },
+                        }).then(function(r) {
+                            return r;
+                        });
+    
             this.events = _.extend(this.events || {}, {
                 'click .pop2detail': function() {
                     var self = this;

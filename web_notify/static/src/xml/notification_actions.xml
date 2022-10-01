@@ -9,7 +9,7 @@
     </t> -->
     <t t-jquery=".o_notification_content" t-operation="after">
         <div t-if="widget.rids.length > 0 &amp;&amp; widget.rmodel" class="mt-2">
-            <button type="button" class="btn btn-primary pop2detail oe_highlight oe_form oe_button"><span>Ver detalle</span></button>
+            <button type="button" class="btn btn-primary pop2detail oe_highlight oe_form oe_button"><span>Play notification</span></button>
             <button type="button" class="btn btn-link pop2close">OK</button>
         </div>
     </t>
