@@ -2,8 +2,8 @@
 from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
 
-class SaleSuscriptionTemplateInherit(models.Model):
-    _inherit = 'sale.subscription.template'
+class SaleOrderTemplateInherit(models.Model):
+    _inherit = 'sale.order.template'
 
     sale_type_id = fields.Many2one(
         'sale.order.type',
@@ -11,10 +11,7 @@ class SaleSuscriptionTemplateInherit(models.Model):
     type_contract = fields.Selection([
         ('normal','Normal'),
         ('risk','All risk')],string="Type of contract",tracking=True)
-    gadgets_contract_type_id = fields.Many2one(
-        'stock.gadgets.contract.type')
-
-    subscription_month_ids = fields.Many2many('sale.subscription.month')
+    gadgets_contract_type_id = fields.Many2one('stock.gadgets.contract.type')
 
     """
     sale_order_template_id = fields.Many2one(

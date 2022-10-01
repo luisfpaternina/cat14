@@ -38,3 +38,12 @@ class ProjectTaskCategUdn(models.Model):
     def _upper_name(self):        
         self.name = self.name.upper() if self.name else False
         self.code = self.code.upper() if self.code else False
+
+    #Limpiar valores campos listado categorías UDN
+    @api.onchange('is_normative', 'is_user', 'employee_id')
+    def _onchange_is_normative_user_employee(self):
+        if self.is_normative == False:
+            self.employee_id = False
+            self.is_user = False
+        if self.is_user == False:
+            self.employee_id = False

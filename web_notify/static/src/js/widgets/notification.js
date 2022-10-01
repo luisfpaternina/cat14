@@ -50,15 +50,15 @@ odoo.define('web_notify.Notification', function (require) {
                     newAudio.preload = 'auto';
                     newAudio.play();
                     console.log(newAudio)
-                    this._rpc({
-                            route: '/notify/playsound',
-                            params: {
-                                res_model: self.rmodel,
-                                res_ids: self.rids
-                            },
-                        }).then(function(r) {
-                            return r;
-                        });
+                    //this._rpc({
+                      //      route: '/notify/playsound',
+                        //    params: {
+                          //      res_model: self.rmodel,
+                            //    res_ids: self.rids
+                            //},
+                        //}).then(function(r) {
+                          //  return r;
+                        //});
 
 
                 },
