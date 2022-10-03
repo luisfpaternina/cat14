@@ -10,5 +10,9 @@
 	        <field name="name">Manager OT type</field>
 	        <field name="comment">Manager OT type Permission Group</field>
 	    </record>
+        <record id="all_technicians_group" model="res.groups">
+            <field name="name">Technicians (All)</field>
+            <field name="comment">All technicians Group</field>
+        </record>
 	</data>
 </odoo>
