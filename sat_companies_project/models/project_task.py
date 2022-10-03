@@ -187,12 +187,21 @@ class ProjectTask(models.Model):
         if zones_obj and self.ot_type_id.is_warning:
             if hours in morning:
                 for u in zones_obj:
-                    responsables.append(u.user_id.id)
-                    self.users_ids = responsables
-            else:
-                for u in zones_obj:
                     tecnicos.append(u.user_notice_id.id)
                     self.users_ids = tecnicos
+            else:
+                for u in zones_obj:
+                    responsables.append(u.user_id.id)
+                    self.users_ids = responsables
+    
+    @api.onchange('product_id', 'partner_id', 'name')
+    def gtsupervisor_id(self):
+        employee_obj = self.env['hr.employee'].search([('name', '=', self.product_id.supervisor_zone_id.name)], limit=1)
+        for record in self:
+            if record.product_id:
+                record.supervisor_id = employee_obj.id
+            else:
+                record.supervisor_id  = False
 
     def get_date_range_crossing(
         self,

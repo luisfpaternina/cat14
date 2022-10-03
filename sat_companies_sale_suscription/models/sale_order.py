@@ -47,7 +47,6 @@ class SaleOrderTemplateInherit(models.Model):
         else:
             self.acc_number = ''
 
-
     @api.onchange('sale_type_id')
     def domain_saletype_udn(self):
         for record in self:

@@ -158,7 +158,8 @@ class ProjectTask(models.Model):
     breakdowns_notice = fields.Text(
         string="Breakdowns notice")
     is_conflictive_apparatus = fields.Boolean(
-        string="Is conflictive apparatus")
+        string="Is conflictive apparatus",
+        related="product_id.is_conflictivea_pparatus")
     done_work = fields.Text(
         string="Done work")
     contact_person_ot_old = fields.Char(
@@ -189,7 +190,8 @@ class ProjectTask(models.Model):
     reading_date = fields.Datetime(
         string="Reading date")
     assignment_date = fields.Datetime(
-        string="Assignment date")
+        string="Assignment date",
+        default=lambda self: fields.datetime.now())
     is_stop_gadget = fields.Boolean(
         string="Stop gadget")
     open_date = fields.Datetime(

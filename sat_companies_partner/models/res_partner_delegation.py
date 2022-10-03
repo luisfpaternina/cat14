@@ -5,7 +5,7 @@ from odoo.exceptions import ValidationError
 class ResPartnerDelegation(models.Model):
     _name = 'res.partner.delegation'
     _inherit = 'mail.thread'
-    _description = 'Zones'
+    _description = 'Delegations'
     _rec_name = 'code'
 
     name = fields.Char(
