@@ -1307,7 +1307,7 @@ msgstr "Motivos de parada aparatos"
 #. module: sat_companies_stock
 #: model:ir.model,name:sat_companies_stock.model_product_stopped_wizard
 msgid "Gadget stopped"
-msgstr "Aparato parado"
+msgstr "Parar aparato"
 
 #. module: sat_companies_stock
 #: code:addons/sat_companies_stock/models/product.py:0
@@ -2298,7 +2298,7 @@ msgstr ""
 #. module: sat_companies_stock
 #: model_terms:ir.ui.view,arch_db:sat_companies_stock.inherit_view_product_template_only_form_view_sat
 msgid "Not stopped"
-msgstr "ACTIVO/NO PARADO"
+msgstr "ACTIVAR APARATO"
 
 #. module: sat_companies_stock
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__is_november
