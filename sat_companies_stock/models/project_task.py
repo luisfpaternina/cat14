@@ -37,7 +37,7 @@ class ProjectTaks(models.Model):
                 self.repeat_on_year = product.repeat_on_year 
                 self.repeat_day = product.repeat_day
                 self.repeat_week = product.repeat_week
-                self.repeat_weekday = 'mon'
+                self.repeat_weekday = product.repeat_weekday
                 self.repeat_month = product.repeat_month
                 self.repeat_until = product.repeat_until 
                 self.repeat_number = product.repeat_number

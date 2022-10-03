@@ -291,4 +291,18 @@
 
         </field>
     </record>
+
+    <record model="ir.ui.view" id="custom_view_project_task_search">
+            <field name="name">custom.project.task.search</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="industry_fsm.project_task_view_search_fsm"/>
+            <field name="arch" type="xml">
+                
+                <xpath expr="//filter[@name='groupby_user']" position="replace">
+                    
+                </xpath>
+
+            </field>
+    </record>
+    
 </odoo>    

@@ -624,6 +624,18 @@ class ProductTemplate(models.Model):
         string="Subscription name")
     is_priority_prm = fields.Boolean(
         string="Service PRM")
+    supervisor_zone_id = fields.Many2one(
+        'res.users',
+        related="zone_id.user_id",
+        string="Supervisor")
+    techical_one_id = fields.Many2one(
+        'res.users',
+        related="zone_id.user_notice_id",
+        string="Techical one")
+    techical_two_id = fields.Many2one(
+        'res.users',
+        related="zone_id.user_greasing_id",
+        string="Techical two")
 
 
     def compute_subscriptions(self):

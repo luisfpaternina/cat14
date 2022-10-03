@@ -208,13 +208,16 @@
                             <field name="delegation_name"/>
                         </group>
                         <group>
-                            <field name="employee_notice_id"/>
+                            <field name="employee_notice_id" invisible="1"/>
+                            <field name="techical_one_id"/>
                         </group>
                         <group>
-                            <field name="employee_greasing_id"/>
+                            <field name="employee_greasing_id" invisible="1"/>
+                            <field name="techical_two_id"/>
                         </group>
                          <group>
-                            <field name="responsable_zone_id"/>
+                            <field name="responsable_zone_id" invisible="1"/>
+                            <field name="supervisor_zone_id"/>
                         </group>
                         <group>
                             

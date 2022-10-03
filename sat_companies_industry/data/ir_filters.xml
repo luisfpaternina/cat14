@@ -7,7 +7,7 @@
             <field name="model_id">project.task</field>
             <field name="is_default">True</field>
             <field name="active">True</field>
-            <field name="domain">["&amp;","&amp;","&amp;","&amp;",["fsm_done","=",False],["fsm_done","=",False],["user_id","!=",False],["planned_date_begin","!=",False],["planned_date_end","!=",False]]</field>
+            <field name="domain">[["users_ids","!=",False]]</field>
         </record>
 
         <record id="default_filter_user_id_task" model="ir.filters">
