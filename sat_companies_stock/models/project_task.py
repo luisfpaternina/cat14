@@ -14,16 +14,7 @@ class ProjectTaks(models.Model):
     is_conflictivea_pparatus = fields.Boolean(
         string="Is conflictive apparatus")
 
-    """
-    @api.onchange('product_id')
-    def onchange_recurring_values(self):
-        for record in self:
-            if record.product_id and record.partner_id:
-                    product = record.product_id
-                    if product.is_recurring_task:
-                        record._compute_repeat()
-    """
-    
+
     def _compute_repeat(self):
         print('test')
         res = super(ProjectTaks, self)._compute_repeat()
