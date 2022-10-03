@@ -238,6 +238,7 @@
             <field name="arch" type="xml">
                 <field name="user_id" position="after">
                     <separator/>
+                    <field name="client_code"/>
                     <field name="partner_type_id"/>
                     <field name="delegation_id"/>
                     <field name="population_id"/>
