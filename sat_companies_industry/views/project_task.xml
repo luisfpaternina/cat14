@@ -204,6 +204,11 @@
         <field name="inherit_id" ref="industry_fsm.project_task_view_list_fsm"/>
         <field name="arch" type="xml">
 
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="ot_type_id"/>
+                <field name="categ_udn_id"/>
+            </xpath>
+            
             <xpath expr="//field[@name='user_id']" position="after">
                 <field name="product_id"/>
                 <field name="rae"/>
@@ -220,6 +225,11 @@
             </xpath>
 
             <xpath expr="//field[@name='user_id']" position="attributes">
+                <attribute name="attrs">{}</attribute>
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='project_id']" position="attributes">
                 <attribute name="attrs">{}</attribute>
                 <attribute name="invisible">1</attribute>
             </xpath>

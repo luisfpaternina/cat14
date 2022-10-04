@@ -176,24 +176,32 @@ class ProjectTask(models.Model):
         else:
             self.calculate_planed_hours = 0
 
-    @api.onchange('product_id', 'partner_id', 'name')
+    @api.onchange('product_id', 'partner_id', 'name', 'ot_type_id')
     def assign_correct_technician(self):
         tecnicos = []
+        tecnicos_mant = []
         responsables = []
         morning = ['08', '09', '10', '11', '12', '13', '14', '15']
         now = datetime.now()
         hours = now.strftime("%I")
         zones_obj = self.env['res.partner.zones'].search([('id', '=', self.product_id.zone_id.id)])
-        if zones_obj and self.ot_type_id.is_warning:
-            if hours in morning:
-                for u in zones_obj:
-                    tecnicos.append(u.user_notice_id.id)
-                    self.users_ids = tecnicos
+        if zones_obj:
+            if self.ot_type_id.is_warning:
+                if hours in morning:
+                    for u in zones_obj:
+                        tecnicos.append(u.user_notice_id.id)
+                        self.users_ids = tecnicos
+                else:
+                    for u in zones_obj:
+                        responsables.append(u.user_id.id)
+                        self.users_ids = responsables
             else:
                 for u in zones_obj:
-                    responsables.append(u.user_id.id)
-                    self.users_ids = responsables
-    
+                        tecnicos_mant.append(u.user_greasing_id.id)
+                        self.users_ids = tecnicos_mant
+        else:
+            self.users_ids = False
+
     @api.onchange('product_id', 'partner_id', 'name')
     def gtsupervisor_id(self):
         employee_obj = self.env['hr.employee'].search([('name', '=', self.product_id.supervisor_zone_id.name)], limit=1)
@@ -333,7 +341,7 @@ class ProjectTask(models.Model):
                     for item in hr_leave_crossing:
                         users += item['user'].name+" \n"
                     
-                    raise ValidationError(_("The users: \n \n"+users+"\nAre absent on the selected date"))
+                    raise ValidationError(_("Usuario: \n \n"+users+"\nla persona asignada tiene una ausencia para esa fecha"))
 
                 res = super(ProjectTask, self).create(vals)
                 for record in res:
