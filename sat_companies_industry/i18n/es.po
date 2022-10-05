@@ -1757,7 +1757,7 @@ msgstr "Fecha fin técnico"
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__contact_person_telephone
 msgid "Telephone contact"
-msgstr "Télefono"
+msgstr "Télefono de contacto"
 
 #. module: sat_companies_industry
 #: code:addons/sat_companies_industry/models/.ipynb_checkpoints/project_task-checkpoint.py:0

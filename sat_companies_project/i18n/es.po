@@ -269,7 +269,7 @@ msgstr "Creado en"
 #. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task__delegation
 msgid "Delegation"
-msgstr "Delegación"
+msgstr "Filial"
 
 #. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task__comercial_description
@@ -278,7 +278,7 @@ msgstr "Delegación"
 #: model_terms:ir.ui.view,arch_db:sat_companies_project.project_task_inherit_form_view
 #: model_terms:ir.ui.view,arch_db:sat_companies_project.view_sale_order_inherit_sat_companies_project
 msgid "Description"
-msgstr "Descripción"
+msgstr "Descripción comercial"
 
 #. module: sat_companies_project
 #: model_terms:ir.ui.view,arch_db:sat_companies_project.view_project_task_categ_udn_form
@@ -616,7 +616,7 @@ msgstr "Mensajes"
 #: model_terms:ir.ui.view,arch_db:sat_companies_project.view_project_task_template_form
 #: model_terms:ir.ui.view,arch_db:sat_companies_project.view_sale_order_typet_form
 msgid "Name"
-msgstr "Nombre"
+msgstr " "
 
 #. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn__is_normative

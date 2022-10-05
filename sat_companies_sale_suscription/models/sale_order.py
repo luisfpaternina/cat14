@@ -9,13 +9,12 @@ class SaleOrderTemplateInherit(models.Model):
     gadgets_contract_type_id = fields.Many2one(
         'stock.gadgets.contract.type')
     acc_number = fields.Char(
-        string="Acc number")
+        string="Acc number",
+        compute="_get_partner_acc_account")
     check_contract_type = fields.Boolean(
         compute="_compute_check_contract_type")
-    
     exclude_months = fields.Boolean(
         'Exlude Months')
-
     subscription_month_ids = fields.Many2many(
         'sale.subscription.month')
 
@@ -27,16 +26,7 @@ class SaleOrderTemplateInherit(models.Model):
             else:
                 record.check_contract_type = False
 
-    '''
-    @api.onchange('partner_id')
-    def _get_partner_acc_account(self):
-        partner_obj = self.env['res.partner'].search([('name', '=', self.partner_id.name)],limit=1)
-        for p in partner_obj.bank_ids:
-            if p.is_default:
-                self.acc_number = p.acc_number
-    '''
-
-    @api.onchange('partner_id')
+    @api.depends('partner_id')
     def _get_partner_acc_account(self):
         if self.partner_id.bank_ids:
             acc_default = self.partner_id.bank_ids.filtered(lambda r: r.is_default == True)

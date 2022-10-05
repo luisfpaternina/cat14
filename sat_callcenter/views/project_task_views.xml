@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_project_task_sat_companies_inherit" model="ir.ui.view">
+        <field name="name">inherit.form.project.task.callcenter</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2"/>
+        <field name="groups_id" eval="[(4,ref('sat_callcenter.group_sat_callcenter_tier1'))]" />
+        <field name="arch" type="xml"> 
+            <xpath expr="//field[@name='ot_type_id']" position="attributes">
+                <attribute name="readonly">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='categ_udn_id']" position="attributes">
+                <attribute name="readonly">1</attribute>
+            </xpath>
+
+            <!-- Páginas Recurrencia e Información extra  -->
+            <xpath expr="//page[@name='recurrence']" position="attributes">
+                <attribute name="groups">sat_callcenter.group_all_internal_excep_tier1</attribute>
+            </xpath>
+            <xpath expr="//page[@name='extra_info']" position="attributes">
+                <attribute name="groups">sat_callcenter.group_all_internal_excep_tier1</attribute>
+            </xpath>
+
+            <!--Campos sólo lectura para Tier1-->
+            <xpath expr="//field[@name='gadget_pda_observations']" position="attributes">
+                <attribute name="readonly">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='done_work']" position="attributes">
+                <attribute name="readonly">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='users_ids']" position="attributes">
+                <attribute name="readonly">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='supervisor_id']" position="attributes">
+                <attribute name="readonly">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='project_id']" position="attributes">
+                <attribute name="readonly">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='worksheet_template_id']" position="attributes">
+                <attribute name="readonly">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='stage_id']" position="attributes">
+                <attribute name="readonly">1</attribute>
+            </xpath>
+
+            <!--Smart buttons invisibles para Tier1-->
+            <xpath expr="//button[@name='action_subtask']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//button[@name='action_fsm_view_material']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//button[@name='action_fsm_worksheet']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//button[@name='action_preview_worksheet']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Páginas Checklists, Checklists puntos acta OCA y Notas -->
+    <record id="view_project_task_sat_companies_industry_inherit" model="ir.ui.view">
+        <field name="name">inherit.form.project.task</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="sat_companies_industry.view_project_task_sat_companies"/>
+        <field name="arch" type="xml"> 
+            <xpath expr="//page[@name='pag_work_order_tab']" position="attributes">
+                <attribute name="groups">sat_callcenter.group_all_internal_excep_tier1</attribute>
+            </xpath>
+            <xpath expr="//page[@name='checklist_page']" position="attributes">
+                <attribute name="groups">sat_callcenter.group_all_internal_excep_tier1</attribute>
+            </xpath>
+            <xpath expr="//page[@name='notes']" position="attributes">
+                <attribute name="groups">sat_callcenter.group_all_internal_excep_tier1</attribute>
+            </xpath>
+            <!-- La página gadgets está como invisible en la vista heredada; la pongo aquí por si en algún momento hubiese que indicar el grupo.
+            <xpath expr="//page[@name='gadgets']" position="attributes">
+                <attribute name="groups">sat_callcenter.group_all_internal_excep_tier1</attribute>
+            </xpath>
+            -->
+        </field>
+    </record>
+
+    <!-- Páginas Estado tareas, Descripción y Qr Scanner -->
+    <record id="view_project_task_sat_companies_project_inherit" model="ir.ui.view">
+        <field name="name">project.task.form.inherit.view</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="sat_companies_project.project_task_inherit_form_view"/>
+        <field name="arch" type="xml"> 
+            <xpath expr="//page[@name='task_state']" position="attributes">
+                <attribute name="groups">sat_callcenter.group_all_internal_excep_tier1</attribute>
+            </xpath>
+            <xpath expr="//page[@name='commercial_description']" position="attributes">
+                <attribute name="groups">sat_callcenter.group_all_internal_excep_tier1</attribute>
+            </xpath>
+            <xpath expr="//page[@name='qr_scanner_page']" position="attributes">
+                <attribute name="groups">sat_callcenter.group_all_internal_excep_tier1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Página Partes de Horas -->
+    <record id="view_project_task_form2_timesheets_inherit" model="ir.ui.view">
+        <field name="name">project.task.form.inherited</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="hr_timesheet.view_task_form2_inherited"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@id='timesheets_tab']" position="attributes">
+                <attribute name="groups">sat_callcenter.group_all_internal_excep_tier1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Página Solicitud transferencia -->
+    <record id="view_project_task_transfer_request_inherit" model="ir.ui.view">
+        <field name="name">inherit.form.project.task</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="pc_stock_picking_ext.view_project_task_transfer_request"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='transfer_request']" position="attributes">
+                <attribute name="groups">sat_callcenter.group_all_internal_excep_tier1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Etapa sólo lectura para grupo Técnicos-->
+    <record id="view_project_task_sat_companies_inherit_technicians" model="ir.ui.view">
+        <field name="name">inherit.form.project.task.callcenter.technicians</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2"/>
+        <field name="groups_id" eval="[(4,ref('sat_companies_project.all_technicians_group'))]"/>
+        <field name="arch" type="xml"> 
+            <xpath expr="//field[@name='stage_id']" position="attributes">
+                <attribute name="readonly">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Páginas Información OT sólo lectura -->
+    <!--
+    <record id="view_project_task_sat_companies_industry_inherit_callcenter" model="ir.ui.view">
+        <field name="name">inherit.form.project.task</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="sat_companies_industry.view_project_task_sat_companies"/>
+        <field name="groups_id" eval="[(4,ref('sat_callcenter.group_sat_callcenter_tier1'))]"/>
+        <field name="arch" type="xml"> 
+            <xpath expr="//page[@name='OT information']" position="attributes">
+                <attribute name="readonly">1</attribute>
+            </xpath>
+        </field>
+    </record>
+    -->
+    <!-- Botones invisibles para Tier1-->
+    <record id="inherit_timesheet_grid_project_task_view_form_callcenter" model="ir.ui.view">
+        <field name="name">inherit.form.timesheet.project.task</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="timesheet_grid.project_task_view_form"/>
+        <field name="groups_id" eval="[(4,ref('sat_callcenter.group_sat_callcenter_tier1'))]"/>
+        <field name="arch" type="xml"> 
+            <xpath expr="//button[@name='action_timer_start']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//button[@name='action_timer_stop']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//button[@name='action_timer_pause']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//button[@name='action_timer_resume']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//button[@name='action_send_report']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//button[@name='action_fsm_validate']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//button[@name='action_fsm_create_quotation']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//button[@name='action_create_invoice']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//button[@name='action_preview_worksheet']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <!--
+            <xpath expr="//button[@name='action_make_billable']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            -->
+        </field>
+    </record>
+
+</odoo>

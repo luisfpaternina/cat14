@@ -84,7 +84,7 @@
                         <group>
                             
                         </group>
-                        <group string="Contact">
+                        <group string="Contact" invisible="1">
                             <field name="contact_person"/>
                             <field name="phone_contact"/>
                             <field name="fax_contact"/>
@@ -93,7 +93,7 @@
                         <group>
                             
                         </group>
-                        <group>
+                        <group invisible="1">
                             <field name="is_pda"/>
                         </group>
                         <group>
@@ -165,14 +165,17 @@
                   </group>
                   <group attrs="{'invisible': [('is_warning', '!=', True)]}">
                       <field name="contact_person_ot_old" readonly="1"/>
-                      <field name="contact_person_ot" domain = "[('parent_id', '=', partner_id)]" options="{'no_quick_create': True}"/>
+                      <field name="contact_person_ot" domain = "[('parent_id', '=', partner_id)]" options="{'no_quick_create': True}" attrs="{'readonly': [('partner_id', '=', False)]}" context="{'default_parent_id': partner_id}"/>
                       <field name="contact_person_telephone" readonly="1"/>
                       <field name="is_stop_with_company"/>
                       <field name="gadget_pda_observations"/>
-                      <field name="gadget_notes"/>
-                      <field name="floor_number"/>
-                      <field name="maximum_rescue_time"/>
-                      <field name="maximum_warning_time"/>
+                      <field name="contact_person_telephone" readonly="1"/>
+                      <field name="is_stop_with_company"/>
+                      <field name="gadget_pda_observations"/>
+                      <field name="gadget_notes" invisible="1"/>
+                      <field name="floor_number" invisible="1"/>
+                      <field name="maximum_rescue_time" invisible="1"/>
+                      <field name="maximum_warning_time" invisible="1"/>
                   </group>
                   <group string="Warning" name="warning" attrs="{'invisible': [('is_warning', '!=', True)]}">
                       <field name="breakdowns_id" options="{'no_create': True, 'no_create_edit':True}" attrs="{'invisible': [('is_warning', '!=', True)]}"/>
@@ -204,6 +207,11 @@
         <field name="inherit_id" ref="industry_fsm.project_task_view_list_fsm"/>
         <field name="arch" type="xml">
 
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="ot_type_id"/>
+                <field name="categ_udn_id"/>
+            </xpath>
+            
             <xpath expr="//field[@name='user_id']" position="after">
                 <field name="product_id"/>
                 <field name="rae"/>
@@ -220,6 +228,11 @@
             </xpath>
 
             <xpath expr="//field[@name='user_id']" position="attributes">
+                <attribute name="attrs">{}</attribute>
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='project_id']" position="attributes">
                 <attribute name="attrs">{}</attribute>
                 <attribute name="invisible">1</attribute>
             </xpath>

@@ -50,6 +50,7 @@ class ProjectTaks(models.Model):
                 self.wed = False
                 self.repeat_weekday = 'mon'
                 self.thu = False
+                self.repeat_weekday = 'mon'
                 self.fri = False
                 self.sat = False
                 self.sun = False
