@@ -23,7 +23,7 @@ class ProjectTask(models.Model):
         ('done','Done')],string="State Check Gagdest", default='checking', tracking=True)
     delegation = fields.Many2one(
         'res.partner.delegation',
-        string="Delegation")
+        string="Team")
     from_gadget = fields.Many2one(
         'stock.gadgets',
         string="From the Gadget")
@@ -567,3 +567,15 @@ class ProjectTask(models.Model):
             sticky=False,
             )
         return False
+    
+    #Limpiar valor campo Aparato al cambiar de Cliente, para evitar combinación incoherente.
+    @api.onchange('partner_id')
+    def _onchange_parner_id_clean_elevator(self):
+        if self.product_id:
+            self.product_id = False
+
+    #Limpiar valor campo Categoría UDN al cambiar Tipo de OT, para evitar combinación incoherente.
+    @api.onchange('ot_type_id')
+    def _onchange_ot_type_clean_udn(self):
+        if self.categ_udn_id:
+            self.categ_udn_id = False

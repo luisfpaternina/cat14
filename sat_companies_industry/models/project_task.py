@@ -154,7 +154,8 @@ class ProjectTask(models.Model):
     is_blocked = fields.Boolean(
         string="is Blocked")
     service_h = fields.Boolean(
-        string="Service 24h")
+        string="Service 24h",
+        related='product_id.is_full_service')
     breakdowns_notice = fields.Text(
         string="Breakdowns notice")
     is_conflictive_apparatus = fields.Boolean(
@@ -171,7 +172,8 @@ class ProjectTask(models.Model):
         string="Telephone contact",
         related='contact_person_ot.phone')
     is_stop_with_company = fields.Boolean(
-        string="Is stop with company")
+        string="Is stop with company",
+        related='product_id.is_gadget_stopped')
     gadget_pda_observations = fields.Text(
         string="Gadget PDA observations")
     gadget_notes = fields.Text(

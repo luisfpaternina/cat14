@@ -462,6 +462,7 @@
         <field name="arch" type="xml">
             <tree string="gadgets_tree" create="false" edit="false">
                 <field name="name"/>
+                <field name="address2"/>
                 <field name="rae"/>
                 <field name="partner_id"/>
                 <field name="partner_admin_id"/>
