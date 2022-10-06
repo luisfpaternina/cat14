@@ -3,17 +3,14 @@ from odoo import models, fields, api, _
 class ResPartnerGuardZones(models.Model):
     _name = 'res.partner.guard.zones'
     _inherit = 'mail.thread'
-    _description = 'Guard zone'
-    _rec_name = 'code'
+    _description = 'Guard calendar'
 
     name = fields.Char(
         string="Guard zone name",
         tracking=True)
     code = fields.Char(
         string="Code", 
-        tracking=True,
-        required=True,
-        copy=False)
+        tracking=True)
     delegation_id = fields.Many2one(
         'res.partner.delegation',
         string="Delegation",
