@@ -35,19 +35,42 @@ class RedirectActionNotify(http.Controller):
             raise ValidationError(_('No se puede procesar el atributo res_ids con valor %s') % res_ids)
         return out
     
-    @http.route(['/notify/playsound'], type='json', auth="user", methods=['POST'])
+    @http.route(['/notify/task-detail'], type='json', auth="user", methods=['POST'])
     def action_notify_play_audio(self, res_model, res_ids, **kw):
-        res_ids = res_ids[0]
-        user = request.env['res.users'].search([('id','=',res_ids)])
-        audio_user = user.audio_notification_task
-        #audio_enc=base64.b64encode(audio_user)
-        if not audio_user:
-            raise ValidationError(_('The User does not have audio file upload '))
+        out = {
+            'name': _('Detalle'),
+            'type': 'ir.actions.act_window',
+            'res_model': res_model,
+            'context': {},
+            'target' : 'current'
+        }
+        if len(res_ids) == 1:
+            out = dict(out, **{
+                'view_mode': 'form',
+                'res_id': res_ids[0],
+                'views': [
+                    [False, "form"],
+                ],
+            })
+        elif len(res_ids) > 1:
+            out = dict(out, **{
+                'view_mode': 'tree,form',
+                'domain': [('id','in',res_ids)],
+                'views': [
+                    [False, "list"],
+                    [False, "form"],
+                ]
+            })
+        else:
+            raise ValidationError(_('No se puede procesar el atributo res_ids con valor %s') % res_ids)
+        return out
+    
+    @http.route(['/notify/check-notification'], type='json', auth="user", methods=['POST'])
+    def action_check_notification(self, res_model, res_ids, **kw):
+        task = request.env['project.task'].search([('id','=',res_ids)])
+        if task:
+            task.task_cheked = True
         
-        
-        result = audio_user
-        #result = dict(**{
-        #        'audio_enc': audio_enc
-        #        })
-        return result
+
+        return False
 

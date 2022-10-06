@@ -30,35 +30,33 @@ odoo.define('web_notify.Notification', function (require) {
                     newAudio.src = 'web_notify/static/src/audio/notification.mp3';
                     newAudio.preload = 'auto';
                     newAudio.play();
-                    console.log(newAudio)
+
+    
+            this.events = _.extend(this.events || {}, {
+                'click .pop2detail': function() {
+                    var self = this;
+
                     this._rpc({
-                            route: '/notify/playsound',
+                            route: '/notify/task-detail',
                             params: {
                                 res_model: self.rmodel,
                                 res_ids: self.rids
                             },
                         }).then(function(r) {
-                            return r;
+                            return self.do_action(r);
                         });
-    
-            this.events = _.extend(this.events || {}, {
-                'click .pop2detail': function() {
-                    var self = this;
-                    const newAudio = document.createElement("audio");
-                    newAudio.id = 'audiotag1';
-                    newAudio.src = 'web_notify/static/src/audio/notification.mp3';
-                    newAudio.preload = 'auto';
-                    newAudio.play();
-                    console.log(newAudio)
-                    //this._rpc({
-                      //      route: '/notify/playsound',
-                        //    params: {
-                          //      res_model: self.rmodel,
-                            //    res_ids: self.rids
-                            //},
-                        //}).then(function(r) {
-                          //  return r;
-                        //});
+
+
+                },
+
+                'click .pop2validate': function() {
+                    this._rpc({
+                        route: '/notify/check-notification',
+                        params: {
+                            res_model: self.rmodel,
+                            res_ids: self.rids
+                        },
+                    })
 
 
                 },

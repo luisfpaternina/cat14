@@ -158,6 +158,8 @@ class ProjectTask(models.Model):
         string="First assigned")
     is_full_super = fields.Boolean(
         string="Is full")
+    task_cheked = fields.Boolean(
+        string="Task Checked ?")
 
 
     def compute_is_late_hours(self):
@@ -547,15 +549,19 @@ class ProjectTask(models.Model):
 
 
     def execute_notication_task(self):
-        model_hr = self.env['res.users'].search([])
-        ids_hr = self.env.user.id
-        self.env.user._notify_channel(
-            type_message="success",
-            message="Default message",
-            title='TEST DE PRUEBA',
-            subtitle=None,
-            ref_model=model_hr._name,
-            ref_ids=[ids_hr],
-            sticky=False,
-            )
+        id_user = self.env.user.id
+        task = self.env['project.task'].search([('task_cheked','=',False)])
+        task_user = list(filter(lambda x: id_user in x.users_ids.ids, task))
+        if task_user:
+            ids_task = [x.id for x in task_user]
+            for id_task in ids_task:
+                self.env.user._notify_channel(
+                    type_message="success",
+                    message="Default message",
+                    title='TEST DE PRUEBA',
+                    subtitle=None,
+                    ref_model=task._name,
+                    ref_ids=[id_task],
+                    sticky=False,
+                    )
         return False
