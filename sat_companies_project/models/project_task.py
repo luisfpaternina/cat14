@@ -555,7 +555,6 @@ class ProjectTask(models.Model):
         self.change_stage_to_progress()
         return super(ProjectTask, self).action_timer_start()
 
-
     def execute_notication_task(self):
         id_user = self.env.user.id
         task = self.env['project.task'].search([('task_cheked','=',False)])

@@ -6,12 +6,22 @@
         <field name="inherit_id" ref="project.view_task_form2"/>
         <field name="arch" type="xml">
 
-            <xpath expr="//button[@name='action_timer_pause']" position="after">
-                <button 
-                name="get_values_minute_point_from_sale"
-                string="punto del acat del pedido"
-                type="object"
-                invisible="1"/>
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="sale_id" invisible="1"/>
+            </xpath>
+
+            <xpath expr="//form[1]/sheet[1]/notebook[1]" position="inside">
+                <page name="minute_point_mrp_page" string="Minute point" attrs="{'invisible': [('sale_id', '=', False)]}">
+                    <group>
+                        <field name="order_line">
+                            <tree>
+                                <field name="name" invisible="1"/>
+                                <field name="order_id" invisible="1"/>
+                                <field name="minute_point_id"/>
+                            </tree>
+                        </field>
+                    </group>
+                </page>
             </xpath>
 
         </field>

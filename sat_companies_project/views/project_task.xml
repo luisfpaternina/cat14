@@ -305,5 +305,18 @@
 
             </field>
     </record>
+
+    <record id="inherit_view_task_form2_inherited_technicians_readonly" model="ir.ui.view">
+        <field name="name">project.task.form</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="hr_timesheet.view_task_form2_inherited"/>
+        <field name="groups_id" eval="[(4,ref('sat_companies_project.all_technicians_group'))]"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='timesheet_ids']" position="attributes">
+                <attribute name="readonly">1</attribute>
+                <attribute name="options">{'no_create': True, 'no_open': True}</attribute>
+            </xpath>
+        </field>
+    </record>
     
 </odoo>    

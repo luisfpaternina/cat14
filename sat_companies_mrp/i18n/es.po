@@ -6,14 +6,25 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-15 17:31+0000\n"
-"PO-Revision-Date: 2022-09-15 17:31+0000\n"
+"POT-Creation-Date: 2022-10-06 11:15+0000\n"
+"PO-Revision-Date: 2022-10-06 11:15+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+
+#. module: sat_companies_mrp
+#: model_terms:ir.ui.view,arch_db:sat_companies_mrp.inherit_sale_report_saleorder_document
+msgid "<span>Punto de acta</span>"
+msgstr ""
+
+#. module: sat_companies_mrp
+#: model:base.automation,name:sat_companies_mrp.automatization_mrp_update_minute_point
+#: model:ir.actions.server,name:sat_companies_mrp.automatization_mrp_update_minute_point_ir_actions_server
+msgid "ACTUALIZAR PUNTOS DEL ACTA DESDE VENTAS"
+msgstr ""
 
 #. module: sat_companies_mrp
 #: model:ir.model.fields,field_description:sat_companies_mrp.field_sale_order_bom__message_needaction
@@ -64,6 +75,7 @@ msgstr "Creado en"
 #. module: sat_companies_mrp
 #: model:ir.model.fields,field_description:sat_companies_mrp.field_mrp_bom__display_name
 #: model:ir.model.fields,field_description:sat_companies_mrp.field_mrp_bom_line__display_name
+#: model:ir.model.fields,field_description:sat_companies_mrp.field_project_task__display_name
 #: model:ir.model.fields,field_description:sat_companies_mrp.field_sale_order__display_name
 #: model:ir.model.fields,field_description:sat_companies_mrp.field_sale_order_bom__display_name
 #: model:ir.model.fields,field_description:sat_companies_mrp.field_sale_order_line__display_name
@@ -73,7 +85,7 @@ msgstr "Nombre mostrado"
 #. module: sat_companies_mrp
 #: model:ir.model.fields,field_description:sat_companies_mrp.field_mrp_bom__is_minute_point
 msgid "Enable minute point"
-msgstr "Punto del acat"
+msgstr "Punto del acta"
 
 #. module: sat_companies_mrp
 #: model:ir.model.fields,field_description:sat_companies_mrp.field_sale_order_bom__message_follower_ids
@@ -93,6 +105,7 @@ msgstr ""
 #. module: sat_companies_mrp
 #: model:ir.model.fields,field_description:sat_companies_mrp.field_mrp_bom__id
 #: model:ir.model.fields,field_description:sat_companies_mrp.field_mrp_bom_line__id
+#: model:ir.model.fields,field_description:sat_companies_mrp.field_project_task__id
 #: model:ir.model.fields,field_description:sat_companies_mrp.field_sale_order__id
 #: model:ir.model.fields,field_description:sat_companies_mrp.field_sale_order_bom__id
 #: model:ir.model.fields,field_description:sat_companies_mrp.field_sale_order_line__id
@@ -124,6 +137,7 @@ msgstr ""
 #. module: sat_companies_mrp
 #: model:ir.model.fields,field_description:sat_companies_mrp.field_mrp_bom____last_update
 #: model:ir.model.fields,field_description:sat_companies_mrp.field_mrp_bom_line____last_update
+#: model:ir.model.fields,field_description:sat_companies_mrp.field_project_task____last_update
 #: model:ir.model.fields,field_description:sat_companies_mrp.field_sale_order____last_update
 #: model:ir.model.fields,field_description:sat_companies_mrp.field_sale_order_bom____last_update
 #: model:ir.model.fields,field_description:sat_companies_mrp.field_sale_order_line____last_update
@@ -158,18 +172,19 @@ msgstr "Administrador lista de materiales en ventas"
 #. module: sat_companies_mrp
 #: model:ir.model.fields,field_description:sat_companies_mrp.field_sale_order_bom__message_has_error
 msgid "Message Delivery error"
-msgstr ""
+msgstr "Mensajes de error en la entrega"
 
 #. module: sat_companies_mrp
 #: model:ir.model.fields,field_description:sat_companies_mrp.field_sale_order_bom__message_ids
 msgid "Messages"
-msgstr ""
+msgstr "Mensajes"
 
 #. module: sat_companies_mrp
 #: model:ir.model.fields,field_description:sat_companies_mrp.field_mrp_bom__minute_point_id
 #: model:ir.model.fields,field_description:sat_companies_mrp.field_sale_order_line__minute_point_id
+#: model_terms:ir.ui.view,arch_db:sat_companies_mrp.view_project_task_sat_companies_mrp
 msgid "Minute point"
-msgstr "Punto de acta"
+msgstr "Puntos del acta"
 
 #. module: sat_companies_mrp
 #: model:ir.model.fields,field_description:sat_companies_mrp.field_sale_order_bom__bom_id
@@ -208,6 +223,16 @@ msgid "Number of unread messages"
 msgstr ""
 
 #. module: sat_companies_mrp
+#: model:ir.model.fields,field_description:sat_companies_mrp.field_sale_order__order_bom_line
+msgid "Order Lines"
+msgstr "Líneas"
+
+#. module: sat_companies_mrp
+#: model:ir.model.fields,field_description:sat_companies_mrp.field_project_task__order_line
+msgid "Order lines"
+msgstr "Checklist puntos del acta"
+
+#. module: sat_companies_mrp
 #: model:ir.model.fields,field_description:sat_companies_mrp.field_sale_order_bom__product_id
 msgid "Product"
 msgstr "Producto"
@@ -225,6 +250,7 @@ msgstr ""
 #. module: sat_companies_mrp
 #: model:ir.model.fields,field_description:sat_companies_mrp.field_mrp_bom__sale_order_id
 #: model:ir.model.fields,field_description:sat_companies_mrp.field_mrp_bom_line__sale_order_id
+#: model:ir.model.fields,field_description:sat_companies_mrp.field_project_task__sale_id
 #: model:ir.model.fields,field_description:sat_companies_mrp.field_sale_order_bom__sale_order_id
 msgid "Sale order"
 msgstr "Presupuesto"
@@ -245,6 +271,11 @@ msgid "Sales Order Line"
 msgstr "Línea de pedido de venta"
 
 #. module: sat_companies_mrp
+#: model:ir.model,name:sat_companies_mrp.model_project_task
+msgid "Task"
+msgstr "Tarea"
+
+#. module: sat_companies_mrp
 #: model:ir.model.fields,field_description:sat_companies_mrp.field_sale_order_bom__message_unread
 msgid "Unread Messages"
 msgstr ""
@@ -257,9 +288,9 @@ msgstr ""
 #. module: sat_companies_mrp
 #: model:ir.model.fields,field_description:sat_companies_mrp.field_sale_order_bom__website_message_ids
 msgid "Website Messages"
-msgstr ""
+msgstr "Mensajes del sitio web"
 
 #. module: sat_companies_mrp
 #: model:ir.model.fields,help:sat_companies_mrp.field_sale_order_bom__website_message_ids
 msgid "Website communication history"
-msgstr ""
+msgstr "Historico de mensajes del sitio web"

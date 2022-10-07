@@ -8,11 +8,18 @@ import datetime
 class ProjectTask(models.Model):
     _inherit = 'project.task'
 
-    def get_values_minute_point_from_sale(self):
+    sale_id = fields.Many2one(
+        'sale.order',
+        string="Sale order",
+        compute="compute_sale_order")
+    order_line = fields.One2many(
+        related="sale_id.order_line",
+        string="Order lines")
+
+
+    def compute_sale_order(self):
         sale_obj = self.env['sale.order'].search([('name', '=', self.origin)])
         if sale_obj:
-            for line in sale_obj.order_line:
-                self.write({'checklist_line_ids': [(0, 0, {
-                    'minute_point_id': line.minute_point_id.id,
-                    })]
-                    })
+            self.sale_id = sale_obj.id
+        else:
+            self.sale_id = False

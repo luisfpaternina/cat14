@@ -19,6 +19,13 @@ class ResPartnerGuardZones(models.Model):
         string="Delegation name",
         tracking=True,
         related="delegation_id.name")
+    start_date = fields.Datetime(
+        string="Start date")
+    end_date = fields.Datetime(
+        string="End date")
+    user_id = fields.Many2one(
+        'res.users',
+        string="User")
     
 
     _sql_constraints = [
