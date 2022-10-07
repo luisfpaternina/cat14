@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-04 15:12+0000\n"
-"PO-Revision-Date: 2022-10-04 15:12+0000\n"
+"POT-Creation-Date: 2022-10-05 21:59+0000\n"
+"PO-Revision-Date: 2022-10-05 21:59+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -101,6 +101,21 @@ msgid "Display Name"
 msgstr "Nombre mostrado"
 
 #. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_guard_zones__end_date
+msgid "End date"
+msgstr "Fecha finalización"
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_guard_zones__x_studio_fecha_fin
+msgid "Fecha Fin"
+msgstr ""
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_guard_zones__x_studio_fecha_inicio
+msgid "Fecha Inicio"
+msgstr ""
+
+#. module: sat_companies_zones
 #: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_guard_zones__message_follower_ids
 #: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes__message_follower_ids
 #: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__message_follower_ids
@@ -152,13 +167,17 @@ msgid "Guard"
 msgstr "Guardia"
 
 #. module: sat_companies_zones
+#: model:ir.model,name:sat_companies_zones.model_res_partner_guard_zones
+msgid "Guard calendar"
+msgstr "Calendario de guardias"
+
+#. module: sat_companies_zones
 #: model:ir.model.fields,field_description:sat_companies_zones.field_res_users__route_type_id
 msgid "Guard route"
 msgstr "Ruta de guardia"
 
 #. module: sat_companies_zones
 #: model:ir.actions.act_window,name:sat_companies_zones.action_view_res_partner_guard_zones
-#: model:ir.model,name:sat_companies_zones.model_res_partner_guard_zones
 #: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__guard_zone
 #: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__guard_zone_id
 #: model:ir.ui.menu,name:sat_companies_zones.menu_res_partner_guard_zones
@@ -399,6 +418,11 @@ msgid "Search partner zone"
 msgstr ""
 
 #. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_guard_zones__start_date
+msgid "Start date"
+msgstr "Fecha de inicio"
+
+#. module: sat_companies_zones
 #: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__user_notice_id
 msgid "Technical notice"
 msgstr "Técnico aviso"
@@ -427,11 +451,21 @@ msgid "Unread Messages Counter"
 msgstr ""
 
 #. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_guard_zones__user_id
+msgid "User"
+msgstr "Técnico"
+
+#. module: sat_companies_zones
 #: model:ir.model,name:sat_companies_zones.model_res_users
 #: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_routes__users_ids
 #: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_zones__users_ids
 msgid "Users"
 msgstr "Usuarios"
+
+#. module: sat_companies_zones
+#: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_guard_zones__x_studio_many2one_field_AJTpe
+msgid "Usuarios"
+msgstr ""
 
 #. module: sat_companies_zones
 #: model:ir.model.fields,field_description:sat_companies_zones.field_res_partner_guard_zones__website_message_ids
