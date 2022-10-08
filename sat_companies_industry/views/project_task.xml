@@ -6,7 +6,8 @@
         <field name="name">inherit.form.project.task</field>
         <field name="model">project.task</field>
         <field name="inherit_id" ref="project.view_task_form2"/>
-        <field name="arch" type="xml"> 
+        <field name="arch" type="xml">
+
             <xpath expr="//form[1]/sheet[1]/notebook[1]" position="inside">
                 <page string="Checklists" name="pag_work_order_tab">
                   <group name="studio_group_SidLz">
@@ -114,6 +115,11 @@
                     </group>
                 </page>
             </xpath>
+
+            <xpath expr="//field[(@name='partner_id')]" position="before">
+                <field name="ot_type_id" invisible="1"/>
+                <field name="categ_udn_id"  options="{'no_create': True, 'no_create_edit':True}" attrs="{'invisible': [('ot_type_id','=',False)],'required':[('ot_type_id','!=',False)]}"/>
+            </xpath>
             
             <xpath expr="//field[(@name='partner_id')]" position="after">
                 <field name="ot_code"/>
@@ -123,8 +129,6 @@
                 <field name="subscription_ids" widget="many2many_tags"/>
                 <field name="cabine_phone"/>
                 <field name="gadget_admin_id"/>
-                <field name="ot_type_id" invisible="1"/>
-                <field name="categ_udn_id"  options="{'no_create': True, 'no_create_edit':True}" attrs="{'invisible': [('ot_type_id','=',False)],'required':[('ot_type_id','!=',False)]}"/>
                 <field name="inspection_id" options="{'no_create': True, 'no_create_edit':True}"/>
                 <field name="open_date" invisible="1"/>
                 <field name="closed_date" invisible="1"/>
