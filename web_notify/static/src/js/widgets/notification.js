@@ -13,6 +13,7 @@ odoo.define('web_notify.Notification', function (require) {
             'default': 'fa-lightbulb-o',
         },
         init: function () {
+            console.log('INICIA NOTICICACION')
             this._super.apply(this, arguments);
             // Delete default classes
             this.className = this.className.replace(' o_error', '');
@@ -24,12 +25,34 @@ odoo.define('web_notify.Notification', function (require) {
             this.rids = (arguments[1].rids) ? arguments[1].rids : [];
             this.rmodel = arguments[1].rmodel;
             // Init play sound in notification
+
             var self = this;
-                    const newAudio = document.createElement("audio");
-                    newAudio.id = 'audiotag1';
-                    newAudio.src = 'web_notify/static/src/audio/notification.mp3';
-                    newAudio.preload = 'auto';
-                    newAudio.play();
+                this._rpc({
+                    route: '/notify/active-sound',
+                    params: {
+                        res_model: 'res.users',
+                        res_ids: self.rids
+                    },
+                }).then(function(r) {
+                    console.log(r)
+                    if (r == true){
+                        const newAudio = document.createElement("audio");
+                        newAudio.id = 'audiotag1';
+                        newAudio.src = 'web_notify/static/src/audio/notification.mp3';
+                        newAudio.preload = 'auto';
+                        newAudio.play();
+
+                    }
+                });
+
+                this._rpc({
+                    route: '/notify/desactive-sound',
+                    params: {
+                        res_model: 'res.users',
+                        res_ids: self.rids
+                    },
+                })
+                    
 
     
             this.events = _.extend(this.events || {}, {
@@ -57,6 +80,7 @@ odoo.define('web_notify.Notification', function (require) {
                             res_ids: self.rids
                         },
                     })
+                    this.close();
 
 
                 },

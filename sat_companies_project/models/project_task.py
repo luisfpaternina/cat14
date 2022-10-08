@@ -557,9 +557,13 @@ class ProjectTask(models.Model):
 
 
     def execute_notication_task(self):
-        id_user = self.env.user.id
+        context = self._context
+        current_uid = context.get('uid')
+        user_id = self.env['res.users'].browse(current_uid)
+        #user_id = self.env.user
+        user_id.play_alarm = True
         task = self.env['project.task'].search([('task_cheked','=',False)])
-        task_user = list(filter(lambda x: id_user in x.users_ids.ids, task))
+        task_user = list(filter(lambda x: user_id.id in x.users_ids.ids, task))
         if task_user:
             ids_task = [x.id for x in task_user]
             for id_task in ids_task:

@@ -31,6 +31,7 @@ class ResUsers(models.Model):
     notify_warning_channel_name = fields.Char(compute="_compute_channel_names")
     notify_info_channel_name = fields.Char(compute="_compute_channel_names")
     notify_default_channel_name = fields.Char(compute="_compute_channel_names")
+    play_alarm = fields.Boolean()
 
     def notify_success(
         self,
@@ -82,12 +83,6 @@ class ResUsers(models.Model):
         sticky=False,
     ):
         # pylint: disable=protected-access
-        if not self.env.user._is_admin() and any(
-            user.id != self.env.uid for user in self
-        ):
-            raise exceptions.UserError(
-                _("Sending a notification to another user is forbidden.")
-            )
         channel_name_field = "notify_{}_channel_name".format(type_message)
         bus_message = {
             "type": type_message,
