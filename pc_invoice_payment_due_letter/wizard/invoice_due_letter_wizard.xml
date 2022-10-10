@@ -1,0 +1,56 @@
+<odoo>
+  <data>
+
+    <record id="invoice_due_letter_wizard_form_view" model="ir.ui.view">
+        <field name="name">Invoice due letter wizard</field>
+        <field name="model">x.invoice.due.letter.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Invoice due letter wizard">
+                <field name="response" widget="radio" required="1"/>
+                <group>
+                    <group attrs="{'invisible':[('response','!=', '1')]}">
+                        <field name="date_invoice_from" attrs="{'invisible':[('response','!=', '1')], 'required':[('response','=', '1')]}"/>
+                        <field name="date_invoice_to" attrs="{'invisible':[('response','!=', '1')], 'required':[('response','=', '1')]}"/>
+                    </group>
+                    <group attrs="{'invisible':[('response','!=', '2')]}">
+                        <field name="date_maturity_from" attrs="{'invisible':[('response','!=', '2')], 'required':[('response','=', '2')]}"/>
+                        <field name="date_maturity_to" attrs="{'invisible':[('response','!=', '2')], 'required':[('response','=', '2')]}"/>
+                    </group>
+                    <group attrs="{'invisible':[('response','!=', '3')]}">
+                        <field name="invoice_from" attrs="{'invisible':[('response','!=', '3')], 'required':[('response','=', '3')]}"
+                            domain="[('move_type', '=', 'out_invoice'), ('state', '=', 'posted'), ('payment_state', 'in', ('not_paid', 'partial'))]"
+                            options="{'no_create': True, 'no_create_edit': True, 'no_open': True,}"
+                        />
+                        <field name="invoice_to" attrs="{'invisible':[('response','!=', '3')], 'required':[('response','=', '3')]}"
+                            domain="[('move_type', '=', 'out_invoice'), ('state', '=', 'posted'), ('payment_state', 'in', ('not_paid', 'partial'))]"
+                            options="{'no_create': True, 'no_create_edit': True, 'no_open': True,}"
+                        />
+                    </group>
+                </group>
+                <!--<field name="reject_reason" placeholder="Indicate reject reason" attrs="{'invisible':[('response','!=', '2')], 'required':[('response','=', '2')]}"/>-->
+                <footer>
+                    <!--<button name="action_get_invoice_due" string="Confirm" type="object" class="btn-primary"/>-->
+                    <button name="open_invoice_due" string="Confirm" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_invoice_payment_due_letter_wizard" model="ir.actions.act_window">
+        <field name="type">ir.actions.act_window</field>
+        <field name="name">Unpaid invoices wizard</field>
+        <field name="res_model">x.invoice.due.letter.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <!--<field name="binding_model_id" ref="account.model_account_move"/>-->
+        <!--<field name="binding_view_types">list</field>-->
+        <!--<field name="domain">[('move_type', '=', 'out_invoice')]</field>-->
+        <!--<field name="context">{'default_project_id':active_id, 'type_ids': type_ids}</field>-->
+    </record>
+
+
+
+  </data>
+</odoo>

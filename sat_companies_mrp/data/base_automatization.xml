@@ -13,4 +13,15 @@ if sale_obj:
     record.write({'checklist_line_ids': [(0, 0, {'minute_point_id': line.minute_point_id.id})]})</field>
     </record>
 
+     <record id="automatization_ot_works" model="base.automation">
+        <field name="name">ACTUALIZAR TRABAJOS DESDE VENTAS</field>
+        <field name="model_id" ref="project.model_project_task"/>
+        <field name="state">code</field>
+        <field name="trigger">on_create</field>
+        <field name="active" eval="True"/>
+        <field name="code">for record in records:
+  if not record.work_line_ids:
+    record.get_work_records()</field>
+    </record>
+
 </odoo>

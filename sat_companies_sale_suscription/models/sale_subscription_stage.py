@@ -7,6 +7,8 @@ class SaleSubscriptionStage(models.Model):
 
     stage_code = fields.Char(
         string="Code")
+    is_progress = fields.Boolean(
+        string="Is progress")
     
 
     _sql_constraints = [

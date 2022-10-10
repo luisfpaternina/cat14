@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <template id="template_invoice_due_letter">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                   
+                    <t t-foreach="docs" t-as="o">
+                        <t t-set="lang" t-value="o.partner_id.lang"/>
+
+                        <div class="page">
+                            <style>
+                                #t01 td {
+                                border: 1px solid black;
+                                padding: 5px;
+                            </style>
+                            <strong>
+                                    <p><h3>PENDING INVOICES</h3></p>
+                            </strong>
+
+                            <div class="row ml-auto">
+                                <table class="table table-sm" style="width: 50%;">
+                                    <tr> 
+                                        <td>
+                                            <strong>Customer:</strong><br></br>
+                                            <span t-field="o.partner_id" t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;], &quot;no_marker&quot;: True}"/>
+                                        </td>
+                                    </tr> 
+                                </table>
+                                <table class="table table-sm" style="width: 45%;margin-left:30px;">
+                                    <tr>
+                                        <td>
+                                            <span>Admin data</span><br/>
+                                            <span t-if="o.partner_admin_id" t-field="o.partner_admin_id" t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;], &quot;no_marker&quot;: True}"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <br/>
+
+                            <p>Date: <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d/%m/%Y')"/></p>
+                            <p class="mt32">Our dear sirs:</p>
+                            <p>We inform you that the payment of the invoices detailed below is pending</p>
+                            <table width="100%" id="t01">
+                                <thead>
+                                    <tr>
+                                        <th>Invoice</th>
+                                        <th>Invoice date</th>
+                                        <th>Maturity date</th>
+                                        <th>Description</th>
+                                        <th>Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-set="invoices" t-value="o.invoice_ids"/>
+                                    <t t-set="total" t-value="0"/>
+                                    <t t-foreach="invoices" t-as="invoice">
+                                        <t t-set="lines" t-value="invoice.line_ids.filtered('x_is_out_overdue').sorted(key=lambda l: (l.date_maturity, l.move_id.invoice_date))"/>
+                                        <t t-foreach="lines" t-as="line">
+                                            <t t-set="total" t-value="total + line.debit"/>
+                                            <tr>
+                                                <td><span t-field="invoice.name" t-options="{'widget': 'text'}"/></td>
+                                                <td><span t-field="invoice.invoice_date" t-options="{'widget': 'date', 'format': 'dd/MM/yyyy'}"/></td>
+                                                <td><span t-field="line.date_maturity" t-options="{'widget': 'date', 'format': 'dd/MM/yyyy'}"/></td>
+                                                <td></td>
+                                                <td><span t-field="line.debit" t-options="{'widget': 'monetary'}" style="float:right;text-align:right"/></td>
+                                            </tr>
+                                        </t>
+                                    </t>
+                                        <tr class="text-right">
+                                            <td colspan="99">
+                                                <strong class="mr16">Total</strong>
+                                                <span
+                                                    t-esc="total"
+                                                    t-options='{"widget": "monetary", "display_currency": o.partner_id.currency_id}'
+                                                    style="text-align: right"
+                                                />
+                                            </td>
+                                        </tr>
+                                </tbody>
+                            </table>
+                            <p class="mt16" style="margin-top:32px;">
+                                To cancel these amounts, you can agree to the payment by calling our offices n° <strong>+34 944 86 20 04</strong> or by email at the account <strong>info@ascensoresurbil.com</strong>
+                                <!--Para cancelar estos importes puede dar conformidad al cobro llamando a nuestras oficinas n° <strong>+34 944 86 20 04</strong> o mediante correo electrónico en la cuenta <strong>info@ascensoresurbil.com</strong>-->
+                            </p>
+                            <p>Waiting news from you, yours sincerely</p>
+                            <p align="right">Accounting department</p>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+
+        <record id="report_invoice_due_letter" model="ir.actions.report">
+            <field name="name">Invoice Due Letter</field>
+            <field name="model">x.invoice.payment.due</field>
+            <!-- Este informe no se podrá imprimir desde el menú Imprimir
+            <field name="binding_model_id" ref="model_account_move"/>
+            <field name="binding_view_types">form</field>-->
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">pc_invoice_payment_due_letter.template_invoice_due_letter</field>
+            <field name="report_file">pc_invoice_payment_due_letter.account_invoice_due_letter</field>
+        </record>
+
+
+
+    </data>
+</odoo>
+
