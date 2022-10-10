@@ -109,11 +109,26 @@
                         <field name="ot_description" placeholder="Observations"/>
                     </group>
                 </page>
+                <page name="ot_work" string="OT work">
+                    <group>
+                        <field name="work_line_ids">
+                            <tree editable="top">
+                                <field name="name" required="1"/>
+                                <field name="is_done"/>
+                                <field name="task_id" invisible="1"/>
+                            </tree>
+                        </field>
+                    </group>
+                </page>
                 <page name="notes" string="Notes">
                     <group>
                         <field name="notes"/>
                     </group>
                 </page>
+            </xpath>
+
+            <xpath expr="//field[(@name='project_id')]" position="before">
+                <field name="id" string="N° OT / Aviso"/>
             </xpath>
 
             <xpath expr="//field[(@name='partner_id')]" position="before">
@@ -122,7 +137,7 @@
             </xpath>
             
             <xpath expr="//field[(@name='partner_id')]" position="after">
-                <field name="ot_code"/>
+                <field name="ot_code" invisible="1"/>
                 <field name="product_id" options="{'no_create': True, 'no_create_edit':True}" domain = "[('is_gadget','=',True),('partner_id','=',partner_id)]"/>
                 <field name="location"/>
                 <field name="rae"/>
@@ -211,6 +226,10 @@
         <field name="inherit_id" ref="industry_fsm.project_task_view_list_fsm"/>
         <field name="arch" type="xml">
 
+            <xpath expr="//field[@name='name']" position="before">
+                <field name="id" string="N° OT / Aviso"/>
+            </xpath>
+
             <xpath expr="//field[@name='name']" position="after">
                 <field name="ot_type_id"/>
                 <field name="categ_udn_id"/>
@@ -221,6 +240,7 @@
                 <field name="rae"/>
                 <field name="subscription_ids" widget="many2many_tags"/>
                 <field name="cabine_phone"/>
+                <field name="reading_date"/>
                 <field name="gadget_admin_id"/>
             </xpath>
 

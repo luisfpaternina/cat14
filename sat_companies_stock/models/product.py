@@ -640,7 +640,7 @@ class ProductTemplate(models.Model):
 
     def compute_subscriptions(self):
         for record in self:
-            subscriptions = self.env['sale.subscription'].search([('product_id', '=', record.id)])
+            subscriptions = self.env['sale.subscription'].search([('product_id', '=', record.id), ('is_progress', '=', True)], limit=1)
             if subscriptions:
                 record.subscription_ids = subscriptions.ids
             else:

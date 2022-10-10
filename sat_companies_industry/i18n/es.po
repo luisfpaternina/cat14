@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-29 10:16+0000\n"
-"PO-Revision-Date: 2022-09-29 10:16+0000\n"
+"POT-Creation-Date: 2022-10-10 10:39+0000\n"
+"PO-Revision-Date: 2022-10-10 10:39+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -1487,6 +1487,12 @@ msgid "Number of unread messages"
 msgstr ""
 
 #. module: sat_companies_industry
+#: model_terms:ir.ui.view,arch_db:sat_companies_industry.inherit_treeview_project_task_sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_project_task_sat_companies
+msgid "N° OT / Aviso"
+msgstr ""
+
+#. module: sat_companies_industry
 #: model_terms:ir.ui.view,arch_db:sat_companies_industry.report_custom_template_worksheet
 msgid "N° OT:"
 msgstr ""
@@ -1531,6 +1537,11 @@ msgid "OT information"
 msgstr "Información OT"
 
 #. module: sat_companies_industry
+#: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_project_task_sat_companies
+msgid "OT work"
+msgstr "Trabajos"
+
+#. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__ot_description
 #: model_terms:ir.ui.view,arch_db:sat_companies_industry.view_project_task_sat_companies
 msgid "Observations"
@@ -1543,8 +1554,8 @@ msgstr "Octubre"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__gadget_id
-msgid "Old"
-msgstr "Viejo"
+msgid "Old gadget"
+msgstr ""
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__open_date
@@ -1764,7 +1775,7 @@ msgstr "Télefono de contacto"
 #: code:addons/sat_companies_industry/models/project_task.py:0
 #, python-format
 msgid "The column should be one per line"
-msgstr "No se puede agregar la misma línea mas de una vez"
+msgstr ""
 
 #. module: sat_companies_industry
 #: code:addons/sat_companies_industry/models/project_task.py:0

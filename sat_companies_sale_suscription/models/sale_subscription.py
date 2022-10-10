@@ -99,6 +99,9 @@ class SaleSuscriptionInherit(models.Model):
     lines_count = fields.Integer(
         string="Lines count",
         compute="compute_lines_count")
+    is_progress = fields.Boolean(
+        string="Is progress",
+        related="stage_id.is_progress")
 
 
     @api.depends('recurring_invoice_line_ids')
