@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-10 10:39+0000\n"
-"PO-Revision-Date: 2022-10-10 10:39+0000\n"
+"POT-Creation-Date: 2022-10-10 16:00+0000\n"
+"PO-Revision-Date: 2022-10-10 16:00+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -481,6 +481,7 @@ msgstr "Logrado"
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_location__message_needaction
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__message_needaction
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__message_needaction
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_work__message_needaction
 #: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__message_needaction
 msgid "Action Needed"
 msgstr "Acción necesaria"
@@ -572,6 +573,7 @@ msgstr "Tipo de asociado"
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_location__message_attachment_count
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__message_attachment_count
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__message_attachment_count
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_work__message_attachment_count
 #: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__message_attachment_count
 msgid "Attachment Count"
 msgstr "Contador"
@@ -696,6 +698,7 @@ msgstr "Crear nuevo registro"
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_location__create_uid
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__create_uid
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__create_uid
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_work__create_uid
 #: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__create_uid
 msgid "Created by"
 msgstr "Creado por"
@@ -711,6 +714,7 @@ msgstr "Creado por"
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_location__create_date
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__create_date
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__create_date
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_work__create_date
 #: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__create_date
 msgid "Created on"
 msgstr "Creado en"
@@ -752,6 +756,7 @@ msgstr "Nombre delegación"
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_inspection__description
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__minute_point_description
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__description
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_work__name
 #: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__description
 msgid "Description"
 msgstr "Descripción"
@@ -769,6 +774,7 @@ msgstr "Descripción"
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type__display_name
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__display_name
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__display_name
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_work__display_name
 #: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__display_name
 msgid "Display Name"
 msgstr "Nombre mostrado"
@@ -840,6 +846,7 @@ msgstr "Piso."
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_location__message_follower_ids
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__message_follower_ids
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__message_follower_ids
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_work__message_follower_ids
 #: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__message_follower_ids
 msgid "Followers"
 msgstr "Seguidores"
@@ -855,6 +862,7 @@ msgstr "Seguidores"
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_location__message_channel_ids
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__message_channel_ids
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__message_channel_ids
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_work__message_channel_ids
 #: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__message_channel_ids
 msgid "Followers (Channels)"
 msgstr "Seguidores"
@@ -870,6 +878,7 @@ msgstr "Seguidores"
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_location__message_partner_ids
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__message_partner_ids
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__message_partner_ids
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_work__message_partner_ids
 #: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__message_partner_ids
 msgid "Followers (Partners)"
 msgstr "Seguidores"
@@ -922,6 +931,7 @@ msgstr "Tiempo mostrado en horas"
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type__id
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__id
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__id
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_work__id
 #: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__id
 msgid "ID"
 msgstr "Id"
@@ -947,6 +957,8 @@ msgstr "Id"
 #: model:ir.model.fields,help:sat_companies_industry.field_project_task_type_associated__message_unread
 #: model:ir.model.fields,help:sat_companies_industry.field_project_task_warning__message_needaction
 #: model:ir.model.fields,help:sat_companies_industry.field_project_task_warning__message_unread
+#: model:ir.model.fields,help:sat_companies_industry.field_project_task_work__message_needaction
+#: model:ir.model.fields,help:sat_companies_industry.field_project_task_work__message_unread
 #: model:ir.model.fields,help:sat_companies_industry.field_task_community_mood__message_needaction
 #: model:ir.model.fields,help:sat_companies_industry.field_task_community_mood__message_unread
 msgid "If checked, new messages require your attention."
@@ -973,6 +985,8 @@ msgstr ""
 #: model:ir.model.fields,help:sat_companies_industry.field_project_task_type_associated__message_has_sms_error
 #: model:ir.model.fields,help:sat_companies_industry.field_project_task_warning__message_has_error
 #: model:ir.model.fields,help:sat_companies_industry.field_project_task_warning__message_has_sms_error
+#: model:ir.model.fields,help:sat_companies_industry.field_project_task_work__message_has_error
+#: model:ir.model.fields,help:sat_companies_industry.field_project_task_work__message_has_sms_error
 #: model:ir.model.fields,help:sat_companies_industry.field_task_community_mood__message_has_error
 #: model:ir.model.fields,help:sat_companies_industry.field_task_community_mood__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
@@ -1028,6 +1042,7 @@ msgstr "Es febrero"
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_location__message_is_follower
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__message_is_follower
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__message_is_follower
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_work__message_is_follower
 #: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__message_is_follower
 msgid "Is Follower"
 msgstr "Es un seguidor"
@@ -1086,6 +1101,11 @@ msgstr "Tiempo calculado"
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__is_conflictive_apparatus
 msgid "Is conflictive apparatus"
 msgstr "El aparato es conflictivo"
+
+#. module: sat_companies_industry
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_work__is_done
+msgid "Is done"
+msgstr "Realidazado"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__is_project_fsm
@@ -1153,6 +1173,7 @@ msgstr "Junio"
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type____last_update
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated____last_update
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning____last_update
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_work____last_update
 #: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood____last_update
 msgid "Last Modified on"
 msgstr "Última modificación el"
@@ -1168,6 +1189,7 @@ msgstr "Última modificación el"
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_location__write_uid
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__write_uid
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__write_uid
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_work__write_uid
 #: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__write_uid
 msgid "Last Updated by"
 msgstr "Última actualización por"
@@ -1183,6 +1205,7 @@ msgstr "Última actualización por"
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_location__write_date
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__write_date
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__write_date
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_work__write_date
 #: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__write_date
 msgid "Last Updated on"
 msgstr "Última actualización en"
@@ -1211,6 +1234,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_location__message_main_attachment_id
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__message_main_attachment_id
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__message_main_attachment_id
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_work__message_main_attachment_id
 #: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__message_main_attachment_id
 msgid "Main Attachment"
 msgstr ""
@@ -1321,6 +1345,7 @@ msgstr "Mayo"
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_location__message_has_error
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__message_has_error
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__message_has_error
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_work__message_has_error
 #: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__message_has_error
 msgid "Message Delivery error"
 msgstr ""
@@ -1336,6 +1361,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_location__message_ids
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__message_ids
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__message_ids
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_work__message_ids
 #: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__message_ids
 msgid "Messages"
 msgstr "Mensajes"
@@ -1422,6 +1448,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_location__message_needaction_counter
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__message_needaction_counter
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__message_needaction_counter
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_work__message_needaction_counter
 #: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__message_needaction_counter
 msgid "Number of Actions"
 msgstr ""
@@ -1437,6 +1464,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_location__message_has_error_counter
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__message_has_error_counter
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__message_has_error_counter
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_work__message_has_error_counter
 #: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__message_has_error_counter
 msgid "Number of errors"
 msgstr ""
@@ -1452,6 +1480,7 @@ msgstr ""
 #: model:ir.model.fields,help:sat_companies_industry.field_project_task_ot_checklist_location__message_needaction_counter
 #: model:ir.model.fields,help:sat_companies_industry.field_project_task_type_associated__message_needaction_counter
 #: model:ir.model.fields,help:sat_companies_industry.field_project_task_warning__message_needaction_counter
+#: model:ir.model.fields,help:sat_companies_industry.field_project_task_work__message_needaction_counter
 #: model:ir.model.fields,help:sat_companies_industry.field_task_community_mood__message_needaction_counter
 msgid "Number of messages which requires an action"
 msgstr ""
@@ -1467,6 +1496,7 @@ msgstr ""
 #: model:ir.model.fields,help:sat_companies_industry.field_project_task_ot_checklist_location__message_has_error_counter
 #: model:ir.model.fields,help:sat_companies_industry.field_project_task_type_associated__message_has_error_counter
 #: model:ir.model.fields,help:sat_companies_industry.field_project_task_warning__message_has_error_counter
+#: model:ir.model.fields,help:sat_companies_industry.field_project_task_work__message_has_error_counter
 #: model:ir.model.fields,help:sat_companies_industry.field_task_community_mood__message_has_error_counter
 msgid "Number of messages with delivery error"
 msgstr ""
@@ -1482,6 +1512,7 @@ msgstr ""
 #: model:ir.model.fields,help:sat_companies_industry.field_project_task_ot_checklist_location__message_unread_counter
 #: model:ir.model.fields,help:sat_companies_industry.field_project_task_type_associated__message_unread_counter
 #: model:ir.model.fields,help:sat_companies_industry.field_project_task_warning__message_unread_counter
+#: model:ir.model.fields,help:sat_companies_industry.field_project_task_work__message_unread_counter
 #: model:ir.model.fields,help:sat_companies_industry.field_task_community_mood__message_unread_counter
 msgid "Number of unread messages"
 msgstr ""
@@ -1678,6 +1709,7 @@ msgstr "Referencia"
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_location__message_has_sms_error
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__message_has_sms_error
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__message_has_sms_error
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_work__message_has_sms_error
 #: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__message_has_sms_error
 msgid "SMS Delivery error"
 msgstr ""
@@ -1752,6 +1784,7 @@ msgstr "Fecha fin supervisor"
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_checklist_minute__task_id
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist__task_id
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_line__task_id
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_work__task_id
 msgid "Task"
 msgstr "Tarea"
 
@@ -1771,7 +1804,6 @@ msgid "Telephone contact"
 msgstr "Télefono de contacto"
 
 #. module: sat_companies_industry
-#: code:addons/sat_companies_industry/models/.ipynb_checkpoints/project_task-checkpoint.py:0
 #: code:addons/sat_companies_industry/models/project_task.py:0
 #, python-format
 msgid "The column should be one per line"
@@ -1833,6 +1865,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_location__message_unread
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__message_unread
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__message_unread
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_work__message_unread
 #: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__message_unread
 msgid "Unread Messages"
 msgstr ""
@@ -1848,6 +1881,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_location__message_unread_counter
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__message_unread_counter
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__message_unread_counter
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_work__message_unread_counter
 #: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__message_unread_counter
 msgid "Unread Messages Counter"
 msgstr ""
@@ -1874,6 +1908,7 @@ msgstr "Aviso"
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_ot_checklist_location__website_message_ids
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_type_associated__website_message_ids
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_warning__website_message_ids
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_work__website_message_ids
 #: model:ir.model.fields,field_description:sat_companies_industry.field_task_community_mood__website_message_ids
 msgid "Website Messages"
 msgstr "Mensajes del sitio web"
@@ -1889,9 +1924,16 @@ msgstr "Mensajes del sitio web"
 #: model:ir.model.fields,help:sat_companies_industry.field_project_task_ot_checklist_location__website_message_ids
 #: model:ir.model.fields,help:sat_companies_industry.field_project_task_type_associated__website_message_ids
 #: model:ir.model.fields,help:sat_companies_industry.field_project_task_warning__website_message_ids
+#: model:ir.model.fields,help:sat_companies_industry.field_project_task_work__website_message_ids
 #: model:ir.model.fields,help:sat_companies_industry.field_task_community_mood__website_message_ids
 msgid "Website communication history"
 msgstr "Historial de comunicación del website"
+
+#. module: sat_companies_industry
+#: model:ir.model,name:sat_companies_industry.model_project_task_work
+#: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__work_line_ids
+msgid "Works"
+msgstr "Trabajos OT"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields.selection,name:sat_companies_industry.selection__project_task__stop_type__yes
