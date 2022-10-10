@@ -1105,7 +1105,7 @@ msgstr "El aparato es conflictivo"
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task_work__is_done
 msgid "Is done"
-msgstr "Realidazado"
+msgstr "Realizado"
 
 #. module: sat_companies_industry
 #: model:ir.model.fields,field_description:sat_companies_industry.field_project_task__is_project_fsm
