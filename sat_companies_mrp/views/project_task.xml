@@ -12,7 +12,7 @@
             </xpath>
 
             <xpath expr="//form[1]/sheet[1]/notebook[1]" position="inside">
-                <page name="minute_point_mrp_page" string="Minute point" attrs="{'invisible': [('sale_id', '=', False)]}">
+                <page name="minute_point_mrp_page" string="Minute point LdM">
                     <group>
                         <field name="order_line">
                             <tree>

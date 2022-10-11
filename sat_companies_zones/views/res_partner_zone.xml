@@ -54,7 +54,7 @@
                                 <field name="user_id" options="{'no_create': True, 'no_create_edit':True}"/>
                             </group>
                             <group>
-                                <field name="responsable_code"/>
+                                <field name="responsable_code" invisible="1"/>
                             </group>
                             <group string="Guard zone">
                                 <field name="guard_zone_id" options="{'no_create': True, 'no_create_edit':True}"/>
