@@ -7,11 +7,22 @@
         <field name="arch" type="xml">
 
             <xpath expr="//field[(@name='product_tmpl_id')]" position="after">
-               <field name="minute_point_id" options="{'no_create': True, 'no_create_edit':True}" attrs="{'invisible': [('is_minute_point', '!=', True)]}"/>
                <field name="is_minute_point" invisible="1"/>
+            </xpath>
+
+            <xpath expr="//form[1]/sheet[1]/notebook[1]" position="inside">
+                <page string="Minute point" name="minute_point_page" attrs="{'invisible': [('is_minute_point', '!=', True)]}">
+                    <group name="group_minute_point_one">
+                        <group name="left">
+                            <field name="minute_point_id" options="{'no_create': True, 'no_create_edit':True}" attrs="{'invisible': [('is_minute_point', '!=', True)]}"  widget="many2many_tags"/>
+                        </group>
+                        <group name="right">
+
+                        </group>
+                    </group>
+                </page>
             </xpath>
 
         </field> 
     </record>
-
 </odoo>
