@@ -3,3 +3,4 @@ from . import mrp_bom
 from . import sale_order
 from . import sale_order_bom
 from . import project_task
+from . import minute_point

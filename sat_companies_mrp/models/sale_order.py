@@ -30,12 +30,23 @@ class SaleOrderLine(models.Model):
         compute="compute_bom_id")
     bom_line_ids = fields.One2many(
         related="bom_id.bom_line_ids")
-    minute_point_id = fields.Many2one(
+    minute_point_id = fields.One2many(
         'maintenance.minute.point',
-        string="Minute point",
-        compute="compute_minute_point_id")
+        'order_line_id',
+        string="Minute point")
+    is_domain_mp = fields.Boolean(
+        string="Apply domain")
 
 
+    @api.onchange('product_id')
+    def domain_minute_points_mrp(self):
+        for record in self:
+            if record.product_id:
+                record.minute_point_id = record.product_id.bom_ids.minute_point_id.ids
+            else:
+                record.minute_point_id = False
+             
+        
     @api.depends('product_id')
     def compute_bom_id(self):
         for line in self:

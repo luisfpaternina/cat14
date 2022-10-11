@@ -9,8 +9,12 @@ class MrpBom(models.Model):
     sale_order_id = fields.Many2one(
         'sale.order',
         string="Sale order")
-    minute_point_id = fields.Many2one(
+    order_line_id = fields.Many2one(
+        'sale.order.line',
+        string="Order line")
+    minute_point_id = fields.One2many(
         'maintenance.minute.point',
+        'bom_id',
         string="Minute point")
     
     @api.onchange('product_tmpl_id')
