@@ -136,18 +136,6 @@ class SaleOrder(models.Model):
             if record.pdf_file_sale_contract:
                 record.pdf_description = 'CONTRATO HA SIDO FIRMADO'
 
-    @api.onchange('product_id')
-    def onchange_check_product(self):
-        for record in self:
-            if record.product_id.employee_notice_id.user_id:
-                record.task_user_id = record.product_id.employee_notice_id.user_id
-            sale_type = record.product_id.subscription_template_id.sale_type_id
-            gadgets_contract = record.product_id.subscription_template_id.gadgets_contract_type_id
-            if sale_type:
-                record.sale_type_id = sale_type
-            if gadgets_contract:
-                record.gadgets_contract_type_id = gadgets_contract
-
     @api.depends('product_id')
     def compute_check_product(self):
         for record in self:
