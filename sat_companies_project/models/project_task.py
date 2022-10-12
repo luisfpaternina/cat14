@@ -566,7 +566,7 @@ class ProjectTask(models.Model):
         if task_user:
             ids_task = [x.id for x in task_user]
             for id_task in ids_task:
-                self.env.user._notify_channel(
+                user_id._notify_channel(
                     type_message="success",
                     message="Default message",
                     title='TEST DE PRUEBA',
