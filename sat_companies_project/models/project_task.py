@@ -505,6 +505,18 @@ class ProjectTask(models.Model):
             'url'      : self.qr_scanner
             }
 
+    #Limpiar valor campo Aparato al cambiar de Cliente, para evitar combinación incoherente.
+    @api.onchange('partner_id')
+    def _onchange_parner_id_clean_elevator(self):
+        if self.product_id:
+            self.product_id = False
+    
+    #Limpiar valor campo Categoría UDN al cambiar Tipo de OT, para evitar combinación incoherente.
+    @api.onchange('ot_type_id')
+    def _onchange_ot_type_clean_udn(self):
+        if self.categ_udn_id and self.categ_udn_id.code != 'AV': #Para que no entre en conflicto con el valor por defecto de tier1.
+            self.categ_udn_id = False
+
     @api.constrains(
         'check_machine',
         'check_cabine',

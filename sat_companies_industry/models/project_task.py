@@ -256,8 +256,12 @@ class ProjectTask(models.Model):
     is_project_fsm = fields.Boolean(
         string="Is done in fsm project",
         related="stage_id.is_project_fsm")
+    work_line_ids = fields.One2many(
+        'project.task.work',
+        'task_id',
+        string="Works")
 
-    
+
     def mark_notice_technical(self):
         for record in self:
             if record.is_project_fsm:

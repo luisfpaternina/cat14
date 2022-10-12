@@ -17,6 +17,19 @@ class ProjectTask(models.Model):
         string="Order lines")
 
 
+    @api.model
+    def get_work_records(self):
+        for rec in self:
+            lines = []
+            sale_obj = rec.env['sale.order'].search([('id', '=', rec.sale_id.id)], limit=1)
+            if sale_obj:
+                for s in sale_obj.order_line:
+                    vals = (0, 0, {
+                        'name': s.name,
+                    })
+                    lines.append(vals)
+                rec.work_line_ids = lines
+
     def compute_sale_order(self):
         sale_obj = self.env['sale.order'].search([('name', '=', self.origin)])
         if sale_obj:

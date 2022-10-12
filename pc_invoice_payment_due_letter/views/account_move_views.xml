@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <record id="view_invoice_tree" model="ir.ui.view">
+        <field name="name">account.move.tree.inherit.invoice.payment.due.letter</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_invoice_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='payment_state']" position="after">
+                <field name="x_has_move_due" optional="show"/>
+                <field name="x_has_aml_due" optional="show"/>
+                <field name="x_sent_due_letter" optional="show"/>
+                <field name="x_last_sent_due_letter" optional="show"/>
+            </xpath>
+        </field>
+    </record>
+
+
+    <!-- Action -->
+    <record id="action_send_pc_invoice_payment_due_letter" model="ir.actions.server">
+        <field name="name">Generate and Send Payment Letters</field>
+        <!--<field name="res_model">account.move</field>-->
+        <field name="model_id" ref="account.model_account_move"/>
+        <!--<field name="view_mode">form</field>-->
+        <field name="binding_model_id" ref="account.model_account_move"/>
+        <field name="binding_view_types">list,form</field>
+        <field name="state">code</field>
+        <field name="code">
+            records.action_send_invoice_due_letter()
+        </field>
+    </record>
+
+
+    <menuitem name="Unpaid invoices" id="pc_invoice_payment_due_letter.menu_invoice_payment_due_letter" parent="account.menu_finance_receivables"
+              action="pc_invoice_payment_due_letter.action_invoice_payment_due_letter_wizard" groups="account.group_account_manager"  sequence="200"/>
+
+</odoo>

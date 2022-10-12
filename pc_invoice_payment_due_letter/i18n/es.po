@@ -1,0 +1,435 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pc_invoice_payment_due_letter
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20210430\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-25 18:39+0000\n"
+"PO-Revision-Date: 2022-04-28 21:30+0200\n"
+"Last-Translator: Alberto Touriñán <alberto.tourinan@processcontrol.es> 2022\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.4.3\n"
+
+#. module: pc_invoice_payment_due_letter
+#: model:mail.template,body_html:pc_invoice_payment_due_letter.mail_template_invoice_due_letter
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;"
+"\">\n"
+"                        Dear\n"
+"                        % if object.partner_id.parent_id:\n"
+"                            ${object.partner_id.name} (${object.partner_id."
+"parent_id.name}),\n"
+"                        % else:\n"
+"                            ${object.partner_id.name},\n"
+"                        % endif\n"
+"                        <br/><br/>\n"
+"                        In the attached document we indicate the invoices "
+"and bills pending payment for having exceeded their due date.\n"
+"                        <br/><br/>\n"
+"                        Do not hesitate to contact us if you have any "
+"questions.\n"
+"                        <br/><br/>\n"
+"                        Thanks.\n"
+"                        Regards\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+"<div style=\"font-size:13px;font-family:&quot;Lucida Grande&quot;, "
+"Helvetica, Verdana, Arial, sans-serif;margin:0px;padding: 0px;\">\n"
+"                    <p style=\"margin:0px;font-size:13px;font-family:&quot;"
+"Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;padding: 0px; "
+"font-size: 13px;\"> Estimado \n"
+"                        % if object.partner_id.parent_id:\n"
+"                            ${object.partner_id.name} (${object.partner_id."
+"parent_id.name}),\n"
+"                        % else:\n"
+"                            ${object.partner_id.name},\n"
+"                        % endif\n"
+"                        <br><br>\n"
+"                        En el documento adjunto le indicamos las facturas y "
+"efectos pendientes de pago por haber excedido su fecha de vencimiento.\n"
+"                        <br><br>\n"
+"                        No dude en ponerse en contacto con nosotros si "
+"tiene alguna pregunta.\n"
+"                        <br><br>\n"
+"                        Gracias.\n"
+"                        Saludos\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+
+#. module: pc_invoice_payment_due_letter
+#: model_terms:ir.ui.view,arch_db:pc_invoice_payment_due_letter.template_invoice_due_letter
+#: model_terms:ir.ui.view,arch_db:pc_invoice_payment_due_letter.template_invoice_due_letter_print
+msgid "<span>Admin data</span><br/>"
+msgstr "<span>Datos administrador</span><br/>"
+
+#. module: pc_invoice_payment_due_letter
+#: model_terms:ir.ui.view,arch_db:pc_invoice_payment_due_letter.template_invoice_due_letter
+#: model_terms:ir.ui.view,arch_db:pc_invoice_payment_due_letter.template_invoice_due_letter_print
+msgid "<strong class=\"mr16\">Total</strong>"
+msgstr "<strong class=\"mr16\">Total</strong>"
+
+#. module: pc_invoice_payment_due_letter
+#: model_terms:ir.ui.view,arch_db:pc_invoice_payment_due_letter.template_invoice_due_letter
+#: model_terms:ir.ui.view,arch_db:pc_invoice_payment_due_letter.template_invoice_due_letter_print
+msgid "<strong>Customer:</strong><br/>"
+msgstr "<strong>Cliente:</strong><br/>"
+
+#. module: pc_invoice_payment_due_letter
+#: model_terms:ir.ui.view,arch_db:pc_invoice_payment_due_letter.template_invoice_due_letter
+#: model_terms:ir.ui.view,arch_db:pc_invoice_payment_due_letter.template_invoice_due_letter_print
+msgid "Accounting department"
+msgstr "Departamento de contabilidad"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_x_invoice_payment_due__partner_admin_id
+msgid "Administrator"
+msgstr "Administrador"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_x_invoice_payment_due_history__partner_admin_id
+msgid "Administrator_"
+msgstr "Administrador_"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_x_invoice_payment_due__amount
+#: model_terms:ir.ui.view,arch_db:pc_invoice_payment_due_letter.template_invoice_due_letter
+#: model_terms:ir.ui.view,arch_db:pc_invoice_payment_due_letter.template_invoice_due_letter_print
+msgid "Amount"
+msgstr "Importe"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_x_invoice_payment_due_history__amount
+msgid "Amount_"
+msgstr "Importe_"
+
+#. module: pc_invoice_payment_due_letter
+#: model_terms:ir.ui.view,arch_db:pc_invoice_payment_due_letter.invoice_due_letter_wizard_form_view
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: pc_invoice_payment_due_letter
+#: model_terms:ir.ui.view,arch_db:pc_invoice_payment_due_letter.invoice_due_letter_wizard_form_view
+msgid "Confirm"
+msgstr "Confirmar"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_x_invoice_due_letter_wizard__create_uid
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_x_invoice_payment_due__create_uid
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_x_invoice_payment_due_history__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_x_invoice_due_letter_wizard__create_date
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_x_invoice_payment_due__create_date
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_x_invoice_payment_due_history__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_x_invoice_payment_due__partner_id
+msgid "Customer"
+msgstr "Cliente"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_x_invoice_payment_due_history__partner_id
+msgid "Customer_"
+msgstr "Cliente_"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_x_invoice_payment_due__date
+msgid "Date"
+msgstr "Fecha"
+
+#. module: pc_invoice_payment_due_letter
+#: model_terms:ir.ui.view,arch_db:pc_invoice_payment_due_letter.template_invoice_due_letter
+#: model_terms:ir.ui.view,arch_db:pc_invoice_payment_due_letter.template_invoice_due_letter_print
+msgid "Date:"
+msgstr "Fecha:"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_x_invoice_payment_due_history__date
+msgid "Date_"
+msgstr "Fecha_"
+
+#. module: pc_invoice_payment_due_letter
+#: model_terms:ir.ui.view,arch_db:pc_invoice_payment_due_letter.template_invoice_due_letter
+#: model_terms:ir.ui.view,arch_db:pc_invoice_payment_due_letter.template_invoice_due_letter_print
+msgid "Description"
+msgstr "Descripción"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_account_move__display_name
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_x_invoice_due_letter_wizard__display_name
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_x_invoice_payment_due__display_name
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_x_invoice_payment_due_history__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.actions.server,name:pc_invoice_payment_due_letter.action_send_pc_invoice_payment_due_letter
+msgid "Generate and Send Payment Letters"
+msgstr "Generar y enviar cartas impagados"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_account_bank_statement_line__x_has_aml_due
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_account_move__x_has_aml_due
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_account_payment__x_has_aml_due
+msgid "Has aml due"
+msgstr "Tiene apunte vencido"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_account_bank_statement_line__x_has_move_due
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_account_move__x_has_move_due
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_account_payment__x_has_move_due
+msgid "Has move due"
+msgstr "Tiene movimiento vencido"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_account_move__id
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_account_move_line__id
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_x_invoice_due_letter_wizard__id
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_x_invoice_payment_due__id
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_x_invoice_payment_due_history__id
+msgid "ID"
+msgstr "ID"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.model.fields.selection,name:pc_invoice_payment_due_letter.selection__x_invoice_due_letter_wizard__response__3
+#: model_terms:ir.ui.view,arch_db:pc_invoice_payment_due_letter.template_invoice_due_letter
+#: model_terms:ir.ui.view,arch_db:pc_invoice_payment_due_letter.template_invoice_due_letter_print
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.actions.report,name:pc_invoice_payment_due_letter.report_invoice_due_letter
+msgid "Invoice Due Letter"
+msgstr "Carta factura impagada"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.actions.report,name:pc_invoice_payment_due_letter.report_invoice_due_letter_print
+msgid "Invoice Due Letter (PDF)"
+msgstr "Carta factura impagada (PDF)"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.model.fields.selection,name:pc_invoice_payment_due_letter.selection__x_invoice_due_letter_wizard__response__1
+#: model_terms:ir.ui.view,arch_db:pc_invoice_payment_due_letter.template_invoice_due_letter
+#: model_terms:ir.ui.view,arch_db:pc_invoice_payment_due_letter.template_invoice_due_letter_print
+msgid "Invoice date"
+msgstr "Fecha factura"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_x_invoice_due_letter_wizard__date_invoice_from
+#: model:ir.model.fields,help:pc_invoice_payment_due_letter.field_x_invoice_due_letter_wizard__date_invoice_from
+msgid "Invoice date from"
+msgstr "Fecha factura desde"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_x_invoice_due_letter_wizard__date_invoice_to
+#: model:ir.model.fields,help:pc_invoice_payment_due_letter.field_x_invoice_due_letter_wizard__date_invoice_to
+msgid "Invoice date to"
+msgstr "Fecha factura hasta"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_x_invoice_payment_due__invoice_ids
+msgid "Invoice due"
+msgstr "Factura vencida"
+
+#. module: pc_invoice_payment_due_letter
+#: model:mail.template,subject:pc_invoice_payment_due_letter.mail_template_invoice_due_letter
+msgid "Invoice due ${object.date or 'n/a'}"
+msgstr "Facturas impagadas ${object.date.strftime('%d/%m/%Y') or 'n/a'}"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.model,name:pc_invoice_payment_due_letter.model_x_invoice_due_letter_wizard
+#: model_terms:ir.ui.view,arch_db:pc_invoice_payment_due_letter.invoice_due_letter_wizard_form_view
+msgid "Invoice due letter wizard"
+msgstr "Asistente cartas impagados"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_x_invoice_due_letter_wizard__invoice_from
+#: model:ir.model.fields,help:pc_invoice_payment_due_letter.field_x_invoice_due_letter_wizard__invoice_from
+msgid "Invoice from"
+msgstr "Desde factura"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_x_invoice_due_letter_wizard__date_maturity_from
+msgid "Invoice maturity from"
+msgstr "Fecha vencimiento desde"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_x_invoice_due_letter_wizard__date_maturity_to
+msgid "Invoice maturity to"
+msgstr "Fecha vencimiento hasta"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_x_invoice_due_letter_wizard__invoice_to
+#: model:ir.model.fields,help:pc_invoice_payment_due_letter.field_x_invoice_due_letter_wizard__invoice_to
+msgid "Invoice to"
+msgstr "Hasta factura"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.actions.report,print_report_name:pc_invoice_payment_due_letter.report_invoice_due_letter_print
+#: model:mail.template,report_name:pc_invoice_payment_due_letter.mail_template_invoice_due_letter
+msgid ""
+"Invoice_due_letter_${(object.partner_id.name or '')}_${(object.date or '')}"
+msgstr ""
+"'Carta impagados_%s_%s' % ((object.partner_id.name or ''), (object.date."
+"strftime('%d-%m-%Y') or ''))"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_x_invoice_payment_due_history__invoice_ids
+msgid "Invoices due"
+msgstr "Facturas vencidas"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_account_move_line__x_is_out_overdue
+msgid "Is out overdue"
+msgstr "Está vencido"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.model,name:pc_invoice_payment_due_letter.model_account_move
+msgid "Journal Entry"
+msgstr "Asiento contable"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.model,name:pc_invoice_payment_due_letter.model_account_move_line
+msgid "Journal Item"
+msgstr "Apunte contable"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_account_move____last_update
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_account_move_line____last_update
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_x_invoice_due_letter_wizard____last_update
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_x_invoice_payment_due____last_update
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_x_invoice_payment_due_history____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_x_invoice_due_letter_wizard__write_uid
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_x_invoice_payment_due__write_uid
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_x_invoice_payment_due_history__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_x_invoice_due_letter_wizard__write_date
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_x_invoice_payment_due__write_date
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_x_invoice_payment_due_history__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.model.fields,help:pc_invoice_payment_due_letter.field_account_bank_statement_line__x_last_sent_due_letter
+#: model:ir.model.fields,help:pc_invoice_payment_due_letter.field_account_move__x_last_sent_due_letter
+#: model:ir.model.fields,help:pc_invoice_payment_due_letter.field_account_payment__x_last_sent_due_letter
+msgid "Last due letter sent date"
+msgstr "Fecha último envío carta impagados"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_account_bank_statement_line__x_last_sent_due_letter
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_account_move__x_last_sent_due_letter
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_account_payment__x_last_sent_due_letter
+msgid "Last sent due letter"
+msgstr "Fecha último envío carta impagados"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.model.fields.selection,name:pc_invoice_payment_due_letter.selection__x_invoice_due_letter_wizard__response__2
+#: model_terms:ir.ui.view,arch_db:pc_invoice_payment_due_letter.template_invoice_due_letter
+#: model_terms:ir.ui.view,arch_db:pc_invoice_payment_due_letter.template_invoice_due_letter_print
+msgid "Maturity date"
+msgstr "Fecha vencimiento"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.model.fields,help:pc_invoice_payment_due_letter.field_x_invoice_due_letter_wizard__date_maturity_from
+msgid "Maturity date from"
+msgstr "Fecha vencimiento desde"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.model.fields,help:pc_invoice_payment_due_letter.field_x_invoice_due_letter_wizard__date_maturity_to
+msgid "Maturity date to"
+msgstr "Fecha vencimiento hasta"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.model,name:pc_invoice_payment_due_letter.model_x_invoice_payment_due
+msgid "Model invoice payment due"
+msgstr "Modelo carta impagados"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.model,name:pc_invoice_payment_due_letter.model_x_invoice_payment_due_history
+msgid "Model invoice payment due history"
+msgstr "Modelo historial carta impagados"
+
+#. module: pc_invoice_payment_due_letter
+#: model_terms:ir.ui.view,arch_db:pc_invoice_payment_due_letter.template_invoice_due_letter
+#: model_terms:ir.ui.view,arch_db:pc_invoice_payment_due_letter.template_invoice_due_letter_print
+msgid "Our dear sirs:"
+msgstr "Muy Sres. nuestros:"
+
+#. module: pc_invoice_payment_due_letter
+#: model_terms:ir.ui.view,arch_db:pc_invoice_payment_due_letter.template_invoice_due_letter
+#: model_terms:ir.ui.view,arch_db:pc_invoice_payment_due_letter.template_invoice_due_letter_print
+msgid "PENDING INVOICES"
+msgstr "FACTURAS PENDIENTES"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_x_invoice_due_letter_wizard__response
+msgid "Search by"
+msgstr "Buscado por"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_account_bank_statement_line__x_sent_due_letter
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_account_move__x_sent_due_letter
+#: model:ir.model.fields,field_description:pc_invoice_payment_due_letter.field_account_payment__x_sent_due_letter
+msgid "Sent due letter notification"
+msgstr "Notificación envío carga impagado"
+
+#. module: pc_invoice_payment_due_letter
+#: model_terms:ir.ui.view,arch_db:pc_invoice_payment_due_letter.template_invoice_due_letter
+#: model_terms:ir.ui.view,arch_db:pc_invoice_payment_due_letter.template_invoice_due_letter_print
+msgid ""
+"To cancel these amounts, you can agree to the payment by calling our "
+"offices n° <strong>+34 944 86 20 04</strong> or by email at the account "
+"<strong>info@ascensoresurbil.com</strong>"
+msgstr ""
+"Para cancelar estos importes puede dar conformidad al cobro llamando a "
+"nuestras oficinas n° <strong>+34 944 86 20 04</strong> o mediante correo "
+"electrónico en la cuenta <strong>info@ascensoresurbil.com</strong>"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.ui.menu,name:pc_invoice_payment_due_letter.menu_invoice_payment_due_letter
+msgid "Unpaid invoices"
+msgstr "Facturas impagadas"
+
+#. module: pc_invoice_payment_due_letter
+#: model:ir.actions.act_window,name:pc_invoice_payment_due_letter.action_invoice_payment_due_letter_wizard
+msgid "Unpaid invoices wizard"
+msgstr "Asistente facturas impagadas"
+
+#. module: pc_invoice_payment_due_letter
+#: model_terms:ir.ui.view,arch_db:pc_invoice_payment_due_letter.template_invoice_due_letter
+#: model_terms:ir.ui.view,arch_db:pc_invoice_payment_due_letter.template_invoice_due_letter_print
+msgid "Waiting news from you, yours sincerely"
+msgstr "Esperando noticias suyas se despide atentamente"
+
+#. module: pc_invoice_payment_due_letter
+#: model_terms:ir.ui.view,arch_db:pc_invoice_payment_due_letter.template_invoice_due_letter
+#: model_terms:ir.ui.view,arch_db:pc_invoice_payment_due_letter.template_invoice_due_letter_print
+msgid ""
+"We inform you that the payment of the invoices detailed below is pending"
+msgstr ""
+"Les comunicamos que está pendiente el pago de las facturas que detallamos a "
+"continuación"

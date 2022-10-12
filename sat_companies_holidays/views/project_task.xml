@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!--INHERIT FORM VIEW -->
+    <record id="view_project_task_holidays" model="ir.ui.view">
+        <field name="name">inherit.form.project.task</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2"/>
+        <field name="arch" type="xml">
+
+            <!--ADD FIELDS IN VIEW -->
+            <xpath expr="//field[(@name='project_id')]" position="before">
+                <field name="has_leave" invisible="1"/>
+                <field name="supervisor_has_leave" invisible="1"/>
+                <field name="has_users" invisible="1"/>
+                <field name="date_today" invisible="1"/>
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>

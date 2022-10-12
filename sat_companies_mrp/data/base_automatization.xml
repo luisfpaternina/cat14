@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
 
-    <record id="automatization_mrp_update_minute_point" model="base.automation">
-        <field name="name">ACTUALIZAR PUNTOS DEL ACTA DESDE VENTAS</field>
+     <record id="automatization_ot_works" model="base.automation">
+        <field name="name">ACTUALIZAR TRABAJOS DESDE VENTAS</field>
         <field name="model_id" ref="project.model_project_task"/>
         <field name="state">code</field>
-        <field name="trigger">on_create_or_write</field>
+        <field name="trigger">on_create</field>
         <field name="active" eval="True"/>
-        <field name="code">sale_obj = env['sale.order'].search([('name', '=', record.origin)], limit=1)
-if sale_obj:
-  for line in sale_obj.order_line:
-    record.write({'checklist_line_ids': [(0, 0, {'minute_point_id': line.minute_point_id.id})]})</field>
+        <field name="code">for record in records:
+  if not record.work_line_ids:
+    record.get_work_records()</field>
     </record>
 
 </odoo>

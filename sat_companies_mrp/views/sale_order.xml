@@ -23,7 +23,7 @@
 
             <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='order_lines']/field[@name='order_line']/tree[1]/field[@name='name']" position="after">
                 <field name="bom_id" invisible="1"/>
-                <field name="minute_point_id"/>
+                <field name="minute_point_id" options="{'no_create': True, 'no_create_edit':True}" widget="many2many_tags" domain = "[('is_domain','=',True)]"/>
                 <field name="bom_line_ids" widget="many2many_tags" invisible="1"/>
             </xpath>
 

@@ -78,18 +78,19 @@
 
             <xpath expr="//group[@name='sale_header']" position="after">
                 <group name="dates_group">
-                    <group name="group_left" string="Gadget information">
+                    <group name="group_left">
+                        <field name="sale_type_id" options="{'no_create': True, 'no_create_edit':True}" required="1"/>
+                        <field name="udn_id" options="{'no_create': True, 'no_create_edit':True}" attrs="{'invisible': [('sale_type_id','=',False)],'required':[('sale_type_id','!=',False)]}"/>
+                        <field name="is_normative" invisible="1"/>
+                        <field name="normative_date" attrs="{'invisible': [('is_normative', '=', False)]}"/>
+                        <field name="is_conditioned" attrs="{'invisible': [('is_normative', '=', False)]}"/>
                         <field name="product_id" domain = "[('is_gadget','=',True),('partner_id','=',partner_id)]" required="True" context="{'default_is_gadget': True, 'default_partner_id': partner_id}"/>
                         <field name="rae"/>
                         <field name="show_technical" invisible="1"/>
                         <field name="task_user_id" invisible="1"/>
                     </group>
                     <group name="group_right">
-                        <field name="sale_type_id" options="{'no_create': True, 'no_create_edit':True}" required="1"/>
-                        <field name="udn_id" options="{'no_create': True, 'no_create_edit':True}" attrs="{'invisible': [('sale_type_id','=',False)],'required':[('sale_type_id','!=',False)]}"/>
-                        <field name="is_normative" invisible="1"/>
-                        <field name="normative_date" attrs="{'invisible': [('is_normative', '=', False)]}"/>
-                        <field name="is_conditioned" attrs="{'invisible': [('is_normative', '=', False)]}"/>
+                       
                     </group>
                 </group>
             </xpath>

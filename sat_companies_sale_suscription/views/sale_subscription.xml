@@ -10,6 +10,7 @@
                     <field name="check_contract_type" invisible="True"/>
                     <group name="group_left" string="Gadget information">
                         <field name="show_technical" invisible="True"/>
+                        <field name="is_progress" invisible="True"/>
                         <field name="product_id" domain = "[('is_gadget','=',True),('partner_id','=',partner_id)]" required="True"/>
                         <field name="task_user_id" attrs="{'invisible': [('show_technical', '!=', True)]}"/>
                         <field name="low_date" invisible="True"/>
