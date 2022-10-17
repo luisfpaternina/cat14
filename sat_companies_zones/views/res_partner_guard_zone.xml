@@ -8,6 +8,7 @@
             <field name="priority" eval="8" />
             <field name="arch" type="xml">
                 <tree editable="bottom">
+                    <field name="item" widget='handle'/>
                     <field name="user_id" required="1" options="{'no_create': True, 'no_create_edit':True}"/>
                     <field name="start_date"/>
                     <field name="end_date"/>
