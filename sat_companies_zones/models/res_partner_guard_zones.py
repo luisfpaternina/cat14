@@ -26,6 +26,8 @@ class ResPartnerGuardZones(models.Model):
     user_id = fields.Many2one(
         'res.users',
         string="User")
+    item = fields.Integer(
+        string="Item")
     
 
     _sql_constraints = [
