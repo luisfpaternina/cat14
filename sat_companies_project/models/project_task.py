@@ -567,26 +567,28 @@ class ProjectTask(models.Model):
         self.change_stage_to_progress()
         return super(ProjectTask, self).action_timer_start()
 
-    def execute_notication_task(self):
+    def execute_notification_task(self):
         context = self._context
         current_uid = context.get('uid')
         user_id = self.env['res.users'].browse(current_uid)
         #user_id = self.env.user
-        user_id.play_alarm = True
-        task = self.env['project.task'].search([('task_cheked','=',False)])
-        task_user = list(filter(lambda x: user_id.id in x.users_ids.ids, task))
-        if task_user:
-            ids_task = [x.id for x in task_user]
-            for id_task in ids_task:
-                user_id._notify_channel(
-                    type_message="success",
-                    message="Default message",
-                    title='TEST DE PRUEBA',
-                    subtitle=None,
-                    ref_model=task._name,
-                    ref_ids=[id_task],
-                    sticky=False,
-                    )
+        users = self.env['res.users'].search([])
+        for user in users:
+            user.play_alarm = True
+            task = self.env['project.task'].search([('task_cheked','=',False)])
+            task_user = list(filter(lambda x: user.id in x.users_ids.ids, task))
+            if task_user:
+                ids_task = [x.id for x in task_user]
+                for id_task in ids_task:
+                    user._notify_channel(
+                        type_message="success",
+                        message="Default message",
+                        title='TEST DE PRUEBA',
+                        subtitle=None,
+                        ref_model=task._name,
+                        ref_ids=[id_task],
+                        sticky=False,
+                        )
         return False
     
     #Limpiar valor campo Aparato al cambiar de Cliente, para evitar combinación incoherente.
