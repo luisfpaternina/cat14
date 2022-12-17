@@ -570,20 +570,28 @@ class ProjectTask(models.Model):
     def execute_notification_task(self):
         context = self._context
         current_uid = context.get('uid')
-        user_id = self.env['res.users'].browse(current_uid)
+        user_id = self.env['res.users'].sudo().browse(current_uid)
         #user_id = self.env.user
-        users = self.env['res.users'].search([])
+        users = self.env['res.users'].sudo().search([])
+        access_user = self.env.ref('base.group_erp_manager').users.ids[0]
         for user in users:
-            user.play_alarm = True
-            task = self.env['project.task'].search([('task_cheked','=',False)])
-            task_user = list(filter(lambda x: user.id in x.users_ids.ids, task))
+            task = self.env['project.task'].search(
+                        [
+                            ('task_cheked','=',False),
+                            ('stage_id','!=',2),
+                            ('is_warning','=', True)
+                            
+                        ]
+                )
+            task_user = list(filter(lambda x: user.id in x.users_ids.ids and x.display_timer_stop == False, task))
             if task_user:
                 ids_task = [x.id for x in task_user]
                 for id_task in ids_task:
+                    task_name = self.env['project.task'].search([('id','=',id_task)])
                     user._notify_channel(
-                        type_message="success",
-                        message="Default message",
-                        title='TEST DE PRUEBA',
+                        type_message="warning",
+                        message="Tarea: "+task_name.name,
+                        title='Aviso de Tarea pendiente',
                         subtitle=None,
                         ref_model=task._name,
                         ref_ids=[id_task],

@@ -52,9 +52,6 @@ odoo.define('web_notify.Notification', function (require) {
                         res_ids: self.rids
                     },
                 })
-                    
-
-    
             this.events = _.extend(this.events || {}, {
                 'click .pop2detail': function() {
                     var self = this;
@@ -88,7 +85,7 @@ odoo.define('web_notify.Notification', function (require) {
                 'click .pop2close': function() {
                     this.close();
                 },
-            });
+            }); 
         },
     });
 
