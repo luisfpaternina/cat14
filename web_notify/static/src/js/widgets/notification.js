@@ -65,8 +65,6 @@ odoo.define('web_notify.Notification', function (require) {
                         }).then(function(r) {
                             return self.do_action(r);
                         });
-
-
                 },
 
                 'click .pop2validate': function() {

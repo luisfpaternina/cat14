@@ -67,7 +67,7 @@ odoo.define('web_notify.WebClient', function (require) {
                     title: message.title,
                     subtitle: message.subtitle,
                     message: message.message,
-                    sticky: message.sticky,
+                    sticky: true,
                     className: message.className,
                     buttons: message.buttons,
                     rids: message.ref_ids,
