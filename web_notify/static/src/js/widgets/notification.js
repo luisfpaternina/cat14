@@ -75,9 +75,6 @@ odoo.define('web_notify.Notification', function (require) {
                             res_ids: self.rids
                         },
                     })
-                    this.close();
-
-
                 },
     
                 'click .pop2close': function() {

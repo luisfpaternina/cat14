@@ -51,6 +51,10 @@ class SaleSuscriptionInherit(models.Model):
         'Signed On',
         help='Date of the signature.',
         copy=False)
+
+    pdf_file_subscription_contract = fields.Binary(
+        compute="action_get_attachment")
+
     pdf_file_sale_contract = fields.Binary(
         'PDF Contrato',
         attachment=True)
@@ -80,7 +84,7 @@ class SaleSuscriptionInherit(models.Model):
         string="Check signature")
     pdf_file_welcome = fields.Binary(
         string="PDF file welcome",
-        compute="action_get_attachment")
+        compute="action_get_attachment_welcome")
     signature_url_text = fields.Text(
         string="Signature URL")
     stage_code = fields.Char(
@@ -102,7 +106,53 @@ class SaleSuscriptionInherit(models.Model):
     is_progress = fields.Boolean(
         string="Is progress",
         related="stage_id.is_progress")
+    
+    contract_send = fields.Boolean()
 
+    def action_subscription_contract_send(self):
+        self.contract_send = True
+        self.ensure_one()
+        template = self.env.ref('sat_companies_sale_suscription.email_contract_signature_subscription')
+        lang = self.env.context.get('lang')
+        template_id = template.id
+        if template.lang:
+            lang = template._render_lang(self.ids)[self.id]
+        ctx = {
+            'default_model': 'sale.subscription',
+            'default_res_id': self.ids[0],
+            'default_use_template': bool(template_id),
+            'default_template_id': template_id,
+            'default_composition_mode': 'comment',
+            'mark_so_as_sent': True,
+            'custom_layout': "mail.mail_notification_paynow",
+            'proforma': self.env.context.get('proforma', False),
+            'force_email': True,
+            #'model_description': self.with_context(lang=lang).type_name,
+        }
+        return {
+            'type': 'ir.actions.act_window',
+            'view_mode': 'form',
+            'res_model': 'mail.compose.message',
+            'views': [(False, 'form')],
+            'view_id': False,
+            'target': 'new',
+            'context': ctx,
+        }
+
+    def _compute_file_sale_contract(self):
+        pdf = self.env.ref('sat_companies_sale.action_email_contract_subscription_signature').render_qweb_pdf(self.ids)
+        b64_pdf = base64.b64encode(pdf[0])
+
+    @api.depends('check_signature')
+    def action_get_attachment(self):
+        for record in self:
+            if record.check_signature == True:
+                pdf = self.env.ref('sat_companies_sale.action_email_contract_subscription_signature')._render_qweb_pdf(self.ids)
+                print(pdf)
+                b64_pdf = base64.b64encode(pdf[0])
+                record.pdf_file_subscription_contract = b64_pdf
+            else:
+                record.pdf_file_subscription_contract = False
 
     @api.depends('recurring_invoice_line_ids')
     def compute_lines_count(self):
@@ -154,7 +204,7 @@ class SaleSuscriptionInherit(models.Model):
         b64_pdf = base64.b64encode(pdf[0])
 
     @api.depends('check_signature')
-    def action_get_attachment(self):
+    def action_get_attachment_welcome(self):
         for record in self:
             if record.check_signature == True:
                 pdf = self.env.ref('sat_companies_sale_suscription.template_email_welcome')._render_qweb_pdf(self.ids)

@@ -9,8 +9,22 @@ from odoo.osv.expression import OR
 
 
 class SuscriptionController(http.Controller):
+    @http.route('/contract-subscription/<model("sale.subscription"):subscription>', auth='public', website=True)
+    def redirect_contract_subscription_report(self, subscription):
+        qr_product_form = request.env['sale.subscription'].sudo().search([('id','=',subscription.id)])
+        actions_windows = request.env['ir.actions.act_window'].search([])
+        action_order = actions_windows.filtered(lambda b: b.xml_id == 'sale.action_quotations_with_onboarding')
+        base_url_home = request.env['ir.config_parameter'].get_param('web.base.url')
+        return http.request.render('sat_companies_sale_suscription.sale_contract_subscription_report',{
+            'sale_object': subscription,
+            'name': subscription.name,
+            'pdf_file': subscription.pdf_file_sale_contract,
+            'id_value': subscription.id,
+            'backend_url': base_url_home+"/web#model=sale.subscription&id="+str(subscription.id)+"&action="+str(action_order.id)+"&view_type=form",
+        })
+    
     @http.route('/welcome/<model("sale.subscription"):sale_subscription>', auth='public', website=True)
-    def redirect_contract_report(self, sale_subscription):
+    def welcome_contract_subscription_report(self, sale_subscription):
         qr_product_form = request.env['sale.subscription'].sudo().search([('id','=',sale_subscription.id)])
         return http.request.render('sat_companies_sale_suscription.welcome_subscription_report',{
             'sale_object': sale_subscription

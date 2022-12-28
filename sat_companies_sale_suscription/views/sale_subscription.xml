@@ -5,6 +5,14 @@
         <field name="model">sale.subscription</field>
         <field name="inherit_id" ref="sale_subscription.sale_subscription_view_form"/>
         <field name="arch" type="xml">
+            <xpath expr="//form/header" position="inside">
+                <field name="contract_send" invisible="True"/>
+                <button name="action_subscription_contract_send"
+                        type="object"
+                        class="oe_highlight"
+                        string="Send Contrat to signature"
+                        />
+            </xpath>
             <xpath expr="//form/sheet/group[1]" position="after">
                 <group name="dates_group">
                     <field name="check_contract_type" invisible="True"/>

@@ -38,6 +38,7 @@
         'data/send_email_low_mto_company.xml',
         'data/send_email_welcome_mto_company.xml',
         'data/base_automatization.xml',
+        'data/mail_contract.xml',
         'views/sale_suscription_template_view.xml',
         'views/sale_order_template.xml',
         'views/sale_subscription.xml',
@@ -49,8 +50,9 @@
         'views/subscription_inspection_report.xml',
         'views/subscription_process.xml',
         'views/res_company.xml',
-        'views/subscription_stage.xml',
+        'views/subscription_stage.xml', 
         'templates/welcome_template_subscription.xml',
+        'templates/sale_contract_report_web_template.xml',
         'data/email_welcome_contract.xml',
         
     ],
