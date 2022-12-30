@@ -2,13 +2,13 @@
 <odoo>
     <data >
         <template id="sale_contract_subscription_report">
-            <script type="text/javascript" src="/sat_companies_sale/static/src/js/javascript.js"></script>
-            <link rel="stylesheet" href="/sat_companies_sale/static/src/css/contract_sale.css"/>
+            <script type="text/javascript" src="/sat_companies_sale_suscription/static/src/js/contract_sale.js"></script>
+            <link rel="stylesheet" href="/sat_companies_sale_suscription/static/src/css/sale_subscription.css"/>
             <t t-call="website.layout">
                 <main>
                     <div class="container text-center" hidden="True">
                         <p>REF QUOTATION <span t-esc="name"/></p>
-                        <p id="id_value_sale" t-esc="id_value"/>
+                        <p id="id_value_subscription" t-esc="id_value"/>
                         <p id="BackendUrl" t-esc="backend_url"/>
                     </div>
                     <div class = "alert alert-info alert-dismissible rounded-0 fade show d-print-none css_editable_mode_hidden">
@@ -18,11 +18,8 @@
                         <div class="card">
                             <div class="text-center">
                                 This is a preview of the customer portal.
-                                <!--<a href="<script>" backendUrl "</script>"><i class="fa fa-arrow-right mr-1"></i>Back to edit mode</a>
-                                -->
-                                <a id="return_orderback" href="#" onclick="location.href=document.getElementById('BackendUrl').textContent">Regresar a la orden del Back</a>
+                                <a id="return_orderback" href="#" onclick="location.href=document.getElementById('BackendUrl').textContent">Regresar a la Subscripción del Back</a>
                             </div>
-                            
                             <!--
                             <div class="col-sm-auto mt8">
                                 <a role="button" class="btn btn-primary" data-toggle="modal" data-target="#modalaccept" href="#"><i class="fa fa-check"/>Firmar</a>

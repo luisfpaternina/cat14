@@ -52,12 +52,8 @@ class SaleSuscriptionInherit(models.Model):
         help='Date of the signature.',
         copy=False)
 
-    pdf_file_subscription_contract = fields.Binary(
-        compute="action_get_attachment")
-
     pdf_file_sale_contract = fields.Binary(
-        'PDF Contrato',
-        attachment=True)
+        compute="action_get_attachment")
     is_extension = fields.Boolean(
         string="Is extension",
         tracking=True)
@@ -140,19 +136,28 @@ class SaleSuscriptionInherit(models.Model):
         }
 
     def _compute_file_sale_contract(self):
-        pdf = self.env.ref('sat_companies_sale.action_email_contract_subscription_signature').render_qweb_pdf(self.ids)
+        pdf = self.env.ref('sat_companies_sale_suscription.action_email_contract_signature_subscription').render_qweb_pdf(self.ids)
         b64_pdf = base64.b64encode(pdf[0])
 
+    @api.depends('state','pdf_file_sale_contract')
+    def compute_contract_date(self):
+        now = datetime.now()
+        for rec in self:
+            if rec.pdf_file_sale_contract:
+                rec.sign_contract_date = now
+            else:
+                rec.sign_contract_date = False
+    
     @api.depends('check_signature')
     def action_get_attachment(self):
         for record in self:
             if record.check_signature == True:
-                pdf = self.env.ref('sat_companies_sale.action_email_contract_subscription_signature')._render_qweb_pdf(self.ids)
+                pdf = self.env.ref('sat_companies_sale_suscription.action_email_contract_signature_subscription')._render_qweb_pdf(self.ids)
                 print(pdf)
                 b64_pdf = base64.b64encode(pdf[0])
-                record.pdf_file_subscription_contract = b64_pdf
+                record.pdf_file_sale_contract = b64_pdf
             else:
-                record.pdf_file_subscription_contract = False
+                record.pdf_file_sale_contract = False
 
     @api.depends('recurring_invoice_line_ids')
     def compute_lines_count(self):
@@ -206,6 +211,9 @@ class SaleSuscriptionInherit(models.Model):
     @api.depends('check_signature')
     def action_get_attachment_welcome(self):
         for record in self:
+            record.pdf_file_welcome = False
+            ## No se puede renderizar con el modelo mail.mail
+            """
             if record.check_signature == True:
                 pdf = self.env.ref('sat_companies_sale_suscription.template_email_welcome')._render_qweb_pdf(self.ids)
                 print(pdf)
@@ -216,10 +224,16 @@ class SaleSuscriptionInherit(models.Model):
                         line.subscription_id.pdf_file_sale_contract = record.pdf_file_welcome
             else:
                 record.pdf_file_welcome = False
-    
+            """
     def button_rejected_stage(self):
         rs = self.env['sale.subscription.stage'].search([('stage_code', '=', '1')], limit=1)
         self.write({'stage_id': rs.id})
+
+    @api.onchange('state','name')
+    def send_pdf_description(self):
+        for record in self:
+            if record.pdf_file_sale_contract:
+                record.pdf_description = 'CONTRATO HA SIDO FIRMADO'
 
     @api.onchange('product_id')
     def onchange_product_gadget_id(self):

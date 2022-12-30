@@ -16,6 +16,7 @@
         'sat_companies',
         'sale_subscription',
         'sat_companies_sale',
+        'website',
         'sat_companies_stock',
         'sat_companies_project',
         'contacts',
@@ -52,7 +53,8 @@
         'views/res_company.xml',
         'views/subscription_stage.xml', 
         'templates/welcome_template_subscription.xml',
-        'templates/sale_contract_report_web_template.xml',
+        'templates/template_subscription_sample.xml',
+        'templates/sale_subscription_contract_report_web_template.xml',
         'data/email_welcome_contract.xml',
         
     ],

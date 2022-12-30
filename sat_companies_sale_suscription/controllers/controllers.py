@@ -13,14 +13,14 @@ class SuscriptionController(http.Controller):
     def redirect_contract_subscription_report(self, subscription):
         qr_product_form = request.env['sale.subscription'].sudo().search([('id','=',subscription.id)])
         actions_windows = request.env['ir.actions.act_window'].search([])
-        action_order = actions_windows.filtered(lambda b: b.xml_id == 'sale.action_quotations_with_onboarding')
+        action_subscription = actions_windows.filtered(lambda b: b.xml_id == 'sale_subscription.sale_subscription_action')
         base_url_home = request.env['ir.config_parameter'].get_param('web.base.url')
         return http.request.render('sat_companies_sale_suscription.sale_contract_subscription_report',{
             'sale_object': subscription,
             'name': subscription.name,
             'pdf_file': subscription.pdf_file_sale_contract,
             'id_value': subscription.id,
-            'backend_url': base_url_home+"/web#model=sale.subscription&id="+str(subscription.id)+"&action="+str(action_order.id)+"&view_type=form",
+            'backend_url': base_url_home+"/web#model=sale.subscription&id="+str(subscription.id)+"&action="+str(action_subscription.id)+"&view_type=form",
         })
     
     @http.route('/welcome/<model("sale.subscription"):sale_subscription>', auth='public', website=True)
@@ -41,7 +41,7 @@ class SuscriptionController(http.Controller):
             return False
 
 
-    @http.route(['/get_sale'], type='json', auth='public', website=True)
+    @http.route(['/get_sale_subscription'], type='json', auth='public', website=True)
     def get_sale_subscription(self):
         sales_subs = http.request.env['sale.subscription'].sudo().search([], limit=6)
         s = []

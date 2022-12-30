@@ -5,6 +5,7 @@ odoo.define('sat_companies_sale.javascript', ['web.ajax'], function(require){
   var ajax = require('web.ajax');
   var id_sale = document.getElementById("id_value_sale").textContent;
   
+
   //SIGNATURE PAD JQUERY
   (function() {
     window.requestAnimFrame = (function(callback) {
@@ -204,6 +205,5 @@ odoo.define('sat_companies_sale.javascript', ['web.ajax'], function(require){
     document.getElementById("menu_signature_pad").hidden = false;
     console.log("draw_select_option")
   }, false);
-
 
 });
