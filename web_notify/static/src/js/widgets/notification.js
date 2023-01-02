@@ -36,6 +36,7 @@ odoo.define('web_notify.Notification', function (require) {
                 }).then(function(r) {
                     console.log(r)
                     if (r == true){
+                        console.log('ENTRA A LA FUNCION PARA EJECUTAR SONIDO')
                         const newAudio = document.createElement("audio");
                         newAudio.id = 'audiotag1';
                         newAudio.src = 'web_notify/static/src/audio/notification.mp3';

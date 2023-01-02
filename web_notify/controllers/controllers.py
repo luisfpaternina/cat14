@@ -77,14 +77,16 @@ class RedirectActionNotify(http.Controller):
     def action_active_sound(self, res_model, res_ids, **kw):
         user = request.env.user
         user_active = request.env[res_model].search([('id','=',user.id)])
-        if user_active.play_alarm:
-            return True
-        else:
-            return False
-    
+        #if user_active.play_alarm:
+        #    return True
+        #else:
+        #    return False
+        return True
+
     @http.route(['/notify/desactive-sound'], type='json', auth="user", methods=['POST'])
     def action_desactive_sound(self, res_model, res_ids, **kw):
-        user = request.env.user
-        user_active = request.env[res_model].search([('id','=',user.id)])
-        user_active.play_alarm = False
+        pass
+        #user = request.env.user
+        #user_active = request.env[res_model].search([('id','=',user.id)])
+        #user_active.play_alarm = False
 
