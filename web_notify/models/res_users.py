@@ -84,6 +84,7 @@ class ResUsers(models.Model):
     ):
         # pylint: disable=protected-access
         channel_name_field = "notify_{}_channel_name".format(type_message)
+        self.play_alarm = True
         bus_message = {
             "type": type_message,
             "message": message,

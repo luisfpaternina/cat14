@@ -70,8 +70,7 @@ class RedirectActionNotify(http.Controller):
         task = request.env['project.task'].search([('id','=',res_ids)])
         if task:
             task.task_cheked = True
-        
-        return False
+
     
     @http.route(['/notify/active-sound'], type='json', auth="user", methods=['POST'])
     def action_active_sound(self, res_model, res_ids, **kw):
