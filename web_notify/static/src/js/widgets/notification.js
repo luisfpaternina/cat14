@@ -53,7 +53,7 @@ odoo.define('web_notify.Notification', function (require) {
                         res_ids: self.rids
                     },
                 })
-            this.events = _.extend(this.events || {}, {
+                this.events = _.extend(this.events || {}, {
                 'click .pop2detail': function() {
                     var self = this;
 
