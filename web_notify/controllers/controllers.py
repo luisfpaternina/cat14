@@ -45,6 +45,8 @@ class RedirectActionNotify(http.Controller):
             'target' : 'current'
         }
         if len(res_ids) == 1:
+            task = request.env[res_model].search([('id','=',res_ids[0])])
+            task.task_cheked = True
             out = dict(out, **{
                 'view_mode': 'form',
                 'res_id': res_ids[0],
