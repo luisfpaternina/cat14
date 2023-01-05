@@ -579,7 +579,7 @@ class ProjectTask(models.Model):
                         [
                             ('task_cheked','=',False),
                             ('stage_id','!=',2),
-                            ('is_warning','=', True)
+                            #('is_warning','=', True)
                             
                         ]
                 )
